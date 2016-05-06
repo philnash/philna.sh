@@ -3,20 +3,24 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-family: Merriweather, Georgia, serif;
+$header-font-family: Raleway, Arial, sans-serif;
+$base-font-size:   18px;
 $base-font-weight: 400;
+$header-font-weight: 900;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+$header-font-size: 24px;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$text-color:       #333;
+$background-color: #f2f2f2;
+// $brand-color:      #CC342D;
+$brand-color: #F03249;
+$highlight-color: #79B2C8;
+$border-color:     #CCC;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -43,11 +47,23 @@ $on-laptop:        800px;
     }
 }
 
+@mixin media-query-min($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "solarized_dark",
+        "header",
+        "footer",
+        "pagination",
+        "home",
+        "post"
 ;

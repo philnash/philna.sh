@@ -1,25 +1,30 @@
 ---
 layout: default
+title: Blog
 ---
 
-<div class="home">
+<div class="home row">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header cell cell-12">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
 
   <ul class="post-list">
     {% for post in paginator.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
+      <li class="cell cell-12 cell-med-10 cell-centre post">
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+
+        {% include post_meta.html page=post %}
+
+        {{ post.excerpt }}
       </li>
     {% endfor %}
   </ul>
 
   {% include pagination.html %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  {% comment %}<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>{% endcomment %}
 
 </div>

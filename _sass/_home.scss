@@ -1,0 +1,18 @@
+.intro {
+  margin-bottom: $spacing-unit;
+}
+
+.blog {
+  padding-top: $spacing-unit;
+  margin-bottom: $spacing-unit;
+  border-top: 1px solid $border-color;
+}
+.blog h2 {
+  line-height: 1;
+}
+
+@include media-query-min(600px) {
+  .intro {
+    font-size: 21px;
+  }
+}

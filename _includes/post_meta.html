@@ -1,0 +1,1 @@
+<p class="post-meta">Published on <time datetime="{{ include.page.date | date_to_xmlschema }}" itemprop="datePublished">{{ include.page.date | date: "%b %-d, %Y" }}</time>{% if include.page.author %} by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ include.page.author }}</span></span>{% endif %}</p>

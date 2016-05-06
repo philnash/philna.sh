@@ -1,37 +1,11 @@
 <footer class="site-footer">
-
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-        </ul>
+    <div class="row">
+      <div class="cell cell-12 cell-med-8">
+        <p>Find Phil on <a href="https://twitter.com/philnash">Twitter</a>, <a href="https://github.com/philnash">GitHub</a>, <a href="http://twitch.tv/phil_nash">Twitch</a> and <a href="/about">loads more</a></p>
       </div>
 
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+      <p class="cell cell-12 cell-med-4">&copy; {{ site.time | date: '%Y' }} <a href="/">philnash</a> &bull; <a href="/">home</a> &bull; <a href="/about">about</a> &bull; <a href="/blog">blog</a></p>
     </div>
-
   </div>
-
 </footer>
