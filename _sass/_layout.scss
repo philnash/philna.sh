@@ -35,6 +35,7 @@ body {
 .cell {
   padding: 0 ($spacing-unit/2);
   float: left;
+  display: block;
 }
 .cell-centre {
   margin-left: auto;

@@ -4,12 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Phil Nash is a developer evangelist for [Twilio](https://www.twilio.com). Sometimes he [writes code on stage](http://lanyrd.com/profile/philnash/) in front of a crowd, praying inside that everything works. Sometimes [he writes open source code](https://github.com/philnash/), which is much less stressful because if it is wrong someone else can correct it. He writes code in [tweets](https://twitter.com/philnash) sometimes, but not much fits. He blogs [here](/blog) and on the [Twilio blog](https://www.twilio.com/blog/author/phil) and you'll find plenty of code there too.
