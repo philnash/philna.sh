@@ -1,5 +1,7 @@
 html {
   background: $brand-color;
+  border-top: 5px solid $highlight-color;
+  border-bottom: 5px solid $highlight-color;
 }
 
 html, body {
@@ -7,7 +9,7 @@ html, body {
 }
 
 body {
-  border-top: 10px solid $brand-color;
+  border-top: 5px solid $brand-color;
 }
 
 .wrapper {
