@@ -20,8 +20,16 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 paginate_path: /blog/page/:num
 paginate: 10
-gems: ["jekyll-paginate"]
+gems:
+  - jekyll-paginate
+  - jekyll-assets
 
+assets:
+  prefix: /assets
+  css_compressor: sass
+  sources:
+    - _assets/css
+  digest: true
 
 defaults:
   -
