@@ -2,9 +2,10 @@
   <div class="home-nav cell cell-centre cell-12">
     {% include nav.html %}
   </div>
+
   <img
-    src="/images/philnash100x100.png"
-    srcset="/images/philnash100x100.png 1x, /images/philnash100x100@2x.png 2x, /images/philnash100x100@3x.png 3x"
+    src="{% asset_path philnash100x100 %}"
+    srcset="{% asset_path philnash100x100 %} 1x, {% asset_path philnash100x100@2x %} 2x, {% asset_path philnash100x100@3x %} 3x"
     alt="A picture of Phil. He's smiling.">
   <h1>{{ site.title }}</h1>
   <p>is a developer</p>

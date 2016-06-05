@@ -29,7 +29,7 @@ assets:
   css_compressor: sass
   sources:
     - _assets/css
-  digest: true
+    - _assets/images
 
 defaults:
   -
