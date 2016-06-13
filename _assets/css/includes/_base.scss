@@ -142,11 +142,13 @@ blockquote > :last-child {
  */
 pre,
 code {
-    font-size: 16px;
+    font-size: $base-font-size;
 }
 
 code {
     padding: 1px 5px;
+    background: #ddd;
+    border-radius: 3px;
 }
 
 pre {
@@ -157,6 +159,7 @@ pre > code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
+  background: transparent;
 }
 
 
