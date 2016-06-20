@@ -5,6 +5,13 @@
   margin: $spacing-unit*2 0;
 }
 
+.post-header-image{
+  display: block;
+  width: 100%;
+  margin-top: -$spacing-unit;
+  margin-bottom: $spacing-unit;
+}
+
 .post-meta {
   font-style: italic;
   font-size: $small-font-size;
