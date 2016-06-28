@@ -190,3 +190,11 @@ pre > code {
 .icon > svg path {
   fill: $grey-color;
 }
+
+/**
+ * Abbreviations
+ */
+abbr, abbr[title] {
+  text-decoration: none;
+  border-bottom: .1em dotted;
+}
