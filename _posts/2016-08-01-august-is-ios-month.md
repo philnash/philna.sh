@@ -33,4 +33,6 @@ This seems to me like a good opportunity to both rewrite my existing application
 
 ## The task is set
 
-So that is August for me. Buried in Xcode creating a new application. Wish me luck. I'll see you in the App Store.
+So that is August for me. Buried in Xcode creating a new application. Wish me luck and follow [my progress on GitHub](https://github.com/philnash/fxrates-ios).
+
+See you in the App Store.
