@@ -1,12 +1,6 @@
 ---
-cacheable_assets:
-  - main.css
-  - main.js
-  - philnash100x100.jpg
-  - philnash100x100@2x.jpg
-  - philnash100x100@3x.jpg
 ---
-{% capture digest_paths %}{% for asset in page.cacheable_assets %}{{ assets[asset].digest_path }},{% endfor %}{% endcapture %}
+{% capture digest_paths %}{% for asset in assets %}{% unless asset[0] contains "/" %}{{ asset[1].digest_path }},{% endunless %}{% endfor %}{% endcapture %}
 
 function returnFromCacheOrFetch(request, cacheName) {
   var cachePromise = caches.open(cacheName);
