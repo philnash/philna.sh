@@ -23,13 +23,17 @@ paginate: 10
 gems:
   - jekyll-paginate
   - jekyll-assets
+  - liquid-md5
 
 assets:
   prefix: /assets
   css_compressor: sass
+  js_compressor: babel
   sources:
     - _assets/css
     - _assets/images
+    - _assets/js
+  digest: true
 
 defaults:
   -
