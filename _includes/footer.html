@@ -11,6 +11,11 @@
 </footer>
 
 {% js main.js %}
+{% if page.scripts %}
+  {% for script in page.scripts %}
+    {{ script }}
+  {% endfor %}
+{% endif %}
 {% if jekyll.environment == "production" %}
   {% include google_analytics.html %}
 {% endif %}

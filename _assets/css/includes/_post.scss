@@ -45,3 +45,9 @@
 .post-content h2{
   padding: 0.5em 0;
 }
+
+/* Centres embedded tweets in posts */
+.twitter-tweet-rendered {
+  margin-left: auto;
+  margin-right: auto;
+}
