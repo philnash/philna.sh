@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: Merriweather, Georgia, serif;
-$header-font-family: Raleway, Arial, sans-serif;
+$base-font-family: 'Merriweather', Georgia, serif;
+$header-font-family: 'Raleway', Arial, sans-serif;
 $base-font-size:   18px;
 $base-font-weight: 400;
 $header-font-weight: 900;
@@ -55,6 +55,7 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+  "includes/fonts",
   "includes/base",
   "includes/layout",
   "includes/solarized_dark",

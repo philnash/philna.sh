@@ -1,71 +1,49 @@
+// raleway-900 - latin
 @font-face {
   font-family: 'Raleway';
-  src: url('/fonts/raleway-black-webfont.eot');
-  src: url('/fonts/raleway-black-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/raleway-black-webfont.woff2') format('woff2'),
-       url('/fonts/raleway-black-webfont.woff') format('woff'),
-       url('/fonts/raleway-black-webfont.ttf') format('truetype'),
-       url('/fonts/raleway-black-webfont.svg#ralewayblack') format('svg');
+  font-style: normal;
   font-weight: 900;
-  font-style: normal;
+  src: local('Raleway Black'), local('Raleway-Black'),
+       url(font_path('raleway-v11-latin-900.woff2')) format('woff2'),
+       url(font_path('raleway-v11-latin-900.woff')) format('woff');
 }
 
-@font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/raleway-regular-webfont.eot');
-  src: url('/fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/raleway-regular-webfont.woff2') format('woff2'),
-       url('/fonts/raleway-regular-webfont.woff') format('woff'),
-       url('/fonts/raleway-regular-webfont.ttf') format('truetype'),
-       url('/fonts/raleway-regular-webfont.svg#ralewayregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
+// merriweather-regular - latin
 @font-face {
   font-family: 'Merriweather';
-  src: url('merriweather-bold-webfont.eot');
-  src: url('merriweather-bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('merriweather-bold-webfont.woff2') format('woff2'),
-       url('merriweather-bold-webfont.woff') format('woff'),
-       url('merriweather-bold-webfont.ttf') format('truetype'),
-       url('merriweather-bold-webfont.svg#merriweatherbold') format('svg');
-  font-weight: bold;
   font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), local('Merriweather-Regular'),
+       url(font_path('merriweather-v13-latin-regular.woff2')) format('woff2'),
+       url(font_path('merriweather-v13-latin-regular.woff')) format('woff');
 }
 
+// merriweather-italic - latin
 @font-face {
   font-family: 'Merriweather';
-  src: url('merriweather-boldit-webfont.eot');
-  src: url('merriweather-boldit-webfont.eot?#iefix') format('embedded-opentype'),
-       url('merriweather-boldit-webfont.woff2') format('woff2'),
-       url('merriweather-boldit-webfont.woff') format('woff'),
-       url('merriweather-boldit-webfont.ttf') format('truetype'),
-       url('merriweather-boldit-webfont.svg#merriweatherbold_italic') format('svg');
-  font-weight: bold;
   font-style: italic;
+  font-weight: 400;
+  src: local('Merriweather Italic'), local('Merriweather-Italic'),
+       url(font_path('merriweather-v13-latin-italic.woff2')) format('woff2'),
+       url(font_path('merriweather-v13-latin-italic.woff')) format('woff');
 }
 
+// merriweather-700 - latin
 @font-face {
   font-family: 'Merriweather';
-  src: url('merriweather-italic-webfont.eot');
-  src: url('merriweather-italic-webfont.eot?#iefix') format('embedded-opentype'),
-       url('merriweather-italic-webfont.woff2') format('woff2'),
-       url('merriweather-italic-webfont.woff') format('woff'),
-       url('merriweather-italic-webfont.ttf') format('truetype'),
-       url('merriweather-italic-webfont.svg#merriweatheritalic') format('svg');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Merriweather';
-  src: url('merriweather-regular-webfont.eot');
-  src: url('merriweather-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('merriweather-regular-webfont.woff2') format('woff2'),
-       url('merriweather-regular-webfont.woff') format('woff'),
-       url('merriweather-regular-webfont.ttf') format('truetype'),
-       url('merriweather-regular-webfont.svg#merriweatherregular') format('svg');
-  font-weight: normal;
   font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Bold'), local('Merriweather-Bold'),
+       url(font_path('merriweather-v13-latin-700.woff2')) format('woff2'),
+       url(font_path('merriweather-v13-latin-700.woff')) format('woff');
+}
+
+// merriweather-700italic - latin
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'),
+       url(font_path('merriweather-v13-latin-700italic.woff2')) format('woff2'),
+       url(font_path('merriweather-v13-latin-700italic.woff')) format('woff');
 }

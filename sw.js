@@ -2,28 +2,7 @@
 ---
 {% capture digest_paths %}{% for asset in assets %}{% unless asset[0] contains "/" %}{{ asset[1].digest_path }},{% endunless %}{% endfor %}{% endcapture %}
 
-function returnFromCacheOrFetch(request, cacheName) {
-  var cachePromise = caches.open(cacheName);
-  var matchPromise = cachePromise.then(function(cache) {
-    return cache.match(request);
-  });
-
-  return Promise.all([cachePromise, matchPromise]).then(function(responses) {
-    var cache = responses[0];
-    var cacheResponse = responses[1];
-    // Kick off the update request
-    var fetchPromise = fetch(request).then(function(fetchResponse) {
-      // Cache the updated file and then return the response
-      cache.put(request, fetchResponse.clone());
-      return fetchResponse;
-    });
-    // return the cached response if we have it, otherwise the result of the fetch.
-    return cacheResponse || fetchPromise;
-  });
-}
-
 var cacheName = "assets-{{ digest_paths | md5 }}";
-var fontCache = "fonts-cache";
 
 self.addEventListener("install", function(event) {
   event.waitUntil(
@@ -56,7 +35,5 @@ self.addEventListener("fetch", function(event) {
           return response || fetch(event.request);
         })
     )
-  } else if (url.hostname === "fonts.googleapis.com" || url.hostname === "fonts.gstatic.com") {
-    event.respondWith(returnFromCacheOrFetch(event.request, fontCache))
   }
 })

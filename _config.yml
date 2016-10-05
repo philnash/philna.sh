@@ -33,7 +33,10 @@ assets:
     - _assets/css
     - _assets/images
     - _assets/js
+    - _assets/fonts
   digest: true
+  precompile: true
+
 
 defaults:
   -
