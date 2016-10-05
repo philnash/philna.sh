@@ -1,6 +1,6 @@
 ---
 ---
-{% capture digest_paths %}{% for asset in assets %}{% unless asset[0] contains "/" %}{{ asset[1].digest_path }},{% endunless %}{% endfor %}{% endcapture %}
+{% capture digest_paths %}{% for asset in assets %}{% unless asset[0] contains "/" %}{% unless asset[0] contains "merriweather" %}{% unless asset[0] contains "raleway" %}{{ asset[1].digest_path }},{% endunless %}{% endunless %}{% endunless %}{% endfor %}{% endcapture %}
 
 var cacheName = "assets-{{ digest_paths | md5 }}";
 
@@ -30,10 +30,24 @@ self.addEventListener("activate", function(event) {
 self.addEventListener("fetch", function(event) {
   var url = new URL(event.request.url);
   if (url.pathname.match(/^\/assets\//)) {
-    event.respondWith(
-      caches.match(event.request).then(function(response) {
-          return response || fetch(event.request);
-        })
-    )
+    event.respondWith(returnFromCacheOrFetch(event.request, cacheName));
   }
 })
+
+function returnFromCacheOrFetch(request, cacheName) {
+  var cachePromise = caches.open(cacheName);
+  var matchPromise = cachePromise.then(function(cache) {
+    return cache.match(request);
+  });
+
+  return Promise.all([cachePromise, matchPromise]).then(function(responses) {
+    var cache = responses[0];
+    var cacheResponse = responses[1];
+    // return the cached response if we have it, otherwise the result of the fetch.
+    return cacheResponse || fetch(request).then(function(fetchResponse) {
+      // Cache the updated file and then return the response
+      cache.put(request, fetchResponse.clone());
+      return fetchResponse;
+    });
+  });
+}
