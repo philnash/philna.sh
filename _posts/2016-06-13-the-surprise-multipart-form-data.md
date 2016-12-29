@@ -106,10 +106,10 @@ const formidable = require("express-formidable");
 const app = new Express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(formidable.parse());
+app.use(formidable());
 
 app.post("/", function(request, response) {
-  console.log(request.body.foo)
+  console.log(request.fields.foo)
   response.send("OK");
 });
 
