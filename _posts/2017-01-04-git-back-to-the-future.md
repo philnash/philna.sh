@@ -23,6 +23,10 @@ The difference between the `--soft` and `--hard` flag is one of those ways you c
 
 It turns out that git is watching us closer than we may think. When we make changes to any branch, git stores those changes in the reflog. Even if we were to remove a whole bunch of work by resetting with the `--hard` flag, git still knows about the commits we had made and we can recover them. The key is that the commits still exist, there just aren't any branches that currently point to them. This is where the reflog comes into play. It has a log of all commits made in the repo, as well as other actions, and we can use it to recover these lost commits.
 
+### Warning!
+
+Before I show you how this works, please note the following. If you have uncommitted changes in the working directory and you use `git reset --hard` no amount of fancy git knowledge about the reflog is going to get that back. The following will save only work that you have committed. Be warned!
+
 ## How to use the reflog to recover lost commits
 
 Here's an example, I have a repo with one commit. Running `git log --oneline` and `git reflog` both show the commit has the hash `2daf3ba`.
