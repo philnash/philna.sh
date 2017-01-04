@@ -9,7 +9,7 @@ tags:
 
 Git may be the best version control software I've used but it is a complex beast and makes it easy to shoot yourself in the foot. Recently, however, I learned of one way that you can unshoot yourself and potentially save yourself hours of lost work.
 
-<figure class="post-image post-image-left"><a href="https://www.xkcd.com/1597/"><img src="http://imgs.xkcd.com/comics/git.png" alt="XKCD's take on Git, in brief it is about memorising a bunch of commands to use and deleting everything if you mess up."></a></figure>
+<figure class="post-image post-image-left"><a href="https://www.xkcd.com/1597/"><img src="https://imgs.xkcd.com/comics/git.png" alt="XKCD's take on Git, in brief it is about memorising a bunch of commands to use and deleting everything if you mess up."></a></figure>
 
 `git reset` is useful when you've done something wrong. You can turn back the clock and undo commits.
 
