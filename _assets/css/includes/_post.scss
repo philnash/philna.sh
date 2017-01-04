@@ -5,6 +5,12 @@
   margin: $spacing-unit*2 0;
 }
 
+@include media-query-min(700px) {
+  .post-title {
+    font-size: $base-font-size*3;
+  }
+}
+
 .post-header-image{
   display: block;
   width: 100%;
@@ -17,10 +23,8 @@
   font-size: $small-font-size;
 }
 
-@include media-query-min(700px) {
-  .post-title {
-    font-size: $base-font-size*3;
-  }
+.post footer {
+  margin-top: $spacing-unit*2;
 }
 
 .post-list {
@@ -50,4 +54,32 @@
 .twitter-tweet-rendered {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Images */
+
+.post-image {
+  display: block;
+  text-align: center;
+}
+
+.post-image-outside {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@include media-query-min(600px) {
+  .post-image-left {
+    float:left;
+    margin-left: 0;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+@include media-query-min(700px) {
+  .post-image-outside {
+    margin-left: -100px;
+    margin-right: -100px;
+  }
 }

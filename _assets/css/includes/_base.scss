@@ -198,3 +198,12 @@ abbr, abbr[title] {
   text-decoration: none;
   border-bottom: .1em dotted;
 }
+
+/**
+ * Small text
+ */
+small {
+  font-size: $small-font-size;
+  color: $grey-color;
+  font-style: italic;
+}
