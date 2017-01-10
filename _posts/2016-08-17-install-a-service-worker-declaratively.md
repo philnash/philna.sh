@@ -5,6 +5,7 @@ tags:
   - service worker
   - javascript
 image: /images/service-worker.png
+image_alt: "Three cogs on a yellow background, intended to represent the idea of the Service Worker"
 ---
 
 There's been some interesting updates in service workers recently. The big news is that the [Microsoft Edge development version now has service workers, alongside push notifications and background sync, behind flags](http://www.ghacks.net/2016/08/14/microsoft-edge-improves-on-windows-10-14901/). There was a new feature that caught my eye though; a declarative method for registering service workers.

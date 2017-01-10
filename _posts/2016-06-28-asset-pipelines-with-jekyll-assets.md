@@ -5,6 +5,7 @@ tags:
   - jekyll
   - assets
 image: /images/jekyll.png
+image_alt: "The Jekyll logo"
 ---
 
 When I started again on this site, I wanted to make sure it was going to load fast. [Performance matters](https://twitter.com/search?q=%23perfmatters).

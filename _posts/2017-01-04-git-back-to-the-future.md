@@ -2,6 +2,7 @@
 layout: post
 title:  "Git back to the future"
 image: /images/git.png
+image_alt: "The git logo"
 tags:
   - git
   - vcs
