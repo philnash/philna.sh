@@ -25,6 +25,7 @@ gems:
   - jekyll-paginate
   - jekyll-assets
   - liquid-md5
+  - jekyll-sitemap
 
 assets:
   prefix: /assets
