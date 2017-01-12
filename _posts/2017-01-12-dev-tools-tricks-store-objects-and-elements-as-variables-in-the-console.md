@@ -3,6 +3,8 @@ layout: post
 title: "Dev Tools Tricks: Store objects and elements as variables in the console"
 tags:
   - dev tools
+image: '/images/dev_tools_tricks.png'
+show_image: false
 ---
 
 Browser dev tools are so full of features it's hard to keep up. I bet every developer knows a different set of features to each other. I wanted to share a few little tips that I use, that you might not know and that if I don't write down I might forget.

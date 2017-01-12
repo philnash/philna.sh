@@ -6,7 +6,7 @@ layout: default
 
     <header class="post-header cell cell-12">
       <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-      {% if page.image %}
+      {% if page.image and page.show_image %}
         <img src="{{ page.image }}" alt="{% if page.image_alt %}{{ page.image_alt }}{% else %} {% endif %}" class="post-header-image">
       {% endif %}
     </header>
