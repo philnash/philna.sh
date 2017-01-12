@@ -34,6 +34,7 @@
 }
 .post-list h2 {
   font-size: $base-font-size*1.5;
+  line-height: 1.25;
 }
 .post-list .post {
   margin-bottom: $spacing-unit;
@@ -61,6 +62,11 @@
 .post-image {
   display: block;
   text-align: center;
+}
+
+.post-image img {
+  max-width: 100%;
+  height: auto;
 }
 
 .post-image-outside {
