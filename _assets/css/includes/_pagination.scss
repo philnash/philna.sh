@@ -1,0 +1,49 @@
+.pagination {
+  text-align: center;
+  padding: $spacing-unit 0;
+}
+
+.pagination * {
+  display: inline-block;
+  padding: 0 $spacing-unit/2;
+  border-bottom: 2px solid transparent;
+}
+
+.pagination .numbers {
+  padding: 0;
+  display: none;
+}
+.pagination .start-ellipsis,
+.pagination .end-ellipsis {
+    padding: 0;
+    display: none;
+}
+.pagination .start-ellipsis::before,
+.pagination .end-ellipsis::before {
+    content: '\2026';
+}
+@include media-query-min(600px) {
+  .pagination .numbers,
+  .pagination .start-ellipsis,
+  .pagination .end-ellipsis {
+    display: inline-block;
+  }
+}
+
+.pagination em {
+  font-style: normal;
+  background-color: $brand-color;
+  color: $background-color;
+  border-radius: $border-radius;
+}
+
+.pagination a {
+  background-color: $background-color;
+  color: $brand-color;
+  border-radius: $border-radius;
+}
+.pagination a:hover {
+  color: lighten($brand-color, 15%);
+}
+
+
