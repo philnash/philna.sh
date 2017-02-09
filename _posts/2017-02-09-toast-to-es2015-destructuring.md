@@ -37,8 +37,12 @@ Let's take a look at the code:
 {% highlight javascript %}
   const punkAPIUrl = "https://api.punkapi.com/v2/beers/106"
   const deadPonyClubUrl = "https://api.punkapi.com/v2/beers/91"
-  const piProm = fetch(punkAPIUrl).then(res => res.json()).then(data => Promise.resolve(data[0]));
-  const dpcProm = fetch(deadPonyClubUrl).then(res => res.json()).then(data => Promise.resolve(data[0]));
+  const piProm = fetch(punkAPIUrl)
+    .then(res => res.json())
+    .then(data => Promise.resolve(data[0]));
+  const dpcProm = fetch(deadPonyClubUrl)
+    .then(res => res.json())
+    .then(data => Promise.resolve(data[0]));
 
   Promise.all([piProm, dpcProm]).then(beers => {
     const punkIPA = beers[0];
