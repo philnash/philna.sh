@@ -35,30 +35,32 @@ Let's say you want to compare two of [BrewDog's delicious beers](https://www.bre
 Let's take a look at the code:
 
 {% highlight javascript %}
-  const punkAPIUrl = "https://api.punkapi.com/v2/beers/106"
-  const deadPonyClubUrl = "https://api.punkapi.com/v2/beers/91"
-  const piProm = fetch(punkAPIUrl)
+  const punkAPIUrl = "https://api.punkapi.com/v2/beers/106";
+  const deadPonyClubUrl = "https://api.punkapi.com/v2/beers/91";
+  const punkAPIPromise = fetch(punkAPIUrl)
     .then(res => res.json())
     .then(data => Promise.resolve(data[0]));
-  const dpcProm = fetch(deadPonyClubUrl)
+  const deadPonyClubPromise = fetch(deadPonyClubUrl)
     .then(res => res.json())
     .then(data => Promise.resolve(data[0]));
 
-  Promise.all([piProm, dpcProm]).then(beers => {
-    const punkIPA = beers[0];
-    const deadPonyClub = beers[1];
-    const stronger = (punkIPA.abv < deadPonyClub.abv ? deadPonyClub.name : punkIPA.name) + " is stronger";
-    console.log(stronger);
-  });
+  Promise.all([punkAPIPromise, deadPonyClubPromise])
+    .then(beers => {
+      const punkIPA = beers[0];
+      const deadPonyClub = beers[1];
+      const stronger = (punkIPA.abv < deadPonyClub.abv ? deadPonyClub.name : punkIPA.name) + " is stronger";
+      console.log(stronger);
+    });
 {% endhighlight %}
 
 We can tidy that Promise up with parameter destructuring:
 
 {% highlight javascript %}
-  Promise.all([piProm, dpcProm]).then(([punkIPA, deadPonyClub]) => {
-    const stronger = (punkIPA.abv < deadPonyClub.abv ? deadPonyClub.name : punkIPA.name) + " is stronger";
-    console.log(stronger);
-  });
+  Promise.all([punkAPIPromise, deadPonyClubPromise])
+    .then(([punkIPA, deadPonyClub]) => {
+      const stronger = (punkIPA.abv < deadPonyClub.abv ? deadPonyClub.name : punkIPA.name) + " is stronger";
+      console.log(stronger);
+    });
 {% endhighlight %}
 
 We know we're getting two beers as a result and the way this example is constructed we even know which beer is which. So we can use the parameter destructuring to name the beers in the array instead of plucking them out.
@@ -74,21 +76,22 @@ The final code looked like this:
 {% highlight javascript %}
 function returnFromCacheOrFetch(request, cacheName) {
   const cachePromise = caches.open(cacheName);
-  const matchPromise = cachePromise.then(function(cache) {
-    return cache.match(request);
-  });
+  const matchPromise = cachePromise
+    .then((cache) => cache.match(request));
 
   // Use the result of both the above Promises to return the Response. Promise.all returns an array, but we destructure that in the callback.
-  return Promise.all([cachePromise, matchPromise]).then(function([cache, cacheResponse]) {
-    // Kick off the update request
-    const fetchPromise = fetch(request).then(function(fetchResponse) {
-      // Cache the updated file and then return the response
-      cache.put(request, fetchResponse.clone());
-      return fetchResponse;
-    }
-    // return the cached response if we have it, otherwise the result of the fetch.
-    return cacheResponse || fetchPromise;
-  });
+  return Promise.all([cachePromise, matchPromise])
+    .then(([cache, cacheResponse]) => {
+      // Kick off the update request
+      const fetchPromise = fetch(request)
+        .then((fetchResponse) => {
+          // Cache the updated file and then return the response
+          cache.put(request, fetchResponse.clone());
+          return fetchResponse;
+        });
+      // return the cached response if we have it, otherwise the result of the fetch.
+      return cacheResponse || fetchPromise;
+    });
 }
 {% endhighlight %}
 
