@@ -39,10 +39,10 @@ Let's take a look at the code:
   const deadPonyClubUrl = "https://api.punkapi.com/v2/beers/91";
   const punkAPIPromise = fetch(punkAPIUrl)
     .then(res => res.json())
-    .then(data => Promise.resolve(data[0]));
+    .then(data => data[0]);
   const deadPonyClubPromise = fetch(deadPonyClubUrl)
     .then(res => res.json())
-    .then(data => Promise.resolve(data[0]));
+    .then(data => data[0]);
 
   Promise.all([punkAPIPromise, deadPonyClubPromise])
     .then(beers => {
