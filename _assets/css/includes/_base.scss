@@ -111,7 +111,8 @@ a {
 a:visited {
   // color: darken($brand-color, 15%);
 }
-a:hover {
+a:hover,
+a:focus {
   color: lighten($brand-color, 15%);
   // text-decoration: underline;
   border-bottom: 2px solid lighten($brand-color, 15%);
