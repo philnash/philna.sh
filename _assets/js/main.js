@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   shareLinks.forEach(function(link) {
     link.addEventListener('click', function (event) {
       if (typeof navigator.share !== 'undefined') {
+        event.preventDefault();
         var canonicalElement = document.querySelector('link[rel=canonical]');
         if(canonicalElement !== undefined) {
           var url = canonicalElement.href;
@@ -14,9 +15,35 @@ document.addEventListener('DOMContentLoaded', function(event) {
           var url = window.location.href;
         }
         var pageTitle = document.querySelector('.post-title').textContent;
-        return navigator.share({ title: pageTitle, url: url })
-          .then(function() { return false; })
-          .catch(function(err) { return true; });
+        navigator.share({ title: pageTitle, url: url })
+          .then(function() {
+            // track successful share
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'Post',
+              eventAction: 'share',
+              eventLabel: 'success'
+            });
+          })
+          .catch(function(err) {
+            // track unsuccessful share
+            ga('send', {
+              hitType: 'event',
+              eventCategory: 'Post',
+              eventAction: 'share',
+              eventLabel: 'fail'
+            });
+            window.open(event.target.href);
+          });
+        return false;
+      } else {
+        // track share click
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Post',
+          eventAction: 'share',
+          eventLabel: 'click'
+        });
       }
     })
   })
