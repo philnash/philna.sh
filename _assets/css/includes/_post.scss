@@ -89,3 +89,13 @@
     margin-right: -100px;
   }
 }
+
+.post-promo {
+  margin-top: $spacing-unit*3;
+  background-color: $grey-color-light;
+  text-align: center;
+}
+.post-promo p {
+  padding: $spacing-unit 0;
+  margin-bottom: 0;
+}
