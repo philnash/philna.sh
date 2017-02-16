@@ -27,11 +27,12 @@ gems:
   - jekyll-assets
   - liquid-md5
   - jekyll-sitemap
+  - uglifier
 
 assets:
   prefix: /assets
   css_compressor: sass
-  js_compressor: babel
+  js_compressor: uglifier
   sources:
     - _assets/css
     - _assets/images

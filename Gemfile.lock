@@ -62,6 +62,8 @@ GEM
       babel-source (>= 5.8.11)
       babel-transpiler
       sprockets (>= 3.0.0)
+    uglifier (3.0.3)
+      execjs (>= 0.3.0, < 3)
 
 PLATFORMS
   ruby
@@ -75,6 +77,7 @@ DEPENDENCIES
   rouge
   sass
   sprockets-es6
+  uglifier
 
 RUBY VERSION
    ruby 2.3.1p112
