@@ -39,6 +39,7 @@ GEM
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.12.0)
+    libv8 (3.16.14.15)
     liquid (3.0.6)
     liquid-md5 (0.0.2)
       liquid (>= 2.5, < 4.0)
@@ -52,6 +53,7 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    ref (2.0.0)
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.22)
@@ -62,6 +64,9 @@ GEM
       babel-source (>= 5.8.11)
       babel-transpiler
       sprockets (>= 3.0.0)
+    therubyracer (0.12.2)
+      libv8 (~> 3.16.14.0)
+      ref
     uglifier (3.0.3)
       execjs (>= 0.3.0, < 3)
 
@@ -77,6 +82,7 @@ DEPENDENCIES
   rouge
   sass
   sprockets-es6
+  therubyracer
   uglifier
 
 RUBY VERSION
