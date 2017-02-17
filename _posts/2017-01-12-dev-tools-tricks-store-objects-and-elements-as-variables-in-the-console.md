@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dev Tools Tricks&#58; Store objects and elements as variables in the console"
+title: "Dev Tools Tricks: Store objects and elements as variables in the console"
 tags:
   - dev tools
 image: "/images/dev-tools-tricks-header.png"
