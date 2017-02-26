@@ -1,0 +1,47 @@
+.social {
+  list-style-type: none;
+  margin: 0 0 $spacing-unit;
+  padding: 0;
+  overflow: hidden;
+}
+.social svg {
+  display: inline-block;
+  height: $base-font-size*1.5;
+  width: $base-font-size*1.5;
+  vertical-align: bottom;
+}
+.social .twitter {
+  color: #1DA1F3;
+  fill: #1DA1F3;
+  border-color: #1DA1F3;
+}
+.social .github {
+  color: #171515;
+  fill: #171515;
+  border-color: #171515;
+}
+.social .facebook {
+  color: #3b5998;
+  fill: #3b5998;
+  border-color: #3b5998;
+}
+.social .linkedin {
+  color: #0077B5;
+  fill: #0077B5;
+  border-color: #0077B5;
+}
+.social .instagram {
+  color: #B900B3;
+  fill: #B900B3;
+  border-color: #B900B3;
+}
+.social .googleplus {
+  color: #db4437;
+  fill: #db4437;
+  border-color: #db4437;
+}
+.social .stackoverflow {
+  color: #F48024;
+  fill: #F48024;
+  border-color: #F48024;
+}

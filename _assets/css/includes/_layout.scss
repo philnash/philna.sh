@@ -40,6 +40,9 @@ body {
   float: left;
   display: block;
 }
+.cell .cell {
+  padding: 0;
+}
 .cell-centre {
   margin-left: auto;
   margin-right: auto;
