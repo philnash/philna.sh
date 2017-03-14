@@ -29,7 +29,15 @@ You can feature detect the existence of the API so you can progressively enhance
 
 ## Implementing the web share API
 
-Here is my first implementation of the web share API for this site.
+This is how you'd call the web share API on its own.
+
+{% highlight javascript %}
+navigator.share({ title: title, url: url })
+  .then(function() { console.log("Share success!"); })
+  .catch(function() { console.log("Share failure!"); });
+{% endhighlight %}
+
+And here is my first implementation of the web share API for this site.
 
 {% highlight javascript %}
 var shareLinks = [].slice.call(document.querySelectorAll('.share'));
