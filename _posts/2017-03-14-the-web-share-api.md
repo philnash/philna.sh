@@ -58,7 +58,6 @@ shareLinks.forEach(function(link) {
     } else {
       // No web share API...
     }
-  }
   });
 });
 {% endhighlight %}
