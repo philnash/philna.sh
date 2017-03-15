@@ -1,0 +1,22 @@
+---
+layout: null
+---
+{
+  "name": "Phil Nash",
+  "short_name": "Phil Nash",
+  "start_url": "/?utm_source=homescreen",
+  "description": "Blog and personal site of Phil Nash.",
+  "dir": "ltr",
+  "lang": "en-GB",
+  "display": "minimal-ui",
+  "orientation": "any",
+  "background_color": "#fcfcfc",
+  "theme_color": "#ea0011",
+  "icons": [
+    {
+      "src": "{% asset_path icon %}",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

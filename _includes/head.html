@@ -9,6 +9,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="{% asset_path apple-touch-icon %}">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Phil Nash">
+  <meta name="apple-mobile-web-app-title" content="Phil Nash">
+  <meta name="theme-color" content="#ea0011">
+  <meta name="msapplication-navbutton-color" content="#ea0011">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="msapplication-starturl" content="/?utm_source=homescreen">
+
   {% stylesheet main.css %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
