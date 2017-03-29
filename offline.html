@@ -1,0 +1,46 @@
+---
+layout: page
+title: Offline
+permalink: /offline/
+---
+
+<p>Your connection appears to be offline at the moment. You can still navigate around the following pages though:</p>
+
+<ul class="offline-pages"></ul>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (swSupport()) {
+      var cacheRequests = navigator.serviceWorker.ready
+        .then(function() {
+          return caches.open("v{{ site.sw_cache_version }}-pages");
+        })
+        .then(function(cache) {
+          return cache.keys();
+        })
+
+      Promise.all([openDb(), cacheRequests])
+        .then(function(promises) {
+          var db = promises[0];
+          var requestList = promises[1];
+
+          return Promise.all(
+            requestList.map(function(request) {
+              return db.transaction('pages').objectStore('pages').get(request.url);
+            })
+          );
+        })
+        .then(function(pages) {
+          var offlineList = document.querySelector('.offline-pages');
+          offlineList.innerHTML = pages.filter(function(page) {
+            return page && page.url.indexOf('/offline/') === -1;
+          }).sort(function(a, b) {
+            return a.group > b.group;
+          }).map(function(page) {
+            return "<li><a href='"+page.url+"'>"+page.title+"</a></li>";
+          }).join('');
+        })
+    }
+  });
+
+</script>
