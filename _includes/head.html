@@ -9,6 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <!-- preload fonts -->
+  <link rel="preload" href="{% asset_path raleway-v11-latin-900.woff2 %}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{% asset_path merriweather-v13-latin-regular.woff2 %}" as="font" type="font/woff2" crossorigin>
+
   <link rel="manifest" href="/manifest.json">
   <link rel="apple-touch-icon" href="{% asset_path apple-touch-icon %}">
   <meta name="mobile-web-app-capable" content="yes">
