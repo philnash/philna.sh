@@ -1,0 +1,15 @@
+.offline-pages {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offline-pages li {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid $border-color;
+}
+
+.offline-pages li:last-child {
+  border-bottom: none;
+}

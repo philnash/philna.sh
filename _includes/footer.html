@@ -67,13 +67,12 @@
         </ul>
       </div>
 
-      <p class="cell cell-12 cell-med-4">&copy; {{ site.time | date: '%Y' }} <a href="/">philnash</a> &bull; <a href="/">home</a> {% comment %}&bull; <a href="/about">about</a> {% endcomment %} &bull; <a href="/blog">blog</a></p>
+      <p class="cell cell-12 cell-med-4">&copy; {{ site.time | date: '%Y' }} <a href="/">philnash</a> &bull; <a href="/">home</a> {% comment %}&bull; <a href="/about/">about</a> {% endcomment %} &bull; <a href="/blog/">blog</a></p>
     </div>
   </div>
 </footer>
 
-{% js idb.js %}
-{% js main.js %}
+{% js main.js async:true %}
 {% if page.scripts %}
   {% for script in page.scripts %}
     {{ script }}
