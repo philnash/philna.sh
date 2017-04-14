@@ -1,21 +1,22 @@
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js');
-}
-
 document.addEventListener('DOMContentLoaded', function(event) {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+
   var shareLinks = [].slice.call(document.querySelectorAll('.share'));
   shareLinks.forEach(function(link) {
-    link.addEventListener('click', function (event) {
+    link.addEventListener('click', function(event) {
       if (typeof navigator.share !== 'undefined') {
         event.preventDefault();
         var canonicalElement = document.querySelector('link[rel=canonical]');
-        if(canonicalElement !== undefined) {
+        if (canonicalElement !== undefined) {
           var url = canonicalElement.href;
         } else {
           var url = window.location.href;
         }
         var pageTitle = document.querySelector('.post-title').textContent;
-        navigator.share({ title: pageTitle, url: url })
+        navigator
+          .share({ title: pageTitle, url: url })
           .then(function() {
             // track successful share
             ga('send', {
@@ -45,6 +46,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
           eventLabel: 'click'
         });
       }
-    })
-  })
+    });
+  });
 });
