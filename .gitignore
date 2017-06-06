@@ -3,3 +3,4 @@ _site
 .jekyll-metadata
 _drafts
 .asset-cache
+npm-debug.log
