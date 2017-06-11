@@ -13,6 +13,10 @@ Recently I implemented the [web share API](https://developers.google.com/web/upd
 
 If you don't have a browser that supports the API, then this is what it looks like when you hit the share link.
 
+<div class="info">
+  <p>The Web Share API origin trial has finished, so you cannot currently see it working in Chrome. To keep up with the discussion, keep an eye on the <a href="https://discourse.wicg.io/t/web-share-api-for-sharing-content-to-arbitrary-destination/1561">WICG forum</a> and the <a href="https://github.com/WICG/web-share">GitHub repo</a>.</p>
+</div>
+
 <figure class="post-image post-image-left"><img src="/images/webshare.png" alt="A tray slides up from the bottom of the screen with sharing options from your installed applications."></figure>
 
 I want to share how the API works and my thoughts on it so far.

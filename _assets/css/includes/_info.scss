@@ -1,0 +1,8 @@
+.info {
+  background-color: $grey-color-light;
+  padding: $spacing-unit;
+  margin-bottom: $spacing-unit/2;
+}
+.info p:last-child {
+  margin-bottom: 0;
+}
