@@ -52,6 +52,17 @@ With these results we can see that installing the gems for GitLab in parallel us
 
 You should run your own tests with your own setup to see if this genuinely will save you time with installing gems. There has been [some research](http://archlever.blogspot.co.uk/2013/09/lies-damned-lies-and-truths-backed-by.html) into the [best number of jobs](http://blog.mroth.info/blog/2014/10/02/rubygems-bundler-they-took-our-jobs/). I've certainly set the default number of jobs to 4 for the future.
 
+### Why isn't this default?
+
+You might be wondering why Bundler doesn't just turn on parallel installation by default. A quick glance at the comments in the [source code](https://github.com/bundler/bundler/blob/7f1411cdb3279c25e8e8f2a8e3c1f8acf3dbe8f2/lib/bundler/installer.rb#L160-L163) gives this one away.
+
+```ruby
+# the order that the resolver provides is significant, since
+# dependencies might affect the installation of a gem.
+# that said, it's a rare situation (other than rake), and parallel
+# installation is SO MUCH FASTER. so we let people opt in.
+```
+
 ## Reading the docs
 
 As a final point, I'd like to point out that reading the documentation, even for a project you may use every day, can turn up some interesting options you didn't know you could use. Bundler itself is full of other useful commands and options, check out [`bundle pristine`](https://bundler.io/v1.15/man/bundle-pristine.1.html), [`bundle gem`](https://bundler.io/v1.15/man/bundle-gem.1.html) and [`bundle outdated`](https://bundler.io/v1.15/man/bundle-outdated.1.html) for some ideas of what is available.
