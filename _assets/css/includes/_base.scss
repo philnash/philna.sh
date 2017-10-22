@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit;
 }
 
 
@@ -85,6 +85,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
   font-weight: $header-font-weight;
 }
+h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
 h1, h2, h3 {
   text-transform: uppercase;
 }
@@ -127,8 +130,10 @@ a:focus {
 blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
-  font-size: 18px;
+  padding-left: $spacing-unit;
+  padding-top: $spacing-unit / 2;
+  padding-bottom: $spacing-unit / 2;
+  font-size: 24px;
   letter-spacing: -1px;
   font-style: italic;
 }
