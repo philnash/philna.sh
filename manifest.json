@@ -20,7 +20,7 @@ layout: null
     },
     {
       "src": "{% asset_path icon512x512 %}",
-      "sizes": "51x512",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
