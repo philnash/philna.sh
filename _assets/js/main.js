@@ -14,7 +14,10 @@ function getPageTitle() {
     return 'Home';
   }
   if (path.indexOf('/page/') > 0) {
-    var pageNumber = path.split('/page/').reverse()[0].split('/')[0];
+    var pageNumber = path
+      .split('/page/')
+      .reverse()[0]
+      .split('/')[0];
     return h1.textContent + ': page ' + pageNumber;
   }
   return h1.textContent;
@@ -44,101 +47,97 @@ function swSupport() {
 if (swSupport()) {
   navigator.serviceWorker.register('/sw.js');
 }
+var url = getCanonicalUrl();
+var pageTitle = getPageTitle();
 
-// TODO: What's going on with DOMContentLoaded?
-document.addEventListener('DOMContentLoaded', function(event) {
-  var url = getCanonicalUrl();
-  var pageTitle = getPageTitle();
-
-  var shareLinks = [].slice.call(document.querySelectorAll('.share'));
-  shareLinks.forEach(function(link) {
-    link.addEventListener('click', function(event) {
-      if (typeof navigator.share !== 'undefined') {
-        event.preventDefault();
-        navigator
-          .share({ title: pageTitle, url: url })
-          .then(function() {
-            // track successful share
-            ga('send', {
-              hitType: 'event',
-              eventCategory: 'Post',
-              eventAction: 'share',
-              eventLabel: 'success'
-            });
-          })
-          .catch(function(err) {
-            // track unsuccessful share
-            ga('send', {
-              hitType: 'event',
-              eventCategory: 'Post',
-              eventAction: 'share',
-              eventLabel: 'fail'
-            });
-            window.open(event.target.href);
+var shareLinks = [].slice.call(document.querySelectorAll('.share'));
+shareLinks.forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    if (typeof navigator.share !== 'undefined') {
+      event.preventDefault();
+      navigator
+        .share({ title: pageTitle, url: url })
+        .then(function() {
+          // track successful share
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'Post',
+            eventAction: 'share',
+            eventLabel: 'success'
           });
-        return false;
-      } else {
-        // track share click
-        ga('send', {
-          hitType: 'event',
-          eventCategory: 'Post',
-          eventAction: 'share',
-          eventLabel: 'click'
+        })
+        .catch(function(err) {
+          // track unsuccessful share
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'Post',
+            eventAction: 'share',
+            eventLabel: 'fail'
+          });
+          window.open(event.target.href);
         });
-      }
+      return false;
+    } else {
+      // track share click
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Post',
+        eventAction: 'share',
+        eventLabel: 'click'
+      });
+    }
+  });
+});
+if (swSupport()) {
+  navigator.serviceWorker.ready.then(function(reg) {
+    openDb().then(function(db) {
+      var objectStore = db
+        .transaction('pages', 'readwrite')
+        .objectStore('pages');
+      objectStore.put({
+        url: url,
+        title: pageTitle,
+        group: getGroupNumber()
+      });
     });
   });
-  if (swSupport()) {
-    navigator.serviceWorker.ready.then(function(reg) {
-      openDb().then(function(db) {
-        var objectStore = db
-          .transaction('pages', 'readwrite')
-          .objectStore('pages');
-        objectStore.put({
-          url: url,
-          title: pageTitle,
-          group: getGroupNumber()
-        });
-      });
-    });
-  }
+}
 
-  var offlineList = document.querySelector('.offline-pages');
-  if (swSupport() && !!offlineList) {
-    var cacheRequests = navigator.serviceWorker.ready
-      .then(function() {
-        return caches.open(
-          'v' + offlineList.getAttribute('data-sw-cache-version') + '-pages'
-        );
-      })
-      .then(function(cache) {
-        return cache.keys();
-      });
-    Promise.all([openDb(), cacheRequests])
-      .then(function(promises) {
-        var db = promises[0];
-        var requestList = promises[1];
-        return Promise.all(
-          requestList.map(function(request) {
-            return db
-              .transaction('pages')
-              .objectStore('pages')
-              .get(request.url);
-          })
-        );
-      })
-      .then(function(pages) {
-        offlineList.innerHTML = pages
-          .filter(function(page) {
-            return page && page.url.indexOf('/offline/') === -1;
-          })
-          .sort(function(a, b) {
-            return a.group > b.group;
-          })
-          .map(function(page) {
-            return "<li><a href='" + page.url + "'>" + page.title + '</a></li>';
-          })
-          .join('');
-      });
-  }
-});
+var offlineList = document.querySelector('.offline-pages');
+if (swSupport() && !!offlineList) {
+  var cacheRequests = navigator.serviceWorker.ready
+    .then(function() {
+      return caches.open(
+        'v' + offlineList.getAttribute('data-sw-cache-version') + '-pages'
+      );
+    })
+    .then(function(cache) {
+      return cache.keys();
+    });
+  Promise.all([openDb(), cacheRequests])
+    .then(function(promises) {
+      var db = promises[0];
+      var requestList = promises[1];
+      return Promise.all(
+        requestList.map(function(request) {
+          return db
+            .transaction('pages')
+            .objectStore('pages')
+            .get(request.url);
+        })
+      );
+    })
+    .then(function(pages) {
+      offlineList.innerHTML = pages
+        .filter(function(page) {
+          return page && page.url.indexOf('/offline/') === -1;
+        })
+        .sort(function(a, b) {
+          return a.group > b.group;
+        })
+        .map(function(page) {
+          return "<li><a href='" + page.url + "'>" + page.title + '</a></li>';
+        })
+        .join('');
+    });
+}
