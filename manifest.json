@@ -4,7 +4,7 @@ layout: null
 {
   "name": "Phil Nash",
   "short_name": "Phil Nash",
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "/",
   "description": "Blog and personal site of Phil Nash.",
   "dir": "ltr",
   "lang": "en-GB",
@@ -14,8 +14,13 @@ layout: null
   "theme_color": "#ea0011",
   "icons": [
     {
-      "src": "{% asset_path icon %}",
+      "src": "{% asset_path icon192x192 %}",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "{% asset_path icon512x512 %}",
+      "sizes": "51x512",
       "type": "image/png"
     }
   ]
