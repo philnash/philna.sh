@@ -69,7 +69,11 @@ function openCacheAndMatchRequest(cacheName, request) {
 
 function cacheSuccessfulResponse(cache, request, response) {
   if (response.ok) {
-    cache.put(request, response.clone());
+    return cache.put(request, response.clone()).then(() => {
+      return response;
+    })
+  } else {
+    return response;
   }
 }
 
@@ -97,8 +101,9 @@ function cacheThenNetwork(request, cacheName) {
         // return the cached response
         fetch(request)
           .then(function(fetchResponse) {
-            cacheSuccessfulResponse(cache, request, fetchResponse);
+            return cacheSuccessfulResponse(cache, request, fetchResponse);
           })
+          .then(refresh)
           .catch(function(err) {
             // Offline/network failure, but nothing to worry about
           });
@@ -115,4 +120,17 @@ function cacheThenNetwork(request, cacheName) {
           });
       }
     });
+}
+
+function refresh(response) {
+  return self.clients.matchAll().then(function(clients) {
+    clients.forEach(function(client) {
+      var message = {
+        type: 'refresh',
+        url: response.url,
+        eTag: response.headers.get('ETag')
+      };
+      client.postMessage(JSON.stringify(message));
+    });
+  });
 }

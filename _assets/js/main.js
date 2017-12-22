@@ -88,6 +88,7 @@ shareLinks.forEach(function(link) {
     }
   });
 });
+
 if (swSupport()) {
   navigator.serviceWorker.ready.then(function(reg) {
     openDb().then(function(db) {
@@ -100,6 +101,22 @@ if (swSupport()) {
         group: getGroupNumber()
       });
     });
+  });
+
+  navigator.serviceWorker.addEventListener('message', function(event) {
+    var message = JSON.parse(event.data);
+    var isRefresh = message.type === 'refresh';
+    var lastETag = localStorage.getItem('currentETag');
+
+    var isNew = lastETag !== message.eTag;
+
+    if (isRefresh && isNew) {
+      if (lastETag) {
+        console.log("New stuff");
+        // document.querySelector('.notice').removeAttribute('hidden');
+      }
+      localStorage.setItem('currentETag', message.eTag);
+    }
   });
 }
 
