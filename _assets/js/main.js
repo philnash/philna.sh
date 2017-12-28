@@ -7,7 +7,6 @@ function swSupport() {
 
 if (swSupport()) {
   navigator.serviceWorker.addEventListener('message', function(event) {
-    console.log(event);
     var message = JSON.parse(event.data);
     var isRefresh = message.type === 'refresh';
     var lastETag = localStorage.getItem('currentETag');
@@ -16,13 +15,11 @@ if (swSupport()) {
     var isNew = lastETag !== message.eTag;
 
     if (isRefresh && isNew) {
-      console.log('New stuff');
       if (lastETag) {
         if ('content' in document.createElement('template')) {
           var template = document.getElementById('fresh-notice');
           var clone = document.importNode(template.content, true);
           var notice = clone.querySelector('.notice');
-          console.log(notice);
           document.querySelector('body').appendChild(clone);
           setTimeout(function() {
             notice.classList.remove('hidden');
