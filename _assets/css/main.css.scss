@@ -1,36 +1,34 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: 'Merriweather', Georgia, serif;
-$header-font-family: 'Raleway', Arial, sans-serif;
-$base-font-size:   18px;
+$base-font-family: "Merriweather", Georgia, serif;
+$header-font-family: "Raleway", Arial, sans-serif;
+$base-font-size: 18px;
 $base-font-weight: 400;
 $header-font-weight: 900;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.6;
 $header-font-size: 24px;
 
-$spacing-unit:     30px;
+$spacing-unit: 30px;
 
-$text-color:       #454545;
+$text-color: #454545;
 $background-color: #fcfcfc;
-$brand-color:      #ea0011;
-$highlight-color:  #79B2C8;
-$border-color:     #CCC;
+$brand-color: #ea0011;
+$highlight-color: #79b2c8;
+$border-color: #ccc;
 
-$grey-color:       #828282;
+$grey-color: #828282;
 $grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-dark: darken($grey-color, 25%);
 
 $border-radius: 3px;
 
 // Width of the content area
-$content-width:    800px;
+$content-width: 800px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
+$on-palm: 600px;
+$on-laptop: 800px;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -40,9 +38,9 @@ $on-laptop:        800px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
 @mixin media-query-min($size) {
@@ -51,12 +49,8 @@ $on-laptop:        800px;
   }
 }
 
-
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-  "includes/fonts",
+@import "includes/fonts",
   "includes/base",
   "includes/layout",
   "includes/solarized_dark",
@@ -67,5 +61,5 @@ $on-laptop:        800px;
   "includes/social",
   "includes/post",
   "includes/info",
-  "includes/offline"
-;
+  "includes/offline",
+  "includes/notice";

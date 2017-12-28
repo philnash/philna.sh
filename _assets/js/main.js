@@ -1,4 +1,52 @@
-//= require idb
+//= require includes/idb
+/* global idb, ga */
+
+function swSupport() {
+  return 'serviceWorker' in navigator;
+}
+
+if (swSupport()) {
+  navigator.serviceWorker.addEventListener('message', function(event) {
+    console.log(event);
+    var message = JSON.parse(event.data);
+    var isRefresh = message.type === 'refresh';
+    var lastETag = localStorage.getItem('currentETag');
+    localStorage.setItem('currentETag', message.eTag);
+
+    var isNew = lastETag !== message.eTag;
+
+    if (isRefresh && isNew) {
+      console.log('New stuff');
+      if (lastETag) {
+        if ('content' in document.createElement('template')) {
+          var template = document.getElementById('fresh-notice');
+          var clone = document.importNode(template.content, true);
+          var notice = clone.querySelector('.notice');
+          console.log(notice);
+          document.querySelector('body').appendChild(clone);
+          setTimeout(function() {
+            notice.classList.remove('hidden');
+          }, 1000);
+        }
+      }
+    }
+  });
+
+  navigator.serviceWorker.ready.then(function() {
+    openDb().then(function(db) {
+      var objectStore = db
+        .transaction('pages', 'readwrite')
+        .objectStore('pages');
+      objectStore.put({
+        url: url,
+        title: pageTitle,
+        group: getGroupNumber()
+      });
+    });
+  });
+
+  navigator.serviceWorker.register('/sw.js');
+}
 
 function getCanonicalUrl() {
   var canonicalElement = document.querySelector('link[rel=canonical]');
@@ -40,13 +88,6 @@ function openDb() {
   });
 }
 
-function swSupport() {
-  return 'serviceWorker' in navigator;
-}
-
-if (swSupport()) {
-  navigator.serviceWorker.register('/sw.js');
-}
 var url = getCanonicalUrl();
 var pageTitle = getPageTitle();
 
@@ -66,7 +107,7 @@ shareLinks.forEach(function(link) {
             eventLabel: 'success'
           });
         })
-        .catch(function(err) {
+        .catch(function() {
           // track unsuccessful share
           ga('send', {
             hitType: 'event',
@@ -88,37 +129,6 @@ shareLinks.forEach(function(link) {
     }
   });
 });
-
-if (swSupport()) {
-  navigator.serviceWorker.ready.then(function(reg) {
-    openDb().then(function(db) {
-      var objectStore = db
-        .transaction('pages', 'readwrite')
-        .objectStore('pages');
-      objectStore.put({
-        url: url,
-        title: pageTitle,
-        group: getGroupNumber()
-      });
-    });
-  });
-
-  navigator.serviceWorker.addEventListener('message', function(event) {
-    var message = JSON.parse(event.data);
-    var isRefresh = message.type === 'refresh';
-    var lastETag = localStorage.getItem('currentETag');
-
-    var isNew = lastETag !== message.eTag;
-
-    if (isRefresh && isNew) {
-      if (lastETag) {
-        console.log("New stuff");
-        // document.querySelector('.notice').removeAttribute('hidden');
-      }
-      localStorage.setItem('currentETag', message.eTag);
-    }
-  });
-}
 
 var offlineList = document.querySelector('.offline-pages');
 if (swSupport() && !!offlineList) {
@@ -153,7 +163,7 @@ if (swSupport() && !!offlineList) {
           return a.group > b.group;
         })
         .map(function(page) {
-          return "<li><a href='" + page.url + "'>" + page.title + '</a></li>';
+          return '<li><a href="' + page.url + '">' + page.title + '</a></li>';
         })
         .join('');
     });
