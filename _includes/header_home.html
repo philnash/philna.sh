@@ -2,11 +2,8 @@
   <div class="home-nav cell cell-centre cell-12">
     {% include nav.html %}
   </div>
-
-  <img
-    src="{% asset_path philnash100x100 %}"
-    srcset="{% asset_path philnash100x100 %} 1x, {% asset_path philnash100x100@2x %} 2x, {% asset_path philnash100x100@3x %} 3x"
-    alt="A picture of Phil. He's smiling.">
+  <img src="{% asset_path philnash120x120 %}" srcset="{% asset_path philnash70x70 %} 70w, {% asset_path philnash70x70@2x %} 140w, {% asset_path philnash70x70@3x %} 210w, {% asset_path philnash120x120 %} 120w, {% asset_path philnash120x120@2x %} 240w, {% asset_path philnash120x120@3x %} 360w"
+    sizes="(min-width: 600px) 120px, 70px" alt="A picture of Phil. He's smiling.">
   <h1>{{ site.title }}</h1>
   <p>is a developer</p>
 </header>
