@@ -20,8 +20,10 @@ module Jekyll
         original = file.destination(site.dest)
         next unless ZIPPABLE_EXTENSIONS.include?(File.extname(original))
         zipped = "#{original}.gz"
-        File.open zipped, "w+" do |compressed_io|
-          compressed_io << Zlib::Deflate.deflate(File.read(original), Zlib::BEST_COMPRESSION)
+        Zlib::GzipWriter.open(zipped, Zlib::BEST_COMPRESSION) do |gz|
+          gz.mtime = File.mtime(original)
+          gz.orig_name = original
+          gz.write IO.binread(original)
         end
       end
     end
