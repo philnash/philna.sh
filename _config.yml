@@ -29,6 +29,7 @@ gems:
   - liquid-md5
   - jekyll-sitemap
   - uglifier
+  - jekyll-gzip
 
 assets:
   prefix: /assets

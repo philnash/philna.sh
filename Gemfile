@@ -4,6 +4,7 @@ ruby "2.3.1"
 
 gem "jekyll"
 gem "rouge"
+gem "jekyll-gzip"
 gem "jekyll-paginate"
 gem "jekyll-assets"
 gem "jekyll-sitemap"
