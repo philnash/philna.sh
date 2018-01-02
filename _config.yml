@@ -19,6 +19,7 @@ timezone: Europe/London
 sw_cache_version: 1
 
 # Build settings
+exclude: [deploy]
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 paginate_path: /blog/page/:num
