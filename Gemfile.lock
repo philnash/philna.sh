@@ -34,8 +34,6 @@ GEM
       pathutil (>= 0.8)
       rack (> 1, < 2)
       sprockets (~> 3.3, < 3.7)
-    jekyll-gzip (1.0.0)
-      jekyll (~> 3.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
@@ -43,6 +41,9 @@ GEM
       jekyll (~> 3.3)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
+    jekyll-zopfli (1.0.0)
+      jekyll (~> 3.0)
+      zopfli (~> 0.0.7)
     kramdown (1.13.2)
     libv8 (3.16.14.17)
     liquid (3.0.6)
@@ -75,6 +76,7 @@ GEM
       ref
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
+    zopfli (0.0.7)
 
 PLATFORMS
   ruby
@@ -82,9 +84,9 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-assets
-  jekyll-gzip
   jekyll-paginate
   jekyll-sitemap
+  jekyll-zopfli
   liquid-md5
   rouge
   sass
