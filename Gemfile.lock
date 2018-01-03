@@ -7,6 +7,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
+    brotli (0.2.0)
     colorator (1.1.0)
     concurrent-ruby (1.0.5)
     execjs (2.7.0)
@@ -34,6 +35,9 @@ GEM
       pathutil (>= 0.8)
       rack (~> 1.6)
       sprockets (~> 3.3, < 3.8)
+    jekyll-brotli (1.0.0)
+      brotli (~> 0.2.0)
+      jekyll (~> 3.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.1)
       sass (~> 3.4)
@@ -90,6 +94,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.4.0)
   jekyll-assets
+  jekyll-brotli
   jekyll-paginate
   jekyll-sitemap
   jekyll-zopfli
