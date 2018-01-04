@@ -1,0 +1,32 @@
+<li class="talk">
+  <p class="talk-meta">
+    {% if appearance.event.end_date %}
+      {{ appearance.event.start_date | date: "%b %-d" }} - {{ appearance.event.end_date | date: "%-d, %Y" }}
+    {% else %}
+      {{ appearance.event.start_date | date: "%b %-d, %Y" }}
+    {% endif %}
+    - {{ appearance.event.location }}
+  </p>
+  <h3 class="talk-event">
+    {% if appearance.event.link %}
+      <a href="{{ appearance.event.link }}">{{ appearance.event.name }}</a>
+    {% else %}
+      {{ appearance.event.name }}
+    {% endif %}
+  </h3>
+  <h4>Presenting</h4>
+  {% for talk in appearance.talks %}
+  <p class="talk-title"> <em>"{{ talk.title }}"</em></p>
+    {% if talk.slides or talk.video %}
+      <p class="talk-materials">
+        {% if talk.video %}
+          <a href="{{ talk.video }}">video</a>
+        {% endif %}
+        {% if talk.slides and talk.video %}&bull;{% endif %}
+        {% if talk.slides %}
+          <a href="{{ talk.slides }}">slides</a>
+        {% endif %}
+      </p>
+    {% endif %}
+  {% endfor %}
+</li>

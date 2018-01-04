@@ -7,12 +7,13 @@
 }
 
 @include media-query-min(700px) {
-  .post-title {
+  .post-title,
+  .page-title {
     font-size: $base-font-size*3;
   }
 }
 
-.post-header-image{
+.post-header-image {
   display: block;
   width: 100%;
   margin-top: -$spacing-unit;
@@ -22,6 +23,9 @@
 .post-meta {
   font-style: italic;
   font-size: $small-font-size;
+  font-family: $base-font-family;
+  font-weight: 400;
+  text-transform: none;
 }
 
 .post footer {
@@ -36,20 +40,19 @@
 .post-list h2 {
   font-size: $base-font-size*1.5;
   line-height: 1.25;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .post-list .post {
   margin-bottom: $spacing-unit;
   padding-bottom: $spacing-unit;
   border-bottom: 1px solid $border-color;
 }
-.post-list .post:last-child{
+.post-list .post:last-child {
   border-bottom: none;
 }
-.post-list .post p:last-child{
+.post-list .post p:last-child {
   margin-bottom: 0;
-}
-.post-content h2{
-  padding: 0.5em 0;
 }
 
 /* Centres embedded tweets in posts */
@@ -77,7 +80,7 @@
 
 @include media-query-min(600px) {
   .post-image-left {
-    float:left;
+    float: left;
     margin-left: 0;
     margin-right: 1em;
     margin-bottom: 1em;

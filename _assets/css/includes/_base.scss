@@ -1,9 +1,22 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
@@ -12,34 +25,41 @@ dl, dd, ol, ul, figure {
   box-sizing: border-box;
 }
 
-
 /**
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height}
+    $base-font-family;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
+  -webkit-font-feature-settings: 'kern' 1;
+  -moz-font-feature-settings: 'kern' 1;
+  -o-font-feature-settings: 'kern' 1;
+  font-feature-settings: 'kern' 1;
   font-kerning: normal;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit;
 }
-
 
 /**
  * Images
@@ -48,8 +68,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -62,12 +80,11 @@ figcaption {
   font-size: $small-font-size;
 }
 
-
-
 /**
  * Lists
  */
-ul, ol {
+ul,
+ol {
   margin-left: $spacing-unit;
 }
 
@@ -76,31 +93,40 @@ li ol {
   margin-bottom: 0;
 }
 
-
-
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $header-font-family;
   font-weight: $header-font-weight;
 }
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 0;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-transform: uppercase;
 }
 h2 {
   font-size: 2em;
   line-height: 1;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 h3 {
   font-size: 1.5em;
   line-height: 1.25;
 }
-
-
 
 /**
  * Links
@@ -122,8 +148,6 @@ a:focus {
   // box-shadow: inset 0 -4px 0 lighten($brand-color, 25%);
 }
 
-
-
 /**
  * Blockquotes
  */
@@ -141,25 +165,23 @@ blockquote > :last-child {
   margin-bottom: 0;
 }
 
-
-
 /**
  * Code formatting
  */
 pre,
 code {
-    font-size: $base-font-size;
+  font-size: $base-font-size;
 }
 
 code {
-    padding: 1px 5px;
-    background: #ddd;
-    border-radius: $border-radius;
+  padding: 1px 5px;
+  background: #ddd;
+  border-radius: $border-radius;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: auto;
+  padding: 8px 12px;
+  overflow-x: auto;
 }
 pre > code {
   border: 0;
@@ -168,21 +190,16 @@ pre > code {
   background: transparent;
 }
 
-
-
 /**
  * Clearfix
  */
 %clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
-
-
 
 /**
  * Icons
@@ -200,9 +217,10 @@ pre > code {
 /**
  * Abbreviations
  */
-abbr, abbr[title] {
+abbr,
+abbr[title] {
   text-decoration: none;
-  border-bottom: .1em dotted;
+  border-bottom: 0.1em dotted;
 }
 
 /**

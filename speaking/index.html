@@ -4,9 +4,44 @@ title: Speaking
 ---
 
 <div class="home row">
-
   <header class="page-header cell cell-12">
     <h1 class="page-title">{{ page.title }}</h1>
   </header>
 
+  <img src="{% asset_path speaking/speaking %}" class="post-header-image">
+</div>
+
+<div class="row">
+  <div class="cell cell-12 cell-med-10 cell-centre">
+    <p>Phil loves speaking and sharing what he's interested in and working on at meetups, events and conferences. He talks about
+      JavaScript and the web platform, web performance, Ruby, and application and account security.</p>
+    <p>You can see what he's currently interested in from his recent talks below, or his writing on <a href="/blog/">this blog</a> or the <a href="https://www.twilio.com/blog/author/phil">Twilio blog</a></p>
+    <p>If you'd like Phil to speak at your event, check out his <a href="/speaking/details">speaker details</a>, then please get in touch by email at
+      <a href="mailto:philnash@twilio.com">philnash@twilio.com</a> or
+      <a href="https://twitter.com/philnash">send a direct message on Twitter</a>.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="cell cell-12 cell-med-8 cell-centre">
+    {% assign upcoming = (site.data.appearances | sort: "event.start_date" | where_exp: "appearance", "appearance.event.start_date > site.date")
+    %} {% unless upcoming == empty %}
+    <h2 class="section-title">Upcoming talks</h2>
+    <ol class="speaking-list">
+      {% for appearance in upcoming %} {% include appearance.html appearance=appearance %} {% endfor %}
+    </ol>
+    {% endunless %}
+    {% assign past = (site.data.appearances | sort: "event.start_date" | where_exp: "appearance", "appearance.event.start_date < site.date ") %}
+    {% unless past == empty %}
+    <h2 class="section-title">Previous talks</h2>
+    <ol class="speaking-list">
+      {% for appearance in past limit:5 %}
+        {% include appearance.html appearance=appearance %}
+      {% endfor %}
+    </ol>
+    {% if past.size > 5 %}
+      <p><a href="/speaking/history">See Phil's full speaking history</a></p>
+    {% endif %}
+    {% endunless %}
+  </div>
 </div>
