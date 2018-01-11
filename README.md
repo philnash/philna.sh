@@ -1,6 +1,6 @@
 # philna.sh
 
-This repository is the source code of my personal site and blog [https://philna.sh](https://philna.sh).
+This repository is the source code of the personal site and blog of [Phil Nash](https://philna.sh).
 
 It is powered by [Jekyll](http://jekyllrb.com/) with help from the following awesome plugins:
 
@@ -8,3 +8,4 @@ It is powered by [Jekyll](http://jekyllrb.com/) with help from the following awe
 * [jekyll-assets](https://github.com/envygeeks/jekyll-assets)
 * [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
 * [jekyll-zopfli](https://github.com/philnash/jekyll-zopfli)
+* [jekyll-brotli](https://github.com/philnash/jekyll-brotli)
