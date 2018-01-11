@@ -13,13 +13,15 @@ title: Speaking history
 
 <div class="row">
   <div class="cell cell-12 cell-med-8 cell-centre">
-    {% assign past = (site.data.appearances | sort: "event.start_date" | where_exp: "appearance", "appearance.event.start_date < site.date ") %}
+    {% assign past = (site.data.appearances | where_exp: "appearance", "appearance.event.start_date < site.date") %}
     {% assign past_by_year = past | group_by_exp: "appearance", "appearance.event.start_date | date: '%Y'" %}
-    {% for year in past_by_year %}
+    {% assign sorted_past_by_year = past_by_year | sort: "name" | reverse %}
+    {% for year in sorted_past_by_year %}
       <h2 class="section-title">{{ year.name }}</h2>
       <ol class="speaking-list">
-        {% assign year_appearances = year.items | sort: "event.start_date" %}
-        {% for appearance in year_appearances %}
+        {% assign year_appearances = (year.items | sort: "event.start_date") %}
+        {% assign sorted_year_appearances = year_appearances | sort: "event.start_date" %}
+        {% for appearance in sorted_year_appearances %}
           {% include appearance.html appearance=appearance %}
         {% endfor %}
       </ol>

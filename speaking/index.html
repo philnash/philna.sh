@@ -24,21 +24,22 @@ title: Speaking
 
 <div class="row">
   <div class="cell cell-12 cell-med-8 cell-centre">
-    {% assign upcoming = (site.data.appearances | sort: "event.start_date" | where_exp: "appearance", "appearance.event.start_date > site.date")
-    %} {% unless upcoming == empty %}
-    <h2 class="section-title">Upcoming talks</h2>
-    <ol class="speaking-list">
-      {% for appearance in upcoming %} {% include appearance.html appearance=appearance %} {% endfor %}
-    </ol>
+    {% assign upcoming = (site.data.appearances | where_exp: "appearance", "appearance.event.start_date > site.date" | sort: "event.start_date") %}
+    {% unless upcoming == empty %}
+      <h2 class="section-title">Upcoming talks</h2>
+      <ol class="speaking-list">
+        {% for appearance in upcoming %} {% include appearance.html appearance=appearance %} {% endfor %}
+      </ol>
     {% endunless %}
-    {% assign past = (site.data.appearances | sort: "event.start_date" | where_exp: "appearance", "appearance.event.start_date < site.date ") %}
+    {% assign past = (site.data.appearances | where_exp: "appearance", "appearance.event.start_date < site.date ") | sort: "event.start_date" %}
     {% unless past == empty %}
-    <h2 class="section-title">Previous talks</h2>
-    <ol class="speaking-list">
-      {% for appearance in past limit:5 %}
-        {% include appearance.html appearance=appearance %}
-      {% endfor %}
-    </ol>
+      {% assign sorted_past = past | sort: "event.start_date" %}
+      <h2 class="section-title">Previous talks</h2>
+      <ol class="speaking-list">
+        {% for appearance in sorted_past limit:5 %}
+          {% include appearance.html appearance=appearance %}
+        {% endfor %}
+      </ol>
     {% if past.size > 5 %}
       <p><a href="/speaking/history">See Phil's full speaking history</a></p>
     {% endif %}

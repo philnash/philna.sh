@@ -3,7 +3,6 @@
     start_date: 2018-01-10
     link: http://melbjs.com/
     location: "Melbourne, Australia"
-    year: 2018
   talks:
     - title: "Browsers behind your back"
 
@@ -12,7 +11,6 @@
     start_date: 2017-11-25
     link: http://www.devfest.org.au/
     location: "Sydney, Australia"
-    year: 2017
   talks:
     - title: "Aggressive Web Apps"
 
@@ -22,7 +20,6 @@
     end_date: 2017-11-10
     link: https://www.webdirections.org/wds/speakers/phil-nash.html
     location: "Sydney, Australia"
-    year: 2017
   talks:
     - title: "2FA, WTF?"
       slides: https://speakerdeck.com/philnash/2fa-wtf-at-web-directions-summit-2017
@@ -32,7 +29,6 @@
     start_date: 2017-08-31
     link: http://www.frontendlondon.co.uk/
     location: "London, UK"
-    year: 2017
   talks:
     - title: Aggressive Web Apps
       slides: https://speakerdeck.com/philnash/aggressive-web-apps-at-front-end-london
@@ -43,7 +39,6 @@
     end_date: 2017-08-07
     link: http://viii.campjs.com/
     location: Melbourne, Australia
-    year: 2017
   talks:
     - title: An empty database in every pocket
 
@@ -53,7 +48,6 @@
     end_date: 2017-07-14
     location: London, UK
     link: https://skillsmatter.com/conferences/8264-fullstack-2017-the-conference-on-javascript-node-and-internet-of-things
-    year: 2017
   talks:
     - title: Browsers Behind Your Back
       slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-fullstackconf-2017
@@ -64,3 +58,37 @@
     - title: An empty database in every pocket
       slides: https://speakerdeck.com/philnash/an-empty-database-in-every-pocket-at-fullstackcon
       video: https://skillsmatter.com/skillscasts/10489-an-empty-database-in-every-pocket-beginner
+
+- event:
+    name: Devoxx Poland 2017
+    start_date: 2017-06-21
+    end_date: 2017-06-23
+    location: Kraków, Poland
+    link: http://2017.devoxx.pl/
+  talks:
+    - title: Browsers Behind Your Back
+      slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-devoxx-poland
+      video: https://www.youtube.com/watch?v=sYI3ng5GzgU&index=42&list=PLH21tc7N2sw0WUoamLp4UqTlKq-_xZgMB
+    - title: An empty database in every pocket
+      slides: https://speakerdeck.com/philnash/an-empty-database-in-every-pocket-at-devoxx-poland
+      video: https://www.youtube.com/watch?v=_DuwZSXEwDg&index=104&list=PLH21tc7N2sw0WUoamLp4UqTlKq-_xZgMB
+
+- event:
+    name: JS Poland
+    start_date: 2017-06-19
+    location: Warsaw, Poland
+    link: http://www.js-poland.pl/
+  talks:
+    - title: JWT, WTF?
+      slides: https://speakerdeck.com/philnash/jwt-wtf-at-js-poland
+      video: https://www.youtube.com/watch?v=drocJqQlnhM
+
+- event:
+    name: DevTalks Bucharest
+    link: http://www.devtalks.ro/bucharest/
+    start_date: 2017-06-08
+    location: Bucharest, Romania
+  talks:
+    - title: An empty database in every pocket
+      slides: https://speakerdeck.com/philnash/an-empty-database-in-every-pocket-at-devtalks-bucharest
+      video: https://www.youtube.com/watch?v=lAU3To5Zjx4
