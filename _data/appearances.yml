@@ -44,7 +44,7 @@
     - title: An empty database in every pocket
 
 - event:
-    name: FullStack 2017
+    name: FullStack
     start_date: 2017-07-12
     end_date: 2017-07-14
     location: London, UK
@@ -61,7 +61,7 @@
       video: https://skillsmatter.com/skillscasts/10489-an-empty-database-in-every-pocket-beginner
 
 - event:
-    name: Devoxx Poland 2017
+    name: Devoxx Poland
     start_date: 2017-06-21
     end_date: 2017-06-23
     location: Kraków, Poland
@@ -93,3 +93,64 @@
     - title: An empty database in every pocket
       slides: https://speakerdeck.com/philnash/an-empty-database-in-every-pocket-at-devtalks-bucharest
       video: https://www.youtube.com/watch?v=lAU3To5Zjx4
+
+- event: 
+    name: Codemotion Amsterdam
+    link: https://amsterdam2017.codemotionworld.com/
+    start_date: 2017-05-16
+    end_date: 20170-05-17
+    location: Amsterdam, The Netherlands
+  talks:
+    - title: JWT, WTF?
+      slides: https://speakerdeck.com/philnash/jwt-wtf-at-codemotion-amsterdam
+      video: https://www.youtube.com/watch?v=rYpapIOQ7f0
+
+- event:
+    name: jsDay
+    link: https://2017.jsday.it/
+    start_date: 2017-05-10
+    end_date: 2017-05-11
+    location: Verona, Italy
+  talks:
+    - title: Browsers behind your back
+    - title: An empty database in every pocket
+      slides: https://speakerdeck.com/philnash/an-empty-database-in-everybodys-pocket-at-jsday
+
+- event:
+    name: BerlinJS
+    link: http://jsconf.berlinjs.org/
+    start_date: 2017-05-04
+    location: Berlin, Germany
+  talks:
+    - title: Browsers behind your back
+      slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-berlin-js
+
+- event: 
+    name: London JavaScript 
+    link: https://www.meetup.com/London-Javascript/events/238829721/
+    start_date: 2017-04-26
+    location: London, UK
+  talks:
+    - title: Browsers behind your back
+      slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-london-javascript
+
+- event:
+    name: London Web Standards
+    link: http://londonwebstandards.org/2017/03/lws-24-april-2017-lwsjtf/
+    start_date: 2017-04-24
+    location: London, UK
+  talks:
+    - title: JWT, WTF?
+      slides: https://speakerdeck.com/philnash/jwt-wtf-at-london-web-standards
+
+- event:
+    name: 4developers
+    link: https://2017.4developers.org.pl/en/
+    start_date: 2017-04-03
+    location: Warsaw, Poland
+  talks: 
+    - title: An empty database in every pocket
+      slides: https://speakerdeck.com/philnash/an-empty-database-in-everybodys-pocket-at-4developers
+    - title: Browsers behind your back
+      slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-4developers-2017
+      video: https://www.youtube.com/watch?v=6HTQx6hLcnQ
