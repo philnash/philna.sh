@@ -154,3 +154,68 @@
     - title: Browsers behind your back
       slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-4developers-2017
       video: https://www.youtube.com/watch?v=6HTQx6hLcnQ
+
+- event:
+    name: MobCon Europe
+    link: https://mobcon.com/mobcon-europe/
+    start_date: 2017-03-26
+    location: Sodia, Bulgaria
+  talks:
+    - title: Browsers behind your back
+      slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-mobcon-2017
+
+- event:
+    name: Fusion Meetup
+    link: https://www.eventbrite.com/e/fusion-meetup-birmingham-march-2017-tickets-32256611393#
+    start_date: 2017-03-23
+    location: Birmingham, UK
+  talks:
+    - title: Browsers behind your back
+      slides: https://speakerdeck.com/philnash/browsers-behind-your-back-fusion-meetup
+
+- event:
+    name: CloudConf
+    link: http://2017.cloudconf.it/
+    start_date: 2017-03-16
+    location: Turin, Italy
+  talks:
+    - title: "WebHooks: The API Strikes Back"
+      slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-at-cloudconf-2017
+      video: http://video.html.it/webhooks-the-api-strikes-back/
+
+- event:
+    name: APIDays Australia
+    link: http://au.apidays.io/
+    start_date: 2017-02-28
+    end_date: 2017-03-01
+    location: Sydney, Australia
+  talks:
+    - title: "WebHooks: The API Strikes Back"
+      slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-2
+
+- event:
+    name: JavaScript & NodeJS Cambridge
+    link: https://www.meetup.com/JavaScript-Cambridge/events/229824220/
+    start_date: 2017-01-10
+    location: Cambridge, UK
+  talks:
+    - title: An Introduction to Service Workers
+
+- event:
+    name: Code Europe
+    link: https://2016.codeeurope.pl/en
+    start_date: 2016-12-07
+    location: Warsaw, Poland
+  talks:
+    - title: An introduction to Service Workers
+      slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-code-europe-warsaw
+
+- event:
+    name: Code Europe
+    link: https://2016.codeeurope.pl/en
+    start_date: 2016-12-05
+    location: Kraków, Poland
+  talks:
+    - title: An introduction to Service Workers
+      slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-code-europe-krakow
+      video: https://www.youtube.com/watch?v=h7ALfHmOGJQ
