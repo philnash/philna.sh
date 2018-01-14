@@ -8,7 +8,7 @@ git clone $GIT_REPO $TMP_GIT_CLONE
 cd $TMP_GIT_CLONE
 bundle install
 JEKYLL_ENV=production bundle exec jekyll build --source $TMP_GIT_CLONE --destination $TMP_SITE_BUILD
-rsync --update -rlpgoD --checksum --verbose $TMP_SITE_BUILD $PUBLIC_WWW
+rsync --update -rlpgoD --checksum --verbose $TMP_SITE_BUILD/* $PUBLIC_WWW
 cd $GIT_REPO
 rm -Rf $TMP_GIT_CLONE
 exit
