@@ -9,8 +9,9 @@ if (swSupport()) {
   navigator.serviceWorker.addEventListener('message', function(event) {
     var message = JSON.parse(event.data);
     var isRefresh = message.type === 'refresh';
-    var lastETag = localStorage.getItem('currentETag');
-    localStorage.setItem('currentETag', message.eTag);
+    var pageETagName = 'currentEtag-' + location.pathname;
+    var lastETag = localStorage.getItem(pageETagName);
+    localStorage.setItem(pageETagName, message.eTag);
 
     var isNew = lastETag !== message.eTag;
 
