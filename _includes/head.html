@@ -46,14 +46,18 @@
   <!-- Facebook -->
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 200 }}">
-  {% if page.image %}<meta name="og:image" content="{{ site.url }}{{ page.image }}">{% endif %}
+  {% if page.image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  {% endif %}
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="{{ site.title }}">
 
   <!-- Google -->
   <meta itemprop="name" content="{{ page.title }}">
   <meta itemprop="description" content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 200 }}">
-  {% if page.image %}<meta itemprop="image" content="{{ site.url }}{{ page.image }}">{% endif %}
+  {% if page.image %}
+  <meta itemprop="image" content="{{ site.url }}{{ page.image }}">
+  {% endif %}
   {% endif %}
 
   {% include google_analytics.html %}
