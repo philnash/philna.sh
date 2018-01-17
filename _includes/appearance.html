@@ -18,15 +18,17 @@
   {% for talk in appearance.talks %}
   <p class="talk-title"> <em>"{{ talk.title }}"</em></p>
     {% if talk.slides or talk.video %}
-      <p class="talk-materials">
+      <ul class="talk-materials">
+        {% if talk.audio %}
+          <li><a href="{{ talk.audio }}">audio</a></li>
+        {% endif %}
         {% if talk.video %}
-          <a href="{{ talk.video }}">video</a>
+          <li><a href="{{ talk.video }}">video</a></li>
         {% endif %}
-        {% if talk.slides and talk.video %}&bull;{% endif %}
         {% if talk.slides %}
-          <a href="{{ talk.slides }}">slides</a>
+          <li><a href="{{ talk.slides }}">slides</a></li>
         {% endif %}
-      </p>
+      </ul>
     {% endif %}
   {% endfor %}
 </li>

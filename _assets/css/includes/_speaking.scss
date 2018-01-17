@@ -46,6 +46,18 @@
 
 .speaking-list .talk-materials {
   margin-bottom: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.speaking-list .talk-materials li {
+  display: inline;
+}
+.speaking-list .talk-materials li::after {
+  content: ' \2022 ';
+}
+.speaking-list .talk-materials li:last-child::after {
+  content: '';
 }
 
 .speaker-info dt {
