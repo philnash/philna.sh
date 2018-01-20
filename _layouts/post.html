@@ -11,12 +11,18 @@ layout: default
       {% endif %}
     </header>
 
-    <div class="cell cell-12 cell-med-10 cell-centre">
+    <div class="cell cell-12 cell-med-12">
       {% include post_meta.html page=page %}
     </div>
 
-    <div class="post-content cell cell-12 cell-med-10 cell-centre" itemprop="articleBody">
-      {{ content }}
+    <div class="row">
+      <div class="post-content cell cell-12 cell-med-9" itemprop="articleBody">
+        {{ content }}
+      </div>
+
+      <div class="cell cell-12 cell-med-3">
+        {% include carbonads.html %}
+      </div>
     </div>
 
     <div class="post-promo cell cell-12 cell-med-10 cell-centre">
