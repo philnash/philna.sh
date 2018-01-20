@@ -33,6 +33,7 @@
   talks:
     - title: Aggressive Web Apps
       slides: https://speakerdeck.com/philnash/aggressive-web-apps-at-front-end-london
+      video: https://pusher.com/sessions/meetup/front-end-london/aggressive-web-apps
 
 - event:
     name: CampJS
