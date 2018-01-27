@@ -1,4 +1,12 @@
 - event:
+    name: The Web Meetup
+    start_date: 2018-02-13
+    location: Melbourne, Australia
+    link: https://www.meetup.com/the-web/events/247201690/
+  talks:
+    - title: An introduction to service workers
+
+- event:
     name: "MelbJS"
     start_date: 2018-01-10
     link: http://melbjs.com/
@@ -379,3 +387,52 @@
     location: London, UK
   talks:
     - title: Thinking offline
+
+- event:
+    name: FullStack
+    link: https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things
+    start_date: 2016-07-13
+    end_date: 2016-07-15
+    location: London, UK
+  talks:
+    - title: An introduction to Service Workers
+      video: https://skillsmatter.com/skillscasts/8155-an-introduction-to-service-workers
+    - title: Thinking offline
+      video: https://skillsmatter.com/skillscasts/8154-thinking-offline
+
+- event:
+    name: "AngularZone Meetup #1"
+    link: https://www.meetup.com/AngularZone/events/232087779/
+    start_date: 2016-07-11
+    location: London, UK
+  talks:
+    - title: An introduction to Service Workers
+
+- event:
+    name: "Bots: The State of the Conversation"
+    link: http://learn.converse.ai/botevent
+    start_date: 2016-07-04
+    end_date: 2016-07-05
+    location: London, UK
+  talks:
+    - title: Multi Platform Challenges
+
+- event:
+    name: Bristol JS
+    link: https://www.meetup.com/BristolJS/events/229602378/
+    start_date: 2016-06-29
+    location: Bristol, UK
+  talks:
+    - title: An Introduction to Service Worker
+      slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-1
+
+- event:
+    name: JS Oxford
+    link: https://jsoxford.com/2016-06-15-moar-javascript/
+    start_date: 2016-06-15
+    location: Oxford, UK
+  talks:
+    - title: An Introduction to Service Workers
+      slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-1
+
+- event:
