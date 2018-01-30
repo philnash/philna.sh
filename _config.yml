@@ -22,7 +22,7 @@ sw_cache_version: 1
 exclude: [deploy]
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
-paginate_path: /blog/page/:num
+paginate_path: /blog/page/:num/
 paginate: 10
 gems:
   - jekyll-paginate
