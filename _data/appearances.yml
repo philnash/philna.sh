@@ -1,4 +1,12 @@
 - event:
+    name: Melbourne Ruby
+    start_date: 2018-02-28
+    location: Melbourne, Australia
+    link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/mcrjmnyxdblc/
+  talks:
+    - title: Smaller Is Always Better
+
+- event:
     name: The Web Meetup
     start_date: 2018-02-13
     location: Melbourne, Australia
