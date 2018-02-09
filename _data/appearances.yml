@@ -431,7 +431,7 @@
     start_date: 2016-06-29
     location: Bristol, UK
   talks:
-    - title: An Introduction to Service Worker
+    - title: An Introduction to Service Workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-1
 
 - event:
@@ -444,3 +444,84 @@
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-1
 
 - event:
+    name: London Ajax
+    link: https://www.meetup.com/halfstack/events/230566847/
+    start_date: 2016-06-14
+    location: London, UK
+  talks:
+    - title: An Introduction to Service Workers
+      slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-1
+
+- event:
+    name: Codemotion Amsterdam
+    link: https://amsterdam2016.codemotionworld.com/
+    start_date: 2016-05-11
+    end_date: 2016-05-12
+    location: Amsterdam, Netherlands
+  talks:
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-codemotion-amsterdam
+      video: https://www.youtube.com/watch?v=tJMA6H_iA5g
+    - title: 2FA, WTF?
+      slides: https://speakerdeck.com/philnash/2fa-wtf-april-2016
+      video: https://www.youtube.com/watch?v=07SKJ1V0Vak
+
+- event:
+    name: JS Monthly
+    link: https://www.meetup.com/js-monthly/events/230071594/
+    start_date: 2016-04-26
+    location: London, UK
+  talks:
+    - title: An Introduction to Service Workers
+      slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers
+      video: https://pusher.com/sessions/meetup/js-monthly-london/introduction-to-service-workers
+
+- event:
+    name: ProgSCon
+    link: http://2016.progscon.co.uk/
+    start_date: 2016-04-22
+    location: London, UK
+  talks:
+    - title: 2FA, WTF?
+      slides: https://speakerdeck.com/philnash/2fa-wtf-april-2016
+      video: https://www.infoq.com/presentations/two-factor-authentication
+
+- event:
+    name: WEBIT.FESTIVAL
+    link: http://www.webit.bg/2016/
+    start_date: 2016-04-19
+    end_date: 2016-04-20
+    location: Sofia, Bulgaria
+  talks:
+    - title: Building applications like Lego
+      video: https://www.youtube.com/watch?v=qBOGxArhe8k
+
+- event:
+    name: TECH.insight
+    link: http://www.techinsight.io/event/london-april-2016/
+    start_date: 2016-04-14
+    location: London, UK
+  talks:
+    - title: Making video chat a feature
+      slides: https://speakerdeck.com/philnash/making-video-chat-a-feature
+
+- event:
+    name: Wolves Summit
+    link: https://www.wolvessummit.com/en
+    start_date: 2016-04-12
+    end_date: 2016-04-13
+    location: Warsaw, Poland
+  talks:
+    - title: 2FA, WTF?
+      slides: https://speakerdeck.com/philnash/2fa-wtf-april-2016
+
+- event:
+    name: 4Developers
+    link: http://2016.4developers.org.pl/en/
+    start_date: 2016-04-11
+    location: Warsaw, Poland
+  talks:
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-4developers
+    - title: 2FA, WTF?
+      slides: https://speakerdeck.com/philnash/2fa-wtf-april-2016
