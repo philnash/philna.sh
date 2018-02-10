@@ -43,7 +43,7 @@ assets:
     - _assets/js
     - _assets/fonts
   digest: true
-  precompile: true
+  precompile: []
 
 
 defaults:

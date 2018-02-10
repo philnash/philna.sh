@@ -14,12 +14,12 @@ layout: null
   "theme_color": "#ea0011",
   "icons": [
     {
-      "src": "{% asset_path icon192x192 %}",
+      "src": "{% asset icon192x192 @path %}",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "{% asset_path icon512x512 %}",
+      "src": "{% asset icon512x512 @path %}",
       "sizes": "512x512",
       "type": "image/png"
     }

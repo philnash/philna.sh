@@ -6,13 +6,13 @@ tags:
   - pwa
   - push notifications
   - permission
-image: "/images/permissions/header.png"
+image: {% asset "/images/permissions/header.png" @path %}
 image_alt: "A permissions dialog that says 'philna.sh wants to annoy you constantly"
 scripts:
   - <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---
 
-I am a fan of progressive web apps and the powers that they bestow on web developers to build the next generation of applications. We can write web applications that work offline,  [download large files in the background](https://philna.sh/blog/2017/07/04/experimenting-with-the-background-fetch-api/), [send push notifications](https://www.twilio.com/blog/2016/02/web-powered-sms-inbox-with-service-worker-push-notifications.html), and much more. I was so excited about push notifications on the web that I wrote a whole talk about it in 2015 and was fortunate enough to give it in a bunch of places around the world.
+I am a fan of progressive web apps and the powers that they bestow on web developers to build the next generation of applications. We can write web applications that work offline, [download large files in the background](https://philna.sh/blog/2017/07/04/experimenting-with-the-background-fetch-api/), [send push notifications](https://www.twilio.com/blog/2016/02/web-powered-sms-inbox-with-service-worker-push-notifications.html), and much more. I was so excited about push notifications on the web that I wrote a whole talk about it in 2015 and was fortunate enough to give it in a bunch of places around the world.
 
 <div class="post-video post-image-outside">
   <iframe src="https://www.youtube.com/embed/4-WnlHhqcjU?t=14" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>

@@ -4,7 +4,7 @@
 var version = "v{{ site.sw_cache_version }}-";
 
 var staticCacheName = version + "assets-{{ digest_paths | md5 }}";
-var staticAssets = ['/manifest.json', '{{ digest_paths | prepend: "/assets/" | split: "," | join: "', '/assets/" }}'];
+var staticAssets = ['/manifest.json', '{{ digest_paths | split: "," | join: "', '" }}'];
 
 var pageCacheName = version + "pages";
 var offlinePages = ['/', '/blog/', '/offline/'];

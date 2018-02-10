@@ -98,4 +98,9 @@
   </div>
 </template>
 
-{% js main.js async:true %} {% if page.scripts %} {% for script in page.scripts %} {{ script }} {% endfor %} {% endif %}
+{% asset main.js async:true %}
+{% if page.scripts %}
+  {% for script in page.scripts %}
+    {{ script }}
+  {% endfor %}
+{% endif %}
