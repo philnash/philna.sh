@@ -115,7 +115,7 @@
     name: Codemotion Amsterdam
     link: https://amsterdam2017.codemotionworld.com/
     start_date: 2017-05-16
-    end_date: 20170-05-17
+    end_date: 2017-05-17
     location: Amsterdam, The Netherlands
   talks:
     - title: JWT, WTF?
@@ -311,7 +311,7 @@
 - event:
     name: Digital Croydon
     location: Croydon, UK
-    link: http://digitalcroydon.net/
+    link: http://digitalcroydon.net/event/
     start_date: 2016-10-13
   talks:
     - title: An introduction to service workers
@@ -336,6 +336,14 @@
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-at-rails-remote-2016
       video: https://devchat.tv/conference-talks/2fa-wtf
+
+- event:
+    name: SIGNAL London
+    location: London, UK
+    link: https://signal.twilio.com/2016/london
+    start_date: 2016-09-20
+  roles:
+    - Track MC
 
 - event:
     name: DevDay
@@ -453,6 +461,15 @@
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-1
 
 - event:
+    name: SIGNAL San Francisco
+    link: https://signal.twilio.com/2016/sf
+    start_date: 2016-05-24
+    end_date: 2016-05-25
+    location: San Francisco, USA
+  roles:
+    - Track MC
+
+- event:
     name: Codemotion Amsterdam
     link: https://amsterdam2016.codemotionworld.com/
     start_date: 2016-05-11
@@ -525,3 +542,140 @@
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-4developers
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-april-2016
+
+- event:
+    name: UKGovHack
+    link: http://2016.ukgovhack.com/
+    start_date: 2016-04-02
+    end_date: 2016-04-03
+    location: London, UK
+  talks:
+    - title: Communication of the future
+
+- event:
+    name: Bath Ruby
+    link: https://2016.bathruby.uk/
+    start_date: 2016-03-11
+    location: Bath, UK
+  talks:
+    - title: Build more gems
+      slides: https://speakerdeck.com/philnash/build-more-gems
+  roles:
+    - MC
+
+- event:
+    name: Topconf Linz
+    link: https://www.topconf.com/conference/linz-2016/
+    start_date: 2016-02-02
+    end_date: 2016-02-03
+    location: Linz, Austria
+  talks:
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-topconf-linz
+      video: https://www.youtube.com/watch?v=sBMmazkPz4Q
+    - title: 2FA, WTF?
+      slides: https://speakerdeck.com/philnash/2fa-wtf-topconf-linz-2016
+      video: https://www.youtube.com/watch?v=0N5rRFJaMD0
+
+- event:
+    name: London Node User Group
+    location: London, UK
+    start_date: 2016-01-27
+    link: http://lnug.org/
+  talks:
+    - title: 2FA, WTF?
+      video: https://www.youtube.com/watch?v=Wuc4Nh3lmSE
+      slides: https://speakerdeck.com/philnash/2fa-wtf-lnug-january-2016
+
+- event:
+    name: Rails Israel
+    location: Tel Aviv, Israel
+    start_date: 2015-11-24
+    link: https://railsisrael2015.events.co.il/home
+  talks:
+    - title: 2FA, WTF?
+      slides: https://speakerdeck.com/philnash/2fa-wtf-rails-israel-2015
+      video: https://www.youtube.com/watch?v=AdjckChsjvI
+
+- event:
+    name: Topconf Tallinn
+    link: http://topconf.com/tallinn-2016/
+    start_date: 2015-11-16
+    end_date: 2015-11-17
+    location: Tallinn, Estonia
+  talks:
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-topconf-tallinn
+      video: https://www.youtube.com/watch?v=ZbDd41AG9SA
+
+- event:
+    name: Øredev
+    link: http://oredev.org/2015
+    location: Malmö, Sweden
+    start_date: 2015-11-03
+    end_date: 2015-11-06
+  talks:
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-oredev-2015
+      video: https://vimeo.com/144982360
+    - title: WhatRTC? Everything you need to know to connect browsers to the world.
+      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-oredev-2015
+      video: https://vimeo.com/144682164
+
+- event:
+    name: FullStack
+    link: https://skillsmatter.com/conferences/6612-fullstack
+    location: London, UK
+    start_date: 2015-10-26
+    end_date: 2015-10-28
+  talks:
+    - title: 2FA, WTF?
+      slides: https://speakerdeck.com/philnash/2fa-wtf-fullstackcon-2015
+      video: https://skillsmatter.com/skillscasts/6636-2fa-wtf
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-fullstackcon-2015
+      video: https://speakerdeck.com/philnash/the-web-is-getting-pushy-fullstackcon-2015
+
+- event:
+    name: Digital Croydon
+    link: http://digitalcroydon.net/event/
+    start_date: 2015-10-15
+    location: Croydon, UK
+  talks:
+    - title: WhatRTC? Everything you need to know to connect browsers to the world.
+      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-upfront-mini-2015
+
+- event:
+    name: UpFront Mini
+    link: http://2015.upfrontconf.com/mini/
+    start_date: 2015-10-06
+    location: Manchester, UK
+  talks:
+    - title: WhatRTC? Everything you need to know to connect browsers to the world.
+      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-upfront-mini-2015
+
+- event:
+    name: ArrrrCamp
+    link: http://2015.arrrrcamp.be/
+    start_date: 2015-10-01
+    end_date: 2015-10-02
+    location: Ghent, Belgium
+  roles:
+    - MC
+
+- event:
+    name: London JS
+    start_date: 2015-09-21
+    location: London, UK
+  talks:
+    - title: "Data: online and off"
+      slides: https://speakerdeck.com/philnash/data-online-and-off
+
+- event:
+    name: State of the Browser
+    start_date: 2015-09-12
+    location: London, UK
+    link: http://sotb2015.wpengine.com/
+  talks:
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-state-of-the-browser-5

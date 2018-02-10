@@ -14,7 +14,14 @@
       {{ appearance.event.name }}
     {% endif %}
   </h3>
-  <h4>Presenting</h4>
+  {% if appearance.roles %}
+    <h4>In the role of: {{ appearance.roles | join ', ' }}</h4>
+    {% if appearance.talks %}
+      <h4>Also presenting</h4>
+    {% endif %}
+  {% else %}
+    <h4>Presenting</h4>
+  {% endif %}
   {% for talk in appearance.talks %}
   <p class="talk-title"> <em>"{{ talk.title }}"</em></p>
     {% if talk.slides or talk.video %}
