@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.3.1"
 
-gem "jekyll", "~> 3.4.0"
+gem "jekyll"
 gem "rouge"
 gem "jekyll-zopfli"
 gem "jekyll-brotli"

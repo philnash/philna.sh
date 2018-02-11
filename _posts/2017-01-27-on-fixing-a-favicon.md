@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "On fixing a favicon"
-image: /images/tiny_changes.png
+image: posts/tiny_changes
 image_alt: The GitHub summary for a pull request, showing 1 addition and 2 deletions.
 tags:
   - open source

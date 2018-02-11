@@ -8,7 +8,7 @@ title: Speaker Details
     <h1 class="page-title">{{ page.title }}</h1>
   </header>
 
-  <img src="{% asset_path speaking/speaking %}" class="post-header-image">
+  <img src="{% asset speaking/speaking @path %}" class="post-header-image">
 </div>
 
 <div class="row">
@@ -39,8 +39,8 @@ title: Speaker Details
     <p>Below is a link to the large size version of my online avatar.</p>
 
     <p>
-      <a href="{% asset_path speaking/philnash %}">
-        <img src="{% asset_path philnash120x120 %}" width="120" height="120" alt="Phil's current avatar, he's smiling">
+      <a href="{% asset speaking/philnash @path %}">
+        <img src="{% asset philnash120x120 @path %}" width="120" height="120" alt="Phil's current avatar, he's smiling">
       </a>
     </p>
 

@@ -6,13 +6,13 @@ tags:
   - pwa
   - push notifications
   - permission
-image: "/images/permissions/header.png"
+image: posts/permissions/header
 image_alt: "A permissions dialog that says 'philna.sh wants to annoy you constantly"
 scripts:
   - <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---
 
-I am a fan of progressive web apps and the powers that they bestow on web developers to build the next generation of applications. We can write web applications that work offline,  [download large files in the background](https://philna.sh/blog/2017/07/04/experimenting-with-the-background-fetch-api/), [send push notifications](https://www.twilio.com/blog/2016/02/web-powered-sms-inbox-with-service-worker-push-notifications.html), and much more. I was so excited about push notifications on the web that I wrote a whole talk about it in 2015 and was fortunate enough to give it in a bunch of places around the world.
+I am a fan of progressive web apps and the powers that they bestow on web developers to build the next generation of applications. We can write web applications that work offline, [download large files in the background](https://philna.sh/blog/2017/07/04/experimenting-with-the-background-fetch-api/), [send push notifications](https://www.twilio.com/blog/2016/02/web-powered-sms-inbox-with-service-worker-push-notifications.html), and much more. I was so excited about push notifications on the web that I wrote a whole talk about it in 2015 and was fortunate enough to give it in a bunch of places around the world.
 
 <div class="post-video">
   <iframe src="https://www.youtube.com/embed/4-WnlHhqcjU?t=14" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
@@ -34,14 +34,14 @@ Push notifications are getting a bad reputation and I don't think they deserve i
 
 I have a theory. It's not that users don't want push notifications. There is a time and a place for a good push notification. Native mobile application developers seem to be getting this right now, at least in my experience, and [innovative web teams like those at the Guardian have done some really interesting and impressive push notification experiments](https://medium.com/the-guardian-mobile-innovation-lab/generating-images-in-javascript-without-using-the-canvas-api-77f3f4355fad).
 
-<img src="/images/permissions/guardian.png" alt="The Guardian's experiment with creating images for the current state of the UK General Election entirely within a push notification." class="post-image-left">
+{% asset posts/permissions/guardian alt="The Guardian's experiment with creating images for the current state of the UK General Election entirely within a push notification." class="post-image-left" %}
 
 My theory is that users might want push notifications. They might want them for newsworthy moments, like the Guardian's election night experiments. They might want notifications that someone has sent them a message or that their taxi is arriving or their flight has been delayed. There are countless reasons a user might want to receive push notifications.
 
 But the top way to annoy any user is to pop up that permission dialog asking to send push notifications on page load without any context, any information at all, that would allow them to make that decision.
 
 <figure class="post-image">
-  <img src="/images/permissions/sitepoint.png" alt="Sitepoint pops up a permissions dialog on page laod">
+  {% asset posts/permissions/sitepoint alt="Sitepoint pops up a permissions dialog on page load" %}
 </figure>
 
 I noticed [Sitepoint](http://sitepoint.com/), a web tutorial site that really should know better, doing this. And other well known sites; [Product Hunt](https://www.producthunt.com/), [cnet](https://www.cnet.com/) and even [Facebook](https://www.facebook.com/) in their early experimentation with the feature, have been spotted doing it too. There are probably many more examples.

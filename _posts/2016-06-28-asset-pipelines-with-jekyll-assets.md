@@ -4,7 +4,7 @@ title:  "Creating an asset pipeline with Jekyll-Assets"
 tags:
   - jekyll
   - assets
-image: /images/jekyll.png
+image: posts/jekyll
 image_alt: "The Jekyll logo"
 ---
 

@@ -4,7 +4,7 @@ title: "Doing things wrong"
 tags:
   - learning
   - community
-image: "/images/fix_it.png"
+image: posts/fix_it
 image_alt: "A git log showing a commit that posted my last blog post followed by four commits that just say 'fix it'."
 ---
 

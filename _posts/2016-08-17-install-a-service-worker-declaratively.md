@@ -4,7 +4,7 @@ title:  "Install a service worker declaratively"
 tags:
   - service worker
   - javascript
-image: /images/service-worker.png
+image: posts/service-worker
 image_alt: "Three cogs on a yellow background, intended to represent the idea of the Service Worker"
 ---
 
