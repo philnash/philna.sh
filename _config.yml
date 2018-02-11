@@ -37,11 +37,6 @@ assets:
   prefix: /assets
   css_compressor: sass
   js_compressor: uglifier
-  sources:
-    - _assets/css
-    - _assets/images
-    - _assets/js
-    - _assets/fonts
   digest: true
   precompile: []
 

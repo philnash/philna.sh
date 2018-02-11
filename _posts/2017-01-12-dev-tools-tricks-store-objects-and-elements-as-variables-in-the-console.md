@@ -3,7 +3,7 @@ layout: post
 title: "Dev Tools Tricks: Store objects and elements as variables in the console"
 tags:
   - dev tools
-image: "/images/dev-tools-tricks-header.png"
+image: posts/dev-tools-tricks-header
 show_image: false
 ---
 
@@ -16,13 +16,13 @@ Read on and discover the magic of `$0`, `$_` and `temp0`.
 When you're clicking around the Inspector in Firefox or the Elements tab in Chrome and you want to use the selected element in the console, you need a reference to that element. You could type out a `querySelector` that would pick the element out of the document, but that's far too much work. Instead, leave the element selected and use `$0` in the console to get the reference you need.
 
 <figure class="post-image">
-  <img src="/images/dev-tools-tricks/firefox-dollar-zero.png" alt="Typing $0 in the Firefox dev tools console will grab a reference to the currently selected element.">
+  {% asset posts/dev-tools-tricks/firefox-dollar-zero alt="Typing $0 in the Firefox dev tools console will grab a reference to the currently selected element." %}
 </figure>
 
 Chrome even hints at this by showing `== $0` next to the HTML.
 
 <figure class="post-image">
-  <img src="/images/dev-tools-tricks/chrome-dollar-zero.png" alt="Typing $0 in the Chrome dev tools console will grab a reference to the currently selected element.">
+  {% asset posts/dev-tools-tricks/chrome-dollar-zero alt="Typing $0 in the Chrome dev tools console will grab a reference to the currently selected element." %}
 </figure>
 
 Be aware though, if you select a different element in the inspector then it will become the subject of `$0` and you will lose the reference to the old one.
@@ -30,7 +30,7 @@ Be aware though, if you select a different element in the inspector then it will
 Firefox has another trick for this. Right click on an element and choose "Use in console". This places a variable called `temp0` into the console's command line which is a reference to that selected element.
 
 <figure class="post-image">
-  <img src="/images/dev-tools-tricks/firefox-use-in-console.png" alt="In Firefox you can right click on an element and choose 'Use in console' to use it in the console as a variable named temp0.">
+  {% asset posts/dev-tools-tricks/firefox-use-in-console alt="In Firefox you can right click on an element and choose 'Use in console' to use it in the console as a variable named temp0." %}
 </figure>
 
 ## Turn any object in the console into a global variable
@@ -40,13 +40,13 @@ If you're dealing with other objects in the console, perhaps something you've lo
 `$_`, for example, is a reference to the last object that was returned in the console.
 
 <figure class="post-image">
-  <img src="/images/dev-tools-tricks/firefox-dollar-underscore.png" alt="Typing $_ in the dev tools console will grab a reference to the last returned object in the console.">
+  {% asset posts/dev-tools-tricks/firefox-dollar-underscore alt="Typing $_ in the dev tools console will grab a reference to the last returned object in the console." %}
 </figure>
 
 More generally, any object that has been returned or logged to the console can be turned into a global variable by right clicking on it and selecting "Store as global variable". You will get a variable called `temp0` which references that object. Even better, do it for more objects and you'll get new variables called `temp1`, then `temp2` and so on.
 
 <figure class="post-image">
-  <img src="/images/dev-tools-tricks/store-as-global.png" alt="Right click on any object in the console and choose 'Store as global object' to save it as a variable.">
+  {% asset posts/dev-tools-tricks/store-as-global alt="Right click on any object in the console and choose 'Store as global object' to save it as a variable." %}
 </figure>
 
 ## Dev tools go deep

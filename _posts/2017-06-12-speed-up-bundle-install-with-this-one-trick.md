@@ -4,7 +4,7 @@ title: "Speed up bundle install with this one trick"
 tags:
   - ruby
   - bundler
-image: "/images/bundler.png"
+image: posts/bundler
 image_alt: "Two illustrations from the Bundler website. One signifies installing a Ruby gem and the other Bundler itself."
 ---
 

@@ -4,7 +4,7 @@ title:  "A community offers to help"
 tags:
   - ruby
   - community
-image: /images/thank-you.png
+image: posts/thank-you
 image_alt: "The Ruby logo and the text 'Thank you'"
 scripts:
   - <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

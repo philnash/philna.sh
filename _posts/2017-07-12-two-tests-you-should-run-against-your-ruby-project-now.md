@@ -6,7 +6,7 @@ tags:
   - security
   - licenses
   - copyright
-image: /images/check-your-ruby-app.png
+image: posts/check-your-ruby-app
 image_alt: "The Ruby logo next to the face screaming in fear emoji"
 ---
 

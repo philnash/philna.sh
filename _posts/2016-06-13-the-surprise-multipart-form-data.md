@@ -55,7 +55,7 @@ fetch("/", {
 
 The plan was simple: run the server, run the front end code, see "bar" printed in the console, celebrate.
 
-![The console logged out "undefined"](/images/formdata/undefined.png)
+{% asset posts/formdata/undefined alt='The console logged out "undefined"' %}
 
 `undefined`, the JavaScript developer's worst enemy (aside from perhaps callback hell and developers from other languages telling them that they're doing it wrong).
 

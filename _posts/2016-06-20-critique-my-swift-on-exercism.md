@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Critique my Swift on Exercism"
-image: /images/exercism.png
+image: posts/exercism
 image_alt: "The Exercism logo"
 tags:
   - swift

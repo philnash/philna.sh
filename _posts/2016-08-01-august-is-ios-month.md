@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "August is iOS month"
-image: /images/xcode_swift.png
+image: posts/xcode_swift
 image_alt: "The App Store and Swift logos"
 tags:
   - swift
@@ -18,7 +18,7 @@ By first application, I really mean my first one that I am going to take from be
 
 Now, with my newly gained knowledge of Swift, it's just me, Xcode and a month of clear space to build something.
 
-![The view of Xcode when you start a new project.](/images/new_xcode_project.png)
+{% asset posts/new_xcode_project alt="The view of Xcode when you start a new project." %}
 
 ## 2,000,000 applications
 

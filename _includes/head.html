@@ -30,27 +30,35 @@
     {% asset includes/critical.css @inline %}
   </style>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml
-    " | prepend: site.baseurl | prepend: site.url }}"> {% if page.layout == "post" %}
-  <!-- Twitter -->
-  {% if page.image %}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{{ site.url }}{{ page.image }}"> {% else %}
-  <meta name="twitter:card" content="summary"> {% endif %}
-  <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 200 }}">
-  <meta name="twitter:site" content="@philnash">
-  <meta name="twitter:creator" content="@philnash">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  {% if page.layout == "post" %}
+    <!-- Twitter -->
+    {% if page.image %}
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image" content="{{ site.url }}{% asset {{page.image}} @path %}">
+    {% else %}
+      <meta name="twitter:card" content="summary">
+    {% endif %}
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 200 }}">
+    <meta name="twitter:site" content="@philnash">
+    <meta name="twitter:creator" content="@philnash">
 
-  <!-- Facebook -->
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 200 }}"> {% if page.image %}
-  <meta property="og:image" content="{{ site.url }}{{ page.image }}"> {% endif %}
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="{{ site.title }}">
+    <!-- Facebook -->
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 200 }}">
+    {% if page.image %}
+      <meta property="og:image" content="{{ site.url }}{% asset {{page.image}} @path %}">
+    {% endif %}
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="{{ site.title }}">
 
-  <!-- Google -->
-  <meta itemprop="name" content="{{ page.title }}">
-  <meta itemprop="description" content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 200 }}"> {% if page.image %}
-  <meta itemprop="image" content="{{ site.url }}{{ page.image }}"> {% endif %} {% endif %} {% include google_analytics.html %}
+    <!-- Google -->
+    <meta itemprop="name" content="{{ page.title }}">
+    <meta itemprop="description" content="{{ page.excerpt | strip_html | strip_newlines | xml_escape | truncate: 200 }}">
+    {% if page.image %}
+      <meta itemprop="image" content="{{ site.url }}{% asset {{page.image}} @path %}">
+    {% endif %}
+  {% endif %}
+  {% include google_analytics.html %}
 </head>

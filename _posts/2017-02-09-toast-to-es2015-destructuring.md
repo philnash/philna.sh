@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A toast to ES2015 destructuring"
-image: "/images/destructured_beers.jpg"
+image: posts/destructured_beers
 image_alt: ""
 tags:
   - javascript
