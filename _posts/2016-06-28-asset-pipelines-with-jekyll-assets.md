@@ -39,6 +39,10 @@ Those are the features I wanted. So I did a bit of research and found [Jekyll-As
 
 ## Getting started with Jekyll-Assets
 
+<div class="info">
+  <p>This blog post was written for Jekyll Assets version 2.4.0. Jekyll Assets version 3 has now been released and changes a few things, if you are using Jekyll Assets 3 the following may not apply.</p>
+</div>
+
 Let's set up Jekyll-Assets for a Jekyll site. First up, we need to install the jekyll-assets gem. Add it to the `Gemfile`:
 
 {% highlight ruby %}
