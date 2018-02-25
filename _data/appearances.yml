@@ -13,6 +13,7 @@
     link: https://www.meetup.com/the-web/events/247201690/
   talks:
     - title: An introduction to service workers
+    - slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-at-the-web-meetup
 
 - event:
     name: "MelbJS"
