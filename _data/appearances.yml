@@ -5,6 +5,7 @@
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/mcrjmnyxdblc/
   talks:
     - title: Smaller Is Always Better
+      slides: https://speakerdeck.com/philnash/smaller-is-always-better-at-roro-melb
 
 - event:
     name: The Web Meetup
