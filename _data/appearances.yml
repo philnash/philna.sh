@@ -1,4 +1,13 @@
 - event:
+    name: JSConf EU
+    start_date: 2018-06-02
+    end_date: 2018-06-03
+    location: Berlin, Germany
+    link: https://2018.jsconf.eu/
+  talks:
+    - title: Aggressive Web Apps
+
+- event:
     name: Melbourne Ruby
     start_date: 2018-02-28
     location: Melbourne, Australia
