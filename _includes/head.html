@@ -26,9 +26,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="msapplication-starturl" content="/?utm_source=homescreen">
 
-  <style>
-    {% asset includes/critical.css @inline %}
-  </style>
+  {% asset includes/critical.css @inline %}
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   {% if page.layout == "post" %}
