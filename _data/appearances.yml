@@ -24,6 +24,7 @@
   talks:
     - title: An introduction to service workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-at-the-web-meetup
+      video: https://www.youtube.com/watch?v=M2mGYdnFRVU
 
 - event:
     name: "MelbJS"
