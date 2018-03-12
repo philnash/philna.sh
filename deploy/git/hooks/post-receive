@@ -1,4 +1,4 @@
-#!/bin/bash -i
+#!/bin/bash -ex
 GIT_REPO=$HOME/repos/philnash.git
 TMP_GIT_CLONE=$HOME/tmp/git/philnash
 TMP_SITE_BUILD=$TMP_GIT_CLONE/_site
