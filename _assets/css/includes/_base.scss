@@ -164,6 +164,9 @@ blockquote {
 blockquote > :last-child {
   margin-bottom: 0;
 }
+blockquote em {
+  font-style: normal;
+}
 
 /**
  * Code formatting
