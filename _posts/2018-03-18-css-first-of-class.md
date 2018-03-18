@@ -16,7 +16,7 @@ The pseudo class `:first-of-type` does exist, but it is limited. It is a special
 
 > The :nth-of-type(An+B) pseudo-class notation represents the same elements that would be matched by :nth-child(\|An+B\| of S), _**where S is a type selector**_ and namespace prefix matching the element in question.
 
-That means, when using `:nth-of-type()` or `:first-of-type` the selector can only be a type selector, which is the simplest of element selectors. That is, you can only refer directly to elements, like `<p>` or `<h1>` when using `:first-of-type`. So, if you had the following HTML:
+That means, when using `:nth-of-type()` or `:first-of-type` the selector can only be a type selector. That is, you can only refer directly to elements&mdash;like `<p>` or `<h1>`&mdash;when using `:first-of-type`. So, if you had the following HTML:
 
 ```html
 <div>
