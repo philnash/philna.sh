@@ -66,6 +66,22 @@ div p.special ~ p.special { color: #333; }
 
 Now the first paragraph will be red, the second green and the last one grey. You can check out a [live example of this on Codepen](https://codepen.io/philnash/pen/WzoNwG/).
 
+## CSS Selectors level 4
+
+After posting this, [Šime Vidas](https://twitter.com/simevidas) [pointed out on Twitter](https://twitter.com/simevidas/status/975394813863432192) that the future of CSS holds more promise for this style of selector. In the CSS Selectors level 4 specification the `:nth-child()` pseudo class takes an argument that looks like: `An+B [of S]?`. The `An+B` part means you can provide a function to calculate what `n` is, but the optional `of S` means the pseudo class will match the Nth element that matches the selector.
+
+This means we can update our example to use `:nth-child()` instead of two rules like we did above. Check out the CSS below:
+
+```css
+div p { color: #333; }
+div p:first-of-type { color: red; }
+div :nth-child(1 of p.special) { color: green; }
+```
+
+Using `:nth-child(1 of p.special)` means we are selecting the first child of the `<div>` that is a `<p>` with a class of "special". This is exactly what I wanted.
+
+The only drawback with this technique? It only works in Safari right now. I've updated the [Codepen, check it out in Safari to see all your future selector dreams come true](https://codepen.io/philnash/pen/WzoNwG/).
+
 ## CSS hacking is still fun
 
 I've been writing CSS on and off for more than a decade now and while all the modern layout capabilities of CSS mean that there's a lot less hacking, sometimes you need to come up with a creative solution to a problem. I could have solved this with an extra class or a rearrangement of my HTML, but when CSS can do the job for you it feels more satisfying.
