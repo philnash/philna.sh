@@ -86,6 +86,6 @@ The only drawback with this technique? It only works in Safari right now. I've u
 
 I've been writing CSS on and off for more than a decade now and while all the modern layout capabilities of CSS mean that there's a lot less hacking, sometimes you need to come up with a creative solution to a problem. I could have solved this with an extra class or a rearrangement of my HTML, but when CSS can do the job for you it feels more satisfying.
 
-Thanks to Daniel and Lea for sharing their solutions on Stack Overflow and particularly to Daniel who's [answer goes into a lot more detail about CSS selector and pseudoclass misunderstandings](https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-class/8539107#8539107).
+Thanks to Daniel and Lea for sharing their solutions on Stack Overflow and particularly to Daniel who's [answer goes into a lot more detail about CSS selector and pseudo class misunderstandings](https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-class/8539107#8539107).
 
-Maybe one day we'll see a `:first-of-class` pseudo class, but until then the subsequent sibling combinator is our friend.
+Maybe one day we'll see a `:first-of-class` pseudo class. With the latest version of `:nth-child()` we don't need a `:first-of-class`, but we're still waiting for support. In the meantime the subsequent sibling combinator remains our friend.
