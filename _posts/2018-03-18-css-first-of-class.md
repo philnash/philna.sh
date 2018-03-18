@@ -88,4 +88,4 @@ I've been writing CSS on and off for more than a decade now and while all the mo
 
 Thanks to Daniel and Lea for sharing their solutions on Stack Overflow and particularly to Daniel who's [answer goes into a lot more detail about CSS selector and pseudo class misunderstandings](https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-class/8539107#8539107).
 
-Maybe one day we'll see a `:first-of-class` pseudo class. With the latest version of `:nth-child()` we don't need a `:first-of-class`, but we're still waiting for support. In the meantime the subsequent sibling combinator remains our friend.
+Maybe one day we'll see a `:first-of-class` pseudo class. With the latest version of `:nth-child()` maybe we don't even need a `:first-of-class`, we're just waiting for browser support. In the meantime the subsequent sibling combinator remains our friend.
