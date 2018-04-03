@@ -1,15 +1,15 @@
 .post-title,
 .page-title {
   text-align: center;
-  font-size: $base-font-size*2;
+  font-size: $base-font-size * 2;
   line-height: 1;
-  margin: $spacing-unit*2 0;
+  margin: $spacing-unit * 2 0;
 }
 
 @include media-query-min(700px) {
   .post-title,
   .page-title {
-    font-size: $base-font-size*3;
+    font-size: $base-font-size * 3;
   }
 }
 
@@ -29,7 +29,7 @@
 }
 
 .post footer {
-  margin-top: $spacing-unit*2;
+  margin-top: $spacing-unit * 2;
 }
 
 .post-list {
@@ -38,7 +38,7 @@
   margin: 0;
 }
 .post-list h2 {
-  font-size: $base-font-size*1.5;
+  font-size: $base-font-size * 1.5;
   line-height: 1.25;
   padding-top: 0;
   padding-bottom: 0;
@@ -125,4 +125,19 @@
   font-size: 1.5em;
 }
 .post-promo p {
+}
+.post-promo web-share-wrapper button {
+  color: $brand-color;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  display: inline;
+  font-size: 18px;
+  padding: 0;
+  cursor: pointer;
+  font-family: $base-font-family;
+}
+.post-promo web-share-wrapper button:hover {
+  color: lighten($brand-color, 15%);
+  border-bottom: 2px solid lighten($brand-color, 15%);
 }

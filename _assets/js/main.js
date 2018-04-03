@@ -1,3 +1,4 @@
+//= require bower_components/web-share-wrapper/src/index
 //= require includes/idb
 /* global idb, ga */
 
@@ -31,6 +32,8 @@ if (swSupport()) {
   });
 
   navigator.serviceWorker.ready.then(function() {
+    var url = getCanonicalUrl();
+    var pageTitle = getPageTitle();
     openDb().then(function(db) {
       var objectStore = db
         .transaction('pages', 'readwrite')
@@ -86,47 +89,40 @@ function openDb() {
   });
 }
 
-var url = getCanonicalUrl();
-var pageTitle = getPageTitle();
-
 var shareLinks = [].slice.call(document.querySelectorAll('.share'));
 shareLinks.forEach(function(link) {
-  link.addEventListener('click', function(event) {
-    if (typeof navigator.share !== 'undefined') {
-      event.preventDefault();
-      navigator
-        .share({ title: pageTitle, url: url })
-        .then(function() {
-          // track successful share
-          ga('send', {
-            hitType: 'event',
-            eventCategory: 'Post',
-            eventAction: 'share',
-            eventLabel: 'success'
-          });
-        })
-        .catch(function() {
-          // track unsuccessful share
-          ga('send', {
-            hitType: 'event',
-            eventCategory: 'Post',
-            eventAction: 'share',
-            eventLabel: 'fail'
-          });
-          window.open(event.target.href);
-        });
-      return false;
-    } else {
-      // track share click
+  link.addEventListener('click', function() {
+    // track share click
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Post',
+      eventAction: 'share',
+      eventLabel: 'click'
+    });
+  });
+});
+
+if (typeof navigator.share !== 'undefined') {
+  var shares = [].slice.call(document.querySelectorAll('web-share-wrapper'));
+  shares.forEach(function(share) {
+    share.addEventListener('share-success', function(){
       ga('send', {
         hitType: 'event',
         eventCategory: 'Post',
         eventAction: 'share',
-        eventLabel: 'click'
+        eventLabel: 'success'
       });
-    }
+    });
+    share.addEventListener('share-failure', function() {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Post',
+        eventAction: 'share',
+        eventLabel: 'fail'
+      });
+    });
   });
-});
+}
 
 var offlineList = document.querySelector('.offline-pages');
 if (swSupport() && !!offlineList) {
