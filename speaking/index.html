@@ -24,7 +24,7 @@ title: Speaking
 
 <div class="row">
   <div class="cell cell-12 cell-med-8 cell-centre">
-    {% assign upcoming = site.data.appearances | where_exp: "appearance", "appearance.event.start_date > site.date" | sort: "event.start_date" | reverse %}
+    {% assign upcoming = site.data.appearances | where_exp: "appearance", "appearance.event.start_date > site.date" | sort: "event.start_date" %}
     {% unless upcoming == empty %}
       <h2 class="section-title">Upcoming talks</h2>
       <ol class="speaking-list">

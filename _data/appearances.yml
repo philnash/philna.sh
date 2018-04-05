@@ -1,9 +1,26 @@
 - event:
+    name: Angular Conf Australia
+    start_date: 2018-06-22
+    location: Melbourne, Australia
+    link: https://www.angularconf.com.au/
+  talks:
+    - title: Service Workers - Beyond The Cache
+
+- event:
     name: JSConf EU
     start_date: 2018-06-02
     end_date: 2018-06-03
     location: Berlin, Germany
     link: https://2018.jsconf.eu/
+  talks:
+    - title: Aggressive Web Apps
+
+- event:
+    name: Voxxed Days Melbourne
+    start_date: 2018-05-02
+    end_date: 2018-05-03
+    location: Melbourne, Australia
+    link: https://voxxeddays.com/melbourne/
   talks:
     - title: Aggressive Web Apps
 
