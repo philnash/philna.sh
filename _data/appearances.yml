@@ -190,7 +190,7 @@
       slides: https://speakerdeck.com/philnash/jwt-wtf-at-london-web-standards
 
 - event:
-    name: 4developers
+    name: 4Developers
     link: https://2017.4developers.org.pl/en/
     start_date: 2017-04-03
     location: Warsaw, Poland
@@ -708,3 +708,317 @@
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-state-of-the-browser-5
+
+- event:
+    name: LeedsTechHub
+    start_date: 2015-07-23
+    location: Leeds, UK
+    link: https://www.meetup.com/Leeds-TechHub/events/223602008/
+  talks:
+    - title: "WebHooks: The API Strikes Back"
+      slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-1
+
+- event:
+    name: Async
+    start_date: 2015-07-09
+    location: Brighton, UK
+    link: https://asyncjs.com/webrtc-and-push-notifications/
+  talks:
+    - title: WhatRTC? Everything you need to know to connect browsers to the world
+      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-front-trends-2015
+      video: https://vimeo.com/134323927
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-at-the-frontend-2015
+
+- event:
+    name: PolyConf
+    start_date: 2015-07-02
+    end_date: 2015-07-04
+    location: Poznań, Poland
+    link: https://15.polyconf.com/
+  talks:
+    - title: "Webhooks - The API strikes back"
+      slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-1
+
+- event:
+    name: InfoShare
+    start_date: 2015-06-11
+    end_date: 2015-06-12
+    location: Gdańsk, Poland
+    link: https://infoshare.pl/history/agenda.html?year=2015
+  talks:
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-at-the-frontend-2015
+
+- event:
+    name: You Gotta Love Frontend
+    link: http://2015.yougottalovefrontend.com/
+    start_date: 2015-06-08
+    end_date: 2015-06-09
+    location: Tel Aviv, Israel
+  talks:
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-at-the-frontend-2015
+
+- event:
+    name: Front Endgineers London
+    link: https://www.meetup.com/Front-Endgineers-London/events/222643072/
+    start_date: 2015-06-02
+    location: London, UK
+  talks:
+    - title: WhatRTC? Everything you need to know to connect browsers to the world
+
+- event:
+    name: At The Frontend
+    link: http://lanyrd.com/2015/atthefrontend/
+    start_date: 2015-05-27
+    location: Copenhagen, Denmark
+  talks:
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-at-the-frontend-2015
+
+- event:
+    name: Copenhagen Frontenders
+    start_date: 2015-05-26
+    location: Copenhagen, Denmark
+    link: https://www.meetup.com/cphfront/events/222040789/
+  talks:
+    - title: WhatRTC? Everything you need to know to connect browsers to the world
+
+- event:
+    name: JSConf Budapest
+    link: http://2015.jsconfbp.com/
+    start_date: 2015-05-14
+    end_date: 2015-05-15
+    location: Budapest, Hungary
+  talks:
+    - title: The web is getting pushy
+      slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy
+      video: https://youtu.be/4-WnlHhqcjU?list=PLFZ5NyC0xHDaaTy6tY9p0C0jd_rRRl5Zm
+
+- event:
+    name: Front-Trends
+    link: https://2015.front-trends.com/
+    start_date: 2015-05-06
+    end_date: 2015-05-08
+    location: Warsaw, Poland
+  talks:
+    - title: WhatRTC? Connecting browsers to the world
+      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-front-trends-2015
+      video: https://www.youtube.com/watch?v=xknuSzGywP8
+
+- event:
+    name: Front End London
+    link: http://www.frontendlondon.co.uk/
+    start_date: 2015-04-30
+    location: London, UK
+  talks:
+    - title: The web is getting pushy
+
+- event:
+    name: 4Developers
+    link: http://2015.4developers.org.pl/en/
+    start_date: 2015-04-20
+    location: Warsaw, Poland
+  talks:
+    - title: WhatRTC? Everything you need to know to connect browsers to the world
+      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-4developers-2015
+
+- event:
+    name: LondonAPI
+    link: https://www.meetup.com/London-API-Group/events/220647309/
+    start_date: 2015-03-23
+    location: London, UK
+  talks:
+    - title: Webhooks - The API strikes back
+      slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back
+
+- event:
+    name: CloudConf
+    link: https://2015.cloudconf.it/
+    start_date: 2015-03-19
+    location: Turin, Italy
+  talks:
+    - title: WhatRTC? Everything you need to know about modern web communications
+      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-about-modern-web-communications-1
+
+- event:
+    name: Bath Ruby
+    link: https://2015.bathruby.uk/
+    start_date: 2015-03-13
+    location: Bath, UK
+  roles:
+    - MC
+
+- event:
+    name: Mobile Central Europe
+    link: https://2015.mceconf.com/
+    start_date: 2015-02-04
+    end_date: 2015-02-06
+    location: Warsaw, Poland
+  talks:
+    - title: WhatRTC? Everything you need to know about modern web communications
+      video: https://youtu.be/brrabnxamGk
+      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-about-modern-web-communications
+
+- event:
+    name: MK Geek Night
+    link: https://mkgeeknight.co.uk/
+    start_date: 2014-12-11
+    location: Milton Keynes
+  talks:
+    - title: WhatRTC? Everything you need to know to connect browsers to the world
+      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world
+
+- event:
+    name: Front End London
+    link: http://www.frontendlondon.co.uk/
+    start_date: 2014-11-27
+    location: London, UK
+  talks:
+    - title: WhatRTC? Everything you need to know to connect browsers to the world
+
+- event:
+    name: Future of Web Apps
+    link: http://lanyrd.com/2014/future-of-web-apps-london/
+    start_date: 2014-09-29
+    end_date: 2014-10-01
+    location: London, UK
+  talks:
+    - title: The Future of Web APIs
+      slides: https://speakerdeck.com/philnash/the-future-of-web-apis
+
+- event:
+    name: Endpoint
+    link: http://lanyrd.com/2014/endpointcon/
+    start_date: 2014-09-05
+    location: Amsterdam, The Netherlands
+  talks:
+    - title: Wrapping up an API with Ruby as you go
+
+- event:
+    name: London Web Meetup
+    link: https://www.meetup.com/londonweb/events/pkshsyslbcc/
+    start_date: 2014-08-21
+    location: London, UK
+  talks:
+    - title: Asset Redux - Front end performance on Rails
+      slides: https://speakerdeck.com/philnash/asset-redux-front-end-performance-on-rails
+
+- event:
+    name: Ruby Lugdunum
+    link: http://2014.rulu.eu/
+    start_date: 2014-06-19
+    end_date: 2014-06-20
+    location: Lyon, France
+  talks:
+    - title:  Asset Redux - Front end performance on Rails
+
+- event:
+    name: Bacon
+    link: http://devslovebacon.com/
+    start_date: 2014-05-16
+    end_date: 2014-05-17
+    location: London, UK
+  roles:
+    - Track MC
+  talks:
+    - title: How to create the perfect prototype
+      video: http://devslovebacon.com/conferences/bacon-2014/talks/how-to-create-the-perfect-prototype
+      slides: https://speakerdeck.com/philnash/how-to-create-the-perfect-prototype
+
+- event:
+    name: ArrrrCamp
+    link: http://2013.arrrrcamp.be/
+    start_date: 2013-10-03
+    end_date: 2013-10-04
+    location: Ghent, Belgium
+  talks:
+    - title: How to create the perfect prototype
+      slides: https://speakerdeck.com/philnash/how-to-create-the-perfect-prototype
+      video: https://www.youtube.com/watch?v=DwP4rV2peyw
+
+- event:
+    name: Campus Party Europe
+    link: http://lanyrd.com/2013/cpeurope/
+    start_date: 2013-09-02
+    end_date: 2013-09-07
+    location: London, UK
+  talks:
+    - title: How to create the perfect prototype
+
+- event:
+    name: Front End London
+    link: http://www.frontendlondon.co.uk/
+    start_date: 2013-03-28
+    location: London, UK
+  talks:
+    - title: CSS Laid Out
+
+- event:
+    name: TakeOff
+    link: http://takeoffconf.com/2013
+    start_date: 2013-01-17
+    end_date: 2013-01-18
+    location: Lille, France
+  talks:
+    - title: CSS Laid Out
+      slides: https://speakerdeck.com/philnash/css-laid-out
+
+- event:
+    name: ArrrrCamp
+    link: http://2012.arrrrcamp.be/
+    start_date: 2012-10-04
+    end_date: 2012-10-05
+    location: Ghent, Belgium
+  talks:
+    - title: JavaScript in the next generation
+      slides: https://speakerdeck.com/philnash/javascript-in-the-next-generation-1
+
+- event:
+    name: London JS School Trip
+    link: http://lanyrd.com/2012/london-js-school-trip/
+    start_date: 2012-06-30
+    location: London, UK
+
+- event:
+    name: Webshaped
+    link: http://webshaped.fi/2012/
+    start_date: 2012-05-16
+    location: Helsinki, Finland
+  talks:
+    - title: The browser is taking over
+
+- event:
+    name: Geeky
+    link: https://www.eventbrite.co.uk/e/geeky-tickets-3366293675#
+    start_date: 2012-05-14
+    location: London, UK
+  talks:
+    - title: My favourite browser
+
+- event:
+    name: Bacon
+    link: http://devslovebacon.com/conferences/bacon-2012/talks/html5-takes-over-the-world
+    start_date: 2012-04-20
+    end_date: 2012-04-21
+    location: London, UK
+  talks:
+    - title: HTML5 Takes Over the World
+      video: http://devslovebacon.com/conferences/bacon-2012/talks/html5-takes-over-the-world
+
+- event:
+    name: London JS
+    link: https://www.eventbrite.co.uk/e/london-js-tickets-1781704125#
+    start_date: 2012-01-30
+    location: London, UK
+  talks:
+    - title: The Instagram API
+
+- event:
+    name: LRUG
+    link: http://lrug.org/meetings/2011/june/
+    start_date: 2011-06-13
+    location: London, UK
+  talks:
+    - title: Asset Hat
