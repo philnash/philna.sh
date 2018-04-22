@@ -6,6 +6,7 @@ image_alt: The GitHub summary for a pull request, showing 1 addition and 2 delet
 tags:
   - open source
   - favicon
+  - crystal
 ---
 
 Sometimes open source work is just fixing one tiny thing that bugs you. However, rolling up your sleeves and delving into even the smallest amount of code can lead to surprising results.

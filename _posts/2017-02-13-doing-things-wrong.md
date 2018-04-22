@@ -4,6 +4,7 @@ title: "Doing things wrong"
 tags:
   - learning
   - community
+  - javascript
 image: posts/fix_it
 image_alt: "A git log showing a commit that posted my last blog post followed by four commits that just say 'fix it'."
 ---
@@ -37,10 +38,10 @@ Thanks to Masse and James [I fixed that too](https://github.com/philnash/philna.
 
 ## Accessibility matters
 
-The last thing to be pointed out, and probably the most important, was not about the content of the blog post but the accessibility of my site in general. [Charlotte Spencer pointed out that my site failed colour contrast tests](https://twitter.com/Charlotteis/status/830416813091614720) for both the code samples and links on the site. The tests they referred to are the [Web Content Accessibility Guidelines on colour contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) which recommend a contrast ratio of at least 4.5:1 for regular body text. I learned some interesting things trying to fix this:
+The last thing to be pointed out, and probably the most important, was not about the content of the blog post but the accessibility of my site in general. [James Spencer pointed out that my site failed colour contrast tests](https://twitter.com/varjmes/status/830416813091614720) for both the code samples and links on the site. The tests they referred to are the [Web Content Accessibility Guidelines on colour contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) which recommend a contrast ratio of at least 4.5:1 for regular body text. I learned some interesting things trying to fix this:
 
 * [tota11y](https://khan.github.io/tota11y/), by the [Khan Academy](https://www.khanacademy.org/), is a really awesome tool
-  * I learned about it from the link Charlotte shared with me
+  * I learned about it from the link James shared with me
   * It suggests colours that are similar to the existing colour that would pass the test
   * It also has other plugins that visualise things like out of order heading usage, poor link text, missing alt attributes and a few more, helping you to ensure your site is as accessible as possible
 * Syntax highlighting themes are really bad at accessible contrast levels
@@ -54,6 +55,6 @@ I was a little embarrassed about this because, [as I said in a tweet](https://tw
 
 ## Always be improving
 
-I want to thank Masse, James, Charlotte and the now mystery Redditor for giving me the feedback that helped to improve both my blog post and my site. If you see anything on this site that could be improved I welcome the feedback. I learned that I should keep my eye on the formatting and consistency of my code, not to over promise and to pay closer attention to accessibility concerns.
+I want to thank Masse, the two Jameses and the now mystery Redditor for giving me the feedback that helped to improve both my blog post and my site. If you see anything on this site that could be improved I welcome the feedback. I learned that I should keep my eye on the formatting and consistency of my code, not to over promise and to pay closer attention to accessibility concerns.
 
 Overall I learned that in order to always be improving&mdash;my code, my site, myself&mdash;sometimes I need to do things wrong.

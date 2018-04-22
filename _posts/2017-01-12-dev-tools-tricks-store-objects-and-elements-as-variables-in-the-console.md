@@ -3,6 +3,9 @@ layout: post
 title: "Dev Tools Tricks: Store objects and elements as variables in the console"
 tags:
   - dev tools
+  - javascript
+  - chrome
+  - firefox
 image: posts/dev-tools-tricks-header
 show_image: false
 ---

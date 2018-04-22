@@ -4,6 +4,7 @@ title:  "The surprise multipart/form-data"
 tags:
   - javascript
   - node.js
+  - express
 ---
 
 Building up and sending an Ajax request is so much easier than it ever used to be. No longer must we hassle ourselves with `XMLHttpRequest`, never mind the horror of ActiveX's `ActiveXObject("Microsoft.XMLHTTP")`. The [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) is here (and it is [polyfilled](https://github.com/github/fetch) for older browsers). Then there's the [`FormData` object](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects) that makes building up and submitting form data really easy, especially compared to [the 130 or so lines of JavaScript you'd need to do it yourself](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#A_little_vanilla_framework).

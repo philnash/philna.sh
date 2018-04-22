@@ -1,7 +1,11 @@
 ---
 layout: post
 title: "gzip a file in Ruby"
-tags: ruby, gzip, zlib, file compression
+tags:
+  - ruby
+  - gzip
+  - zlib
+  - file compression
 image: posts/gzip/gzip-ruby
 image_alt: "An icon of a vice squeezing a ruby gem"
 ---
