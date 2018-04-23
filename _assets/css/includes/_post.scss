@@ -115,12 +115,14 @@
 }
 
 .post-promo {
-  margin-top: $spacing-unit*3;
-  background-color: $grey-color-light;
-  text-align: center;
+  margin-top: $spacing-unit*2;
+  padding-top: $spacing-unit*2;
+  margin-bottom: $spacing-unit;
+  border-top : 5px solid $grey-color-light;
   border-radius: $border-radius;
 }
+.post-promo h2 {
+  font-size: 1.5em;
+}
 .post-promo p {
-  padding: $spacing-unit 0;
-  margin-bottom: 0;
 }
