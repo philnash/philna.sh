@@ -1,0 +1,20 @@
+{
+  "name": "web-share-wrapper",
+  "version": "0.1.1",
+  "description":
+    "A web component that wraps other share elements to replace with a web share button where supported.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philnash/web-share-wrapper.git"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["web share", "web component"],
+  "author": "Phil Nash <philnash@twilio.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.8.4"
+  }
+}
