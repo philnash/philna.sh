@@ -19,7 +19,7 @@ timezone: Europe/London
 sw_cache_version: 2
 
 # Build settings
-exclude: [deploy]
+exclude: [deploy, bower_components]
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 paginate_path: /blog/page/:num/
