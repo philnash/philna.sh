@@ -46,7 +46,7 @@ For example, the following code will use an `<a>` instead of a `<button>`:
 ```html
 <template id="link">
   <a>Share link</a>
-</a>
+</template>
 
 <web-share-wrapper template="link" sharetext="Check out the web-share-wrapper web component" shareurl="https://github.com/philnash/web-share-wrapper">
   <a href="https://twitter.com/intent/tweet/?text=Check%20out%20%40philnash's%20web-share-wrapper%20web%20component&amp;url=https%3A%2F%2Fgithub.com%2Fphilnash%2Fweb-share-wrapper">Share on Twitter</a>
