@@ -22,6 +22,7 @@
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/events/nnvkcpyxhblb/
   talks:
     - title: Smaller is always better
+      slides: https://speakerdeck.com/philnash/smaller-is-always-better-at-roro-sydney
 
 - event:
     name: Voxxed Days Melbourne
