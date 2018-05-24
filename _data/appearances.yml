@@ -1,4 +1,13 @@
 - event:
+    name: Web Directions Code
+    start_date: 2018-08-01
+    end_date: 2018-08-02
+    location: Melbourne, Australia
+    link: https://www.webdirections.org/code/speakers/phil-nash.php
+  talks:
+    - title: Aggressive Web Apps
+
+- event:
     name: Angular Conf Australia
     start_date: 2018-06-22
     location: Melbourne, Australia
