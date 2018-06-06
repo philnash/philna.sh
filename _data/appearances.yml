@@ -1,4 +1,13 @@
 - event:
+    name: NDC Sydney
+    start_date: 2018-09-19
+    end_date: 2018-09-21
+    location: Sydney, Australia
+    link: https://ndcsydney.com/talk/service-workers-beyond-the-cache/
+  talks:
+    - title: Service workers - beyond the cache
+
+- event:
     name: Web Directions Code
     start_date: 2018-08-01
     end_date: 2018-08-02
@@ -23,6 +32,8 @@
     link: https://2018.jsconf.eu/
   talks:
     - title: Aggressive Web Apps
+      slides: https://speakerdeck.com/philnash/aggressive-web-apps-jsconf-eu
+      video: https://www.youtube.com/watch?v=uo-UOvq3-0Y
 
 - event:
     name: RORO Sydney
