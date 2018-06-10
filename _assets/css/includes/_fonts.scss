@@ -3,6 +3,7 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 900;
+  font-display: swap;
   src: local('Raleway Black'), local('Raleway-Black'),
        asset_url('raleway-v11-latin-900.woff2') format('woff2'),
        asset_url('raleway-v11-latin-900.woff') format('woff');
@@ -13,6 +14,7 @@
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local('Merriweather'), local('Merriweather-Regular'),
        asset_url('merriweather-v13-latin-regular.woff2') format('woff2'),
        asset_url('merriweather-v13-latin-regular.woff') format('woff');
@@ -23,6 +25,7 @@
   font-family: 'Merriweather';
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
   src: local('Merriweather Italic'), local('Merriweather-Italic'),
        asset_url('merriweather-v13-latin-italic.woff2') format('woff2'),
        asset_url('merriweather-v13-latin-italic.woff') format('woff');
@@ -33,6 +36,7 @@
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local('Merriweather Bold'), local('Merriweather-Bold'),
        asset_url('merriweather-v13-latin-700.woff2') format('woff2'),
        asset_url('merriweather-v13-latin-700.woff') format('woff');
@@ -43,6 +47,7 @@
   font-family: 'Merriweather';
   font-style: italic;
   font-weight: 700;
+  font-display: swap;
   src: local('Merriweather Bold Italic'), local('Merriweather-BoldItalic'),
        asset_url('merriweather-v13-latin-700italic.woff2') format('woff2'),
        asset_url('merriweather-v13-latin-700italic.woff') format('woff');
