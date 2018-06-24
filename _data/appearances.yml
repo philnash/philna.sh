@@ -23,6 +23,7 @@
     link: https://www.angularconf.com.au/
   talks:
     - title: Service Workers - Beyond The Cache
+      slides: https://speakerdeck.com/philnash/service-workers-beyond-the-cache-angular-conf-australia
 
 - event:
     name: JSConf EU
