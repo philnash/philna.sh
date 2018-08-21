@@ -14,7 +14,6 @@ scripts:
 I've seen the following tweet about git making its way around Twitter recently:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I ❤️ Git. But honestly, it intimidated me for years. I thought I needed to understand all its powerful features to be productive. I found that&#39;s not the case. You can be quite productive in Git with around 6 commands: <br><br>branch<br>checkout<br>add<br>commit<br>pull<br>push</p>&mdash; Cory House 🏠 (@housecor) <a href="https://twitter.com/housecor/status/1031190760278970368?ref_src=twsrc%5Etfw">August 19, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 And it's true, you _can_ do most of your work with those commands.
 
