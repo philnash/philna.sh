@@ -95,7 +95,7 @@
     name: Web Directions Summit
     start_date: 2017-11-09
     end_date: 2017-11-10
-    link: https://www.webdirections.org/wds/speakers/phil-nash.html
+    link: http://webdirections.org/wds17/speakers/phil-nash.html
     location: "Sydney, Australia"
   talks:
     - title: "2FA, WTF?"
