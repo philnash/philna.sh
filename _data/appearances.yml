@@ -1,4 +1,12 @@
 - event:
+    name: DevFest Melbourne 2018
+    start_date: 2018-10-27
+    location: Melbourne, Australia
+    link: https://www.gdgmelbourne.com/devfest-2018/
+  talks:
+    - title: Everything they don’t tell you about video in the browser
+
+- event:
     name: NDC Sydney
     start_date: 2018-09-19
     end_date: 2018-09-21
@@ -15,6 +23,7 @@
     link: https://www.webdirections.org/code/speakers/phil-nash.php
   talks:
     - title: Aggressive Web Apps
+      slides: https://speakerdeck.com/philnash/aggressive-web-apps-at-web-directions-code
 
 - event:
     name: Angular Conf Australia
