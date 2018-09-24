@@ -7,6 +7,14 @@
     - title: Everything they don’t tell you about video in the browser
 
 - event:
+    name: Melbourne Ruby
+    start_date: 2018-10-03
+    location: Melbourne, Australia
+    link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/243245418/
+  talks:
+    - title: Fantastic passwords and where to find them
+
+- event:
     name: NDC Sydney
     start_date: 2018-09-19
     end_date: 2018-09-21
@@ -14,6 +22,7 @@
     link: https://ndcsydney.com/talk/service-workers-beyond-the-cache/
   talks:
     - title: Service workers - beyond the cache
+      slides: https://speakerdeck.com/philnash/service-workers-beyond-the-cache-ndc-sydney
 
 - event:
     name: Web Directions Code
