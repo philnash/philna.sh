@@ -12,18 +12,16 @@ title: Speaking history
 </div>
 
 <div class="row">
-  <div class="cell cell-12 cell-med-8 cell-centre">
-    {% assign past = site.data.appearances | where_exp: "appearance", "appearance.event.start_date < site.date" %}
-    {% assign past_by_year = past | group_by_exp: "appearance", "appearance.event.start_date | date: '%Y'" %}
-    {% assign sorted_past_by_year = past_by_year | sort: "name" | reverse %}
-    {% for year in sorted_past_by_year %}
-      <h2 class="section-title">{{ year.name }}</h2>
-      <ol class="speaking-list">
-        {% assign year_appearances = year.items | sort: "event.start_date" | reverse %}
-        {% for appearance in year_appearances %}
-          {% include appearance.html appearance=appearance %}
-        {% endfor %}
-      </ol>
-    {% endfor %}
-  </div>
+  {% assign past = site.data.appearances | where_exp: "appearance", "appearance.event.start_date < site.date" %}
+  {% assign past_by_year = past | group_by_exp: "appearance", "appearance.event.start_date | date: '%Y'" %}
+  {% assign sorted_past_by_year = past_by_year | sort: "name" | reverse %}
+  {% for year in sorted_past_by_year %}
+    <h2 class="section-title">{{ year.name }}</h2>
+    <ol class="speaking-list">
+      {% assign year_appearances = year.items | sort: "event.start_date" | reverse %}
+      {% for appearance in year_appearances %}
+        {% include appearance.html appearance=appearance %}
+      {% endfor %}
+    </ol>
+  {% endfor %}
 </div>

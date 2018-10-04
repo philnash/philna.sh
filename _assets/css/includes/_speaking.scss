@@ -5,19 +5,16 @@
 .speaking-list {
   list-style-type: none;
   margin: 0;
-  margin-bottom: $spacing-unit*2;
+  margin-bottom: $spacing-unit * 2;
   padding: 0;
 }
 
 .speaking-list .talk {
   padding-bottom: $spacing-unit/2;
   padding-top: $spacing-unit/2;
-  border-bottom: 2px solid $brand-color;
-  border-top: 2px solid $highlight-color;
+  border-bottom: 1px solid $border-color;
 }
-.speaking-list .talk:first-child {
-  border-top: none;
-}
+
 .speaking-list .talk:last-child {
   border-bottom: none;
 }
