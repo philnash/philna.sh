@@ -62,7 +62,6 @@ function returnRangeRequest(request, cacheName) {
     }
     return res.arrayBuffer();
   }).then(function(ab) {
-    console.log(request.headers.get('range'))
     const bytes = /^bytes\=(\d+)\-(\d+)$/g.exec(request.headers.get('range'));
     let start, end;
     if (bytes) {
