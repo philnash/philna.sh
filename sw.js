@@ -32,7 +32,11 @@ self.addEventListener("activate", function(event) {
 self.addEventListener("fetch", function(event) {
   var url = new URL(event.request.url);
   if (url.pathname.match(/^\/((assets|images)\/|manifest.json$)/)) {
-    event.respondWith(returnFromCacheOrFetch(event.request, staticCacheName));
+    if (event.request.headers.get('range')) {
+      event.respondWith(returnRangeRequest(event.request, staticCacheName));
+    } else {
+      event.respondWith(returnFromCacheOrFetch(event.request, staticCacheName));
+    }
   }
   if (event.request.mode === 'navigate' ||
       event.request.headers.get('Accept').indexOf('text/html') !== -1) {
@@ -40,6 +44,44 @@ self.addEventListener("fetch", function(event) {
     event.respondWith(cacheThenNetwork(event.request, pageCacheName));
   }
 });
+
+function returnRangeRequest(request, cacheName) {
+  return caches.open(cacheName)
+  .then(function(cache) {
+    return cache.match(request.url);
+  }).then(function(res) {
+    if (!res) {
+      return fetch(request)
+      .then(res => {
+        const clonedRes = res.clone();
+        return caches.open(cacheName).then(cache => cache.put(request, clonedRes)).then(() => res);
+      })
+      .then(res => {
+        return res.arrayBuffer();
+      });
+    }
+    return res.arrayBuffer();
+  }).then(function(ab) {
+    console.log(request.headers.get('range'))
+    const bytes = /^bytes\=(\d+)\-(\d+)$/g.exec(request.headers.get('range'));
+    let start, end;
+    if (bytes) {
+      start = Number(bytes[1]);
+      end = Number(bytes[2]);
+    } else {
+      start = 0;
+      end = ab.byteLength-1;
+    }
+    const range = ['Content-Range', `bytes ${start}-${end}/${ab.byteLength}`];
+    return new Response(
+      ab.slice(start, end+1),
+      {
+        status: 206,
+        statusText: 'Partial Content',
+        headers: [range]
+      });
+  })
+}
 
 function cacheAllIn(paths, cacheName) {
   return caches.open(cacheName).then(function(cache) {
