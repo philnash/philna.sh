@@ -12,10 +12,11 @@ title: Blog
   <ul class="post-list">
     {% for post in paginator.posts %}
       <li class="cell cell-12 cell-med-10 cell-centre post">
-        {% include post_image.html page=post %}
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          {% include post_image.html page=post %}
+
+          <h2>{{ post.title }}</h2>
+        </a>
         {% include post_meta.html page=post %}
 
         {{ post.excerpt }}
