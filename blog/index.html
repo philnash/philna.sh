@@ -12,10 +12,10 @@ title: Blog
   <ul class="post-list">
     {% for post in paginator.posts %}
       <li class="cell cell-12 cell-med-10 cell-centre post">
+        {% include post_image.html page=post %}
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-
         {% include post_meta.html page=post %}
 
         {{ post.excerpt }}
@@ -25,6 +25,8 @@ title: Blog
 
   {% include pagination.html %}
 
-  {% comment %}<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>{% endcomment %}
+  {% comment %}
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  {% endcomment %}
 
 </div>

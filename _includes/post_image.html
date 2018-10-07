@@ -1,0 +1,9 @@
+{% if include.page.video %}
+<video class="post-header-image" autoplay playsinline muted loop>
+  <source src="{% asset {{include.page.video}} @path %}" />
+</video>
+{% endif %}
+{% if include.page.image and include.page.show_image %}
+<img itemprop="image" src="{% asset {{include.page.image}} @path %}" alt="{% if include.page.image_alt %}{{ include.page.image_alt }}{% else %} {% endif %}"
+  class="post-header-image">
+{% endif %}

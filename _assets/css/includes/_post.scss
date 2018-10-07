@@ -43,6 +43,10 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+.post-list .post-header-image {
+  margin-top: $spacing-unit;
+}
+
 .post-list .post {
   margin-bottom: $spacing-unit;
   padding-bottom: $spacing-unit;
@@ -115,10 +119,10 @@
 }
 
 .post-promo {
-  margin-top: $spacing-unit*2;
-  padding-top: $spacing-unit*2;
+  margin-top: $spacing-unit * 2;
+  padding-top: $spacing-unit * 2;
   margin-bottom: $spacing-unit;
-  border-top : 5px solid $grey-color-light;
+  border-top: 5px solid $grey-color-light;
   border-radius: $border-radius;
 }
 .post-promo h2 {
