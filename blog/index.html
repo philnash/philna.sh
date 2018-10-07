@@ -25,8 +25,7 @@ title: Blog
 
   {% include pagination.html %}
 
-  {% comment %}
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-  {% endcomment %}
-
+  <div class="post-promo cell cell-12">
+    {% include subscribe_rss.html %}
+  </div>
 </div>
