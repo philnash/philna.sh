@@ -21,6 +21,7 @@
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/243245418/
   talks:
     - title: Fantastic passwords and where to find them
+      video: https://www.youtube.com/watch?v=fu8zxwr7kNk
 
 - event:
     name: NDC Sydney
