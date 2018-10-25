@@ -21,7 +21,6 @@ module Jekyll
       end
 
       def transform_file(file_name)
-        puts file_name
         extension = File.extname(file_name)
         return unless TRANSFORMABLE_EXTENSIONS.include?(extension)
         compressed = "#{file_name}.webp"
