@@ -24,6 +24,12 @@ GEM
       forwardable-extended (~> 2.5)
     fastimage (2.1.4)
     ffi (1.9.25)
+<<<<<<< HEAD
+=======
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
+>>>>>>> Convert images to webp
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
@@ -88,6 +94,10 @@ GEM
       forwardable-extended (~> 2.6)
     public_suffix (3.0.3)
     rack (2.0.5)
+<<<<<<< HEAD
+=======
+    rake (12.3.1)
+>>>>>>> Convert images to webp
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -115,6 +125,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.19)
       execjs (>= 0.3.0, < 3)
+    webp-ffi (0.2.5)
+      ffi (>= 1.9.0)
+      ffi-compiler (>= 0.1.2)
     zopfli (0.0.7)
 
 PLATFORMS
@@ -133,9 +146,10 @@ DEPENDENCIES
   sprockets-es6
   therubyracer
   uglifier
+  webp-ffi
 
 RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.16.1
+   1.16.6
