@@ -1,23 +1,23 @@
 require 'webp-ffi'
+require 'jekyll-assets'
+require 'pathname'
 
 module Jekyll
-  module Webp
+  module WebP
     class Transformer
       TRANSFORMABLE_EXTENSIONS = [
         '.jpg',
         '.jpeg',
         '.png'
       ]
-
-      attr_reader :site
-      def initialize(site)
-        @site = site
+      
+      def initialize(path)
+        @path = path
       end
 
       def transform
-        site.each_site_file do |file|
-          transform_file(file.destination(site.dest))
-        end
+        files = Dir.glob(@path + "**/*{#{TRANSFORMABLE_EXTENSIONS.join(',')}}")
+        files.each { |file| transform_file(file) }
       end
 
       def transform_file(file_name)
@@ -25,9 +25,9 @@ module Jekyll
         return unless TRANSFORMABLE_EXTENSIONS.include?(extension)
         compressed = "#{file_name}.webp"
         if extension == '.png'
-          WebP.encode(file_name, compressed, lossless: 1)
+          ::WebP.encode(file_name, compressed, lossless: 1)
         else
-          WebP.encode(file_name, compressed)
+          ::WebP.encode(file_name, compressed)
         end
         File.delete(compressed) if File.size(compressed) > File.size(file_name)
       end
@@ -35,6 +35,7 @@ module Jekyll
   end
 end
 
-Jekyll::Hooks.register :site, :post_write do |site|
-  Jekyll::Webp::Transformer.new(site).transform
+Jekyll::Assets::Hook.register :env, :after_write do |env|
+  path = Pathname.new("#{Pathname.pwd}/_site#{env.prefix_url}")
+  Jekyll::WebP::Transformer.new(path).transform
 end
