@@ -25,7 +25,7 @@ module Jekyll
         return unless TRANSFORMABLE_EXTENSIONS.include?(extension)
         compressed = "#{file_name}.webp"
         if extension == '.png'
-          ::WebP.encode(file_name, compressed, lossless: 1, q: 100, m: 6)
+          ::WebP.encode(file_name, compressed, lossless: 1, quality: 100, method: 6)
         else
           ::WebP.encode(file_name, compressed, quality: 75)
         end
