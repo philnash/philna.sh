@@ -5,6 +5,7 @@
     link: https://www.gdgmelbourne.com/devfest-2018/
   talks:
     - title: Everything they don’t tell you about video in the browser
+      slides: https://speakerdeck.com/philnash/everything-they-dont-tell-you-about-video-in-the-browser
 
 - event:
     name: RORO Sydney
@@ -13,6 +14,7 @@
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/events/rxmjspyxnbmb/
   talks:
     - title: Fantastic passwords and where to find them
+      slides: https://speakerdeck.com/philnash/fantastic-passwords-and-where-to-find-them
 
 - event:
     name: Melbourne Ruby
@@ -22,6 +24,7 @@
   talks:
     - title: Fantastic passwords and where to find them
       video: https://www.youtube.com/watch?v=fu8zxwr7kNk
+      slides: https://speakerdeck.com/philnash/fantastic-passwords-and-where-to-find-them
 
 - event:
     name: NDC Sydney
