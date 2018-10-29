@@ -35,7 +35,7 @@ module Jekyll
   end
 end
 
-Jekyll::Assets::Hook.register :env, :after_write do |env|
-  path = Pathname.new("#{Pathname.pwd}/_site#{env.prefix_url}")
+Jekyll::Assets::Hook.register :env, :after_write do |env, something|
+  path = Pathname.new("#{env.jekyll.config["destination"]}#{env.prefix_url}")
   Jekyll::WebP::Transformer.new(path).transform
 end
