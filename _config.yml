@@ -48,4 +48,5 @@ defaults:
       type: "posts" # previously `page` in Jekyll 2.2.
     values:
       author: "Phil Nash"
+      author_url: "https://philna.sh"
       show_image: true
