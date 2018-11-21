@@ -37,8 +37,7 @@ self.addEventListener('fetch', function(event) {
     } else {
       event.respondWith(returnFromCacheOrFetch(event.request, staticCacheName));
     }
-  }
-  if (
+  } else if (
     event.request.mode === 'navigate' ||
     event.request.headers.get('Accept').indexOf('text/html') !== -1
   ) {
@@ -185,13 +184,15 @@ function cacheThenNetwork(request, cacheName) {
 
 function refresh(response) {
   return self.clients.matchAll().then(function(clients) {
-    clients.forEach(function(client) {
-      var message = {
-        type: 'refresh',
-        url: response.url,
-        eTag: response.headers.get('ETag')
-      };
-      client.postMessage(JSON.stringify(message));
-    });
+    if (response.headers.get('Content-Type').indexOf('text/html') !== -1) {
+      clients.forEach(function(client) {
+        var message = {
+          type: 'refresh',
+          url: response.url,
+          eTag: response.headers.get('ETag')
+        };
+        client.postMessage(JSON.stringify(message));
+      });
+    }
   });
 }
