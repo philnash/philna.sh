@@ -143,7 +143,7 @@ DEPENDENCIES
   webp-ffi
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.6.0p0
 
 BUNDLED WITH
-   1.17.1
+   1.17.2
