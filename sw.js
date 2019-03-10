@@ -63,30 +63,40 @@ function returnRangeRequest(request, cacheName) {
               .then(() => res);
           })
           .then(res => {
-            return res.arrayBuffer();
+            return res;
           });
       }
-      return res.arrayBuffer();
+      return res;
     })
-    .then(function(arrayBuffer) {
+    .then(function(res) {
+      if (res.status === 206) {
+        return res;
+      } else {
+        return res.blob();
+      }
+    })
+    .then(function(responseOrBlob) {
+      if (responseOrBlob instanceof Response) {
+        return responseOrBlob;
+      }
       const bytes = /^bytes\=(\d+)\-(\d+)?$/g.exec(
         request.headers.get('range')
       );
       if (bytes) {
         const start = Number(bytes[1]);
-        const end = Number(bytes[2]) || arrayBuffer.byteLength - 1;
-        return new Response(arrayBuffer.slice(start, end + 1), {
+        const end = Number(bytes[2]) || responseOrBlob.size - 1;
+        return new Response(responseOrBlob.slice(start, end + 1), {
           status: 206,
           statusText: 'Partial Content',
           headers: [
-            ['Content-Range', `bytes ${start}-${end}/${arrayBuffer.byteLength}`]
+            ['Content-Range', `bytes ${start}-${end}/${responseOrBlob.size}`]
           ]
         });
       } else {
         return new Response(null, {
           status: 416,
           statusText: 'Range Not Satisfiable',
-          headers: [['Content-Range', `*/${arrayBuffer.byteLength}`]]
+          headers: [['Content-Range', `*/${responseOrBlob.size}`]]
         });
       }
     });
