@@ -1,4 +1,21 @@
 - event:
+    name: SmashingConf Toronto
+    start_date: 2019-06-25
+    end_date: 2019-06-26
+    location: Toronto, Canada
+    link: https://smashingconf.com/toronto-2019/
+  talks:
+    - title: Diving into Service Workers, Live
+
+- event:
+    name: Melbourne Ruby
+    start_date: 2019-03-27
+    location: Melbourne, Australia
+    link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/hrznsqyzfbkc/
+  talks:
+    - title: Servers? Where we're going we don't need servers!
+
+- event:
     name: DevFest Melbourne 2018
     start_date: 2018-10-27
     location: Melbourne, Australia
