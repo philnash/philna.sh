@@ -8,6 +8,14 @@
     - title: Diving into Service Workers, Live
 
 - event:
+    name: MelbJS
+    start_date: 2019-04-10
+    location: Melbourne, Australia
+    link: http://melbjs.com/
+  talks:
+    - title: Web Sharing is Web Caring
+
+- event:
     name: Melbourne Ruby
     start_date: 2019-03-27
     location: Melbourne, Australia
