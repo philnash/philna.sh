@@ -17,6 +17,14 @@
     - title: Diving into Service Workers, Live
 
 - event:
+    name: Node Sydney
+    start_date: 2019-06-06
+    location: Sydney, Australia
+    link: https://www.meetup.com/node-sydney/events/262084714/
+  talks:
+    - title: Fantastic passwords and where to find them
+
+- event:
     name: MelbJS
     start_date: 2019-04-10
     location: Melbourne, Australia
