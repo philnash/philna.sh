@@ -1,13 +1,4 @@
 - event:
-    name: WebDirections Code
-    start_date: 2019-06-20
-    end_date: 2019-06-21
-    location: Melbourne, Australia
-    link: https://www.webdirections.org/code/speakers/phil-nash.php
-  talks:
-    - title: In conversation with a browser
-
-- event:
     name: SmashingConf Toronto
     start_date: 2019-06-25
     end_date: 2019-06-26
@@ -15,6 +6,23 @@
     link: https://smashingconf.com/toronto-2019/
   talks:
     - title: Diving into Service Workers, Live
+
+- event:
+    name: Serverless Toronto
+    start_date: 2019-06-24
+    location: Toronto, Canada
+    link: https://www.meetup.com/Serverless-Toronto/events/259719014/
+  talks:
+    - title: Serverless + Twilio
+
+- event:
+    name: Web Directions Code
+    start_date: 2019-06-20
+    end_date: 2019-06-21
+    location: Melbourne, Australia
+    link: https://www.webdirections.org/code/speakers/phil-nash.php
+  talks:
+    - title: In conversation with a browser
 
 - event:
     name: Node Sydney
