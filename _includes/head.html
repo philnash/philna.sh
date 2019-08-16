@@ -9,6 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <!-- favicon -->
+  <link href='/favicon.png' rel='icon' type='image/png'>
+
   <!-- preload fonts -->
   <link rel="preload" href="{% asset raleway-v11-latin-900.woff2 @path %}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{% asset merriweather-v13-latin-regular.woff2 @path %}" as="font" type="font/woff2"
