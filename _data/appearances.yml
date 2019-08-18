@@ -1,4 +1,38 @@
 - event:
+    name: RubyConf Thailand
+    start_date: 2019-09-06
+    end_date: 2019-09-07
+    link: https://rubyconfth.com/
+  talks:
+    - title: Smaller is always better
+
+- event:
+    name: CampJS
+    start_date: 2019-08-30
+    end_date: 2019-09-02
+    link: https://x.campjs.org/
+  talks:
+    - title: Web sharing is web caring
+
+- event:
+    name: Twilio SIGNAL
+    start_date: 2019-08-05
+    end_date: 2019-08-07
+    link: https://signal.twilio.com/
+  talks:
+    - title: An introduction to Twilio Video
+      slides: https://speakerdeck.com/philnash/an-introduction-to-twilio-video
+
+- event:
+    name: MelbJS
+    start_date: 2019-07-09
+    location: Melbourne, Australia
+    link: http://melbjs.com/
+  talks:
+    - title: In conversation with a browser
+      slides: https://speakerdeck.com/philnash/in-conversation-with-a-browser
+
+- event:
     name: SmashingConf Toronto
     start_date: 2019-06-25
     end_date: 2019-06-26
@@ -6,6 +40,7 @@
     link: https://smashingconf.com/toronto-2019/
   talks:
     - title: Diving into Service Workers, Live
+      video: https://vimeo.com/showcase/6133041/video/349191868
 
 - event:
     name: Serverless Toronto
@@ -14,6 +49,7 @@
     link: https://www.meetup.com/Serverless-Toronto/events/259719014/
   talks:
     - title: Serverless + Twilio
+      video: https://www.youtube.com/watch?v=iQDQMQC5NTo
 
 - event:
     name: Web Directions Code
@@ -23,6 +59,7 @@
     link: https://www.webdirections.org/code/speakers/phil-nash.php
   talks:
     - title: In conversation with a browser
+      slides: https://speakerdeck.com/philnash/in-conversation-with-a-browser
 
 - event:
     name: Node Sydney
@@ -31,6 +68,7 @@
     link: https://www.meetup.com/node-sydney/events/262084714/
   talks:
     - title: Fantastic passwords and where to find them
+      slides: https://speakerdeck.com/philnash/fantastic-passwords-and-where-to-find-them-7bd44964-81df-45e4-86e4-57ca34164af3
 
 - event:
     name: MelbJS
