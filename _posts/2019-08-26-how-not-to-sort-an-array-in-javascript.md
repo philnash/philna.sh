@@ -140,7 +140,9 @@ Subtracting a number from `undefined` or subtracting `undefined` from a number b
 There are a few ways around this, but the important thing is knowing that it can happen. In my case when I came across this, I filtered out the items that didn't have a value as they weren't important until they did.
 
 ```javascript
-objectArray.filter(obj => !!obj.value).sort(compareObjects);
+objectArray
+  .filter(obj => typeof obj.value !== 'undefined')
+  .sort(compareObjects);
 // => [ { value: 1 },
 //      { value: 3 },
 //      { value: 5 },
