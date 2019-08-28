@@ -1,4 +1,12 @@
 - event:
+    name: Pycon Singapore
+    start_date: 2019-10-10
+    end_date: 2019-10-12
+    link: https://pycon.sg/
+  talks:
+    - title: 2FA, WTF?
+
+- event:
     name: RubyConf Thailand
     start_date: 2019-09-06
     end_date: 2019-09-07
