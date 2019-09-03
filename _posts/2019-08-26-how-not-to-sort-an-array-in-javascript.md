@@ -89,7 +89,7 @@ This still works if you have `undefined` elements as they are ignored and sorted
 
 ```javascript
 const numberArrayWithUndefined = [5, undefined, 3, 10, 7, 1];
-numberArrayWithUndefinedAndNull.sort(compareNumbers);
+numberArrayWithUndefined.sort(compareNumbers);
 // => [ 1, 10, 3, 5, 7, undefined ]
 ```
 
