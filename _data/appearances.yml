@@ -7,12 +7,30 @@
     - title: 2FA, WTF?
 
 - event:
+    name: Sydney Identity & Security meetup
+    start_date: 2019-09-19
+    link: https://www.meetup.com/Sydney-Identity-and-Security-Meetup/events/264180886/
+  talks:
+    - title: 2FA, WTF?
+      slides: https://speakerdeck.com/philnash/2fa-wtf-at-identity-and-security-meetup
+
+- event:
+    name: SydJS
+    start_date: 2019-09-18
+    link: http://sydjs.com/event/5d8042446ac291001ef06589?hex=BF2600
+  talks:
+    - title: In conversation with a browser
+      slides: https://speakerdeck.com/philnash/in-conversation-with-a-browser-at-sydjs
+      video: https://www.youtube.com/watch?v=Ynwk0xd-lOQ&feature=youtu.be
+
+- event:
     name: RubyConf Thailand
     start_date: 2019-09-06
     end_date: 2019-09-07
     link: https://rubyconfth.com/
   talks:
     - title: Smaller is always better
+      slides: https://speakerdeck.com/philnash/smaller-is-always-better-rubyconf-thailand
 
 - event:
     name: CampJS
@@ -21,6 +39,7 @@
     link: https://x.campjs.org/
   talks:
     - title: Web sharing is web caring
+      slides: https://speakerdeck.com/philnash/web-sharing-is-web-caring
 
 - event:
     name: Twilio SIGNAL
