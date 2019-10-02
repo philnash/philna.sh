@@ -6,8 +6,8 @@
 }
 .social svg {
   display: inline-block;
-  height: $base-font-size*1.5;
-  width: $base-font-size*1.5;
+  height: $base-font-size * 1.5;
+  width: $base-font-size * 1.5;
   vertical-align: bottom;
 }
 .social .twitter {
@@ -34,11 +34,6 @@
   color: #b900b3;
   fill: #b900b3;
   border-color: #b900b3;
-}
-.social .googleplus {
-  color: #d83827;
-  fill: #d83827;
-  border-color: #d83827;
 }
 .social .stackoverflow {
   color: #b75c00;
