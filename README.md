@@ -2,7 +2,7 @@
 
 This repository is the source code of the personal site and blog of [Phil Nash](https://philna.sh).
 
-It is powered by [Jekyll](http://jekyllrb.com/) with help from the following awesome plugins:
+It is powered by [Jekyll](https://jekyllrb.com/) with help from the following awesome plugins:
 
 * [jekyll-paginate](https://github.com/jekyll/jekyll-paginate)
 * [jekyll-assets](https://github.com/envygeeks/jekyll-assets)
