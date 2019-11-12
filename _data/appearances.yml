@@ -1,10 +1,28 @@
 - event:
+    name: DevFest Melbourne
+    start_date: 2019-11-09
+    link: https://yowconference.com/melbournedevfest/
+  talks:
+    - title: What's going on with Project Fugu?
+      slides: https://speakerdeck.com/philnash/whats-going-on-with-project-fugu-at-devfest-melbourne
+
+- event:
+    name: NDC Sydney
+    start_date: 2019-10-14
+    end_date: 2019-10-16
+    link: https://ndcsydney.com/
+  talks:
+    - title: What's going on with Project Fugu?
+      slides: https://speakerdeck.com/philnash/whats-going-on-with-project-fugu-at-ndc-sydney
+
+- event:
     name: Pycon Singapore
     start_date: 2019-10-10
     end_date: 2019-10-12
     link: https://pycon.sg/
   talks:
     - title: 2FA, WTF?
+      slides: https://speakerdeck.com/philnash/2fa-wtf-at-pycon-singapore
 
 - event:
     name: Sydney Identity & Security meetup
