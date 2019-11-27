@@ -1,4 +1,11 @@
 - event:
+    name: Stripe Developer Meetup
+    start_date: 2019-11-27
+    link: https://stripe.events/devmeetup-melbourne-nov2019
+  talks:
+    - title: The trouble with webhooks
+
+- event:
     name: DevFest Melbourne
     start_date: 2019-11-09
     link: https://yowconference.com/melbournedevfest/
