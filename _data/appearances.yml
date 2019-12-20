@@ -2,6 +2,7 @@
     name: Stripe Developer Meetup
     start_date: 2019-11-27
     link: https://stripe.events/devmeetup-melbourne-nov2019
+    location: Melbourne, Australia
   talks:
     - title: The trouble with webhooks
       video: https://www.youtube.com/watch?v=3_zjCbfJG3c
@@ -10,6 +11,7 @@
     name: DevFest Melbourne
     start_date: 2019-11-09
     link: https://yowconference.com/melbournedevfest/
+    location: Melbourne, Australia
   talks:
     - title: What's going on with Project Fugu?
       slides: https://speakerdeck.com/philnash/whats-going-on-with-project-fugu-at-devfest-melbourne
@@ -19,6 +21,7 @@
     start_date: 2019-10-14
     end_date: 2019-10-16
     link: https://ndcsydney.com/
+    location: Sydney, Australia
   talks:
     - title: What's going on with Project Fugu?
       slides: https://speakerdeck.com/philnash/whats-going-on-with-project-fugu-at-ndc-sydney
@@ -27,6 +30,7 @@
     name: Pycon Singapore
     start_date: 2019-10-10
     end_date: 2019-10-12
+    location: Sinagpore
     link: https://pycon.sg/
   talks:
     - title: 2FA, WTF?
@@ -35,6 +39,7 @@
 - event:
     name: Sydney Identity & Security meetup
     start_date: 2019-09-19
+    location: Sydney, Australia
     link: https://www.meetup.com/Sydney-Identity-and-Security-Meetup/events/264180886/
   talks:
     - title: 2FA, WTF?
@@ -44,6 +49,7 @@
     name: SydJS
     start_date: 2019-09-18
     link: http://sydjs.com/event/5d8042446ac291001ef06589?hex=BF2600
+    location: Sydney, Australia
   talks:
     - title: In conversation with a browser
       slides: https://speakerdeck.com/philnash/in-conversation-with-a-browser-at-sydjs
@@ -54,6 +60,7 @@
     start_date: 2019-09-06
     end_date: 2019-09-07
     link: https://rubyconfth.com/
+    location: Bangkok, Thailand
   talks:
     - title: Smaller is always better
       slides: https://speakerdeck.com/philnash/smaller-is-always-better-rubyconf-thailand
@@ -63,6 +70,7 @@
     start_date: 2019-08-30
     end_date: 2019-09-02
     link: https://x.campjs.org/
+    location: Broken Bay, Australia
   talks:
     - title: Web sharing is web caring
       slides: https://speakerdeck.com/philnash/web-sharing-is-web-caring
@@ -71,6 +79,7 @@
     name: Twilio SIGNAL
     start_date: 2019-08-05
     end_date: 2019-08-07
+    location: San Francisco, USA
     link: https://signal.twilio.com/
   talks:
     - title: An introduction to Twilio Video
