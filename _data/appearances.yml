@@ -56,6 +56,15 @@
       video: https://www.youtube.com/watch?v=Ynwk0xd-lOQ&feature=youtu.be
 
 - event:
+    name: ComponentsConf
+    start_date: 2019-09-10
+    link: https://www.componentsconf.com.au/sessions-2019
+    location: Melbourne, Australia
+  talks:
+    - title: Web Sharing is Web Caring
+      slides: https://speakerdeck.com/philnash/web-sharing-is-web-caring
+
+- event:
     name: RubyConf Thailand
     start_date: 2019-09-06
     end_date: 2019-09-07
