@@ -79,18 +79,20 @@
   {% endfor %}
 {% endif %}
 
-<script>
-var firebaseConfig = {
-  apiKey: "AIzaSyAmxqT3-g-RSKWjijfJtu_wKBk39szw1x0",
-  authDomain: "philnash-site.firebaseapp.com",
-  databaseURL: "https://philnash-site.firebaseio.com",
-  projectId: "philnash-site",
-  storageBucket: "philnash-site.appspot.com",
-  messagingSenderId: "385728610129",
-  appId: "1:385728610129:web:c80dec5f22983324"
-};
-(function(sa,fbc){function load(f,c){var a=document.createElement('script');
-a.async=1;a.src=f;var s=document.getElementsByTagName('script')[0];
-s.parentNode.insertBefore(a,s);}load(sa);window.onload = function() {firebase.initializeApp(fbc).performance();};
-})('https://www.gstatic.com/firebasejs/6.0.0/firebase-performance-standalone.js', firebaseConfig);
-</script>
+{% if Jekyll.env == "production" %}
+  <script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyAmxqT3-g-RSKWjijfJtu_wKBk39szw1x0",
+    authDomain: "philnash-site.firebaseapp.com",
+    databaseURL: "https://philnash-site.firebaseio.com",
+    projectId: "philnash-site",
+    storageBucket: "philnash-site.appspot.com",
+    messagingSenderId: "385728610129",
+    appId: "1:385728610129:web:c80dec5f22983324"
+  };
+  (function(sa,fbc){function load(f,c){var a=document.createElement('script');
+  a.async=1;a.src=f;var s=document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(a,s);}load(sa);window.onload = function() {firebase.initializeApp(fbc).performance();};
+  })('https://www.gstatic.com/firebasejs/6.0.0/firebase-performance-standalone.js', firebaseConfig);
+  </script>
+{% endif %}

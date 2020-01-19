@@ -66,5 +66,8 @@
   <meta itemprop="image" content="{{ site.url }}{% asset {{page.image}} @path %}">
   {% endif %}
   {% endif %}
-  {% include google_analytics.html %}
+
+  {% if Jekyll.env == "production" %}
+    {% include google_analytics.html %}
+  {% endif %}
 </head>
