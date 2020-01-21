@@ -54,9 +54,9 @@ class CookiesControllerTest < ActionDispatch::IntegrationTest
   test "should set cookies when getting the index" do
     get root_url
     assert_response :success
-    assert_equal cookies["simple"], "Hello, I am easy to read."
-    assert_equal cookies["protected"], "Hello, I can be read, but I can't be tampered with."
-    assert_equal cookies["private"], "Hello, I can't be read or tampered with."
+    assert_equal "Hello, I am easy to read.", cookies["simple"]
+    assert_equal "Hello, I can be read, but I can't be tampered with.", cookies["protected"]
+    assert_equal "Hello, I can't be read or tampered with.", cookies["private"]
   end
 end
 ```
@@ -80,8 +80,8 @@ But this would fail at the test for the signed cookie and wouldn't pass for the 
 You might think you should test against the `signed` and `encrypted` version of the cookies, like this:
 
 ```ruby
-    assert_equal cookies.signed["protected"], "Hello, I can be read, but I can't be tampered with."
-    assert_equal cookies.encrypted["private"], "Hello, I can't be read or tampered with."
+    assert_equal "Hello, I can be read, but I can't be tampered with.", cookies.signed["protected"]
+    assert_equal "Hello, I can't be read or tampered with.", cookies.encrypted["private"]
 ```
 
 That doesn't work either. At least it doesn't work if you are using the currently recommended way of testing controllers, with `ActionDispatch::IntegrationTest` in Minitest or `type: :request` in RSpec.
@@ -101,10 +101,10 @@ class CookiesControllerTest < ActionDispatch::IntegrationTest
   test "should set cookies when getting the index" do
     get root_url
     assert_response :success
-    assert_equal cookies["simple"], "Hello, I am easy to read."
+    assert_equal "Hello, I am easy to read.", cookies["simple"]
     jar = ActionDispatch::Cookies::CookieJar.build(request, cookies.to_hash)
-    assert_equal jar.signed["protected"], "Hello, I can be read, but I can't be tampered with."
-    assert_equal jar.encrypted["private"], "Hello, I can't be read or tampered with."
+    assert_equal "Hello, I can be read, but I can't be tampered with.", jar.signed["protected"]
+    assert_equal "Hello, I can't be read or tampered with.", jar.encrypted["private"]
   end
 end
 ```
