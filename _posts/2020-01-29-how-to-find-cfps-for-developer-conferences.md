@@ -65,6 +65,24 @@ It can be quite intense to receive emails once a day with CFPs, but it definitel
 
 I came across SeeCFP on the day of writing this post, so I'm not very well acquainted with it yet. It has a [list of CFPs stored in Airtable](https://airtable.com/shrBMFY4CSpSRGmAs) and a [weekly mailing list you can sign up to on the home page](https://seecfp.com/). They also [tweet out CFPs that are close to their deadlines](https://twitter.com/appcfp).
 
+<h3>
+  <figure>
+    {% asset posts/cfps/colloq alt="Colloq" %}
+  </figure>
+</h3>
+
+[Colloq](https://colloq.io/) is more than just a list of CFPs, it's a social event platform. It lists loads of events, including [events with open CFPs](https://colloq.io/events?callforpapers=open) but also lets you publicly say you are attending, links to ticket sales and collects coverage of the event after it happens (check out [Accessibility Club Summit 2019](https://colloq.io/events/accessibility-club/2019/berlin/1) for a good example of an event on Colloq).
+
+Colloq is also a good example of an application that has been built with privacy and security at its heart (if only I could say that about more applications). Just read their [blog post on how they keep user passwords secure](https://colloq.io/blog/how-our-password-check-works) to see the level of attention.
+
+<h3>
+  <figure>
+    {% asset posts/cfps/tulula alt="Tulula" %}
+  </figure>
+</h3>
+
+[Tulula](https://tulu.la/) lists events, [particularly those with open CFPs](https://tulu.la/call-for-papers/) and has a comprehensive filtering system to find the events that are important to you. It also includes [a forum](https://forum.tulu.la/) and [Slack community](https://tulu.la/slack/) so that you can meet and chat with others trying to improve their public speaking too.
+
 ### Other lists of conferences
 
 There are a bunch more sites or Twitter accounts that are less comprehensive or that I don't necessarily use but came across as part of my research. Some are specific to languages or regions and any of them might be useful to browse once in a while.
