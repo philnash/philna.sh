@@ -39,7 +39,7 @@
     name: Pycon Singapore
     start_date: 2019-10-10
     end_date: 2019-10-12
-    location: Sinagpore
+    location: Singapore
     link: https://pycon.sg/
   talks:
     - title: 2FA, WTF?
