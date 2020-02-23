@@ -5,15 +5,38 @@ layout: home
 <div class="row">
   <div class="intro cell cell-12 cell-med-10 cell-centre">
     <h2>About</h2>
-    <p class="p-note"><a rel="me" class="p-name u-url" href="https://philna.sh">Phil Nash</a> is a <span class="p-job-title">developer evangelist</span> for <a class="p-org h-card" href="https://www.twilio.com">Twilio</a>. Sometimes he <a href="/speaking">writes code on stage</a> in front of a crowd, praying inside that everything works. Sometimes <a rel="me" href="https://github.com/philnash/">he writes open source code</a>, which is much less stressful because if it is wrong someone else can correct it. He writes code in <a rel="me" href="https://twitter.com/philnash">tweets</a> sometimes, but not much fits. He blogs <a href="/blog/">on this site</a> and on the <a href="https://www.twilio.com/blog/author/phil">Twilio blog</a> and you'll find plenty of code there too.</p>
+    <p class="p-note"><a rel="me" class="p-name u-url" href="https://philna.sh/">Phil Nash</a> is a <span class="p-job-title">developer evangelist</span> for <a class="p-org h-card" href="https://www.twilio.com/">Twilio</a>. Sometimes he <a href="/speaking/">writes code on stage</a> in front of a crowd, hoping everything just works. Sometimes <a rel="me" href="https://github.com/philnash/">he writes open source code</a>, which is much less stressful because if it is wrong someone else can correct it. He writes code in <a rel="me" href="https://twitter.com/philnash">tweets</a> sometimes, but not much fits. He <a href="/blog/">blogs on this site</a> and on the <a href="https://www.twilio.com/blog/author/pnash">Twilio blog</a> and you'll find plenty of code there too.</p>
   </div>
 </div>
 
 <div class="row the-rest">
-  <div class="cell cell-12 cell-med-8 cell-centre">
-    <h2>Latest from the <a href="/blog/">blog</a></h2>
+
+  <div class="cell cell-12 cell-med-6">
+    <h2>Blog</h2>
+    <p>The latest post from <a href="/blog/">Phil's blog</a>.</p>
     {% assign post = site.posts.first %}
     <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
     {{ post.excerpt }}
+    <p>See all <a href="/blog/">blog posts</a>.</p>
+  </div>
+
+  <div class="cell cell-12 cell-med-6">
+    <h2>Speaking</h2>
+    {% assign upcoming = site.data.appearances | where_exp: "appearance", "appearance.event.start_date >= site.date" | sort: "event.start_date" %}
+    {% if upcoming == empty %}
+      <p>Phil's latest <a href="/speaking/">talks</a>.</p>
+      {% assign past = site.data.appearances | where_exp: "appearance", "appearance.event.start_date < site.date" | sort: "event.start_date" | reverse %}
+      <ol class="speaking-list cell cell-12">
+        {% for appearance in past limit:3 %}
+          {% include appearance.html appearance=appearance %}
+        {% endfor %}
+      </ol>
+    {% else %}
+      <p>Phil's <a href="/speaking/">upcoming talks</a>.</p>
+      <ol class="speaking-list cell cell-12">
+        {% for appearance in upcoming limit:3 %} {% include appearance.html appearance=appearance %} {% endfor %}
+      </ol>
+    {% endif %}
+    <p>See <a href="/speaking/">all upcoming and past talks</a>.</p>
   </div>
 </div>

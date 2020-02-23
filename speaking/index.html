@@ -26,14 +26,14 @@ title: Speaking
   {% assign upcoming = site.data.appearances | where_exp: "appearance", "appearance.event.start_date >= site.date" | sort: "event.start_date" %}
   {% unless upcoming == empty %}
     <h2 class="section-title">Upcoming talks</h2>
-    <ol class="speaking-list">
+    <ol class="speaking-list cell cell-12 cell-med-8 cell-centre">
       {% for appearance in upcoming %} {% include appearance.html appearance=appearance %} {% endfor %}
     </ol>
   {% endunless %}
   {% assign past = site.data.appearances | where_exp: "appearance", "appearance.event.start_date < site.date" | sort: "event.start_date" | reverse %}
   {% unless past == empty %}
     <h2 class="section-title">Previous talks</h2>
-    <ol class="speaking-list">
+    <ol class="speaking-list cell cell-12 cell-med-8 cell-centre">
       {% for appearance in past limit:5 %}
         {% include appearance.html appearance=appearance %}
       {% endfor %}

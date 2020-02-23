@@ -4,7 +4,6 @@
 
 .speaking-list {
   list-style-type: none;
-  margin: 0;
   margin-bottom: $spacing-unit * 2;
   padding: 0;
 }
@@ -13,6 +12,9 @@
   padding-bottom: $spacing-unit/2;
   padding-top: $spacing-unit/2;
   border-bottom: 1px solid $border-color;
+}
+.speaking-list .talk:first-child {
+  padding-top: 0;
 }
 
 .speaking-list .talk:last-child {

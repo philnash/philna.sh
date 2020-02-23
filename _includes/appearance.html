@@ -1,4 +1,4 @@
-<li class="talk cell cell-12 cell-med-8 cell-centre">
+<li class="talk">
   <p class="talk-meta">
     {% if appearance.event.end_date %}
       {{ appearance.event.start_date | date: "%b %-d" }} - {{ appearance.event.end_date | date: "%-d, %Y" }}
@@ -25,7 +25,7 @@
     {% endif %}
   {% endif %}
   {% for talk in appearance.talks %}
-  <p class="talk-title"> <em>"{{ talk.title }}"</em></p>
+  <p class="talk-title"> <em>"{{ talk.title | xml_escape }}"</em></p>
     {% if talk.slides or talk.video %}
       <ul class="talk-materials">
         {% if talk.audio %}
