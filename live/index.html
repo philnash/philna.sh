@@ -1,0 +1,35 @@
+---
+layout: default
+title: Live
+scripts:
+  - "<script src='https://embed.twitch.tv/embed/v1.js'></script>"
+  - "<script>
+      new Twitch.Embed('twitch-embed', {
+        channel: 'phil_nash',
+        width: '100%',
+        height: '100%',
+        layout: window.innerWidth > 500 ? 'video-with-chat' : 'video'
+      });
+    </script>"
+---
+
+<div class="home row">
+  <header class="page-header cell cell-12">
+    <h1 class="page-title">{{ page.title }}</h1>
+  </header>
+</div>
+
+<div class="row">
+  <div class="cell cell-12 cell-med-10 cell-centre">
+    <p><a href="https://twitch.tv/phil_nash">Phil is streaming live code on Twitch</a>. It's a low key way to hang out, write code and chat about what's going on with development.</p>
+    <p>Streams mostly focus on open source code in either Ruby or JavaScript, but they always take tangents based on what the chat room is interested in. So come join in with your code opinions, ask questions, or just to chat.</p>
+    <p>If Phil is live now you can watch below, or <a href="https://twitch.tv/phil_nash">follow @phil_nash on Twitch</a> for notifications.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="cell cell-12">
+    <div id="twitch-embed"></div>
+  </div>
+</div>
+

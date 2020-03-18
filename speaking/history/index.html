@@ -6,12 +6,11 @@ title: Speaking history
 <div class="home row">
   <header class="page-header cell cell-12">
     <h1 class="page-title">{{ page.title }}</h1>
+    <img src="{% asset speaking/speaking @path %}" class="speaking-header-image" alt="Phil leaning over a laptop doing a live coding demo.">
   </header>
-
-  <img src="{% asset speaking/speaking @path %}" class="post-header-image">
 </div>
 
-<div class="row">
+<div class="row cell">
   {% assign past = site.data.appearances | where_exp: "appearance", "appearance.event.start_date < site.date" %}
   {% assign past_by_year = past | group_by_exp: "appearance", "appearance.event.start_date | date: '%Y'" %}
   {% assign sorted_past_by_year = past_by_year | sort: "name" | reverse %}
