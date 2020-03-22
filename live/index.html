@@ -1,16 +1,6 @@
 ---
 layout: default
 title: Live
-scripts:
-  - "<script src='https://embed.twitch.tv/embed/v1.js'></script>"
-  - "<script>
-      new Twitch.Embed('twitch-embed', {
-        channel: 'phil_nash',
-        width: '100%',
-        height: '100%',
-        layout: 'video'
-      });
-    </script>"
 ---
 
 <div class="home row">
@@ -29,12 +19,23 @@ scripts:
 
 <div class="row">
   <div class="cell cell-12 twitch">
-    <div id="twitch-embed" class="twitch-video"></div>
+    <div class="twitch-video">
+      <iframe
+        src="https://player.twitch.tv/?channel=phil_nash&parent={{ site.domain }}&autoplay=false"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen="true"
+        height="100%"
+        width="100%">
+      </iframe>
+    </div>
     <div class="twitch-chat">
       <iframe
         frameborder="0"
         scrolling="no"
-        src="https://www.twitch.tv/embed/phil_nash/chat?parent={{ site.domain }}">
+        src="https://www.twitch.tv/embed/phil_nash/chat?parent={{ site.domain }}"
+        height="100%"
+        width="100%">
       </iframe>
     </div>
   </div>
