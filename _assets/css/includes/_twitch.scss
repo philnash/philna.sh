@@ -1,11 +1,8 @@
 .twitch {
-  display: flex;
-  flex-direction: column;
   position: relative;
 }
 
 .twitch .twitch-video {
-  width: 100%;
   padding-top: 56.25%;
   position: relative;
   height: 0;
@@ -21,7 +18,6 @@
 }
 
 .twitch .twitch-chat {
-  width: 100%;
   height: 400px;
 }
 
@@ -31,10 +27,6 @@
 }
 
 @include media-query-min(850px) {
-  .twitch {
-    flex-direction: row;
-  }
-
   .twitch .twitch-video {
     width: 75%;
     padding-top: 42.1875%;
