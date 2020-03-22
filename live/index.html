@@ -8,7 +8,7 @@ scripts:
         channel: 'phil_nash',
         width: '100%',
         height: '100%',
-        layout: window.innerWidth > 500 ? 'video-with-chat' : 'video'
+        layout: 'video'
       });
     </script>"
 ---
@@ -28,8 +28,15 @@ scripts:
 </div>
 
 <div class="row">
-  <div class="cell cell-12">
-    <div id="twitch-embed"></div>
+  <div class="cell cell-12 twitch">
+    <div id="twitch-embed" class="twitch-video"></div>
+    <div class="twitch-chat">
+      <iframe
+        frameborder="0"
+        scrolling="no"
+        src="https://www.twitch.tv/embed/phil_nash/chat?parent={{ site.domain }}">
+      </iframe>
+    </div>
   </div>
 </div>
 
