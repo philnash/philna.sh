@@ -1,37 +1,37 @@
-- event:
-    name: Great International Developer Summit
-    link: https://developersummit.com/india/session.html?insert=PhilNash&type=WEB
-    start_date: 2020-04-20
-    end_date: 2020-04-24
-    location: Bengaluru, India
-  talks:
-    - title: What's going on with Project Fugu?
+# - event:
+#     name: Great International Developer Summit
+#     link: https://developersummit.com/india/session.html?insert=PhilNash&type=WEB
+#     start_date: 2020-04-20
+#     end_date: 2020-04-24
+#     location: Bengaluru, India
+#   talks:
+#     - title: What's going on with Project Fugu?
 
-- event:
-    name: APIDays Singapore
-    link: https://www.apidays.co/singapore
-    start_date: 2020-04-01
-    end_date: 2020-04-02
-    location: Singapore
-  talks:
-    - title: The trouble with webhooks
+# - event:
+#     name: APIDays Singapore
+#     link: https://www.apidays.co/singapore
+#     start_date: 2020-04-01
+#     end_date: 2020-04-02
+#     location: Singapore
+#   talks:
+#     - title: The trouble with webhooks
 
-- event:
-    name: FullStack Day 2020
-    start_date: 2020-03-18
-    end_date: 2020-03-19
-    link: https://www.fullstackday.com/2020/PhilNash.html
-    location: Auckland, New Zealand
-  talks:
-    - title: In conversation with a browser
+# - event:
+#     name: FullStack Day 2020
+#     start_date: 2020-03-18
+#     end_date: 2020-03-19
+#     link: https://www.fullstackday.com/2020/PhilNash.html
+#     location: Auckland, New Zealand
+#   talks:
+#     - title: In conversation with a browser
 
-- event:
-    name: Stripe Developer Meetup
-    start_date: 2020-03-17
-    link: https://stripe.events/devmeetup-auckland
-    location: Auckland, New Zealand
-  talks:
-    - title: The trouble with webhooks
+# - event:
+#     name: Stripe Developer Meetup
+#     start_date: 2020-03-17
+#     link: https://stripe.events/devmeetup-auckland
+#     location: Auckland, New Zealand
+#   talks:
+#     - title: The trouble with webhooks
 
 - event:
     name: MelbJS
