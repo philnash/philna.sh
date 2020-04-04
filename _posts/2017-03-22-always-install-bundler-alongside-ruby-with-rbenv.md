@@ -30,7 +30,10 @@ bundler
 Now when you install a new version of Ruby, Bundler will be installed as well.
 
 <figure class="post-image post-image-outside">
-  {% asset posts/install_ruby_bundler alt="A terminal window shows the result of running `rbenv install 2.4.0`. Not only is Ruby 2.4.0 installed, but so is the latest version of Bundler." %}
+  <picture>
+    <source type="image/webp" srcset="{% asset posts/install_ruby_bundler @path %}.webp">
+    {% asset posts/install_ruby_bundler alt="A terminal window shows the result of running `rbenv install 2.4.0`. Not only is Ruby 2.4.0 installed, but so is the latest version of Bundler." %}
+  </picture>
 </figure>
 
 You can add other gems that you always use too. If you're a fan of [pry](http://pryrepl.org/), for example, then add a line for it in `default-gems` and you'll never have to remember to install it yourself.

@@ -34,14 +34,22 @@ Push notifications are getting a bad reputation and I don't think they deserve i
 
 I have a theory. It's not that users don't want push notifications. There is a time and a place for a good push notification. Native mobile application developers seem to be getting this right now, at least in my experience, and [innovative web teams like those at the Guardian have done some really interesting and impressive push notification experiments](https://medium.com/the-guardian-mobile-innovation-lab/generating-images-in-javascript-without-using-the-canvas-api-77f3f4355fad).
 
-{% asset posts/permissions/guardian alt="The Guardian's experiment with creating images for the current state of the UK General Election entirely within a push notification." class="post-image-left" %}
+<figure class="post-image-left">
+  <picture>
+    <source type="image/webp" srcset="{% asset posts/permissions/guardian @path %}.webp">
+    {% asset posts/permissions/guardian alt="The Guardian's experiment with creating images for the current state of the UK General Election entirely within a push notification." class="post-image-left" %}
+  </picture>
+</figure>
 
 My theory is that users might want push notifications. They might want them for newsworthy moments, like the Guardian's election night experiments. They might want notifications that someone has sent them a message or that their taxi is arriving or their flight has been delayed. There are countless reasons a user might want to receive push notifications.
 
 But the top way to annoy any user is to pop up that permission dialog asking to send push notifications on page load without any context, any information at all, that would allow them to make that decision.
 
 <figure class="post-image">
-  {% asset posts/permissions/sitepoint alt="Sitepoint pops up a permissions dialog on page load" %}
+  <picture>
+    <source type="image/webp" srcset="{% asset posts/permissions/sitepoint @path %}.webp">
+    {% asset posts/permissions/sitepoint alt="Sitepoint pops up a permissions dialog on page load" %}
+  </picture>
 </figure>
 
 I noticed [Sitepoint](http://sitepoint.com/), a web tutorial site that really should know better, doing this. And other well known sites; [Product Hunt](https://www.producthunt.com/), [cnet](https://www.cnet.com/) and even [Facebook](https://www.facebook.com/) in their early experimentation with the feature, have been spotted doing it too. There are probably many more examples.

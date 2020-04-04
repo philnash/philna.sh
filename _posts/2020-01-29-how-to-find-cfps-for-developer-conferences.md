@@ -21,7 +21,10 @@ Read on to discover how to find developer conference CFPs.
 
 <h3>
   <figure>
-    {% asset posts/cfps/cfpland alt="CFP Land" %}
+    <picture>
+      <source type="image/webp" srcset="{% asset posts/cfps/cfpland @path %}.webp">
+      {% asset posts/cfps/cfpland alt="CFP Land" %}
+    </picture>
   </figure>
 </h3>
 
@@ -33,7 +36,10 @@ One thing to consider is that [CFP Land offers a professional account](https://p
 
 <h3>
   <figure>
-    {% asset posts/cfps/techdailycfp alt="Tech Daily CFP" %}
+    <picture>
+      <source type="image/webp" srcset="{% asset posts/cfps/techdailycfp @path %}.webp">
+      {% asset posts/cfps/techdailycfp alt="Tech Daily CFP" %}
+    </picture>
   </figure>
 </h3>
 
@@ -43,7 +49,10 @@ It can be quite intense to receive emails once a day with CFPs, but it definitel
 
 <h3>
   <figure>
-    {% asset posts/cfps/papercall alt="PaperCall" %}
+    <picture>
+      <source type="image/webp" srcset="{% asset posts/cfps/papercall @path %}.webp">
+      {% asset posts/cfps/papercall alt="PaperCall" %}
+    </picture>
   </figure>
 </h3>
 
@@ -51,7 +60,10 @@ It can be quite intense to receive emails once a day with CFPs, but it definitel
 
 <h3>
   <figure>
-    {% asset posts/cfps/confstech alt="Confs.tech" %}
+    <picture>
+      <source type="image/webp" srcset="{% asset posts/cfps/confstech @path %}.webp">
+      {% asset posts/cfps/confstech alt="Confs.tech" %}
+    </picture>
   </figure>
 </h3>
 
@@ -59,7 +71,10 @@ It can be quite intense to receive emails once a day with CFPs, but it definitel
 
 <h3>
   <figure>
-    {% asset posts/cfps/seecfp alt="SeeCFP" %}
+    <picture>
+      <source type="image/webp" srcset="{% asset posts/cfps/seecfp @path %}.webp">
+      {% asset posts/cfps/seecfp alt="SeeCFP" %}
+    </picture>
   </figure>
 </h3>
 
@@ -67,7 +82,10 @@ I came across SeeCFP on the day of writing this post, so I'm not very well acqua
 
 <h3>
   <figure>
-    {% asset posts/cfps/colloq alt="Colloq" %}
+    <picture>
+      <source type="image/webp" srcset="{% asset posts/cfps/colloq @path %}.webp">
+      {% asset posts/cfps/colloq alt="Colloq" %}
+    </picture>
   </figure>
 </h3>
 
@@ -77,7 +95,10 @@ Colloq is also a good example of an application that has been built with privacy
 
 <h3>
   <figure>
-    {% asset posts/cfps/tulula alt="Tulula" %}
+    <picture>
+      <source type="image/webp" srcset="{% asset posts/cfps/tulula @path %}.webp">
+      {% asset posts/cfps/tulula alt="Tulula" %}
+    </picture>
   </figure>
 </h3>
 

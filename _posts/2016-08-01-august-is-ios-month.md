@@ -18,7 +18,12 @@ By first application, I really mean my first one that I am going to take from be
 
 Now, with my newly gained knowledge of Swift, it's just me, Xcode and a month of clear space to build something.
 
-{% asset posts/new_xcode_project alt="The view of Xcode when you start a new project." %}
+<figure>
+  <picture>
+    <source type="image/webp" srcset="{% asset posts/new_xcode_project @path %}.webp">
+    {% asset posts/new_xcode_project alt="The view of Xcode when you start a new project." %}
+  </picture>
+</figure>
 
 ## 2,000,000 applications
 

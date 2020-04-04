@@ -20,7 +20,10 @@ If you don't have a browser that supports the API, then this is what it looks li
 I want to share how the API works and my thoughts on it so far.
 
 <figure class="post-image post-image-left">
-  {% asset posts/webshare alt="A tray slides up from the bottom of the screen with sharing options from your installed applications." %}
+  <picture>
+    <source type="image/web" srcset="{% asset posts/webshare @path %}.webp">
+    {% asset posts/webshare alt="A tray slides up from the bottom of the screen with sharing options from your installed applications." %}
+  </picture>
 </figure>
 
 ## How it works

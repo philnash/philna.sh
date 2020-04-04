@@ -33,31 +33,46 @@ Before I show you how this works, please note the following. If you have uncommi
 Here's an example, I have a repo with one commit. Running `git log --oneline` and `git reflog` both show the commit has the hash `2daf3ba`.
 
 <figure class="post-image post-image-outside">
-  <img src="{% asset posts/reflog1 @path %}" alt="Both log and reflog show the same initial commit.">
+  <picture>
+    <source type="image/webp" srcset="{% asset posts/reflog1 @path %}.webp">
+    <img src="{% asset posts/reflog1 @path %}" alt="Both log and reflog show the same initial commit.">
+  </picture>
 </figure>
 
 Now we make a commit, something important of course.
 
 <figure class="post-image post-image-outside">
-  <img src="{% asset posts/reflog2 @path %}" alt="Making an important commit adds another entry to both the log and the reflog.">
+  <picture>
+    <source type="image/webp" srcset="{% asset posts/reflog2 @path %}.webp">
+    <img src="{% asset posts/reflog2 @path %}" alt="Making an important commit adds another entry to both the log and the reflog.">
+  </picture>
 </figure>
 
 What happens if we `git reset --hard HEAD~1`?
 
 <figure class="post-image post-image-outside">
-  <img src="{% asset posts/reflog3 @path %}" alt="When we hard reset the branch the log shows only our first commit, but the reflog shows everything.">
+  <picture>
+    <source type="image/webp" srcset="{% asset posts/reflog3 @path %}.webp">
+    <img src="{% asset posts/reflog3 @path %}" alt="When we hard reset the branch the log shows only our first commit, but the reflog shows everything.">
+  </picture>
 </figure>
 
 `git log` shows only one commit, but `git reflog` shows three actions; two commits and one reset. Note how the reset points to the same hash as the original commit. So, how do we get back to the last state before we reset? We can reset again.
 
 <figure class="post-image post-image-outside">
-  <img src="{% asset posts/reflog4 @path %}" alt="We can reset the branch using the hash of the lost commit, the log then shows both our original commits.">
+  <picture>
+    <source type="image/webp" srcset="{% asset posts/reflog4 @path %}.webp">
+    <img src="{% asset posts/reflog4 @path %}" alt="We can reset the branch using the hash of the lost commit, the log then shows both our original commits.">
+  </picture>
 </figure>
 
 This time we reset using the hash of our lost commit. You can always reset using hashes, in fact `HEAD~1` is really just a reference to a hash. What does the reflog look like now?
 
 <figure class="post-image post-image-outside">
-  <img src="{% asset posts/reflog5 @path %}" alt="The reflog now shows the four actions that were taken; two commits and then two resets.">
+  <picture>
+    <source type="image/webp" srcset="{% asset posts/reflog5 @path %}.webp">
+    <img src="{% asset posts/reflog5 @path %}" alt="The reflog now shows the four actions that were taken; two commits and then two resets.">
+  </picture>
 </figure>
 
 The reflog now shows the four actions that we took; two commits and then two resets. Now we have reset the branch to the state we were in before, no work has been lost, breathe a sigh of relief.

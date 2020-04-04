@@ -4,6 +4,10 @@
 </video>
 {% endif %}
 {% if include.page.image and include.page.show_image %}
-<img itemprop="image" src="{% asset {{include.page.image}} @path %}" alt="{% if include.page.image_alt %}{{ include.page.image_alt }}{% else %} {% endif %}"
-  class="post-header-image">
+
+<picture class="post-header-image">
+  {% capture webp_image %}{% asset {{include.page.image}} @path %}.webp{% endcapture %}
+  <source type="image/webp" srcset="{% asset {{include.page.image}} @path %}.webp">
+  <img itemprop="image" src="{% asset {{include.page.image}} @path %}" alt="{% if include.page.image_alt %}{{ include.page.image_alt }}{% else %} {% endif %}">
+</picture>
 {% endif %}

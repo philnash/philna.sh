@@ -16,7 +16,10 @@ There's something nice about writing and releasing a library, module, Ruby gem, 
 
 <figure class="post-image post-image-left">
   <a href="https://github.com/philnash/bitly/network/dependents?package_id=UGFja2FnZS05OTI5">
-    <img src="{% asset posts/bitly/dependents @path %}" alt="The Bitly gem dependents page. Currently listed 639 repos and 20 packages.">
+    <picture>
+      <source type="image/webp" srcset="{% asset posts/bitly/dependents @path %}.webp">
+      <img src="{% asset posts/bitly/dependents @path %}" alt="The Bitly gem dependents page. Currently listed 639 repos and 20 packages.">
+    </picture>
   </a>
 </figure>
 

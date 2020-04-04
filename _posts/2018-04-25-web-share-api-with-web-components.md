@@ -16,7 +16,10 @@ I've been playing about with [web components](https://www.webcomponents.org/) on
 ## The `<web-share-wrapper>`
 
 <figure class="post-image-left">
-  {% asset posts/web-share-wrapper/android-example alt="When you press the share button on Android, the share tray will appear." %}
+  <picture>
+    <source type="image/webp" srcset="{% asset posts/web-share-wrapper/android-example @path %}.webp">
+    {% asset posts/web-share-wrapper/android-example alt="When you press the share button on Android, the share tray will appear." %}
+  </picture>
 </figure>
 
 I've built a web component called `<web-share-wrapper>`. It is a wrapper because it is intended to wrap around any existing elements that you might already be using as share buttons to various social networks and replace them with a single element that uses the web share API.

@@ -120,7 +120,10 @@ To keep the chat window the same height as the video, a little more absolute pos
 With the above HTML and CSS, the output ends up looking like this:
 
 <figure class="post-image post-image-outside">
-  <img src="{% asset posts/twitch/twitches @path %}" alt="In the wide view the video and chat are side by side, in the mobile view they are on top of one another.">
+  <picture>
+    <source type="image/webp" srcset="{% asset posts/twitch/twitches @path %}.webp">
+    <img src="{% asset posts/twitch/twitches @path %}" alt="In the wide view the video and chat are side by side, in the mobile view they are on top of one another.">
+  </picture>
 </figure>
 
 Correct aspect ratios and responsive layout; mission accomplished. [Check it out live here](/live/).

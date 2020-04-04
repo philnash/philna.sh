@@ -29,6 +29,7 @@ module Jekyll
         else
           ::WebP.encode(file_name, compressed, quality: 75)
         end
+        FileUtils.touch(compressed, :mtime => File.mtime(file_name))
         File.delete(compressed) if File.size(compressed) > File.size(file_name)
       end
     end
