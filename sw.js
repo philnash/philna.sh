@@ -54,19 +54,16 @@ function returnRangeRequest(request, cacheName) {
     })
     .then(function(res) {
       if (!res) {
-        return fetch(request)
+        fetch(request.url)
           .then(res => {
-            const clonedRes = res.clone();
             return caches
               .open(cacheName)
-              .then(cache => cache.put(request, clonedRes))
-              .then(() => res);
-          })
-          .then(res => {
-            return res;
+              .then(cache => cache.put(request, res))
           });
+        return fetch(request);
+      } else {
+        return res;
       }
-      return res;
     })
     .then(function(res) {
       if (res.status === 206) {
