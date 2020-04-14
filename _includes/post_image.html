@@ -7,7 +7,7 @@
 
 <picture class="post-header-image">
   {% capture webp_image %}{% asset {{include.page.image}} @path %}.webp{% endcapture %}
-  <source type="image/webp" srcset="{% asset {{include.page.image}} @path %}.webp">
+  {% if jekyll.env == "production" %}<source type="image/webp" srcset="{% asset {{include.page.image}} @path %}.webp">{% endif %}
   <img itemprop="image" src="{% asset {{include.page.image}} @path %}" alt="{% if include.page.image_alt %}{{ include.page.image_alt }}{% else %} {% endif %}">
 </picture>
 {% endif %}
