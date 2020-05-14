@@ -68,6 +68,9 @@
   {% endif %}
   {% endif %}
 
+  <!-- Web monetization: https://webmonetization.org/ -->
+  <meta name="monetization" content="{{ site.web_monetization }}">
+
   {% if jekyll.environment == "production" %}
     {% include google_analytics.html %}
   {% endif %}
