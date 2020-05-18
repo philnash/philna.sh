@@ -1,6 +1,6 @@
 ---
 ---
-{% capture digest_paths %}{% for asset in assets %}{% unless asset[0] contains "/" %}{% unless asset[0] contains "merriweather" %}{% unless asset[0] contains "raleway" %}{{ asset[1].digest_path }},{% endunless %}{% endunless %}{% endunless %}{% endfor %}{% endcapture %}
+{% capture digest_paths %}{% for asset in assets %}{% unless asset[0] contains "/" %}{% unless asset[0] contains "merriweather" %}{% unless asset[0] contains "raleway" %}{% unless asset[0] contains "package" %}{{ asset[1].digest_path }},{% endunless %}{% endunless %}{% endunless %}{% endunless %}{% endfor %}{% endcapture %}
 var version = "v{{ site.sw_cache_version }}-";
 
 var staticCacheName = version + "assets-{{ digest_paths | md5 }}";

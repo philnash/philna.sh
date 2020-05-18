@@ -1,4 +1,5 @@
 //= require bower_components/web-share-wrapper/src/index
+//= require node_modules/web-monetization-ad-hider/dist/wm-ad-hider.min.js
 //= require includes/idb
 /* global idb, ga */
 
