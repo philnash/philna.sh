@@ -67,6 +67,8 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
+    jekyll-web_monetization (0.1.0)
+      jekyll (>= 3.0, < 5.0)
     jekyll-zopfli (2.4.1)
       jekyll (>= 3.0, < 5.0)
       zopfli (~> 0.0.7)
@@ -131,6 +133,7 @@ DEPENDENCIES
   jekyll-brotli
   jekyll-paginate
   jekyll-sitemap
+  jekyll-web_monetization
   jekyll-zopfli
   liquid-md5
   rouge
