@@ -25,13 +25,51 @@
 #   talks:
 #     - title: In conversation with a browser
 
-# - event:
-#     name: Stripe Developer Meetup
-#     start_date: 2020-03-17
-#     link: https://stripe.events/devmeetup-auckland
-#     location: Auckland, New Zealand
-#   talks:
-#     - title: The trouble with webhooks
+- event:
+    name: GIDS.Web Live
+    link: https://www.wurreka.com/ict/virtual-conference/web/
+    start_date: 2020-10-01
+    end_date: 2020-10-02
+    location: Online
+  talks:
+    - title: 4 Steps from JavaScript to TypeScript
+
+- event:
+    name: Apidays Live Singapore
+    start_date: 2020-08-19
+    end_date: 2020-08-20
+    link: https://www.apidays.co/singapore/
+    location: Online
+  talks:
+    - title: The trouble with webhooks
+
+- event:
+    name: "Techweek2020: Developer happiness tooling"
+    start_date: 2020-07-30
+    link: https://stripe.events/developertoolingmeetup
+    location: Online
+  talks:
+    - title: The trouble with webhooks
+
+- event:
+    name: DevTalks Reimagined
+    start_date: 2020-06-10
+    end_date: 2020-06-12
+    link: https://www.devtalks.ro/
+    location: Online
+  talks:
+    - title: What's going on with Project Fugu?
+      slides: https://speakerdeck.com/philnash/whats-going-on-with-project-fugu-at-devtalks-reimagined
+
+- event:
+    name: WFHConf
+    start_date: 2020-03-26
+    link: https://community.nearform.com/wfh-conf
+    location: Online
+  talks:
+    - title: Fantastic passwords and where to find them
+      slides: https://speakerdeck.com/philnash/fantastic-passwords-and-where-to-find-them-at-wfhconf
+      video: https://www.youtube.com/watch?v=SpgnaVEHpc4&feature=youtu.be
 
 - event:
     name: MelbJS
