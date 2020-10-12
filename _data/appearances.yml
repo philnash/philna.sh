@@ -1,4 +1,12 @@
 - event:
+    name: DevFest Romania
+    link: https://gdg.community.dev/events/details/google-gdg-bucharest-presents-devfest-romania-2020-with-gdg/#/
+    start_date: 2020-10-17
+    location: Online
+  talks:
+    - title: JavaScript for emails, are you sure?
+
+- event:
     name: NDC Sydney
     link: https://ndcsydney.com/agenda/javascript-for-emails-are-you-sure-0vwj/07v1epjp0tz
     start_date: 2020-10-12
