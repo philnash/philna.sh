@@ -1,10 +1,20 @@
 - event:
+    name: SydCSS December - Wheel of Talks
+    link: https://www.meetup.com/SydCSS/events/274659980/
+    start_date: 2020-12-10
+    location: Online
+  talks:
+    - title: Chosen by the wheel
+      video: https://www.youtube.com/watch?v=6xUl2IbgjLQ
+
+- event:
     name: DevFest Romania
     link: https://gdg.community.dev/events/details/google-gdg-bucharest-presents-devfest-romania-2020-with-gdg/#/
     start_date: 2020-10-17
     location: Online
   talks:
     - title: JavaScript for emails, are you sure?
+      video: https://www.youtube.com/watch?v=eglN9S1WK3M&list=PLY08mE8p2rOG1-xlzumZI3vefkvA1MRAs&index=12
 
 - event:
     name: NDC Sydney
