@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.2.4.3)
+    activesupport (5.2.4.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -14,16 +14,16 @@ GEM
       execjs (~> 2.0)
     brotli (0.2.3)
     colorator (1.1.0)
-    concurrent-ruby (1.1.6)
-    em-websocket (0.5.1)
+    concurrent-ruby (1.1.7)
+    em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
     execjs (2.7.0)
     extras (0.3.0)
       forwardable-extended (~> 2.5)
-    fastimage (2.1.7)
-    ffi (1.13.1)
+    fastimage (2.2.1)
+    ffi (1.14.2)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -31,14 +31,14 @@ GEM
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    jekyll (3.8.7)
+    jekyll (3.9.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
       i18n (~> 0.7)
       jekyll-sass-converter (~> 1.0)
       jekyll-watch (~> 2.0)
-      kramdown (~> 1.14)
+      kramdown (>= 1.17, < 3)
       liquid (~> 4.0)
       mercenary (~> 0.3.3)
       pathutil (~> 0.9)
@@ -73,7 +73,10 @@ GEM
     jekyll-zopfli (2.4.1)
       jekyll (>= 3.0, < 5.0)
       zopfli (~> 0.0.7)
-    kramdown (1.17.0)
+    kramdown (2.3.0)
+      rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     libv8 (3.16.14.19)
     liquid (4.0.3)
     liquid-md5 (0.0.3)
@@ -81,24 +84,25 @@ GEM
     liquid-tag-parser (1.9.0)
       extras (~> 0.3)
       liquid (>= 3.0, < 5.0)
-    listen (3.2.1)
+    listen (3.4.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
     mini_portile2 (2.4.0)
-    minitest (5.14.1)
-    nokogiri (1.10.9)
+    minitest (5.14.2)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (4.0.5)
+    public_suffix (4.0.6)
     rack (2.2.3)
-    rake (13.0.1)
+    rake (13.0.3)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     ref (2.0.0)
-    rouge (3.20.0)
+    rexml (3.2.4)
+    rouge (3.26.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -116,14 +120,14 @@ GEM
       libv8 (~> 3.16.14.15)
       ref
     thread_safe (0.3.6)
-    tzinfo (1.2.7)
+    tzinfo (1.2.9)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     webp-ffi (0.2.7)
       ffi (>= 1.9.0)
       ffi-compiler (>= 0.1.2)
-    zopfli (0.0.7)
+    zopfli (0.0.8)
 
 PLATFORMS
   ruby
@@ -136,6 +140,8 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-web_monetization
   jekyll-zopfli
+  kramdown
+  kramdown-parser-gfm
   liquid-md5
   rouge
   sass

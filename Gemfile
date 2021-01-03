@@ -4,6 +4,8 @@ ruby "2.6.0"
 
 gem "jekyll"
 gem "rouge"
+gem "kramdown"
+gem "kramdown-parser-gfm"
 gem "jekyll-zopfli"
 gem "jekyll-brotli"
 gem "jekyll-paginate"
