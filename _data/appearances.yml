@@ -1,4 +1,13 @@
 - event:
+    name: DeveloperWeek
+    link: https://embed.emamo.com/event/developerweek-2021/r/speaker/phil-nash
+    start_date: 2021-02-15
+    end_date: 2021-02-19
+    location: Online
+  talks:
+    - title: 4 Steps from JavaScript to TypeScript
+
+- event:
     name: SydCSS December - Wheel of Talks
     link: https://www.meetup.com/SydCSS/events/274659980/
     start_date: 2020-12-10
