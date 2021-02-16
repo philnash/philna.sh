@@ -1,4 +1,12 @@
 - event:
+    name: APIdays Live Jakarta
+    link: https://www.apidays.global/jakarta/
+    start_date: 2021-02-24
+    location: Online
+  talks:
+    - title: Better API DX with a CLI
+
+- event:
     name: DeveloperWeek
     link: https://embed.emamo.com/event/developerweek-2021/r/speaker/phil-nash
     start_date: 2021-02-15
