@@ -74,12 +74,12 @@ minimalFormatter.format(date);
 // => "22/02/2021"
 ```
 
-By default, the formatter outputs a short date form, even though the time is in there too. This is useful though, as we can still see that the time zone side of things is working. It may be the 22nd as I write this, but on the West coast of the USA it's still the 13th. We can see this by setting the time zone to something like "America/Los_Angeles":
+By default, the formatter outputs a short date form, even though the time is in there too. This is useful though, as we can still see that the time zone side of things is working. It may be the 22nd as I write this, but on the West coast of the USA it's still the 21st. We can see this by setting the time zone to something like "America/Los_Angeles":
 
 ```javascript
 const USFormatter = Intl.DateTimeFormat("en-AU", { timeZone: "America/Los_Angeles" });
 USFormatter.format(date);
-// => "13/02/2021"
+// => "21/02/2021"
 ```
 
 A day behind, as expected. Note that `Intl.DateTimeFormat` takes a language string too. I've been using Australian English as the setting, but we can set this to US English too.
@@ -87,7 +87,7 @@ A day behind, as expected. Note that `Intl.DateTimeFormat` takes a language stri
 ```javascript
 const reallyUSFormatter = Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles" });
 reallyUSFormatter.format(date);
-// => "02/13/2021"
+// => "02/21/2021"
 ```
 
 Now we get the date in mm/dd/yyyy format, far and away *the worst format*. But, since `Intl.DateTimeFormat` knows international preferences for this, I can provide the language and the result will be formatted in the way the user expects and I never have to see a date with the month in the most significant place.
