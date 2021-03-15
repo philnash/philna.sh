@@ -1,10 +1,21 @@
 - event:
+    name: GIDS Live 2021
+    link: https://wurreka.com/ict/virtual-conference/gids-2021/speaker/phil-nash
+    start_date: 2021-04-27
+    end_date: 2021-04-30
+    location: Online
+  talks:
+    - title: You're on Mute! WebRTC and our Lives on Screen
+    - title: JavaScript Apps Go Intl
+
+- event:
     name: APIdays Live Jakarta
     link: https://www.apidays.global/jakarta/
     start_date: 2021-02-24
     location: Online
   talks:
     - title: Better API DX with a CLI
+      slides: https://speakerdeck.com/philnash/better-api-dx-with-a-cli-apidays-jakarta
 
 - event:
     name: DeveloperWeek
@@ -14,6 +25,7 @@
     location: Online
   talks:
     - title: 4 Steps from JavaScript to TypeScript
+      slides: https://speakerdeck.com/philnash/four-steps-from-javascript-to-typescript-developer-week-2021
 
 - event:
     name: SydCSS December - Wheel of Talks
