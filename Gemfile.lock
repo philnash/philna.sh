@@ -73,7 +73,7 @@ GEM
     jekyll-zopfli (2.5.0)
       jekyll (>= 3.0, < 5.0)
       zopfli (~> 0.0.7)
-    kramdown (2.3.0)
+    kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
