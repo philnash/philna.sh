@@ -1,4 +1,31 @@
 - event:
+    name: "Apidays Live Hong Kong"
+    link: https://www.apidays.global/hongkong/
+    start_date: 2021-07-25
+    end_date: 2021-07-26
+    location: Online
+  talks:
+    - title: Better API DX with a CLI
+
+- event:
+    name: "Web Directions: Global Scope"
+    link: https://webdirections.org/globalscope/speakers/phil-nash.php
+    start_date: 2021-07-23
+    end_date: 2021-07-30
+    location: Online
+  talks:
+    - title: JavaScript apps go Int(ernationa)l
+
+- event:
+    name: Apidays Interface
+    link: https://www.apidays.global/interface/
+    start_date: 2021-06-30
+    end_date: 2021-07-02
+    location: Online
+  talks:
+    - title: Better API DX with a CLI
+
+- event:
     name: GIDS Live 2021
     link: https://wurreka.com/ict/virtual-conference/gids-2021/speaker/phil-nash
     start_date: 2021-04-27
@@ -9,7 +36,7 @@
     - title: JavaScript Apps Go Intl
 
 - event:
-    name: APIdays Live Jakarta
+    name: Apidays Live Jakarta
     link: https://www.apidays.global/jakarta/
     start_date: 2021-02-24
     location: Online
@@ -55,7 +82,7 @@
     - title: JavaScript for emails, are you sure?
 
 - event:
-    name: Apidays live Hong Kong
+    name: Apidays Live Hong Kong
     link: https://www.apidays.co/hongkong/
     start_date: 2020-10-08
     end_date: 2020-10-08
@@ -610,7 +637,7 @@
       video: http://video.html.it/webhooks-the-api-strikes-back/
 
 - event:
-    name: APIDays Australia
+    name: Apidays Australia
     link: http://au.apidays.io/
     start_date: 2017-02-28
     end_date: 2017-03-01
