@@ -1,4 +1,13 @@
 - event:
+    name: PyConline AU
+    link: https://2021.pycon.org.au/program/3b8sep/
+    start_date: 2021-09-10
+    end_date: 2021-09-12
+    location: Online
+  talks:
+    - title: A capital letter, a number, a special character, an emotional journey for the character, a subplot, and a twist ending
+
+- event:
     name: "Web Directions: Global Scope"
     link: https://webdirections.org/globalscope/speakers/phil-nash.php
     start_date: 2021-08-06
