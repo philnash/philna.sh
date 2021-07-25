@@ -3,6 +3,8 @@ layout: post
 title:  "Git commands to keep a fork up to date"
 image: posts/git
 image_alt: "The git logo"
+image_width: 1920
+image_height: 600
 tags:
   - git
   - vcs

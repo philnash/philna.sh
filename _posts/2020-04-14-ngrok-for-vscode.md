@@ -7,6 +7,8 @@ tags:
   - showdev
 image: posts/ngrok-for-vscode/nfv-header
 image_alt: "ngrok for VSCode"
+image_width: 1920
+image_height: 600
 ---
 
 Over the Easter weekend, a four day weekend characterised by lockdowns all over the world, I decided to use the extra time I had at home to start a new project and learn a new skill. By the end of the weekend I was proud to release my first VSCode extension: [_ngrok for VSCode_](https://marketplace.visualstudio.com/items?itemName=philnash.ngrok-for-vscode).

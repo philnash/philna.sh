@@ -6,6 +6,8 @@ tags:
   - service worker
 image: posts/service-worker
 image_alt: "Three cogs on a yellow background, intended to represent the idea of the Service Worker"
+image_width: 1920
+image_height: 600
 ---
 
 The service worker API is expanding as more ways to use the background dwelling worker emerge. I've written before about [push notifications](https://www.twilio.com/blog/2016/02/web-powered-sms-inbox-with-service-worker-push-notifications.html) and [background sync](https://www.twilio.com/blog/2017/02/send-messages-when-youre-back-online-with-service-workers-and-background-sync.html) and I recently explored the very new [background fetch API](https://github.com/WICG/background-fetch). Here's what I found out about it.

@@ -7,6 +7,8 @@ tags:
   - ruby
 image: posts/jekyll
 image_alt: "The Jekyll logo"
+image_width: 1920
+image_height: 600
 ---
 
 When I started again on this site, I wanted to make sure it was going to load fast. [Performance matters](https://twitter.com/search?q=%23perfmatters).

@@ -3,6 +3,8 @@ layout: post
 title:  "Critique my Swift on Exercism"
 image: posts/exercism
 image_alt: "The Exercism logo"
+image_width: 1920
+image_height: 600
 tags:
   - swift
 ---

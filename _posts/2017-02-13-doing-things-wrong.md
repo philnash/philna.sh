@@ -7,6 +7,8 @@ tags:
   - javascript
 image: posts/fix_it
 image_alt: "A git log showing a commit that posted my last blog post followed by four commits that just say 'fix it'."
+image_width: 1920
+image_height: 600
 ---
 
 [I wrote a blog post last week](https://philna.sh/blog/2017/02/09/toast-to-es2015-destructuring/) and bits of it were wrong. This is not a retraction of that blog post, I just wanted to share the feedback that I got, the things I changed and some lessons that I learned.

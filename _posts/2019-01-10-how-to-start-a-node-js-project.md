@@ -7,6 +7,8 @@ tags:
   - open source
 image: posts/node
 image_alt: "The Node.js logo"
+image_width: 1920
+image_height: 600
 scripts:
   - <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 

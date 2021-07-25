@@ -3,6 +3,8 @@ layout: post
 title:  "The web share API"
 image: posts/share_header
 image_alt: ""
+image_width: 1920
+image_height: 600
 tags:
   - web
   - javascript

@@ -8,6 +8,8 @@ tags:
   - permission
 image: posts/permissions/header
 image_alt: "A permissions dialog that says 'philna.sh wants to annoy you constantly"
+image_width: 1200
+image_height: 440
 scripts:
   - <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---

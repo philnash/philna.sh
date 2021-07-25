@@ -8,6 +8,8 @@ tags:
   - copyright
 image: posts/check-your-ruby-app
 image_alt: "The Ruby logo next to the face screaming in fear emoji"
+image_width: 1920
+image_height: 600
 ---
 
 I had the fortune of attending the wonderful [Brighton Ruby conference](https://brightonruby.com/) last week. It was full of excellent advice, wisdom and code. There was one talk, however, that urged me to go home and do something straight away to ensure the security and usability of my projects.

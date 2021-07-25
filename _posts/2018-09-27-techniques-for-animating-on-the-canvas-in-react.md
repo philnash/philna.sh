@@ -9,6 +9,8 @@ tags:
 image: posts/react
 image_alt: 'The React logo slowly spinning'
 video: posts/react_vid
+video_width: 1280
+video_height: 400
 show_image: false
 ---
 

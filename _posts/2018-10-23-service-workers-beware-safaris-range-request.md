@@ -8,6 +8,8 @@ tags:
   - pwa
 image: posts/service-worker
 image_alt: 'Three cogs on a yellow background, intended to represent the idea of the Service Worker'
+image_width: 1920
+image_height: 600
 ---
 
 You've implemented a service worker to cache some assets. Everything is working well, your service worker is a success, you're feeling good. But then...

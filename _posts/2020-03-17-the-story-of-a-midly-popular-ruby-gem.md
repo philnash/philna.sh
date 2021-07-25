@@ -8,6 +8,8 @@ tags:
   - bitly
 image: posts/bitly/bitly-rubygem
 image_alt: "A story about the Bitly Ruby gem"
+image_width: 1920
+image_height: 600
 ---
 
 The list on GitHub of repositories that depend on your repository is scary.

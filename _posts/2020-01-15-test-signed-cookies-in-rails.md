@@ -7,6 +7,8 @@ tags:
   - testing
 image: posts/railscookies
 image_alt: "The Ruby on Rails logo surrounded by cookies"
+image_width: 1920
+image_height: 600
 ---
 
 Recently I've been refactoring the tests for [a gem I maintain](https://github.com/twilio/authy-devise) and I needed to test that it sets the right cookies at the right time. But the cookies in use in the gem are signed cookies and that caused a slight hiccup for me. I'd never tested the value in a signed cookie before and it wasn't immediately obvious what to do.

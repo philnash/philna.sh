@@ -8,6 +8,8 @@ tags:
   - webdev
 image: posts/nodemon-ngrok
 image_alt: "The logos for nodemon and ngrok"
+image_width: 1920
+image_height: 960
 ---
 
 When I am developing web applications in Node.js, I like the server to restart when I make changes, so I use [nodemon](https://nodemon.io/). When I am developing an application that consumes [webhooks](https://www.twilio.com/docs/glossary/what-is-a-webhook) or that I want to share publicly, [I use ngrok](https://www.twilio.com/blog/2015/09/6-awesome-reasons-to-use-ngrok-when-testing-webhooks.html). In fact, I like ngrok so much, I volunteered to help maintain the [Node.js wrapper for ngrok](https://github.com/bubenshchykov/ngrok/).

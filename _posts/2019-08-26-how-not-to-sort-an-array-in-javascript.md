@@ -5,6 +5,8 @@ tags:
   - javascript
 image: posts/sorting
 image_alt: 'Sorting a JavaScript array containing undefined, null and NaN.'
+image_width: 1200
+image_height: 440
 ---
 
 Array sorting is one of those things you don't spend too long thinking about, until it stops working for you. Recently I was working with array of items in JavaScript that were not sorting at all properly and completely messing up an interface. It took me way too long to work out what went wrong so I wanted to share what happened and why it was so weird.

@@ -7,6 +7,8 @@ tags:
   - security
 image: posts/crystal
 image_alt: "The Crystal language logo"
+image_width: 1920
+image_height: 600
 ---
 
 [Crystal](https://crystal-lang.org/) is still a young language, there aren't a lot of libraries available yet. For some this could be offputting, but for others this is a chance to learn about a language and provide useful tools for those also starting to use it.

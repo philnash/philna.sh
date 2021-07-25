@@ -8,6 +8,8 @@ tags:
 image: posts/got-header
 image_alt: "The Got logo"
 social_image: posts/got-social-header
+image_width: 1920
+image_height: 600
 ---
 
 [Got is a Node.js library for making HTTP requests](https://www.npmjs.com/package/got). It has both promise and stream based APIs and in this post I want to explore how to use the stream API to download files.

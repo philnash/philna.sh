@@ -7,6 +7,8 @@ tags:
   - strings
 image: posts/paths
 image_alt: "A terminal font with the text path/to/trouble"
+image_width: 1920
+image_height: 600
 ---
 
 Some things you do as a developer can work for you for years, then turn around and bite you when you were least expecting. These are the things that you wish another developer had told you early in your career so you never had to make the mistakes. This post is about one of those things and if you're reading this, consider it me telling you.

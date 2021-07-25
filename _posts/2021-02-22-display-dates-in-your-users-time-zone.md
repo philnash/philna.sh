@@ -9,6 +9,8 @@ tags:
 image: posts/intl-time
 image_alt: "Different sides of the world offset by clocks showing different times"
 social_image: posts/intl-time-social
+image_width: 1920
+image_height: 600
 ---
 
 Time zones are hard. Not only are there a lot of them, but they don't fit nicely into whole hour blocks, daylight savings time changes individual zones some of the time, and zones move around and change all the time. In short, it is a hassle.

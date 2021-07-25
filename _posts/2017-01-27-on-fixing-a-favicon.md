@@ -3,6 +3,8 @@ layout: post
 title:  "On fixing a favicon"
 image: posts/tiny_changes
 image_alt: The GitHub summary for a pull request, showing 1 addition and 2 deletions.
+image_width: 1920
+image_height: 600
 tags:
   - open source
   - favicon

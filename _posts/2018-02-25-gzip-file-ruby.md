@@ -8,6 +8,8 @@ tags:
   - file compression
 image: posts/gzip/gzip-ruby
 image_alt: "An icon of a vice squeezing a ruby gem"
+image_width: 1920
+image_height: 600
 ---
 
 At the start of the year I looked into how to better compress the output of a [Jekyll](https://jekyllrb.com/) site. I'll write up the results to that soon. For now, here's how to gzip a file using Ruby.

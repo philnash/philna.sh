@@ -3,6 +3,8 @@ layout: post
 title:  "A toast to ES2015 destructuring"
 image: posts/destructured_beers
 image_alt: ""
+image_width: 1920
+image_height: 600
 tags:
   - javascript
   - es2015

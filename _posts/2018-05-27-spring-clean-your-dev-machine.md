@@ -8,6 +8,8 @@ tags:
   - docker
 image: posts/spring-clean-header
 image_alt: " "
+image_width: 1920
+image_height: 600
 ---
 
 Development machines can build up such a lot of cruft. Old versions, oudated programs and unused caches litter the hard drive. It's good to take time once in a while to clean all of this up and free up some space.

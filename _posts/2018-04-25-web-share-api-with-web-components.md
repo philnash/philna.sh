@@ -7,6 +7,8 @@ tags:
   - share
 image: posts/share_header
 image_alt: ""
+image_width: 1920
+image_height: 600
 ---
 
 I'm a fan of the [web share API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) but I was not happy with [my initial implementation of the API](/blog/2017/03/14/the-web-share-api/). It was all a bit complex for what is a very simple API. I wanted something more declarative and easier to use with a more generic fallback for when the share API was not available.

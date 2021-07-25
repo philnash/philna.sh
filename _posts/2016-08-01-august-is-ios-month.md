@@ -3,6 +3,8 @@ layout: post
 title:  "August is iOS month"
 image: posts/xcode_swift
 image_alt: "The App Store and Swift logos"
+image_width: 1920
+image_height: 600
 tags:
   - swift
   - ios

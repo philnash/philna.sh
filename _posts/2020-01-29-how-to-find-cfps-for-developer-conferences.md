@@ -7,6 +7,8 @@ tags:
   - conferences
 image: posts/cfps/cfp-header
 image_alt: " "
+image_width: 1920
+image_height: 600
 ---
 
 So you've decided to speak at a developer conference? You have a story you want to share with your peers&mdash;how you built something, how you learned something new, how you became a better developer and how everyone else can too&mdash;but you need to find a stage on which to share this story.

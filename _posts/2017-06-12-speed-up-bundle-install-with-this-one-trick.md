@@ -6,6 +6,8 @@ tags:
   - bundler
 image: posts/bundler
 image_alt: "Two illustrations from the Bundler website. One signifies installing a Ruby gem and the other Bundler itself."
+image_width: 1920
+image_height: 600
 ---
 
 Did you know [bundler](https://bundler.io) can download and install gems in parallel?

@@ -6,6 +6,8 @@ tags:
   - community
 image: posts/thank-you
 image_alt: "The Ruby logo and the text 'Thank you'"
+image_width: 1920
+image_height: 450
 scripts:
   - <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---

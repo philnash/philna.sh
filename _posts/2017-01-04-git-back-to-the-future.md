@@ -3,6 +3,8 @@ layout: post
 title:  "Git back to the future"
 image: posts/git
 image_alt: "The git logo"
+image_width: 1920
+image_height: 600
 tags:
   - git
   - vcs

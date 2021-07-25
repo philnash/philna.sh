@@ -98,7 +98,7 @@ To keep the chat window the same height as the video, a little more absolute pos
   .twitch {
     position: relative;
   }
-  
+
   .twitch .twitch-video {
     width: 75%;
     padding-top: 42.1875%;

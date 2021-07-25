@@ -6,6 +6,8 @@ tags:
   - CSS selectors
 image: posts/subsequent-sibling-combinator
 image_alt: "A tilde symbol, the symbol used as the subsequent sibling combinator in CSS selectors"
+image_width: 1200
+image_height: 440
 ---
 
 There are a [whole bunch of CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) available to web developers, but sometimes there's still not enough. I found this recently when building the [speaking section of my site](https://philna.sh/speaking/) and wanted to use the non-existent `:first-of-class` pseudo class to apply some styles.

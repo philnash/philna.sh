@@ -7,6 +7,8 @@ tags:
   - node
 image: posts/parse-url-parameters
 image_alt: "A line of code that reads `parse('foo=bar');`"
+image_width: 1920
+image_height: 960
 ---
 
 Sometimes the platform we are building on provides more functionality than we can keep in our own heads. However, depending on the problem, we often find ourselves trying to write the code to solve the issue rather than finding and using the existing solution provided by the platform. I almost fell for this recently when trying to parse a query string.

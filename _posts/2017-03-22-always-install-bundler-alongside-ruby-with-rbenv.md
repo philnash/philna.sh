@@ -7,6 +7,8 @@ tags:
   - rbenv
 image: posts/bundler
 image_alt: "Two illustrations from the Bundler website. One signifies installing Ruby and the other Bundler itself."
+image_width: 1920
+image_height: 600
 ---
 
 Here's a quick tip for anyone who uses [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build) to manage installing and switching Ruby versions.
