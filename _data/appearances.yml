@@ -1,4 +1,20 @@
 - event:
+    name: "Voxxed Days Sydney"
+    link: https://australia.voxxeddays.com/speakers
+    start_date: 2022-02-17
+    location: Sydney, Australia
+  talks:
+    - title: 4 Steps from JavaScript to TypeScript
+
+- event:
+    name: "Voxxed Days Melbourne"
+    link: https://australia.voxxeddays.com/speakers
+    start_date: 2022-02-15
+    location: Melbourne, Australia
+  talks:
+    - title: 4 Steps from JavaScript to TypeScript
+
+- event:
     name: PyConline AU
     link: https://2021.pycon.org.au/program/3b8sep/
     start_date: 2021-09-10
@@ -17,15 +33,6 @@
     - title: JavaScript apps go Int(ernationa)l
 
 - event:
-    name: "Voxxed Days Sydney"
-    link: https://australia.voxxeddays.com/speakers
-    start_date: 2021-08-26
-    end_date: 2021-08-27
-    location: Sydney, Australia
-  talks:
-    - title: 4 Steps from JavaScript to TypeScript
-
-- event:
     name: "Apidays Live Hong Kong"
     link: https://www.apidays.global/hongkong/
     start_date: 2021-08-25
@@ -34,14 +41,7 @@
   talks:
     - title: Better API DX with a CLI
 
-- event:
-    name: "Voxxed Days Melbourne"
-    link: https://australia.voxxeddays.com/speakers
-    start_date: 2021-08-23
-    end_date: 2021-08-24
-    location: Melbourne, Australia
-  talks:
-    - title: 4 Steps from JavaScript to TypeScript
+
 
 - event:
     name: "NDC Melbourne"
