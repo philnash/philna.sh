@@ -15,19 +15,65 @@
     - title: 4 Steps from JavaScript to TypeScript
 
 - event:
+    name: "Web Directions: Safe"
+    link: https://webdirections.org/safe21/speakers/phil-nash.php
+    start_date: 2021-12-03
+    end_date: 2021-12-10
+    location: Online
+  talks:
+    - title: "Auth on the web: better experiences"
+
+- event:
+    name: NDC Sydney
+    link: https://ndcsydney.com/
+    start_date: 2021-11-05
+    location: Online
+  talks:
+    - title: You're on mute! WebRTC and our lives on screen
+
+- event:
+    name: DevCon
+    link: https://www.dev-con.ro/speakers/55-Phil+Nash
+    start_date: 2021-11-03
+    end_date: 2021-11-04
+    location: Online
+  talks:
+    - title: You're on mute! WebRTC and our lives on screen
+
+- event:
+    name: API World
+    link: https://embed.emamo.com/event/api-world-2021/s/pro-talk-api-better-api-dx-with-a-cli-orYw5W
+    start_date: 2021-10-26
+    end_date: 2021-10-28
+    location: Online
+  talks:
+    - title: Better API DX with a CLI
+
+- event:
+    name: Twilio SIGNAL
+    link: https://signal.twilio.com/2021/virtual/sessions/27527/twilio-webrtc-go
+    start_date: 2021-10-20
+    end_date: 2021-10-21
+    location: Online
+  talks:
+    - title: Twilio WebRTC Go
+      video: https://signal.twilio.com/2021/virtual/sessions/27527/twilio-webrtc-go
+
+- event:
     name: PyConline AU
-    link: https://2021.pycon.org.au/program/3b8sep/
+    link: https://2021.pycon.org.au/program/3B8SEP/
     start_date: 2021-09-10
     end_date: 2021-09-12
     location: Online
   talks:
     - title: A capital letter, a number, a special character, an emotional journey for the character, a subplot, and a twist ending
+      video: https://www.youtube.com/watch?v=attJqUILij4
 
 - event:
-    name: "Web Directions: Global Scope"
-    link: https://webdirections.org/globalscope/speakers/phil-nash.php
-    start_date: 2021-08-06
-    end_date: 2021-08-13
+    name: Full Stack Day New Zealand
+    link: https://www.fullstackday.com/PhilNash.html
+    start_date: 2021-08-19
+    end_date: 2021-08-27
     location: Online
   talks:
     - title: JavaScript apps go Int(ernationa)l
@@ -41,7 +87,14 @@
   talks:
     - title: Better API DX with a CLI
 
-
+- event:
+    name: "Web Directions: Global Scope"
+    link: https://webdirections.org/globalscope/speakers/phil-nash.php
+    start_date: 2021-08-06
+    end_date: 2021-08-13
+    location: Online
+  talks:
+    - title: JavaScript apps go Int(ernationa)l
 
 - event:
     name: "NDC Melbourne"
