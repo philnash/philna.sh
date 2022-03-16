@@ -1,4 +1,22 @@
 - event:
+    name: "NDC Melbourne"
+    link: https://ndcmelbourne.com/speakers/phil-nash
+    start_date: 2022-06-20
+    end_date: 2022-06-24
+    location: Melbourne, Australia
+  talks:
+    - title: Web APIs for delightful two factor auth experiences
+    - title: JavaScript apps go Int(ernationa)l
+
+- event:
+    name: "js.la"
+    link: https://js.la/
+    start_date: 2022-02-24
+    location: Online
+  talks:
+    - title: Web APIs for delightful two factor auth experiences
+
+- event:
     name: "Voxxed Days Sydney"
     link: https://australia.voxxeddays.com/speakers
     start_date: 2022-02-17
@@ -540,37 +558,37 @@
       video: https://www.youtube.com/watch?v=M2mGYdnFRVU
 
 - event:
-    name: 'MelbJS'
+    name: "MelbJS"
     start_date: 2018-01-10
     link: http://melbjs.com/
-    location: 'Melbourne, Australia'
+    location: "Melbourne, Australia"
   talks:
-    - title: 'Browsers behind your back'
+    - title: "Browsers behind your back"
       slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-melbjs
 
 - event:
-    name: 'DevFest Sydney'
+    name: "DevFest Sydney"
     start_date: 2017-11-25
     link: http://www.devfest.org.au/
-    location: 'Sydney, Australia'
+    location: "Sydney, Australia"
   talks:
-    - title: 'Aggressive Web Apps'
+    - title: "Aggressive Web Apps"
 
 - event:
     name: Web Directions Summit
     start_date: 2017-11-09
     end_date: 2017-11-10
     link: http://webdirections.org/wds17/speakers/phil-nash.html
-    location: 'Sydney, Australia'
+    location: "Sydney, Australia"
   talks:
-    - title: '2FA, WTF?'
+    - title: "2FA, WTF?"
       slides: https://speakerdeck.com/philnash/2fa-wtf-at-web-directions-summit-2017
 
 - event:
     name: Front End London
     start_date: 2017-08-31
     link: http://www.frontendlondon.co.uk/
-    location: 'London, UK'
+    location: "London, UK"
   talks:
     - title: Aggressive Web Apps
       slides: https://speakerdeck.com/philnash/aggressive-web-apps-at-front-end-london
@@ -721,7 +739,7 @@
     start_date: 2017-03-16
     location: Turin, Italy
   talks:
-    - title: 'WebHooks: The API Strikes Back'
+    - title: "WebHooks: The API Strikes Back"
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-at-cloudconf-2017
       video: http://video.html.it/webhooks-the-api-strikes-back/
 
@@ -732,7 +750,7 @@
     end_date: 2017-03-01
     location: Sydney, Australia
   talks:
-    - title: 'WebHooks: The API Strikes Back'
+    - title: "WebHooks: The API Strikes Back"
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-2
 
 - event:
@@ -765,7 +783,7 @@
 - event:
     name: Front End London
     link: http://www.frontendlondon.co.uk/
-    location: 'London, UK'
+    location: "London, UK"
     start_date: 2016-11-24
   talks:
     - title: An empty database in everybody's pocket
@@ -774,7 +792,7 @@
 - event:
     name: Gumtree Tech Talks
     start_date: 2016-11-23
-    location: 'London, UK'
+    location: "London, UK"
     link: https://www.eventbrite.co.uk/e/tech-talk-night-at-gumtree-november-session-tickets-28680795030#
   talks:
     - title: An introduction to Service Workers
@@ -942,7 +960,7 @@
       video: https://skillsmatter.com/skillscasts/8154-thinking-offline
 
 - event:
-    name: 'AngularZone Meetup #1'
+    name: "AngularZone Meetup #1"
     link: https://www.meetup.com/AngularZone/events/232087779/
     start_date: 2016-07-11
     location: London, UK
@@ -950,7 +968,7 @@
     - title: An introduction to Service Workers
 
 - event:
-    name: 'Bots: The State of the Conversation'
+    name: "Bots: The State of the Conversation"
     link: http://learn.converse.ai/botevent
     start_date: 2016-07-04
     end_date: 2016-07-05
@@ -1193,7 +1211,7 @@
     start_date: 2015-09-21
     location: London, UK
   talks:
-    - title: 'Data: online and off'
+    - title: "Data: online and off"
       slides: https://speakerdeck.com/philnash/data-online-and-off
 
 - event:
@@ -1211,7 +1229,7 @@
     location: Leeds, UK
     link: https://www.meetup.com/Leeds-TechHub/events/223602008/
   talks:
-    - title: 'WebHooks: The API Strikes Back'
+    - title: "WebHooks: The API Strikes Back"
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-1
 
 - event:
@@ -1233,7 +1251,7 @@
     location: Poznań, Poland
     link: https://15.polyconf.com/
   talks:
-    - title: 'Webhooks - The API strikes back'
+    - title: "Webhooks - The API strikes back"
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-1
 
 - event:
