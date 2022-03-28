@@ -15,6 +15,7 @@
     location: Online
   talks:
     - title: Web APIs for delightful two factor auth experiences
+      video: https://www.youtube.com/watch?v=uM8r5mqYpy0
 
 - event:
     name: "Voxxed Days Sydney"
