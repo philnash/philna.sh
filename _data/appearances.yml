@@ -1,4 +1,21 @@
 - event:
+    name: NDC Sydney
+    link: https://ndcsydney.com/agenda/the-state-of-passwordless-auth-on-the-web-05ns/059jcntqxlz
+    start_date: 2022-10-12
+    end_date: 2022-10-14
+    location: Sydney, Australia
+  talks:
+    - title: The state of passwordless auth on the web
+
+- event:
+    name: CityJS Singapore
+    link: https://singapore.cityjsconf.org/
+    start_date: 2022-07-29
+    location: Singapore
+  talks:
+    - title: You're on mute! WebRTC and our lives on screen
+
+- event:
     name: "NDC Melbourne"
     link: https://ndcmelbourne.com/speakers/phil-nash
     start_date: 2022-06-20
@@ -7,6 +24,41 @@
   talks:
     - title: Web APIs for delightful two factor auth experiences
     - title: JavaScript apps go Int(ernationa)l
+
+- event:
+    name: Apidays Interface
+    link: https://www.apidays.global/interface/
+    start_date: 2022-06-08
+    end_date: 2022-06-10
+    location: Online
+  talks:
+    - title: Supporting 10 million developers
+
+- event:
+    name: "Apidays Singapore"
+    link: https://www.apidays.global/singapore/
+    start_date: 2022-04-20
+    end_date: 2022-04-21
+    location: Online
+  talks:
+    - title: The communications toolkit every developer needs
+
+- event:
+    name: BrisJS
+    link: https://www.meetup.com/brisjs/events/nvkmpsydcgbgb/
+    start_date: 2022-04-11
+    location: Online
+  talks:
+    - title: Web APIs for delightful two factor auth experiences
+      video: https://www.youtube.com/watch?v=ZfORg_tY-ds&t=797s
+
+- event:
+    name: Quantum Information Technology Convention
+    link: https://www.facebook.com/qitcxu/posts/pfbid0Q2qWpuT5oZNav6JzS1qjtLfNQWvqJ7zT61CC9ri9BCKKKEun9agJstfuEtU4SmBml
+    start_date: 2022-04-02
+    location: Online
+  talks:
+    - title: Navigating the new normal with the power of the web
 
 - event:
     name: "js.la"
@@ -882,7 +934,7 @@
       video: https://devchat.tv/conference-talks/2fa-wtf
 
 - event:
-    name: SIGNAL London
+    name: Twilio SIGNAL London
     location: London, UK
     link: https://signal.twilio.com/2016/london
     start_date: 2016-09-20
@@ -1005,7 +1057,7 @@
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-1
 
 - event:
-    name: SIGNAL San Francisco
+    name: Twilio SIGNAL
     link: https://signal.twilio.com/2016/sf
     start_date: 2016-05-24
     end_date: 2016-05-25
