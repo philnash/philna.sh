@@ -8,6 +8,14 @@
     - title: The state of passwordless auth on the web
 
 - event:
+    name: MelbJS
+    link: http://melbjs.com/
+    start_date: 2022-08-10
+    location: Melbourne, Australia
+  talks:
+    - title: Secrets of the Credential Management APIs
+
+- event:
     name: CityJS Singapore
     link: https://singapore.cityjsconf.org/
     start_date: 2022-07-29
