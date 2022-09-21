@@ -1,4 +1,13 @@
 - event:
+    name: "Web Directions: Summit"
+    link: https://webdirections.org/summit/speakers/phil-nash.php
+    start_date: 2022-12-01
+    end_date: 2022-12-02
+    location: Sydney, Australia
+  talks:
+    - title: The state of passwordless auth on the web
+
+- event:
     name: NDC Sydney
     link: https://ndcsydney.com/agenda/the-state-of-passwordless-auth-on-the-web-05ns/059jcntqxlz
     start_date: 2022-10-12
@@ -6,6 +15,15 @@
     location: Sydney, Australia
   talks:
     - title: The state of passwordless auth on the web
+
+- event:
+    name: DDD Perth
+    link: https://dddperth.com/agenda?sessionId=23846d72-9902-4e32-9077-e48e1587e399
+    start_date: 2022-09-10
+    end_date: 2022-09-10
+    location: Perth, Australia
+  talks:
+    - title: Web APIs for delightful two factor auth experiences
 
 - event:
     name: MelbJS
@@ -22,6 +40,7 @@
     location: Singapore
   talks:
     - title: You're on mute! WebRTC and our lives on screen
+      video: https://youtu.be/UiANV3uqT04?t=24712
 
 - event:
     name: "NDC Melbourne"
@@ -41,6 +60,7 @@
     location: Online
   talks:
     - title: Supporting 10 million developers
+      video: https://www.youtube.com/watch?v=EkqvCNrGEMI&list=PLmEaqnTJ40OpAzxsc82Hgn1gFCDe8R8W9&index=24
 
 - event:
     name: "Apidays Singapore"
@@ -50,6 +70,7 @@
     location: Online
   talks:
     - title: The communications toolkit every developer needs
+      video: https://www.youtube.com/watch?v=mEJXtD1UQ38&list=PLmEaqnTJ40Oq9U2hxgCT2Z9oYGBOxeLFa&index=13
 
 - event:
     name: BrisJS
@@ -109,6 +130,7 @@
     location: Online
   talks:
     - title: You're on mute! WebRTC and our lives on screen
+      video: https://www.youtube.com/watch?v=yHebbLd5avI
 
 - event:
     name: DevCon
@@ -165,6 +187,7 @@
     location: Online
   talks:
     - title: Better API DX with a CLI
+      video: https://www.youtube.com/watch?v=NnrIMxGFdB8&list=PLmEaqnTJ40OrND8VYk-I631D15K7V-UpQ&index=24
 
 - event:
     name: "Web Directions: Global Scope"
@@ -183,6 +206,7 @@
     location: Online
   talks:
     - title: 4 Steps from JavaScript to TypeScript
+      video: https://www.youtube.com/watch?v=_EjuTp81SYQ&list=PL03Lrmd9CiGdrPYT6J4VHLP1A70SBn5e4&index=8
 
 - event:
     name: Apidays Interface
@@ -192,16 +216,19 @@
     location: Online
   talks:
     - title: Better API DX with a CLI
+      video: https://www.youtube.com/watch?v=_Qe081lYQuE&list=PLmEaqnTJ40Or6xpWGCX7Z9ej40fzGcd9g&index=23
 
 - event:
     name: GIDS Live 2021
-    link: https://wurreka.com/ict/virtual-conference/gids-2021/speaker/phil-nash
+    link: https://saltmarch.com/watch/youre-on-mute-webrtc-and-our-lives-on-screen
     start_date: 2021-04-27
     end_date: 2021-04-30
     location: Online
   talks:
     - title: You're on Mute! WebRTC and our Lives on Screen
+      video: https://saltmarch.com/watch/youre-on-mute-webrtc-and-our-lives-on-screen
     - title: JavaScript Apps Go Intl
+      video: https://saltmarch.com/watch/javascript-apps-go-intl
 
 - event:
     name: Apidays Live Jakarta
@@ -211,6 +238,7 @@
   talks:
     - title: Better API DX with a CLI
       slides: https://speakerdeck.com/philnash/better-api-dx-with-a-cli-apidays-jakarta
+      video: https://www.youtube.com/watch?v=kmGp_VfjatA&list=PLmEaqnTJ40Or4D_y4OtPPxb6zVINSBweS&index=24
 
 - event:
     name: DeveloperWeek
@@ -248,6 +276,7 @@
     location: Online
   talks:
     - title: JavaScript for emails, are you sure?
+      video: https://www.youtube.com/watch?v=l-SCY3Hetg4&list=PL03Lrmd9CiGcBSQFKFHX_lXD66JcSyVp8&index=49
 
 - event:
     name: Apidays Live Hong Kong
@@ -257,6 +286,7 @@
     location: Online
   talks:
     - title: The trouble with webhooks
+      video: https://www.youtube.com/watch?v=BzuwvN1D3-w&list=PLmEaqnTJ40OopeQY8swTurSDCic0g6cOT&index=31&t=1s
 
 - event:
     name: Twilio SIGNAL
@@ -269,12 +299,13 @@
 
 - event:
     name: GIDS.Web Live
-    link: https://www.wurreka.com/ict/virtual-conference/web/
+    link: https://saltmarch.com/watch/4-steps-from-javascript-to-typescript
     start_date: 2020-10-01
     end_date: 2020-10-02
     location: Online
   talks:
     - title: 4 Steps from JavaScript to TypeScript
+      video: https://saltmarch.com/watch/4-steps-from-javascript-to-typescript
 
 - event:
     name: Web Directions Code://Remote
@@ -305,6 +336,7 @@
   talks:
     - title: The trouble with webhooks
       slides: https://speakerdeck.com/philnash/the-trouble-with-webhooks-at-apidays-singapore
+      video: https://www.youtube.com/watch?v=44jbv3UmcKc&list=PLmEaqnTJ40OrWk_9mQMfbrIjoOZf3-My-&index=23
 
 - event:
     name: "Techweek2020: Developer happiness tooling"
@@ -370,6 +402,7 @@
   talks:
     - title: What's going on with Project Fugu?
       slides: https://speakerdeck.com/philnash/whats-going-on-with-project-fugu-at-devfest-melbourne
+      video: https://www.youtube.com/watch?v=3v9DYMvoXu4&list=PLGaWx2vWMpTUc41vQzXuQmUzx0fXHKlaE&index=17
 
 - event:
     name: NDC Sydney
@@ -380,6 +413,7 @@
   talks:
     - title: What's going on with Project Fugu?
       slides: https://speakerdeck.com/philnash/whats-going-on-with-project-fugu-at-ndc-sydney
+      video: https://www.youtube.com/watch?v=xniolu3w5Ro&list=PL03Lrmd9CiGcg2_VkY3AdZs3-bR9jzu4J&index=2
 
 - event:
     name: Pycon Singapore
@@ -390,6 +424,7 @@
   talks:
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-at-pycon-singapore
+      video: https://www.youtube.com/watch?v=CWgdwytvdL0
 
 - event:
     name: Sydney Identity & Security meetup
@@ -418,6 +453,7 @@
   talks:
     - title: Web Sharing is Web Caring
       slides: https://speakerdeck.com/philnash/web-sharing-is-web-caring
+      video: https://www.youtube.com/watch?v=ConaWyR2TXQ
 
 - event:
     name: RubyConf Thailand
@@ -428,6 +464,7 @@
   talks:
     - title: Smaller is always better
       slides: https://speakerdeck.com/philnash/smaller-is-always-better-rubyconf-thailand
+      video: https://www.youtube.com/watch?v=0OeYnDNO5aI
 
 - event:
     name: CampJS
@@ -520,6 +557,7 @@
   talks:
     - title: Everything they don’t tell you about video in the browser
       slides: https://speakerdeck.com/philnash/everything-they-dont-tell-you-about-video-in-the-browser
+      video: https://www.youtube.com/watch?v=Rc-pj0hToHw&list=PLGaWx2vWMpTVqivqGmHkPFTyf6PXXtNoo&index=4
 
 - event:
     name: RORO Sydney
@@ -549,6 +587,7 @@
   talks:
     - title: Service workers - beyond the cache
       slides: https://speakerdeck.com/philnash/service-workers-beyond-the-cache-ndc-sydney
+      video: https://www.youtube.com/watch?v=65ibyDjxuwM
 
 - event:
     name: Web Directions Code
@@ -568,6 +607,7 @@
   talks:
     - title: Service Workers - Beyond The Cache
       slides: https://speakerdeck.com/philnash/service-workers-beyond-the-cache-angular-conf-australia
+      video: https://www.youtube.com/watch?v=WqCRv6kRD9w
 
 - event:
     name: JSConf EU
@@ -619,7 +659,7 @@
       video: https://www.youtube.com/watch?v=M2mGYdnFRVU
 
 - event:
-    name: "MelbJS"
+    name: MelbJS
     start_date: 2018-01-10
     link: http://melbjs.com/
     location: "Melbourne, Australia"
