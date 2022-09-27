@@ -26,6 +26,15 @@
     - title: Web APIs for delightful two factor auth experiences
 
 - event:
+    name: Fenders Perth
+    link: https://www.meetup.com/front-end-web-developers-perth/events/287602602/
+    start_date: 2022-09-07
+    end_date: 2022-09-07
+    location: Perth, Australia
+  talks:
+    - title: Secrets of the Credential Management APIs
+
+- event:
     name: MelbJS
     link: http://melbjs.com/
     start_date: 2022-08-10
