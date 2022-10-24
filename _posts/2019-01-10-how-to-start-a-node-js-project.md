@@ -68,7 +68,7 @@ Once you have that customised to your liking, `npm init -y` will always produce 
 
 ## Building your own init script
 
-There are some improvements that I'd make to Tierney's commands, though I appreciate he was constrained by Twitter. Here's a bash script I have come up with inspired by his tweet.
+There are some improvements that I'd make to Tierney's commands, though I appreciate they were constrained by Twitter. Here's a bash script I have come up with inspired by their tweet.
 
 ```bash
 function node-project {
@@ -88,6 +88,6 @@ You can take this function and add it to your `~/.bash_profile`. Then, either `s
 
 ## Go start a project
 
-Now you have the perfect script to start a Node.js project why not go create a new one. I have a few small projects in mind that I plan to build this year and this is a nice basis to start from.
+Now you have the perfect script to start a Node.js project why not go create a new one? I have a few small projects in mind that I plan to build this year and this is a nice basis to start from.
 
 If you have any more suggestions to improve the script, let me know on [Twitter at @philnash](https://twitter.com). Happy open sourcing!
