@@ -15,10 +15,15 @@ url: "https://philna.sh" # the base hostname & protocol for your site
 domain: "philna.sh"
 twitter_username: philnash
 twitter_user_id: 9152632
-github_username:  philnash
+github_username: philnash
 payment_pointer: $ilp.uphold.com/jWYNH2JiKFRB
 timezone: Europe/London
 sw_cache_version: 2
+
+mastodon:
+  username: philnash
+  instance: mastodon.social
+keep_files: [".well-known/webfinger"]
 
 # Build settings
 exclude: [deploy, bower_components]
@@ -35,6 +40,7 @@ plugins:
   - jekyll-zopfli
   - jekyll-brotli
   - jekyll/web_monetization
+  - jekyll/mastodon_webfinger
 
 assets:
   prefix: /assets
@@ -43,10 +49,8 @@ assets:
   digest: true
   precompile: []
 
-
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts" # previously `page` in Jekyll 2.2.
     values:
