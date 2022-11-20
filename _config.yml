@@ -23,7 +23,6 @@ sw_cache_version: 2
 mastodon:
   username: philnash
   instance: mastodon.social
-keep_files: [".well-known/webfinger"]
 
 # Build settings
 exclude: [deploy, bower_components]
