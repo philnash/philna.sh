@@ -22,6 +22,7 @@ module Jekyll
 end
 
 Jekyll::Hooks.register :site, :after_init do |site|
-  keep_files = site.config["keep_files"] || []
-  site.config["keep_files"] = keep_files.push("_redirects").uniq
+  # keep_files = site.config["keep_files"] || []
+  # site.config["keep_files"] = keep_files.push("_redirects").uniq
+  site.config["keep_files"].push("_redirects")
 end
