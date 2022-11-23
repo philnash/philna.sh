@@ -1,3 +1,5 @@
+require "fileutils"
+
 module Jekyll
   class Redirects < Jekyll::Generator
     MAP = {
@@ -10,8 +12,8 @@ module Jekyll
 
     def generate(site)
       destination = site.config["destination"]
+      FileUtils.mkdir_p(destination)
       filename = File.join(destination, "_redirects")
-      puts redirects
       File.open(filename, "w") do |file|
         file.write redirects
       end
