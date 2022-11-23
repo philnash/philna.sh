@@ -9,3 +9,5 @@ It is powered by [Jekyll](https://jekyllrb.com/) with help from the following aw
 * [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
 * [jekyll-zopfli](https://github.com/philnash/jekyll-zopfli)
 * [jekyll-brotli](https://github.com/philnash/jekyll-brotli)
+* [jekyll-web_monetization](https://github.com/philnash/jekyll-web_monetization)
+* [jekyll-mastodon_webfinger](https://github.com/philnash/jekyll-mastodon_webfinger)
