@@ -11,7 +11,7 @@ image_width: 1200
 image_height: 600
 ---
 
-Mastodon is different to most online services. Because it is a federated network, when you set up an account you need to [choose a server to use](https://docs.joinmastodon.org/user/signup/). Your username then becomes a combination of your handle and that server you signed up to. For example, I am currently [@philnash@mastodon.social](https://mastodon.social/@philnash).
+Mastodon is different to most online services. It is a federated network, so when you set up an account you need to [choose a server to use](https://docs.joinmastodon.org/user/signup/). Your username then becomes a combination of your handle and that server you signed up to. For example, I am currently [@philnash@mastodon.social](https://mastodon.social/@philnash).
 
 But what if you want to personalise that a bit more? What if you wanted to use your own domain for your Mastodon account without having to host a whole Mastodon server? Using your own domain means that no matter what instance you used, or if you moved instance, you could share one Mastodon username that always pointed to the right profile and was personalised to your own site.
 
@@ -54,7 +54,7 @@ You can serve up your own WebFinger JSON on your Jekyll site to point to your Ma
      instance: mastodon.social
    ```
 
-Next time you build the site, you will find a `/.well-known/webfinger` file in your output directory, and when you deploy you will be able to refer to your Mastodon account using your onw domain.
+Next time you build the site, you will find a `/.well-known/webfinger` file in your output directory, and when you deploy you will be able to refer to your Mastodon account using your own domain.
 
 You can see the result of this by checking the WebFinger endpoint on my domain: [https://philna.sh/.well-known/webfinger](https://philna.sh/.well-known/webfinger) or by searching for `@phil@philna.sh` on your Mastodon instance.
 
