@@ -2,9 +2,10 @@
 layout: post
 title: "Better two factor authentication experiences with WebOTP"
 tags:
-  - ruby
-  - jekyll
-  - mastodon
+  - web
+  - javascript
+  - security
+  - user experience
 image: posts/webotp/webotp-better-experiences
 image_alt: "Better two factor authentication experiences with WebOTP"
 social_image: posts/webotp/webotp-better-experiences-social
