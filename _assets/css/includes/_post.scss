@@ -22,15 +22,57 @@
 }
 
 .post-meta {
+  border-top: 5px solid $grey-color-light;
+  border-bottom: 5px solid $grey-color-light;
+  margin-bottom: $spacing-unit;
+  padding-top: $spacing-unit / 2;
+  overflow: hidden;
+}
+
+.post-list .post-meta {
+  border:none;
+  padding: 0;
+  margin-bottom: $spacing-unit
+}
+
+.post-meta p {
   font-style: italic;
   font-size: $small-font-size;
   font-family: $base-font-family;
   font-weight: 400;
   text-transform: none;
+  margin-bottom: $spacing-unit / 2;
+}
+
+@include media-query-min(700px) {
+  .post-meta .meta {
+    float:left;
+  }
+  .post-meta .subscribe {
+    float: right;
+  }
+}
+
+.subscribe svg {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  fill: $brand-color;
 }
 
 .post footer {
   margin-top: $spacing-unit * 2;
+}
+
+.blog-meta {
+  clear: both;
+  border-top: 5px solid $grey-color-light;
+  border-bottom: 5px solid $grey-color-light;
+  margin-bottom: $spacing-unit;
+}
+.blog-meta p {
+  padding-top: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
 }
 
 .post-list {
@@ -44,6 +86,7 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
 .post-list .post-header-image {
   margin-top: $spacing-unit;
 }

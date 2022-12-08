@@ -1,9 +1,24 @@
-<p class="post-meta">Published on
-  <a href="{{ include.page.url }}" class="u-url" itemprop="url mainEntityOfPage"><time class="dt-published" datetime="{{ include.page.date | date_to_xmlschema }}" itemprop="datePublished">{{ include.page.date | date: "%b %-d, %Y" }}</time></a>
-  {% if include.page.author %}
-    by
+<div class="post-meta">
+  <p class="meta">
+    Published on
+    <a
+      href="{{ include.page.url }}"
+      class="u-url"
+      itemprop="url mainEntityOfPage"
+      ><time
+        class="dt-published"
+        datetime="{{ include.page.date | date_to_xmlschema }}"
+        itemprop="datePublished"
+        >{{ include.page.date | date: "%b %-d, %Y" }}</time
+      ></a
+    >
+    {% if include.page.author %} by
     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <a class="p-author h-card" href="{{ include.page.author_url }}"><span itemprop="name">{{ include.page.author }}</span></a>
+      <a class="p-author h-card" href="{{ include.page.author_url }}"
+        ><span itemprop="name">{{ include.page.author }}</span></a
+      >
     </span>
-  {% endif %}
-</p>
+    {% endif %}
+  </p>
+  {% if include.subscribe %} {% include subscribe.html %} {% endif %}
+</div>

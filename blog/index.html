@@ -4,29 +4,28 @@ title: Blog
 ---
 
 <div class="home row h-feed">
-
   <header class="page-header cell cell-12">
     <h1 class="page-title">{{ page.title }}</h1>
   </header>
 
+  <div class="blog-meta cell cell-12 cell-med-10 cell-centre">
+    {% include subscribe.html %}
+  </div>
+
   <ul class="post-list">
     {% for post in paginator.posts %}
-      <li class="cell cell-12 cell-med-10 cell-centre post h-entry">
-        <a class="post-link u-url" href="{{ post.url | prepend: site.baseurl }}">
-          {% include post_image.html page=post %}
+    <li class="cell cell-12 cell-med-10 cell-centre post h-entry">
+      <a class="post-link u-url" href="{{ post.url | prepend: site.baseurl }}">
+        {% include post_image.html page=post %}
 
-          <h2 class="p-name">{{ post.title }}</h2>
-        </a>
-        {% include post_meta.html page=post %}
-
-        {{ post.excerpt }}
-      </li>
+        <h2 class="p-name">{{ post.title }}</h2>
+      </a>
+      {% include post_meta.html page=post %} {{ post.excerpt }}
+    </li>
     {% endfor %}
   </ul>
 
   {% include pagination.html %}
 
-  <div class="post-promo cell cell-12">
-    {% include subscribe_rss.html %}
-  </div>
+  <div class="post-promo cell cell-12">{% include subscribe_rss.html %}</div>
 </div>
