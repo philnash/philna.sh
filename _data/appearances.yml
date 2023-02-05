@@ -1,4 +1,12 @@
 - event:
+    name: NDC Oslo
+    link: https://ndcoslo.com/speakers/phil-nash
+    start_date: 2023-05-24
+    end_date: 2023-05-26
+  talks:
+    - title: The top 5 JavaScript issues in all our codebases
+
+- event:
     name: Programmable Sydney
     link: https://www.programmable.tech/speaker-profiles/phil-nash
     start_date: 2023-03-30
