@@ -8,6 +8,15 @@
     - title: The top 5 JavaScript issues in all our codebases
 
 - event:
+    name: jsDay
+    link: https://2023.jsday.it/talks_speakers/#Phil%20Nash
+    start_date: 2023-04-13
+    end_date: 2023-04-14
+    location: Verona, Italy
+  talks:
+    - title: The top 5 JavaScript issues in all our codebases
+
+- event:
     name: Programmable Sydney
     link: https://www.programmable.tech/speaker-profiles/phil-nash
     start_date: 2023-03-30
