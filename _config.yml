@@ -9,7 +9,7 @@
 title: Phil Nash
 email: philnash@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Phil Nash is a developer, speaker, blogger and occasionally a brewer.
+  Phil Nash is a developer, speaker, blogger, developer advocate, sausage dog owner and beer lover.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://philna.sh" # the base hostname & protocol for your site
 domain: "philna.sh"
