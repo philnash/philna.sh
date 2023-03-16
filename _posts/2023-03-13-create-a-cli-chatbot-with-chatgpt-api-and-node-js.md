@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Create a CLI Chatbot with the ChatGTP API and Node.js"
+title: "Create a CLI Chatbot with the ChatGPT API and Node.js"
 tags: openai, chatgpt, javascript, node
 image: posts/chatgpt/openai-node
 image_alt: "The OpenAI logo and the Node.js API"
