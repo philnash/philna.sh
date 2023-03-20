@@ -1,4 +1,13 @@
 - event:
+    name: "Web Directions: Code"
+    link: https://webdirections.org/code/speakers/phil-nash.php
+    start_date: 2023-06-08
+    end_date: 2023-06-09
+    location: Melbourne, Australia
+  talks:
+    - title: The top 5 JavaScript issues in all our codebases
+
+- event:
     name: NDC Oslo
     link: https://ndcoslo.com/speakers/phil-nash
     start_date: 2023-05-24
@@ -351,7 +360,7 @@
       video: https://saltmarch.com/watch/4-steps-from-javascript-to-typescript
 
 - event:
-    name: Web Directions Code://Remote
+    name: "Web Directions: Code://Remote"
     start_date: 2020-09-04
     end_date: 2020-09-25
     link: https://www.webdirections.org/code/speakers/phil-nash.php
@@ -558,7 +567,7 @@
       video: https://www.youtube.com/watch?v=iQDQMQC5NTo
 
 - event:
-    name: Web Directions Code
+    name: "Web Directions: Code"
     start_date: 2019-06-20
     end_date: 2019-06-21
     location: Melbourne, Australia
@@ -633,7 +642,7 @@
       video: https://www.youtube.com/watch?v=65ibyDjxuwM
 
 - event:
-    name: Web Directions Code
+    name: "Web Directions: Code"
     start_date: 2018-08-01
     end_date: 2018-08-02
     location: Melbourne, Australia
@@ -719,7 +728,7 @@
     - title: "Aggressive Web Apps"
 
 - event:
-    name: Web Directions Summit
+    name: "Web Directions: Summit"
     start_date: 2017-11-09
     end_date: 2017-11-10
     link: http://webdirections.org/wds17/speakers/phil-nash.html
