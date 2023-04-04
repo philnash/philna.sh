@@ -8,6 +8,15 @@
     - title: The top 5 JavaScript issues in all our codebases
 
 - event:
+    name: JSNation
+    link: https://jsnation.com/
+    start_date: 2023-06-01
+    end_date: 2023-06-05
+    location: Amsterdam, Netherlands and online
+  talks:
+    - title: The State of Passwordless Auth on the Web
+
+- event:
     name: NDC Oslo
     link: https://ndcoslo.com/speakers/phil-nash
     start_date: 2023-05-24
