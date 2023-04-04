@@ -9,12 +9,12 @@ import appearances from "../data/appearances.yml";
 
 const today = new Date();
 
-const upcoming = appearances.filter(
-  (appearance) => appearance.event.start_date >= today
-);
-const past = appearances.filter(
-  (appearance) => appearance.event.start_date < today
-);
+const upcoming = appearances
+  .filter((appearance) => appearance.event.start_date >= today)
+  .sort((a, b) => a.event.start_date.getTime() - b.event.start_date.getTime());
+const past = appearances
+  .filter((appearance) => appearance.event.start_date < today)
+  .sort((a, b) => b.event.start_date.getTime() - a.event.start_date.getTime());
 
 const title = "Speaking";
 const description =
