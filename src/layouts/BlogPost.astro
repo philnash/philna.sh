@@ -1,0 +1,87 @@
+---
+import type { CollectionEntry } from "astro:content";
+import DefaultLayout from "./DefaultLayout.astro";
+import CarbonAds from "../components/CarbonAds.astro";
+import PostMeta from "../components/PostMeta.astro";
+import SubscribeRss from "../components/SubscribeRss.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
+import Share from "../components/Share.astro";
+import PostMedia from "../components/PostMedia.astro";
+
+type Props = CollectionEntry<"blog">["data"] & { id: string };
+
+const {
+  title,
+  description,
+  pubDate,
+  image,
+  imageWidth,
+  imageHeight,
+  imageAlt,
+  socialImage,
+  showImage = true,
+  video,
+  videoHeight,
+  videoWidth,
+  tags,
+  id,
+  scripts,
+} = Astro.props;
+---
+
+<DefaultLayout
+  title={title}
+  description={description}
+  type="post"
+  image={socialImage ? socialImage : image}
+  imageAlt={imageAlt}
+>
+  <div class="row">
+    <article
+      class="post h-entry"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <header class="post-header cell cell-12">
+        <h1 class="post-title p-name" itemprop="name headline">
+          {title}
+        </h1>
+        <PostMedia
+          image={image}
+          imageAlt={imageAlt}
+          imageHeight={imageHeight}
+          imageWidth={imageWidth}
+          showImage={showImage}
+          video={video}
+          videoWidth={videoWidth}
+          videoHeight={videoHeight}
+        />
+      </header>
+
+      <div class="cell cell-12 cell-med-12">
+        <PostMeta pubDate={pubDate} subscribe={true} />
+      </div>
+
+      <div class="row">
+        <div
+          class="post-content cell cell-12 cell-med-9 e-content"
+          itemprop="articleBody"
+        >
+          <slot />
+        </div>
+        <div class="cell cell-12 cell-med-3">
+          <CarbonAds />
+        </div>
+      </div>
+      <div class="post-promo cell cell-12">
+        <Share title={title} />
+        <RelatedPosts tags={tags} id={id} />
+        <SubscribeRss />
+      </div>
+    </article>
+  </div>
+  {
+    scripts &&
+      scripts.map((script) => <Fragment set:html={script} slot="body-end" />)
+  }
+</DefaultLayout>

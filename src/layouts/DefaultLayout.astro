@@ -1,0 +1,40 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE } from "../consts";
+
+type Props = {
+  title: string;
+  description?: string;
+  type?: "page" | "post";
+  image?: string;
+  imageAlt?: string;
+};
+
+const { title, description, type = "page", image, imageAlt } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      type={type}
+      image={image}
+      imageAlt={imageAlt}
+    />
+    <slot name="head" />
+  </head>
+  <body>
+    <div class="page wrapper">
+      <Header title={SITE_TITLE} />
+      <main>
+        <slot />
+      </main>
+    </div>
+    <Footer />
+    <slot name="body-end" />
+  </body>
+</html>

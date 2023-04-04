@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from "astro:content";
+import PostImage from "./PostImage.astro";
+import PostVideo from "./PostVideo.astro";
+
+type Props = Pick<
+  CollectionEntry<"blog">["data"],
+  | "image"
+  | "imageAlt"
+  | "imageWidth"
+  | "imageHeight"
+  | "video"
+  | "videoHeight"
+  | "videoWidth"
+  | "showImage"
+>;
+const {
+  imageWidth,
+  imageHeight,
+  imageAlt,
+  image,
+  video,
+  videoHeight,
+  videoWidth,
+  showImage = true,
+} = Astro.props;
+---
+
+{
+  showImage && (
+    <PostImage
+      image={image}
+      imageAlt={imageAlt}
+      imageHeight={imageHeight}
+      imageWidth={imageWidth}
+    />
+  )
+}
+<PostVideo video={video} videoHeight={videoHeight} videoWidth={videoWidth} />

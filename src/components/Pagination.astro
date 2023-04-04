@@ -1,0 +1,71 @@
+---
+import type { Page } from "astro";
+
+type Props = {
+  page: Page<any>;
+  maxPages?: number;
+};
+
+const { page, maxPages = 5 } = Astro.props;
+let first = 1;
+let last = page.lastPage;
+const halfPages = Math.floor(maxPages / 2);
+const rightMargin = page.lastPage - page.currentPage;
+if (page.currentPage <= halfPages) {
+  if (page.lastPage > maxPages) {
+    last = maxPages;
+  }
+} else if (rightMargin <= halfPages) {
+  first = Math.max(page.lastPage - maxPages, first);
+} else {
+  first = Math.max(page.currentPage - halfPages, first);
+  last = Math.min(page.currentPage + halfPages, last);
+}
+
+let previousLink = page.url.prev === "/blog/page/" ? "/blog" : page.url.prev;
+
+const pageNumbers = Array(last - first + 1)
+  .fill(0)
+  .map((_, index) => first + index);
+---
+
+<div class="pagination row">
+  {
+    previousLink ? (
+      <a href={previousLink} class="previous-page">
+        &laquo; Prev
+      </a>
+    ) : (
+      <span class="previous-page">&laquo; Prev</span>
+    )
+  }
+  {first > 1 && <span class="start-ellipsis" />}
+  {
+    pageNumbers.map((pageNumber) => {
+      if (pageNumber === page.currentPage) {
+        return <em>{pageNumber}</em>;
+      } else if (pageNumber === 1) {
+        return (
+          <a class="number" href="/blog">
+            {pageNumber}
+          </a>
+        );
+      }
+      return (
+        <a class="number" href={`/blog/page/${pageNumber}`}>
+          {pageNumber}
+        </a>
+      );
+    })
+  }
+  {last < page.lastPage && <span class="end-ellipsis" />}
+  {
+    page.url.next ? (
+      <a href={page.url.next} class="next-page">
+        Next &raquo;
+      </a>
+    ) : (
+      <span class="next-page">Next &raquo;</span>
+    )
+  }
+</div>

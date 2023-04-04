@@ -1,0 +1,37 @@
+---
+import Icon from "./Icon.astro";
+import Subscribe from "./Subscribe.astro";
+import { SITE_AUTHOR } from "../consts";
+type Props = {
+  pubDate: Date;
+  subscribe?: Boolean;
+};
+const { pubDate, subscribe } = Astro.props;
+---
+
+<div class="post-meta">
+  <p class="meta">
+    Published on
+    <a href={Astro.url} class="u-url" itemprop="url mainEntityOfPage"
+      ><time
+        class="dt-published"
+        datetime={pubDate.toISOString()}
+        itemprop="datePublished"
+        >{
+          pubDate.toLocaleDateString("en-us", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          })
+        }</time
+      ></a
+    >
+    by
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <a class="p-author h-card" href={Astro.site} itemprop="url"
+        ><span itemprop="name">{SITE_AUTHOR}</span></a
+      >
+    </span>
+  </p>
+  {subscribe && <Subscribe />}
+</div>

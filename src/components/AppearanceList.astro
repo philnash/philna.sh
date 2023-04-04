@@ -1,0 +1,15 @@
+---
+import type { Appearance } from "../data/appearances.yml";
+import AppearanceItem from "./AppearanceItem.astro";
+type Props = {
+  appearances: Appearance[];
+  heading: string;
+};
+
+const { heading, appearances } = Astro.props;
+---
+
+<h2 class="section-title">{heading}</h2>
+<ol class="speaking-list cell cell-12 cell-med-8 cell-centre">
+  {appearances.map((appearance) => <AppearanceItem appearance={appearance} />)}
+</ol>

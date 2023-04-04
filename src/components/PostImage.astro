@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+type Props = Pick<
+  CollectionEntry<"blog">["data"],
+  "image" | "imageAlt" | "imageWidth" | "imageHeight"
+>;
+const { imageWidth, imageHeight, imageAlt, image } = Astro.props;
+---
+
+{
+  image && imageHeight && imageWidth && (
+    <figure class="post-header-image">
+      <Image
+        src={image}
+        alt={typeof imageAlt === "string" ? imageAlt : " "}
+        width={imageWidth}
+        height={imageHeight}
+        itemprop="image"
+      />
+    </figure>
+  )
+}

@@ -1,0 +1,26 @@
+---
+import BlogList from "../../../layouts/BlogList.astro";
+import { sortedBlogPosts } from "../../../utils/blog_posts";
+import { PER_PAGE } from "../../../consts";
+import type { GetStaticPathsOptions, Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const posts = await sortedBlogPosts();
+  const pages = paginate(posts, { pageSize: PER_PAGE });
+  // shift gets rid of the first page, which is handled separately by src/pages/blog/index
+  pages.shift();
+  return pages;
+}
+
+type Props = {
+  page: Page<CollectionEntry<"blog">>;
+};
+
+const { page } = Astro.props;
+const posts = page.data;
+
+const title = "Blog";
+---
+
+<BlogList title={title} posts={posts} page={page} />

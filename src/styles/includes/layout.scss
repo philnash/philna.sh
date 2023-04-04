@@ -1,0 +1,77 @@
+html {
+  background: $brand-color;
+  border-top: 5px solid $highlight-color;
+  border-bottom: 5px solid $highlight-color;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  border-top: 5px solid $brand-color;
+  border-bottom: 5px solid $brand-color;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 990px;
+  padding: 0 (math.div($spacing-unit, 2));
+  margin: 0 auto;
+}
+
+.page {
+  min-height: 100%;
+  padding-bottom: $spacing-unit*2;
+}
+
+.page:after {
+  content: "";
+  display: block;
+}
+
+.row {
+  width: 100%;
+  clear: both;
+  @extend %clearfix;
+}
+
+.cell {
+  padding: 0 (math.div($spacing-unit, 2));
+  float: left;
+  display: block;
+  margin: 0;
+}
+.cell .cell {
+  padding: 0;
+}
+.cell-centre {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+$columns: 12;
+
+@for $i from 1 through $columns {
+  .cell-#{$i} {
+    width: ((math.div(100, $columns)) * $i) * 1%;
+  }
+
+  .cell-offset-#{$i} {
+    margin-left: ((math.div(100, $columns)) * $i) * 1%;
+  }
+}
+
+@include media-query-min(700px) {
+  @for $i from 1 through $columns {
+    .cell-med-#{$i} {
+      width: ((math.div(100, $columns)) * $i) * 1%;
+    }
+
+    .cell-med-offset-#{$i} {
+      margin-left: ((math.div(100, $columns)) * $i) * 1%;
+    }
+  }
+}

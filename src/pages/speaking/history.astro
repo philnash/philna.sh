@@ -1,0 +1,45 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import AppearanceList from "../../components/AppearanceList.astro";
+import SpeakingHeader from "../../components/SpeakingHeader.astro";
+
+import { SITE_TITLE } from "../../consts";
+
+import appearances, { Appearance } from "../../data/appearances.yml";
+
+const today = new Date();
+
+const appearancesByYear = appearances
+  .filter((appearance) => appearance.event.start_date < today)
+  .reduce<Record<string, Appearance[]>>((apps, appearance) => {
+    const year = appearance.event.start_date.getFullYear().toString();
+    if (apps[year]) {
+      apps[year].push(appearance);
+    } else {
+      apps[year] = [appearance];
+    }
+    return apps;
+  }, {});
+
+Object.keys(appearancesByYear).forEach((year) =>
+  appearancesByYear[year].sort(
+    (a, b) => b.event.start_date.getTime() - a.event.start_date.getTime()
+  )
+);
+const years = Object.keys(appearancesByYear).sort().reverse();
+
+const title = "Speaking History";
+const description = "Phil Nash's speaking history";
+---
+
+<DefaultLayout title={`${title} | ${SITE_TITLE}`} description={description}>
+  <SpeakingHeader title={title} />
+
+  <div class="row cell">
+    {
+      years.map((year) => (
+        <AppearanceList heading={year} appearances={appearancesByYear[year]} />
+      ))
+    }
+  </div>
+</DefaultLayout>

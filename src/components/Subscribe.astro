@@ -1,0 +1,9 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<p class="subscribe">
+  <a href={new URL("/feed.xml", Astro.site)}>
+    <Icon icon="rss" /> Subscribe to this blog
+  </a>
+</p>

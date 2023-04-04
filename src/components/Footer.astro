@@ -1,0 +1,73 @@
+---
+import FooterIcon from "./FooterIcon.astro";
+const today = new Date();
+const year = today.getFullYear();
+
+const footerIcons = [
+  {
+    url: "https://twitter.com/philnash",
+    name: "Twitter",
+  },
+  {
+    url: "https://github.com/philnash",
+    name: "GitHub",
+  },
+  {
+    url: "https://www.facebook.com/philnash",
+    name: "Facebook",
+  },
+  {
+    url: "https://www.linkedin.com/in/philnash/",
+    name: "LinkedIn",
+  },
+  {
+    url: "https://www.instagram.com/philnash/",
+    name: "Instagram",
+  },
+  {
+    url: "https://stackoverflow.com/users/28376/philnash",
+    name: "StackOverflow",
+  },
+  {
+    url: "https://dev.to/philnash",
+    name: "DEV",
+  },
+  {
+    url: "https://hashnode.com/@philnash",
+    name: "Hashnode",
+  },
+  {
+    url: "https://twitch.tv/phil_nash",
+    name: "Twitch",
+  },
+  {
+    url: "https://mastodon.social/@philnash",
+    name: "Mastodon",
+  },
+];
+---
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="row">
+      <div class="cell cell-12 cell-med-8">
+        <h2>Find Phil on the Internet</h2>
+        <ul class="social">
+          {footerIcons.map((icon) => <FooterIcon {...icon} />)}
+        </ul>
+      </div>
+
+      <div class="cell cell-12 cell-med-4">
+        <p>
+          &copy; {year}
+          <a href="/">philnash</a>
+        </p>
+        <p>
+          <a href="/">home</a> &bull; <a href="/blog/">blog</a> &bull;
+          <a href="/speaking/">speaking</a> &bull;
+          <a href="/live/">live</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

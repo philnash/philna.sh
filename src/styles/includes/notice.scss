@@ -1,0 +1,24 @@
+.notice {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $brand-color;
+  color: $background-color;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.notice.hidden {
+  opacity: 0;
+}
+
+.notice p {
+  text-align: center;
+  margin: 0;
+  padding-top: math.div($spacing-unit, 2);
+  padding-bottom: math.div($spacing-unit, 2);
+}
+.notice a {
+  color: $background-color;
+}

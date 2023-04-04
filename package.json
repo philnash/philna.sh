@@ -1,0 +1,31 @@
+{
+  "name": "philna.sh",
+  "type": "module",
+  "version": "3.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@analytics-debugger/ga4mp": "^0.0.3",
+    "@astrojs/markdown-component": "^1.0.3",
+    "@astrojs/rss": "^2.3.2",
+    "@fontsource/merriweather": "^4.5.14",
+    "@fontsource/raleway": "^4.5.12",
+    "astro": "^2.1.9",
+    "astro-critters": "^1.1.31",
+    "markdown-it": "^13.0.1",
+    "sanitize-html": "^2.10.0",
+    "web-share-wrapper": "^0.2.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-yaml": "^4.0.1",
+    "@types/js-yaml": "^4.0.5",
+    "@types/markdown-it": "^12.2.3",
+    "@types/sanitize-html": "^2.9.0",
+    "sass": "^1.59.2"
+  }
+}

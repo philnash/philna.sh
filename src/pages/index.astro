@@ -1,0 +1,133 @@
+---
+import Markdown from "@astrojs/markdown-component";
+import Nav from "../components/Nav.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
+import AppearanceItem from "../components/AppearanceItem.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { getCollection } from "astro:content";
+import { postPath } from "../utils/blog_posts";
+import { Image } from "astro:assets";
+
+import philnash70 from "../assets/philnash70x70.jpg";
+import philnash70x2 from "../assets/philnash70x70@2x.jpg";
+import philnash70x3 from "../assets/philnash70x70@3x.jpg";
+import philnash120 from "../assets/philnash120x120.jpg";
+import philnash120x2 from "../assets/philnash120x120@2x.jpg";
+import philnash120x3 from "../assets/philnash120x120@3x.jpg";
+
+const posts = await getCollection("blog");
+const post = posts.sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+)[0];
+
+const postExcerpt = post.body.split(/\n\n/)[0];
+const posttSlug = postPath(post);
+
+import appearances from "../data/appearances.yml";
+
+const today = new Date();
+const upcoming = appearances
+  .filter((appearance) => appearance.event.start_date >= today)
+  .sort((a, b) => a.event.start_date.getTime() - b.event.start_date.getTime())
+  .slice(0, 3);
+
+let heading, apps;
+if (upcoming.length > 0) {
+  apps = upcoming;
+  heading = 'Phil\'s <a href="/speaking/">upcoming talks</a>.';
+} else {
+  apps = appearances
+    .filter((appearance) => appearance.event.start_date < today)
+    .slice(0, 3);
+  heading = 'Phil\'s latest <a href="/speaking/">talks</a>.';
+}
+---
+
+<HomeLayout description={SITE_DESCRIPTION} title={SITE_TITLE}>
+  <div class="home-page h-card" itemscope itemtype="https://schema.org/Person">
+    <header class="home-header header row">
+      <div class="home-nav cell cell-centre cell-12">
+        <Nav />
+      </div>
+      <Image
+        src={philnash120}
+        srcset={`${philnash70.src} 70w, ${philnash70x2.src} 140w, ${philnash70x3.src} 210w, ${philnash120.src} 120w, ${philnash120x2.src} 240w, ${philnash120x3.src} 360w`}
+        sizes="(min-width: 600px) 120px, 70px"
+        alt="A picture of Phil. He's smiling."
+        class="u-photo"
+        loading="eager"
+        itemprop="image"
+      />
+      <h1 class="p-name" itemprop="name">{SITE_TITLE}</h1>
+      <p>is a developer</p>
+    </header>
+
+    <main class="page-content page wrapper">
+      <div class="row">
+        <div class="intro cell cell-12 cell-med-10 cell-centre">
+          <h2>About</h2>
+          <p class="p-note">
+            <a
+              rel="me"
+              class="p-name u-url"
+              itemprop="url"
+              href="https://philna.sh/">Phil Nash</a
+            >
+            is a <span class="p-job-title" itemprop="jobTitle"
+              >developer advocate</span
+            > for
+            <span
+              itemprop="worksFor"
+              itemscope
+              itemtype="https://schema.org/Organization"
+              ><a
+                class="p-org h-card"
+                itemprop="url"
+                href="https://www.sonarsource.com/"
+                ><span itemprop="name">Sonar</span></a
+              ></span
+            >. Sometimes he <a href="/speaking/">writes code on stage</a> in front
+            of a crowd, hoping everything just works. Sometimes
+            <a rel="me" href="https://github.com/philnash/"
+              >he writes open source code</a
+            >, which is much less stressful because if it is wrong someone else
+            can correct it. He writes code in
+            <a rel="me" href="https://twitter.com/philnash">tweets</a> or
+            <a rel="me" href="https://mastodon.social/@philnash">toots</a> sometimes,
+            but not much fits. He has been known to
+            <a href="https://twitch.tv/phil_nash" rel="me"
+              >live code on Twitch</a
+            >
+            and if you're looking for code here,
+            <a href="/blog/">check out the blog</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="row the-rest">
+        <div class="cell cell-12 cell-med-6">
+          <h2>Blog</h2>
+          <p>The latest post from <a href="/blog/">Phil's blog</a>.</p>
+          <h3>
+            <a class="post-link" href={new URL(posttSlug, Astro.url)}
+              >{post.data.title}</a
+            >
+          </h3>
+          <Markdown>
+            {postExcerpt}
+          </Markdown>
+          <p>See all <a href="/blog/">blog posts</a>.</p>
+        </div>
+
+        <div class="cell cell-12 cell-med-6">
+          <h2>Speaking</h2>
+          <p set:html={heading} />
+          <ol class="speaking-list cell cell-12">
+            {apps.map((app) => <AppearanceItem appearance={app} />)}
+          </ol>
+          <p>See <a href="/speaking/">all upcoming and past talks</a>.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</HomeLayout>

@@ -1,0 +1,79 @@
+.section-title {
+  text-align: center;
+}
+
+.speaking-header-image {
+  display: block;
+  width: 100%;
+  margin-bottom: $spacing-unit;
+}
+
+.speaking-list {
+  list-style-type: none;
+  margin-bottom: $spacing-unit * 2;
+  padding: 0;
+}
+
+.speaking-list .talk {
+  padding-bottom: math.div($spacing-unit, 2);
+  padding-top: math.div($spacing-unit, 2);
+  border-bottom: 1px solid $border-color;
+}
+.speaking-list .talk:first-child {
+  padding-top: 0;
+}
+
+.speaking-list .talk:last-child {
+  border-bottom: none;
+}
+
+.speaking-list .talk-meta {
+  font-style: italic;
+  font-size: $small-font-size;
+  font-family: $base-font-family;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 0;
+}
+
+.speaking-list .talk-event {
+  margin-bottom: 0;
+}
+
+.speaking-list .talk .talk-title ~ .talk-title {
+  margin-top: math.div($spacing-unit, 2);
+}
+
+.speaking-list .talk-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.speaking-list .talk-materials {
+  margin-bottom: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.speaking-list .talk-materials li {
+  display: inline;
+}
+.speaking-list .talk-materials li::after {
+  content: ' \2022 ';
+}
+.speaking-list .talk-materials li:last-child::after {
+  content: '';
+}
+
+.speaker-info dt {
+  font-weight: bold;
+  float: left;
+  clear: left;
+  display: block;
+}
+
+.speaker-info dd {
+  display: block;
+  margin-left: 150px;
+}
+

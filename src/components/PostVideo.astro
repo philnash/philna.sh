@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from "astro:content";
+type Props = Pick<
+  CollectionEntry<"blog">["data"],
+  "video" | "videoWidth" | "videoHeight"
+>;
+const { videoWidth, videoHeight, video } = Astro.props;
+---
+
+{
+  video && videoHeight && videoWidth && (
+    <figure class="post-header-image">
+      <video
+        class="post-header-image"
+        autoplay
+        playsinline
+        muted
+        loop
+        width={videoWidth}
+        height={videoHeight}
+      >
+        <source src={video} />
+      </video>
+    </figure>
+  )
+}

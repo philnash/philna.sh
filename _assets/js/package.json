@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "web-monetization-ad-hider": "^0.3.0",
-    "web-share-wrapper": "^0.2.1"
-  }
-}

@@ -1,0 +1,88 @@
+.social {
+  list-style-type: none;
+  margin: 0 0 $spacing-unit;
+  padding: 0;
+  overflow: hidden;
+}
+.social li.cell {
+  margin-bottom: math.div($spacing-unit, 4);
+}
+.social svg {
+  display: inline-block;
+  height: $base-font-size * 1.5;
+  width: $base-font-size * 1.5;
+  vertical-align: bottom;
+}
+.social a {
+  border-bottom: 2px solid transparent;
+}
+.social .twitter {
+  color: #007abc;
+  fill: #007abc;
+}
+.social .twitter:hover{
+  border-color: #007abc;
+}
+.social .github {
+  color: #171515;
+  fill: #171515;
+}
+.social .github:hover {
+  border-color: #171515;
+}
+.social .facebook {
+  color: #3b5998;
+  fill: #3b5998;
+}
+.social .facebook:hover{
+  border-color: #3b5998;
+}
+.social .linkedin {
+  color: #0077b5;
+  fill: #0077b5;
+}
+.social .linkedin:hover {
+  border-color: #0077b5;
+}
+.social .instagram {
+  color: #b900b3;
+  fill: #b900b3;
+}
+.social .instagram:hover {
+  border-color: #b900b3;
+}
+.social .stackoverflow {
+  color: #b75c00;
+  fill: #b75c00;
+}
+.social .stackoverflow:hover {
+  border-color: #b75c00;
+}
+.social .dev {
+  color: #000;
+  fill: #000;
+}
+.social .dev:hover {
+  border-color: #000;
+}
+.social .hashnode {
+  color: #296CF2;
+  fill: #296CF2;
+}
+.social .hashnode:hover {
+  border-color: #296CF2;
+}
+.social .twitch {
+  color: #9146FF;
+  fill: #9146FF;
+}
+.social .twitch:hover {
+  border-color: #9146FF;
+}
+.social .mastodon {
+  color: #6364FF;
+  fill: #6364FF;
+}
+.social .mastodon:hover {
+  border-color: #6364FF;
+}

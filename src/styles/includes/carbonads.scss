@@ -1,0 +1,52 @@
+#carbonads {
+  border-radius: $border-radius;
+  display: block;
+  padding: math.div($spacing-unit, 2) math.div($spacing-unit, 2) math.div($spacing-unit, 2) 160px;
+  margin-left: -(math.div($spacing-unit, 2));
+  margin-right: -(math.div($spacing-unit, 2));
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: left;
+  background-color: $grey-color-light;
+  float: right;
+}
+#carbonads .carbon-img {
+  display: block;
+  margin-left:-145px;
+  float:left;
+}
+#carbonads .carbon-img img {
+  display: block;
+}
+@include media-query-min(700px) {
+  #carbonads {
+    max-width: 160px;
+    margin: 0 0 math.div($spacing-unit, 2) 0;
+    padding: math.div($spacing-unit, 2);
+  }
+
+  #carbonads .carbon-img {
+    margin-left: 0;
+    margin-bottom: math.div($spacing-unit, 2);
+    float: none;
+  }
+}
+
+#carbonads a {
+  color: $text-color;
+  border: none;
+}
+
+#carbonads .carbon-wrap {
+  margin-bottom: math.div($spacing-unit, 4);
+  display: block;
+}
+
+#carbonads .carbon-poweredby {
+  font-size: 10px;
+  display: block;
+  text-align: right;
+  border: none;
+  color: lighten($text-color, 20%);
+}

@@ -1,0 +1,30 @@
+---
+import type { Talk } from "../data/appearances.yml";
+type Props = {
+  talk: Talk;
+};
+const { talk } = Astro.props;
+---
+
+<p class="talk-title"><em>"{talk.title}"</em></p>
+{
+  (talk.slides || talk.video || talk.audio) && (
+    <ul class="talk-materials">
+      {talk.audio && (
+        <li>
+          <a href={talk.audio}>audio</a>
+        </li>
+      )}
+      {talk.video && (
+        <li>
+          <a href={talk.video}>video</a>
+        </li>
+      )}
+      {talk.slides && (
+        <li>
+          <a href={talk.slides}>slides</a>
+        </li>
+      )}
+    </ul>
+  )
+}

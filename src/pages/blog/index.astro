@@ -1,0 +1,31 @@
+---
+import BlogList from "../../layouts/BlogList.astro";
+import { PER_PAGE } from "../../consts";
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+import { sortedBlogPosts } from "../../utils/blog_posts";
+
+const allPosts = await sortedBlogPosts();
+const posts = allPosts.slice(0, PER_PAGE);
+
+const lastPage = Math.ceil(allPosts.length / PER_PAGE);
+
+const page: Page<CollectionEntry<"blog">> = {
+  data: posts,
+  start: 0,
+  end: posts.length,
+  total: allPosts.length,
+  currentPage: 1,
+  size: PER_PAGE,
+  lastPage,
+  url: {
+    current: Astro.url.pathname,
+    prev: undefined,
+    next: lastPage > 1 ? "/blog/page/2" : undefined,
+  },
+};
+
+const title = "Blog";
+---
+
+<BlogList title={title} posts={posts} page={page} />

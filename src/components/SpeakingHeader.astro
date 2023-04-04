@@ -1,0 +1,23 @@
+---
+import speakingHeader from "../assets/speaking.jpg";
+import { Image } from "astro:assets";
+
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<div class="home row">
+  <header class="page-header cell cell-12">
+    <h1 class="page-title">{title}</h1>
+    <Image
+      src={speakingHeader}
+      alt="Phil leaning over a laptop doing a live coding demo."
+      class="speaking-header-image"
+      loading="eager"
+      decoding="sync"
+    />
+  </header>
+</div>

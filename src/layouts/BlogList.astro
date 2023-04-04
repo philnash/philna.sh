@@ -1,0 +1,38 @@
+---
+import type { Page } from "astro";
+import DefaultLayout from "./DefaultLayout.astro";
+import Subscribe from "../components/Subscribe.astro";
+import Post from "../components/Post.astro";
+import Pagination from "../components/Pagination.astro";
+import type { CollectionEntry } from "astro:content";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+type Props = {
+  title: string;
+  posts: CollectionEntry<"blog">[];
+  page?: Page<CollectionEntry<"blog">>;
+};
+
+const { title, posts, page } = Astro.props;
+---
+
+<DefaultLayout
+  title={`${title} | ${SITE_TITLE}`}
+  description={SITE_DESCRIPTION}
+>
+  <div class="home row h-feed" itemscope itemtype="https://schema.org/Blog">
+    <header class="page-header cell cell-12">
+      <h1 class="page-title">{title}</h1>
+    </header>
+
+    <div class="blog-meta cell cell-12 cell-med-10 cell-centre">
+      <Subscribe />
+    </div>
+
+    <ul class="post-list">
+      {posts.map((post) => <Post post={post} />)}
+    </ul>
+
+    {page && <Pagination page={page} />}
+  </div>
+</DefaultLayout>

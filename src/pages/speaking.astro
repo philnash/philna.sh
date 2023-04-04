@@ -1,0 +1,61 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import SpeakingHeader from "../components/SpeakingHeader.astro";
+import AppearanceList from "../components/AppearanceList.astro";
+
+import { SITE_TITLE } from "../consts";
+
+import appearances from "../data/appearances.yml";
+
+const today = new Date();
+
+const upcoming = appearances.filter(
+  (appearance) => appearance.event.start_date >= today
+);
+const past = appearances.filter(
+  (appearance) => appearance.event.start_date < today
+);
+
+const title = "Speaking";
+const description =
+  "Phil Nash's upcoming speaking appearances and previous talks";
+---
+
+<DefaultLayout description={description} title={`${title} | ${SITE_TITLE}`}>
+  <SpeakingHeader title={title} />
+
+  <div class="row">
+    <div class="cell cell-12 cell-med-10 cell-centre">
+      <p>
+        Phil loves speaking and sharing what he's interested in and working on
+        at meetups, events and conferences. He talks about JavaScript and the
+        web platform, web performance, Ruby, and application and account
+        security.
+      </p>
+      <p>
+        You can see what he's currently interested in from his recent talks
+        below, or his writing on <a href="/blog/">this blog</a>.
+      </p>
+      <p>
+        If you'd like Phil to speak at your event, check out his
+        <a href="/speaking/details/">speaker details</a> and please get in touch
+        by email at <a href="mailto:philnash@gmail.com">philnash@gmail.com</a> or
+        <a href="https://twitter.com/philnash"
+          >with a direct message on Twitter</a
+        >.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <AppearanceList appearances={upcoming} heading="Upcoming talks" />
+    <AppearanceList appearances={past.slice(0, 5)} heading="Previous talks" />
+    {
+      past.length > 5 && (
+        <p>
+          <a href="/speaking/history/">See Phil's full speaking history</a>
+        </p>
+      )
+    }
+  </div>
+</DefaultLayout>

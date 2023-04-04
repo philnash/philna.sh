@@ -1,0 +1,71 @@
+---
+import type { Appearance } from "../data/appearances.yml";
+import TalkItem from "./TalkItem.astro";
+type Props = {
+  appearance: Appearance;
+};
+
+const { appearance } = Astro.props;
+
+function displayDate(startDate: Date, endDate?: Date) {
+  if (endDate) {
+    const start = startDate.toLocaleDateString("en", {
+      month: "short",
+      day: "numeric",
+    });
+    const end = endDate.toLocaleDateString("en", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+    return `${start} - ${end}`;
+  } else {
+    return startDate.toLocaleDateString("en", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+  }
+}
+---
+
+<li class="talk">
+  <p class="talk-meta">
+    {displayDate(appearance.event.start_date, appearance.event.end_date)}
+    - {appearance.event.location}
+  </p>
+  <h3 class="talk-event">
+    {
+      appearance.event.link ? (
+        <a href={appearance.event.link}>{appearance.event.name}</a>
+      ) : (
+        appearance.event.name
+      )
+    }
+  </h3>
+
+  {
+    appearance.roles && appearance.roles.length > 0 && (
+      <h4>In the role of: {appearance.roles.join(", ")}</h4>
+    )
+  }
+  {
+    appearance.roles &&
+      appearance.roles.length > 0 &&
+      appearance.talks &&
+      appearance.talks.length > 0 && <h4>Also presenting</h4>
+  }
+  {
+    ((appearance.roles && appearance.roles.length === 0) ||
+      !appearance.roles) &&
+      appearance.talks &&
+      appearance.talks.length > 0 && <h4>Presenting</h4>
+  }
+
+  {
+    appearance.talks &&
+      appearance.talks.map((talk) => {
+        return <TalkItem talk={talk} />;
+      })
+  }
+</li>

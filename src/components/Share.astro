@@ -1,0 +1,33 @@
+---
+import { SITE_TWITTER_NAME, SITE_TWITTER_USER_ID } from "../consts";
+type Props = {
+  title: string;
+};
+const { title } = Astro.props;
+---
+
+<script>
+  import _ from "web-share-wrapper";
+</script>
+
+<div class="share">
+  <h2>Share this post</h2>
+  <p>
+    If you liked this post please <web-share-wrapper text="share it"
+      ><a
+        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+          title
+        )}&url=${encodeURIComponent(
+          Astro.url.toString()
+        )}&via=${SITE_TWITTER_NAME}`}
+        class="share"
+        rel="noopener noreferrer"
+        target="_blank">share it</a
+      ></web-share-wrapper
+    > or follow <a
+      href={`https://twitter.com/intent/follow?user_id=${SITE_TWITTER_USER_ID}`}
+      rel="noopener noreferrer"
+      target="_blank">@{SITE_TWITTER_NAME} on Twitter</a
+    >.
+  </p>
+</div>
