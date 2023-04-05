@@ -20,4 +20,9 @@ export default defineConfig({
   experimental: {
     assets: true,
   },
+  markdown: {
+    shikiConfig: {
+      theme: "slack-dark",
+    },
+  },
 });
