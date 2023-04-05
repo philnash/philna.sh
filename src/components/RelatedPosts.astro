@@ -1,10 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import { getRelatedPosts } from "../utils/blog_posts";
 const allBlogPosts = await getCollection("blog");
-
-function intersects(a: string[], b: string[]) {
-  return a.filter(Set.prototype.has, new Set(b)).length;
-}
 
 type Props = {
   tags: string[];
@@ -13,18 +10,7 @@ type Props = {
 
 const { tags, id } = Astro.props;
 
-const relatedPosts = allBlogPosts
-  .filter((post) => post.id !== id)
-  .filter((post) => intersects(tags, post.data.tags) > 0)
-  .sort((a, b) => {
-    const sharedTagsWithA = intersects(tags, a.data.tags);
-    const sharedTagsWithB = intersects(tags, b.data.tags);
-    return (
-      sharedTagsWithB - sharedTagsWithA ||
-      b.data.pubDate.getTime() - a.data.pubDate.getTime()
-    );
-  })
-  .slice(0, 4);
+const relatedPosts = getRelatedPosts(id, tags, allBlogPosts);
 ---
 
 <div class="related">
