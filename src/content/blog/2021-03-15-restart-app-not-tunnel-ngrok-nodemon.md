@@ -5,7 +5,7 @@ tags:
   - ngrok
   - nodemon
   - webdev
-image: /src/assets/posts/nodemon-ngrok.png
+image: /posts/nodemon-ngrok.png
 imageAlt: "The logos for nodemon and ngrok"
 imageWidth: 1920
 imageHeight: 960
