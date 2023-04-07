@@ -8,18 +8,16 @@ import merriweather from "@fontsource/merriweather/files/merriweather-latin-400-
 const fonts = [raleway, merriweather];
 
 import appleTouchIcon from "../assets/apple-touch-icon.png";
-
+import Analytics from "./Analytics.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, TWITTER_HANDLE } from "../consts";
 
-import Analytics from "./Analytics.astro";
-
-export interface Props {
+export type Props = {
   title?: string;
   description?: string;
   image?: string;
   imageAlt?: string;
   type?: "post" | "page";
-}
+};
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 

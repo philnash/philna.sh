@@ -2,6 +2,7 @@
 import { CollectionEntry, getCollection } from "astro:content";
 import BlogPost from "../../../../../layouts/BlogPost.astro";
 import { postParams } from "../../../../../utils/blog_posts";
+import { truncate } from "../../../../../utils/string";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -14,6 +15,10 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogPost {...post.data} id={post.id.toString()}>
+<BlogPost
+  {...post.data}
+  description={truncate(post.body, 160)}
+  id={post.id.toString()}
+>
   <Content />
 </BlogPost>
