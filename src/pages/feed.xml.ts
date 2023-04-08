@@ -2,6 +2,7 @@ import type { APIContext } from "astro";
 import rss from "@astrojs/rss";
 import { sortedBlogPosts } from "../utils/blog_posts";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { postPath } from "../utils/blog_posts";
 import sanitize from "sanitize-html";
 import MarkdownIt from "markdown-it";
 const parser = new MarkdownIt();
@@ -23,7 +24,7 @@ export async function get({ site, generator }: APIContext) {
       title: post.data.title,
       description: sanitize(parser.render(post.body)),
       pubDate: post.data.pubDate,
-      link: `/blog/${post.slug}/`,
+      link: `${postPath(post)}/`,
       customData: post.data.tags
         .map((tag) => `<category>${tag}</category>`)
         .join(""),
