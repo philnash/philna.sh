@@ -20,6 +20,9 @@ export default defineConfig({
   experimental: {
     assets: true,
   },
+  image: {
+    service: "astro/assets/services/sharp",
+  },
   markdown: {
     shikiConfig: {
       theme: "slack-dark",
