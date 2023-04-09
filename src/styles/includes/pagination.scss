@@ -3,7 +3,16 @@
   padding: $spacing-unit 0;
 }
 
-.pagination * {
+.pagination ul {
+  margin: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.pagination li * {
   display: inline-block;
   padding: 0 math.div($spacing-unit, 2);
   border-bottom: 2px solid transparent;
@@ -15,12 +24,12 @@
 }
 .pagination .start-ellipsis,
 .pagination .end-ellipsis {
-    padding: 0;
-    display: none;
+  padding: 0;
+  display: none;
 }
 .pagination .start-ellipsis::before,
 .pagination .end-ellipsis::before {
-    content: '\2026';
+  content: "\2026";
 }
 @include media-query-min(600px) {
   .pagination .numbers,
@@ -44,6 +53,5 @@
 }
 .pagination a:hover {
   color: lighten($brand-color, 15%);
+  border-bottom: 2px solid lighten($brand-color, 15%);
 }
-
-

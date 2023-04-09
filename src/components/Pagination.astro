@@ -1,71 +1,95 @@
 ---
 import type { Page } from "astro";
+import Previous from "./Pagination/Previous.astro";
+import Next from "./Pagination/Next.astro";
+import Link from "./Pagination/Link.astro";
+import Current from "./Pagination/Current.astro";
+import Ellipsis from "./Pagination/Ellipsis.astro";
+import { getPageNumbers } from "../utils/pagination";
 
 type Props = {
   page: Page<any>;
-  maxPages?: number;
+  urlPattern: string;
+  firstPageUrl?: string;
+  windowSize?: number;
+  showPrevNext?: boolean;
+  showFirstLast?: boolean;
 };
 
-const { page, maxPages = 5 } = Astro.props;
-let first = 1;
-let last = page.lastPage;
-const halfPages = Math.floor(maxPages / 2);
-const rightMargin = page.lastPage - page.currentPage;
-if (page.currentPage <= halfPages) {
-  if (page.lastPage > maxPages) {
-    last = maxPages;
-  }
-} else if (rightMargin <= halfPages) {
-  first = Math.max(page.lastPage - maxPages, first);
-} else {
-  first = Math.max(page.currentPage - halfPages, first);
-  last = Math.min(page.currentPage + halfPages, last);
-}
+const {
+  page,
+  urlPattern,
+  firstPageUrl,
+  windowSize = 5,
+  showFirstLast = true,
+  showPrevNext = true,
+} = Astro.props;
 
-let previousLink = page.url.prev === "/blog/page/" ? "/blog" : page.url.prev;
-
-const pageNumbers = Array(last - first + 1)
-  .fill(0)
-  .map((_, index) => first + index);
+const pageNumbers = getPageNumbers(page, windowSize);
+const firstPageInRange = pageNumbers[0];
+const lastPageInRange = pageNumbers[pageNumbers.length - 1];
+const showFirst = showFirstLast && pageNumbers[0] !== 1;
+const showLast = showFirstLast && lastPageInRange !== page.lastPage;
+const previousUrl =
+  firstPageUrl && page.currentPage === 2 ? firstPageUrl : page.url.prev;
 ---
 
-<div class="pagination row">
-  {
-    previousLink ? (
-      <a href={previousLink} class="previous-page">
-        &laquo; Prev
-      </a>
-    ) : (
-      <span class="previous-page">&laquo; Prev</span>
-    )
-  }
-  {first > 1 && <span class="start-ellipsis" />}
-  {
-    pageNumbers.map((pageNumber) => {
-      if (pageNumber === page.currentPage) {
-        return <em>{pageNumber}</em>;
-      } else if (pageNumber === 1) {
+<nav role="navigation" aria-label="Pagination">
+  <ul>
+    {showPrevNext && <Previous url={previousUrl} />}
+    {
+      showFirst && (
+        <li>
+          <Link
+            pageNumber={1}
+            urlPattern={urlPattern}
+            firstPageUrl={firstPageUrl}
+          />
+        </li>
+      )
+    }
+    {
+      firstPageInRange > 2 && (
+        <li>
+          <Ellipsis />
+        </li>
+      )
+    }
+    {
+      pageNumbers.map((pageNumber) => {
         return (
-          <a class="number" href="/blog">
-            {pageNumber}
-          </a>
+          <li>
+            {pageNumber === page.currentPage ? (
+              <Current pageNumber={pageNumber} />
+            ) : (
+              <Link
+                pageNumber={pageNumber}
+                urlPattern={urlPattern}
+                firstPageUrl={firstPageUrl}
+              />
+            )}
+          </li>
         );
-      }
-      return (
-        <a class="number" href={`/blog/page/${pageNumber}`}>
-          {pageNumber}
-        </a>
-      );
-    })
-  }
-  {last < page.lastPage && <span class="end-ellipsis" />}
-  {
-    page.url.next ? (
-      <a href={page.url.next} class="next-page">
-        Next &raquo;
-      </a>
-    ) : (
-      <span class="next-page">Next &raquo;</span>
-    )
-  }
-</div>
+      })
+    }
+    {
+      lastPageInRange < page.lastPage - 1 && (
+        <li>
+          <Ellipsis />
+        </li>
+      )
+    }
+    {
+      showLast && (
+        <li>
+          <Link
+            pageNumber={page.lastPage}
+            urlPattern={urlPattern}
+            firstPageUrl={firstPageUrl}
+          />
+        </li>
+      )
+    }
+    {showPrevNext && <Next url={page.url.next} />}
+  </ul>
+</nav>

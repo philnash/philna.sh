@@ -2,7 +2,9 @@
 import type { Page } from "astro";
 import DefaultLayout from "./DefaultLayout.astro";
 import Subscribe from "../components/Subscribe.astro";
+import SubscribeRss from "../components/SubscribeRss.astro";
 import Post from "../components/Post.astro";
+// import Pagination from "../components/Pagination.astro";
 import Pagination from "../components/Pagination.astro";
 import type { CollectionEntry } from "astro:content";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
@@ -33,6 +35,21 @@ const { title, posts, page } = Astro.props;
       {posts.map((post) => <Post post={post} />)}
     </ul>
 
-    {page && <Pagination page={page} />}
+    <!-- {page && <Pagination page={page} />} -->
+    {
+      page && (
+        <div class="pagination row">
+          <Pagination
+            page={page}
+            urlPattern="/blog/page/{}"
+            firstPageUrl="/blog/"
+          />
+        </div>
+      )
+    }
+
+    <div class="post-promo cell cell-12">
+      <SubscribeRss />
+    </div>
   </div>
 </DefaultLayout>

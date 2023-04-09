@@ -1,0 +1,21 @@
+---
+export type Props = {
+  url?: string;
+  label?: string;
+};
+
+const { url, label = "Next &raquo;" } = Astro.props;
+---
+
+{
+  url && (
+    <li>
+      <a
+        href={url}
+        class="next-page"
+        aria-label="Go to next page"
+        set:html={label}
+      />
+    </li>
+  )
+}
