@@ -5,9 +5,9 @@ tags:
   - javascript
   - security
   - user experience
-image: /posts/webotp/webotp-better-experiences.jpg
+image: ../../assets/posts/webotp/webotp-better-experiences.jpg
 imageAlt: "Better two factor authentication experiences with WebOTP"
-socialImage: /posts/webotp/webotp-better-experiences-social.jpg
+socialImage: ../../assets/posts/webotp/webotp-better-experiences-social.jpg
 imageWidth: 1920
 imageHeight: 600
 pubDate: "2022-12-07"

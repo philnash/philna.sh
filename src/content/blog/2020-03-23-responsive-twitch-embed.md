@@ -4,7 +4,7 @@ tags:
   - webdev
   - css
   - twitch
-image: /posts/twitch/twitch-header.png
+image: ../../assets/posts/twitch/twitch-header.png
 imageAlt: "The Twitch logo"
 imageWidth: 1920
 imageHeight: 600

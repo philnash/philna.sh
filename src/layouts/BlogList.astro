@@ -32,7 +32,11 @@ const { title, posts, page } = Astro.props;
     </div>
 
     <ul class="post-list">
-      {posts.map((post) => <Post post={post} />)}
+      {
+        posts.map((post, index) => (
+          <Post post={post} aboveTheFold={index < 1} />
+        ))
+      }
     </ul>
 
     <!-- {page && <Pagination page={page} />} -->

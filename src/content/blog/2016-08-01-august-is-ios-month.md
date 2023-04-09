@@ -1,6 +1,6 @@
 ---
 title:  "August is iOS month"
-image: /posts/xcode_swift.png
+image: ../../assets/posts/xcode_swift.png
 imageAlt: "The App Store and Swift logos"
 imageWidth: 1920
 imageHeight: 600

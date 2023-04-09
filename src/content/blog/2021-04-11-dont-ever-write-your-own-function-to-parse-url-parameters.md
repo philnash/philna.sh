@@ -4,7 +4,7 @@ tags:
   - javascript
   - web
   - node
-image: /posts/parse-url-parameters.png
+image: ../../assets/posts/parse-url-parameters.png
 imageAlt: "A line of code that reads `parse('foo=bar');`"
 imageWidth: 1920
 imageHeight: 960

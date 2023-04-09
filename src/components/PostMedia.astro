@@ -13,7 +13,7 @@ type Props = Pick<
   | "videoHeight"
   | "videoWidth"
   | "showImage"
->;
+> & { aboveTheFold: boolean };
 const {
   imageWidth,
   imageHeight,
@@ -23,6 +23,7 @@ const {
   videoHeight,
   videoWidth,
   showImage = true,
+  aboveTheFold,
 } = Astro.props;
 ---
 
@@ -33,6 +34,7 @@ const {
       imageAlt={imageAlt}
       imageHeight={imageHeight}
       imageWidth={imageWidth}
+      aboveTheFold={aboveTheFold}
     />
   )
 }

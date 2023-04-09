@@ -4,7 +4,7 @@ tags:
   - ruby
   - node
   - strings
-image: /posts/paths.png
+image: ../../assets/posts/paths.png
 imageAlt: "A terminal font with the text path/to/trouble"
 imageWidth: 1920
 imageHeight: 600

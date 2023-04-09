@@ -4,7 +4,7 @@ tags:
   - node
   - javascript
   - open source
-image: /posts/node.png
+image: ../../assets/posts/node.png
 imageAlt: "The Node.js logo"
 imageWidth: 1920
 imageHeight: 600

@@ -5,7 +5,7 @@ tags:
   - pwa
   - push notifications
   - permission
-image: /posts/permissions/header.png
+image: ../../assets/posts/permissions/header.png
 imageAlt: "A permissions dialog that says 'philna.sh wants to annoy you constantly"
 imageWidth: 1200
 imageHeight: 440

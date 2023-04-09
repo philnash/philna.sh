@@ -2,7 +2,7 @@
 title: 'How not to sort an array in JavaScript'
 tags:
   - javascript
-image: /posts/sorting.png
+image: ../../assets/posts/sorting.png
 imageAlt: 'Sorting a JavaScript array containing undefined, null and NaN.'
 imageWidth: 1200
 imageHeight: 440

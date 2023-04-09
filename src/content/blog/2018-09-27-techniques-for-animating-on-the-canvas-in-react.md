@@ -5,7 +5,7 @@ tags:
   - javascript
   - animation
   - canvas
-image: /posts/react.png
+image: ../../assets/posts/react.gif
 imageAlt: 'The React logo slowly spinning'
 video: /posts/react_vid.mp4
 videoWidth: 1280

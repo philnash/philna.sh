@@ -1,6 +1,6 @@
 ---
 title:  "Critique my Swift on Exercism"
-image: /posts/exercism.png
+image: ../../assets/posts/exercism.png
 imageAlt: "The Exercism logo"
 imageWidth: 1920
 imageHeight: 600

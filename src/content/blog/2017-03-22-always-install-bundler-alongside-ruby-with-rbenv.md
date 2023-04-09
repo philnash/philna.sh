@@ -4,7 +4,7 @@ tags:
   - ruby
   - bundler
   - rbenv
-image: /posts/bundler.png
+image: ../../assets/posts/bundler.png
 imageAlt: "Two illustrations from the Bundler website. One signifies installing Ruby and the other Bundler itself."
 imageWidth: 1920
 imageHeight: 600

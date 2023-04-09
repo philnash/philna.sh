@@ -4,8 +4,8 @@ import { Image } from "astro:assets";
 type Props = Pick<
   CollectionEntry<"blog">["data"],
   "image" | "imageAlt" | "imageWidth" | "imageHeight"
->;
-const { imageWidth, imageHeight, imageAlt, image } = Astro.props;
+> & { aboveTheFold: boolean };
+const { imageWidth, imageHeight, imageAlt, image, aboveTheFold } = Astro.props;
 ---
 
 {
@@ -14,9 +14,8 @@ const { imageWidth, imageHeight, imageAlt, image } = Astro.props;
       <Image
         src={image}
         alt={typeof imageAlt === "string" ? imageAlt : " "}
-        width={imageWidth}
-        height={imageHeight}
         itemprop="image"
+        loading={aboveTheFold ? "eager" : "lazy"}
       />
     </figure>
   )

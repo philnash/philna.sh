@@ -3,7 +3,7 @@ title:  "A community offers to help"
 tags:
   - ruby
   - community
-image: /posts/thank-you.png
+image: ../../assets/posts/thank-you.png
 imageAlt: "The Ruby logo and the text 'Thank you'"
 imageWidth: 1920
 imageHeight: 450

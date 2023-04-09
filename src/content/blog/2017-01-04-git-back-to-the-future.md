@@ -1,6 +1,6 @@
 ---
 title:  "Git back to the future"
-image: /posts/git.png
+image: ../../assets/posts/git.png
 imageAlt: "The git logo"
 imageWidth: 1920
 imageHeight: 600

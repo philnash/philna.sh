@@ -4,8 +4,8 @@ tags:
   - ruby
   - bitly
   - api
-image: /posts/bitly/bitly-rubygem.png
-socialImage: /posts/bitly/bitly-rubygem-social.png
+image: ../../assets/posts/bitly/bitly-rubygem.png
+socialImage: ../../assets/posts/bitly/bitly-rubygem-social.png
 imageAlt: "How to use the Bitly API in Ruby"
 imageWidth: 1920
 imageHeight: 600

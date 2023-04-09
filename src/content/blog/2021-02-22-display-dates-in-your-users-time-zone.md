@@ -5,9 +5,9 @@ tags:
   - web
   - time
   - i18n
-image: /posts/intl-time.jpg
+image: ../../assets/posts/intl-time.jpg
 imageAlt: "Different sides of the world offset by clocks showing different times"
-socialImage: /posts/intl-time-social.png
+socialImage: ../../assets/posts/intl-time-social.png
 imageWidth: 1920
 imageHeight: 600
 pubDate: "2021-02-22"

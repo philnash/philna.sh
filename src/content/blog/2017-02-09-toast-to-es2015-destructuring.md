@@ -1,6 +1,6 @@
 ---
 title:  "A toast to ES2015 destructuring"
-image: /posts/destructured_beers.jpg
+image: ../../assets/posts/destructured_beers.jpg
 imageAlt: ""
 imageWidth: 1920
 imageHeight: 600

@@ -4,7 +4,7 @@ tags:
   - crystal
   - two factor authentication
   - security
-image: /posts/crystal.png
+image: ../../assets/posts/crystal.png
 imageAlt: "The Crystal language logo"
 imageWidth: 1920
 imageHeight: 600

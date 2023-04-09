@@ -1,6 +1,6 @@
 ---
 title:  "On fixing a favicon"
-image: /posts/tiny_changes.png
+image: ../../assets/posts/tiny_changes.png
 imageAlt: The GitHub summary for a pull request, showing 1 addition and 2 deletions.
 imageWidth: 1920
 imageHeight: 600

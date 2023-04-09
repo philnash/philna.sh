@@ -4,9 +4,9 @@ tags:
   - nodejs
   - http
   - webdev
-image: /posts/got-header.png
+image: ../../assets/posts/got-header.png
 imageAlt: "The Got logo"
-socialImage: /posts/got-social-header.png
+socialImage: ../../assets/posts/got-social-header.png
 imageWidth: 1920
 imageHeight: 600
 pubDate: "2020-08-06"

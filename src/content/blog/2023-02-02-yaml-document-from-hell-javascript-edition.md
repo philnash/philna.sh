@@ -3,11 +3,11 @@ title: "The yaml document from hell — JavaScript edition"
 tags:
   - javascript
   - yaml
-image: /posts/yaml/yaml-header.png
+image: ../../assets/posts/yaml/yaml-header.png
 imageAlt: "The yaml logo and two emoji, one shrugging and the other face palming"
 imageWidth: 1920
 imageHeight: 600
-socialImage: /posts/yaml/yaml-social.png
+socialImage: ../../assets/posts/yaml/yaml-social.png
 pubDate: "2023-02-02"
 ---
 

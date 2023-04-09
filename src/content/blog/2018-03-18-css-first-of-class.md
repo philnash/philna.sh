@@ -3,7 +3,7 @@ title: "CSS: select first-of-class with the subsequent sibling combinator"
 tags:
   - CSS
   - CSS selectors
-image: /posts/subsequent-sibling-combinator.png
+image: ../../assets/posts/subsequent-sibling-combinator.png
 imageAlt: "A tilde symbol, the symbol used as the subsequent sibling combinator in CSS selectors"
 imageWidth: 1200
 imageHeight: 440

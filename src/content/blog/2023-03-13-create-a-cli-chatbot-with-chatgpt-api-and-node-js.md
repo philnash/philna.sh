@@ -5,11 +5,11 @@ tags:
   - chatgpt
   - javascript
   - node
-image: /posts/chatgpt/openai-node.png
+image: ../../assets/posts/chatgpt/openai-node.png
 imageAlt: "The OpenAI logo and the Node.js API"
 imageWidth: 1920
 imageHeight: 600
-socialImage: /posts/chatgpt/openai-node-social.png
+socialImage: ../../assets/posts/chatgpt/openai-node-social.png
 pubDate: "2023-03-13"
 ---
 

@@ -4,7 +4,7 @@ tags:
   - javascript
   - web components
   - share
-image: /posts/share_header.png
+image: ../../assets/posts/share_header.png
 imageAlt: ""
 imageWidth: 1920
 imageHeight: 600

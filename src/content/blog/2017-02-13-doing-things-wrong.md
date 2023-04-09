@@ -4,7 +4,7 @@ tags:
   - learning
   - community
   - javascript
-image: /posts/fix_it.png
+image: ../../assets/posts/fix_it.png
 imageAlt: "A git log showing a commit that posted my last blog post followed by four commits that just say 'fix it'."
 imageWidth: 1920
 imageHeight: 600

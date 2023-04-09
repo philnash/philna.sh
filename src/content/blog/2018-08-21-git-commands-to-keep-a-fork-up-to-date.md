@@ -1,6 +1,6 @@
 ---
 title:  "Git commands to keep a fork up to date"
-image: /posts/git.png
+image: ../../assets/posts/git.png
 imageAlt: "The git logo"
 imageWidth: 1920
 imageHeight: 600

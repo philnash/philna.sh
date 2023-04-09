@@ -4,7 +4,7 @@ tags:
   - vscode
   - ngrok
   - showdev
-image: /posts/ngrok-for-vscode/nfv-header.png
+image: ../../assets/posts/ngrok-for-vscode/nfv-header.png
 imageAlt: "ngrok for VSCode"
 imageWidth: 1920
 imageHeight: 600

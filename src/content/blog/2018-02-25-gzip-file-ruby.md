@@ -5,7 +5,7 @@ tags:
   - gzip
   - zlib
   - file compression
-image: /posts/gzip/gzip-ruby.png
+image: ../../assets/posts/gzip/gzip-ruby.png
 imageAlt: "An icon of a vice squeezing a ruby gem"
 imageWidth: 1920
 imageHeight: 600

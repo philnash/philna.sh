@@ -5,7 +5,7 @@ tags:
   - service worker
   - web
   - pwa
-image: /posts/service-worker.png
+image: ../../assets/posts/service-worker.png
 imageAlt: 'Three cogs on a yellow background, intended to represent the idea of the Service Worker'
 imageWidth: 1920
 imageHeight: 600

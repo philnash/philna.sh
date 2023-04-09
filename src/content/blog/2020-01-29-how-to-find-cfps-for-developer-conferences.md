@@ -4,7 +4,7 @@ tags:
   - speaking
   - devrel
   - conferences
-image: /posts/cfps/cfp-header.png
+image: ../../assets/posts/cfps/cfp-header.png
 imageAlt: " "
 imageWidth: 1920
 imageHeight: 600

@@ -5,7 +5,7 @@ tags:
   - javascript
   - chrome
   - firefox
-image: /posts/dev-tools-tricks-header.png
+image: ../../assets/posts/dev-tools-tricks-header.png
 showImage: false
 pubDate: "2017-01-12"
 ---

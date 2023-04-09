@@ -4,7 +4,7 @@ tags:
   - ruby
   - jekyll
   - mastodon
-image: /posts/mastodon/mastodon-and-jekyll.png
+image: ../../assets/posts/mastodon/mastodon-and-jekyll.png
 imageAlt: "Alias your Mastodon username to your own domain with Jekyll"
 imageWidth: 1200
 imageHeight: 600
@@ -59,7 +59,7 @@ Next time you build the site, you will find a `/.well-known/webfinger` file in y
 You can see the result of this by checking the WebFinger endpoint on my domain: [https://philna.sh/.well-known/webfinger](https://philna.sh/.well-known/webfinger) or by searching for `@phil@philna.sh` on your Mastodon instance.
 
 <figure>
-  <img src="/posts/mastodon/search" alt="When you search for @phil@philna.sh on your Mastodon instance, you will find my account">
+  <img src="/posts/mastodon/search.png" alt="When you search for @phil@philna.sh on your Mastodon instance, you will find my account">
 </figure>
 
 As this is a static file it sort of acts like a catch-all email address. You can actually search for `@any_username@philna.sh` and you will find me. If you wanted to restrict this, you would need to build an endpoint that could respond dynamically to the request.

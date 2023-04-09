@@ -5,7 +5,7 @@ tags:
   - ruby
   - node
   - docker
-image: /posts/spring-clean-header.png
+image: ../../assets/posts/spring-clean-header.png
 imageAlt: " "
 imageWidth: 1920
 imageHeight: 600

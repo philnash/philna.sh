@@ -7,9 +7,10 @@ import { postPath } from "../utils/blog_posts";
 
 type Props = {
   post: CollectionEntry<"blog">;
+  aboveTheFold: boolean;
 };
 
-const { post } = Astro.props;
+const { post, aboveTheFold } = Astro.props;
 ---
 
 <li
@@ -22,7 +23,7 @@ const { post } = Astro.props;
     itemprop="url mainEntityOfPage"
     href={postPath(post)}
   >
-    <PostMedia {...post.data} />
+    <PostMedia {...post.data} aboveTheFold={aboveTheFold} />
 
     <h2 class="p-name" itemprop="name">{post.data.title}</h2>
   </a>

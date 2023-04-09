@@ -4,7 +4,7 @@ tags:
   - jekyll
   - assets
   - ruby
-image: /posts/jekyll.png
+image: ../../assets/posts/jekyll.png
 imageAlt: "The Jekyll logo"
 imageWidth: 1920
 imageHeight: 600

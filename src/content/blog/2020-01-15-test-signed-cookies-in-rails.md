@@ -4,7 +4,7 @@ tags:
   - ruby
   - rails
   - testing
-image: /posts/railscookies.png
+image: ../../assets/posts/railscookies.png
 imageAlt: "The Ruby on Rails logo surrounded by cookies"
 imageWidth: 1920
 imageHeight: 600
