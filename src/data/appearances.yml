@@ -17,6 +17,15 @@
     - title: The State of Passwordless Auth on the Web
 
 - event:
+    name: CityJS Athens
+    link: https://greece.cityjsconf.org/speaker/4TJtDxiT5brNGBOXDkC1bw
+    start_date: 2023-05-29
+    end_date: 2023-05-31
+    location: Athens, Greece
+  talks:
+    - title: The top 5 JavaScript issues in all our codebases
+
+- event:
     name: NDC Oslo
     link: https://ndcoslo.com/speakers/phil-nash
     start_date: 2023-05-24
