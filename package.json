@@ -15,6 +15,7 @@
     "@astrojs/rss": "^2.3.2",
     "@fontsource/merriweather": "^4.5.14",
     "@fontsource/raleway": "^4.5.12",
+    "@philnash/astro-pagination": "^0.1.0",
     "astro": "^2.2.0",
     "astro-critters": "^1.1.31",
     "markdown-it": "^13.0.1",
