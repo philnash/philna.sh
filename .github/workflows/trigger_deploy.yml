@@ -1,0 +1,11 @@
+name: "Trigger deployment"
+
+on: workflow_dispatch
+
+jobs:
+  run-updater:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hit Cloudflare webhook with curl
+        run: |
+          curl -X POST "${{ secrets.CLOUDFLARE_WEBHOOK }}"
