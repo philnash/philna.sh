@@ -1,6 +1,9 @@
 name: "Trigger deployment"
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 0 * * *"
 
 jobs:
   run-updater:
