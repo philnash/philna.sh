@@ -3,23 +3,24 @@ import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import AppearanceList from "../../components/AppearanceList.astro";
 import SpeakingHeader from "../../components/SpeakingHeader.astro";
 
+import { getToday, pastAppearances } from "../../utils/appearances";
 import { SITE_TITLE } from "../../consts";
 
 import appearances, { Appearance } from "../../data/appearances.yml";
 
-const today = new Date();
+const today = getToday();
 
-const appearancesByYear = appearances
-  .filter((appearance) => appearance.event.start_date < today)
-  .reduce<Record<string, Appearance[]>>((apps, appearance) => {
-    const year = appearance.event.start_date.getFullYear().toString();
-    if (apps[year]) {
-      apps[year].push(appearance);
-    } else {
-      apps[year] = [appearance];
-    }
-    return apps;
-  }, {});
+const appearancesByYear = pastAppearances(appearances, today).reduce<
+  Record<string, Appearance[]>
+>((apps, appearance) => {
+  const year = appearance.event.start_date.getFullYear().toString();
+  if (apps[year]) {
+    apps[year].push(appearance);
+  } else {
+    apps[year] = [appearance];
+  }
+  return apps;
+}, {});
 
 Object.keys(appearancesByYear).forEach((year) =>
   appearancesByYear[year].sort(

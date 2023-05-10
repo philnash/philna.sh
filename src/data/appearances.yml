@@ -1,4 +1,22 @@
 - event:
+    name: DevBcn
+    link: https://www.devbcn.com/speaker/3b179d77-02a0-4d36-8cf2-eb969d10f9a6
+    start_date: 2023-07-03
+    end_date: 2023-07-05
+    location: Barcelona, Spain
+  talks:
+    - title: The top 5 JavaScript issues in all our codebases
+
+- event:
+    name: DevTalks
+    link: https://www.devtalks.ro/speakers/182-phil-nash
+    start_date: 2023-06-21
+    end_date: 2023-06-22
+    location: Bucharest, Romania
+  talks:
+    - title: The top 5 JavaScript issues in all our codebases
+
+- event:
     name: "Web Directions: Code"
     link: https://webdirections.org/code/speakers/phil-nash.php
     start_date: 2023-06-08
@@ -33,6 +51,14 @@
     location: Oslo, Norway
   talks:
     - title: The top 5 JavaScript issues in all our codebases
+
+- event:
+    name: JSConf India pre-event virtual meetup
+    link: https://lu.ma/jsconf-india-online-preevent-meetup
+    start_date: 2023-05-18
+    location: Online
+  talks:
+    - title: The state of passwordless auth on the web
 
 - event:
     name: Global TypeScript Summit

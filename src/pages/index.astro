@@ -8,6 +8,7 @@ import { postPath, sortedBlogPosts } from "../utils/blog_posts";
 import {
   nextThreeAppearances,
   previousThreeAppearances,
+  getToday,
 } from "../utils/appearances";
 import { Image } from "astro:assets";
 
@@ -26,7 +27,7 @@ const post = posts[0];
 const postExcerpt = post.body.split(/\n\n/)[0];
 const posttSlug = postPath(post);
 
-const today = new Date();
+const today = getToday();
 const upcoming = nextThreeAppearances(appearances, today);
 
 let heading, apps;

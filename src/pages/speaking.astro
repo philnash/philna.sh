@@ -3,18 +3,18 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 import SpeakingHeader from "../components/SpeakingHeader.astro";
 import AppearanceList from "../components/AppearanceList.astro";
 
+import {
+  getToday,
+  upcomingAppearances,
+  pastAppearances,
+} from "../utils/appearances";
 import { SITE_TITLE } from "../consts";
 
 import appearances from "../data/appearances.yml";
 
-const today = new Date();
-
-const upcoming = appearances
-  .filter((appearance) => appearance.event.start_date >= today)
-  .sort((a, b) => a.event.start_date.getTime() - b.event.start_date.getTime());
-const past = appearances
-  .filter((appearance) => appearance.event.start_date < today)
-  .sort((a, b) => b.event.start_date.getTime() - a.event.start_date.getTime());
+const today = getToday();
+const upcoming = upcomingAppearances(appearances, today);
+const past = pastAppearances(appearances, today);
 
 const title = "Speaking";
 const description =
@@ -48,8 +48,19 @@ const description =
   </div>
 
   <div class="row">
-    <AppearanceList appearances={upcoming} heading="Upcoming talks" />
-    <AppearanceList appearances={past.slice(0, 5)} heading="Previous talks" />
+    {
+      upcoming.length > 0 && (
+        <AppearanceList appearances={upcoming} heading="Upcoming talks" />
+      )
+    }
+    {
+      past.length > 0 && (
+        <AppearanceList
+          appearances={past.slice(0, 5)}
+          heading="Previous talks"
+        />
+      )
+    }
     {
       past.length > 5 && (
         <p>
