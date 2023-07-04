@@ -41,6 +41,19 @@ const {
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
+
+<!-- preconnect to ads -->
+{preconnectUrls.map((url) => <link rel="preconnect" href={url} crossorigin />)}
+
+<!-- preload fonts -->
+{
+  fonts.map((font) => (
+    <link rel="preload" href={font} as="font" type="font/woff2" crossorigin />
+  ))
+}
+
+{import.meta.env.PROD && <Analytics />}
+
 <meta name="description" content={description} />
 <meta name="author" content="Phil Nash" />
 
@@ -49,15 +62,6 @@ const {
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
-
-<!-- preload fonts -->
-{
-  fonts.map((font) => (
-    <link rel="preload" href={font} as="font" type="font/woff2" crossorigin />
-  ))
-}
-<!-- preconnect to analytics and ads -->
-{preconnectUrls.map((url) => <link rel="preconnect" href={url} crossorigin />)}
 
 <!-- RSS Feed Discovery -->
 <link
@@ -110,5 +114,3 @@ const {
 <meta itemprop="name" content={title} />
 <meta itemprop="description" content={description} />
 {image && <meta itemprop="image" content={new URL(image.src, Astro.url)} />}
-
-{import.meta.env.PROD && <Analytics />}
