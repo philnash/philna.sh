@@ -16,6 +16,7 @@ const { imageWidth, imageHeight, imageAlt, image, aboveTheFold } = Astro.props;
         alt={typeof imageAlt === "string" ? imageAlt : " "}
         itemprop="image"
         loading={aboveTheFold ? "eager" : "lazy"}
+        fetchpriority={aboveTheFold ? "high" : "low"}
       />
     </figure>
   )
