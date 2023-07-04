@@ -34,10 +34,10 @@ body {
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: 'kern' 1;
-  -moz-font-feature-settings: 'kern' 1;
-  -o-font-feature-settings: 'kern' 1;
-  font-feature-settings: 'kern' 1;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
   font-kerning: normal;
 }
 
@@ -59,6 +59,20 @@ dl,
 figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
 }
 
 /**
@@ -182,7 +196,7 @@ code {
   border-radius: $border-radius;
 }
 a code {
-  color: #C70000;
+  color: #c70000;
 }
 
 pre {
@@ -201,7 +215,7 @@ pre > code {
  */
 %clearfix {
   &:after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }

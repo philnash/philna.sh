@@ -30,9 +30,9 @@
 }
 
 .post-list .post-meta {
-  border:none;
+  border: none;
   padding: 0;
-  margin-bottom: $spacing-unit
+  margin-bottom: $spacing-unit;
 }
 
 .post-meta p {
@@ -46,7 +46,7 @@
 
 @include media-query-min(700px) {
   .post-meta .meta {
-    float:left;
+    float: left;
   }
   .post-meta .subscribe {
     float: right;
