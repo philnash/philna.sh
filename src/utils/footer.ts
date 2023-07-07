@@ -39,4 +39,16 @@ export const footerIcons = [
     url: "https://mastodon.social/@philnash",
     name: "Mastodon",
   },
+  {
+    url: "https://bsky.app/profile/philna.sh",
+    name: "Bluesky",
+  },
+  {
+    url: "https://threads.net/@philnash",
+    name: "Threads",
+  },
+  {
+    url: "https://t2.social/philnash",
+    name: "T2",
+  },
 ];
