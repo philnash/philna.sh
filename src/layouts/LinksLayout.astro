@@ -1,0 +1,45 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import FooterNav from "../components/FooterNav.astro";
+import { SITE_TITLE } from "../consts";
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  title: string;
+  description?: string;
+  type?: "page" | "post";
+} & Pick<CollectionEntry<"blog">["data"], "image" | "imageAlt">;
+
+const { title, description, type = "page", image, imageAlt } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      type={type}
+      image={image}
+      imageAlt={imageAlt}
+    />
+    <slot name="head" />
+  </head>
+  <body>
+    <div class="page wrapper">
+      <Header title={SITE_TITLE} />
+      <main>
+        <slot />
+      </main>
+    </div>
+    <footer class="site-footer">
+      <div class="wrapper">
+        <div class="row">
+          <FooterNav />
+        </div>
+      </div>
+      <slot name="body-end" />
+    </footer>
+  </body>
+</html>

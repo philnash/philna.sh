@@ -1,0 +1,34 @@
+---
+import LinksLayout from "../layouts/LinksLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { footerIcons } from "../utils/footer";
+import FooterIcon from "../components/FooterIcon.astro";
+
+const title = "Links";
+---
+
+<LinksLayout title={`${title} | ${SITE_TITLE}`} description={SITE_DESCRIPTION}>
+  <div class="home row">
+    <header class="page-header cell cell-12">
+      <h1 class="page-title">{title}</h1>
+    </header>
+  </div>
+
+  <div class="row">
+    <div class="cell cell-12 cell-med-10 cell-centre">
+      <p>Find Phil on the internet:</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="cell cell-12 cell-med-10 cell-centre links">
+      <ul class="social">
+        {
+          footerIcons.map((icon) => (
+            <FooterIcon {...icon} cellWidth="cell-12" />
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</LinksLayout>

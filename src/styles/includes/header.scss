@@ -72,9 +72,13 @@
   line-height: $header-font-size;
   margin-left: math.div($spacing-unit, 2);
   display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+.header nav a.active {
+  border-color: $brand-color;
 }
 .header nav a:hover {
-  border: none;
+  border-color: lighten($brand-color, 15%);
 }
 .header nav a:first-child {
   margin-left: 0;

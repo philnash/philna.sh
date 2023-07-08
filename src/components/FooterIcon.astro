@@ -1,10 +1,10 @@
 ---
 import Icon from "./Icon.astro";
-const { name, url } = Astro.props;
+const { name, url, cellWidth = "cell-6" } = Astro.props;
 const className = name.toLowerCase();
 ---
 
-<li class="cell cell-6">
+<li class={`cell ${cellWidth}`}>
   <a href={url} class={className} rel="me">
     <Icon icon={className} />
     {name}
