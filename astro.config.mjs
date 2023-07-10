@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, sharpImageService } from "astro/config";
 import yaml from "@rollup/plugin-yaml";
 import { DOMAIN } from "./src/consts";
 
@@ -21,7 +21,7 @@ export default defineConfig({
     assets: true,
   },
   image: {
-    service: "astro/assets/services/sharp",
+    service: sharpImageService(),
   },
   markdown: {
     shikiConfig: {
