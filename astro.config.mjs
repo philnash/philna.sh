@@ -28,4 +28,5 @@ export default defineConfig({
       theme: "slack-dark",
     },
   },
+  compressHTML: true,
 });

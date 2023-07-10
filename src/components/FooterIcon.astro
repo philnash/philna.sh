@@ -5,8 +5,7 @@ const className = name.toLowerCase();
 ---
 
 <li class={`cell ${cellWidth}`}>
-  <a href={url} class={className} rel="me">
-    <Icon icon={className} />
-    {name}
-  </a>
+  <a href={url} class={className} rel="me"
+    ><Icon icon={className} />&nbsp;{name}</a
+  >
 </li>
