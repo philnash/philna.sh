@@ -27,10 +27,6 @@
   padding: 0;
   display: none;
 }
-.pagination .start-ellipsis::before,
-.pagination .end-ellipsis::before {
-  content: "\2026";
-}
 @include media-query-min(600px) {
   .pagination .number,
   .pagination .start-ellipsis,
