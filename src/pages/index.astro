@@ -108,9 +108,7 @@ if (upcoming.length > 0) {
           <h3>
             <a class="post-link" href={posttSlug}>{post.data.title}</a>
           </h3>
-          <Markdown>
-            {postExcerpt}
-          </Markdown>
+          <Markdown content={postExcerpt} />
           <p>See all <a href="/blog/">blog posts</a>.</p>
         </div>
 

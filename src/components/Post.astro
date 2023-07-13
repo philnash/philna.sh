@@ -28,5 +28,5 @@ const { post, aboveTheFold } = Astro.props;
     <h2 class="p-name" itemprop="name">{post.data.title}</h2>
   </a>
   <PostMeta pubDate={post.data.pubDate} subscribe={false} />
-  <Markdown>{post.body.split(/\n\n/)[0]}</Markdown>
+  <Markdown content={post.body.split(/\n\n/)[0]} />
 </li>
