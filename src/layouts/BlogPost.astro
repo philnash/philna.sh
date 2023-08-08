@@ -8,7 +8,7 @@ import RelatedPosts from "../components/RelatedPosts.astro";
 import Share from "../components/Share.astro";
 import PostMedia from "../components/PostMedia.astro";
 
-type Props = CollectionEntry<"blog">["data"] & { id: string };
+type Props = CollectionEntry<"blog">["data"] & { id: string; slug: string };
 
 const {
   title,
@@ -26,6 +26,7 @@ const {
   tags,
   id,
   scripts,
+  slug,
 } = Astro.props;
 ---
 
@@ -56,6 +57,7 @@ const {
           videoWidth={videoWidth}
           videoHeight={videoHeight}
           aboveTheFold={true}
+          slug={slug}
         />
       </header>
 

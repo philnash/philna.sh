@@ -23,7 +23,7 @@ const { post, aboveTheFold } = Astro.props;
     itemprop="url mainEntityOfPage"
     href={postPath(post)}
   >
-    <PostMedia {...post.data} aboveTheFold={aboveTheFold} />
+    <PostMedia {...post.data} aboveTheFold={aboveTheFold} slug={post.slug} />
 
     <h2 class="p-name" itemprop="name">{post.data.title}</h2>
   </a>

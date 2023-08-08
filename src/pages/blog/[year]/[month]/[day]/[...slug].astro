@@ -19,6 +19,7 @@ const { Content } = await post.render();
   {...post.data}
   description={truncate(post.body, 160)}
   id={post.id.toString()}
+  slug={post.slug}
 >
   <Content />
 </BlogPost>

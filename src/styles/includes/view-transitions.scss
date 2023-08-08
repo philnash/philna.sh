@@ -1,0 +1,12 @@
+// ::view-transition-old(root),
+// ::view-transition-new(root) {
+//   animation-duration: 5s;
+// }
+
+.home-header h1 {
+  view-transition-name: header-text;
+}
+
+header a.title {
+  view-transition-name: header-text;
+}
