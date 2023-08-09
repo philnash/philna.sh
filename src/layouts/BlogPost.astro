@@ -7,6 +7,7 @@ import SubscribeRss from "../components/SubscribeRss.astro";
 import RelatedPosts from "../components/RelatedPosts.astro";
 import Share from "../components/Share.astro";
 import PostMedia from "../components/PostMedia.astro";
+import { stripDateFromSlug } from "../utils/blog_posts";
 
 type Props = CollectionEntry<"blog">["data"] & { id: string; slug: string };
 
@@ -44,7 +45,11 @@ const {
       itemtype="http://schema.org/BlogPosting"
     >
       <header class="post-header cell cell-12">
-        <h1 class="post-title p-name" itemprop="name headline">
+        <h1
+          class="post-title p-name"
+          itemprop="name headline"
+          style={{ viewTransitionName: `${stripDateFromSlug(slug)}-title` }}
+        >
           {title}
         </h1>
         <PostMedia
@@ -62,7 +67,7 @@ const {
       </header>
 
       <div class="cell cell-12 cell-med-12">
-        <PostMeta pubDate={pubDate} subscribe={true} />
+        <PostMeta pubDate={pubDate} subscribe={true} slug={slug} />
       </div>
 
       <div class="row">

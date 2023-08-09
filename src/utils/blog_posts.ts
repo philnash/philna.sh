@@ -58,3 +58,7 @@ export function getRelatedPosts(
     .slice(0, 4);
   return relatedPosts;
 }
+
+export function stripDateFromSlug(slug: string) {
+  return slug.replace(/^\d{4}-\d{2}-\d{2}-/, "");
+}

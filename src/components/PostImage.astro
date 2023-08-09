@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
+import { stripDateFromSlug } from "../utils/blog_posts";
+
 type Props = Pick<
   CollectionEntry<"blog">["data"],
   "image" | "imageAlt" | "imageWidth" | "imageHeight"
@@ -18,7 +20,7 @@ const { imageWidth, imageHeight, imageAlt, image, aboveTheFold, slug } =
         itemprop="image"
         loading={aboveTheFold ? "eager" : "lazy"}
         fetchpriority={aboveTheFold ? "high" : "low"}
-        style={{ viewTransitionName: slug }}
+        style={{ viewTransitionName: stripDateFromSlug(slug) }}
       />
     </figure>
   )

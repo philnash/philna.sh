@@ -1,15 +1,20 @@
 ---
 import Subscribe from "./Subscribe.astro";
 import { SITE_AUTHOR } from "../consts";
+import { stripDateFromSlug } from "../utils/blog_posts";
 type Props = {
   pubDate: Date;
   subscribe?: Boolean;
+  slug: string;
 };
-const { pubDate, subscribe } = Astro.props;
+const { pubDate, subscribe, slug } = Astro.props;
 ---
 
 <div class="post-meta">
-  <p class="meta">
+  <p
+    class="meta"
+    style={{ viewTransitionName: `${stripDateFromSlug(slug)}-meta` }}
+  >
     Published on
     <a href={Astro.url} class="u-url" itemprop="url mainEntityOfPage"
       ><time
