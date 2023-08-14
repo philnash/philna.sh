@@ -3,7 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import PostMedia from "./PostMedia.astro";
 import PostMeta from "./PostMeta.astro";
 import Markdown from "@astrojs/markdown-component";
-import { postPath, stripDateFromSlug } from "../utils/blog_posts";
+import { postPath, viewTransitionName } from "../utils/blog_posts";
 
 type Props = {
   post: CollectionEntry<"blog">;
@@ -28,7 +28,9 @@ const { post, aboveTheFold } = Astro.props;
     <h2
       class="p-name"
       itemprop="name"
-      style={{ viewTransitionName: `${stripDateFromSlug(post.slug)}-title` }}
+      style={{
+        viewTransitionName: viewTransitionName(post.slug, "title"),
+      }}
     >
       {post.data.title}
     </h2>
