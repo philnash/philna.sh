@@ -9,6 +9,24 @@
     - title: The top 5 JavaScript issues in all our codebases
 
 - event:
+    name: Web Directions Summit
+    link: https://webdirections.org/summit/speakers/phil-nash.php
+    start_date: 2023-10-26
+    end_date: 2023-10-27
+    location: Sydney, Australia
+  talks:
+    - title: CSS Between the Pages
+
+- event:
+    name: NDC Porto
+    start_date: 2023-10-18
+    end_date: 2023-10-20
+    location: Porto, Portugal
+    link: https://ndcporto.com/speakers/phil-nash
+  talks:
+    - title: The state of passwordless auth on the web
+
+- event:
     name: All Things Open
     link: https://2023.allthingsopen.org/speakers/phil-nash/
     start_date: 2023-10-15
@@ -16,6 +34,14 @@
     location: Raleigh, North Carolina, USA
   talks:
     - title: "Total ReDoS: the dangers of regex in JavaScript"
+
+- event:
+    name: MelbJS
+    link: https://melbjs.com/
+    start_date: 2023-08-09
+    location: Melbourne, Australia
+  talks:
+    - title: The top 5 JavaScript issues in all our codebases
 
 - event:
     name: We Are Developers World Congress
