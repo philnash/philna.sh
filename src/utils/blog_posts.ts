@@ -19,9 +19,9 @@ export async function sortedBlogPosts(): Promise<CollectionEntry<"blog">[]> {
 
 export function postParams(post: CollectionEntry<"blog">) {
   const matchData = post.slug.match(
-    /^(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})-(?<slug>[A-Za-z\d\-]+)/
+    /^(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})-(?<slug>[A-Za-z\d-]+)/
   );
-  if (matchData && matchData.groups) {
+  if (matchData?.groups) {
     const { year, month, day, slug } = matchData.groups;
     return {
       params: { year, month, day, slug },

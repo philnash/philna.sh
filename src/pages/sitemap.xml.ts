@@ -9,10 +9,10 @@ export async function get({
   const posts = await sortedBlogPosts();
   const pageItems = Array(Math.floor(posts.length / PER_PAGE))
     .fill("")
-    .map(
-      (_, index) =>
-        `<url><loc>${new URL(`/blog/page/${index + 2}`, url)}/</loc></url>`
-    )
+    .map((_, index) => {
+      const loc = new URL(`/blog/page/${index + 2}`, url);
+      return `<url><loc>${loc}/</loc></url>`;
+    })
     .join("");
   const postItems = posts
     .map(
