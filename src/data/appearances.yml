@@ -87,15 +87,17 @@
     location: Amsterdam, Netherlands and online
   talks:
     - title: The State of Passwordless Auth on the Web
+      video: https://www.youtube.com/watch?v=lJ198iRizNo
 
 - event:
     name: CityJS Athens
-    link: https://greece.cityjsconf.org/speaker/4TJtDxiT5brNGBOXDkC1bw
+    link: https://greece.cityjsconf.org/
     start_date: 2023-05-29
     end_date: 2023-05-31
     location: Athens, Greece
   talks:
     - title: The top 5 JavaScript issues in all our codebases
+      video: https://www.youtube.com/watch?v=ZV-nm3gGgzQ&t=220s
 
 - event:
     name: NDC Oslo
@@ -105,6 +107,9 @@
     location: Oslo, Norway
   talks:
     - title: The top 5 JavaScript issues in all our codebases
+      video: https://www.youtube.com/watch?v=IGl-P4SHo2E
+    - title: The state of passwordless auth on the web
+      video: https://www.youtube.com/watch?v=qYH1NNmF2hk
 
 - event:
     name: JSConf India pre-event virtual meetup
@@ -113,6 +118,7 @@
     location: Online
   talks:
     - title: The state of passwordless auth on the web
+      video: https://youtu.be/eY2lmQ8o3EI?t=3005
 
 - event:
     name: Global TypeScript Summit
@@ -122,6 +128,7 @@
     location: Online
   talks:
     - title: The top 5 TypeScript issues in all our codebases
+      video: https://youtu.be/ET6Ue5L2oPY?t=999
 
 - event:
     name: jsDay
@@ -147,6 +154,7 @@
     location: Melbourne, Australia
   talks:
     - title: The state of passwordless auth on the web
+      video: https://www.youtube.com/watch?v=n_DmQPGjovg
 
 - event:
     name: "Web Directions: Summit"
@@ -173,7 +181,8 @@
     end_date: 2022-09-10
     location: Perth, Australia
   talks:
-    - title: Web APIs for delightful two factor auth experiences
+    - title: Secrets of the credential management APIs
+      video: https://www.youtube.com/watch?v=YjFzm3V6nSg
 
 - event:
     name: Fenders Perth
@@ -209,6 +218,7 @@
     location: Melbourne, Australia
   talks:
     - title: Web APIs for delightful two factor auth experiences
+      video: https://www.youtube.com/watch?v=ASs3_FUx2GE
     - title: JavaScript apps go Int(ernationa)l
 
 - event:
