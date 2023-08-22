@@ -1,4 +1,12 @@
 - event:
+    name: HalfStack on the Shore(ditch) (London)
+    link: https://halfstackconf.com/london#phil-nash
+    start_date: 2023-11-15
+    location: London, UK
+  talks:
+    - title: CSS Between the Pages
+
+- event:
     name: Øredev
     link: https://oredev.org/line-up/phil-nash
     start_date: 2023-11-08
