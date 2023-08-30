@@ -12,24 +12,24 @@
   "dependencies": {
     "@analytics-debugger/ga4mp": "^0.0.8",
     "@astrojs/markdown-component": "^1.0.5",
-    "@astrojs/rss": "^2.4.3",
+    "@astrojs/rss": "^2.4.4",
     "@fontsource/merriweather": "^5.0.8",
     "@fontsource/raleway": "^5.0.8",
     "@philnash/astro-pagination": "^0.2.0",
-    "astro": "^2.8.0",
-    "astro-critters": "^2.0.7",
+    "astro": "^2.10.15",
+    "astro-critters": "^2.0.11",
     "markdown-it": "^13.0.1",
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-to-string": "^4.0.0",
     "sanitize-html": "^2.10.0",
-    "sharp": "^0.32.4",
+    "sharp": "^0.32.5",
     "web-share-wrapper": "^0.2.2"
   },
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.0.1",
     "@types/js-yaml": "^4.0.5",
-    "@types/markdown-it": "^13.0.0",
+    "@types/markdown-it": "^13.0.1",
     "@types/sanitize-html": "^2.9.0",
-    "sass": "^1.61.0"
+    "sass": "^1.66.1"
   }
 }
