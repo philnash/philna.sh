@@ -52,6 +52,15 @@
     - title: "Total ReDoS: the dangers of regex in JavaScript"
 
 - event:
+    name: LibertyJS
+    link: https://libertyjs.com/
+    start_date: 2023-10-12
+    end_date: 2023-10-13
+    location: Philadelphia, Pennsylvania, USA
+  talks:
+    - title: CSS Between the Pages
+
+- event:
     name: MelbJS
     link: https://melbjs.com/
     start_date: 2023-08-09
