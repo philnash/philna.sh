@@ -1,7 +1,7 @@
 ---
 title: "Restart your app and not your tunnel with ngrok and nodemon"
 tags:
-  - node.js
+  - node
   - ngrok
   - nodemon
   - webdev

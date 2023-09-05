@@ -1,7 +1,7 @@
 ---
 title: "How to stream file downloads in Node.js with Got"
 tags:
-  - nodejs
+  - node
   - http
   - webdev
 image: ../../assets/posts/got-header.png

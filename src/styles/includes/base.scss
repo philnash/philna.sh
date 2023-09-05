@@ -66,6 +66,10 @@ li {
   text-wrap: pretty;
 }
 
+li pre {
+  margin: math.div($spacing-unit, 2) 0;
+}
+
 /**
  * Images
  */
