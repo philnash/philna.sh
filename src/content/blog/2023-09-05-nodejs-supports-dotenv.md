@@ -14,6 +14,12 @@ pubDate: "2023-09-05"
 
 With the [recent release of version 20.6.0](https://nodejs.org/en/blog/release/v20.6.0), Node.js now has built-in support for `.env` files. You can now load environment variables from a `.env` file into `process.env` in your Node.js application completely dependency-free.
 
+Loading an `.env` file is now as simple as:
+
+```sh
+node --env-file .env
+```
+
 ## What is .env?
 
 `.env` files are used to configure environment variables that will be present within a running application. The idea comes from the [Twelve-Factor App methodology](https://12factor.net/), which says to [store everything that is likely to vary between deploys (e.g. dev, staging, production) in the environment](https://12factor.net/config).
@@ -37,7 +43,7 @@ By convention you would save this as `.env` in the root of your project, though 
 You can then set the variables in the file as environment variables by starting Node.js with the `--env-file` flag pointing to your `.env` file. When loaded, the variables are available as properties of `process.env`.
 
 ```sh
-$ node --env-file ./.env
+$ node --env-file .env
 Welcome to Node.js v20.6.0.
 Type ".help" for more information.
 > console.log(process.env.PASSWORD)
@@ -54,9 +60,9 @@ Support right now is fairly basic compared to [dotenv](https://github.com/motdot
 
 * You cannot currently use [multiline values](https://github.com/motdotla/dotenv#multiline-values)
 *  You cannot use [variable expansion](https://github.com/motdotla/dotenv-expand)
-*  You can only specify one file at a time. Node.js will only use the last flag passed, so in the following example, only the variables from `./.env.development` will be used:
+*  You can only specify one file at a time. Node.js will only use the last flag passed, so in the following example, only the variables from `.env.development` will be used:
     ```sh
-    node --env-file ./.env --env-file ./.env.development
+    node --env-file .env --env-file .env.development
     ```
 
 There is more work to be done, and some of these features may be added. You can [follow the discussion on GitHub here](https://github.com/nodejs/node/issues/49148).
@@ -75,9 +81,9 @@ So, you can have an `.env` file that looks like this:
 NODE_OPTIONS="--no-warnings --inspect=127.0.0.1:9229"
 ```
 
-Then, when you run `node --env-file=./.env` the process will run without emitting warnings and it will activate the inspector on the IP address `127.0.0.1:9229`.
+Then, when you run `node --env-file=.env` the process will run without emitting warnings and it will activate the inspector on the IP address `127.0.0.1:9229`.
 
-*Note: you cannot put `NODE_OPTIONS="--env-file ./.env` in your `.env` file. It is disallowed to avoid inifinite loops.*
+*Note: you cannot put `NODE_OPTIONS="--env-file .env` in your `.env` file. It is disallowed to avoid inifinite loops.*
 
 ## Node.js just keeps improving
 
