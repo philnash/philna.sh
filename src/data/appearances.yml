@@ -50,6 +50,7 @@
     location: Raleigh, North Carolina, USA
   talks:
     - title: "Total ReDoS: the dangers of regex in JavaScript"
+    - title: The State of Passwordless Auth on the Web
 
 - event:
     name: LibertyJS
