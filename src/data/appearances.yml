@@ -62,6 +62,14 @@
     - title: CSS Between the Pages
 
 - event:
+    name: GDG Melbourne DevFest
+    link: https://gdg-melbourne-devfest-2023.sessionize.com/
+    start_date: 2023-10-07
+    location: Melbourne, Australia
+  talks:
+    - title: The top 5 JavaScript issues in all our codebases
+
+- event:
     name: MelbJS
     link: https://melbjs.com/
     start_date: 2023-08-09
