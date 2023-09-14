@@ -2,8 +2,8 @@
 title: "JavaScript is getting array grouping methods"
 tags:
   - javascript
-image: ../../assets/posts/node.png
-imageAlt: "The Node.js logo"
+image: ../../assets/posts/object-groupby.png
+imageAlt: "The function Object.groupBy on a JavaScript yellow background"
 imageWidth: 1920
 imageHeight: 600
 pubDate: "2023-09-14"
@@ -34,7 +34,7 @@ people.forEach((person) => {
   peopleByAge[age].push(person);
 });
 console.log(peopleByAge);
-/* 
+/*
 {
   "28": [{"name":"Alice","age":28}, {"name":"Eve","age":28}],
   "30": [{"name":"Bob","age":30}]
