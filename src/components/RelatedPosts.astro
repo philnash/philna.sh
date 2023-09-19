@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { getRelatedPosts } from "../utils/blog_posts";
+import { getRelatedPosts, postPath } from "../utils/blog_posts";
 const allBlogPosts = await getCollection("blog");
 
 type Props = {
@@ -19,7 +19,7 @@ const relatedPosts = getRelatedPosts(id, tags, allBlogPosts);
     {
       relatedPosts.map((post) => (
         <li>
-          <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+          <a href={postPath(post)}>{post.data.title}</a>
         </li>
       ))
     }
