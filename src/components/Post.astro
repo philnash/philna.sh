@@ -2,7 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import PostMedia from "./PostMedia.astro";
 import PostMeta from "./PostMeta.astro";
-import Markdown from "@astrojs/markdown-component";
+import { Markdown } from "astro-remote";
 import { postPath, viewTransitionName } from "../utils/blog_posts";
 
 type Props = {

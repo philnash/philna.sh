@@ -1,9 +1,9 @@
 import icon192 from "../assets/icon192x192.png";
 import icon512 from "../assets/icon512x512.png";
 
-export function get() {
-  return {
-    body: JSON.stringify(
+export function GET() {
+  return new Response(
+    JSON.stringify(
       {
         name: "Phil Nash",
         short_name: "Phil Nash",
@@ -30,6 +30,6 @@ export function get() {
       },
       null,
       2
-    ),
-  };
+    )
+  );
 }

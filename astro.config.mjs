@@ -17,9 +17,6 @@ export default defineConfig({
   vite: {
     plugins: [yaml()],
   },
-  experimental: {
-    assets: true,
-  },
   image: {
     service: sharpImageService(),
   },
