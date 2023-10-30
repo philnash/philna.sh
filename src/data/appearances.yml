@@ -68,6 +68,7 @@
     location: Melbourne, Australia
   talks:
     - title: The top 5 JavaScript issues in all our codebases
+      video: https://www.youtube.com/watch?v=6EjwsepZ1RA
 
 - event:
     name: MelbJS
