@@ -6,9 +6,9 @@ export function postPath(post: CollectionEntry<"blog">) {
     params: { year, month, day, slug },
   } = postParams(post);
   if (year && month && day) {
-    return `/blog/${year}/${month}/${day}/${slug}`;
+    return `/blog/${year}/${month}/${day}/${slug}/`;
   } else {
-    return `/blog/${slug}`;
+    return `/blog/${slug}/`;
   }
 }
 
