@@ -1,10 +1,37 @@
 - event:
+    name: Great International Developer Summit
+    link: https://developersummit.com/speaker/phil-nash
+    start_date: 2024-04-23
+    end_date: 2024-04-26
+    location: Bangalore, India
+  talks:
+    - title: "Conquering Complexity: Refactoring JavaScript Projects"
+    - title: "Total ReDoS: the Dangers of Regex in JavaScript"
+
+- event:
     name: XtremeJS
     link: https://xtremejs.dev/2023/
-    start_date: 2023-11-21
+    start_date: 2024-04-09
     location: Online
   talks:
     - title: The top 5 JavaScript issues in all our codebases
+
+- event:
+    name: NDC Sydney
+    link: https://ndcsydney.com/speakers/phil-nash
+    start_date: 2024-02-14
+    end_date: 2024-02-16
+    location: Sydney, Australia
+  talks:
+    - title: "Conquering complexity: refactoring JavaScript projects"
+
+- event:
+    name: Angular Melbourne
+    link: https://www.meetup.com/angular-melbourne/events/297244000/
+    start_date: 2023-12-07
+    location: Melbourne, Australia
+  talks:
+    - title: CSS Between the Pages
 
 - event:
     name: HalfStack on the Shore(ditch) (London)
