@@ -20,7 +20,7 @@ export async function get({
         `<url><loc>${new URL(
           postPath(post),
           url
-        )}/</loc><lastmod>${post.data.pubDate.toISOString()}</lastmod></url>`
+        )}</loc><lastmod>${post.data.pubDate.toISOString()}</lastmod></url>`
     )
     .join("");
   return {
