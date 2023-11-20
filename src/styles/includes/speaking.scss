@@ -58,7 +58,9 @@
   display: inline;
 }
 .speaking-list .talk-materials li::after {
-  content: " \2022 ";
+  content: " \2022";
+  display: inline-block;
+  margin: 0 0.5ex;
 }
 .speaking-list .talk-materials li:last-child::after {
   content: "";
