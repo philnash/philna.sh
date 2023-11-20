@@ -44,7 +44,7 @@
   margin-bottom: math.div($spacing-unit, 2);
 }
 
-@include media-query-min(700px) {
+@include media-query-min(730px) {
   .post-meta .meta {
     float: left;
   }

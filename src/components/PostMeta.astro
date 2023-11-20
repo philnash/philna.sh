@@ -4,10 +4,11 @@ import { SITE_AUTHOR } from "../consts";
 import { viewTransitionName } from "../utils/blog_posts";
 type Props = {
   pubDate: Date;
+  updatedDate?: Date;
   subscribe?: Boolean;
   slug: string;
 };
-const { pubDate, subscribe, slug } = Astro.props;
+const { pubDate, subscribe, slug, updatedDate } = Astro.props;
 ---
 
 <div class="post-meta">
@@ -30,6 +31,22 @@ const { pubDate, subscribe, slug } = Astro.props;
         }</time
       ></a
     >
+    { 
+      updatedDate && (<span class="updated">
+        , updated on
+        <time
+          class="dt-updated"
+          datetime={updatedDate.toISOString()}
+          itemprop="dateModified"
+          >{
+            updatedDate.toLocaleDateString("en-us", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })
+          }</time>
+      </span>)
+    }
     by
     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
       <a class="p-author h-card" href={Astro.site} itemprop="url"

@@ -10,6 +10,7 @@ imageAlt: "The Node.js logo"
 imageWidth: 1920
 imageHeight: 600
 pubDate: "2023-09-05"
+updatedDate: "2023-11-21"
 ---
 
 With the [recent release of version 20.6.0](https://nodejs.org/en/blog/release/v20.6.0), Node.js now has built-in support for `.env` files. You can now load environment variables from a `.env` file into `process.env` in your Node.js application completely dependency-free.
@@ -58,18 +59,22 @@ undefined
 
 Support right now is fairly basic compared to [dotenv](https://github.com/motdotla/dotenv). For example:
 
-* You cannot currently use [multiline values](https://github.com/motdotla/dotenv#multiline-values)
-*  You cannot use [variable expansion](https://github.com/motdotla/dotenv-expand)
-*  You can only specify one file at a time. Node.js will only use the last flag passed, so in the following example, only the variables from `.env.development` will be used:
-    ```sh
-    node --env-file .env --env-file .env.development
-    ```
+- You cannot currently use [multiline values](https://github.com/motdotla/dotenv#multiline-values)
+- You cannot use [variable expansion](https://github.com/motdotla/dotenv-expand)
+
+But, the feature is under active development. Since the 20.7.0 release, you can now specify multiple files. The variables from the last file will override any previous files.
+
+```sh
+node --env-file .env --env-file .env.development
+```
 
 There is more work to be done, and some of these features may be added. You can [follow the discussion on GitHub here](https://github.com/nodejs/node/issues/49148).
 
 ### Incorrect features
 
-As of the 20.6.0 release, [the documentation says](https://nodejs.org/dist/latest-v20.x/docs/api/cli.html#--env-fileconfig), "If the same variable is defined in the environment and in the file, the value from the environment takes precedence." This is the way that all dotenv packages work by default. However, that is not currently true of Node.js's implementation and variables in the `.env` file will override the environment. I have an [open pull request to correct this](https://github.com/nodejs/node/pull/49424).
+In the 20.6.0 release, [the documentation says](https://nodejs.org/dist/latest-v20.x/docs/api/cli.html#--env-fileconfig), "If the same variable is defined in the environment and in the file, the value from the environment takes precedence." This is the way that all dotenv packages work by default. However, that is not currently true of Node.js's implementation and variables in the `.env` file will override the environment.
+
+This has been fixed as of version 20.7.0. Variables defined in the environment now take precedence over variables in a `.env` file.
 
 ### Benefits to Node.js's implementation
 
@@ -83,7 +88,7 @@ NODE_OPTIONS="--no-warnings --inspect=127.0.0.1:9229"
 
 Then, when you run `node --env-file=.env` the process will run without emitting warnings and it will activate the inspector on the IP address `127.0.0.1:9229`.
 
-*Note: you cannot put `NODE_OPTIONS="--env-file .env` in your `.env` file. It is disallowed to avoid inifinite loops.*
+_Note: you cannot put `NODE_OPTIONS="--env-file .env` in your `.env` file. It is disallowed to avoid inifinite loops._
 
 ## Node.js just keeps improving
 

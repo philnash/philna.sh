@@ -35,6 +35,6 @@ const { post, aboveTheFold } = Astro.props;
       {post.data.title}
     </h2>
   </a>
-  <PostMeta pubDate={post.data.pubDate} subscribe={false} slug={post.slug} />
+  <PostMeta pubDate={post.data.pubDate} subscribe={false} slug={post.slug} updatedDate={post.data.updatedDate} />
   <Markdown content={post.body.split(/\n\n/)[0]} />
 </li>
