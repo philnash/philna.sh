@@ -7,6 +7,7 @@ imageAlt: "The function Object.groupBy on a JavaScript yellow background"
 imageWidth: 1920
 imageHeight: 600
 pubDate: "2023-09-14"
+updatedDate: "2023-11-24"
 ---
 
 Grouping items in an array is one of those things you've probably done a load of times. Each time you would have written a grouping function by hand or perhaps reached for [lodash's `groupBy`](https://lodash.com/docs/4.17.15#groupBy) function.
@@ -95,7 +96,7 @@ const ceo = { name: "Jamie", age: 40, reportsTo: null };
 const manager = { name: "Alice", age: 28, reportsTo: ceo };
 
 const people = [
-  ceo
+  ceo,
   manager,
   { name: "Bob", age: 30, reportsTo: manager },
   { name: "Eve", age: 28, reportsTo: ceo },
@@ -119,7 +120,7 @@ In the above example, the second line uses an object that looks like the `ceo` o
 
 The two `groupBy` methods are part of a [TC39 proposal that is currently at stage 3](https://github.com/tc39/proposal-array-grouping). This means that there is a good chance it will become a standard and, as such, there are implementations appearing.
 
-[Chrome 117 just launched with support for these two methods](https://developer.chrome.com/en/blog/new-in-chrome-117/#array-grouping), Firefox Nightly has implemented them behind a flag. Safari had implemented these methods under different names, I'm sure they will be update that soon. As the methods are in Chrome that means they have been implemented in V8, so will be available in Node the next time V8 is updated.
+[Chrome 117 just launched with support for these two methods](https://developer.chrome.com/en/blog/new-in-chrome-117/#array-grouping) and Firefox released support in version 119. Safari had implemented these methods under different names, I'm sure they will update that soon. As the methods are in Chrome that means they have been implemented in V8, so will be available in Node the next time V8 is updated.
 
 ## Why use static methods?
 
