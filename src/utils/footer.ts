@@ -24,10 +24,6 @@ export const footerIcons = [
     name: "Threads",
   },
   {
-    url: "https://t2.social/philnash",
-    name: "T2",
-  },
-  {
     url: "https://www.instagram.com/philnash/",
     name: "Instagram",
   },
