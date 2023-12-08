@@ -17,6 +17,24 @@
     - title: The top 5 JavaScript issues in all our codebases
 
 - event:
+    name: DevWorld
+    link: https://devworldconference.com/jsworld-conference
+    start_date: 2024-02-29
+    end_date: 2024-03-01
+    location: Amsterdam, The Netherlands
+  talks:
+    - title: CSS Between the Pages
+
+- event:
+    name: DeveloperWeek
+    link: https://developerweek2024.sched.com/event/1WhHr/pro-talk-the-top-5-javascript-issues-in-all-our-codebases?iframe=no
+    start_date: 2024-02-21
+    end_date: 2024-02-23
+    location: Oakland, California, USA
+  talks:
+    - title: The top 5 JavaScript issues in all our codebases
+
+- event:
     name: NDC Sydney
     link: https://ndcsydney.com/speakers/phil-nash
     start_date: 2024-02-14
@@ -160,7 +178,7 @@
     link: https://jsnation.com/
     start_date: 2023-06-01
     end_date: 2023-06-05
-    location: Amsterdam, Netherlands and online
+    location: Amsterdam, The Netherlands and online
   talks:
     - title: The State of Passwordless Auth on the Web
       video: https://www.youtube.com/watch?v=lJ198iRizNo
@@ -1373,7 +1391,7 @@
     link: https://amsterdam2016.codemotionworld.com/
     start_date: 2016-05-11
     end_date: 2016-05-12
-    location: Amsterdam, Netherlands
+    location: Amsterdam, The Netherlands
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-codemotion-amsterdam
