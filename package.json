@@ -11,25 +11,25 @@
   },
   "dependencies": {
     "@analytics-debugger/ga4mp": "^0.0.8",
-    "@astrojs/rss": "^3.0.0",
+    "@astrojs/rss": "^4.0.1",
     "@fontsource/merriweather": "^5.0.8",
-    "@fontsource/raleway": "^5.0.8",
-    "@philnash/astro-pagination": "^0.3.0",
-    "astro": "^3.2.2",
+    "@fontsource/raleway": "^5.0.16",
+    "@philnash/astro-pagination": "^0.4.0",
+    "astro": "^4.0.8",
     "astro-critters": "^2.0.11",
     "astro-remote": "^0.2.4",
-    "markdown-it": "^13.0.1",
+    "markdown-it": "^14.0.0",
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-to-string": "^4.0.0",
     "sanitize-html": "^2.10.0",
-    "sharp": "^0.32.5",
+    "sharp": "^0.33.1",
     "web-share-wrapper": "^0.2.2"
   },
   "devDependencies": {
-    "@rollup/plugin-yaml": "^4.0.1",
-    "@types/js-yaml": "^4.0.5",
-    "@types/markdown-it": "^13.0.1",
-    "@types/sanitize-html": "^2.9.0",
-    "sass": "^1.66.1"
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@types/js-yaml": "^4.0.9",
+    "@types/markdown-it": "^13.0.7",
+    "@types/sanitize-html": "^2.9.5",
+    "sass": "^1.69.5"
   }
 }
