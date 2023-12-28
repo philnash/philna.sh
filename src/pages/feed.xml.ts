@@ -11,7 +11,7 @@ export async function get({ site, generator }: APIContext) {
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    site: site?.toString() || "",
+    site: site?.toString() ?? "",
     xmlns: { atom: "http://www.w3.org/2005/Atom" },
     customData: `
       <atom:link href="${site}feed.xml" rel="self" type="application/rss+xml" />
