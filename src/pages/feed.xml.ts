@@ -6,7 +6,7 @@ import sanitize from "sanitize-html";
 import MarkdownIt from "markdown-it";
 const parser = new MarkdownIt();
 
-export async function get({ site, generator }: APIContext) {
+export async function GET({ site, generator }: APIContext) {
   const posts = await sortedBlogPosts();
   return rss({
     title: SITE_TITLE,

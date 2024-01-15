@@ -2,7 +2,7 @@ import type { APIContext } from "astro";
 import { PER_PAGE } from "../consts";
 import { sortedBlogPosts, postPath } from "../utils/blog_posts";
 
-export async function get({
+export async function GET({
   site,
   url,
 }: APIContext): Promise<{ body: string }> {
