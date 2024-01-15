@@ -1,8 +1,8 @@
 import { MASTODON_INSTANCE, MASTODON_USERNAME } from "../../consts";
 
-export function get() {
-  return {
-    body: JSON.stringify({
+export function GET() {
+  return new Response(
+    JSON.stringify({
       subject: `acct:${MASTODON_USERNAME}@${MASTODON_INSTANCE}`,
       aliases: [
         `https://${MASTODON_INSTANCE}/@${MASTODON_USERNAME}`,
@@ -24,6 +24,6 @@ export function get() {
           template: `https://${MASTODON_INSTANCE}/authorize_interaction?uri={uri}`,
         },
       ],
-    }),
-  };
+    })
+  );
 }

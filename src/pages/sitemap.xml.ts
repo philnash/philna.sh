@@ -2,10 +2,7 @@ import type { APIContext } from "astro";
 import { PER_PAGE } from "../consts";
 import { sortedBlogPosts, postPath } from "../utils/blog_posts";
 
-export async function GET({
-  site,
-  url,
-}: APIContext): Promise<{ body: string }> {
+export async function GET({ site, url }: APIContext): Promise<Response> {
   const posts = await sortedBlogPosts();
   const pageItems = Array(Math.floor(posts.length / PER_PAGE))
     .fill("")
@@ -23,8 +20,8 @@ export async function GET({
         )}</loc><lastmod>${post.data.pubDate.toISOString()}</lastmod></url>`
     )
     .join("");
-  return {
-    body: `
+  return new Response(
+    `
       <?xml version="1.0" encoding="UTF-8"?>
       <urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <url>
@@ -50,6 +47,6 @@ export async function GET({
         ${pageItems}
         ${postItems}
       </urlset>
-    `.trim(),
-  };
+    `.trim()
+  );
 }
