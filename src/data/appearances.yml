@@ -94,8 +94,10 @@
   talks:
     - title: The state of passwordless auth on the web
       slides: https://philnash.github.io/talks/state-of-passwordless/
+      video: https://www.youtube.com/watch?v=i1dgURLqOvQ&list=PLOUKmSqExtAH0k42evc9j3fiqfgHu00Cf&index=81
     - title: The top 5 JavaScript issues in all our codebases
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
+      video: https://www.youtube.com/watch?v=TqLItoNo7HM&list=PLOUKmSqExtAH0k42evc9j3fiqfgHu00Cf&index=10
 
 - event:
     name: Web Directions Summit
