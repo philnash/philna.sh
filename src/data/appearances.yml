@@ -8,6 +8,25 @@
     - title: "Conquering Complexity: Refactoring JavaScript Projects"
 
 - event:
+    name: International JavaScript Conference San Diego
+    link: https://javascript-conference.com/speaker/nashphil/
+    start_date: 2024-05-21
+    end_date: 2024-05-22
+    location: San Diego, California, USA
+  talks:
+    - title: "Conquering Complexity: Refactoring JavaScript Projects"
+    - title: "Total ReDoS: the Dangers of Regex in JavaScript"
+
+- event:
+    name: "../NEW"
+    link: https://slashnew.tech/
+    start_date: 2024-05-15
+    end_date: 2024-05-16
+    location: Newcastle, Australia
+  talks:
+    - title: "Conquering Complexity: Refactoring JavaScript Projects"
+
+- event:
     name: Great International Developer Summit
     link: https://developersummit.com/speaker/phil-nash
     start_date: 2024-04-23
@@ -67,6 +86,14 @@
     location: Sydney, Australia
   talks:
     - title: "Conquering complexity: refactoring JavaScript projects"
+
+- event:
+    name: Singapore Computer Society
+    link: https://www.scs.org.sg/events/details/what-is-clean-code-and-why-does-it-matter
+    start_date: 2024-02-02
+    location: Online
+  talks:
+    - title: What is clean code and why does it matter?
 
 - event:
     name: Angular Melbourne
