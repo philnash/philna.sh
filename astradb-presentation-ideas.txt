@@ -1,0 +1,38 @@
+Astro + Astra: Related
+
+Astro + Astra - fixing recommended posts on my own blog
+
+When I am trying to learn something new, I try to only introduce one new technology at a time. So when dealing with AstraDB and it's vector database capabilities, I wanted the database to be new and to work on something familiar, in this case, something related to me: my own blog.
+
+I rewrote this blog last year. It used to be built with Jekyll, but last year I rewrote it in Astro. I was just starting a job where JavaScript and TypeScript were to be my main focus, so I thought that it would help me to move my blog to what was a hot, relative newcomer to the static site generating scene: Astro.
+
+Astro is actually a lot more than a static site generator. It can act as a static site generator or as a server side renderer, as well as acting as a hybrid mode where it can choose to render dynamic content in a primarily static site, or static content in a primarily dynamic site.
+
+It also pioneered the idea of the island architecture. Astro is a multi page application generator that makes it very easy to place interactive sections on pages using the front-end framework of your choice. So you can have multiple pages, but if there's a page that requires more front-end interactivity you can choose to mount a React, Svelte, Preact, Vue or Solid application. They have taken this even further, using the web's new view transition API, something I'm currently excited about, allowing you to transition islands between pages to give the feel of a single page application, with the simplicity of a multi page app and this island architecture.
+
+Astra also has a cute CLI robot called Houston that helps you generate sites. Not important for this talk, but lovely all the same.
+
+You might be wondering how all this is related to AstraDB, aside from how close Astro and Astra sound to each other.
+
+---
+
+## What to do with Astra?
+
+- I wanted to play with AstraDB's vector capabilities
+- Data in vector format is great for finding other similar data
+- My blog has a related posts feature, it's a classic feature that helps readers find other related content and not necessarily leave your blog immediately after reading a post
+- So I decided I wanted to use AstraDB to help me write a better related posts feature for my blog
+- I also thought this was interesting as most usages of vector databases recently have been to augment LLMs with relevant information. Like in the Taylor Swift bot that you all wrote last year.
+- I think over my time at Twilio I ended up spending way too much time with bad bots, to the point that I'm instantly frustrated with any bot. The bot has been a really good example to show how good generative AI is, but I'd like to see the AI fade into the background and power more useful interfaces based on the application. So, I didn't want to build a bot for this.
+- Instead, I wanted to use Astra to power the related posts feature on my blog
+
+---
+
+## Related posts
+
+- You should have seen how my related posts feature used to work.
+- Jekyll is powered by Liquid, a UI language that is relatively easy to learn, but quite restrictive. It was created by Shopify and powers their templates.
+- Based on liquid's restrictions, the old version of my site implemented related posts by abusing liquid's looping, conditionals and assignment with Jekyll's content APIs to find related posts based on having one or more of the same tag.
+-
+
+Since I moved my blog from Jekyll to Astro, I wasn't actually looking for any of these advanced features, and I mostly don't use them. There are no islands, and it is not a hybrid static/dynamic app. My blog is self contained, statically generated and deployed to CloudFlare Pages. What I do use is one of the core features of Astro since version 2: content collections.

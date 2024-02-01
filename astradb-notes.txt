@@ -1,0 +1,6 @@
+# AstraDB experience notes
+
+- Looked up "metadata filter" and got a 404 from Google: https://docs.datastax.com/en/astra/astra-db-vector/databases/explore-data.html
+- Search from the 404 page opens a new tab
+- I knew about the Taylor Swift bot, searched for it, went to the repo to find out about the components used but it didn't describe them. It would have been good to link to the post from the README. Or have a short run down of how it was built in the README
+- When signing into Astra, the button says "Sign In With Github" but GitHub should have a capital "H"

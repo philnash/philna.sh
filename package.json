@@ -12,6 +12,7 @@
   "dependencies": {
     "@analytics-debugger/ga4mp": "^0.0.8",
     "@astrojs/rss": "^4.0.1",
+    "@datastax/astra-db-ts": "^0.1.4",
     "@fontsource/merriweather": "^5.0.8",
     "@fontsource/raleway": "^5.0.16",
     "@philnash/astro-pagination": "^0.4.0",
@@ -21,6 +22,7 @@
     "markdown-it": "^14.0.0",
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-to-string": "^4.0.0",
+    "openai": "^4.25.0",
     "sanitize-html": "^2.10.0",
     "sharp": "^0.33.1",
     "web-share-wrapper": "^0.2.2"

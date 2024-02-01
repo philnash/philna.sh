@@ -1,7 +1,5 @@
 ---
-import { getCollection } from "astro:content";
-import { getRelatedPosts, postPath } from "../utils/blog_posts";
-const allBlogPosts = await getCollection("blog");
+import { getRelatedPosts } from "../utils/related_posts";
 
 type Props = {
   tags: string[];
@@ -10,16 +8,16 @@ type Props = {
 
 const { tags, id } = Astro.props;
 
-const relatedPosts = getRelatedPosts(id, tags, allBlogPosts);
+const relatedPosts = await getRelatedPosts(id, tags);
 ---
 
 <div class="related">
   <h2>You might also like</h2>
   <ul>
     {
-      relatedPosts.map((post) => (
+      relatedPosts.map(({ path, title }) => (
         <li>
-          <a href={postPath(post)}>{post.data.title}</a>
+          <a href={path}>{title}</a>
         </li>
       ))
     }

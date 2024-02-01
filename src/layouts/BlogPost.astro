@@ -5,11 +5,17 @@ import CarbonAds from "../components/CarbonAds.astro";
 import PostMeta from "../components/PostMeta.astro";
 import SubscribeRss from "../components/SubscribeRss.astro";
 import RelatedPosts from "../components/RelatedPosts.astro";
+import VectorRelatedPosts from "../components/VectorRelatedPosts.astro";
 import Share from "../components/Share.astro";
 import PostMedia from "../components/PostMedia.astro";
 import { viewTransitionName } from "../utils/blog_posts";
 
-type Props = CollectionEntry<"blog">["data"] & { id: string; slug: string };
+type Props = CollectionEntry<"blog">["data"] & {
+  id: string;
+  slug: string;
+  path: string;
+  body: string;
+};
 
 const {
   title,
@@ -29,6 +35,8 @@ const {
   id,
   scripts,
   slug,
+  path,
+  body,
 } = Astro.props;
 ---
 
@@ -68,7 +76,12 @@ const {
       </header>
 
       <div class="cell cell-12 cell-med-12">
-        <PostMeta pubDate={pubDate} subscribe={true} slug={slug} updatedDate={updatedDate} />
+        <PostMeta
+          pubDate={pubDate}
+          subscribe={true}
+          slug={slug}
+          updatedDate={updatedDate}
+        />
       </div>
 
       <div class="row">
@@ -85,6 +98,7 @@ const {
       <div class="post-promo cell cell-12">
         <Share title={title} />
         <RelatedPosts tags={tags} id={id} />
+        <VectorRelatedPosts path={path} body={body} title={title} slug={slug} />
         <SubscribeRss />
       </div>
     </article>
