@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import BlogPost from "../../../../../layouts/BlogPost.astro";
-import { postParams } from "../../../../../utils/blog_posts";
+import { postParams, postPath } from "../../../../../utils/blog_posts";
 import { truncate } from "../../../../../utils/string";
 
 export async function getStaticPaths() {
@@ -18,9 +18,11 @@ const { Content } = await post.render();
 
 <BlogPost
   {...post.data}
+  body={post.body}
   description={truncate(post.body, 160)}
   id={post.id.toString()}
   slug={post.slug}
+  path={postPath(post)}
 >
   <Content />
 </BlogPost>
