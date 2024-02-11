@@ -1,7 +1,7 @@
 import { connect, getBlogCollection } from "./astradb";
 import { getEmbeddings } from "./openai";
 
-const embeddingName = "ada";
+const embeddingName = "small3";
 
 export async function findOrCreateBlogEmbedding({
   slug,

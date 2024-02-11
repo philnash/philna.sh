@@ -4,7 +4,6 @@ import DefaultLayout from "./DefaultLayout.astro";
 import CarbonAds from "../components/CarbonAds.astro";
 import PostMeta from "../components/PostMeta.astro";
 import SubscribeRss from "../components/SubscribeRss.astro";
-import RelatedPosts from "../components/RelatedPosts.astro";
 import VectorRelatedPosts from "../components/VectorRelatedPosts.astro";
 import Share from "../components/Share.astro";
 import PostMedia from "../components/PostMedia.astro";
@@ -97,7 +96,6 @@ const {
       </div>
       <div class="post-promo cell cell-12">
         <Share title={title} />
-        <RelatedPosts tags={tags} id={id} />
         <VectorRelatedPosts path={path} body={body} title={title} slug={slug} />
         <SubscribeRss />
       </div>
