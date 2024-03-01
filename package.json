@@ -23,7 +23,7 @@
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-to-string": "^4.0.0",
     "openai": "^4.25.0",
-    "sanitize-html": "^2.10.0",
+    "sanitize-html": "^2.12.1",
     "sharp": "^0.33.1",
     "web-share-wrapper": "^0.2.2"
   },
