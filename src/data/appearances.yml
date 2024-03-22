@@ -51,6 +51,7 @@
     location: Sydney, Australia
   talks:
     - title: "Conquering Complexity: Refactoring JavaScript Projects"
+      slides: https://philnash.github.io/talks/conquering-complexity/
 
 - event:
     name: Programmable Melbourne
@@ -59,6 +60,7 @@
     location: Melbourne, Australia
   talks:
     - title: "Conquering Complexity: Refactoring JavaScript Projects"
+      slides: https://philnash.github.io/talks/conquering-complexity/
 
 - event:
     name: DevWorld
@@ -68,6 +70,7 @@
     location: Amsterdam, The Netherlands
   talks:
     - title: CSS Between the Pages
+      slides: https://philnash.github.io/talks/css-between-the-pages/
 
 - event:
     name: DeveloperWeek
@@ -77,6 +80,7 @@
     location: Oakland, California, USA
   talks:
     - title: The top 5 JavaScript issues in all our codebases
+      slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
 
 - event:
     name: NDC Sydney
@@ -86,6 +90,7 @@
     location: Sydney, Australia
   talks:
     - title: "Conquering complexity: refactoring JavaScript projects"
+      slides: https://philnash.github.io/talks/conquering-complexity/
 
 - event:
     name: Singapore Computer Society
@@ -102,6 +107,7 @@
     location: Melbourne, Australia
   talks:
     - title: CSS Between the Pages
+      slides: https://philnash.github.io/talks/css-between-the-pages/
 
 - event:
     name: HalfStack on the Shore(ditch) (London)
@@ -111,6 +117,7 @@
   talks:
     - title: CSS Between the Pages
       slides: https://philnash.github.io/talks/css-between-the-pages/
+      video: https://www.youtube.com/watch?v=i1KOQKKRO3I
 
 - event:
     name: Øredev
@@ -145,6 +152,7 @@
   talks:
     - title: The state of passwordless auth on the web
       slides: https://philnash.github.io/talks/state-of-passwordless/
+      video: https://www.youtube.com/watch?v=Bue0JAinNJg
 
 - event:
     name: All Things Open
