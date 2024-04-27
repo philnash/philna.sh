@@ -8,6 +8,15 @@
     - title: "Conquering Complexity: Refactoring JavaScript Projects"
 
 - event:
+    name: "Web Directions: Code"
+    link: https://webdirections.org/code/speakers/phil-nash.php
+    start_date: 2024-06-20
+    end_date: 2024-06-21
+    location: Melbourne, Australia
+  talks:
+    - title: "Upgrading JavaScript's collections"
+
+- event:
     name: International JavaScript Conference San Diego
     link: https://javascript-conference.com/speaker/nashphil/
     start_date: 2024-05-21
@@ -43,6 +52,7 @@
     location: Online
   talks:
     - title: The top 5 JavaScript issues in all our codebases
+      slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
 
 - event:
     name: Programmable Sydney
