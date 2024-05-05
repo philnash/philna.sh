@@ -7,27 +7,28 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: `https://${DOMAIN}`,
-  integrations: [
-    critters({
-      critters: {
-        preload: "media",
-      },
-    }),
-  ],
+  integrations: [critters({
+    critters: {
+      preload: "media"
+    }
+  })],
   vite: {
     plugins: [yaml()],
+    ssr: {
+      external: ["@datastax/astra-db-ts", "openai"]
+    }
   },
   image: {
-    service: sharpImageService(),
+    service: sharpImageService()
   },
   markdown: {
     shikiConfig: {
-      theme: "slack-dark",
-    },
+      theme: "slack-dark"
+    }
   },
   compressHTML: true,
   output: "hybrid",
   adapter: cloudflare({
-    imageService: "compile",
-  }),
+    imageService: "compile"
+  })
 });
