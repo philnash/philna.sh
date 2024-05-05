@@ -20,7 +20,7 @@ const embeddings = await findOrCreateBlogEmbedding({
   slug,
 });
 
-const relatedPosts = await getRelatedPosts(embeddings);
+const relatedPosts = await getRelatedPosts(slug, embeddings);
 ---
 
 <div class="related">

@@ -1,30 +1,30 @@
-import { AstraDB, Collection } from "@datastax/astra-db-ts";
+import { DataAPIClient, Db, Collection } from "@datastax/astra-db-ts";
 
 const { ASTRADB_APP_TOKEN, ASTRADB_ENDPOINT } = import.meta.env;
+const COLLECTION_NAME = "philnash_blog_3_small";
 
-let astraDb: null | AstraDB = null;
+export interface BlogEmbeddingDoc {
+  _id: string;
+  title: string;
+  path: string;
+  $vector: number[];
+}
+
+let astraDb: null | Db = null;
+let blogCollection: Collection<BlogEmbeddingDoc> | null = null;
 
 export function connect() {
   // Initialization
   if (astraDb === null) {
-    astraDb = new AstraDB(ASTRADB_APP_TOKEN, ASTRADB_ENDPOINT);
+    astraDb = new DataAPIClient(ASTRADB_APP_TOKEN).db(ASTRADB_ENDPOINT);
   }
   return astraDb;
 }
 
-export const BlogCollectionNames = {
-  ada: "philnash_blog",
-  small3: "philnash_blog_3_small",
-  large3: "philnash_blog_3_large",
-};
-let blogCollection: null | Collection = null;
-
-export async function getBlogCollection(
-  db: AstraDB,
-  blogCollectionName: keyof typeof BlogCollectionNames = "ada"
-) {
+export function getBlogCollection(db: Db) {
   if (blogCollection === null) {
-    return db.collection(BlogCollectionNames[blogCollectionName]);
+    blogCollection = db.collection<BlogEmbeddingDoc>(COLLECTION_NAME);
+    return blogCollection;
   }
   return blogCollection;
 }
