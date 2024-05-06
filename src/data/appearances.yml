@@ -1,11 +1,11 @@
 - event:
-    name: JSNation
-    link: https://jsnation.com/
-    start_date: 2024-06-13
-    end_date: 2024-06-17
-    location: Amsterdam, The Netherlands
+    name: "Copenhagen Developers Festival"
+    link: https://cphdevfest.com/
+    start_date: 2024-08-26
+    end_date: 2024-08-30
+    location: Copenhagen, Denmark
   talks:
-    - title: "Conquering Complexity: Refactoring JavaScript Projects"
+    - title: "Total ReDoS: the dangers of regex in JavaScript"
 
 - event:
     name: "Web Directions: Code"
@@ -15,6 +15,26 @@
     location: Melbourne, Australia
   talks:
     - title: "Upgrading JavaScript's collections"
+
+- event:
+    name: React Summit
+    link: https://reactsummit.com/
+    start_date: 2024-06-14
+    end_date: 2024-06-18
+    location: Amsterdam, The Netherlands
+  roles:
+    - MC
+
+- event:
+    name: JSNation
+    link: https://jsnation.com/
+    start_date: 2024-06-13
+    end_date: 2024-06-17
+    location: Amsterdam, The Netherlands
+  talks:
+    - title: "Conquering Complexity: Refactoring JavaScript Projects"
+  roles:
+    - MC
 
 - event:
     name: International JavaScript Conference San Diego
