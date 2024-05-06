@@ -34,7 +34,6 @@ const {
   id,
   scripts,
   slug,
-  path,
   body,
 } = Astro.props;
 ---
@@ -96,7 +95,7 @@ const {
       </div>
       <div class="post-promo cell cell-12">
         <Share title={title} />
-        <VectorRelatedPosts path={path} body={body} title={title} slug={slug} />
+        <VectorRelatedPosts body={body} slug={slug} />
         <SubscribeRss />
       </div>
     </article>

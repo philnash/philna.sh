@@ -1,26 +1,15 @@
 ---
-import {
-  getRelatedPosts,
-  findOrCreateBlogEmbedding,
-} from "../utils/vector_related_posts";
+import { getRelatedPosts } from "../utils/vector_related_posts";
+import { postPath } from "../utils/blog_posts";
 
 type Props = {
-  title: string;
-  path: string;
   body: string;
   slug: string;
 };
 
-const { title, path, body, slug } = Astro.props;
+const { body, slug } = Astro.props;
 
-const embeddings = await findOrCreateBlogEmbedding({
-  title,
-  path,
-  body,
-  slug,
-});
-
-const relatedPosts = await getRelatedPosts(slug, embeddings);
+const relatedPosts = await getRelatedPosts({ body, slug });
 ---
 
 <div class="related">
@@ -29,7 +18,7 @@ const relatedPosts = await getRelatedPosts(slug, embeddings);
     {
       relatedPosts.map((post) => (
         <li>
-          <a href={post.path}>{post.title}</a>
+          <a href={postPath(post)}>{post.data.title}</a>
         </li>
       ))
     }
