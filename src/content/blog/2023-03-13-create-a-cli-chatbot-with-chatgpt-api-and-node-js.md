@@ -246,6 +246,6 @@ You might have heard, for example, that you can ask ChatGPT to help you with pro
 
 ## This is just the beginning
 
-If experimenting with this technology is the important thing for us to understand what we can build with it and what we should or should not build with it, then making it easier to experiment is the next goal. My next goal is to expamnd this tool so that it can save, interact with and edit multiple assistants so that you can continue to work with them and improve them over time.
+If experimenting with this technology is the important thing for us to understand what we can build with it and what we should or should not build with it, then making it easier to experiment is the next goal. My next goal is to expand this tool so that it can save, interact with and edit multiple assistants so that you can continue to work with them and improve them over time.
 
 In the meantime, you can check out [the full code for this first assistant in GitHub](https://github.com/philnash/asst/tree/basic-asst), follow the repo to keep up with improvements.
