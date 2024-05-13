@@ -17,7 +17,7 @@
     "@fontsource/merriweather": "^5.0.13",
     "@fontsource/raleway": "^5.0.19",
     "@philnash/astro-pagination": "^0.4.0",
-    "@philnash/resend": "^1.0.1",
+    "@philnash/resend": "^1.1.0",
     "astro": "^4.7.1",
     "astro-critters": "^2.1.6",
     "astro-remote": "^0.2.4",
