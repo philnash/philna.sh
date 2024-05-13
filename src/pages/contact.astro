@@ -4,11 +4,26 @@ export const prerender = false;
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Resend } from "@philnash/resend";
+import { z } from "zod";
+
+type ContactErrors = {
+  email: string[];
+  subject: string[];
+  message: string[];
+};
 
 const title = "Contact";
-
 const method = Astro.request.method;
 
+const emailSchema = z
+  .string()
+  .email({ message: "Please enter a valid email address" });
+
+function stringFromFormDataEntryValue(parameter: FormDataEntryValue | null) {
+  return parameter === null ? "" : parameter.toString().trim();
+}
+
+const errors: ContactErrors = { email: [], subject: [], message: [] };
 let email = "",
   subject = "",
   message = "";
@@ -17,15 +32,22 @@ let successMessage = "";
 if (method === "POST") {
   try {
     const data = await Astro.request.formData();
-    const email = data.get("email");
-    const subject = data.get("subject");
-    const message = data.get("message");
-    console.log(email, subject, message);
-    if (
-      typeof email === "string" &&
-      typeof subject === "string" &&
-      typeof message === "string"
-    ) {
+    email = stringFromFormDataEntryValue(data.get("email"));
+    subject = stringFromFormDataEntryValue(data.get("subject"));
+    message = stringFromFormDataEntryValue(data.get("message"));
+
+    const emailResult = emailSchema.safeParse(email);
+    if (!emailResult.success) {
+      console.log(emailResult.error.errors.map((e) => e.message));
+      errors.email.push(...emailResult.error.errors.map((e) => e.message));
+    }
+    if (subject === "") {
+      errors.subject.push("Please enter a subject");
+    }
+    if (message === "") {
+      errors.message.push("Please enter a message");
+    }
+    if (Object.values(errors).flat().length === 0) {
       const resend = new Resend(import.meta.env.RESEND_API_KEY);
       await resend.emails.send({
         to: import.meta.env.RESEND_TO_EMAIL,
@@ -34,7 +56,7 @@ if (method === "POST") {
         subject: subject,
         text: message,
       });
-      successMessage = "Thanks for your email, I'll get back to you soon";
+      successMessage = "Thanks for your email, I'll get back to you soon!";
     }
   } catch (error) {
     if (error instanceof Error) {
@@ -56,48 +78,71 @@ if (method === "POST") {
   </div>
 
   <div class="row">
-    <div class="cell cell-12 cell-med-10 cell-centre">
-      <p>If you want to get in contact with Phil, you can email him here.</p>
-
-      {successMessage && <p>{successMessage}</p>}
+    <div class="cell cell-12 cell-med-10 cell-centre contact">
       {
-        !successMessage && (
-          <form method="POST">
-            <div>
-              <label for="email">Your email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="you@domain.com"
-                value={email}
-              />
-            </div>
-            <div>
-              <label for="subject">Subject</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Subject"
-                value={subject}
-              />
-            </div>
-            <div>
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Your message"
-                value={message}
-              />
-            </div>
-            <div>
-              <button type="submit">Send</button>
-            </div>
-          </form>
+        successMessage ? (
+          <p>{successMessage}</p>
+        ) : (
+          <>
+            <p>
+              You can email Phil here or catch him on any of <a href="/links">these social networks</a>.
+            </p>
+            <form method="POST">
+              <div>
+                <label for="email">Your email</label>
+                {errors.email.map((error) => (
+                  <p class="form-error">{error}</p>
+                ))}
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@domain.com"
+                  value={email}
+                  class={errors.email.length > 0 ? "error" : ""}
+                  required
+                />
+              </div>
+              <div>
+                <label for="subject">Subject</label>
+                {errors.subject.map((error) => (
+                  <p class="form-error">{error}</p>
+                ))}
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Hi Phil! 👋"
+                  value={subject}
+                  class={errors.subject.length > 0 ? "error" : ""}
+                  required
+                />
+              </div>
+              <div>
+                <label for="message">Message</label>
+                {errors.message.map((error) => (
+                  <p class="form-error">{error}</p>
+                ))}
+                <!-- prettier-ignore -->
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your message"
+                  class={errors.message.length > 0 ? "error" : ""}
+                  required
+                >{message}</textarea>
+              </div>
+              <div>
+                <button type="submit">
+                  <span class="btn-submit-text">Send</span>
+                  <span class="btn-submit-loading" aria-live="assertive" data-loading-msg="Sending..."></span>
+                </button>
+              </div>
+            </form>
+          </>
         )
       }
     </div>
   </div>
+  <script type="module" src="../src/scripts/form.ts"></script>
 </DefaultLayout>

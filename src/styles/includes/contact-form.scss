@@ -1,0 +1,43 @@
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  color: $text-color;
+}
+.contact textarea {
+  height: 200px;
+}
+
+.contact button {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: $border-radius;
+  background-color: $brand-color;
+  color: white;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  cursor: pointer;
+  width: 150px;
+}
+.contact button:hover,
+.contact button[data-loading="true"] {
+  background-color: lighten($brand-color, 15%);
+}
+.contact button[data-loading="true"] .btn-submit-text {
+  display: none;
+}
+
+.form-error {
+  margin-bottom: 0;
+  color: $brand-color;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input.error, textarea.error {
+  border-color: $brand-color;
+}
