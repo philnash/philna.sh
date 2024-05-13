@@ -161,10 +161,8 @@ if (method === "POST") {
         const loadingText = form.querySelector(
           'button[type="submit"] .btn-submit-loading'
         ) as HTMLElement | undefined;
-        console.log({ submitButton, submitting, loadingText });
         if (!submitting) {
           submitButton?.setAttribute("data-loading", "true");
-          console.log(loadingText?.dataset);
           if (loadingText) {
             loadingText.textContent = loadingText.dataset["loadingMsg"] || "";
           }
