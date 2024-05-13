@@ -1,0 +1,82 @@
+---
+export const prerender = false;
+
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const title = "Contact";
+
+const method = Astro.request.method;
+
+let email="", subject="", message=""
+
+if (method === "POST") {
+  try {
+    throw new Error("Oops");
+    // const data = await Astro.request.formData();
+    // const email = data.get("email");
+    // const subject = data.get("subject");
+    // const message = data.get("message");
+    // console.log(email, subject, message);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+    throw error;
+  }
+}
+---
+
+<DefaultLayout
+  title={`${title} | ${SITE_TITLE}`}
+  description={SITE_DESCRIPTION}
+>
+  <div class="home row">
+    <header class="page-header cell cell-12">
+      <h1 class="page-title">{title}</h1>
+    </header>
+  </div>
+
+  <div class="row">
+    <div class="cell cell-12 cell-med-10 cell-centre">
+      <p>If you want to get in contact with Phil, you can email him here.</p>
+
+      <form method="POST">
+        <div>
+          <label for="email">Your email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@domain.com"
+            value={email}
+            
+          />
+        </div>
+        <div>
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject"
+            value={subject}
+            
+          />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your message"
+            value={message}
+            ></textarea>
+        </div>
+        <div>
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</DefaultLayout>

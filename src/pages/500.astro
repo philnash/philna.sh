@@ -1,0 +1,22 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+const title = "Five hundred";
+---
+
+<DefaultLayout
+  title={`${title} | ${SITE_TITLE}`}
+  description={SITE_DESCRIPTION}
+>
+  <div class="home row">
+    <header class="page-header cell cell-12">
+      <h1 class="page-title">{title}</h1>
+    </header>
+  </div>
+
+  <div style="text-align: center; font-size: 21px; margin-bottom:120px;">
+    <p>Something went wrong 😬</p>
+    <p>Try starting again from the <a href="/">home page</a>.</p>
+  </div>
+</DefaultLayout>
