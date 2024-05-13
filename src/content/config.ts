@@ -26,6 +26,7 @@ const blog = defineCollection({
       videoHeight: z.number().optional(),
       tags: z.array(z.string()),
       scripts: z.array(z.string()).optional(),
+      regenerateVectors: z.boolean().default(false),
     }),
 });
 

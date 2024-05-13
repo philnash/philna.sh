@@ -10,10 +10,8 @@ import PostMedia from "../components/PostMedia.astro";
 import { viewTransitionName } from "../utils/blog_posts";
 
 type Props = CollectionEntry<"blog">["data"] & {
-  id: string;
   slug: string;
-  path: string;
-  body: string;
+  relatedPosts: CollectionEntry<"blog">[];
 };
 
 const {
@@ -30,11 +28,9 @@ const {
   video,
   videoHeight,
   videoWidth,
-  tags,
-  id,
   scripts,
+  relatedPosts,
   slug,
-  body,
 } = Astro.props;
 ---
 
@@ -95,7 +91,7 @@ const {
       </div>
       <div class="post-promo cell cell-12">
         <Share title={title} />
-        <VectorRelatedPosts body={body} slug={slug} />
+        <VectorRelatedPosts relatedPosts={relatedPosts} />
         <SubscribeRss />
       </div>
     </article>

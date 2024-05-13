@@ -1,15 +1,12 @@
 ---
-import { getRelatedPosts } from "../utils/vector_related_posts";
 import { postPath } from "../utils/blog_posts";
+import type { CollectionEntry } from "astro:content";
 
 type Props = {
-  body: string;
-  slug: string;
+  relatedPosts: CollectionEntry<"blog">[];
 };
 
-const { body, slug } = Astro.props;
-
-const relatedPosts = await getRelatedPosts({ body, slug });
+const { relatedPosts } = Astro.props;
 ---
 
 <div class="related">

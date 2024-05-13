@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@analytics-debugger/ga4mp": "^0.0.8",
+    "@astrojs/check": "^0.6.0",
     "@astrojs/rss": "^4.0.5",
     "@datastax/astra-db-ts": "^1.1.0",
     "@fontsource/merriweather": "^5.0.13",

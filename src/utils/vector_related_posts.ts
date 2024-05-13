@@ -1,5 +1,4 @@
 import { DataAPIClient } from "@datastax/astra-db-ts";
-import type { StrictFilter } from "@datastax/astra-db-ts";
 import { getEmbeddings } from "./openai";
 
 import { getEntry } from "astro:content";
@@ -8,26 +7,37 @@ import type { CollectionEntry } from "astro:content";
 const { ASTRADB_APP_TOKEN, ASTRADB_ENDPOINT } = import.meta.env;
 const COLLECTION_NAME = "philnash_blog";
 
-interface BlogEmbeddingDoc {
+type BlogEmbeddingDoc = {
   _id: string;
   $vector: number[];
-}
-interface BlogEmbeddingData {
+};
+type BlogEmbeddingData = {
   slug: string;
   body: string;
-}
+  regenerateVectors: boolean;
+};
 
 const astraDb = new DataAPIClient(ASTRADB_APP_TOKEN).db(ASTRADB_ENDPOINT);
 const blogCollection = astraDb.collection<BlogEmbeddingDoc>(COLLECTION_NAME);
 
-async function findOrCreateBlogEmbedding({ slug, body }: BlogEmbeddingData) {
+async function findOrCreateBlogEmbedding({
+  slug,
+  body,
+  regenerateVectors,
+}: BlogEmbeddingData) {
   const item = await blogCollection.findOne({ _id: slug });
   if (item) {
+    if (regenerateVectors) {
+      const embeddings = await getEmbeddings(body);
+      await blogCollection.updateOne(
+        { _id: slug },
+        { $set: { $vector: embeddings } }
+      );
+      return embeddings;
+    }
     return item.$vector;
   }
-  // create embeddings for blog post content with OpenAI API
   const embeddings = await getEmbeddings(body);
-  // save embeddings to Astradb
   await blogCollection.insertOne({ _id: slug, $vector: embeddings });
   return embeddings;
 }
@@ -41,10 +51,15 @@ function isPost(
 export async function getRelatedPosts({
   slug,
   body,
+  regenerateVectors,
 }: BlogEmbeddingData): Promise<CollectionEntry<"blog">[]> {
-  const embeddings = await findOrCreateBlogEmbedding({ slug, body });
+  const embeddings = await findOrCreateBlogEmbedding({
+    slug,
+    body,
+    regenerateVectors,
+  });
 
-  const filter: StrictFilter<BlogEmbeddingDoc> = { _id: { $ne: slug } };
+  const filter = { _id: { $ne: slug } };
   const options = { sort: { $vector: embeddings }, limit: 4 };
 
   const results = await blogCollection.find(filter, options).toArray();
