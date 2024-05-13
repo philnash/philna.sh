@@ -1,20 +1,15 @@
 ---
 export const prerender = false;
 
-console.log({ env: process.env });
-
 function env() {
   if (Astro.locals.runtime?.env) {
-    console.log({ cloudflare_locals: Astro.locals.runtime.env });
     return Astro.locals.runtime.env;
   } else {
     return process.env;
   }
 }
 
-const ENV = env();
-
-console.log({ combined: ENV });
+const { RESEND_API_KEY="", RESEND_TO_EMAIL="", RESEND_FROM_EMAIL="" } = env();
 
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
@@ -62,10 +57,10 @@ if (method === "POST") {
       errors.message.push("Please enter a message");
     }
     if (Object.values(errors).flat().length === 0) {
-      const resend = new Resend(ENV.RESEND_API_KEY);
+      const resend = new Resend(RESEND_API_KEY);
       await resend.emails.send({
-        to: ENV.RESEND_TO_EMAIL,
-        from: ENV.RESEND_FROM_EMAIL,
+        to: RESEND_TO_EMAIL,
+        from: RESEND_FROM_EMAIL,
         reply_to: email,
         subject: subject,
         text: message,
