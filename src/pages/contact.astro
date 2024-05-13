@@ -1,6 +1,8 @@
 ---
 export const prerender = false;
 
+console.log({ env: process.env });
+
 function env() {
   if (Astro.locals.runtime?.env) {
     console.log({ cloudflare_locals: Astro.locals.runtime.env });
@@ -12,7 +14,7 @@ function env() {
 
 const ENV = env();
 
-console.log(ENV);
+console.log({ combined: ENV });
 
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
