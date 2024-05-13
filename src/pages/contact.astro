@@ -38,7 +38,6 @@ if (method === "POST") {
 
     const emailResult = emailSchema.safeParse(email);
     if (!emailResult.success) {
-      console.log(emailResult.error.errors.map((e) => e.message));
       errors.email.push(...emailResult.error.errors.map((e) => e.message));
     }
     if (subject === "") {
