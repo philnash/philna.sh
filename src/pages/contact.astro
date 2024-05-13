@@ -3,21 +3,39 @@ export const prerender = false;
 
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Resend } from "@philnash/resend";
 
 const title = "Contact";
 
 const method = Astro.request.method;
 
-let email="", subject="", message=""
+let email = "",
+  subject = "",
+  message = "";
+let successMessage = "";
 
 if (method === "POST") {
   try {
-    throw new Error("Oops");
-    // const data = await Astro.request.formData();
-    // const email = data.get("email");
-    // const subject = data.get("subject");
-    // const message = data.get("message");
-    // console.log(email, subject, message);
+    const data = await Astro.request.formData();
+    const email = data.get("email");
+    const subject = data.get("subject");
+    const message = data.get("message");
+    console.log(email, subject, message);
+    if (
+      typeof email === "string" &&
+      typeof subject === "string" &&
+      typeof message === "string"
+    ) {
+      const resend = new Resend(import.meta.env.RESEND_API_KEY);
+      await resend.emails.send({
+        to: import.meta.env.RESEND_TO_EMAIL,
+        from: import.meta.env.RESEND_FROM_EMAIL,
+        reply_to: email,
+        subject: subject,
+        text: message,
+      });
+      successMessage = "Thanks for your email, I'll get back to you soon";
+    }
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
@@ -41,42 +59,45 @@ if (method === "POST") {
     <div class="cell cell-12 cell-med-10 cell-centre">
       <p>If you want to get in contact with Phil, you can email him here.</p>
 
-      <form method="POST">
-        <div>
-          <label for="email">Your email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="you@domain.com"
-            value={email}
-            
-          />
-        </div>
-        <div>
-          <label for="subject">Subject</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="Subject"
-            value={subject}
-            
-          />
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Your message"
-            value={message}
-            ></textarea>
-        </div>
-        <div>
-          <button type="submit">Send</button>
-        </div>
-      </form>
+      {successMessage && <p>{successMessage}</p>}
+      {
+        !successMessage && (
+          <form method="POST">
+            <div>
+              <label for="email">Your email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@domain.com"
+                value={email}
+              />
+            </div>
+            <div>
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subject"
+                value={subject}
+              />
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your message"
+                value={message}
+              />
+            </div>
+            <div>
+              <button type="submit">Send</button>
+            </div>
+          </form>
+        )
+      }
     </div>
   </div>
 </DefaultLayout>
