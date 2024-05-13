@@ -1,6 +1,16 @@
 ---
 export const prerender = false;
 
+function env() {
+  if (Astro.locals.runtime?.env) {
+    return Astro.locals.runtime.env;
+  } else {
+    return process.env;
+  }
+}
+
+const ENV = env();
+
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Resend } from "@philnash/resend";
@@ -47,10 +57,10 @@ if (method === "POST") {
       errors.message.push("Please enter a message");
     }
     if (Object.values(errors).flat().length === 0) {
-      const resend = new Resend(import.meta.env.RESEND_API_KEY);
+      const resend = new Resend(ENV.RESEND_API_KEY);
       await resend.emails.send({
-        to: import.meta.env.RESEND_TO_EMAIL,
-        from: import.meta.env.RESEND_FROM_EMAIL,
+        to: ENV.RESEND_TO_EMAIL,
+        from: ENV.RESEND_FROM_EMAIL,
         reply_to: email,
         subject: subject,
         text: message,
