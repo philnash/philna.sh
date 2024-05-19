@@ -1,10 +1,12 @@
 ---
 export const prerender = false;
 
-import DefaultLayout from "../layouts/DefaultLayout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { Resend } from "@philnash/resend";
 import { z } from "zod";
+
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { validate } from "../utils/turnstile";
 
 function env() {
   if (Astro.locals.runtime?.env) {
@@ -14,7 +16,13 @@ function env() {
   }
 }
 
-const { RESEND_API_KEY="", RESEND_TO_EMAIL="", RESEND_FROM_EMAIL="" } = env();
+const {
+  RESEND_API_KEY="",
+  RESEND_TO_EMAIL="",
+  RESEND_FROM_EMAIL="",
+  CLOUDFLARE_SITE_KEY="",
+  CLOUDFLARE_SECRET_KEY=""
+} = env();
 
 type ContactErrors = {
   email: string[];
@@ -45,6 +53,9 @@ if (method === "POST") {
     email = stringFromFormDataEntryValue(data.get("email"));
     subject = stringFromFormDataEntryValue(data.get("subject"));
     message = stringFromFormDataEntryValue(data.get("message"));
+    const turnstileResponse = stringFromFormDataEntryValue(data.get("cf-turnstile-response"));
+    const remoteIp = Astro.request.headers.get("CF-Connecting-IP") || "";
+    const turnstileValidated = await validate(turnstileResponse, CLOUDFLARE_SECRET_KEY, remoteIp);
     const honeypot = stringFromFormDataEntryValue(data.get("captcha"))
 
     const emailResult = emailSchema.safeParse(email);
@@ -58,7 +69,7 @@ if (method === "POST") {
       errors.message.push("Please enter a message");
     }
     if (Object.values(errors).flat().length === 0) {
-      if (honeypot === "") {
+      if (honeypot === "" && turnstileValidated) {
         const resend = new Resend(RESEND_API_KEY);
         await resend.emails.send({
           to: RESEND_TO_EMAIL,
@@ -148,6 +159,7 @@ if (method === "POST") {
                 <label for="captcha">Leave this field blank</label>
                 <input type="text" id="captcha" name="captcha" tabindex="-1" />
               </div>
+              <div class="cf-turnstile" data-sitekey={CLOUDFLARE_SITE_KEY}></div>
               <div>
                 <button type="submit">
                   <span class="btn-submit-text">Send</span>
@@ -160,28 +172,31 @@ if (method === "POST") {
       }
     </div>
   </div>
-  <script>
-    function disableButtonAfterSubmit(form: HTMLFormElement) {
-      form.addEventListener("submit", (event) => {
-        const submitButton = form.querySelector('button[type="submit"]');
-        const submitting = submitButton?.getAttribute("data-loading") === "true";
-        const loadingText = form.querySelector(
-          'button[type="submit"] .btn-submit-loading'
-        ) as HTMLElement | undefined;
-        if (!submitting) {
-          submitButton?.setAttribute("data-loading", "true");
-          if (loadingText) {
-            loadingText.textContent = loadingText.dataset["loadingMsg"] || "";
+  <Fragment slot="body-end">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script>
+      function disableButtonAfterSubmit(form: HTMLFormElement) {
+        form.addEventListener("submit", (event) => {
+          const submitButton = form.querySelector('button[type="submit"]');
+          const submitting = submitButton?.getAttribute("data-loading") === "true";
+          const loadingText = form.querySelector(
+            'button[type="submit"] .btn-submit-loading'
+          ) as HTMLElement | undefined;
+          if (!submitting) {
+            submitButton?.setAttribute("data-loading", "true");
+            if (loadingText) {
+              loadingText.textContent = loadingText.dataset["loadingMsg"] || "";
+            }
+          } else {
+            event.preventDefault();
           }
-        } else {
-          event.preventDefault();
-        }
-      });
-    }
+        });
+      }
 
-    const form = document.querySelector(".contact form") as HTMLFormElement | null;
-    if (form) {
-      disableButtonAfterSubmit(form);
-    }
-  </script>
+      const form = document.querySelector(".contact form") as HTMLFormElement | null;
+      if (form) {
+        disableButtonAfterSubmit(form);
+      }
+    </script>
+  </Fragment>
 </DefaultLayout>
