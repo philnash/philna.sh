@@ -9,6 +9,8 @@ declare namespace App {
         RESEND_API_KEY: string;
         RESEND_TO_EMAIL: string;
         RESEND_FROM_EMAIL: string;
+        CLOUDFLARE_SITE_KEY: string;
+        CLOUDFLARE_SECRET_KEY: string;
       };
     };
   }
