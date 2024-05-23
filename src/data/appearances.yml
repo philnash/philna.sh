@@ -44,7 +44,9 @@
     location: San Diego, California, USA
   talks:
     - title: "Conquering Complexity: Refactoring JavaScript Projects"
+      slides: https://docs.google.com/presentation/d/1bgsBjkUsTUK50oGGxHH_H0wazfnxc_IcJwSIVwy27NM/edit?usp=sharing
     - title: "Total ReDoS: the Dangers of Regex in JavaScript"
+      slides: https://docs.google.com/presentation/d/1e1bIAUUyRkaCwN98GmHuqoe5zLjm6bxXJyuWCzmscXM/edit?usp=sharing
 
 - event:
     name: "../NEW"
@@ -54,6 +56,7 @@
     location: Newcastle, Australia
   talks:
     - title: "Conquering Complexity: Refactoring JavaScript Projects"
+      slides: https://docs.google.com/presentation/d/1bgsBjkUsTUK50oGGxHH_H0wazfnxc_IcJwSIVwy27NM/edit?usp=sharing
 
 - event:
     name: Great International Developer Summit
@@ -63,7 +66,11 @@
     location: Bangalore, India
   talks:
     - title: "Conquering Complexity: Refactoring JavaScript Projects"
+      slides: https://docs.google.com/presentation/d/1bgsBjkUsTUK50oGGxHH_H0wazfnxc_IcJwSIVwy27NM/edit?usp=sharing
+      video: https://www.youtube.com/watch?v=gSe-EJOJ2nw
     - title: "Total ReDoS: the Dangers of Regex in JavaScript"
+      video: https://www.youtube.com/watch?v=3nMACGq-xvQ
+      slides: https://docs.google.com/presentation/d/1e1bIAUUyRkaCwN98GmHuqoe5zLjm6bxXJyuWCzmscXM/edit?usp=sharing
 
 - event:
     name: XtremeJS
@@ -73,6 +80,7 @@
   talks:
     - title: The top 5 JavaScript issues in all our codebases
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
+      video: https://www.youtube.com/watch?v=5mZGsO_dG8o
 
 - event:
     name: Programmable Sydney
@@ -101,6 +109,7 @@
   talks:
     - title: CSS Between the Pages
       slides: https://philnash.github.io/talks/css-between-the-pages/
+      video: https://www.youtube.com/watch?v=_uQbAURmKk0
 
 - event:
     name: DeveloperWeek
