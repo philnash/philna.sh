@@ -1,4 +1,13 @@
 - event:
+    name: "NDC Porto"
+    link: https://ndcporto.com/speakers/phil-nash
+    start_date: 2024-10-16
+    end_date: 2024-10-18
+    location: Porto, Portugal
+  talks:
+    - title: "Build RAG from Scratch"
+
+- event:
     name: "Copenhagen Developers Festival"
     link: https://cphdevfest.com/
     start_date: 2024-08-26
@@ -6,6 +15,15 @@
     location: Copenhagen, Denmark
   talks:
     - title: "Total ReDoS: the dangers of regex in JavaScript"
+
+- event:
+    name: "We Are Developers World Congress"
+    link: https://www.wearedevelopers.com/world-congress/
+    start_date: 2024-07-17
+    end_date: 2024-07-19
+    location: Berlin, Germany
+  talks:
+    - title: "Build RAG from Scratch"
 
 - event:
     name: "Web Directions: Code"
