@@ -1,8 +1,5 @@
 import { DataAPIClient } from "@datastax/astra-db-ts";
-
-import { getEntry } from "astro:content";
-import type { CollectionEntry } from "astro:content";
-import stringByteSlice from "string-byte-slice";
+import { getEntry, type CollectionEntry } from "astro:content";
 
 const { ASTRADB_APP_TOKEN, ASTRADB_ENDPOINT } = import.meta.env;
 const COLLECTION_NAME = "blog";
@@ -10,7 +7,6 @@ const COLLECTION_NAME = "blog";
 type BlogEmbeddingDoc = {
   _id: string;
   $vectorize: string;
-  $vector: number[];
 };
 type BlogEmbeddingData = {
   slug: string;
@@ -32,16 +28,14 @@ export async function getRelatedPosts({
   slug,
   body,
 }: BlogEmbeddingData): Promise<CollectionEntry<"blog">[]> {
-  const blogContent = stringByteSlice(body, 0, 8000);
-
-  await blogCollection.findOneAndUpdate(
+  await blogCollection.updateOne(
     { _id: slug },
-    { $set: { $vectorize: blogContent } },
-    { upsert: true, returnDocument: "after" }
+    { $set: { $vectorize: body } },
+    { upsert: true }
   );
 
   const filter = { _id: { $ne: slug } };
-  const options = { sort: { $vectorize: blogContent }, limit: 4 };
+  const options = { sort: { $vectorize: body }, limit: 4 };
 
   const cursor = blogCollection.find(filter, options);
   const results = await cursor.toArray();

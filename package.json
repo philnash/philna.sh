@@ -28,7 +28,6 @@
     "npm": "^10.8.0",
     "openai": "^4.25.0",
     "sanitize-html": "^2.10.0",
-    "string-byte-slice": "^3.0.0",
     "web-share-wrapper": "^0.2.2"
   },
   "devDependencies": {
