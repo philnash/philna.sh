@@ -17,7 +17,6 @@ const post = Astro.props;
 const relatedPosts = await getRelatedPosts({
   slug: post.slug,
   body: post.body,
-  regenerateVectors: post.data.regenerateVectors,
 });
 
 const { Content } = await post.render();
