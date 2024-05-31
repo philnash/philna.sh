@@ -21,15 +21,17 @@
     "@playform/inline": "^0.0.3",
     "astro": "^4.7.1",
     "astro-remote": "^0.3.3",
+    "i": "^0.3.7",
     "markdown-it": "^14.1.0",
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-to-string": "^4.0.0",
+    "npm": "^10.8.0",
     "openai": "^4.25.0",
     "sanitize-html": "^2.10.0",
     "web-share-wrapper": "^0.2.2"
   },
   "devDependencies": {
-    "@datastax/astra-db-ts": "^1.1.0",
+    "@datastax/astra-db-ts": "^1.2.0",
     "@rollup/plugin-yaml": "^4.1.2",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.1",
