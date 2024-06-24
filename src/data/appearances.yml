@@ -26,6 +26,15 @@
     - title: "Build RAG from Scratch"
 
 - event:
+    name: "AI Engineer World's Fair"
+    link: https://www.ai.engineer/worldsfair
+    start_date: 2024-06-25
+    end_date: 2024-06-27
+    location: San Francisco, USA
+  talks:
+    - title: "ColBERT at scale with RAGStack"
+
+- event:
     name: "Web Directions: Code"
     link: https://webdirections.org/code/speakers/phil-nash.php
     start_date: 2024-06-20
