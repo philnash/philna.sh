@@ -5,11 +5,13 @@ export function displayDate(startDate: Date, endDate?: Date) {
     const start = startDate.toLocaleDateString("en", {
       month: "short",
       day: "numeric",
+      timeZone: "Etc/UTC",
     });
     const end = endDate.toLocaleDateString("en", {
       month: "short",
       day: "numeric",
       year: "numeric",
+      timeZone: "Etc/UTC",
     });
     return `${start} - ${end}`;
   } else {
@@ -17,6 +19,7 @@ export function displayDate(startDate: Date, endDate?: Date) {
       month: "short",
       day: "numeric",
       year: "numeric",
+      timeZone: "Etc/UTC",
     });
   }
 }

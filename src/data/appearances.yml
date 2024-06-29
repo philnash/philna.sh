@@ -26,6 +26,14 @@
     - title: "Build RAG from Scratch"
 
 - event:
+    name: "Google I/O Extended Brisbane 2024"
+    link: https://google-io-extended-brisbane-2024.sessionize.com/
+    start_date: 2024-07-13
+    location: Brisbane, Australia
+  talks:
+    - title: "How to work with generative AI in JavaScript"
+
+- event:
     name: "AI Engineer World's Fair"
     link: https://www.ai.engineer/worldsfair
     start_date: 2024-06-25
