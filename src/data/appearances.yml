@@ -1,4 +1,13 @@
 - event:
+    name: "JSNation US"
+    link: https://jsnation.us/
+    start_date: 2024-11-18
+    end_date: 2024-11-21
+    location: New York City, USA and online
+  talks:
+    - title: "Build RAG from Scratch"
+
+- event:
     name: "NDC Porto"
     link: https://ndcporto.com/speakers/phil-nash
     start_date: 2024-10-16
@@ -41,6 +50,7 @@
     location: San Francisco, USA
   talks:
     - title: "ColBERT at scale with RAGStack"
+      slides: https://docs.google.com/presentation/d/1LAPKtHiPEHDeC6b6_6FmqnMK3RpGwOstUpppyHsNK6w/edit?usp=sharing
 
 - event:
     name: "Web Directions: Code"
@@ -50,6 +60,7 @@
     location: Melbourne, Australia
   talks:
     - title: "Upgrading JavaScript's collections"
+      slides: https://philnash.github.io/talks/upgrading-javascripts-collections/
 
 - event:
     name: React Summit
@@ -68,6 +79,7 @@
     location: Amsterdam, The Netherlands
   talks:
     - title: "Conquering Complexity: Refactoring JavaScript Projects"
+      slides: https://philnash.github.io/talks/conquering-complexity/
   roles:
     - MC
 
