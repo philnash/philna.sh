@@ -193,7 +193,8 @@ if (method === "POST") {
           }
         });
 
-        window.addEventListener("pageshow", () => {
+        window.addEventListener("pageshow", (event) => {
+          console.log(event);
           submitButton?.removeAttribute("data-loading");
           if (loadingText) {
             loadingText.textContent = "";
