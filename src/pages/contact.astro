@@ -194,10 +194,11 @@ if (method === "POST") {
         });
 
         window.addEventListener("pageshow", (event) => {
-          console.log(event);
-          submitButton?.removeAttribute("data-loading");
-          if (loadingText) {
-            loadingText.textContent = "";
+          if (event.persisted) {
+            submitButton?.removeAttribute("data-loading");
+            if (loadingText) {
+              loadingText.textContent = "";
+            }
           }
         });
       }
