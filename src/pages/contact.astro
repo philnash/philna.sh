@@ -176,12 +176,13 @@ if (method === "POST") {
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script>
       function disableButtonAfterSubmit(form: HTMLFormElement) {
+        const submitButton = form.querySelector('button[type="submit"]');
+        const loadingText = form.querySelector(
+          'button[type="submit"] .btn-submit-loading'
+        ) as HTMLElement | undefined;
+        
         form.addEventListener("submit", (event) => {
-          const submitButton = form.querySelector('button[type="submit"]');
           const submitting = submitButton?.getAttribute("data-loading") === "true";
-          const loadingText = form.querySelector(
-            'button[type="submit"] .btn-submit-loading'
-          ) as HTMLElement | undefined;
           if (!submitting) {
             submitButton?.setAttribute("data-loading", "true");
             if (loadingText) {
@@ -192,14 +193,11 @@ if (method === "POST") {
           }
         });
 
-        window.addEventListener("popstate", () => {
-          console.log("popstate");
-        });
-        document.addEventListener("DOMContentLoaded", () => {
-          console.log("DOMContentLoaded");
-        });
-        window.addEventListener("load", () => {
-          console.log("load");
+        window.addEventListener("pageshow", () => {
+          submitButton?.removeAttribute("data-loading");
+          if (loadingText) {
+            loadingText.textContent = "";
+          }
         });
       }
 
