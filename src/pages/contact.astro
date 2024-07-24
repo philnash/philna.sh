@@ -191,6 +191,16 @@ if (method === "POST") {
             event.preventDefault();
           }
         });
+
+        window.addEventListener("popstate", () => {
+          console.log("popstate");
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+          console.log("DOMContentLoaded");
+        });
+        window.addEventListener("load", () => {
+          console.log("load");
+        });
       }
 
       const form = document.querySelector(".contact form") as HTMLFormElement | null;
