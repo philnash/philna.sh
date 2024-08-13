@@ -1,4 +1,13 @@
 - event:
+    name: "Web Directions: Dev Summit"
+    link: https://webdirections.org/dev-summit/speakers/phil-nash.php
+    start_date: 2024-11-27
+    end_date: 2024-11-28
+    location: Sydney, Australia
+  talks:
+    - title: "How to work with generative AI in JavaScript"
+
+- event:
     name: "JSNation US"
     link: https://jsnation.us/
     start_date: 2024-11-18
@@ -80,6 +89,7 @@
   talks:
     - title: "Conquering Complexity: Refactoring JavaScript Projects"
       slides: https://philnash.github.io/talks/conquering-complexity/
+      video: https://gitnation.com/contents/conquering-complexity-refactoring-javascript-projects
   roles:
     - MC
 
@@ -329,7 +339,7 @@
     location: Amsterdam, The Netherlands and online
   talks:
     - title: The State of Passwordless Auth on the Web
-      video: https://www.youtube.com/watch?v=lJ198iRizNo
+      video: https://gitnation.com/contents/the-state-of-passwordless-auth-on-the-web
       slides: https://philnash.github.io/talks/state-of-passwordless/
 
 - event:
