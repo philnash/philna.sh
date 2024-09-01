@@ -8,6 +8,14 @@
     - title: "How to work with generative AI in JavaScript"
 
 - event:
+    name: "DDD Perth"
+    link: https://dddperth.com/agenda/2024/talk/717983
+    start_date: 2024-11-16
+    location: Perth, Australia
+  talks:
+    - title: "How to work with generative AI in JavaScript"
+
+- event:
     name: "JSNation US"
     link: https://jsnation.us/
     start_date: 2024-11-18
@@ -24,6 +32,15 @@
     location: Porto, Portugal
   talks:
     - title: "Build RAG from Scratch"
+
+- event:
+    name: Replay
+    link: https://replay2024.sched.com/speaker/phil_nash.278h9go6
+    start_date: 2024-09-18
+    end_date: 2024-09-20
+    location: Seattle, USA
+  talks:
+    - title: "Durable RAG: productionising generative AI workflows"
 
 - event:
     name: "Copenhagen Developers Festival"
