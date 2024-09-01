@@ -7,35 +7,36 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check --minimumSeverity error"
   },
   "dependencies": {
     "@analytics-debugger/ga4mp": "^0.0.8",
-    "@astrojs/cloudflare": "^11.0.1",
+    "@astrojs/cloudflare": "^11.0.4",
     "@astrojs/rss": "^4.0.7",
-    "@fontsource/merriweather": "^5.0.13",
-    "@fontsource/raleway": "^5.0.19",
+    "@fontsource/merriweather": "^5.0.14",
+    "@fontsource/raleway": "^5.0.20",
     "@philnash/astro-pagination": "^0.4.0",
     "@philnash/resend": "^1.1.0",
-    "@playform/inline": "^0.0.3",
-    "astro": "^4.11.5",
+    "@playform/inline": "^0.1.0",
+    "astro": "^4.15.1",
     "astro-remote": "^0.3.3",
     "markdown-it": "^14.1.0",
     "mdast-util-from-markdown": "^2.0.1",
     "mdast-util-to-string": "^4.0.0",
-    "openai": "^4.52.3",
+    "openai": "^4.57.0",
     "sanitize-html": "^2.13.0",
     "web-share-wrapper": "^0.2.2"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@datastax/astra-db-ts": "^1.3.0",
+    "@astrojs/check": "^0.9.3",
+    "@datastax/astra-db-ts": "^1.4.1",
     "@rollup/plugin-yaml": "^4.1.2",
     "@types/js-yaml": "^4.0.9",
-    "@types/markdown-it": "^14.1.1",
-    "@types/sanitize-html": "^2.11.0",
-    "sass": "^1.77.6",
-    "sharp": "^0.33.4",
-    "typescript": "^5.5.3"
+    "@types/markdown-it": "^14.1.2",
+    "@types/sanitize-html": "^2.13.0",
+    "sass": "^1.77.8",
+    "sharp": "^0.33.5",
+    "typescript": "^5.5.4"
   }
 }

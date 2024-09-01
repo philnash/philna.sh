@@ -22,6 +22,8 @@ const page: Page<CollectionEntry<"blog">> = {
     current: Astro.url.pathname,
     prev: undefined,
     next: lastPage > 1 ? "/blog/page/2" : undefined,
+    first: undefined,
+    last: `/blog/page/${lastPage}`,
   },
 };
 
