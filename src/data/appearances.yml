@@ -43,6 +43,14 @@
     - title: "Durable RAG: productionising generative AI workflows"
 
 - event:
+    name: MelbJS
+    link: https://melbjs.com/
+    start_date: 2024-09-11
+    location: Melbourne, Australia
+  talks:
+    - title: "How to Work with Generative AI in JavaScript"
+
+- event:
     name: "Copenhagen Developers Festival"
     link: https://cphdevfest.com/
     start_date: 2024-08-26
