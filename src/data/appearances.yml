@@ -1,4 +1,13 @@
 - event:
+    name: "NDC Melbourne"
+    link: https://ndcmelbourne.com/speakers/phil-nash
+    start_date: 2025-04-29
+    end_date: 2025-05-01
+    location: Melbourne, Australia
+  talks:
+    - title: "Build with generative AI in JavaScript"
+
+- event:
     name: "Web Directions: Dev Summit"
     link: https://webdirections.org/dev-summit/speakers/phil-nash.php
     start_date: 2024-11-27
@@ -32,6 +41,14 @@
     location: Porto, Portugal
   talks:
     - title: "Build RAG from Scratch"
+
+- event:
+    name: GDG Cloud Melbourne
+    link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-cloud-melbourne-hands-on-workshop-devfest-2024-special/
+    start_date: 2024-09-30
+    location: Melbourne, Australia
+  talks:
+    - title: Build a RAG-based bot with Gemini and Astra DB
 
 - event:
     name: Replay
