@@ -8,6 +8,15 @@
     - title: "Build with generative AI in JavaScript"
 
 - event:
+    name: "NDC London"
+    link: https://ndclondon.com/
+    start_date: 2025-29-01
+    end_date: 2025-31-01
+    location: London, UK
+  talks:
+    - title: "Build RAG from Scratch"
+
+- event:
     name: "Web Directions: Dev Summit"
     link: https://webdirections.org/dev-summit/speakers/phil-nash.php
     start_date: 2024-11-27
