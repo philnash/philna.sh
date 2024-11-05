@@ -1,7 +1,7 @@
-@media (prefers-reduced-motion) {
-  ::view-transition-group(*),
-  ::view-transition-old(*),
-  ::view-transition-new(*) {
-    animation: none !important;
+
+
+@media (prefers-reduced-motion: no-preference) and (update: fast) {
+  @view-transition {
+    navigation: auto;
   }
 }
