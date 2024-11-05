@@ -12,31 +12,31 @@
   },
   "dependencies": {
     "@analytics-debugger/ga4mp": "^0.0.8",
-    "@astrojs/cloudflare": "^11.0.4",
-    "@astrojs/rss": "^4.0.7",
-    "@fontsource/merriweather": "^5.0.14",
-    "@fontsource/raleway": "^5.0.20",
+    "@astrojs/cloudflare": "^11.2.0",
+    "@astrojs/rss": "^4.0.9",
+    "@fontsource/merriweather": "^5.1.0",
+    "@fontsource/raleway": "^5.1.0",
     "@philnash/astro-pagination": "^0.4.0",
     "@philnash/resend": "^1.1.0",
     "@playform/inline": "^0.1.0",
     "astro": "^4.15.1",
     "astro-remote": "^0.3.3",
     "markdown-it": "^14.1.0",
-    "mdast-util-from-markdown": "^2.0.1",
+    "mdast-util-from-markdown": "^2.0.2",
     "mdast-util-to-string": "^4.0.0",
-    "openai": "^4.57.0",
-    "sanitize-html": "^2.13.0",
+    "openai": "^4.71.0",
+    "sanitize-html": "^2.13.1",
     "web-share-wrapper": "^0.2.2"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@datastax/astra-db-ts": "^1.4.1",
+    "@astrojs/check": "^0.9.4",
+    "@datastax/astra-db-ts": "^1.5.0",
     "@rollup/plugin-yaml": "^4.1.2",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.2",
     "@types/sanitize-html": "^2.13.0",
-    "sass": "^1.77.8",
+    "sass": "^1.80.6",
     "sharp": "^0.33.5",
-    "typescript": "^5.5.4"
+    "typescript": "^5.6.3"
   }
 }
