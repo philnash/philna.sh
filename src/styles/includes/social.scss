@@ -1,16 +1,19 @@
+@use "sass:math";
+@use "vars";
+
 .social {
   list-style-type: none;
-  margin: 0 0 $spacing-unit;
+  margin: 0 0 vars.$spacing-unit;
   padding: 0;
   overflow: hidden;
 }
 .social li.cell {
-  margin-bottom: math.div($spacing-unit, 4);
+  margin-bottom: math.div(vars.$spacing-unit, 4);
 }
 .social svg {
   display: inline-block;
-  height: $base-font-size * 1.5;
-  width: $base-font-size * 1.5;
+  height: vars.$base-font-size * 1.5;
+  width: vars.$base-font-size * 1.5;
   vertical-align: middle;
 }
 .social a {

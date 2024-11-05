@@ -1,7 +1,10 @@
+@use "sass:math";
+@use "vars";
+
 .info {
-  background-color: $grey-color-light;
-  padding: $spacing-unit;
-  margin-bottom: math.div($spacing-unit, 2);
+  background-color: vars.$grey-color-light;
+  padding: vars.$spacing-unit;
+  margin-bottom: math.div(vars.$spacing-unit, 2);
 }
 .info p:last-child {
   margin-bottom: 0;

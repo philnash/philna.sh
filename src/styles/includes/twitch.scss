@@ -1,3 +1,5 @@
+@use "vars";
+
 .twitch {
   position: relative;
 }
@@ -24,7 +26,7 @@
   height: 100%;
 }
 
-@include media-query-min(850px) {
+@include vars.media-query-min(850px) {
   .twitch .twitch-video {
     width: 75%;
     padding-top: 42.1875%;

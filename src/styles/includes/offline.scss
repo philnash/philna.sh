@@ -1,3 +1,5 @@
+@use "vars";
+
 .offline-pages {
   list-style-type: none;
   padding: 0;
@@ -7,7 +9,7 @@
 .offline-pages li {
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid vars.$border-color;
 }
 
 .offline-pages li:last-child {

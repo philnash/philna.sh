@@ -13,6 +13,13 @@ export default defineConfig({
     ssr: {
       external: ["@datastax/astra-db-ts", "openai"],
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler"
+        }
+      }
+    }
   },
   image: {
     service: sharpImageService(),

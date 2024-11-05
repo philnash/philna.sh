@@ -1,10 +1,12 @@
+@use "vars";
+
 .site-footer {
-  padding: $spacing-unit 0;
+  padding: vars.$spacing-unit 0;
   font-size: 16px;
 }
 
 .site-footer h2 {
-  font-size: $base-font-size;
+  font-size: vars.$base-font-size;
   line-height: 1.6;
 }
 .site-footer p {

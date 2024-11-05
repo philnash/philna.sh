@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "vars";
+
 .section-title {
   text-align: center;
 }
@@ -5,19 +8,19 @@
 .speaking-header-image {
   display: block;
   width: 100%;
-  margin-bottom: $spacing-unit;
+  margin-bottom: vars.$spacing-unit;
 }
 
 .speaking-list {
   list-style-type: none;
-  margin-bottom: $spacing-unit * 2;
+  margin-bottom: vars.$spacing-unit * 2;
   padding: 0;
 }
 
 .speaking-list .talk {
-  padding-bottom: math.div($spacing-unit, 2);
-  padding-top: math.div($spacing-unit, 2);
-  border-bottom: 1px solid $border-color;
+  padding-bottom: math.div(vars.$spacing-unit, 2);
+  padding-top: math.div(vars.$spacing-unit, 2);
+  border-bottom: 1px solid vars.$border-color;
 }
 .speaking-list .talk:first-child {
   padding-top: 0;
@@ -29,8 +32,8 @@
 
 .speaking-list .talk-meta {
   font-style: italic;
-  font-size: $small-font-size;
-  font-family: $base-font-family;
+  font-size: vars.$small-font-size;
+  font-family: vars.$base-font-family;
   font-weight: 400;
   text-transform: none;
   margin-bottom: 0;
@@ -41,7 +44,7 @@
 }
 
 .speaking-list .talk .talk-title ~ .talk-title {
-  margin-top: math.div($spacing-unit, 2);
+  margin-top: math.div(vars.$spacing-unit, 2);
 }
 
 .speaking-list .talk-title {

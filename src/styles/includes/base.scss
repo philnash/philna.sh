@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "vars";
+
 /**
  * Reset some basic elements
  */
@@ -29,10 +32,10 @@ figure {
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height}
-    $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  font: vars.$base-font-weight #{vars.$base-font-size}/#{vars.$base-line-height}
+    vars.$base-font-family;
+  color: vars.$text-color;
+  background-color: vars.$background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -58,7 +61,7 @@ ol,
 dl,
 figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit;
+  margin-bottom: vars.$spacing-unit;
 }
 
 p,
@@ -67,7 +70,7 @@ li {
 }
 
 li pre {
-  margin: math.div($spacing-unit, 2) 0;
+  margin: math.div(vars.$spacing-unit, 2) 0;
 }
 
 /**
@@ -87,7 +90,7 @@ figure > img {
 }
 
 figcaption {
-  font-size: $small-font-size;
+  font-size: vars.$small-font-size;
   font-style: italic;
 }
 
@@ -96,7 +99,7 @@ figcaption {
  */
 ul,
 ol {
-  margin-left: $spacing-unit;
+  margin-left: vars.$spacing-unit;
 }
 
 li ul,
@@ -113,8 +116,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font-family;
-  font-weight: $header-font-weight;
+  font-family: vars.$header-font-family;
+  font-weight: vars.$header-font-weight;
   text-wrap: balance;
 }
 h2,
@@ -149,24 +152,24 @@ h3 code {
  * Links
  */
 a {
-  color: $brand-color;
+  color: vars.$brand-color;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: lighten($brand-color, 15%);
-  border-bottom: 2px solid lighten($brand-color, 15%);
+  color: vars.$brand-color-light;
+  border-bottom: 2px solid vars.$brand-color-light;
 }
 
 /**
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit;
-  padding-top: math.div($spacing-unit, 2);
-  padding-bottom: math.div($spacing-unit, 2);
+  color: vars.$grey-color;
+  border-left: 4px solid vars.$grey-color-light;
+  padding-left: vars.$spacing-unit;
+  padding-top: math.div(vars.$spacing-unit, 2);
+  padding-bottom: math.div(vars.$spacing-unit, 2);
   font-size: 24px;
   letter-spacing: -1px;
   font-style: italic;
@@ -183,13 +186,13 @@ blockquote em {
  */
 pre,
 code {
-  font-size: $base-font-size;
+  font-size: vars.$base-font-size;
 }
 
 code {
   padding: 1px 5px;
   background: #ddd;
-  border-radius: $border-radius;
+  border-radius: vars.$border-radius;
 }
 a code {
   color: #c70000;
@@ -207,17 +210,6 @@ pre > code {
 }
 
 /**
- * Clearfix
- */
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-/**
  * Icons
  */
 .icon > svg {
@@ -227,7 +219,7 @@ pre > code {
   vertical-align: middle;
 }
 .icon > svg path {
-  fill: $grey-color;
+  fill: vars.$grey-color;
 }
 
 /**
@@ -243,7 +235,7 @@ abbr[title] {
  * Small text
  */
 small {
-  font-size: $small-font-size;
-  color: $grey-color;
+  font-size: vars.$small-font-size;
+  color: vars.$grey-color;
   font-style: italic;
 }

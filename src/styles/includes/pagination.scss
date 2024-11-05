@@ -1,6 +1,9 @@
+@use "sass:math";
+@use "vars";
+
 .pagination {
   text-align: center;
-  padding: $spacing-unit 0;
+  padding: vars.$spacing-unit 0;
 }
 
 .pagination ul {
@@ -13,7 +16,7 @@
 
 .pagination li * {
   display: inline-block;
-  padding: 0 math.div($spacing-unit, 2);
+  padding: 0 math.div(vars.$spacing-unit, 2);
   border-bottom: 2px solid transparent;
   margin-right: 4px;
 }
@@ -27,30 +30,30 @@
   padding: 0;
   display: none;
 }
-@include media-query-min(600px) {
+@include vars.media-query-min(600px) {
   .pagination .number,
   .pagination .start-ellipsis,
   .pagination .end-ellipsis {
     display: inline-block;
   }
   .pagination .number {
-    padding: 0 math.div($spacing-unit, 2);
+    padding: 0 math.div(vars.$spacing-unit, 2);
   }
 }
 
 .pagination em {
   font-style: normal;
-  background-color: $brand-color;
-  color: $background-color;
-  border-radius: $border-radius;
+  background-color: vars.$brand-color;
+  color: vars.$background-color;
+  border-radius: vars.$border-radius;
 }
 
 .pagination a {
-  background-color: $background-color;
-  color: $brand-color;
-  border-radius: $border-radius;
+  background-color: vars.$background-color;
+  color: vars.$brand-color;
+  border-radius: vars.$border-radius;
 }
 .pagination a:hover {
-  color: lighten($brand-color, 15%);
-  border-bottom: 2px solid lighten($brand-color, 15%);
+  color: vars.$brand-color-light;
+  border-bottom: 2px solid vars.$brand-color-light;
 }

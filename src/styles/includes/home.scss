@@ -1,14 +1,16 @@
+@use "vars";
+
 .intro {
-  margin-bottom: $spacing-unit*2;
+  margin-bottom: vars.$spacing-unit*2;
 }
 
 .the-rest {
-  padding-top: $spacing-unit*2;
-  margin-bottom: $spacing-unit*2;
-  border-top: 1px solid $border-color;
+  padding-top: vars.$spacing-unit*2;
+  margin-bottom: vars.$spacing-unit*2;
+  border-top: 1px solid vars.$border-color;
 }
 
-@include media-query-min(600px) {
+@include vars.media-query-min(600px) {
   .intro {
     font-size: 21px;
   }

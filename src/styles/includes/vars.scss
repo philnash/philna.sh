@@ -1,0 +1,63 @@
+@use "sass:color";
+
+// Our variables
+$base-font-family: "Merriweather", Georgia, serif;
+$header-font-family: "Raleway", Arial, sans-serif;
+$base-font-size: 18px;
+$base-font-weight: 400;
+$header-font-weight: 900;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.6;
+$header-font-size: 24px;
+
+$spacing-unit: 30px;
+
+$text-color: #454545;
+$text-color-light: color.adjust($text-color, $lightness: 20%, $space: hsl);
+$background-color: #fcfcfc;
+$brand-color: #ea0011;
+$brand-color-light: color.adjust($brand-color, $lightness: 15%, $space: hsl);
+$highlight-color: #79b2c8;
+$border-color: #ccc;
+
+$grey-color: #828282;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%, $space: hsl);
+$grey-color-dark: color.adjust($grey-color, $lightness: -25%, $space: hsl);
+
+$border-radius: 3px;
+
+// Width of the content area
+$content-width: 800px;
+
+$on-palm: 600px;
+$on-laptop: 800px;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: math.div($spacing-unit, 2);
+//         padding-left: math.div($spacing-unit, 2);
+//     }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin media-query-min($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+/**
+ * Clearfix
+ */
+ %clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

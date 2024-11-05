@@ -1,7 +1,10 @@
+@use "sass:math";
+@use "vars";
+
 html {
-  background: $brand-color;
-  border-top: 5px solid $highlight-color;
-  border-bottom: 5px solid $highlight-color;
+  background: vars.$brand-color;
+  border-top: 5px solid vars.$highlight-color;
+  border-bottom: 5px solid vars.$highlight-color;
 }
 
 html, body {
@@ -9,21 +12,21 @@ html, body {
 }
 
 body {
-  border-top: 5px solid $brand-color;
-  border-bottom: 5px solid $brand-color;
+  border-top: 5px solid vars.$brand-color;
+  border-bottom: 5px solid vars.$brand-color;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
 }
 
 .wrapper {
   width: 100%;
   max-width: 990px;
-  padding: 0 (math.div($spacing-unit, 2));
+  padding: 0 (math.div(vars.$spacing-unit, 2));
   margin: 0 auto;
 }
 
 .page {
   min-height: 100%;
-  padding-bottom: $spacing-unit*2;
+  padding-bottom: vars.$spacing-unit*2;
 }
 
 .page:after {
@@ -38,7 +41,7 @@ body {
 }
 
 .cell {
-  padding: 0 (math.div($spacing-unit, 2));
+  padding: 0 (math.div(vars.$spacing-unit, 2));
   float: left;
   display: block;
   margin: 0;
@@ -64,7 +67,7 @@ $columns: 12;
   }
 }
 
-@include media-query-min(700px) {
+@include vars.media-query-min(700px) {
   @for $i from 1 through $columns {
     .cell-med-#{$i} {
       width: ((math.div(100, $columns)) * $i) * 1%;
