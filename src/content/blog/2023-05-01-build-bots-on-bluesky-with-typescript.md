@@ -12,6 +12,7 @@ imageWidth: 1920
 imageHeight: 600
 socialImage: ../../assets/posts/bsky/beautiful-blue-sky-social.jpg
 pubDate: "2023-05-16"
+updatedDate: "2024-11-25"
 ---
 
 [Bluesky](https://bsky.app/) is the new social network in town and it's an exciting place to explore right now. I was fortunate enough to get an invite early on and take part in the early community. But Bluesky is not just a Twitter clone, it's an application on top of [The AT Protocol](https://atproto.com/), a (still being built) federated protocol for social networks with some interesting properties.
@@ -24,7 +25,7 @@ In order to build against the Bluesky API you will need an account. As I write t
 
 You will also need:
 
-- [Node.js](https://nodejs.org/en) version 18.16.0
+- [Node.js](https://nodejs.org/en) version 22
 - A [GitHub](https://github.com/) account
 
 ## Getting started with the API
@@ -40,7 +41,7 @@ npm init --yes
 Add an `.nvmrc` file with the version 18.16.0 so that we can guarantee the Node.js version this will run on.
 
 ```sh
-echo v18.16.0 > .nvmrc
+echo 22 > .nvmrc
 ```
 
 Install the [AT Protocol/Bluesky API client](https://www.npmjs.com/package/@atproto/api):
@@ -55,17 +56,17 @@ This library gives us easy access to the Bluesky API, a rich text library for fo
 
 Create a file called `index.js` and open it in your editor.
 
-Start by requiring the `BskyAgent` class from the package.
+Start by requiring the `AtpAgent` class from the package.
 
 ```js
-const { BskyAgent } = require("@atproto/api");
+const { AtpAgent } = require("@atproto/api");
 ```
 
-Create an asynchronous function that will connect to the service and send a post. Within that function instantiate a new agent, setting the service to `"https://bsky.social"`, the only available AT Protocol service at the moment. Then log the agent in with your Bluesky identifier (your username) and password. This is just a quick script to get going with, so we're just going to embed our credentials for now, in reality you want to keep credentials out of your code and load them through environment variables or similar.
+Create an asynchronous function that will connect to the service and send a post. Within that function instantiate a new agent, setting the service to `"https://bsky.social"`, the only available AT Protocol service at the moment. Then log the agent in with your Bluesky identifier (your username) and an [app password](https://blueskyfeeds.com/en/faq-app-password). This is just a quick script to get going with, so we're just going to embed our credentials for now, in reality you want to keep credentials out of your code and load them through environment variables or similar.
 
 ```js
 async function sendPost() {
-  const agent = new BskyAgent({ service: "https://bsky.social" });
+  const agent = new AtpAgent({ service: "https://bsky.social" });
   await agent.login({
     identifier: "YOUR_IDENTIFIER_HERE",
     password: "YOUR_PASSWORD_HERE",
@@ -78,7 +79,7 @@ Once you've logged in, you can then use the agent to post a status.
 
 ```js
 async function sendPost(text) {
-  const agent = new BskyAgent({ service: "https://bsky.social" });
+  const agent = new AtpAgent({ service: "https://bsky.social" });
   await agent.login({
     identifier: "YOUR_IDENTIFIER_HERE",
     password: "YOUR_PASSWORD_HERE",
@@ -102,14 +103,14 @@ If you want to send links or mentions on the platform you can't just send plain 
 First, require the `RichText` module.
 
 ```js
-const { BskyAgent, RichText } = require("@atproto/api");
+const { AtpAgent, RichText } = require("@atproto/api");
 ```
 
 Then take the text you want to send and create a new `RichText` object with it. Use that object to detect the facets in the text, then pass both the text and the facets to the `post` method.
 
 ```js
 async function sendPost(text) {
-  const agent = new BskyAgent({ service: "https://bsky.social" });
+  const agent = new AtpAgent({ service: "https://bsky.social" });
   await agent.login({
     identifier: "YOUR_IDENTIFIER_HERE",
     password: "YOUR_PASSWORD_HERE",
