@@ -10,8 +10,8 @@
 - event:
     name: "NDC London"
     link: https://ndclondon.com/
-    start_date: 2025-29-01
-    end_date: 2025-31-01
+    start_date: 2025-01-29
+    end_date: 2025-01-31
     location: London, UK
   talks:
     - title: "Build RAG from Scratch"
