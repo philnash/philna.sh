@@ -43,6 +43,15 @@
     - title: "Build RAG from Scratch"
 
 - event:
+    name: "XtremeJS 2024"
+    link: https://xtremejs.dev/2024
+    start_date: 2024-11-12
+  talks:
+    - title: "Total ReDoS: The Dangers of regex in JavaScript"
+      video: https://www.youtube.com/watch?v=AMm1u3xgiHw
+      slides: https://docs.google.com/presentation/d/1e1bIAUUyRkaCwN98GmHuqoe5zLjm6bxXJyuWCzmscXM/edit?usp=sharing
+
+- event:
     name: "NDC Porto"
     link: https://ndcporto.com/speakers/phil-nash
     start_date: 2024-10-16
@@ -181,7 +190,7 @@
       slides: https://docs.google.com/presentation/d/1e1bIAUUyRkaCwN98GmHuqoe5zLjm6bxXJyuWCzmscXM/edit?usp=sharing
 
 - event:
-    name: XtremeJS
+    name: XtremeJS 2023
     link: https://xtremejs.dev/2023/
     start_date: 2024-04-09
     location: Online
