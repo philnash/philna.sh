@@ -19,7 +19,7 @@
     "@philnash/astro-pagination": "^0.4.0",
     "@philnash/resend": "^1.1.0",
     "@playform/inline": "^0.1.0",
-    "astro": "^4.16.9",
+    "astro": "^4.16.18",
     "astro-remote": "^0.3.3",
     "markdown-it": "^14.1.0",
     "mdast-util-from-markdown": "^2.0.2",
