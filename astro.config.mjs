@@ -16,10 +16,10 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          api: "modern-compiler"
-        }
-      }
-    }
+          api: "modern-compiler",
+        },
+      },
+    },
   },
   image: {
     service: sharpImageService(),
@@ -28,6 +28,7 @@ export default defineConfig({
     shikiConfig: {
       theme: "slack-dark",
     },
+    smartypants: false,
   },
   compressHTML: true,
   output: "hybrid",
