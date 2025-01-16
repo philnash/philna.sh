@@ -8,6 +8,22 @@
     - title: "Build with generative AI in JavaScript"
 
 - event:
+    name: "Programmable Sydney"
+    link: https://www.programmable.tech/
+    start_date: 2025-03-20
+    location: Sydney, Australia
+  talks:
+    - title: "Build RAG from Scratch"
+
+- event:
+    name: "Programmable Melbourne"
+    link: https://www.programmable.tech/
+    start_date: 2025-03-18
+    location: Melbourne, Australia
+  talks:
+    - title: "Build RAG from Scratch"
+
+- event:
     name: "NDC London"
     link: https://ndclondon.com/
     start_date: 2025-01-29
