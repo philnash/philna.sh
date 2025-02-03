@@ -1,6 +1,16 @@
 - event:
+    name: "NDC Oslo"
+    link: https://ndcoslo.com/speakers/phil-nash
+    start_date: 2025-05-19
+    end_date: 2025-05-23
+    location: Oslo, Norway
+  talks:
+    - title: "Build with generative AI in JavaScript"
+    - title: "Let's build an AI agent"
+
+- event:
     name: "NDC Melbourne"
-    link: https://ndcmelbourne.com/speakers/phil-nash
+    link: https://ndcmelbourne.com/speakers/phil-nash/eb969d10f9a6
     start_date: 2025-04-29
     end_date: 2025-05-01
     location: Melbourne, Australia
