@@ -16,6 +16,7 @@
     location: Melbourne, Australia
   talks:
     - title: "Build with generative AI in JavaScript"
+    - title: "How to work with generative AI in JavaScript"
 
 - event:
     name: "Programmable Sydney"
@@ -72,6 +73,7 @@
     name: "XtremeJS 2024"
     link: https://xtremejs.dev/2024
     start_date: 2024-11-12
+    location: online
   talks:
     - title: "Total ReDoS: The Dangers of regex in JavaScript"
       video: https://www.youtube.com/watch?v=AMm1u3xgiHw
