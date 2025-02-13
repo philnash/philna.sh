@@ -31,7 +31,7 @@ export default defineConfig({
     smartypants: false,
   },
   compressHTML: true,
-  output: "hybrid",
+  output: "static",
   adapter: cloudflare({
     imageService: "compile",
   }),
