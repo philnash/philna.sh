@@ -24,7 +24,10 @@ import appearances from "../data/appearances.yml";
 const posts = await sortedBlogPosts();
 const post = posts[0];
 
-const postExcerpt = post.body.split(/\n\n/)[0];
+let postExcerpt = "";
+if (post.body) {
+  postExcerpt = post.body.split(/\n\n/)[0];
+}
 const posttSlug = postPath(post);
 
 const today = getToday();
@@ -87,9 +90,8 @@ if (upcoming.length > 0) {
                 href="https://www.datastax.com"
                 ><span itemprop="name">DataStax</span></a
               ></span
-            >.
-            Sometimes he <a href="/speaking/">writes code on stage</a> in front of
-            a crowd, hoping everything just works. Sometimes
+            >. Sometimes he <a href="/speaking/">writes code on stage</a> in front
+            of a crowd, hoping everything just works. Sometimes
             <a rel="me" href="https://github.com/philnash/"
               >he writes open source code</a
             >, which is much less stressful because if it is wrong someone else

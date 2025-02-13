@@ -1,7 +1,10 @@
 import { toString } from "mdast-util-to-string";
 import { fromMarkdown } from "mdast-util-from-markdown";
 
-export function truncate(text: string, numberOfCharacters: number) {
+export function truncate(text: string | undefined, numberOfCharacters: number) {
+  if (!text) {
+    return "";
+  }
   const plainText = toString(fromMarkdown(text));
   if (plainText.length <= numberOfCharacters) {
     return plainText;

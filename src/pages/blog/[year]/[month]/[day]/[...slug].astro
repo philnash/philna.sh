@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import BlogPost from "../../../../../layouts/BlogPost.astro";
 import { postParams } from "../../../../../utils/blog_posts";
@@ -15,18 +15,18 @@ type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
 const relatedPosts = await getRelatedPosts({
-  slug: post.slug,
+  slug: post.id,
   body: post.body,
 });
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <BlogPost
   {...post.data}
   description={truncate(post.body, 160)}
   relatedPosts={relatedPosts}
-  slug={post.slug}
+  slug={post.id}
 >
   <Content />
 </BlogPost>

@@ -11,6 +11,11 @@ type Props = {
 };
 
 const { post, aboveTheFold } = Astro.props;
+
+let snippet = "";
+if (post.body) {
+  snippet = post.body.split(/\n\n/)[0];
+}
 ---
 
 <li
@@ -23,18 +28,23 @@ const { post, aboveTheFold } = Astro.props;
     itemprop="url mainEntityOfPage"
     href={postPath(post)}
   >
-    <PostMedia {...post.data} aboveTheFold={aboveTheFold} slug={post.slug} />
+    <PostMedia {...post.data} aboveTheFold={aboveTheFold} slug={post.id} />
 
     <h2
       class="p-name"
       itemprop="name"
       style={{
-        viewTransitionName: viewTransitionName(post.slug, "title"),
+        viewTransitionName: viewTransitionName(post.id, "title"),
       }}
     >
       {post.data.title}
     </h2>
   </a>
-  <PostMeta pubDate={post.data.pubDate} subscribe={false} slug={post.slug} updatedDate={post.data.updatedDate} />
-  <Markdown content={post.body.split(/\n\n/)[0]} />
+  <PostMeta
+    pubDate={post.data.pubDate}
+    subscribe={false}
+    slug={post.id}
+    updatedDate={post.data.updatedDate}
+  />
+  <Markdown content={snippet} />
 </li>

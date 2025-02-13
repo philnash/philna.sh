@@ -1,5 +1,5 @@
 import { DataAPIClient } from "@datastax/astra-db-ts";
-import { getEntry, type CollectionEntry } from "astro:content";
+import { type CollectionEntry, getEntry } from "astro:content";
 
 const { ASTRADB_APP_TOKEN, ASTRADB_ENDPOINT } = import.meta.env;
 const COLLECTION_NAME = "blog";
@@ -10,16 +10,16 @@ type BlogEmbeddingDoc = {
 };
 type BlogEmbeddingData = {
   slug: string;
-  body: string;
+  body?: string;
 };
 
 const astraDb = new DataAPIClient(ASTRADB_APP_TOKEN).db(ASTRADB_ENDPOINT);
 const blogCollection = await astraDb.collection<BlogEmbeddingDoc>(
-  COLLECTION_NAME
+  COLLECTION_NAME,
 );
 
 function isPost(
-  post: CollectionEntry<"blog"> | undefined
+  post: CollectionEntry<"blog"> | undefined,
 ): post is CollectionEntry<"blog"> {
   return typeof post !== "undefined";
 }
@@ -28,10 +28,14 @@ export async function getRelatedPosts({
   slug,
   body,
 }: BlogEmbeddingData): Promise<CollectionEntry<"blog">[]> {
+  if (!body) {
+    return [];
+  }
+
   await blogCollection.updateOne(
     { _id: slug },
     { $set: { $vectorize: body } },
-    { upsert: true }
+    { upsert: true },
   );
 
   const filter = { _id: { $ne: slug } };
@@ -40,7 +44,7 @@ export async function getRelatedPosts({
   const cursor = blogCollection.find(filter, options);
   const results = await cursor.toArray();
   const posts = await Promise.all(
-    results.map((result) => getEntry({ collection: "blog", slug: result._id }))
+    results.map((result) => getEntry({ collection: "blog", id: result._id })),
   );
   return posts.filter(isPost);
 }
