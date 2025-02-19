@@ -1,13 +1,24 @@
 import type { APIContext } from "astro";
 import rss from "@astrojs/rss";
-import { sortedBlogPosts, postPath } from "../utils/blog_posts";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { postPath, sortedBlogPosts } from "../utils/blog_posts";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import sanitize from "sanitize-html";
 import MarkdownIt from "markdown-it";
+import type { CollectionEntry } from "astro:content";
 const parser = new MarkdownIt();
 
+type BlogPostWithBody =
+  & Required<Pick<CollectionEntry<"blog">, "body">>
+  & CollectionEntry<"blog">;
+
+function filterPostsWithoutBody(
+  post: CollectionEntry<"blog">,
+): post is BlogPostWithBody {
+  return post.body !== undefined;
+}
+
 export async function GET({ site, generator }: APIContext) {
-  const posts = await sortedBlogPosts();
+  const posts = (await sortedBlogPosts()).filter(filterPostsWithoutBody);
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,

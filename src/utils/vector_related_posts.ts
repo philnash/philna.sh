@@ -14,9 +14,7 @@ type BlogEmbeddingData = {
 };
 
 const astraDb = new DataAPIClient(ASTRADB_APP_TOKEN).db(ASTRADB_ENDPOINT);
-const blogCollection = await astraDb.collection<BlogEmbeddingDoc>(
-  COLLECTION_NAME,
-);
+const blogCollection = astraDb.collection<BlogEmbeddingDoc>(COLLECTION_NAME);
 
 function isPost(
   post: CollectionEntry<"blog"> | undefined,

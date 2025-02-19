@@ -7,7 +7,7 @@ import type { Page } from "astro";
  * @param windowSize {number} The number of page numbers that will be shown. It's best to choose an odd number.
  * @returns number[]
  */
-export function getPageNumbers(page: Page, windowSize = 5): number[] {
+export function getPageNumbers(page: Page, windowSize: number = 5): number[] {
   // We start with the range running from 1 to the total number of pages. We'll use the windowSize to cut this down to a range that we can display comfortably
   let first = 1;
   let last = page.lastPage;
@@ -41,7 +41,7 @@ export function getPageNumbers(page: Page, windowSize = 5): number[] {
 export function urlPatternToUrl(
   pattern: string,
   pageNumber: number,
-  firstPageUrl?: string
+  firstPageUrl?: string,
 ) {
   if (pageNumber === 1) {
     if (firstPageUrl) {

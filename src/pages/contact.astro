@@ -173,7 +173,7 @@ if (method === "POST") {
     </div>
   </div>
   <Fragment slot="body-end">
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script>
       function disableButtonAfterSubmit(form: HTMLFormElement) {
         const submitButton = form.querySelector('button[type="submit"]');
