@@ -33,6 +33,6 @@ export default defineConfig({
   compressHTML: true,
   output: "static",
   adapter: cloudflare({
-    imageService: "compile",
+    imageService: "passthrough",
   }),
 });
