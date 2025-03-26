@@ -1,4 +1,22 @@
 - event:
+    name: JSNation
+    link: https://jsnation.com/
+    start_date: 2025-06-12
+    end_date: 2025-06-16
+    location: Amsterdam, The Netherlands
+  talks:
+    - title: "The Built-in Browser-Based Babelfish"
+
+- event:
+    name: "./NEW"
+    link: https://slashnew.tech/
+    start_date: 2025-05-28
+    end_date: 2025-05-29
+    location: Newcastle, Australia
+  talks:
+    - title: "Let's build an AI agent"
+
+- event:
     name: "NDC Oslo"
     link: https://ndcoslo.com/speakers/phil-nash
     start_date: 2025-05-19
@@ -19,12 +37,30 @@
     - title: "How to work with generative AI in JavaScript"
 
 - event:
+    name: "GDG Melbourne (Cloud)"
+    link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-buildwithai-gdg-melbourne-cloud-march-meetup/
+    start_date: 2025-03-26
+    location: Melbourne, Australia
+  talks:
+    - title: "Build RAG from Scratch"
+      slides: https://philnash.github.io/talks/build-rag-from-scratch/
+
+- event:
+    name: "GDSC Melbourne"
+    link: https://gdg.community.dev/events/details/google-gdg-on-campus-university-of-melbourne-melbourne-australia-presents-building-agents-with-gemini-gdsc-melbourne-x-swinburne-collab/
+    start_date: 2025-03-25
+    location: Melbourne, Australia
+  talks:
+    - title: "Building Agents with Gemini"
+
+- event:
     name: "Programmable Sydney"
     link: https://www.programmable.tech/
     start_date: 2025-03-20
     location: Sydney, Australia
   talks:
     - title: "Build RAG from Scratch"
+      slides: https://philnash.github.io/talks/build-rag-from-scratch/
 
 - event:
     name: "Programmable Melbourne"
@@ -33,6 +69,7 @@
     location: Melbourne, Australia
   talks:
     - title: "Build RAG from Scratch"
+      slides: https://philnash.github.io/talks/build-rag-from-scratch/
 
 - event:
     name: "NDC London"
@@ -42,6 +79,7 @@
     location: London, UK
   talks:
     - title: "Build RAG from Scratch"
+      slides: https://philnash.github.io/talks/build-rag-from-scratch/
 
 - event:
     name: "Web Directions: Dev Summit"
@@ -68,6 +106,7 @@
     location: New York City, USA and online
   talks:
     - title: "Build RAG from Scratch"
+      slides: https://philnash.github.io/talks/build-rag-from-scratch/
 
 - event:
     name: "XtremeJS 2024"
@@ -87,6 +126,7 @@
     location: Porto, Portugal
   talks:
     - title: "Build RAG from Scratch"
+      slides: https://philnash.github.io/talks/build-rag-from-scratch/
 
 - event:
     name: GDG Cloud Melbourne
@@ -130,6 +170,7 @@
     location: Berlin, Germany
   talks:
     - title: "Build RAG from Scratch"
+      slides: https://philnash.github.io/talks/build-rag-from-scratch/
 
 - event:
     name: "Google I/O Extended Brisbane 2024"
