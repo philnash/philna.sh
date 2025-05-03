@@ -70,6 +70,7 @@
   talks:
     - title: "Build RAG from Scratch"
       slides: https://philnash.github.io/talks/build-rag-from-scratch/
+      video: https://www.youtube.com/watch?v=4Xj0yskOPnc
 
 - event:
     name: "NDC London"
@@ -80,6 +81,7 @@
   talks:
     - title: "Build RAG from Scratch"
       slides: https://philnash.github.io/talks/build-rag-from-scratch/
+      video: https://www.youtube.com/watch?v=cwxH9cxW-wQ
 
 - event:
     name: "Web Directions: Dev Summit"
@@ -127,6 +129,7 @@
   talks:
     - title: "Build RAG from Scratch"
       slides: https://philnash.github.io/talks/build-rag-from-scratch/
+      video: https://www.youtube.com/watch?v=wkvGcbsZmPo
 
 - event:
     name: GDG Cloud Melbourne
@@ -161,6 +164,7 @@
     location: Copenhagen, Denmark
   talks:
     - title: "Total ReDoS: the dangers of regex in JavaScript"
+      video: https://www.youtube.com/watch?v=4_BlI_kNulY
 
 - event:
     name: "We Are Developers World Congress"
@@ -285,6 +289,7 @@
   talks:
     - title: "Conquering Complexity: Refactoring JavaScript Projects"
       slides: https://philnash.github.io/talks/conquering-complexity/
+      video: https://www.youtube.com/watch?v=DpDIMICWdoQ
 
 - event:
     name: DevWorld
