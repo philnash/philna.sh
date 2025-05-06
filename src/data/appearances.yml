@@ -27,6 +27,15 @@
     - title: "Let's build an AI agent"
 
 - event:
+    name: "Twilio SIGNAL"
+    link: https://signal.twilio.com/2025/session/3022551/building-genai-email-agents-with-twilio-sendgrid-langflow
+    start_date: 2025-05-14
+    end_date: 2025-05-15
+    location: San Francisco, USA
+  talks:
+    - title: "Building GenAI email agents with Twilio SendGrid & Langflow"
+
+- event:
     name: "NDC Melbourne"
     link: https://ndcmelbourne.com/speakers/phil-nash/eb969d10f9a6
     start_date: 2025-04-29
