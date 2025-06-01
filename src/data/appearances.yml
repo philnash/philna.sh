@@ -1,4 +1,12 @@
 - event:
+    name: AgentCon 2025 Perth
+    link: https://globalai.community/chapters/perth/events/agentcon-2025-perth/
+    start_date: 2025-06-20
+    location: Perth, Australia
+  talks:
+    - title: "Live Coding an AI agent"
+
+- event:
     name: JSNation
     link: https://jsnation.com/
     start_date: 2025-06-12
