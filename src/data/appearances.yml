@@ -16,6 +16,15 @@
     - title: "The Built-in Browser-Based Babelfish"
 
 - event:
+    name: Frontend Nation
+    link: https://frontendnation.com/
+    start_date: 2025-06-03
+    end_date: 2025-06-05
+    location: Online
+  talks:
+    - title: "The Built-in Browser-Based Babelfish"
+
+- event:
     name: "./NEW"
     link: https://slashnew.tech/
     start_date: 2025-05-28
