@@ -61,6 +61,8 @@
   talks:
     - title: "Build with generative AI in JavaScript"
     - title: "How to work with generative AI in JavaScript"
+      video: https://www.youtube.com/watch?v=XhdOFJX6byM
+      slides: https://philnash.github.io/talks/how-to-genai/
 
 - event:
     name: "GDG Melbourne (Cloud)"
@@ -117,6 +119,7 @@
     location: Sydney, Australia
   talks:
     - title: "How to work with generative AI in JavaScript"
+      slides: https://philnash.github.io/talks/how-to-genai/
 
 - event:
     name: "DDD Perth"
@@ -125,6 +128,7 @@
     location: Perth, Australia
   talks:
     - title: "How to work with generative AI in JavaScript"
+      slides: https://philnash.github.io/talks/how-to-genai/
 
 - event:
     name: "JSNation US"
@@ -181,6 +185,7 @@
     location: Melbourne, Australia
   talks:
     - title: "How to Work with Generative AI in JavaScript"
+      slides: https://philnash.github.io/talks/how-to-genai/
 
 - event:
     name: "Copenhagen Developers Festival"
@@ -209,6 +214,7 @@
     location: Brisbane, Australia
   talks:
     - title: "How to work with generative AI in JavaScript"
+      slides: https://philnash.github.io/talks/how-to-genai/
 
 - event:
     name: "AI Engineer World's Fair"
