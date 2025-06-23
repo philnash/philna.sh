@@ -23,6 +23,7 @@
     location: Online
   talks:
     - title: "The Built-in Browser-Based Babelfish"
+      video: https://www.youtube.com/watch?v=ofBMdw2MYgY
 
 - event:
     name: "./NEW"
