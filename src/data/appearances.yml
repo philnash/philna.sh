@@ -13,7 +13,8 @@
     end_date: 2025-06-16
     location: Amsterdam, The Netherlands
   talks:
-    - title: "The Built-in Browser-Based Babelfish"
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
+      video: https://gitnation.com/contents/the-built-in-browser-based-babelfish
 
 - event:
     name: Frontend Nation
@@ -43,6 +44,7 @@
   talks:
     - title: "Build with generative AI in JavaScript"
     - title: "Let's build an AI agent"
+      video: https://www.youtube.com/watch?v=fjJyr75dWhs
 
 - event:
     name: "Twilio SIGNAL"
@@ -178,6 +180,7 @@
     location: Seattle, USA
   talks:
     - title: "Durable RAG: productionising generative AI workflows"
+      video: https://www.youtube.com/watch?v=idopNteBjgg
 
 - event:
     name: MelbJS
@@ -216,6 +219,7 @@
   talks:
     - title: "How to work with generative AI in JavaScript"
       slides: https://philnash.github.io/talks/how-to-genai/
+      video: https://www.youtube.com/watch?v=T4IB5pPg5j0
 
 - event:
     name: "AI Engineer World's Fair"
