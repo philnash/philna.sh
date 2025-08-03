@@ -1,4 +1,13 @@
 - event:
+    name: "CascadiaJS 2025"
+    link: https://cascadiajs.com/2025
+    start_date: 2025-09-18
+    end_date: 2025-09-19
+    location: Seattle, USA
+  talks:
+    - title: "A built-in browser-based babelfish"
+
+- event:
     name: AgentCon 2025 Perth
     link: https://globalai.community/chapters/perth/events/agentcon-2025-perth/
     start_date: 2025-06-20
