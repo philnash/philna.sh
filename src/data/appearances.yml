@@ -8,6 +8,24 @@
     - title: "A built-in browser-based babelfish"
 
 - event:
+    name: "AI-Driven Development Day"
+    link: https://aidd.io/ai-driven-development-day
+    start_date: 2025-09-10
+    end_date: 2025-09-10
+    location: Online
+  talks:
+    - title: "Build the tools your agents need"
+
+- event:
+    name: MelbJS
+    link: https://melbjs.com/
+    start_date: 2025-09-10
+    end_date: 2025-09-10
+    location: Melbourne, Australia
+  talks:
+    - title: "Practical Web AI: Built-in, Browser Based, Brilliant"
+
+- event:
     name: "GDG Melbourne"
     link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-melbourne-august-meetup-3/
     start_date: 2025-08-27
