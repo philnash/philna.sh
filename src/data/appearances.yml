@@ -1,4 +1,22 @@
 - event:
+    name: DevFest Brisbane 2025
+    link: https://devfest-brisbane-2025.sessionize.com/
+    start_date: 2025-10-25
+    end_date: 2025-10-25
+    location: Brisbane, Australia
+  talks:
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
+
+- event:
+    name: "AI for the rest of us 2025"
+    link: https://aifortherestofus.live/london-2025/
+    start_date: 2025-10-15
+    end_date: 2025-10-16
+    location: London, UK
+  talks:
+    - title: "From 0 to Agent in 20 minutes"
+
+- event:
     name: "CascadiaJS 2025"
     link: https://cascadiajs.com/2025
     start_date: 2025-09-18
