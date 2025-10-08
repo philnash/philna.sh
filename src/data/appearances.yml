@@ -1,4 +1,13 @@
 - event:
+    name: DevFest Auckland 2025
+    link: https://devfest.gdgauckland.nz/
+    start_date: 2025-11-09
+    end_date: 2025-11-09
+    location: Auckland, New Zealand
+  talks:
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
+
+- event:
     name: DevFest Brisbane 2025
     link: https://devfest-brisbane-2025.sessionize.com/
     start_date: 2025-10-25
@@ -15,6 +24,15 @@
     location: London, UK
   talks:
     - title: "From 0 to Agent in 20 minutes"
+
+- event:
+    name: JSMonthly London
+    link: https://guild.host/events/jsmonthly-october-event-wb2qo7
+    start_date: 2025-10-14
+    end_date: 2025-10-14
+    location: London, UK
+  talks:
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
 
 - event:
     name: "CascadiaJS 2025"
