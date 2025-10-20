@@ -8,6 +8,15 @@
     - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
 
 - event:
+    name: GDG Melbourne
+    link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-melbourne-oct-meetup/
+    start_date: 2025-10-29
+    end_date: 2025-10-29\
+    location: Melbourne, Australia
+  talks:
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
+
+- event:
     name: DevFest Brisbane 2025
     link: https://devfest-brisbane-2025.sessionize.com/
     start_date: 2025-10-25
@@ -33,6 +42,7 @@
     location: London, UK
   talks:
     - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
+      video: https://youtu.be/S5HGHL2WFiE?t=1262
 
 - event:
     name: "CascadiaJS 2025"
