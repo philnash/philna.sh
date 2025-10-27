@@ -24,6 +24,7 @@
     location: Brisbane, Australia
   talks:
     - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
+      video: https://www.youtube.com/watch?v=iDN35uSma9c
 
 - event:
     name: "AI for the rest of us 2025"
