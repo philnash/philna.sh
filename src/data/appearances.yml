@@ -1,4 +1,13 @@
 - event:
+    name: DevFest Adelaide 2025
+    link: https://gdg.community.dev/events/details/google-gdg-adelaide-presents-gdg-adelaide-devfest-2025/
+    start_date: 2025-11-26
+    end_date: 2025-11-26
+    location: Adelaide, Australia
+  talks:
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
+
+- event:
     name: DevFest Auckland 2025
     link: https://devfest.gdgauckland.nz/
     start_date: 2025-11-09
@@ -11,7 +20,7 @@
     name: GDG Melbourne
     link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-melbourne-oct-meetup/
     start_date: 2025-10-29
-    end_date: 2025-10-29\
+    end_date: 2025-10-29
     location: Melbourne, Australia
   talks:
     - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
@@ -53,6 +62,7 @@
     location: Seattle, USA
   talks:
     - title: "A built-in browser-based babelfish"
+      video: https://www.youtube.com/watch?v=bZGoFTzPiKw
 
 - event:
     name: "AI-Driven Development Day"
