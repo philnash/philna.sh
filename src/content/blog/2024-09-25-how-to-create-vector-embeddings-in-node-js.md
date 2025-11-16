@@ -13,7 +13,7 @@ pubDate: "2024-09-25"
 updatedDate: "2025-11-16"
 ---
 
-When you’re building a [retrieval-augmented generation (RAG)](https://www.ibm.com/think/topics/retrieval-augmented-generation) app, job number one is preparing your data. You’ll need to take your unstructured data and [split it up into chunks](local link), turn those chunks into [vector embeddings](https://www.ibm.com/think/topics/vector-embedding), and finally, store the embeddings in a [vector database](https://www.ibm.com/think/topics/vector-database).
+When you’re building a [retrieval-augmented generation (RAG)](https://www.ibm.com/think/topics/retrieval-augmented-generation) app, job number one is preparing your data. You’ll need to take your unstructured data and [split it up into chunks](/blog/2024/09/18/how-to-chunk-text-in-javascript-for-rag-applications/), turn those chunks into [vector embeddings](https://www.ibm.com/think/topics/vector-embedding), and finally, store the embeddings in a [vector database](https://www.ibm.com/think/topics/vector-database).
 
 There are many ways that you can create vector embeddings in JavaScript. In this post, we’ll investigate four ways to generate vector embeddings in Node.js: locally, via API, via a framework, and with Astra DB's Vectorize.
 
