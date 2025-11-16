@@ -8,10 +8,15 @@ image: ../../assets/posts/fetch-streams/fetch-streams.avif
 imageAlt: " "
 imageWidth: 1920
 imageHeight: 1273
-pubDate: "2025-11-08"
+pubDate: "2024-08-22"
+updatedDate: "2025-11-16"
 ---
 
 Generative AI enables us to build incredible new types of applications, but large language model (LLM) responses can be slow. If we wait for the full response before updating the user interface, we might be making our users wait more than they need to. Thankfully, most LLM APIs—including OpenAI, Anthropic, and [Langflow](https://langflow.org) provide streaming endpoints that you can use to stream responses as they are generated. In this post, we're going to see how to use [JavaScript's `fetch` API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to immediately update your front-end application as an LLM generates output and create a better user experience.
+
+<div class="info">
+  <p>This post was originally written for DataStax, but didn't survive a content migration as part of <a href="https://www.ibm.com/new/announcements/ibm-to-acquire-datastax-helping-clients-bring-the-power-of-unstructured-data-to-enterprise-ai-applications">IBM's purchase</a>. I thought the content was useful, so have republished it here.</p>
+</div>
 
 ## Slow responses without streaming
 
