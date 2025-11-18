@@ -30,22 +30,17 @@ const { pubDate, subscribe, slug, updatedDate } = Astro.props;
           })
         }</time
       ></a
-    >
-    { 
-      updatedDate && (<span class="updated">
-        , updated on
-        <time
-          class="dt-updated"
-          datetime={updatedDate.toISOString()}
-          itemprop="dateModified"
-          >{
-            updatedDate.toLocaleDateString("en-us", {
+    >{
+      // prettier-ignore
+      updatedDate && <span class="updated">, updated on
+          <time class="dt-updated" datetime={updatedDate.toISOString()} itemprop="dateModified">
+            {updatedDate.toLocaleDateString("en-us", {
               year: "numeric",
               month: "short",
               day: "numeric",
-            })
-          }</time>
-      </span>)
+            })}
+          </time>
+        </span>
     }
     by
     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
