@@ -24,9 +24,9 @@ To get the best data for RAG, we need to remove irrelevant content. When you’r
 
 ## Repurposing reader view
 
-Most web browsers come with a reader view that strips out everything but the article title and content. Here is the difference between the browser and reader mode when applied to a blog post on the DataStax site.
+Most web browsers come with a reader view that strips out everything but the article title and content. Here is the difference between the browser and reader mode when applied to a blog post on my personal site.
 
-![An animation that shows browsing a blog post on the DataStax blog. You can see the content, but also the header navigation and the sidebar, which are irrelevant for RAG. Clicking on reader mode strips away the site design and all the extra content leaving just the article.](../../assets/posts/readability/reader-in-action.gif)
+![An animation that shows browsing a blog post on my personal site. You can see the content, but also the header navigation and the sidebar, which are irrelevant for RAG. Clicking on reader mode strips away the site design and all the extra content leaving just the article.](../../assets/posts/readability/reader-in-action.gif)
 
 Mozilla makes the underlying library for Firefox's reader mode available as a standalone open-source module: [Readability.js](https://github.com/mozilla/readability). So we can use Readability.js in a data pipeline to strip irrelevant content and return high quality results from scraping a web page.
 
