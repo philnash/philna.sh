@@ -16,6 +16,10 @@ Scraping web pages is one way to fetch content for your [retrieval-augmented gen
 
 Mozilla's open-source library [Readability.js](https://github.com/mozilla/readability) is a useful tool for extracting just the important parts of a web page. Let's look at how to use it as part of a data ingestion pipeline for a RAG application.
 
+<div class="info">
+  <p>This post was originally written for DataStax, but didn't survive a content migration as part of <a href="https://www.ibm.com/new/announcements/ibm-to-acquire-datastax-helping-clients-bring-the-power-of-unstructured-data-to-enterprise-ai-applications">IBM's purchase</a>. I thought the content was useful, so have republished it here.</p>
+</div>
+
 ## Retrieving unstructured data from a web page
 
 Web pages are a source of unstructured data that we can use in RAG-based apps. But web pages are often full of content that is irrelevant; things like headers, sidebars, and footers. They contain useful context for someone browsing the site, but detract from the main subject of a page.
