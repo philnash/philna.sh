@@ -43,6 +43,7 @@
     location: London, UK
   talks:
     - title: "From 0 to Agent in 20 minutes"
+      video: https://www.youtube.com/watch?v=ns5VHvN3F7k&t=254s
 
 - event:
     name: JSMonthly London
