@@ -87,7 +87,7 @@ Of course, there are many more benefits to the very well throught out `Temporal`
 
 `Temporal` has still not made it to many JavaScript engines. At the time of writing, it is available in Firefox and nowhere else, so if you want to test this out open up Firefox or check out one of the polyfills [@js-temporal/polyfill](https://github.com/js-temporal/temporal-polyfill) or [temporal-polyfill](https://www.npmjs.com/package/temporal-polyfill).
 
-<div class="info"><p><strong>Edit:</strong> Merely two days after publishing this, <a href="https://developer.chrome.com/blog/chrome-144-beta#the_temporal_api">support for Temporal started rolling out in Chrome 144</a>. According to <a href="https://caniuse.com/temporal">Can I Use, Temporal</a> is available behind a flag in Safari Technical Preview, so we might be close there too.</p></div>
+<div class="info"><p><strong>Edit:</strong> Merely two days after publishing this, <a href="https://developer.chrome.com/blog/new-in-chrome-144#temporal">support for Temporal started rolling out in Chrome 144</a>. According to <a href="https://caniuse.com/temporal">Can I Use, Temporal</a> is available behind a flag in Safari Technical Preview, so we might be close there too.</p></div>
 
 If you still have to use `Date` make sure you keep your time zone in mind. I'd try to move to, or at least learn how to use, `Temporal` now.
 
