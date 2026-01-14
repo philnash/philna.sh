@@ -7,6 +7,7 @@ imageAlt: "A terminal window shows a JavaScript REPL. The code creates a date on
 imageWidth: 1598
 imageHeight: 978
 pubDate: "2026-01-11"
+updatedDate: "2026-01-14"
 ---
 
 The `Date` object in JavaScript is frequently one that causes trouble. So much so, it is set to be replaced by [`Temporal`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) soon. This is the story of an issue that I faced that will be much easier to handle once `Temporal` is more widespread.
@@ -85,6 +86,8 @@ Of course, there are many more benefits to the very well throught out `Temporal`
 ## Mind the time zone
 
 `Temporal` has still not made it to many JavaScript engines. At the time of writing, it is available in Firefox and nowhere else, so if you want to test this out open up Firefox or check out one of the polyfills [@js-temporal/polyfill](https://github.com/js-temporal/temporal-polyfill) or [temporal-polyfill](https://www.npmjs.com/package/temporal-polyfill).
+
+<div class="info"><p><strong>Edit:</strong> Merely two days after publishing this, <a href="https://developer.chrome.com/blog/chrome-144-beta#the_temporal_api">support for Temporal started rolling out in Chrome 144</a>. According to <a href="https://caniuse.com/temporal">Can I Use, Temporal</a> is available behind a flag in Safari Technical Preview, so we might be close there too.</p></div>
 
 If you still have to use `Date` make sure you keep your time zone in mind. I'd try to move to, or at least learn how to use, `Temporal` now.
 
