@@ -1,4 +1,13 @@
 - event:
+    name: NDC Sydney 2026
+    link: https://ndcsydney.com/agenda/lets-build-an-ai-agent-0yv8/0qm5x40a77g
+    start_date: 2026-04-22
+    end_date: 2026-04-24
+    location: Sydney, Australia
+  talks:
+    - title: "Let's build an AI agent"
+
+- event:
     name: DevFest Adelaide 2025
     link: https://gdg.community.dev/events/details/google-gdg-adelaide-presents-gdg-adelaide-devfest-2025/
     start_date: 2025-11-26
