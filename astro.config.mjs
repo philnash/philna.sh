@@ -4,10 +4,21 @@ import { DOMAIN } from "./src/consts";
 import cloudflare from "@astrojs/cloudflare";
 import playformInline from "@playform/inline";
 
+import sentry from "@sentry/astro";
+
 // https://astro.build/config
 export default defineConfig({
   site: `https://${DOMAIN}`,
-  integrations: [playformInline({ Critters: { preload: "media" } })],
+  integrations: [
+    playformInline({ Critters: { preload: "media" } }),
+    sentry({
+      project: "javascript-astro",
+      org: "phil-nash",
+      authToken: process.env.SENTRY_AUTH_TOKEN,
+      clientInitPath: "./src/utils/sentry.client.config.js",
+      serverInitPath: "./src/utils/sentry.server.config.js",
+    }),
+  ],
   vite: {
     plugins: [yaml()],
     ssr: {
