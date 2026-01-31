@@ -17,7 +17,7 @@ const astraDb = new DataAPIClient(ASTRADB_APP_TOKEN).db(ASTRADB_ENDPOINT);
 const blogCollection = astraDb.collection<BlogEmbeddingDoc>(COLLECTION_NAME);
 
 function isPost(
-  post: CollectionEntry<"blog"> | undefined
+  post: CollectionEntry<"blog"> | undefined,
 ): post is CollectionEntry<"blog"> {
   return typeof post !== "undefined";
 }
@@ -33,7 +33,7 @@ export async function getRelatedPosts({
     await blogCollection.updateOne(
       { _id: slug },
       { $set: { $vectorize: body } },
-      { upsert: true }
+      { upsert: true },
     );
 
     const filter = { _id: { $ne: slug } };
@@ -41,9 +41,20 @@ export async function getRelatedPosts({
 
     const cursor = blogCollection.find(filter, options);
     const results = await cursor.toArray();
+    const notFoundIds: string[] = [];
     const posts = await Promise.all(
-      results.map((result) => getEntry({ collection: "blog", id: result._id }))
+      results.map(async (result) => {
+        const entry = await getEntry({ collection: "blog", id: result._id });
+        if (entry === undefined) {
+          notFoundIds.push(result._id);
+        }
+        return entry;
+      }),
     );
+    if (notFoundIds.length > 0) {
+      console.warn(`Deleting not found blog posts: ${notFoundIds.join(", ")}`);
+      await blogCollection.deleteMany({ _id: { $in: notFoundIds } });
+    }
     return posts.filter(isPost);
   } catch (error) {
     console.error(error);
