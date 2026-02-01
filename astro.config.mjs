@@ -11,13 +11,15 @@ export default defineConfig({
   site: `https://${DOMAIN}`,
   integrations: [
     playformInline({ Critters: { preload: "media" } }),
-    sentry({
-      project: "javascript-astro",
-      org: "phil-nash",
-      authToken: process.env.SENTRY_AUTH_TOKEN,
-      clientInitPath: "./src/utils/sentry.client.config.js",
-      serverInitPath: "./src/utils/sentry.server.config.js",
-    }),
+    process.env.NODE_ENV === "production"
+      ? sentry({
+          project: "javascript-astro",
+          org: "phil-nash",
+          authToken: process.env.SENTRY_AUTH_TOKEN,
+          clientInitPath: "./src/utils/sentry.client.config.js",
+          serverInitPath: "./src/utils/sentry.server.config.js",
+        })
+      : null,
   ],
   vite: {
     plugins: [yaml()],
