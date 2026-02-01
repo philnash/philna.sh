@@ -1,0 +1,11 @@
+- id: ai-generated-commit-messages-langflow-git-mcp
+  title: "Generate commit messages with AI using Langflow and Git MCP server"
+  link: "https://www.langflow.org/blog/ai-generated-commit-messages-langflow-git-mcp"
+  pubDate: 2026-01-08
+  publisher: "langflow"
+
+- id: send-interactive-amp-email-twilio-sendgrid
+  title: "Send your first interactive AMP Email with Twilio SendGrid"
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/product/send-interactive-amp-email-twilio-sendgrid
+  pubDate: 2020-11-09
+  publisher: "twilio"

@@ -2,13 +2,15 @@
 import Subscribe from "./Subscribe.astro";
 import { SITE_AUTHOR } from "../consts";
 import { viewTransitionName } from "../utils/blog_posts";
+import type { CollectionEntry } from "astro:content";
 type Props = {
   pubDate: Date;
   updatedDate?: Date;
   subscribe?: Boolean;
   slug: string;
+  publisher?: CollectionEntry<"publishers">;
 };
-const { pubDate, subscribe, slug, updatedDate } = Astro.props;
+const { pubDate, subscribe, slug, updatedDate, publisher } = Astro.props;
 ---
 
 <div class="post-meta">
@@ -48,6 +50,22 @@ const { pubDate, subscribe, slug, updatedDate } = Astro.props;
         ><span itemprop="name">{SITE_AUTHOR}</span></a
       >
     </span>
+    {
+      publisher && (
+        <>
+          for
+          <span
+            itemprop="publisher"
+            itemscope
+            itemtype="http://schema.org/Organization"
+          >
+            <a class="p-publisher" href={publisher.data.link} itemprop="url">
+              <span itemprop="name">{publisher.data.name}</span>
+            </a>
+          </span>
+        </>
+      )
+    }
   </p>
   {subscribe && <Subscribe />}
 </div>

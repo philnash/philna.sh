@@ -1,5 +1,5 @@
-import { defineCollection, z } from "astro:content";
-import { glob } from "astro/loaders";
+import { defineCollection, reference, z } from "astro:content";
+import { file, glob } from "astro/loaders";
 
 const blog = defineCollection({
   loader: glob({ pattern: "**/[^_]*.md", base: "./src/content/blog" }),
@@ -31,4 +31,30 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+const publishers = defineCollection({
+  loader: file("./src/data/publishers.yml"),
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    link: z.string().url(),
+  }),
+});
+
+const externalPosts = defineCollection({
+  loader: file("./src/data/external_posts.yml"),
+  schema: z.object({
+    title: z.string(),
+    link: z.string().url(),
+    pubDate: z
+      .string()
+      .or(z.date())
+      .transform((val) => new Date(val)),
+    updatedDate: z
+      .string()
+      .optional()
+      .transform((str) => (str ? new Date(str) : undefined)),
+    publisher: reference("publishers"),
+  }),
+});
+
+export const collections = { blog, externalPosts, publishers };

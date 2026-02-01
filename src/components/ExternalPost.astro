@@ -1,0 +1,33 @@
+---
+import { type CollectionEntry, getEntry } from "astro:content";
+import PostMeta from "./PostMeta.astro";
+
+type Props = {
+  post: CollectionEntry<"externalPosts">;
+};
+
+const { post } = Astro.props;
+---
+
+<li
+  class="cell cell-12 cell-med-10 cell-centre post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <a
+    class="post-link u-url"
+    itemprop="url mainEntityOfPage"
+    href={post.data.link}
+  >
+    <h2 class="p-name" itemprop="name">
+      {post.data.title}
+    </h2>
+  </a>
+  <PostMeta
+    pubDate={post.data.pubDate}
+    subscribe={false}
+    slug={post.id}
+    updatedDate={post.data.updatedDate}
+    publisher={await getEntry(post.data.publisher)}
+  />
+</li>

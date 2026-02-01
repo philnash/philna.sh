@@ -7,11 +7,12 @@ import Post from "../components/Post.astro";
 import Pagination from "@philnash/astro-pagination";
 import type { CollectionEntry } from "astro:content";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import ExternalPost from "../components/ExternalPost.astro";
 
 type Props = {
   title: string;
-  posts: CollectionEntry<"blog">[];
-  page?: Page<CollectionEntry<"blog">>;
+  posts: CollectionEntry<"blog" | "externalPosts">[];
+  page?: Page<CollectionEntry<"blog" | "externalPosts">>;
 };
 
 const { title, posts, page } = Astro.props;
@@ -32,9 +33,13 @@ const { title, posts, page } = Astro.props;
 
     <ul class="post-list">
       {
-        posts.map((post, index) => (
-          <Post post={post} aboveTheFold={index < 1} />
-        ))
+        posts.map((post, index) =>
+          post.collection === "blog" ? (
+            <Post post={post} aboveTheFold={index < 1} />
+          ) : (
+            <ExternalPost post={post} />
+          )
+        )
       }
     </ul>
 

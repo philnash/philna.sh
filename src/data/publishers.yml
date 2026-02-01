@@ -1,0 +1,9 @@
+- id: twilio
+  name: Twilio
+  link: https://www.twilio.com/
+- id: sonarsource
+  name: SonarSource
+  link: https://www.sonarsource.com/
+- id: langflow
+  name: Langflow
+  link: https://www.langflow.org/
