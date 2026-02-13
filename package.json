@@ -22,7 +22,7 @@
     "@sentry/astro": "^10.38.0",
     "astro": "^5.17.1",
     "astro-remote": "^0.3.4",
-    "markdown-it": "^14.1.0",
+    "markdown-it": "^14.1.1",
     "mdast-util-from-markdown": "^2.0.2",
     "mdast-util-to-string": "^4.0.0",
     "openai": "^6.17.0",
