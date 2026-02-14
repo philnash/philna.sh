@@ -1,10 +1,10 @@
 ---
-import type { Appearance } from "../data/appearances.yml";
+import type { CollectionEntry } from "astro:content";
 import { displayDate } from "../utils/appearances";
 import TalkItem from "./TalkItem.astro";
 
 export type Props = {
-  appearance: Appearance;
+  appearance: CollectionEntry<"appearances">;
 };
 
 const { appearance } = Astro.props;
@@ -12,40 +12,45 @@ const { appearance } = Astro.props;
 
 <li class="talk">
   <p class="talk-meta">
-    {displayDate(appearance.event.start_date, appearance.event.end_date)}
-    - {appearance.event.location}
+    {
+      displayDate(
+        appearance.data.event.start_date,
+        appearance.data.event.end_date,
+      )
+    }
+    - {appearance.data.event.location}
   </p>
   <h3 class="talk-event">
     {
-      appearance.event.link ? (
-        <a href={appearance.event.link}>{appearance.event.name}</a>
+      appearance.data.event.link ? (
+        <a href={appearance.data.event.link}>{appearance.data.event.name}</a>
       ) : (
-        appearance.event.name
+        appearance.data.event.name
       )
     }
   </h3>
 
   {
-    appearance.roles && appearance.roles.length > 0 && (
-      <h4>In the role of: {appearance.roles.join(", ")}</h4>
+    appearance.data.roles && appearance.data.roles.length > 0 && (
+      <h4>In the role of: {appearance.data.roles.join(", ")}</h4>
     )
   }
   {
-    appearance.roles &&
-      appearance.roles.length > 0 &&
-      appearance.talks &&
-      appearance.talks.length > 0 && <h4>Also presenting</h4>
+    appearance.data.roles &&
+      appearance.data.roles.length > 0 &&
+      appearance.data.talks &&
+      appearance.data.talks.length > 0 && <h4>Also presenting</h4>
   }
   {
-    ((appearance.roles && appearance.roles.length === 0) ||
-      !appearance.roles) &&
-      appearance.talks &&
-      appearance.talks.length > 0 && <h4>Presenting</h4>
+    ((appearance.data.roles && appearance.data.roles.length === 0) ||
+      !appearance.data.roles) &&
+      appearance.data.talks &&
+      appearance.data.talks.length > 0 && <h4>Presenting</h4>
   }
 
   {
-    appearance.talks &&
-      appearance.talks.map((talk) => {
+    appearance.data.talks &&
+      appearance.data.talks.map((talk) => {
         return <TalkItem talk={talk} />;
       })
   }

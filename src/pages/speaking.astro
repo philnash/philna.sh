@@ -2,6 +2,7 @@
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import SpeakingHeader from "../components/SpeakingHeader.astro";
 import AppearanceList from "../components/AppearanceList.astro";
+import { getCollection } from "astro:content";
 
 import {
   getToday,
@@ -10,7 +11,7 @@ import {
 } from "../utils/appearances";
 import { SITE_TITLE } from "../consts";
 
-import appearances from "../data/appearances.yml";
+const appearances = await getCollection("appearances");
 
 const today = getToday();
 const upcoming = upcomingAppearances(appearances, today);
@@ -38,8 +39,8 @@ const description =
       </p>
       <p>
         If you'd like Phil to speak at your event, check out his
-        <a href="/speaking/details/">speaker details</a> and please get in touch
-        by email on the <a href="/contact/">contact page</a> or
+        <a href="/speaking/details/">speaker details</a> and please get in touch by
+        email on the <a href="/contact/">contact page</a> or
         <a href="https://twitter.com/philnash"
           >with a direct message on Twitter</a
         >.

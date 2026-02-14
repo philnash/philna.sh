@@ -57,4 +57,34 @@ const externalPosts = defineCollection({
   }),
 });
 
-export const collections = { blog, externalPosts, publishers };
+const appearances = defineCollection({
+  loader: file("./src/data/appearances.yml"),
+  schema: z.object({
+    id: z.string(),
+    event: z.object({
+      name: z.string(),
+      link: z.string().url().optional(),
+      start_date: z
+        .string()
+        .or(z.date())
+        .transform((val) => new Date(val)),
+      end_date: z
+        .string()
+        .optional()
+        .transform((str) => (str ? new Date(str) : undefined)),
+      location: z.string(),
+      type: z.enum(["conference", "meetup", "hackathon"]),
+    }),
+    talks: z.array(
+      z.object({
+        title: z.string(),
+        slides: z.string().url().optional(),
+        video: z.string().url().optional(),
+        audio: z.string().url().optional(),
+      }),
+    ).optional(),
+    roles: z.array(z.string()).optional(),
+  }),
+});
+
+export const collections = { blog, externalPosts, publishers, appearances };

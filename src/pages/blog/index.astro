@@ -3,10 +3,7 @@ import BlogList from "../../layouts/BlogList.astro";
 import { PER_PAGE } from "../../consts";
 import type { Page } from "astro";
 import type { CollectionEntry } from "astro:content";
-import {
-  sortedBlogPosts,
-  localAndExternalBlogPosts,
-} from "../../utils/blog_posts";
+import { localAndExternalBlogPosts } from "../../utils/blog_posts";
 
 const allPosts = await localAndExternalBlogPosts();
 const posts = allPosts.slice(0, PER_PAGE);
