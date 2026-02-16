@@ -1,3 +1,15 @@
+- id: ndc-copenhagen-2026
+  event:
+    name: NDC Copenhagen 2026
+    link: https://ndccopenhagen.com/speakers/phil-nash
+    start_date: 2026-06-03
+    end_date: 2026-06-04
+    location: Copenhagen, Denmark
+    type: conference
+  talks:
+    - title: Let's build an AI agent
+    - title: Evolving AI chat with MCP Apps
+
 - id: ndc-sydney-2026
   event:
     name: NDC Sydney 2026
