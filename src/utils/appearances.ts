@@ -1,4 +1,3 @@
-import type { Appearance } from "../data/appearances.yml";
 import type { CollectionEntry } from "astro:content";
 
 export function displayDate(startDate: Date, endDate?: Date) {

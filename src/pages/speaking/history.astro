@@ -6,8 +6,6 @@ import SpeakingHeader from "../../components/SpeakingHeader.astro";
 import { getToday, pastAppearances } from "../../utils/appearances";
 import { SITE_TITLE } from "../../consts";
 
-import appearances from "../../data/appearances.yml";
-import type { Appearance } from "../../data/appearances.yml";
 import { getCollection, type CollectionEntry } from "astro:content";
 
 const today = getToday();
