@@ -1,0 +1,45 @@
+---
+import { type CollectionEntry, getEntry } from "astro:content";
+import PostMeta from "./PostMeta.astro";
+import { Image } from "astro:assets";
+import External from "../icons/external.svg";
+
+type Props = {
+  post: CollectionEntry<"externalPosts">;
+};
+
+const { post } = Astro.props;
+const publisher = await getEntry(post.data.publisher);
+---
+
+<li
+  class="cell cell-12 cell-med-10 cell-centre post h-entry external"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <Image
+    src={publisher.data.logo}
+    alt={publisher.data.name}
+    class="publisher-logo"
+    width="64"
+    height="64"
+  />
+  <div>
+    <a
+      class="post-link u-url"
+      itemprop="url mainEntityOfPage"
+      href={post.data.link}
+    >
+      <h2 class="p-name" itemprop="name">
+        {post.data.title}
+        <External />
+      </h2>
+    </a>
+    <PostMeta
+      pubDate={post.data.pubDate}
+      subscribe={false}
+      slug={post.id}
+      publisher={publisher}
+    />
+  </div>
+</li>

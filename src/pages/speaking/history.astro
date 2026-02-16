@@ -8,13 +8,16 @@ import { SITE_TITLE } from "../../consts";
 
 import appearances from "../../data/appearances.yml";
 import type { Appearance } from "../../data/appearances.yml";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 const today = getToday();
 
+const appearances = await getCollection("appearances");
+
 const appearancesByYear = pastAppearances(appearances, today).reduce<
-  Record<string, Appearance[]>
+  Record<string, CollectionEntry<"appearances">[]>
 >((apps, appearance) => {
-  const year = appearance.event.start_date.getFullYear().toString();
+  const year = appearance.data.event.start_date.getFullYear().toString();
   if (apps[year]) {
     apps[year].push(appearance);
   } else {
@@ -25,8 +28,9 @@ const appearancesByYear = pastAppearances(appearances, today).reduce<
 
 Object.keys(appearancesByYear).forEach((year) =>
   appearancesByYear[year].sort(
-    (a, b) => b.event.start_date.getTime() - a.event.start_date.getTime()
-  )
+    (a, b) =>
+      b.data.event.start_date.getTime() - a.data.event.start_date.getTime(),
+  ),
 );
 const years = Object.keys(appearancesByYear).sort().reverse();
 

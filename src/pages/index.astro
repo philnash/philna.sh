@@ -19,7 +19,7 @@ import philnash120 from "../assets/philnash120x120.jpg";
 import philnash120x2 from "../assets/philnash120x120@2x.jpg";
 import philnash120x3 from "../assets/philnash120x120@3x.jpg";
 
-import appearances from "../data/appearances.yml";
+import { getCollection } from "astro:content";
 
 const posts = await sortedBlogPosts();
 const post = posts[0];
@@ -31,6 +31,7 @@ if (post.body) {
 const posttSlug = postPath(post);
 
 const today = getToday();
+const appearances = await getCollection("appearances");
 const upcoming = nextThreeAppearances(appearances, today);
 
 let heading, apps;

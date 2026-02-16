@@ -18,6 +18,19 @@ export async function sortedBlogPosts(): Promise<CollectionEntry<"blog">[]> {
   );
 }
 
+export async function localAndExternalBlogPosts(): Promise<
+  (CollectionEntry<"blog"> | CollectionEntry<"externalPosts">)[]
+> {
+  const localPosts = await getCollection("blog");
+  const externalPosts = await getCollection("externalPosts");
+
+  const allPosts = [...localPosts, ...externalPosts];
+
+  return allPosts.sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  );
+}
+
 export function postParams(post: CollectionEntry<"blog">) {
   const matchData = post.id.match(
     /^(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})-(?<slug>[A-Za-z\d-]+)/,

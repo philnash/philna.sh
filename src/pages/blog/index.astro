@@ -3,14 +3,14 @@ import BlogList from "../../layouts/BlogList.astro";
 import { PER_PAGE } from "../../consts";
 import type { Page } from "astro";
 import type { CollectionEntry } from "astro:content";
-import { sortedBlogPosts } from "../../utils/blog_posts";
+import { localAndExternalBlogPosts } from "../../utils/blog_posts";
 
-const allPosts = await sortedBlogPosts();
+const allPosts = await localAndExternalBlogPosts();
 const posts = allPosts.slice(0, PER_PAGE);
 
 const lastPage = Math.ceil(allPosts.length / PER_PAGE);
 
-const page: Page<CollectionEntry<"blog">> = {
+const page: Page<CollectionEntry<"blog" | "externalPosts">> = {
   data: posts,
   start: 0,
   end: posts.length,

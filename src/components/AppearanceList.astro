@@ -1,8 +1,8 @@
 ---
-import type { Appearance } from "../data/appearances.yml";
+import type { CollectionEntry } from "astro:content";
 import AppearanceItem from "./AppearanceItem.astro";
 type Props = {
-  appearances: Appearance[];
+  appearances: CollectionEntry<"appearances">[];
   heading: string;
 };
 

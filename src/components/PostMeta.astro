@@ -2,13 +2,15 @@
 import Subscribe from "./Subscribe.astro";
 import { SITE_AUTHOR } from "../consts";
 import { viewTransitionName } from "../utils/blog_posts";
+import type { CollectionEntry } from "astro:content";
 type Props = {
   pubDate: Date;
   updatedDate?: Date;
   subscribe?: Boolean;
   slug: string;
+  publisher?: CollectionEntry<"publishers">;
 };
-const { pubDate, subscribe, slug, updatedDate } = Astro.props;
+const { pubDate, subscribe, slug, updatedDate, publisher } = Astro.props;
 ---
 
 <div class="post-meta">
@@ -16,20 +18,23 @@ const { pubDate, subscribe, slug, updatedDate } = Astro.props;
     class="meta"
     style={{ viewTransitionName: viewTransitionName(slug, "meta") }}
   >
-    Published on
-    <a href={Astro.url} class="u-url" itemprop="url mainEntityOfPage"
-      ><time
-        class="dt-published"
-        datetime={pubDate.toISOString()}
-        itemprop="datePublished"
-        >{
-          pubDate.toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })
-        }</time
-      ></a
+    Published by
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <a class="p-author h-card" href={Astro.site} itemprop="url"
+        ><span itemprop="name">{SITE_AUTHOR}</span></a
+      >
+    </span> on
+    <time
+      class="dt-published"
+      datetime={pubDate.toISOString()}
+      itemprop="datePublished"
+      >{
+        pubDate.toLocaleDateString("en-us", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
+      }</time
     >{
       // prettier-ignore
       updatedDate && <span class="updated">, updated on
@@ -42,12 +47,22 @@ const { pubDate, subscribe, slug, updatedDate } = Astro.props;
           </time>
         </span>
     }
-    by
-    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <a class="p-author h-card" href={Astro.site} itemprop="url"
-        ><span itemprop="name">{SITE_AUTHOR}</span></a
-      >
-    </span>
+    {
+      publisher && (
+        <>
+          for
+          <span
+            itemprop="publisher"
+            itemscope
+            itemtype="http://schema.org/Organization"
+          >
+            <a class="p-publisher" href={publisher.data.link} itemprop="url">
+              <span itemprop="name">{publisher.data.name}</span>
+            </a>
+          </span>
+        </>
+      )
+    }
   </p>
   {subscribe && <Subscribe />}
 </div>

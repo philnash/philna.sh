@@ -1,507 +1,565 @@
-- event:
+- id: ndc-sydney-2026
+  event:
     name: NDC Sydney 2026
     link: https://ndcsydney.com/agenda/lets-build-an-ai-agent-0yv8/0qm5x40a77g
-    start_date: 2026-04-22
-    end_date: 2026-04-24
+    start_date: '2026-04-22'
+    end_date: '2026-04-24'
     location: Sydney, Australia
+    type: conference
   talks:
-    - title: "Let's build an AI agent"
-
-- event:
+    - title: Let's build an AI agent
+- id: devfest-adelaide-2025
+  event:
     name: DevFest Adelaide 2025
     link: https://gdg.community.dev/events/details/google-gdg-adelaide-presents-gdg-adelaide-devfest-2025/
-    start_date: 2025-11-26
-    end_date: 2025-11-26
+    start_date: '2025-11-26'
+    end_date: '2025-11-26'
     location: Adelaide, Australia
+    type: meetup
   talks:
-    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
-
-- event:
+    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
+- id: devfest-auckland-2025
+  event:
     name: DevFest Auckland 2025
     link: https://devfest.gdgauckland.nz/
-    start_date: 2025-11-09
-    end_date: 2025-11-09
+    start_date: '2025-11-09'
+    end_date: '2025-11-09'
     location: Auckland, New Zealand
+    type: conference
   talks:
-    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
-
-- event:
+    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
+- id: gdg-melbourne-10-2025
+  event:
     name: GDG Melbourne
     link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-melbourne-oct-meetup/
-    start_date: 2025-10-29
-    end_date: 2025-10-29
+    start_date: '2025-10-29'
+    end_date: '2025-10-29'
     location: Melbourne, Australia
+    type: meetup
   talks:
-    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
-
-- event:
+    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
+- id: devfest-brisbane-2025
+  event:
     name: DevFest Brisbane 2025
     link: https://devfest-brisbane-2025.sessionize.com/
-    start_date: 2025-10-25
-    end_date: 2025-10-25
+    start_date: '2025-10-25'
+    end_date: '2025-10-25'
     location: Brisbane, Australia
+    type: conference
   talks:
-    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
+    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
       video: https://www.youtube.com/watch?v=iDN35uSma9c
-
-- event:
-    name: "AI for the rest of us 2025"
+- id: ai-for-the-rest-of-us-2025
+  event:
+    name: AI for the rest of us 2025
     link: https://aifortherestofus.live/london-2025/
-    start_date: 2025-10-15
-    end_date: 2025-10-16
+    start_date: '2025-10-15'
+    end_date: '2025-10-16'
     location: London, UK
+    type: conference
   talks:
-    - title: "From 0 to Agent in 20 minutes"
+    - title: From 0 to Agent in 20 minutes
       video: https://www.youtube.com/watch?v=ns5VHvN3F7k&t=254s
-
-- event:
+- id: jsmonthly-london-2025
+  event:
     name: JSMonthly London
     link: https://guild.host/events/jsmonthly-october-event-wb2qo7
-    start_date: 2025-10-14
-    end_date: 2025-10-14
+    start_date: '2025-10-14'
+    end_date: '2025-10-14'
     location: London, UK
+    type: meetup
   talks:
-    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
+    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
       video: https://youtu.be/S5HGHL2WFiE?t=1262
-
-- event:
-    name: "CascadiaJS 2025"
+- id: cascadiajs-2025
+  event:
+    name: CascadiaJS 2025
     link: https://cascadiajs.com/2025
-    start_date: 2025-09-18
-    end_date: 2025-09-19
+    start_date: '2025-09-18'
+    end_date: '2025-09-19'
     location: Seattle, USA
+    type: conference
   talks:
-    - title: "A built-in browser-based babelfish"
+    - title: A built-in browser-based babelfish
       video: https://www.youtube.com/watch?v=bZGoFTzPiKw
-
-- event:
-    name: "AI-Driven Development Day"
+- id: ai-driven-development-day-2025
+  event:
+    name: AI-Driven Development Day
     link: https://aidd.io/ai-driven-development-day
-    start_date: 2025-09-10
-    end_date: 2025-09-10
+    start_date: '2025-09-10'
+    end_date: '2025-09-10'
     location: Online
+    type: conference
   talks:
-    - title: "Build the tools your agents need"
-
-- event:
+    - title: Build the tools your agents need
+- id: melbjs-09-2025
+  event:
     name: MelbJS
     link: https://melbjs.com/
-    start_date: 2025-09-10
-    end_date: 2025-09-10
+    start_date: '2025-09-10'
+    end_date: '2025-09-10'
     location: Melbourne, Australia
+    type: meetup
   talks:
-    - title: "Practical Web AI: Built-in, Browser Based, Brilliant"
-
-- event:
-    name: "GDG Melbourne"
+    - title: 'Practical Web AI: Built-in, Browser Based, Brilliant'
+- id: gdg-melbourne-08-2025
+  event:
+    name: GDG Melbourne
     link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-melbourne-august-meetup-3/
-    start_date: 2025-08-27
+    start_date: '2025-08-27'
     location: Melbourne, Australia
+    type: meetup
   talks:
-    - title: "Let's build an AI agent"
-
-- event:
-    name: "GDG on Campus Monash University"
-    link: https://gdg.community.dev/events/details/google-gdg-on-campus-monash-university-melbourne-australia-presents-build-with-ai-build-agents-with-gemini/
-    start_date: 2025-08-21
+    - title: Let's build an AI agent
+- id: gdg-on-campus-monash-university-2025
+  event:
+    name: GDG on Campus Monash University
+    link: >-
+      https://gdg.community.dev/events/details/google-gdg-on-campus-monash-university-melbourne-australia-presents-build-with-ai-build-agents-with-gemini/
+    start_date: '2025-08-21'
     location: Melbourne, Australia
+    type: meetup
   talks:
-    - title: "Build with AI: Build Agents with Gemini"
-
-- event:
+    - title: 'Build with AI: Build Agents with Gemini'
+- id: agentcon-2025-perth-2025
+  event:
     name: AgentCon 2025 Perth
     link: https://globalai.community/chapters/perth/events/agentcon-2025-perth/
-    start_date: 2025-06-20
+    start_date: '2025-06-20'
     location: Perth, Australia
+    type: conference
   talks:
-    - title: "Live Coding an AI agent"
-
-- event:
+    - title: Live Coding an AI agent
+- id: jsnation-2025
+  event:
     name: JSNation
     link: https://jsnation.com/
-    start_date: 2025-06-12
-    end_date: 2025-06-16
+    start_date: '2025-06-12'
+    end_date: '2025-06-16'
     location: Amsterdam, The Netherlands
+    type: conference
   talks:
-    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
+    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
       video: https://gitnation.com/contents/the-built-in-browser-based-babelfish
-
-- event:
+- id: frontend-nation-2025
+  event:
     name: Frontend Nation
     link: https://frontendnation.com/
-    start_date: 2025-06-03
-    end_date: 2025-06-05
+    start_date: '2025-06-03'
+    end_date: '2025-06-05'
     location: Online
+    type: conference
   talks:
-    - title: "The Built-in Browser-Based Babelfish"
+    - title: The Built-in Browser-Based Babelfish
       video: https://www.youtube.com/watch?v=ofBMdw2MYgY
-
-- event:
-    name: "./NEW"
+- id: new-2025
+  event:
+    name: ./NEW
     link: https://slashnew.tech/
-    start_date: 2025-05-28
-    end_date: 2025-05-29
+    start_date: '2025-05-28'
+    end_date: '2025-05-29'
     location: Newcastle, Australia
+    type: conference
   talks:
-    - title: "Let's build an AI agent"
-
-- event:
-    name: "NDC Oslo"
+    - title: Let's build an AI agent
+- id: ndc-oslo-2025
+  event:
+    name: NDC Oslo
     link: https://ndcoslo.com/speakers/phil-nash
-    start_date: 2025-05-19
-    end_date: 2025-05-23
+    start_date: '2025-05-19'
+    end_date: '2025-05-23'
     location: Oslo, Norway
+    type: conference
   talks:
-    - title: "Build with generative AI in JavaScript"
-    - title: "Let's build an AI agent"
+    - title: Build with generative AI in JavaScript
+    - title: Let's build an AI agent
       video: https://www.youtube.com/watch?v=fjJyr75dWhs
-
-- event:
-    name: "Twilio SIGNAL"
+- id: twilio-signal-2025
+  event:
+    name: Twilio SIGNAL
     link: https://signal.twilio.com/2025/session/3022551/building-genai-email-agents-with-twilio-sendgrid-langflow
-    start_date: 2025-05-14
-    end_date: 2025-05-15
+    start_date: '2025-05-14'
+    end_date: '2025-05-15'
     location: San Francisco, USA
+    type: conference
   talks:
-    - title: "Building GenAI email agents with Twilio SendGrid & Langflow"
-
-- event:
-    name: "NDC Melbourne"
+    - title: Building GenAI email agents with Twilio SendGrid & Langflow
+- id: ndc-melbourne-2025
+  event:
+    name: NDC Melbourne
     link: https://ndcmelbourne.com/speakers/phil-nash/eb969d10f9a6
-    start_date: 2025-04-29
-    end_date: 2025-05-01
+    start_date: '2025-04-29'
+    end_date: '2025-05-01'
     location: Melbourne, Australia
+    type: conference
   talks:
-    - title: "Build with generative AI in JavaScript"
-    - title: "How to work with generative AI in JavaScript"
+    - title: Build with generative AI in JavaScript
+    - title: How to work with generative AI in JavaScript
       video: https://www.youtube.com/watch?v=XhdOFJX6byM
       slides: https://philnash.github.io/talks/how-to-genai/
-
-- event:
-    name: "GDG Melbourne (Cloud)"
-    link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-buildwithai-gdg-melbourne-cloud-march-meetup/
-    start_date: 2025-03-26
+- id: gdg-melbourne-cloud-2025
+  event:
+    name: GDG Melbourne (Cloud)
+    link: >-
+      https://gdg.community.dev/events/details/google-gdg-melbourne-presents-buildwithai-gdg-melbourne-cloud-march-meetup/
+    start_date: '2025-03-26'
     location: Melbourne, Australia
+    type: meetup
   talks:
-    - title: "Build RAG from Scratch"
+    - title: Build RAG from Scratch
       slides: https://philnash.github.io/talks/build-rag-from-scratch/
-
-- event:
-    name: "GDSC Melbourne"
-    link: https://gdg.community.dev/events/details/google-gdg-on-campus-university-of-melbourne-melbourne-australia-presents-building-agents-with-gemini-gdsc-melbourne-x-swinburne-collab/
-    start_date: 2025-03-25
+- id: gdsc-melbourne-2025
+  event:
+    name: GDSC Melbourne
+    link: >-
+      https://gdg.community.dev/events/details/google-gdg-on-campus-university-of-melbourne-melbourne-australia-presents-building-agents-with-gemini-gdsc-melbourne-x-swinburne-collab/
+    start_date: '2025-03-25'
     location: Melbourne, Australia
+    type: meetup
   talks:
-    - title: "Building Agents with Gemini"
-
-- event:
-    name: "Programmable Sydney"
+    - title: Building Agents with Gemini
+- id: programmable-sydney-2025
+  event:
+    name: Programmable Sydney
     link: https://www.programmable.tech/
-    start_date: 2025-03-20
+    start_date: '2025-03-20'
     location: Sydney, Australia
+    type: conference
   talks:
-    - title: "Build RAG from Scratch"
+    - title: Build RAG from Scratch
       slides: https://philnash.github.io/talks/build-rag-from-scratch/
-
-- event:
-    name: "Programmable Melbourne"
+- id: programmable-melbourne-2025
+  event:
+    name: Programmable Melbourne
     link: https://www.programmable.tech/
-    start_date: 2025-03-18
+    start_date: '2025-03-18'
     location: Melbourne, Australia
+    type: conference
   talks:
-    - title: "Build RAG from Scratch"
+    - title: Build RAG from Scratch
       slides: https://philnash.github.io/talks/build-rag-from-scratch/
       video: https://www.youtube.com/watch?v=4Xj0yskOPnc
-
-- event:
-    name: "NDC London"
+- id: ndc-london-2025
+  event:
+    name: NDC London
     link: https://ndclondon.com/
-    start_date: 2025-01-29
-    end_date: 2025-01-31
+    start_date: '2025-01-29'
+    end_date: '2025-01-31'
     location: London, UK
+    type: conference
   talks:
-    - title: "Build RAG from Scratch"
+    - title: Build RAG from Scratch
       slides: https://philnash.github.io/talks/build-rag-from-scratch/
       video: https://www.youtube.com/watch?v=cwxH9cxW-wQ
-
-- event:
-    name: "Web Directions: Dev Summit"
+- id: web-directions-dev-summit-2024
+  event:
+    name: 'Web Directions: Dev Summit'
     link: https://webdirections.org/dev-summit/speakers/phil-nash.php
-    start_date: 2024-11-27
-    end_date: 2024-11-28
+    start_date: '2024-11-27'
+    end_date: '2024-11-28'
     location: Sydney, Australia
+    type: conference
   talks:
-    - title: "How to work with generative AI in JavaScript"
+    - title: How to work with generative AI in JavaScript
       slides: https://philnash.github.io/talks/how-to-genai/
-
-- event:
-    name: "DDD Perth"
+- id: ddd-perth-2024
+  event:
+    name: DDD Perth
     link: https://dddperth.com/agenda/2024/talk/717983
-    start_date: 2024-11-16
+    start_date: '2024-11-16'
     location: Perth, Australia
+    type: conference
   talks:
-    - title: "How to work with generative AI in JavaScript"
+    - title: How to work with generative AI in JavaScript
       slides: https://philnash.github.io/talks/how-to-genai/
-
-- event:
-    name: "JSNation US"
+- id: jsnation-us-2024
+  event:
+    name: JSNation US
     link: https://jsnation.us/
-    start_date: 2024-11-18
-    end_date: 2024-11-21
+    start_date: '2024-11-18'
+    end_date: '2024-11-21'
     location: New York City, USA and online
+    type: conference
   talks:
-    - title: "Build RAG from Scratch"
+    - title: Build RAG from Scratch
       slides: https://philnash.github.io/talks/build-rag-from-scratch/
-
-- event:
-    name: "XtremeJS 2024"
+- id: xtremejs-2024
+  event:
+    name: XtremeJS 2024
     link: https://xtremejs.dev/2024
-    start_date: 2024-11-12
+    start_date: '2024-11-12'
     location: online
+    type: conference
   talks:
-    - title: "Total ReDoS: The Dangers of regex in JavaScript"
+    - title: 'Total ReDoS: The Dangers of regex in JavaScript'
       video: https://www.youtube.com/watch?v=AMm1u3xgiHw
       slides: https://docs.google.com/presentation/d/1e1bIAUUyRkaCwN98GmHuqoe5zLjm6bxXJyuWCzmscXM/edit?usp=sharing
-
-- event:
-    name: "NDC Porto"
+- id: ndc-porto-2024
+  event:
+    name: NDC Porto
     link: https://ndcporto.com/speakers/phil-nash
-    start_date: 2024-10-16
-    end_date: 2024-10-18
+    start_date: '2024-10-16'
+    end_date: '2024-10-18'
     location: Porto, Portugal
+    type: conference
   talks:
-    - title: "Build RAG from Scratch"
+    - title: Build RAG from Scratch
       slides: https://philnash.github.io/talks/build-rag-from-scratch/
       video: https://www.youtube.com/watch?v=wkvGcbsZmPo
-
-- event:
+- id: gdg-cloud-melbourne-2024
+  event:
     name: GDG Cloud Melbourne
-    link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-cloud-melbourne-hands-on-workshop-devfest-2024-special/
-    start_date: 2024-09-30
+    link: >-
+      https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-cloud-melbourne-hands-on-workshop-devfest-2024-special/
+    start_date: '2024-09-30'
     location: Melbourne, Australia
+    type: meetup
   talks:
     - title: Build a RAG-based bot with Gemini and Astra DB
-
-- event:
+- id: replay-2024
+  event:
     name: Replay
     link: https://replay2024.sched.com/speaker/phil_nash.278h9go6
-    start_date: 2024-09-18
-    end_date: 2024-09-20
+    start_date: '2024-09-18'
+    end_date: '2024-09-20'
     location: Seattle, USA
+    type: conference
   talks:
-    - title: "Durable RAG: productionising generative AI workflows"
+    - title: 'Durable RAG: productionising generative AI workflows'
       video: https://www.youtube.com/watch?v=idopNteBjgg
-
-- event:
+- id: melbjs-09-2024
+  event:
     name: MelbJS
     link: https://melbjs.com/
-    start_date: 2024-09-11
+    start_date: '2024-09-11'
     location: Melbourne, Australia
+    type: meetup
   talks:
-    - title: "How to Work with Generative AI in JavaScript"
+    - title: How to Work with Generative AI in JavaScript
       slides: https://philnash.github.io/talks/how-to-genai/
-
-- event:
-    name: "Copenhagen Developers Festival"
+- id: copenhagen-developers-festival-2024
+  event:
+    name: Copenhagen Developers Festival
     link: https://cphdevfest.com/
-    start_date: 2024-08-26
-    end_date: 2024-08-30
+    start_date: '2024-08-26'
+    end_date: '2024-08-30'
     location: Copenhagen, Denmark
+    type: conference
   talks:
-    - title: "Total ReDoS: the dangers of regex in JavaScript"
+    - title: 'Total ReDoS: the dangers of regex in JavaScript'
       video: https://www.youtube.com/watch?v=4_BlI_kNulY
-
-- event:
-    name: "We Are Developers World Congress"
+- id: we-are-developers-world-congress-2024
+  event:
+    name: We Are Developers World Congress
     link: https://www.wearedevelopers.com/world-congress/
-    start_date: 2024-07-17
-    end_date: 2024-07-19
+    start_date: '2024-07-17'
+    end_date: '2024-07-19'
     location: Berlin, Germany
+    type: conference
   talks:
-    - title: "Build RAG from Scratch"
+    - title: Build RAG from Scratch
       slides: https://philnash.github.io/talks/build-rag-from-scratch/
-
-- event:
-    name: "Google I/O Extended Brisbane 2024"
+- id: google-io-extended-brisbane-2024
+  event:
+    name: Google I/O Extended Brisbane 2024
     link: https://google-io-extended-brisbane-2024.sessionize.com/
-    start_date: 2024-07-13
+    start_date: '2024-07-13'
     location: Brisbane, Australia
+    type: conference
   talks:
-    - title: "How to work with generative AI in JavaScript"
+    - title: How to work with generative AI in JavaScript
       slides: https://philnash.github.io/talks/how-to-genai/
       video: https://www.youtube.com/watch?v=T4IB5pPg5j0
-
-- event:
-    name: "AI Engineer World's Fair"
+- id: ai-engineer-worlds-fair-2024
+  event:
+    name: AI Engineer World's Fair
     link: https://www.ai.engineer/worldsfair
-    start_date: 2024-06-25
-    end_date: 2024-06-27
+    start_date: '2024-06-25'
+    end_date: '2024-06-27'
     location: San Francisco, USA
+    type: conference
   talks:
-    - title: "ColBERT at scale with RAGStack"
+    - title: ColBERT at scale with RAGStack
       slides: https://docs.google.com/presentation/d/1LAPKtHiPEHDeC6b6_6FmqnMK3RpGwOstUpppyHsNK6w/edit?usp=sharing
-
-- event:
-    name: "Web Directions: Code"
+- id: web-directions-code-2024
+  event:
+    name: 'Web Directions: Code'
     link: https://webdirections.org/code/speakers/phil-nash.php
-    start_date: 2024-06-20
-    end_date: 2024-06-21
+    start_date: '2024-06-20'
+    end_date: '2024-06-21'
     location: Melbourne, Australia
+    type: conference 
   talks:
-    - title: "Upgrading JavaScript's collections"
+    - title: Upgrading JavaScript's collections
       slides: https://philnash.github.io/talks/upgrading-javascripts-collections/
-
-- event:
+- id: react-summit-2024
+  event:
     name: React Summit
     link: https://reactsummit.com/
-    start_date: 2024-06-14
-    end_date: 2024-06-18
+    start_date: '2024-06-14'
+    end_date: '2024-06-18'
     location: Amsterdam, The Netherlands
+    type: conference
   roles:
     - MC
-
-- event:
+- id: jsnation-2024
+  event:
     name: JSNation
     link: https://jsnation.com/
-    start_date: 2024-06-13
-    end_date: 2024-06-17
+    start_date: '2024-06-13'
+    end_date: '2024-06-17'
     location: Amsterdam, The Netherlands
+    type: conference
   talks:
-    - title: "Conquering Complexity: Refactoring JavaScript Projects"
+    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
       slides: https://philnash.github.io/talks/conquering-complexity/
       video: https://gitnation.com/contents/conquering-complexity-refactoring-javascript-projects
   roles:
     - MC
-
-- event:
+- id: international-javascript-conference-san-diego-2024
+  event:
     name: International JavaScript Conference San Diego
     link: https://javascript-conference.com/speaker/nashphil/
-    start_date: 2024-05-21
-    end_date: 2024-05-22
+    start_date: '2024-05-21'
+    end_date: '2024-05-22'
     location: San Diego, California, USA
+    type: conference
   talks:
-    - title: "Conquering Complexity: Refactoring JavaScript Projects"
+    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
       slides: https://docs.google.com/presentation/d/1bgsBjkUsTUK50oGGxHH_H0wazfnxc_IcJwSIVwy27NM/edit?usp=sharing
-    - title: "Total ReDoS: the Dangers of Regex in JavaScript"
+    - title: 'Total ReDoS: the Dangers of Regex in JavaScript'
       slides: https://docs.google.com/presentation/d/1e1bIAUUyRkaCwN98GmHuqoe5zLjm6bxXJyuWCzmscXM/edit?usp=sharing
-
-- event:
-    name: "../NEW"
+- id: new-2024
+  event:
+    name: ../NEW
     link: https://slashnew.tech/
-    start_date: 2024-05-15
-    end_date: 2024-05-16
+    start_date: '2024-05-15'
+    end_date: '2024-05-16'
     location: Newcastle, Australia
+    type: conference
   talks:
-    - title: "Conquering Complexity: Refactoring JavaScript Projects"
+    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
       slides: https://docs.google.com/presentation/d/1bgsBjkUsTUK50oGGxHH_H0wazfnxc_IcJwSIVwy27NM/edit?usp=sharing
-
-- event:
+- id: great-international-developer-summit-2024
+  event:
     name: Great International Developer Summit
     link: https://developersummit.com/speaker/phil-nash
-    start_date: 2024-04-23
-    end_date: 2024-04-26
+    start_date: '2024-04-23'
+    end_date: '2024-04-26'
     location: Bangalore, India
+    type: conference
   talks:
-    - title: "Conquering Complexity: Refactoring JavaScript Projects"
+    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
       slides: https://docs.google.com/presentation/d/1bgsBjkUsTUK50oGGxHH_H0wazfnxc_IcJwSIVwy27NM/edit?usp=sharing
       video: https://www.youtube.com/watch?v=gSe-EJOJ2nw
-    - title: "Total ReDoS: the Dangers of Regex in JavaScript"
+    - title: 'Total ReDoS: the Dangers of Regex in JavaScript'
       video: https://www.youtube.com/watch?v=3nMACGq-xvQ
       slides: https://docs.google.com/presentation/d/1e1bIAUUyRkaCwN98GmHuqoe5zLjm6bxXJyuWCzmscXM/edit?usp=sharing
-
-- event:
+- id: xtremejs-2023
+  event:
     name: XtremeJS 2023
     link: https://xtremejs.dev/2023/
-    start_date: 2024-04-09
+    start_date: '2024-04-09'
     location: Online
+    type: conference
   talks:
     - title: The top 5 JavaScript issues in all our codebases
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
       video: https://www.youtube.com/watch?v=5mZGsO_dG8o
-
-- event:
+- id: programmable-sydney-2024
+  event:
     name: Programmable Sydney
     link: https://www.programmable.tech/
-    start_date: 2024-03-21
+    start_date: '2024-03-21'
     location: Sydney, Australia
+    type: conference
   talks:
-    - title: "Conquering Complexity: Refactoring JavaScript Projects"
+    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
       slides: https://philnash.github.io/talks/conquering-complexity/
-
-- event:
+- id: programmable-melbourne-2024
+  event:
     name: Programmable Melbourne
     link: https://www.programmable.tech/
-    start_date: 2024-03-19
+    start_date: '2024-03-19'
     location: Melbourne, Australia
+    type: conference
   talks:
-    - title: "Conquering Complexity: Refactoring JavaScript Projects"
+    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
       slides: https://philnash.github.io/talks/conquering-complexity/
       video: https://www.youtube.com/watch?v=DpDIMICWdoQ
-
-- event:
+- id: devworld-2024
+  event:
     name: DevWorld
     link: https://devworldconference.com/jsworld-conference
-    start_date: 2024-02-29
-    end_date: 2024-03-01
+    start_date: '2024-02-29'
+    end_date: '2024-03-01'
     location: Amsterdam, The Netherlands
+    type: conference
   talks:
     - title: CSS Between the Pages
       slides: https://philnash.github.io/talks/css-between-the-pages/
       video: https://www.youtube.com/watch?v=_uQbAURmKk0
-
-- event:
+- id: developerweek-2024
+  event:
     name: DeveloperWeek
-    link: https://developerweek2024.sched.com/event/1WhHr/pro-talk-the-top-5-javascript-issues-in-all-our-codebases?iframe=no
-    start_date: 2024-02-21
-    end_date: 2024-02-23
+    link: >-
+      https://developerweek2024.sched.com/event/1WhHr/pro-talk-the-top-5-javascript-issues-in-all-our-codebases?iframe=no
+    start_date: '2024-02-21'
+    end_date: '2024-02-23'
     location: Oakland, California, USA
+    type: conference
   talks:
     - title: The top 5 JavaScript issues in all our codebases
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
-
-- event:
+- id: ndc-sydney-2024
+  event:
     name: NDC Sydney
     link: https://ndcsydney.com/speakers/phil-nash
-    start_date: 2024-02-14
-    end_date: 2024-02-16
+    start_date: '2024-02-14'
+    end_date: '2024-02-16'
     location: Sydney, Australia
+    type: conference
   talks:
-    - title: "Conquering complexity: refactoring JavaScript projects"
+    - title: 'Conquering complexity: refactoring JavaScript projects'
       slides: https://philnash.github.io/talks/conquering-complexity/
-
-- event:
+- id: singapore-computer-society-2024
+  event:
     name: Singapore Computer Society
     link: https://www.scs.org.sg/events/details/what-is-clean-code-and-why-does-it-matter
-    start_date: 2024-02-02
+    start_date: '2024-02-02'
     location: Online
+    type: meetup
   talks:
     - title: What is clean code and why does it matter?
-
-- event:
+- id: angular-melbourne-2023
+  event:
     name: Angular Melbourne
     link: https://www.meetup.com/angular-melbourne/events/297244000/
-    start_date: 2023-12-07
+    start_date: '2023-12-07'
     location: Melbourne, Australia
+    type: meetup
   talks:
     - title: CSS Between the Pages
       slides: https://philnash.github.io/talks/css-between-the-pages/
-
-- event:
+- id: halfstack-on-the-shoreditch-london-2023
+  event:
     name: HalfStack on the Shore(ditch) (London)
     link: https://halfstackconf.com/london#phil-nash
-    start_date: 2023-11-15
+    start_date: '2023-11-15'
     location: London, UK
+    type: conference
   talks:
     - title: CSS Between the Pages
       slides: https://philnash.github.io/talks/css-between-the-pages/
       video: https://www.youtube.com/watch?v=i1KOQKKRO3I
-
-- event:
+- id: oredev-2023
+  event:
     name: Øredev
     link: https://oredev.org/line-up/phil-nash
-    start_date: 2023-11-08
-    end_date: 2023-11-10
+    start_date: '2023-11-08'
+    end_date: '2023-11-10'
     location: Malmö, Sweden
+    type: conference
   talks:
     - title: The state of passwordless auth on the web
       slides: https://philnash.github.io/talks/state-of-passwordless/
@@ -509,137 +567,150 @@
     - title: The top 5 JavaScript issues in all our codebases
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
       video: https://www.youtube.com/watch?v=TqLItoNo7HM&list=PLOUKmSqExtAH0k42evc9j3fiqfgHu00Cf&index=10
-
-- event:
+- id: web-directions-summit-2023
+  event:
     name: Web Directions Summit
     link: https://webdirections.org/summit/speakers/phil-nash.php
-    start_date: 2023-10-26
-    end_date: 2023-10-27
+    start_date: '2023-10-26'
+    end_date: '2023-10-27'
     location: Sydney, Australia
+    type: conference
   talks:
     - title: CSS Between the Pages
       slides: https://philnash.github.io/talks/css-between-the-pages/
-
-- event:
+- id: ndc-porto-2023
+  event:
     name: NDC Porto
-    start_date: 2023-10-18
-    end_date: 2023-10-20
+    start_date: '2023-10-18'
+    end_date: '2023-10-20'
     location: Porto, Portugal
     link: https://ndcporto.com/speakers/phil-nash
+    type: conference
   talks:
     - title: The state of passwordless auth on the web
       slides: https://philnash.github.io/talks/state-of-passwordless/
       video: https://www.youtube.com/watch?v=Bue0JAinNJg
-
-- event:
+- id: all-things-open-2023
+  event:
     name: All Things Open
     link: https://2023.allthingsopen.org/speakers/phil-nash/
-    start_date: 2023-10-15
-    end_date: 2023-10-17
+    start_date: '2023-10-15'
+    end_date: '2023-10-17'
     location: Raleigh, North Carolina, USA
+    type: conference
   talks:
-    - title: "Total ReDoS: the dangers of regex in JavaScript"
+    - title: 'Total ReDoS: the dangers of regex in JavaScript'
     - title: The State of Passwordless Auth on the Web
       video: https://www.youtube.com/watch?v=wyzZWwb3IxU
       slides: https://philnash.github.io/talks/state-of-passwordless/
-
-- event:
+- id: libertyjs-2023
+  event:
     name: LibertyJS
     link: https://libertyjs.com/
-    start_date: 2023-10-12
-    end_date: 2023-10-13
+    start_date: '2023-10-12'
+    end_date: '2023-10-13'
     location: Philadelphia, Pennsylvania, USA
+    type: conference
   talks:
     - title: CSS Between the Pages
       slides: https://philnash.github.io/talks/css-between-the-pages/
-
-- event:
+- id: gdg-melbourne-devfest-2023
+  event:
     name: GDG Melbourne DevFest
     link: https://gdg-melbourne-devfest-2023.sessionize.com/
-    start_date: 2023-10-07
+    start_date: '2023-10-07'
     location: Melbourne, Australia
+    type: conference
   talks:
     - title: The top 5 JavaScript issues in all our codebases
       video: https://www.youtube.com/watch?v=6EjwsepZ1RA
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
-
-- event:
+- id: melbjs-08-2023
+  event:
     name: MelbJS
     link: https://melbjs.com/
-    start_date: 2023-08-09
+    start_date: '2023-08-09'
     location: Melbourne, Australia
+    type: meetup
   talks:
     - title: The top 5 JavaScript issues in all our codebases
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
-
-- event:
+- id: we-are-developers-world-congress-2023
+  event:
     name: We Are Developers World Congress
     link: https://www.wearedevelopers.com/world-congress/
-    start_date: 2023-07-27
-    end_date: 2023-07-28
+    start_date: '2023-07-27'
+    end_date: '2023-07-28'
     location: Berlin, Germany
+    type: conference
   talks:
     - title: 4 Steps from JavaScript to TypeScript
       slides: https://philnash.github.io/talks/four-steps-from-javascript-to-typescript/
-
-- event:
+- id: devbcn-2023
+  event:
     name: DevBcn
     link: https://www.devbcn.com/speaker/3b179d77-02a0-4d36-8cf2-eb969d10f9a6
-    start_date: 2023-07-03
-    end_date: 2023-07-05
+    start_date: '2023-07-03'
+    end_date: '2023-07-05'
     location: Barcelona, Spain
+    type: conference
   talks:
     - title: The top 5 JavaScript issues in all our codebases
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
-
-- event:
+- id: devtalks-2023
+  event:
     name: DevTalks
     link: https://www.devtalks.ro/speakers/182-phil-nash
-    start_date: 2023-06-21
-    end_date: 2023-06-22
+    start_date: '2023-06-21'
+    end_date: '2023-06-22'
     location: Bucharest, Romania
+    type: conference
   talks:
     - title: The top 5 JavaScript issues in all our codebases
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
-
-- event:
-    name: "Web Directions: Code"
+- id: web-directions-code-2023
+  event:
+    name: 'Web Directions: Code'
     link: https://webdirections.org/code/speakers/phil-nash.php
-    start_date: 2023-06-08
-    end_date: 2023-06-09
+    start_date: '2023-06-08'
+    end_date: '2023-06-09'
     location: Melbourne, Australia
+    type: conference
   talks:
     - title: The top 5 JavaScript issues in all our codebases
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
-
-- event:
+- id: jsnation-2023
+  event:
     name: JSNation
     link: https://jsnation.com/
-    start_date: 2023-06-01
-    end_date: 2023-06-05
+    start_date: '2023-06-01'
+    end_date: '2023-06-05'
     location: Amsterdam, The Netherlands and online
+    type: conference
   talks:
     - title: The State of Passwordless Auth on the Web
       video: https://gitnation.com/contents/the-state-of-passwordless-auth-on-the-web
       slides: https://philnash.github.io/talks/state-of-passwordless/
-
-- event:
+- id: cityjs-athens-2023
+  event:
     name: CityJS Athens
     link: https://greece.cityjsconf.org/
-    start_date: 2023-05-29
-    end_date: 2023-05-31
+    start_date: '2023-05-29'
+    end_date: '2023-05-31'
     location: Athens, Greece
+    type: conference
   talks:
     - title: The top 5 JavaScript issues in all our codebases
       video: https://www.youtube.com/watch?v=ZV-nm3gGgzQ&t=220s
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
-
-- event:
+- id: ndc-oslo-2023
+  event:
     name: NDC Oslo
     link: https://ndcoslo.com/speakers/phil-nash
-    start_date: 2023-05-24
-    end_date: 2023-05-26
+    start_date: '2023-05-24'
+    end_date: '2023-05-26'
     location: Oslo, Norway
+    type: conference
   talks:
     - title: The top 5 JavaScript issues in all our codebases
       video: https://www.youtube.com/watch?v=IGl-P4SHo2E
@@ -647,781 +718,864 @@
     - title: The state of passwordless auth on the web
       video: https://www.youtube.com/watch?v=qYH1NNmF2hk
       slides: https://philnash.github.io/talks/state-of-passwordless/
-
-- event:
+- id: jsconf-india-pre-event-virtual-meetup-2023
+  event:
     name: JSConf India pre-event virtual meetup
     link: https://lu.ma/jsconf-india-online-preevent-meetup
-    start_date: 2023-05-18
+    start_date: '2023-05-18'
     location: Online
+    type: meetup
   talks:
     - title: The state of passwordless auth on the web
       video: https://youtu.be/eY2lmQ8o3EI?t=3005
       slides: https://philnash.github.io/talks/state-of-passwordless/
-
-- event:
+- id: global-typescript-summit-2023
+  event:
     name: Global TypeScript Summit
     link: https://events.geekle.us/typescript/
-    start_date: 2023-05-09
-    end_date: 2023-05-10
+    start_date: '2023-05-09'
+    end_date: '2023-05-10'
     location: Online
+    type: conference
   talks:
     - title: The top 5 TypeScript issues in all our codebases
       video: https://youtu.be/ET6Ue5L2oPY?t=999
-
-- event:
+- id: jsday-2023
+  event:
     name: jsDay
     link: https://2023.jsday.it/talks_speakers/#Phil%20Nash
-    start_date: 2023-04-13
-    end_date: 2023-04-14
+    start_date: '2023-04-13'
+    end_date: '2023-04-14'
     location: Verona, Italy
+    type: conference
   talks:
     - title: The top 5 JavaScript issues in all our codebases
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
-
-- event:
+- id: programmable-sydney-2023
+  event:
     name: Programmable Sydney
     link: https://www.programmable.tech/
-    start_date: 2023-03-30
+    start_date: '2023-03-30'
     location: Sydney, Australia
+    type: conference
   talks:
     - title: The state of passwordless auth on the web
       slides: https://philnash.github.io/talks/state-of-passwordless/
-
-- event:
+- id: programmable-melbourne-2023
+  event:
     name: Programmable Melbourne
     link: https://www.programmable.tech/
-    start_date: 2023-03-28
+    start_date: '2023-03-28'
     location: Melbourne, Australia
+    type: conference
   talks:
     - title: The state of passwordless auth on the web
       video: https://www.youtube.com/watch?v=n_DmQPGjovg
       slides: https://philnash.github.io/talks/state-of-passwordless/
-
-- event:
-    name: "Web Directions: Summit"
+- id: web-directions-summit-2022
+  event:
+    name: 'Web Directions: Summit'
     link: https://webdirections.org/summit/speakers/phil-nash.php
-    start_date: 2022-12-01
-    end_date: 2022-12-02
+    start_date: '2022-12-01'
+    end_date: '2022-12-02'
     location: Sydney, Australia
+    type: conference
   talks:
     - title: The state of passwordless auth on the web
       slides: https://philnash.github.io/talks/state-of-passwordless/
-
-- event:
+- id: ndc-sydney-2022
+  event:
     name: NDC Sydney
     link: https://ndcsydney.com/agenda/the-state-of-passwordless-auth-on-the-web-05ns/059jcntqxlz
-    start_date: 2022-10-12
-    end_date: 2022-10-14
+    start_date: '2022-10-12'
+    end_date: '2022-10-14'
     location: Sydney, Australia
+    type: conference
   talks:
     - title: The state of passwordless auth on the web
       slides: https://philnash.github.io/talks/state-of-passwordless/
-
-- event:
+- id: ddd-perth-2022
+  event:
     name: DDD Perth
     link: https://dddperth.com/agenda?sessionId=23846d72-9902-4e32-9077-e48e1587e399
-    start_date: 2022-09-10
-    end_date: 2022-09-10
+    start_date: '2022-09-10'
+    end_date: '2022-09-10'
     location: Perth, Australia
+    type: conference
   talks:
     - title: Secrets of the credential management APIs
       video: https://www.youtube.com/watch?v=YjFzm3V6nSg
-
-- event:
+- id: fenders-perth-2022
+  event:
     name: Fenders Perth
     link: https://www.meetup.com/front-end-web-developers-perth/events/287602602/
-    start_date: 2022-09-07
-    end_date: 2022-09-07
+    start_date: '2022-09-07'
+    end_date: '2022-09-07'
     location: Perth, Australia
+    type: meetup
   talks:
     - title: Secrets of the Credential Management APIs
-
-- event:
+- id: melbjs-2022
+  event:
     name: MelbJS
     link: http://melbjs.com/
-    start_date: 2022-08-10
+    start_date: '2022-08-10'
     location: Melbourne, Australia
+    type: meetup
   talks:
     - title: Secrets of the Credential Management APIs
-
-- event:
+- id: cityjs-singapore-2022
+  event:
     name: CityJS Singapore
     link: https://singapore.cityjsconf.org/
-    start_date: 2022-07-29
+    start_date: '2022-07-29'
     location: Singapore
+    type: conference
   talks:
     - title: You're on mute! WebRTC and our lives on screen
       video: https://youtu.be/UiANV3uqT04?t=24712
-
-- event:
-    name: "NDC Melbourne"
+- id: ndc-melbourne-2022
+  event:
+    name: NDC Melbourne
     link: https://ndcmelbourne.com/speakers/phil-nash
-    start_date: 2022-06-20
-    end_date: 2022-06-24
+    start_date: '2022-06-20'
+    end_date: '2022-06-24'
     location: Melbourne, Australia
+    type: conference
   talks:
     - title: Web APIs for delightful two factor auth experiences
       video: https://www.youtube.com/watch?v=ASs3_FUx2GE
     - title: JavaScript apps go Int(ernationa)l
-
-- event:
+- id: apidays-interface-2022
+  event:
     name: Apidays Interface
     link: https://www.apidays.global/interface/
-    start_date: 2022-06-08
-    end_date: 2022-06-10
+    start_date: '2022-06-08'
+    end_date: '2022-06-10'
     location: Online
+    type: conference
   talks:
     - title: Supporting 10 million developers
       video: https://www.youtube.com/watch?v=EkqvCNrGEMI&list=PLmEaqnTJ40OpAzxsc82Hgn1gFCDe8R8W9&index=24
-
-- event:
-    name: "Apidays Singapore"
+- id: apidays-singapore-2022
+  event:
+    name: Apidays Singapore
     link: https://www.apidays.global/singapore/
-    start_date: 2022-04-20
-    end_date: 2022-04-21
+    start_date: '2022-04-20'
+    end_date: '2022-04-21'
     location: Online
+    type: conference
   talks:
     - title: The communications toolkit every developer needs
       video: https://www.youtube.com/watch?v=mEJXtD1UQ38&list=PLmEaqnTJ40Oq9U2hxgCT2Z9oYGBOxeLFa&index=13
-
-- event:
+- id: brisjs-2022
+  event:
     name: BrisJS
     link: https://www.meetup.com/brisjs/events/nvkmpsydcgbgb/
-    start_date: 2022-04-11
+    start_date: '2022-04-11'
     location: Online
+    type: meetup
   talks:
     - title: Web APIs for delightful two factor auth experiences
       video: https://www.youtube.com/watch?v=ZfORg_tY-ds&t=797s
-
-- event:
+- id: quantum-information-technology-convention-2022
+  event:
     name: Quantum Information Technology Convention
     link: https://www.facebook.com/qitcxu/posts/pfbid0Q2qWpuT5oZNav6JzS1qjtLfNQWvqJ7zT61CC9ri9BCKKKEun9agJstfuEtU4SmBml
-    start_date: 2022-04-02
+    start_date: '2022-04-02'
     location: Online
+    type: conference
   talks:
     - title: Navigating the new normal with the power of the web
-
-- event:
-    name: "js.la"
+- id: jsla-2022
+  event:
+    name: js.la
     link: https://js.la/
-    start_date: 2022-02-24
+    start_date: '2022-02-24'
     location: Online
+    type: meetup
   talks:
     - title: Web APIs for delightful two factor auth experiences
       video: https://www.youtube.com/watch?v=uM8r5mqYpy0
-
-- event:
-    name: "Voxxed Days Sydney"
+- id: voxxed-days-sydney-2022
+  event:
+    name: Voxxed Days Sydney
     link: https://australia.voxxeddays.com/speakers
-    start_date: 2022-02-17
+    start_date: '2022-02-17'
     location: Sydney, Australia
+    type: conference
   talks:
     - title: 4 Steps from JavaScript to TypeScript
-
-- event:
-    name: "Voxxed Days Melbourne"
+- id: voxxed-days-melbourne-2022
+  event:
+    name: Voxxed Days Melbourne
     link: https://australia.voxxeddays.com/speakers
-    start_date: 2022-02-15
+    start_date: '2022-02-15'
     location: Melbourne, Australia
+    type: conference
   talks:
     - title: 4 Steps from JavaScript to TypeScript
-
-- event:
-    name: "Web Directions: Safe"
+- id: web-directions-safe-2021
+  event:
+    name: 'Web Directions: Safe'
     link: https://webdirections.org/safe21/speakers/phil-nash.php
-    start_date: 2021-12-03
-    end_date: 2021-12-10
+    start_date: '2021-12-03'
+    end_date: '2021-12-10'
     location: Online
+    type: conference
   talks:
-    - title: "Auth on the web: better experiences"
-
-- event:
+    - title: 'Auth on the web: better experiences'
+- id: ndc-sydney-2021
+  event:
     name: NDC Sydney
     link: https://ndcsydney.com/
-    start_date: 2021-11-05
+    start_date: '2021-11-05'
     location: Online
+    type: conference
   talks:
     - title: You're on mute! WebRTC and our lives on screen
       video: https://www.youtube.com/watch?v=yHebbLd5avI
-
-- event:
+- id: devcon-2021
+  event:
     name: DevCon
     link: https://www.dev-con.ro/speakers/55-Phil+Nash
-    start_date: 2021-11-03
-    end_date: 2021-11-04
+    start_date: '2021-11-03'
+    end_date: '2021-11-04'
     location: Online
+    type: conference
   talks:
     - title: You're on mute! WebRTC and our lives on screen
-
-- event:
+- id: api-world-2021
+  event:
     name: API World
     link: https://embed.emamo.com/event/api-world-2021/s/pro-talk-api-better-api-dx-with-a-cli-orYw5W
-    start_date: 2021-10-26
-    end_date: 2021-10-28
+    start_date: '2021-10-26'
+    end_date: '2021-10-28'
     location: Online
+    type: conference
   talks:
     - title: Better API DX with a CLI
-
-- event:
+- id: twilio-signal-2021
+  event:
     name: Twilio SIGNAL
     link: https://signal.twilio.com/2021/virtual/sessions/27527/twilio-webrtc-go
-    start_date: 2021-10-20
-    end_date: 2021-10-21
+    start_date: '2021-10-20'
+    end_date: '2021-10-21'
     location: Online
+    type: conference
   talks:
     - title: Twilio WebRTC Go
       video: https://signal.twilio.com/2021/virtual/sessions/27527/twilio-webrtc-go
-
-- event:
+- id: pyconline-au-2021
+  event:
     name: PyConline AU
     link: https://2021.pycon.org.au/program/3B8SEP/
-    start_date: 2021-09-10
-    end_date: 2021-09-12
+    start_date: '2021-09-10'
+    end_date: '2021-09-12'
     location: Online
+    type: conference
   talks:
-    - title: A capital letter, a number, a special character, an emotional journey for the character, a subplot, and a twist ending
+    - title: >-
+        A capital letter, a number, a special character, an emotional journey for the character, a subplot, and a twist
+        ending
       video: https://www.youtube.com/watch?v=attJqUILij4
-
-- event:
+- id: full-stack-day-new-zealand-2021
+  event:
     name: Full Stack Day New Zealand
-    link: https://www.fullstackday.com/PhilNash.html
-    start_date: 2021-08-19
-    end_date: 2021-08-27
+    link: https://www.fullstackday.com/
+    start_date: '2021-08-19'
+    end_date: '2021-08-27'
     location: Online
+    type: conference
   talks:
     - title: JavaScript apps go Int(ernationa)l
-
-- event:
-    name: "Apidays Live Hong Kong"
+- id: apidays-live-hong-kong-2021
+  event:
+    name: Apidays Live Hong Kong
     link: https://www.apidays.global/hongkong/
-    start_date: 2021-08-25
-    end_date: 2021-08-26
+    start_date: '2021-08-25'
+    end_date: '2021-08-26'
     location: Online
+    type: conference
   talks:
     - title: Better API DX with a CLI
       video: https://www.youtube.com/watch?v=NnrIMxGFdB8&list=PLmEaqnTJ40OrND8VYk-I631D15K7V-UpQ&index=24
-
-- event:
-    name: "Web Directions: Global Scope"
+- id: web-directions-global-scope-2021
+  event:
+    name: 'Web Directions: Global Scope'
     link: https://webdirections.org/globalscope/speakers/phil-nash.php
-    start_date: 2021-08-06
-    end_date: 2021-08-13
+    start_date: '2021-08-06'
+    end_date: '2021-08-13'
     location: Online
+    type: conference
   talks:
     - title: JavaScript apps go Int(ernationa)l
-
-- event:
-    name: "NDC Melbourne"
+- id: ndc-melbourne-2021
+  event:
+    name: NDC Melbourne
     link: https://ndcmelbourne.com/agenda/4-steps-from-javascript-to-typescript/816d66198fc9
-    start_date: 2021-07-29
-    end_date: 2021-07-29
+    start_date: '2021-07-29'
+    end_date: '2021-07-29'
     location: Online
+    type: conference
   talks:
     - title: 4 Steps from JavaScript to TypeScript
       video: https://www.youtube.com/watch?v=_EjuTp81SYQ&list=PL03Lrmd9CiGdrPYT6J4VHLP1A70SBn5e4&index=8
-
-- event:
+- id: apidays-interface-2021
+  event:
     name: Apidays Interface
     link: https://www.apidays.global/interface/
-    start_date: 2021-06-30
-    end_date: 2021-07-02
+    start_date: '2021-06-30'
+    end_date: '2021-07-02'
     location: Online
+    type: conference
   talks:
     - title: Better API DX with a CLI
       video: https://www.youtube.com/watch?v=_Qe081lYQuE&list=PLmEaqnTJ40Or6xpWGCX7Z9ej40fzGcd9g&index=23
-
-- event:
+- id: gids-live-2021
+  event:
     name: GIDS Live 2021
     link: https://saltmarch.com/watch/youre-on-mute-webrtc-and-our-lives-on-screen
-    start_date: 2021-04-27
-    end_date: 2021-04-30
+    start_date: '2021-04-27'
+    end_date: '2021-04-30'
     location: Online
+    type: conference
   talks:
     - title: You're on Mute! WebRTC and our Lives on Screen
       video: https://saltmarch.com/watch/youre-on-mute-webrtc-and-our-lives-on-screen
     - title: JavaScript Apps Go Intl
       video: https://saltmarch.com/watch/javascript-apps-go-intl
-
-- event:
+- id: apidays-live-jakarta-2021
+  event:
     name: Apidays Live Jakarta
     link: https://www.apidays.global/jakarta/
-    start_date: 2021-02-24
+    start_date: '2021-02-24'
     location: Online
+    type: conference
   talks:
     - title: Better API DX with a CLI
       slides: https://speakerdeck.com/philnash/better-api-dx-with-a-cli-apidays-jakarta
       video: https://www.youtube.com/watch?v=kmGp_VfjatA&list=PLmEaqnTJ40Or4D_y4OtPPxb6zVINSBweS&index=24
-
-- event:
+- id: developerweek-2021
+  event:
     name: DeveloperWeek
     link: https://embed.emamo.com/event/developerweek-2021/r/speaker/phil-nash
-    start_date: 2021-02-15
-    end_date: 2021-02-19
+    start_date: '2021-02-15'
+    end_date: '2021-02-19'
     location: Online
+    type: conference
   talks:
     - title: 4 Steps from JavaScript to TypeScript
       slides: https://speakerdeck.com/philnash/four-steps-from-javascript-to-typescript-developer-week-2021
-
-- event:
+- id: sydcss-december-wheel-of-talks-2020
+  event:
     name: SydCSS December - Wheel of Talks
     link: https://www.meetup.com/SydCSS/events/274659980/
-    start_date: 2020-12-10
+    start_date: '2020-12-10'
     location: Online
+    type: meetup
   talks:
     - title: Chosen by the wheel
       video: https://www.youtube.com/watch?v=6xUl2IbgjLQ
-
-- event:
+- id: devfest-romania-2020
+  event:
     name: DevFest Romania
     link: https://gdg.community.dev/events/details/google-gdg-bucharest-presents-devfest-romania-2020-with-gdg/#/
-    start_date: 2020-10-17
+    start_date: '2020-10-17'
     location: Online
+    type: conference
   talks:
     - title: JavaScript for emails, are you sure?
       video: https://www.youtube.com/watch?v=eglN9S1WK3M&list=PLY08mE8p2rOG1-xlzumZI3vefkvA1MRAs&index=12
-
-- event:
+- id: ndc-sydney-2020
+  event:
     name: NDC Sydney
     link: https://ndcsydney.com/agenda/javascript-for-emails-are-you-sure-0vwj/07v1epjp0tz
-    start_date: 2020-10-12
-    end_date: 2020-10-16
+    start_date: '2020-10-12'
+    end_date: '2020-10-16'
     location: Online
+    type: conference
   talks:
     - title: JavaScript for emails, are you sure?
       video: https://www.youtube.com/watch?v=l-SCY3Hetg4&list=PL03Lrmd9CiGcBSQFKFHX_lXD66JcSyVp8&index=49
-
-- event:
+- id: apidays-live-hong-kong-2020
+  event:
     name: Apidays Live Hong Kong
     link: https://www.apidays.co/hongkong/
-    start_date: 2020-10-08
-    end_date: 2020-10-08
+    start_date: '2020-10-08'
+    end_date: '2020-10-08'
     location: Online
+    type: conference
   talks:
     - title: The trouble with webhooks
       video: https://www.youtube.com/watch?v=BzuwvN1D3-w&list=PLmEaqnTJ40OopeQY8swTurSDCic0g6cOT&index=31&t=1s
-
-- event:
+- id: twilio-signal-2020
+  event:
     name: Twilio SIGNAL
     link: https://signal.twilio.com/sessions/XLS8fublEeqag6aE6N7X3w
-    start_date: 2020-09-30
-    end_date: 2020-10-01
+    start_date: '2020-09-30'
+    end_date: '2020-10-01'
     location: Online
+    type: conference
   talks:
     - title: Unleash the power of Twilio from the comfort of your terminal
-
-- event:
+- id: gidsweb-live-2020
+  event:
     name: GIDS.Web Live
     link: https://saltmarch.com/watch/4-steps-from-javascript-to-typescript
-    start_date: 2020-10-01
-    end_date: 2020-10-02
+    start_date: '2020-10-01'
+    end_date: '2020-10-02'
     location: Online
+    type: conference
   talks:
     - title: 4 Steps from JavaScript to TypeScript
       video: https://saltmarch.com/watch/4-steps-from-javascript-to-typescript
-
-- event:
-    name: "Web Directions: Code://Remote"
-    start_date: 2020-09-04
-    end_date: 2020-09-25
+- id: web-directions-coderemote-2020
+  event:
+    name: 'Web Directions: Code://Remote'
+    start_date: '2020-09-04'
+    end_date: '2020-09-25'
     link: https://www.webdirections.org/code/speakers/phil-nash.php
     location: Online
+    type: conference
   talks:
     - title: The Origin Trials
-
-- event:
+- id: noruko-2020
+  event:
     name: NoRuKo
-    start_date: 2020-08-21
-    end_date: 2020-08-21
+    start_date: '2020-08-21'
+    end_date: '2020-08-21'
     link: https://noruko.org/
     location: Online
+    type: conference
   talks:
     - title: Fantastic Passwords and Where to Find Them
       slides: https://speakerdeck.com/philnash/fantastic-passwords-and-where-to-find-them-at-noruko
       video: https://www.youtube.com/watch?v=SbmSlUcAezc
-
-- event:
+- id: apidays-live-singapore-2020
+  event:
     name: Apidays Live Singapore
-    start_date: 2020-08-19
-    end_date: 2020-08-20
+    start_date: '2020-08-19'
+    end_date: '2020-08-20'
     link: https://www.apidays.co/singapore/
     location: Online
+    type: conference
   talks:
     - title: The trouble with webhooks
       slides: https://speakerdeck.com/philnash/the-trouble-with-webhooks-at-apidays-singapore
       video: https://www.youtube.com/watch?v=44jbv3UmcKc&list=PLmEaqnTJ40OrWk_9mQMfbrIjoOZf3-My-&index=23
-
-- event:
-    name: "Techweek2020: Developer happiness tooling"
-    start_date: 2020-07-30
+- id: techweek2020-developer-happiness-tooling-2020
+  event:
+    name: 'Techweek2020: Developer happiness tooling'
+    start_date: '2020-07-30'
     link: https://stripe.events/developertoolingmeetup
     location: Online
+    type: meetup
   talks:
     - title: The trouble with webhooks
-
-- event:
+- id: devtalks-reimagined-2020
+  event:
     name: DevTalks Reimagined
-    start_date: 2020-06-10
-    end_date: 2020-06-12
+    start_date: '2020-06-10'
+    end_date: '2020-06-12'
     link: https://www.devtalks.ro/
     location: Online
+    type: conference
   talks:
     - title: What's going on with Project Fugu?
       slides: https://speakerdeck.com/philnash/whats-going-on-with-project-fugu-at-devtalks-reimagined
-
-- event:
+- id: wfhconf-2020
+  event:
     name: WFHConf
-    start_date: 2020-03-26
+    start_date: '2020-03-26'
     link: https://community.nearform.com/wfh-conf
     location: Online
+    type: conference
   talks:
     - title: Fantastic passwords and where to find them
       slides: https://speakerdeck.com/philnash/fantastic-passwords-and-where-to-find-them-at-wfhconf
       video: https://www.youtube.com/watch?v=SpgnaVEHpc4&feature=youtu.be
-
-- event:
+- id: melbjs-02-2020
+  event:
     name: MelbJS
-    start_date: 2020-02-12
+    start_date: '2020-02-12'
     link: http://melbjs.com/
     location: Melbourne, Australia
+    type: meetup
   talks:
     - title: What's going on with Project Fugu?
       slides: https://speakerdeck.com/philnash/whats-going-on-with-project-fugu-at-melbjs
-
-- event:
+- id: melbourne-css-02-2020
+  event:
     name: Melbourne CSS
-    start_date: 2020-02-05
+    start_date: '2020-02-05'
     link: https://www.meetup.com/Melbourne-CSS/events/268280784/
     location: Melbourne, Australia
+    type: meetup
   talks:
     - title: 7 things you didn't know about <input>
       slides: https://speakerdeck.com/philnash/7-things-you-didnt-know-about
       video: https://www.youtube.com/watch?v=cp_bUUODk0E
-
-- event:
+- id: stripe-developer-meetup-2019
+  event:
     name: Stripe Developer Meetup
-    start_date: 2019-11-27
+    start_date: '2019-11-27'
     link: https://stripe.events/devmeetup-melbourne-nov2019
     location: Melbourne, Australia
+    type: meetup
   talks:
     - title: The trouble with webhooks
       video: https://www.youtube.com/watch?v=3_zjCbfJG3c
-
-- event:
+- id: devfest-melbourne-2019
+  event:
     name: DevFest Melbourne
-    start_date: 2019-11-09
+    start_date: '2019-11-09'
     link: https://yowconference.com/melbournedevfest/
     location: Melbourne, Australia
+    type: conference
   talks:
     - title: What's going on with Project Fugu?
       slides: https://speakerdeck.com/philnash/whats-going-on-with-project-fugu-at-devfest-melbourne
       video: https://www.youtube.com/watch?v=3v9DYMvoXu4&list=PLGaWx2vWMpTUc41vQzXuQmUzx0fXHKlaE&index=17
-
-- event:
+- id: ndc-sydney-2019
+  event:
     name: NDC Sydney
-    start_date: 2019-10-14
-    end_date: 2019-10-16
+    start_date: '2019-10-14'
+    end_date: '2019-10-16'
     link: https://ndcsydney.com/
     location: Sydney, Australia
+    type: conference
   talks:
     - title: What's going on with Project Fugu?
       slides: https://speakerdeck.com/philnash/whats-going-on-with-project-fugu-at-ndc-sydney
       video: https://www.youtube.com/watch?v=xniolu3w5Ro&list=PL03Lrmd9CiGcg2_VkY3AdZs3-bR9jzu4J&index=2
-
-- event:
+- id: pycon-singapore-2019
+  event:
     name: Pycon Singapore
-    start_date: 2019-10-10
-    end_date: 2019-10-12
+    start_date: '2019-10-10'
+    end_date: '2019-10-12'
     location: Singapore
     link: https://pycon.sg/
+    type: conference
   talks:
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-at-pycon-singapore
       video: https://www.youtube.com/watch?v=CWgdwytvdL0
-
-- event:
+- id: sydney-identity--security-meetup-2019
+  event:
     name: Sydney Identity & Security meetup
-    start_date: 2019-09-19
+    start_date: '2019-09-19'
     location: Sydney, Australia
     link: https://www.meetup.com/Sydney-Identity-and-Security-Meetup/events/264180886/
+    type: meetup
   talks:
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-at-identity-and-security-meetup
-
-- event:
+- id: sydjs-2019
+  event:
     name: SydJS
-    start_date: 2019-09-18
+    start_date: '2019-09-18'
     link: http://sydjs.com/event/5d8042446ac291001ef06589?hex=BF2600
     location: Sydney, Australia
+    type: meetup
   talks:
     - title: In conversation with a browser
       slides: https://speakerdeck.com/philnash/in-conversation-with-a-browser-at-sydjs
       video: https://www.youtube.com/watch?v=Ynwk0xd-lOQ&feature=youtu.be
-
-- event:
+- id: componentsconf-2019
+  event:
     name: ComponentsConf
-    start_date: 2019-09-10
+    start_date: '2019-09-10'
     link: https://www.componentsconf.com.au/sessions-2019
     location: Melbourne, Australia
+    type: conference
   talks:
     - title: Web Sharing is Web Caring
       slides: https://speakerdeck.com/philnash/web-sharing-is-web-caring
       video: https://www.youtube.com/watch?v=ConaWyR2TXQ
-
-- event:
+- id: rubyconf-thailand-2019
+  event:
     name: RubyConf Thailand
-    start_date: 2019-09-06
-    end_date: 2019-09-07
+    start_date: '2019-09-06'
+    end_date: '2019-09-07'
     link: https://rubyconfth.com/
     location: Bangkok, Thailand
+    type: conference
   talks:
     - title: Smaller is always better
       slides: https://speakerdeck.com/philnash/smaller-is-always-better-rubyconf-thailand
       video: https://www.youtube.com/watch?v=0OeYnDNO5aI
-
-- event:
+- id: campjs-2019
+  event:
     name: CampJS
-    start_date: 2019-08-30
-    end_date: 2019-09-02
+    start_date: '2019-08-30'
+    end_date: '2019-09-02'
     link: https://x.campjs.org/
     location: Broken Bay, Australia
+    type: conference
   talks:
     - title: Web sharing is web caring
       slides: https://speakerdeck.com/philnash/web-sharing-is-web-caring
-
-- event:
+- id: twilio-signal-2019
+  event:
     name: Twilio SIGNAL
-    start_date: 2019-08-05
-    end_date: 2019-08-07
+    start_date: '2019-08-05'
+    end_date: '2019-08-07'
     location: San Francisco, USA
     link: https://signal.twilio.com/
+    type: conference
   talks:
     - title: An introduction to Twilio Video
       slides: https://speakerdeck.com/philnash/an-introduction-to-twilio-video
-
-- event:
+- id: melbjs-07-2019
+  event:
     name: MelbJS
-    start_date: 2019-07-09
+    start_date: '2019-07-09'
     location: Melbourne, Australia
     link: http://melbjs.com/
+    type: meetup
   talks:
     - title: In conversation with a browser
       slides: https://speakerdeck.com/philnash/in-conversation-with-a-browser
-
-- event:
+- id: smashingconf-toronto-2019
+  event:
     name: SmashingConf Toronto
-    start_date: 2019-06-25
-    end_date: 2019-06-26
+    start_date: '2019-06-25'
+    end_date: '2019-06-26'
     location: Toronto, Canada
     link: https://smashingconf.com/toronto-2019/
+    type: conference
   talks:
     - title: Diving into Service Workers, Live
       video: https://vimeo.com/showcase/6133041/video/349191868
-
-- event:
+- id: serverless-toronto-2019
+  event:
     name: Serverless Toronto
-    start_date: 2019-06-24
+    start_date: '2019-06-24'
     location: Toronto, Canada
     link: https://www.meetup.com/Serverless-Toronto/events/259719014/
+    type: meetup
   talks:
     - title: Serverless + Twilio
       video: https://www.youtube.com/watch?v=iQDQMQC5NTo
-
-- event:
-    name: "Web Directions: Code"
-    start_date: 2019-06-20
-    end_date: 2019-06-21
+- id: web-directions-code-2019
+  event:
+    name: 'Web Directions: Code'
+    start_date: '2019-06-20'
+    end_date: '2019-06-21'
     location: Melbourne, Australia
-    link: https://www.webdirections.org/code/speakers/phil-nash.php
+    link: https://www.webdirections.org/code/
+    type: conference
   talks:
     - title: In conversation with a browser
       slides: https://speakerdeck.com/philnash/in-conversation-with-a-browser
-
-- event:
+- id: node-sydney-2019
+  event:
     name: Node Sydney
-    start_date: 2019-06-06
+    start_date: '2019-06-06'
     location: Sydney, Australia
     link: https://www.meetup.com/node-sydney/events/262084714/
+    type: meetup
   talks:
     - title: Fantastic passwords and where to find them
       slides: https://speakerdeck.com/philnash/fantastic-passwords-and-where-to-find-them-7bd44964-81df-45e4-86e4-57ca34164af3
-
-- event:
+- id: melbjs-04-2019
+  event:
     name: MelbJS
-    start_date: 2019-04-10
+    start_date: '2019-04-10'
     location: Melbourne, Australia
     link: http://melbjs.com/
+    type: meetup
   talks:
     - title: Web Sharing is Web Caring
-
-- event:
+- id: melbourne-ruby-03-2019
+  event:
     name: Melbourne Ruby
-    start_date: 2019-03-27
+    start_date: '2019-03-27'
     location: Melbourne, Australia
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/hrznsqyzfbkc/
+    type: meetup
   talks:
     - title: Servers? Where we're going we don't need servers!
-
-- event:
+- id: devfest-melbourne-2018
+  event:
     name: DevFest Melbourne 2018
-    start_date: 2018-10-27
+    start_date: '2018-10-27'
     location: Melbourne, Australia
     link: https://www.gdgmelbourne.com/devfest-2018/
+    type: conference
   talks:
-    - title: Everything they don’t tell you about video in the browser
+    - title: Everything they don't tell you about video in the browser
       slides: https://speakerdeck.com/philnash/everything-they-dont-tell-you-about-video-in-the-browser
       video: https://www.youtube.com/watch?v=Rc-pj0hToHw&list=PLGaWx2vWMpTVqivqGmHkPFTyf6PXXtNoo&index=4
-
-- event:
+- id: roro-sydney-10-2018
+  event:
     name: RORO Sydney
-    start_date: 2018-10-09
+    start_date: '2018-10-09'
     location: Sydney, Australia
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/events/rxmjspyxnbmb/
+    type: meetup
   talks:
     - title: Fantastic passwords and where to find them
       slides: https://speakerdeck.com/philnash/fantastic-passwords-and-where-to-find-them
-
-- event:
+- id: melbourne-ruby-10-2018
+  event:
     name: Melbourne Ruby
-    start_date: 2018-10-03
+    start_date: '2018-10-03'
     location: Melbourne, Australia
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/243245418/
+    type: meetup
   talks:
     - title: Fantastic passwords and where to find them
       video: https://www.youtube.com/watch?v=fu8zxwr7kNk
       slides: https://speakerdeck.com/philnash/fantastic-passwords-and-where-to-find-them
-
-- event:
+- id: ndc-sydney-2018
+  event:
     name: NDC Sydney
-    start_date: 2018-09-19
-    end_date: 2018-09-21
+    start_date: '2018-09-19'
+    end_date: '2018-09-21'
     location: Sydney, Australia
     link: https://ndcsydney.com/talk/service-workers-beyond-the-cache/
+    type: conference
   talks:
     - title: Service workers - beyond the cache
       slides: https://speakerdeck.com/philnash/service-workers-beyond-the-cache-ndc-sydney
       video: https://www.youtube.com/watch?v=65ibyDjxuwM
-
-- event:
-    name: "Web Directions: Code"
-    start_date: 2018-08-01
-    end_date: 2018-08-02
+- id: web-directions-code-2018
+  event:
+    name: 'Web Directions: Code'
+    start_date: '2018-08-01'
+    end_date: '2018-08-02'
     location: Melbourne, Australia
     link: https://www.webdirections.org/code/speakers/phil-nash.php
+    type: conference
   talks:
     - title: Aggressive Web Apps
       slides: https://speakerdeck.com/philnash/aggressive-web-apps-at-web-directions-code
-
-- event:
+- id: angular-conf-australia-2018
+  event:
     name: Angular Conf Australia
-    start_date: 2018-06-22
+    start_date: '2018-06-22'
     location: Melbourne, Australia
     link: https://www.angularconf.com.au/
+    type: conference
   talks:
     - title: Service Workers - Beyond The Cache
       slides: https://speakerdeck.com/philnash/service-workers-beyond-the-cache-angular-conf-australia
       video: https://www.youtube.com/watch?v=WqCRv6kRD9w
-
-- event:
+- id: jsconf-eu-2018
+  event:
     name: JSConf EU
-    start_date: 2018-06-02
-    end_date: 2018-06-03
+    start_date: '2018-06-02'
+    end_date: '2018-06-03'
     location: Berlin, Germany
     link: https://2018.jsconf.eu/
+    type: conference
   talks:
     - title: Aggressive Web Apps
       slides: https://speakerdeck.com/philnash/aggressive-web-apps-jsconf-eu
       video: https://www.youtube.com/watch?v=uo-UOvq3-0Y
-
-- event:
+- id: roro-sydney-05-2018
+  event:
     name: RORO Sydney
-    start_date: 2018-05-08
+    start_date: '2018-05-08'
     location: Sydney, Australia
-    link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/events/nnvkcpyxhblb/
+    link: https://www.meetup.com/Ruby-On-Rails-Ocecode-europe-2016ania-Sydney/events/nnvkcpyxhblb/
+    type: meetup
   talks:
     - title: Smaller is always better
       slides: https://speakerdeck.com/philnash/smaller-is-always-better-at-roro-sydney
-
-- event:
+- id: voxxed-days-melbourne-2018
+  event:
     name: Voxxed Days Melbourne
-    start_date: 2018-05-02
-    end_date: 2018-05-03
+    start_date: '2018-05-02'
+    end_date: '2018-05-03'
     location: Melbourne, Australia
     link: https://voxxeddays.com/melbourne/
+    type: conference
   talks:
     - title: Aggressive Web Apps
-
-- event:
+- id: melbourne-ruby-02-2018
+  event:
     name: Melbourne Ruby
-    start_date: 2018-02-28
+    start_date: '2018-02-28'
     location: Melbourne, Australia
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/mcrjmnyxdblc/
+    type: meetup
   talks:
     - title: Smaller Is Always Better
       slides: https://speakerdeck.com/philnash/smaller-is-always-better-at-roro-melb
       video: https://www.youtube.com/watch?v=mmtwp8RPPAA
-
-- event:
+- id: the-web-meetup-2018
+  event:
     name: The Web Meetup
-    start_date: 2018-02-13
+    start_date: '2018-02-13'
     location: Melbourne, Australia
     link: https://www.meetup.com/the-web/events/247201690/
+    type: meetup
   talks:
     - title: An introduction to service workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-at-the-web-meetup
       video: https://www.youtube.com/watch?v=M2mGYdnFRVU
-
-- event:
+- id: melbjs-01-2018
+  event:
     name: MelbJS
-    start_date: 2018-01-10
+    start_date: '2018-01-10'
     link: http://melbjs.com/
-    location: "Melbourne, Australia"
+    location: Melbourne, Australia
+    type: meetup
   talks:
-    - title: "Browsers behind your back"
+    - title: Browsers behind your back
       slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-melbjs
-
-- event:
-    name: "DevFest Sydney"
-    start_date: 2017-11-25
+- id: devfest-sydney-2017
+  event:
+    name: DevFest Sydney
+    start_date: '2017-11-25'
     link: http://www.devfest.org.au/
-    location: "Sydney, Australia"
+    location: Sydney, Australia
+    type: conference
   talks:
-    - title: "Aggressive Web Apps"
-
-- event:
-    name: "Web Directions: Summit"
-    start_date: 2017-11-09
-    end_date: 2017-11-10
+    - title: Aggressive Web Apps
+- id: web-directions-summit-2017
+  event:
+    name: 'Web Directions: Summit'
+    start_date: '2017-11-09'
+    end_date: '2017-11-10'
     link: http://webdirections.org/wds17/speakers/phil-nash.html
-    location: "Sydney, Australia"
+    location: Sydney, Australia
+    type: conference
   talks:
-    - title: "2FA, WTF?"
+    - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-at-web-directions-summit-2017
-
-- event:
+- id: front-end-london-2017
+  event:
     name: Front End London
-    start_date: 2017-08-31
+    start_date: '2017-08-31'
     link: http://www.frontendlondon.co.uk/
-    location: "London, UK"
+    location: London, UK
+    type: meetup
   talks:
     - title: Aggressive Web Apps
       slides: https://speakerdeck.com/philnash/aggressive-web-apps-at-front-end-london
       video: https://pusher.com/sessions/meetup/front-end-london/aggressive-web-apps
-
-- event:
+- id: campjs-2017
+  event:
     name: CampJS
-    start_date: 2017-08-04
-    end_date: 2017-08-07
+    start_date: '2017-08-04'
+    end_date: '2017-08-07'
     link: http://viii.campjs.com/
     location: Melbourne, Australia
+    type: conference
   talks:
     - title: An empty database in every pocket
-
-- event:
+- id: fullstack-2017
+  event:
     name: FullStack
-    start_date: 2017-07-12
-    end_date: 2017-07-14
+    start_date: '2017-07-12'
+    end_date: '2017-07-14'
     location: London, UK
     link: https://skillsmatter.com/conferences/8264-fullstack-2017-the-conference-on-javascript-node-and-internet-of-things
+    type: conference
   talks:
     - title: Browsers Behind Your Back
       slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-fullstackconf-2017
@@ -1432,13 +1586,14 @@
     - title: An empty database in every pocket
       slides: https://speakerdeck.com/philnash/an-empty-database-in-every-pocket-at-fullstackcon
       video: https://skillsmatter.com/skillscasts/10489-an-empty-database-in-every-pocket-beginner
-
-- event:
+- id: devoxx-poland-2017
+  event:
     name: Devoxx Poland
-    start_date: 2017-06-21
-    end_date: 2017-06-23
+    start_date: '2017-06-21'
+    end_date: '2017-06-23'
     location: Kraków, Poland
     link: http://2017.devoxx.pl/
+    type: conference
   talks:
     - title: Browsers Behind Your Back
       slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-devoxx-poland
@@ -1446,391 +1601,431 @@
     - title: An empty database in every pocket
       slides: https://speakerdeck.com/philnash/an-empty-database-in-every-pocket-at-devoxx-poland
       video: https://www.youtube.com/watch?v=_DuwZSXEwDg&index=104&list=PLH21tc7N2sw0WUoamLp4UqTlKq-_xZgMB
-
-- event:
+- id: js-poland-2017
+  event:
     name: JS Poland
-    start_date: 2017-06-19
+    start_date: '2017-06-19'
     location: Warsaw, Poland
     link: http://www.js-poland.pl/
+    type: conference
   talks:
     - title: JWT, WTF?
       slides: https://speakerdeck.com/philnash/jwt-wtf-at-js-poland
       video: https://www.youtube.com/watch?v=drocJqQlnhM
-
-- event:
+- id: devtalks-bucharest-2017
+  event:
     name: DevTalks Bucharest
     link: http://www.devtalks.ro/bucharest/
-    start_date: 2017-06-08
+    start_date: '2017-06-08'
     location: Bucharest, Romania
+    type: conference
   talks:
     - title: An empty database in every pocket
       slides: https://speakerdeck.com/philnash/an-empty-database-in-every-pocket-at-devtalks-bucharest
       video: https://www.youtube.com/watch?v=lAU3To5Zjx4
-
-- event:
+- id: codemotion-amsterdam-2017
+  event:
     name: Codemotion Amsterdam
     link: https://amsterdam2017.codemotionworld.com/
-    start_date: 2017-05-16
-    end_date: 2017-05-17
+    start_date: '2017-05-16'
+    end_date: '2017-05-17'
     location: Amsterdam, The Netherlands
+    type: conference
   talks:
     - title: JWT, WTF?
       slides: https://speakerdeck.com/philnash/jwt-wtf-at-codemotion-amsterdam
       video: https://www.youtube.com/watch?v=rYpapIOQ7f0
-
-- event:
+- id: jsday-2017
+  event:
     name: jsDay
     link: https://2017.jsday.it/
-    start_date: 2017-05-10
-    end_date: 2017-05-11
+    start_date: '2017-05-10'
+    end_date: '2017-05-11'
     location: Verona, Italy
+    type: conference
   talks:
     - title: Browsers behind your back
     - title: An empty database in every pocket
       slides: https://speakerdeck.com/philnash/an-empty-database-in-everybodys-pocket-at-jsday
-
-- event:
+- id: berlinjs-2017
+  event:
     name: BerlinJS
     link: http://jsconf.berlinjs.org/
-    start_date: 2017-05-04
+    start_date: '2017-05-04'
     location: Berlin, Germany
+    type: meetup
   talks:
     - title: Browsers behind your back
       slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-berlin-js
-
-- event:
+- id: london-javascript-2017
+  event:
     name: London JavaScript
     link: https://www.meetup.com/London-Javascript/events/238829721/
-    start_date: 2017-04-26
+    start_date: '2017-04-26'
     location: London, UK
+    type: meetup
   talks:
     - title: Browsers behind your back
       slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-london-javascript
-
-- event:
+- id: london-web-standards-2017
+  event:
     name: London Web Standards
     link: http://londonwebstandards.org/2017/03/lws-24-april-2017-lwsjtf/
-    start_date: 2017-04-24
+    start_date: '2017-04-24'
     location: London, UK
+    type: meetup
   talks:
     - title: JWT, WTF?
       slides: https://speakerdeck.com/philnash/jwt-wtf-at-london-web-standards
-
-- event:
+- id: 4developers-2017
+  event:
     name: 4Developers
     link: https://2017.4developers.org.pl/en/
-    start_date: 2017-04-03
+    start_date: '2017-04-03'
     location: Warsaw, Poland
+    type: conference
   talks:
     - title: An empty database in every pocket
       slides: https://speakerdeck.com/philnash/an-empty-database-in-everybodys-pocket-at-4developers
     - title: Browsers behind your back
       slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-4developers-2017
       video: https://www.youtube.com/watch?v=6HTQx6hLcnQ
-
-- event:
+- id: mobcon-europe-2017
+  event:
     name: MobCon Europe
     link: https://mobcon.com/mobcon-europe/
-    start_date: 2017-03-26
+    start_date: '2017-03-26'
     location: Sodia, Bulgaria
+    type: conference
   talks:
     - title: Browsers behind your back
       slides: https://speakerdeck.com/philnash/browsers-behind-your-back-at-mobcon-2017
-
-- event:
+- id: fusion-meetup-2017
+  event:
     name: Fusion Meetup
     link: https://www.eventbrite.com/e/fusion-meetup-birmingham-march-2017-tickets-32256611393#
-    start_date: 2017-03-23
+    start_date: '2017-03-23'
     location: Birmingham, UK
+    type: meetup
   talks:
     - title: Browsers behind your back
       slides: https://speakerdeck.com/philnash/browsers-behind-your-back-fusion-meetup
-
-- event:
+- id: cloudconf-2017
+  event:
     name: CloudConf
     link: http://2017.cloudconf.it/
-    start_date: 2017-03-16
+    start_date: '2017-03-16'
     location: Turin, Italy
+    type: conference
   talks:
-    - title: "WebHooks: The API Strikes Back"
+    - title: 'WebHooks: The API Strikes Back'
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-at-cloudconf-2017
       video: http://video.html.it/webhooks-the-api-strikes-back/
-
-- event:
+- id: apidays-australia-2017
+  event:
     name: Apidays Australia
     link: http://au.apidays.io/
-    start_date: 2017-02-28
-    end_date: 2017-03-01
+    start_date: '2017-02-28'
+    end_date: '2017-03-01'
     location: Sydney, Australia
+    type: conference
   talks:
-    - title: "WebHooks: The API Strikes Back"
+    - title: 'WebHooks: The API Strikes Back'
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-2
-
-- event:
+- id: javascript--nodejs-cambridge-2017
+  event:
     name: JavaScript & NodeJS Cambridge
     link: https://www.meetup.com/JavaScript-Cambridge/events/229824220/
-    start_date: 2017-01-10
+    start_date: '2017-01-10'
     location: Cambridge, UK
+    type: meetup
   talks:
     - title: An Introduction to Service Workers
-
-- event:
+- id: code-europe-warsaw-2016
+  event:
     name: Code Europe
     link: https://2016.codeeurope.pl/en
-    start_date: 2016-12-07
+    start_date: '2016-12-07'
     location: Warsaw, Poland
+    type: conference
   talks:
     - title: An introduction to Service Workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-code-europe-warsaw
-
-- event:
+- id: code-europe-krakow-2016
+  event:
     name: Code Europe
     link: https://2016.codeeurope.pl/en
-    start_date: 2016-12-05
+    start_date: '2016-12-05'
     location: Kraków, Poland
+    type: conference
   talks:
     - title: An introduction to Service Workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-code-europe-krakow
       video: https://www.youtube.com/watch?v=h7ALfHmOGJQ
-
-- event:
+- id: front-end-london-2016
+  event:
     name: Front End London
     link: http://www.frontendlondon.co.uk/
-    location: "London, UK"
-    start_date: 2016-11-24
+    location: London, UK
+    start_date: '2016-11-24'
+    type: meetup
   talks:
     - title: An empty database in everybody's pocket
       slides: https://speakerdeck.com/philnash/an-empty-database-in-everybodys-pocket-at-front-end-london
-
-- event:
+- id: gumtree-tech-talks-2016
+  event:
     name: Gumtree Tech Talks
-    start_date: 2016-11-23
-    location: "London, UK"
+    start_date: '2016-11-23'
+    location: London, UK
     link: https://www.eventbrite.co.uk/e/tech-talk-night-at-gumtree-november-session-tickets-28680795030#
+    type: meetup
   talks:
     - title: An introduction to Service Workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-gumtree-tech-talks
-
-- event:
+- id: ng-poland-2016
+  event:
     name: NG-Poland
-    start_date: 2016-11-22
+    start_date: '2016-11-22'
     location: Warsaw, Poland
     link: http://ng-poland.pl/index2016.html
+    type: conference
   talks:
     - title: An empty database in everybody's pocket
       slides: https://speakerdeck.com/philnash/an-empty-database-in-everybodys-pocket-at-ng-poland
       video: https://www.youtube.com/watch?v=bhvcTOtb6-Q&index=17&list=PLYJFRoKhU5SPvbuF3zbYozTvYwLi-VSsv
-
-- event:
+- id: topconf-tallinn-2016
+  event:
     name: Topconf Tallinn
     location: Tallinn, Estonia
-    start_date: 2016-11-15
-    end_date: 2016-11-18
+    start_date: '2016-11-15'
+    end_date: '2016-11-18'
     link: https://www.topconf.com/conference/tallinn-2016/
+    type: conference
   talks:
     - title: An empty database in everybody's pocket
       slides: https://speakerdeck.com/philnash/an-empty-database-in-everybodys-pocket
       video: https://www.youtube.com/watch?v=ALJoCCCBNfY
-
-- event:
+- id: webcamp-zagreb-2016
+  event:
     name: WebCamp Zagreb
     location: Zagreb, Croatia
     link: https://2016.webcampzg.org/
-    start_date: 2016-10-28
-    end_date: 2016-10-29
+    start_date: '2016-10-28'
+    end_date: '2016-10-29'
+    type: conference
   talks:
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-at-webcamp-zagreb
       video: https://www.youtube.com/watch?v=WipxMQjssRE
-
-- event:
+- id: codemotion-berlin-2016
+  event:
     name: Codemotion Berlin
     location: Berlin, Germany
     link: https://berlin2016.codemotionworld.com/
-    start_date: 2016-10-24
-    end_date: 2016-10-25
+    start_date: '2016-10-24'
+    end_date: '2016-10-25'
+    type: conference
   talks:
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-at-codemotion-berlin
       audio: https://voicerepublic.com/talks/2fa-wtf
-
-- event:
+- id: redevelop-2016
+  event:
     name: re:develop
     location: Bournemouth, UK
     link: https://redevelop.io/
-    start_date: 2016-10-14
+    start_date: '2016-10-14'
+    type: conference
   talks:
     - title: An introduction to service workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-redevelop-2016
       video: https://vimeo.com/191150697
-
-- event:
+- id: digital-croydon-2016
+  event:
     name: Digital Croydon
     location: Croydon, UK
     link: http://digitalcroydon.net/event/
-    start_date: 2016-10-13
+    start_date: '2016-10-13'
+    type: meetup
   talks:
     - title: An introduction to service workers
       video: https://www.youtube.com/watch?v=16pN1IXLe3k
-
-- event:
+- id: gdg-devfest-london-2016
+  event:
     name: GDG DevFest London 2016
     location: London, UK
     link: https://devfest-london-2016.firebaseapp.com/
-    start_date: 2016-10-08
+    start_date: '2016-10-08'
+    type: conference
   talks:
     - title: Thinking Offline
       slides: https://speakerdeck.com/philnash/thinking-offline-at-gdg-devfest-london
-
-- event:
+- id: rails-remote-2016
+  event:
     name: Rails Remote
     location: Online
     link: https://devchat.tv/conferences/rails-remote-conf-2016
-    start_date: 2016-10-12
-    end_date: 2016-10-14
+    start_date: '2016-10-12'
+    end_date: '2016-10-14'
+    type: conference
   talks:
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-at-rails-remote-2016
       video: https://devchat.tv/conference-talks/2fa-wtf
-
-- event:
+- id: twilio-signal-london-2016
+  event:
     name: Twilio SIGNAL London
     location: London, UK
     link: https://signal.twilio.com/2016/london
-    start_date: 2016-09-20
+    start_date: '2016-09-20'
+    type: conference
   roles:
     - Track MC
-
-- event:
+- id: devday-2016
+  event:
     name: DevDay
     location: Kraków, Poland
     link: http://devday.pl
-    start_date: 2016-09-14
-    end_date: 2016-09-16
+    start_date: '2016-09-14'
+    end_date: '2016-09-16'
+    type: conference
   talks:
     - title: An introduction to service workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-devday-2016
       video: https://www.youtube.com/watch?v=M6ghEfp76JQ
-
-- event:
+- id: refresh-2016
+  event:
     name: Refresh
     location: Tallinn, Estonia
     link: http://2016.refresh.rocks/
-    start_date: 2016-09-09
+    start_date: '2016-09-09'
+    type: conference
   talks:
     - title: An introduction to service workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-refresh-2016
       video: https://www.youtube.com/watch?v=9d8RzvW-C4w&list=PLzClMJDCN301MbMXlN8yu0BbzSGGZ4VAS&index=9
-
-- event:
+- id: frontend-conference-zurich-2016
+  event:
     name: Frontend Conference Zurich
     location: Zürich, Switzerland
     link: https://2016.frontendconf.ch/
-    start_date: 2016-08-31
-    end_date: 2016-09-01
+    start_date: '2016-08-31'
+    end_date: '2016-09-01'
+    type: conference
   talks:
     - title: Thinking offline
       slides: https://speakerdeck.com/philnash/thinking-offline-at-frontend-conference-zurich?#
       video: https://vimeo.com/181110923?#
-
-- event:
+- id: electromagnetic-field-2016
+  event:
     name: Electromagnetic Field
     location: Guildford, UK
     link: https://www.emfcamp.org
-    start_date: 2016-08-05
-    end_date: 2016-08-07
+    start_date: '2016-08-05'
+    end_date: '2016-08-07'
+    type: conference
   talks:
     - title: 2FA, WTF?
       video: https://www.youtube.com/watch?v=MGKSFi81F8Q
-
-- event:
+- id: deskbeers-tech-talks-2016
+  event:
     name: DeskBeers Tech Talks
     location: London, UK
     link: https://www.youtube.com/watch?v=av9gja0dayc
-    start_date: 2016-08-03
+    start_date: '2016-08-03'
+    type: meetup
   talks:
     - title: Beer Near Here
       video: https://www.youtube.com/watch?v=av9gja0dayc
-
-- event:
+- id: london-web-standards-2016
+  event:
     name: London Web Standards
     link: https://getinvited.to/webstandards/lws-18-july-2016-practice/
-    start_date: 2016-07-25
+    start_date: '2016-07-25'
     location: London, UK
+    type: meetup
   talks:
     - title: Thinking offline
-
-- event:
+- id: fullstack-2016
+  event:
     name: FullStack
     link: https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things
-    start_date: 2016-07-13
-    end_date: 2016-07-15
+    start_date: '2016-07-13'
+    end_date: '2016-07-15'
     location: London, UK
+    type: conference
   talks:
     - title: An introduction to Service Workers
       video: https://skillsmatter.com/skillscasts/8155-an-introduction-to-service-workers
     - title: Thinking offline
       video: https://skillsmatter.com/skillscasts/8154-thinking-offline
-
-- event:
-    name: "AngularZone Meetup #1"
+- id: angularzone-meetup-1-2016
+  event:
+    name: 'AngularZone Meetup #1'
     link: https://www.meetup.com/AngularZone/events/232087779/
-    start_date: 2016-07-11
+    start_date: '2016-07-11'
     location: London, UK
+    type: meetup
   talks:
     - title: An introduction to Service Workers
-
-- event:
-    name: "Bots: The State of the Conversation"
+- id: bots-the-state-of-the-conversation-2016
+  event:
+    name: 'Bots: The State of the Conversation'
     link: http://learn.converse.ai/botevent
-    start_date: 2016-07-04
-    end_date: 2016-07-05
+    start_date: '2016-07-04'
+    end_date: '2016-07-05'
     location: London, UK
+    type: conference
   talks:
     - title: Multi Platform Challenges
-
-- event:
+- id: bristol-js-2016
+  event:
     name: Bristol JS
     link: https://www.meetup.com/BristolJS/events/229602378/
-    start_date: 2016-06-29
+    start_date: '2016-06-29'
     location: Bristol, UK
+    type: meetup
   talks:
     - title: An Introduction to Service Workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-1
-
-- event:
+- id: js-oxford-2016
+  event:
     name: JS Oxford
     link: https://jsoxford.com/2016-06-15-moar-javascript/
-    start_date: 2016-06-15
+    start_date: '2016-06-15'
     location: Oxford, UK
+    type: meetup
   talks:
     - title: An Introduction to Service Workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-1
-
-- event:
+- id: london-ajax-2016
+  event:
     name: London Ajax
     link: https://www.meetup.com/halfstack/events/230566847/
-    start_date: 2016-06-14
+    start_date: '2016-06-14'
     location: London, UK
+    type: meetup
   talks:
     - title: An Introduction to Service Workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-1
-
-- event:
+- id: twilio-signal-2016
+  event:
     name: Twilio SIGNAL
     link: https://signal.twilio.com/2016/sf
-    start_date: 2016-05-24
-    end_date: 2016-05-25
+    start_date: '2016-05-24'
+    end_date: '2016-05-25'
     location: San Francisco, USA
+    type: conference
   roles:
     - Track MC
-
-- event:
+- id: codemotion-amsterdam-2016
+  event:
     name: Codemotion Amsterdam
     link: https://amsterdam2016.codemotionworld.com/
-    start_date: 2016-05-11
-    end_date: 2016-05-12
+    start_date: '2016-05-11'
+    end_date: '2016-05-12'
     location: Amsterdam, The Netherlands
+    type: conference
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-codemotion-amsterdam
@@ -1838,93 +2033,102 @@
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-april-2016
       video: https://www.youtube.com/watch?v=07SKJ1V0Vak
-
-- event:
+- id: js-monthly-2016
+  event:
     name: JS Monthly
     link: https://www.meetup.com/js-monthly/events/230071594/
-    start_date: 2016-04-26
+    start_date: '2016-04-26'
     location: London, UK
+    type: meetup
   talks:
     - title: An Introduction to Service Workers
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers
       video: https://pusher.com/sessions/meetup/js-monthly-london/introduction-to-service-workers
-
-- event:
+- id: progscon-2016
+  event:
     name: ProgSCon
     link: http://2016.progscon.co.uk/
-    start_date: 2016-04-22
+    start_date: '2016-04-22'
     location: London, UK
+    type: conference
   talks:
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-april-2016
       video: https://www.infoq.com/presentations/two-factor-authentication
-
-- event:
+- id: webitfestival-2016
+  event:
     name: WEBIT.FESTIVAL
     link: http://www.webit.bg/2016/
-    start_date: 2016-04-19
-    end_date: 2016-04-20
+    start_date: '2016-04-19'
+    end_date: '2016-04-20'
     location: Sofia, Bulgaria
+    type: conference
   talks:
     - title: Building applications like Lego
       video: https://www.youtube.com/watch?v=qBOGxArhe8k
-
-- event:
+- id: techinsight-2016
+  event:
     name: TECH.insight
     link: http://www.techinsight.io/event/london-april-2016/
-    start_date: 2016-04-14
+    start_date: '2016-04-14'
     location: London, UK
+    type: meetup
   talks:
     - title: Making video chat a feature
       slides: https://speakerdeck.com/philnash/making-video-chat-a-feature
-
-- event:
+- id: wolves-summit-2016
+  event:
     name: Wolves Summit
     link: https://www.wolvessummit.com/en
-    start_date: 2016-04-12
-    end_date: 2016-04-13
+    start_date: '2016-04-12'
+    end_date: '2016-04-13'
     location: Warsaw, Poland
+    type: conference
   talks:
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-april-2016
-
-- event:
+- id: 4developers-2016
+  event:
     name: 4Developers
     link: http://2016.4developers.org.pl/en/
-    start_date: 2016-04-11
+    start_date: '2016-04-11'
     location: Warsaw, Poland
+    type: conference
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-4developers
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-april-2016
-
-- event:
+- id: ukgovhack-2016
+  event:
     name: UKGovHack
     link: http://2016.ukgovhack.com/
-    start_date: 2016-04-02
-    end_date: 2016-04-03
+    start_date: '2016-04-02'
+    end_date: '2016-04-03'
     location: London, UK
+    type: hackathon
   talks:
     - title: Communication of the future
-
-- event:
+- id: bath-ruby-2016
+  event:
     name: Bath Ruby
     link: https://2016.bathruby.uk/
-    start_date: 2016-03-11
+    start_date: '2016-03-11'
     location: Bath, UK
+    type: conference
   talks:
     - title: Build more gems
       slides: https://speakerdeck.com/philnash/build-more-gems
   roles:
     - MC
-
-- event:
+- id: topconf-linz-2016
+  event:
     name: Topconf Linz
     link: https://www.topconf.com/conference/linz-2016/
-    start_date: 2016-02-02
-    end_date: 2016-02-03
+    start_date: '2016-02-02'
+    end_date: '2016-02-03'
     location: Linz, Austria
+    type: conference
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-topconf-linz
@@ -1932,58 +2136,64 @@
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-topconf-linz-2016
       video: https://www.youtube.com/watch?v=0N5rRFJaMD0
-
-- event:
+- id: london-node-user-group-2016
+  event:
     name: London Node User Group
     location: London, UK
-    start_date: 2016-01-27
+    start_date: '2016-01-27'
     link: http://lnug.org/
+    type: meetup
   talks:
     - title: 2FA, WTF?
       video: https://www.youtube.com/watch?v=Wuc4Nh3lmSE
       slides: https://speakerdeck.com/philnash/2fa-wtf-lnug-january-2016
-
-- event:
+- id: rails-israel-2015
+  event:
     name: Rails Israel
     location: Tel Aviv, Israel
-    start_date: 2015-11-24
+    start_date: '2015-11-24'
     link: https://railsisrael2015.events.co.il/home
+    type: conference
   talks:
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-rails-israel-2015
       video: https://www.youtube.com/watch?v=AdjckChsjvI
-
-- event:
+- id: topconf-tallinn-2015
+  event:
     name: Topconf Tallinn
     link: http://topconf.com/tallinn-2016/
-    start_date: 2015-11-16
-    end_date: 2015-11-17
+    start_date: '2015-11-16'
+    end_date: '2015-11-17'
     location: Tallinn, Estonia
+    type: conference
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-topconf-tallinn
       video: https://www.youtube.com/watch?v=ZbDd41AG9SA
-
-- event:
+- id: oredev-2015
+  event:
     name: Øredev
     link: http://oredev.org/2015
     location: Malmö, Sweden
-    start_date: 2015-11-03
-    end_date: 2015-11-06
+    start_date: '2015-11-03'
+    end_date: '2015-11-06'
+    type: conference
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-oredev-2015
       video: https://vimeo.com/144982360
     - title: WhatRTC? Everything you need to know to connect browsers to the world.
-      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-oredev-2015
+      slides: >-
+        https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-oredev-2015
       video: https://vimeo.com/144682164
-
-- event:
+- id: fullstack-2015
+  event:
     name: FullStack
     link: https://skillsmatter.com/conferences/6612-fullstack
     location: London, UK
-    start_date: 2015-10-26
-    end_date: 2015-10-28
+    start_date: '2015-10-26'
+    end_date: '2015-10-28'
+    type: conference
   talks:
     - title: 2FA, WTF?
       slides: https://speakerdeck.com/philnash/2fa-wtf-fullstackcon-2015
@@ -1991,361 +2201,405 @@
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-fullstackcon-2015
       video: https://speakerdeck.com/philnash/the-web-is-getting-pushy-fullstackcon-2015
-
-- event:
+- id: digital-croydon-2015
+  event:
     name: Digital Croydon
     link: http://digitalcroydon.net/event/
-    start_date: 2015-10-15
+    start_date: '2015-10-15'
     location: Croydon, UK
+    type: meetup
   talks:
     - title: WhatRTC? Everything you need to know to connect browsers to the world.
-      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-upfront-mini-2015
-
-- event:
+      slides: >-
+        https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-upfront-mini-2015
+- id: upfront-mini-2015
+  event:
     name: UpFront Mini
     link: http://2015.upfrontconf.com/mini/
-    start_date: 2015-10-06
+    start_date: '2015-10-06'
     location: Manchester, UK
+    type: conference
   talks:
     - title: WhatRTC? Everything you need to know to connect browsers to the world.
-      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-upfront-mini-2015
-
-- event:
+      slides: >-
+        https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-upfront-mini-2015
+- id: arrrrcamp-2015
+  event:
     name: ArrrrCamp
     link: http://2015.arrrrcamp.be/
-    start_date: 2015-10-01
-    end_date: 2015-10-02
+    start_date: '2015-10-01'
+    end_date: '2015-10-02'
     location: Ghent, Belgium
+    type: conference
   roles:
     - MC
-
-- event:
+- id: london-js-2015
+  event:
     name: London JS
-    start_date: 2015-09-21
+    start_date: '2015-09-21'
     location: London, UK
+    type: meetup
   talks:
-    - title: "Data: online and off"
+    - title: 'Data: online and off'
       slides: https://speakerdeck.com/philnash/data-online-and-off
-
-- event:
+- id: state-of-the-browser-2015
+  event:
     name: State of the Browser
-    start_date: 2015-09-12
+    start_date: '2015-09-12'
     location: London, UK
     link: http://sotb2015.wpengine.com/
+    type: conference
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-state-of-the-browser-5
-
-- event:
+- id: leedstechhub-2015
+  event:
     name: LeedsTechHub
-    start_date: 2015-07-23
+    start_date: '2015-07-23'
     location: Leeds, UK
     link: https://www.meetup.com/Leeds-TechHub/events/223602008/
+    type: meetup
   talks:
-    - title: "WebHooks: The API Strikes Back"
+    - title: 'WebHooks: The API Strikes Back'
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-1
-
-- event:
+- id: async-2015
+  event:
     name: Async
-    start_date: 2015-07-09
+    start_date: '2015-07-09'
     location: Brighton, UK
     link: https://asyncjs.com/webrtc-and-push-notifications/
+    type: meetup
   talks:
     - title: WhatRTC? Everything you need to know to connect browsers to the world
-      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-front-trends-2015
+      slides: >-
+        https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-front-trends-2015
       video: https://vimeo.com/134323927
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-at-the-frontend-2015
-
-- event:
+- id: polyconf-2015
+  event:
     name: PolyConf
-    start_date: 2015-07-02
-    end_date: 2015-07-04
+    start_date: '2015-07-02'
+    end_date: '2015-07-04'
     location: Poznań, Poland
     link: https://15.polyconf.com/
+    type: conference
   talks:
-    - title: "Webhooks - The API strikes back"
+    - title: Webhooks - The API strikes back
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-1
-
-- event:
+- id: infoshare-2015
+  event:
     name: InfoShare
-    start_date: 2015-06-11
-    end_date: 2015-06-12
+    start_date: '2015-06-11'
+    end_date: '2015-06-12'
     location: Gdańsk, Poland
     link: https://infoshare.pl/history/agenda.html?year=2015
+    type: conference
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-at-the-frontend-2015
-
-- event:
+- id: you-gotta-love-frontend-2015
+  event:
     name: You Gotta Love Frontend
     link: http://2015.yougottalovefrontend.com/
-    start_date: 2015-06-08
-    end_date: 2015-06-09
+    start_date: '2015-06-08'
+    end_date: '2015-06-09'
     location: Tel Aviv, Israel
+    type: conference
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-at-the-frontend-2015
-
-- event:
+- id: front-endgineers-london-2015
+  event:
     name: Front Endgineers London
     link: https://www.meetup.com/Front-Endgineers-London/events/222643072/
-    start_date: 2015-06-02
+    start_date: '2015-06-02'
     location: London, UK
+    type: meetup
   talks:
     - title: WhatRTC? Everything you need to know to connect browsers to the world
-
-- event:
+- id: at-the-frontend-2015
+  event:
     name: At The Frontend
     link: http://lanyrd.com/2015/atthefrontend/
-    start_date: 2015-05-27
+    start_date: '2015-05-27'
     location: Copenhagen, Denmark
+    type: conference
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy-at-the-frontend-2015
-
-- event:
+- id: copenhagen-frontenders-2015
+  event:
     name: Copenhagen Frontenders
-    start_date: 2015-05-26
+    start_date: '2015-05-26'
     location: Copenhagen, Denmark
     link: https://www.meetup.com/cphfront/events/222040789/
+    type: meetup
   talks:
     - title: WhatRTC? Everything you need to know to connect browsers to the world
-
-- event:
+- id: jsconf-budapest-2015
+  event:
     name: JSConf Budapest
     link: http://2015.jsconfbp.com/
-    start_date: 2015-05-14
-    end_date: 2015-05-15
+    start_date: '2015-05-14'
+    end_date: '2015-05-15'
     location: Budapest, Hungary
+    type: conference
   talks:
     - title: The web is getting pushy
       slides: https://speakerdeck.com/philnash/the-web-is-getting-pushy
       video: https://youtu.be/4-WnlHhqcjU?list=PLFZ5NyC0xHDaaTy6tY9p0C0jd_rRRl5Zm
-
-- event:
+- id: front-trends-2015
+  event:
     name: Front-Trends
     link: https://2015.front-trends.com/
-    start_date: 2015-05-06
-    end_date: 2015-05-08
+    start_date: '2015-05-06'
+    end_date: '2015-05-08'
     location: Warsaw, Poland
+    type: conference
   talks:
     - title: WhatRTC? Connecting browsers to the world
-      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-front-trends-2015
+      slides: >-
+        https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-front-trends-2015
       video: https://www.youtube.com/watch?v=xknuSzGywP8
-
-- event:
+- id: front-end-london-2015
+  event:
     name: Front End London
     link: http://www.frontendlondon.co.uk/
-    start_date: 2015-04-30
+    start_date: '2015-04-30'
     location: London, UK
+    type: meetup
   talks:
     - title: The web is getting pushy
-
-- event:
+- id: 4developers-2015
+  event:
     name: 4Developers
     link: http://2015.4developers.org.pl/en/
-    start_date: 2015-04-20
+    start_date: '2015-04-20'
     location: Warsaw, Poland
+    type: conference
   talks:
     - title: WhatRTC? Everything you need to know to connect browsers to the world
-      slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-4developers-2015
-
-- event:
+      slides: >-
+        https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world-4developers-2015
+- id: londonapi-2015
+  event:
     name: LondonAPI
     link: https://www.meetup.com/London-API-Group/events/220647309/
-    start_date: 2015-03-23
+    start_date: '2015-03-23'
     location: London, UK
+    type: meetup
   talks:
     - title: Webhooks - The API strikes back
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back
-
-- event:
+- id: cloudconf-2015
+  event:
     name: CloudConf
     link: https://2015.cloudconf.it/
-    start_date: 2015-03-19
+    start_date: '2015-03-19'
     location: Turin, Italy
+    type: conference
   talks:
     - title: WhatRTC? Everything you need to know about modern web communications
       slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-about-modern-web-communications-1
-
-- event:
+- id: bath-ruby-2015
+  event:
     name: Bath Ruby
     link: https://2015.bathruby.uk/
-    start_date: 2015-03-13
+    start_date: '2015-03-13'
     location: Bath, UK
+    type: conference
   roles:
     - MC
-
-- event:
+- id: mobile-central-europe-2015
+  event:
     name: Mobile Central Europe
     link: https://2015.mceconf.com/
-    start_date: 2015-02-04
-    end_date: 2015-02-06
+    start_date: '2015-02-04'
+    end_date: '2015-02-06'
     location: Warsaw, Poland
+    type: conference
   talks:
     - title: WhatRTC? Everything you need to know about modern web communications
       video: https://youtu.be/brrabnxamGk
       slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-about-modern-web-communications
-
-- event:
+- id: mk-geek-night-2014
+  event:
     name: MK Geek Night
     link: https://mkgeeknight.co.uk/
-    start_date: 2014-12-11
+    start_date: '2014-12-11'
     location: Milton Keynes
+    type: meetup
   talks:
     - title: WhatRTC? Everything you need to know to connect browsers to the world
       slides: https://speakerdeck.com/philnash/whatrtc-everything-you-need-to-know-to-connect-browsers-to-the-world
-
-- event:
+- id: front-end-london-2014
+  event:
     name: Front End London
     link: http://www.frontendlondon.co.uk/
-    start_date: 2014-11-27
+    start_date: '2014-11-27'
     location: London, UK
+    type: meetup
   talks:
     - title: WhatRTC? Everything you need to know to connect browsers to the world
-
-- event:
+- id: future-of-web-apps-2014
+  event:
     name: Future of Web Apps
     link: http://lanyrd.com/2014/future-of-web-apps-london/
-    start_date: 2014-09-29
-    end_date: 2014-10-01
+    start_date: '2014-09-29'
+    end_date: '2014-10-01'
     location: London, UK
+    type: conference
   talks:
     - title: The Future of Web APIs
       slides: https://speakerdeck.com/philnash/the-future-of-web-apis
-
-- event:
+- id: endpoint-2014
+  event:
     name: Endpoint
     link: http://lanyrd.com/2014/endpointcon/
-    start_date: 2014-09-05
+    start_date: '2014-09-05'
     location: Amsterdam, The Netherlands
+    type: conference
   talks:
     - title: Wrapping up an API with Ruby as you go
-
-- event:
+- id: london-web-meetup-2014
+  event:
     name: London Web Meetup
     link: https://www.meetup.com/londonweb/events/pkshsyslbcc/
-    start_date: 2014-08-21
+    start_date: '2014-08-21'
     location: London, UK
+    type: meetup
   talks:
     - title: Asset Redux - Front end performance on Rails
       slides: https://speakerdeck.com/philnash/asset-redux-front-end-performance-on-rails
-
-- event:
+- id: ruby-lugdunum-2014
+  event:
     name: Ruby Lugdunum
     link: http://2014.rulu.eu/
-    start_date: 2014-06-19
-    end_date: 2014-06-20
+    start_date: '2014-06-19'
+    end_date: '2014-06-20'
     location: Lyon, France
+    type: conference
   talks:
     - title: Asset Redux - Front end performance on Rails
-
-- event:
+- id: bacon-2014
+  event:
     name: Bacon
     link: http://devslovebacon.com/
-    start_date: 2014-05-16
-    end_date: 2014-05-17
+    start_date: '2014-05-16'
+    end_date: '2014-05-17'
     location: London, UK
+    type: conference
   roles:
     - Track MC
   talks:
     - title: How to create the perfect prototype
       video: http://devslovebacon.com/conferences/bacon-2014/talks/how-to-create-the-perfect-prototype
       slides: https://speakerdeck.com/philnash/how-to-create-the-perfect-prototype
-
-- event:
+- id: arrrrcamp-2013
+  event:
     name: ArrrrCamp
     link: http://2013.arrrrcamp.be/
-    start_date: 2013-10-03
-    end_date: 2013-10-04
+    start_date: '2013-10-03'
+    end_date: '2013-10-04'
     location: Ghent, Belgium
+    type: conference
   talks:
     - title: How to create the perfect prototype
       slides: https://speakerdeck.com/philnash/how-to-create-the-perfect-prototype
       video: https://www.youtube.com/watch?v=DwP4rV2peyw
-
-- event:
+- id: campus-party-europe-2013
+  event:
     name: Campus Party Europe
     link: http://lanyrd.com/2013/cpeurope/
-    start_date: 2013-09-02
-    end_date: 2013-09-07
+    start_date: '2013-09-02'
+    end_date: '2013-09-07'
     location: London, UK
+    type: conference
   talks:
     - title: How to create the perfect prototype
-
-- event:
+- id: front-end-london-2013
+  event:
     name: Front End London
     link: http://www.frontendlondon.co.uk/
-    start_date: 2013-03-28
+    start_date: '2013-03-28'
     location: London, UK
+    type: meetup
   talks:
     - title: CSS Laid Out
-
-- event:
+- id: takeoff-2013
+  event:
     name: TakeOff
     link: http://takeoffconf.com/2013
-    start_date: 2013-01-17
-    end_date: 2013-01-18
+    start_date: '2013-01-17'
+    end_date: '2013-01-18'
     location: Lille, France
+    type: conference
   talks:
     - title: CSS Laid Out
       slides: https://speakerdeck.com/philnash/css-laid-out
-
-- event:
+- id: arrrrcamp-2012
+  event:
     name: ArrrrCamp
     link: http://2012.arrrrcamp.be/
-    start_date: 2012-10-04
-    end_date: 2012-10-05
+    start_date: '2012-10-04'
+    end_date: '2012-10-05'
     location: Ghent, Belgium
+    type: conference
   talks:
     - title: JavaScript in the next generation
       slides: https://speakerdeck.com/philnash/javascript-in-the-next-generation-1
-
-- event:
+- id: london-js-school-trip-2012
+  event:
     name: London JS School Trip
     link: http://lanyrd.com/2012/london-js-school-trip/
-    start_date: 2012-06-30
+    start_date: '2012-06-30'
     location: London, UK
-
-- event:
+    type: conference
+- id: webshaped-2012
+  event:
     name: Webshaped
     link: http://webshaped.fi/2012/
-    start_date: 2012-05-16
+    start_date: '2012-05-16'
     location: Helsinki, Finland
+    type: conference
   talks:
     - title: The browser is taking over
-
-- event:
+- id: geeky-2012
+  event:
     name: Geeky
     link: https://www.eventbrite.co.uk/e/geeky-tickets-3366293675#
-    start_date: 2012-05-14
+    start_date: '2012-05-14'
     location: London, UK
+    type: meetup
   talks:
     - title: My favourite browser
-
-- event:
+- id: bacon-2012
+  event:
     name: Bacon
     link: http://devslovebacon.com/conferences/bacon-2012/talks/html5-takes-over-the-world
-    start_date: 2012-04-20
-    end_date: 2012-04-21
+    start_date: '2012-04-20'
+    end_date: '2012-04-21'
     location: London, UK
+    type: conference
   talks:
     - title: HTML5 Takes Over the World
       video: http://devslovebacon.com/conferences/bacon-2012/talks/html5-takes-over-the-world
-
-- event:
+- id: london-js-2012
+  event:
     name: London JS
     link: https://www.eventbrite.co.uk/e/london-js-tickets-1781704125#
-    start_date: 2012-01-30
+    start_date: '2012-01-30'
     location: London, UK
+    type: meetup
   talks:
     - title: The Instagram API
-
-- event:
+- id: lrug-2011
+  event:
     name: LRUG
     link: http://lrug.org/meetings/2011/june/
-    start_date: 2011-06-13
+    start_date: '2011-06-13'
     location: London, UK
+    type: meetup
   talks:
     - title: Asset Hat
