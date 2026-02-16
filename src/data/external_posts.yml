@@ -4,8 +4,710 @@
   pubDate: 2026-01-08
   publisher: "langflow"
 
+- id: langflow-1-7-release
+  title: "Langflow 1.7 released: new Agent components, MCP Streamable HTTP, and more!"
+  link: https://www.langflow.org/blog/langflow-1-7
+  pubDate: 2025-12-22
+  publisher: "langflow"
+
+- title: "Build a Robust, Enterprise AI Agent workflow in Langflow with CUGA"
+  link: https://www.langflow.org/blog/robust-enterprise-ai-agent-workflow-langflow-cuga
+  pubDate: 2025-12-22
+  publisher: "langflow"
+  id: build-robust-enterprise-ai-agent-workflow-langflow-cuga
+
+- title: "Convert PDFs to Markdown with Docling and Langflow"
+  id: convert-pdfs-markdown-docling-langflow
+  link: https://www.langflow.org/blog/convert-pdf-to-markdown-docling-langflow
+  pubDate: 2025-11-28
+  publisher: "langflow"
+
+- title: "How we use Langflow AI workflows to gather content for the AI++ newsletter"
+  id: how-we-use-langflow-ai-workflows-gather-content-ai-newsletter
+  link: https://www.langflow.org/blog/langflow-ai-workflows-ai-newsletter
+  pubDate: 2025-11-14
+  publisher: "langflow"
+
+- title: "Build your own AI coding agent with Langflow"
+  id: build-your-own-ai-coding-agent-langflow
+  link: https://www.langflow.org/blog/ai-coding-agent-langflow
+  pubDate: 2025-11-10
+  publisher: "langflow"
+
+- title: "Compare OpenAI's AgentKit and Langflow by building an agent"
+  id: compare-openai-agentkit-langflow-building-agent
+  link: https://www.langflow.org/blog/openai-agentkit-langflow-building-an-agent
+  pubDate: 2025-10-13
+  publisher: "langflow"
+
+- title: "Build your own MCP server in Langflow"
+  id: build-your-own-mcp-server-langflow
+  link: https://www.langflow.org/blog/build-mcp-server-langflow
+  pubDate: 2025-10-10
+  publisher: "langflow"
+
+- title: "Langflow 1.6 released: OAuth for MCP, OpenAI responses API compatibility, and more!"
+  id: langflow-1-6-release
+  link: https://www.langflow.org/blog/langflow-1-6
+  pubDate: 2025-10-02
+  publisher: "langflow"
+
+- title: "Build an AI alt text generator with Langflow and Next.js"
+  id: build-ai-alt-text-generator-langflow-nextjs
+  link: https://www.langflow.org/blog/alt-text-generator-langflow-next-js
+  pubDate: 2025-08-26
+  publisher: "langflow"
+
+- title: "How to run OpenAI’s gpt-oss and GPT-5 models on Langflow"
+  id: run-openai-gpt-oss-gpt-5-langflow
+  link: https://www.langflow.org/blog/openai-gpt-oss-and-gpt-5-on-langflow
+  pubDate: 2025-08-12
+  publisher: "langflow"
+
+- title: "Build AI powered phone calls with Twilio ConversationRelay and Langflow"
+  id: build-ai-powered-phone-calls-twilio-conversationrelay-langflow
+  link: https://www.langflow.org/blog/ai-phone-calls-twilio-langflow
+  pubDate: 2025-06-10
+  publisher: "langflow"
+
+- title: "How to Stream Responses from the Langflow API in Node.js"
+  id: stream-responses-langflow-api-nodejs
+  link: https://www.langflow.org/blog/how-to-stream-responses-from-langflow-api-in-node-js
+  pubDate: 2025-05-01
+  publisher: "langflow"
+
+- title: "How to Use the Langflow API in Node.js"
+  id: use-langflow-api-nodejs
+  link: https://www.langflow.org/blog/use-langflow-api-in-node-js
+  pubDate: 2025-05-29
+  publisher: "langflow"
+
+- title: "How to Build a GenAI Bluesky Bot with Langflow, TypeScript, and Node.js"
+  id: build-genai-bluesky-bot-langflow-typescript-nodejs
+  link: https://www.langflow.org/blog/genai-bluesky-bot-with-langflow-typescript-node-js
+  pubDate: 2025-01-02
+  publisher: "langflow"
+
+- title: "Test your Twilio Webhooks with VS Code Port Forwarding"
+  id: test-twilio-webhooks-vs-code-port-forwarding
+  link: https://www.twilio.com/en-us/blog/test-twilio-webhooks-vscode-port-forwarding
+  pubDate: 2024-04-26
+  publisher: "twilio"
+
+- title: "Build Emails in React and Send Them with SendGrid"
+  id: build-emails-react-sendgrid
+  link: https://www.twilio.com/en-us/blog/build-emails-react-send-with-sendgrid
+  pubDate: 2024-03-22
+  publisher: "twilio"
+
+- title: "__dirname is back in Node.js with ES modules"
+  id: dirname-back-nodejs-es-modules
+  link: https://www.sonarsource.com/blog/dirname-node-js-es-modules/
+  pubDate: 2024-03-21
+  publisher: "sonarsource"
+
+- title: "Union, intersection, difference, and more are coming to JavaScript Sets"
+  id: union-intersection-difference-coming-javascript-sets
+  link: https://www.sonarsource.com/blog/union-intersection-difference-javascript-sets/
+  pubDate: 2024-02-15
+  publisher: "sonarsource"
+
+- title: "Write quality React code with SonarQube 10.4"
+  id: write-quality-react-code-sonarqube-10-4
+  link: https://www.sonarsource.com/blog/clean-react-code-sonarqube/
+  pubDate: 2024-02-13
+  publisher: "sonarsource"
+
+- title: "Lessons learned upgrading to React 18 in SonarQube Server"
+  id: lessons-learned-upgrading-react-18-sonarqube-server
+  link: https://www.sonarsource.com/blog/upgrading-react-18-sonarqube/
+  pubDate: 2024-01-17
+  publisher: "sonarsource"
+
+- title: "Stop nesting ternaries in JavaScript"
+  id: stop-nesting-ternaries-javascript
+  link: https://www.sonarsource.com/blog/stop-nesting-ternaries-javascript/
+  pubDate: 2023-12-07
+  publisher: "sonarsource"
+
+- title: "The hidden depths of the input element"
+  id: hidden-depths-input-element
+  link: https://www.htmhell.dev/adventcalendar/2023/8/
+  pubDate: 2023-12-08
+  publisher: "htmlhell"
+
+- title: "A comprehensive guide to the dangers of Regular Expressions in JavaScript" 
+  id: comprehensive-guide-dangers-regular-expressions-javascript
+  link: https://www.sonarsource.com/blog/vulnerable-regular-expressions-javascript/
+  pubDate: 2023-09-28
+  publisher: "sonarsource"
+
+- title: "Typing your JavaScript without writing TypeScript"
+  id: typing-javascript-without-writing-typescript
+  link: https://www.sonarsource.com/blog/typing-javascript-without-typescript/
+  pubDate: 2023-09-13
+  publisher: "sonarsource"
+
+- title: "Get the benefits of TypeScript in your JavaScript"
+  id: get-benefits-typescript-in-javascript
+  link: https://www.sonarsource.com/blog/benefits-typescript-in-your-javascript/
+  pubDate: 2023-09-07
+  publisher: "sonarsource"
+
+- title: "What is deeper SAST in JavaScript?"
+  id: what-is-deeper-sast-in-javascript
+  link: https://www.sonarsource.com/blog/deeper-sast-javascript/
+  pubDate: 2023-08-17
+  publisher: "sonarsource"
+
+- title: "Hands on with the Node.js test runner"
+  id: hands-on-nodejs-test-runner
+  link: https://www.sonarsource.com/blog/node-js-test-runner/
+  pubDate: 2023-05-30
+  publisher: "sonarsource"
+
+- title: "ES2023 introduces new array copying methods to JavaScript"
+  id: es2023-introduces-new-array-copying-methods-javascript
+  link: https://www.sonarsource.com/blog/es2023-new-array-copying-methods-javascript/
+  pubDate: 2023-05-10
+  publisher: "sonarsource"
+
+- title: "The top 5 common TypeScript issues found by SonarQube for IDE"
+  id: top-5-common-typescript-issues-found-sonarqube-for-ide
+  link: https://www.sonarsource.com/blog/the-top-5-common-typescript-issues-found-by-sonarlint/
+  pubDate: 2023-03-20
+  publisher: "sonarsource"
+
+- title: "Common TypeScript Issues Nº 1: assignments within sub-expressions"
+  id: common-typescript-issues-1-assignments-within-sub-expressions
+  link: https://www.sonarsource.com/blog/common-typescript-issues-no-1-assignments-within-sub-expressions/
+  pubDate: 2023-03-08
+  publisher: "sonarsource"
+
+- title: "Common TypeScript Issues Nº 2: non-empty statements"
+  id: common-typescript-issues-2-non-empty-statements
+  link: https://www.sonarsource.com/blog/common-typescript-issues-no-2-non-empty-statements/
+  pubDate: 2023-03-01
+  publisher: "sonarsource"
+
+- title: "Common TypeScript Issues Nº 3: unused local variables and functions"
+  id: common-typescript-issues-3-unused-local-variables-and-functions
+  link: https://www.sonarsource.com/blog/common-typescript-issues-no-3-unused-local-variables-and-functions/
+  pubDate: 2023-02-20
+  publisher: "sonarsource"
+
+- title: "Common TypeScript Issues Nº 4: Don't create and drop objects immediately"
+  id: common-typescript-issues-4-dont-create-and-drop-objects-immediately
+  link: https://www.sonarsource.com/blog/common-typescript-issues-no-4-don-t-create-and-drop-objects-immediately/
+  pubDate: 2023-02-07
+  publisher: "sonarsource"
+
+- title: "Common TypeScript Issues Nº 5: Optional property declarations"
+  id: common-typescript-issues-5-optional-property-declarations 
+  link: https://www.sonarsource.com/blog/common-typescript-issues-no-5-optional-property-declarations/
+  pubDate: 2023-01-31
+  publisher: "sonarsource"
+
+- title: "How to send SMS Without a Phone Number using Alpha Sender and Ruby"
+  id: send-sms-without-phone-number-alpha-sender-ruby
+  link: https://www.twilio.com/en-us/blog/send-sms-without-phone-number-ruby
+  pubDate: 2022-03-29
+  publisher: "twilio"
+
+- title: "How to build an email contact form with SendGrid and Node.js"
+  id: build-email-contact-form-sendgrid-nodejs
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/product/email-contact-form-sendgrid-node-js
+  pubDate: 2022-03-21
+  publisher: "twilio"
+
+- title: "Introducing Firebase Extensions for Twilio"
+  id: introducing-firebase-extensions-for-twilio
+  link: https://www.twilio.com/en-us/blog/developers/introducing-firebase-extensions-for-twilio
+  pubDate: 2021-11-10
+  publisher: "twilio"
+
+- title: "Upload audio files for your Studio IVR with the Twilio CLI Assets Plugin"
+  id: upload-audio-files-studio-ivr-twilio-cli-assets-plugin
+  link: https://www.twilio.com/en-us/blog/upload-audio-files-studio-ivr-twilio-cli-assets-plugin
+  pubDate: 2021-07-27
+  publisher: "twilio"
+
+- title: "Announcing the Assets Plugin for the Twilio CLI"
+  id: announcing-assets-plugin-twilio-cli
+  link: https://www.twilio.com/en-us/blog/products/launches/assets-plugin-twilio-cli
+  pubDate: 2021-06-30
+  publisher: "twilio"
+
+- title: "Twilio on The Apprentice: ONE Championship edition - the Tech Behind the Scenes"
+  id: twilio-apprentice-one-championship-tech-behind-scenes
+  link: https://www.twilio.com/en-us/blog/company/news/twilio-on-the-apprentice-asia
+  pubDate: 2021-06-25
+  publisher: "twilio"
+  
+- title: "Build a stock quote SMS bot with Twilio and TypeScript"
+  id: build-stock-quote-sms-bot-twilio-typescript
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/integrations/sms-stocks-bot-twilio-typescript
+  pubDate: 2021-03-29
+  publisher: "twilio"
+
+- title: "How to receive and reply to SMS messages with TypeScript and Twilio"
+  id: receive-reply-sms-messages-typescript-twilio
+  link: https://www.twilio.com/en-us/blog/receive-reply-sms-messages-typescript-twilio
+  pubDate: 2021-03-09
+  publisher: "twilio"
+
+- title: "How to Send an SMS With TypeScript Using Twilio"
+  id: send-sms-typescript-twilio
+  link: https://www.twilio.com/en-us/blog/send-sms-typescript-twilio
+  pubDate: 2021-02-23
+  publisher: "twilio"
+
+- title: "How to Add Email Notifications to Your Node.js SMS App"
+  id: add-email-notifications-nodejs-sms-app
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/product/add-email-notifications-nodejs-sms-app
+  pubDate: 2021-02-16
+  publisher: "twilio"
+
 - id: send-interactive-amp-email-twilio-sendgrid
   title: "Send your first interactive AMP Email with Twilio SendGrid"
   link: https://www.twilio.com/en-us/blog/developers/tutorials/product/send-interactive-amp-email-twilio-sendgrid
   pubDate: 2020-11-09
+  publisher: "twilio"
+
+- title: "How to build a one-time passcode protected conference line with Twilio Verify and Ruby"
+  id: build-one-time-passcode-protected-conference-line-twilio-verify-ruby
+  link: https://www.twilio.com/en-us/blog/archive/2020/one-time-passcode-protected-conference-line-twilio-verify-ruby
+  pubDate: 2020-07-29
+  publisher: "twilio"
+
+- title: "Build a Jira plugin that can send SMS messages using Twilio"
+  id: build-jira-plugin-send-sms-twilio
+  link: https://www.twilio.com/en-us/blog/jira-plugin-send-sms-messages-twilio
+  pubDate: 2020-07-22
+  publisher: "twilio"
+
+- title: "Learn how Twilio and Atlassian helped the Salvation Army support Australians during the bushfire and coronavirus crises"
+  id: twilio-atlassian-helped-salvation-army-support-australians-bushfire-coronavirus-crises
+  link: https://www.twilio.com/en-us/blog/archive/2020/twilio-atlassian-the-salvation-army-support-australians-during-crises
+  pubDate: 2020-07-22
+  publisher: "twilio"
+
+- title: "Build a passcode protected conference line with Twilio and Ruby"
+  id: build-passcode-protected-conference-line-twilio-ruby
+  link: https://www.twilio.com/en-us/blog/archive/2020/passcode-protected-conference-line-twilio-ruby
+  pubDate: 2020-07-07
+  publisher: "twilio"
+
+- title: "6 things you didn't know you could do with the Twilio Serverless Toolkit"
+  id: six-things-you-didnt-know-you-could-do-with-twilio-serverless-toolkit
+  link: https://www.twilio.com/en-us/blog/developers/best-practices/6-things-you-can-do-with-twilio-serverless-toolkit
+  pubDate: 2020-07-01
+  publisher: "twilio"
+
+- title: "How to add an overlay to your web video chat"
+  id: add-overlay-web-video-chat
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/product/add-an-overlay-to-web-video-chat
+  pubDate: 2020-04-30
+  publisher: "twilio"
+
+- title: "Build a community SMS group chat with Twilio Functions and Google Sheets"
+  id: build-community-sms-group-chat-twilio-functions-google-sheets
+  link: https://www.twilio.com/en-us/blog/archive/2020/community-sms-group-chat-twilio-functions-google-sheets
+  pubDate: 2020-04-20
+  publisher: "twilio"
+
+- title: "How to build a conference line with Twilio and Ruby"
+  id: build-conference-line-twilio-ruby
+  link: https://www.twilio.com/en-us/blog/archive/2020/build-conference-line-twilio-ruby
+  pubDate: 2020-04-06
+  publisher: "twilio"
+
+- title: "An introduction to the Web Contact Picker API"
+  id: introduction-web-contact-picker-api
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/building-blocks/web-contact-picker-api
+  pubDate: 2020-03-31
+  publisher: "twilio"
+
+- title: "Build a location-aware WhatsApp weather bot with Ruby, Sinatra and Twilio"
+  id: build-location-aware-whatsapp-weather-bot-ruby-sinatra-twilio
+  link: https://www.twilio.com/en-us/blog/archive/2020/location-aware-whatsapp-bot-ruby-sinatra-twilio
+  pubDate: 2020-03-18
+  publisher: "twilio"
+
+- title: "Build a WhatsApp chatbot with Ruby, Sinatra and Twilio"
+  id: build-whatsapp-chatbot-ruby-sinatra-twilio
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/integrations/whatsapp-chatbot-ruby-sinatra-twilio
+  pubDate: 2020-02-17
+  publisher: "twilio"
+
+- title: "Speech to text in the browser with the Web Speech API"
+  id: speech-to-text-browser-web-speech-api
+  link: https://www.twilio.com/en-us/blog/speech-recognition-browser-web-speech-api
+  pubDate: 2020-02-09
+  publisher: "twilio"
+
+- title: "HTML attributes to improve your users' two factor authentication experience"
+  id: html-attributes-improve-users-two-factor-authentication-experience
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/building-blocks/html-attributes-two-factor-authentication-autocomplete
+  pubDate: 2020-01-09
+  publisher: "twilio"
+
+- title: "Send and track faxes with the Twilio Fax API using Sinatra and Ruby"
+  id: send-track-faxes-twilio-fax-api-sinatra-ruby
+  link: https://www.twilio.com/en-us/blog/send-faxes-twilio-fax-api-sinatra-ruby
+  pubDate: 2019-12-17
+  publisher: "twilio"
+
+- title: "Track email statuses in Ruby on Rails with SendGrid"
+  id: track-email-statuses-ruby-on-rails-sendgrid
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/product/track-email-status-ruby-on-rails-sendgrid
+  pubDate: 2019-11-28
+  publisher: "twilio"
+
+- title: "Build a Video Chat with React Hooks"
+  id: build-video-chat-react-hooks
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/product/video-chat-react-hooks
+  pubDate: 2019-10-09
+  publisher: "twilio"
+
+- title: "Text to speech in the browser with the Web Speech API"
+  id: text-to-speech-browser-web-speech-api
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/building-blocks/speech-to-text-browser-web-speech-api
+  pubDate: 2019-07-22
+  publisher: "twilio"
+
+- title: "An introduction to the MediaRecorder API"
+  id: introduction-mediarecorder-api
+  link: https://www.twilio.com/en-us/blog/mediastream-recording-api
+  pubDate: 2019-06-03
+  publisher: "twilio"
+
+- title: "Serverless Ruby on AWS Lambda with the Jets framework"
+  id: serverless-ruby-aws-lambda-jets-framework
+  link: https://www.twilio.com/en-us/blog/archive/2019/serverless-ruby-on-aws-lambda-with-the-jets-framework
+  pubDate: 2019-05-13
+  publisher: "twilio"
+
+- title: "Send Images and Files via WhatsApp Using Ruby"
+  id: send-images-files-via-whatsapp-using-ruby
+  link: https://www.twilio.com/en-us/blog/archive/2019/send-images-files-whatsapp-ruby
+  pubDate: 2019-04-18
+  publisher: "twilio"
+
+- title: "Start a new Twilio Functions project the easy way"
+  id: start-new-twilio-functions-project-easy-way
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/building-blocks/start-a-new-twilio-functions-project-the-easy-way
+  pubDate: 2019-04-16
+  publisher: "twilio"
+
+- title: "Go celebrity spotting with the Twilio API for WhatsApp, AWS Rekognition and Ruby"
+  id: go-celebrity-spotting-twilio-api-whatsapp-aws-rekognition-ruby
+  link: https://www.twilio.com/en-us/blog/archive/2019/celebrity-spotting-twilio-api-whatsapp-aws-rekognition-ruby
+  pubDate: 2019-04-02
+  publisher: "twilio"
+
+- title: "How to download image files in Ruby"
+  id: how-to-download-image-files-ruby
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/building-blocks/download-image-files-ruby
+  pubDate: 2019-03-25
+  publisher: "twilio"
+
+- title: "Build a chat app with Twilio and KendoReact"
+  id: build-chat-app-twilio-kendoreact
+  link: https://www.twilio.com/en-us/blog/archive/2019/chat-app-twilio-kendoreact
+  pubDate: 2019-01-30
+  publisher: "twilio"
+
+- title: "How to send an SMS from React with Twilio"
+  id: how-to-send-sms-from-react-with-twilio
+  link: https://www.twilio.com/en-us/blog/send-an-sms-react-twilio
+  pubDate: 2018-10-23
+  publisher: "twilio"
+
+- title: "Set up a React app with a Node.js server proxy"
+  id: set-up-react-app-nodejs-server-proxy
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/building-blocks/react-app-with-node-js-server-proxy
+  pubDate: 2018-10-09
+  publisher: "twilio"
+
+- title: "Audio visualisation with the Web Audio API and React"
+  id: audio-visualisation-web-audio-api-react
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/building-blocks/audio-visualisation-web-audio-api--react
+  pubDate: 2018-09-21
+  publisher: "twilio"
+
+- title: "Build a collaborative playlist over WhatsApp with Rails, Twilio, and Spotify"
+  id: build-collaborative-playlist-over-whatsapp-rails-twilio-spotify
+  link: https://www.twilio.com/en-us/blog/archive/2018/collaborative-playlist-whatsapp-rails-twilio-spotify
+  pubDate: 2018-08-28
+  publisher: "twilio"
+
+- title: "👉 Emoji translations with the 📞 Twilio API for 💬 WhatsApp and Node.js"
+  id: emoji-translations-twilio-api-whatsapp-nodejs
+  link: https://www.twilio.com/en-us/blog/archive/2018/emoji-translations-twilio-api-whatsapp-node-js-html
+  pubDate: 2018-08-01
+  publisher: "twilio"
+
+- title: "Switching cameras during a video chat with Twilio Video"
+  id: switching-cameras-during-video-chat-twilio-video
+  link: https://www.twilio.com/en-us/blog/archive/2018/switching-cameras-twilio-video-chat-html
+  pubDate: 2018-06-28
+  publisher: "twilio"
+
+- title: "Screen capture in Microsoft Edge"
+  id: screen-capture-microsoft-edge
+  link: https://www.twilio.com/en-us/blog/archive/2018/screen-capture-in-microsoft-edge-html
+  pubDate: 2018-05-16
+  publisher: "twilio"
+
+- title: "Choosing cameras in JavaScript with the mediaDevices API"
+  id: choosing-cameras-javascript-media-devices-api
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/product/choosing-cameras-javascript-mediadevices-api-html
+  pubDate: 2018-04-19
+  publisher: "twilio"
+
+- title: "Top 10 errors from 1000+ Ruby on Rails projects (and how to avoid them)"
+  id: top-10-errors-from-1000-plus-ruby-on-rails-projects
+  link: https://rollbar.com/blog/top-10-errors-from-1000-ruby-on-rails-projects-and-how-to-avoid-them/#
+  pubDate: 2018-04-18
+  publisher: "rollbar"
+
+- title: "Better passwords in Ruby applications with the Pwned Passwords API"
+  id: better-passwords-ruby-applications-pwned-passwords-api
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/integrations/better-passwords-in-ruby-applications-pwned-passwords-api-html
+  pubDate: 2018-03-20
+  publisher: "twilio"
+
+- title: "How to detect if a Chrome extension is installed"
+  id: how-to-detect-if-chrome-extension-is-installed
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/building-blocks/detect-chrome-extension-installed-html
+  pubDate: 2018-03-01
+  publisher: "twilio"
+
+- title: "Add screen sharing to your Twilio Video application"
+  id: add-screen-sharing-twilio-video-application
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/product/screen-sharing-twilio-video-html
+  pubDate: 2018-01-28
+  publisher: "twilio"
+
+- title: "The Ultimate Guide to Sending Bulk SMS with Twilio and Node.js"
+  id: ultimate-guide-sending-bulk-sms-twilio-nodejs
+  link: https://www.twilio.com/en-us/blog/send-bulk-sms-twilio-node-js-html
+  pubDate: 2017-12-18
+  publisher: "twilio"
+
+- title: "How to receive and respond to text messages in Ruby with Hanami and Twilio"
+  id: receive-respond-text-messages-ruby-hanami-twilio
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/integrations/how-to-receive-and-respond-to-text-messages-in-ruby-with-hanami-and-twilio-html
+  pubDate: 2017-11-21
+  publisher: "twilio"
+
+- title: "Screen Capture in Firefox"
+  id: screen-capture-firefox
+  link: https://www.twilio.com/en-us/blog/archive/2017/screen-capture-in-firefox-html
+  pubDate: 2017-10-25
+  publisher: "twilio"
+
+- title: "Screen capture in Google Chrome"
+  id: screen-capture-google-chrome
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/building-blocks/screen-capture-in-google-chrome-html
+  pubDate: 2017-10-12
+  publisher: "twilio"
+
+- title: "Protect your npm account with 2FA and Authy"
+  id: protect-npm-account-2fa-authy
+  link: https://www.twilio.com/en-us/blog/archive/2017/protect-your-npm-account-with-2fa-and-authy-html
+  pubDate: 2017-10-05
+  publisher: "twilio"
+
+- title: "Verify user phone numbers in Ruby on Rails with the Authy Phone Verification API"
+  id: verify-user-phone-numbers-ruby-on-rails-authy-phone-verification-api
+  link: https://www.twilio.com/en-us/blog/archive/2017/verify-user-phone-numbers-in-ruby-on-rails-with-the-authy-verification-api-html
+  pubDate: 2017-08-30
+  publisher: "twilio"
+
+- title: "Forward incoming SMS messages to email with Node.js, SendGrid and Twilio Functions"
+  id: forward-incoming-sms-messages-email-nodejs-sendgrid-twilio-functions
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/integrations/forward-incoming-sms-messages-to-email-with-node-js-sendgrid-and-twilio-functions-html
+  pubDate: 2017-07-18
+  publisher: "twilio"
+
+- title: "Validate Ruby objects with Active Model Validations"
+  id: validate-ruby-objects-active-model-validations
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/building-blocks/validate-ruby-objects-with-active-model-validations-html
+  pubDate: 2017-06-14
+  publisher: "twilio"
+
+- title: "Create a landing page with Sinatra, Google Spreadsheets, and Ruby"
+  id: create-landing-page-sinatra-google-spreadsheets-ruby
+  link: https://www.twilio.com/en-us/blog/archive/2017/create-a-landing-page-with-sinatra-google-spreadsheets-and-ruby-html
+  pubDate: 2017-03-22
+  publisher: "twilio"
+
+- title: "Google Spreadsheets and Ruby"
+  id: google-spreadsheets-ruby
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/integrations/google-spreadsheets-ruby-html
+  pubDate: 2017-03-14
+  publisher: "twilio"
+
+- title: "Search for and buy Twilio phone numbers with Ruby"
+  id: search-buy-twilio-phone-numbers-ruby
+  link: https://www.twilio.com/en-us/blog/archive/2017/search-buy-twilio-phone-numbers-ruby-html
+  pubDate: 2017-03-02
+  publisher: "twilio"
+
+- title: "Send messages when you’re back online with Service Workers and Background Sync"
+  id: send-messages-when-back-online-service-workers-background-sync
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/integrations/send-messages-when-youre-back-online-with-service-workers-and-background-sync-html
+  pubDate: 2017-02-17
+  publisher: "twilio"
+
+- title: "Redact or Delete SMS Messages as They Arrive with Node.js"
+  id: redact-delete-sms-messages-arrive-nodejs
+  link: https://www.twilio.com/en-us/blog/archive/2017/redact-delete-sms-messages-node-js-html
+  pubDate: 2017-01-04
+  publisher: "twilio"
+
+- title: "Create an SMS bot on AWS Lambda with Claudia.js"
+  id: create-sms-bot-aws-lambda-claudia-js
+  link: https://www.twilio.com/en-us/blog/archive/2016/create-an-sms-bot-on-aws-lambda-with-claudia-js-html
+  pubDate: 2016-12-19
+  publisher: "twilio"
+
+- title: "Make Phone Calls with Crystal and Twilio"
+  id: make-phone-calls-crystal-twilio
+  link: https://www.twilio.com/en-us/blog/archive/2016/make-phone-calls-crystal-twilio-html
+  pubDate: 2016-12-02
+  publisher: "twilio"
+
+- title: "Send SMS messages with Crystal"
+  id: send-sms-messages-crystal
+  link: https://www.twilio.com/en-us/blog/archive/2016/send-sms-messages-crystal-html
+  pubDate: 2016-11-03
+  publisher: "twilio"
+
+- title: "Send SMS messages like emails in Rails with Textris"
+  id: send-sms-messages-like-emails-rails-textris
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/integrations/send-sms-messages-like-emails-in-rails-with-textris-html
+  pubDate: 2016-09-12
+  publisher: "twilio"
+
+- title: "Real Time Rails 4: Using Server-Sent Events with Authy OneTouch"
+  id: real-time-rails-4-using-server-sent-events-authy-onetouch
+  link: https://www.twilio.com/en-us/blog/archive/2016/real-time-rails-4-using-server-sent-events-with-authy-onetouch-html
+  pubDate: 2016-06-13
+  publisher: "twilio"
+
+- title: "Getting started with Web Components building a Video Chat widget"
+  id: getting-started-web-components-building-video-chat-widget
+  link: https://www.twilio.com/en-us/blog/archive/2016/getting-started-with-web-components-building-a-video-chat-widget-html
+  pubDate: 2016-06-06
+  publisher: "twilio"
+
+- title: "Calling Rails 5: Getting started with Twilio on Rails"
+  id: calling-rails-5-getting-started-twilio-rails
+  link: https://www.twilio.com/en-us/blog/archive/2016/calling-rails-5-getting-started-with-twilio-on-rails-html
+  pubDate: 2016-05-09
+  publisher: "twilio"
+
+- title: "Send an SMS Message with Ruby in 30 Seconds"
+  id: send-sms-message-ruby-30-seconds
+  link: https://www.twilio.com/en-us/blog/archive/2016/send-an-sms-message-with-ruby-in-30-seconds-html
+  pubDate: 2016-04-11
+  publisher: "twilio"
+
+- title: "Web Powered SMS Inbox with Service Worker: Push Notifications"
+  id: web-powered-sms-inbox-service-worker-push-notifications
+  link: https://www.twilio.com/en-us/blog/archive/2016/web-powered-sms-inbox-with-service-worker-push-notifications-html
+  pubDate: 2016-02-18
+  publisher: "twilio"
+
+- title: "Two Factor Authentication in Rails 4 with Devise, Authy and Puppies"
+  id: two-factor-authentication-rails-4-devise-authy-puppies
+  link: https://www.twilio.com/en-us/blog/two-factor-authentication-in-rails-4-with-devise-authy-and-puppies-html
+  pubDate: 2016-01-26
+  publisher: "twilio"
+
+- title: "Service Worker: Santa's little performance helper"
+  id: service-worker-santas-little-performance-helper
+  link: https://12devsofxmas.co.uk/2016/01/day-9-service-worker-santas-little-performance-helper/
+  pubDate: 2016-01-03
+  publisher: "12devs"
+
+- title: "Supercharge your Programmable Chat with Hubot"
+  id: supercharge-your-programmable-chat-with-hubot
+  link: https://www.twilio.com/en-us/blog/archive/2015/supercharge-your-ip-messaging-chat-with-hubot-html
+  pubDate: 2015-12-17
+  publisher: "twilio"
+
+- title: "Delay API calls to Twilio with Rails, Active Job and Sidekiq"
+  id: delay-api-calls-twilio-rails-active-job-sidekiq
+  link: https://www.twilio.com/en-us/blog/archive/2015/delay-api-calls-to-twilio-with-rails-active-job-and-sidekiq-html
+  pubDate: 2015-10-20
+  publisher: "twilio"
+
+- title: "6 awesome reasons to use ngrok when testing webhooks"
+  id: six-awesome-reasons-use-ngrok-when-testing-webhooks
+  link: https://www.twilio.com/en-us/blog/6-awesome-reasons-to-use-ngrok-when-testing-webhooks-html
+  pubDate: 2015-09-10
+  publisher: "twilio"
+
+- title: "Send Branded SMS Messages Using Twilio Alphanumeric Sender ID"
+  id: send-branded-sms-messages-using-twilio-alphanumeric-sender-id
+  link: https://www.twilio.com/en-us/blog/developers/tutorials/product/send-branded-sms-messages-using-twilio-alphanumeric-sender-id-html
+  pubDate: 2015-08-06
+  publisher: "twilio"
+
+- title: "You Too Can Tweet like Larry King"
+  id: you-too-can-tweet-like-larry-king
+  link: https://www.twilio.com/en-us/blog/archive/2015/you-too-can-tweet-like-larry-king-html
+  pubDate: 2015-06-23
+  publisher: "twilio"
+
+- title: "Receive Twitter Notifications by SMS with EventMachine and the Twitter Streaming API (Send and Receive Tweets Using SMS with Twilio Part 3)"
+  id: receive-twitter-notifications-sms-eventmachine-twitter-streaming-api
+  link: https://www.twilio.com/en-us/blog/archive/2015/receive-twitter-notifications-by-sms-with-eventmachine-and-the-twitter-streaming-api-html
+  pubDate: 2015-04-30
+  publisher: "twilio"
+
+- title: "How to Send a Tweet with SMS (Send and Receive Tweets Using SMS: Part 2)"
+  id: how-to-send-tweet-with-sms
+  link: https://www.twilio.com/en-us/blog/archive/2015/how-to-send-a-tweet-with-sms-html
+  pubDate: 2015-04-20
+  publisher: "twilio"
+
+- title: "Send and Receive Tweets using SMS with Twilio: Part 1"
+  id: send-receive-tweets-using-sms-with-twilio-part-1
+  link: https://www.twilio.com/en-us/blog/archive/2015/send-tweets-via-sms-with-twilio-part-1-html
+  pubDate: 2015-03-19
+  publisher: "twilio"
+
+- title: "Craft Beer & SMS: Never Miss A Rare Brew Again"
+  id: craft-beer-sms-never-miss-rare-brew-again
+  link: https://www.twilio.com/en-us/blog/archive/2015/craft-beer-sms-never-miss-a-rare-brew-again-html
+  pubDate: 2015-03-05
+  publisher: "twilio"
+
+- title: "Creating a Priority Queue for your Call Centre with TaskRouter"
+  id: creating-priority-queue-call-centre-taskrouter
+  link: https://www.twilio.com/en-us/blog/archive/2015/creating-a-priority-queue-for-your-call-centre-with-taskrouter-html
+  pubDate: 2015-02-19
+  publisher: "twilio"
+
+- title: "Managing Development Environment Variables Across Multiple Ruby Applications"
+  id: managing-development-environment-variables-across-multiple-ruby-applications
+  link: https://www.twilio.com/en-us/blog/archive/2015/managing-development-environment-variables-across-multiple-ruby-applications-html
+  pubDate: 2015-02-09
+  publisher: "twilio"
+
+- title: "An easier way to write TwiML templates in Rails and Sinatra"
+  id: easier-way-write-twiml-templates-rails-sinatra
+  link: https://www.twilio.com/en-us/blog/archive/2014/an-easier-way-to-write-twiml-templates-in-rails-and-sinatra-html
+  pubDate: 2014-11-05
+  publisher: "twilio"
+
+- title: "Securing Your Ruby Webhooks with Rack Middleware"
+  id: securing-ruby-webhooks-with-rack-middleware
+  link: https://www.twilio.com/en-us/blog/archive/2014/securing-your-ruby-webhooks-with-rack-middleware-html
+  pubDate: 2014-09-11
   publisher: "twilio"

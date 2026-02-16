@@ -32,6 +32,10 @@
   overflow: hidden;
 }
 
+.post-list .external .post-meta {
+  margin-bottom: 0;
+}
+
 .post-list .post-meta {
   border: none;
   padding: 0;
@@ -67,6 +71,11 @@
   margin-top: vars.$spacing-unit * 2;
 }
 
+.post.external {
+  display: flex;
+  gap: vars.$spacing-unit;
+}
+
 .blog-meta {
   clear: both;
   border-top: 5px solid vars.$grey-color-light;
@@ -88,6 +97,18 @@
   line-height: 1.25;
   padding-top: 0;
   padding-bottom: 0;
+}
+.post-list .external h2 {
+  font-size: vars.$base-font-size * 1.1;
+}
+.post-list .external img {
+  display: block;
+  flex-basis: 64px;
+  height: 64px;
+  aspect-ratio: 1 / 1;
+}
+.post-list .external svg {
+  vertical-align: sub;
 }
 
 .post-list .post-header-image {

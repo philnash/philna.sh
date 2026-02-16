@@ -1,9 +1,24 @@
 - id: twilio
   name: Twilio
   link: https://www.twilio.com/
+  logo: ../assets/publishers/twilio.png
 - id: sonarsource
   name: SonarSource
   link: https://www.sonarsource.com/
+  logo: ../assets/publishers/sonar.png
 - id: langflow
   name: Langflow
   link: https://www.langflow.org/
+  logo: ../assets/publishers/langflow.svg
+- id: rollbar
+  link: https://rollbar.com/
+  name: Rollbar
+  logo: ../assets/publishers/rollbar.png
+- id: htmlhell
+  link: https://www.htmhell.dev/
+  name: HTML Hell
+  logo: ../assets/publishers/htmlhell.svg
+- id: 12devs
+  link: https://12devsofxmas.co.uk/
+  name: 12 Devs of Xmas
+  logo: ../assets/publishers/12devs.png

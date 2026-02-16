@@ -33,11 +33,13 @@ const blog = defineCollection({
 
 const publishers = defineCollection({
   loader: file("./src/data/publishers.yml"),
-  schema: z.object({
-    id: z.string(),
-    name: z.string(),
-    link: z.string().url(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      id: z.string(),
+      name: z.string(),
+      link: z.string().url(),
+      logo: image(),
+    }),
 });
 
 const externalPosts = defineCollection({
