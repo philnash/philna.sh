@@ -1,4 +1,4 @@
-name = "philna.sh"
+name = "philna-sh"
 main = "./dist/_worker.js/index.js"
 pages_build_output_dir = "./dist"
 
@@ -7,7 +7,6 @@ compatibility_date = "2026-03-04"
 compatibility_flags = [ "nodejs_compat" ]
 
 [assets]
-binding = "ASSETS"
 directory = "./dist"
 not_found_handling = "404-page"
 
