@@ -33,6 +33,9 @@ export default defineConfig({
         },
       },
     },
+    define: {
+      "process.env": process.env,
+    },
   },
   image: {
     service: sharpImageService(),
