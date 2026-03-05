@@ -19,7 +19,7 @@
     "@philnash/astro-pagination": "^0.5.0",
     "@philnash/resend": "^1.2.1",
     "@playform/inline": "^0.1.2",
-    "@sentry/astro": "^10.40.0",
+    "@sentry/astro": "^10.42.0",
     "@sentry/cloudflare": "^10.42.0",
     "astro": "^5.18.0",
     "astro-remote": "^0.3.4",
