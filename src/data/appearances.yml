@@ -20,6 +20,16 @@
     type: conference
   talks:
     - title: Let's build an AI agent
+- id: opensearchcon-china-2026
+  event:
+    name: OpenSearchCon China 2026
+    link: https://opensearchcon-china-2026.sessionize.com/session/1115191
+    start_date: '2026-03-17'
+    end_date: '2026-03-18'
+    location: Shanghai, China
+    type: conference
+  talks:
+    - title: "Build AI-Ready Search: Integrating Docling with OpenSearch for Advanced RAG and Agentic Applications"
 - id: devfest-adelaide-2025
   event:
     name: DevFest Adelaide 2025
