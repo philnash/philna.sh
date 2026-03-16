@@ -22,3 +22,11 @@
   link: https://12devsofxmas.co.uk/
   name: 12 Devs of Xmas
   logo: ../assets/publishers/12devs.png
+- id: telerik
+  link: https://www.telerik.com/
+  name: Telerik
+  logo: ../assets/publishers/telerik.svg
+- id: thenewstack
+  link: https://thenewstack.io/
+  name: The New Stack
+  logo: ../assets/publishers/thenewstack.png

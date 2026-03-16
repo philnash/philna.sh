@@ -118,6 +118,12 @@
   pubDate: 2024-02-13
   publisher: "sonarsource"
 
+- title: "The Trouble with Nesting Ternaries in JavaScript"
+  id: trouble-with-nesting-ternaries-javascript
+  link: https://thenewstack.io/the-trouble-with-nesting-ternaries-in-javascript/
+  pubDate: 2024-01-31
+  publisher: "thenewstack"
+
 - title: "Lessons learned upgrading to React 18 in SonarQube Server"
   id: lessons-learned-upgrading-react-18-sonarqube-server
   link: https://www.sonarsource.com/blog/upgrading-react-18-sonarqube/
@@ -136,7 +142,13 @@
   pubDate: 2023-12-08
   publisher: "htmlhell"
 
-- title: "A comprehensive guide to the dangers of Regular Expressions in JavaScript" 
+- title: "How to Get Advantages of TypeScript in JavaScript"
+  id: get-advantages-typescript-javascript
+  link: https://thenewstack.io/how-to-get-advantages-of-typescript-in-javascript/
+  pubDate: 2023-10-27
+  publisher: "thenewstack"
+
+- title: "A comprehensive guide to the dangers of Regular Expressions in JavaScript"
   id: comprehensive-guide-dangers-regular-expressions-javascript
   link: https://www.sonarsource.com/blog/vulnerable-regular-expressions-javascript/
   pubDate: 2023-09-28
@@ -203,7 +215,7 @@
   publisher: "sonarsource"
 
 - title: "Common TypeScript Issues Nº 5: Optional property declarations"
-  id: common-typescript-issues-5-optional-property-declarations 
+  id: common-typescript-issues-5-optional-property-declarations
   link: https://www.sonarsource.com/blog/common-typescript-issues-no-5-optional-property-declarations/
   pubDate: 2023-01-31
   publisher: "sonarsource"
@@ -243,7 +255,7 @@
   link: https://www.twilio.com/en-us/blog/company/news/twilio-on-the-apprentice-asia
   pubDate: 2021-06-25
   publisher: "twilio"
-  
+
 - title: "Build a stock quote SMS bot with Twilio and TypeScript"
   id: build-stock-quote-sms-bot-twilio-typescript
   link: https://www.twilio.com/en-us/blog/developers/tutorials/integrations/sms-stocks-bot-twilio-typescript
@@ -417,6 +429,12 @@
   link: https://www.twilio.com/en-us/blog/archive/2019/chat-app-twilio-kendoreact
   pubDate: 2019-01-30
   publisher: "twilio"
+
+- title: "Build a Chat App with Twilio and KendoReact"
+  id: build-chat-app-twilio-kendoreact-telerik
+  link: https://www.telerik.com/blogs/build-a-chat-app-with-twilio-and-kendoreact
+  pubDate: 2019-01-30
+  publisher: "telerik"
 
 - title: "How to send an SMS from React with Twilio"
   id: how-to-send-sms-from-react-with-twilio
