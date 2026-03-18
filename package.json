@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@analytics-debugger/ga4mp": "^0.0.8",
-    "@astrojs/cloudflare": "^12.6.12",
+    "@astrojs/cloudflare": "^13.1.2",
     "@astrojs/rss": "^4.0.15",
     "@fontsource/merriweather": "^5.2.11",
     "@fontsource/raleway": "^5.2.8",
