@@ -1,4 +1,5 @@
-import { defineCollection, reference, z } from "astro:content";
+import { defineCollection, reference } from "astro:content";
+import { z } from "astro/zod";
 import { file, glob } from "astro/loaders";
 
 const blog = defineCollection({
@@ -37,7 +38,7 @@ const publishers = defineCollection({
     z.object({
       id: z.string(),
       name: z.string(),
-      link: z.string().url(),
+      link: z.url(),
       logo: image(),
     }),
 });
@@ -46,7 +47,7 @@ const externalPosts = defineCollection({
   loader: file("./src/data/external_posts.yml"),
   schema: z.object({
     title: z.string(),
-    link: z.string().url(),
+    link: z.url(),
     pubDate: z
       .string()
       .or(z.date())
@@ -65,7 +66,7 @@ const appearances = defineCollection({
     id: z.string(),
     event: z.object({
       name: z.string(),
-      link: z.string().url().optional(),
+      link: z.url().optional(),
       start_date: z
         .string()
         .or(z.date())
@@ -81,9 +82,9 @@ const appearances = defineCollection({
     talks: z.array(
       z.object({
         title: z.string(),
-        slides: z.string().url().optional(),
-        video: z.string().url().optional(),
-        audio: z.string().url().optional(),
+        slides: z.url().optional(),
+        video: z.url().optional(),
+        audio: z.url().optional(),
       }),
     ).optional(),
     roles: z.array(z.string()).optional(),

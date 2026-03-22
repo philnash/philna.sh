@@ -4,7 +4,7 @@ export const prerender = false;
 import { env } from "cloudflare:workers";
 
 import { Resend } from "@philnash/resend";
-import { z } from "zod";
+import { z } from "astro/zod";
 
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
@@ -28,7 +28,6 @@ const title = "Contact";
 const method = Astro.request.method;
 
 const emailSchema = z
-  .string()
   .email({ message: "Please enter a valid email address" });
 
 function stringFromFormDataEntryValue(parameter: FormDataEntryValue | null) {
