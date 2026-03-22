@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",
-    "@datastax/astra-db-ts": "^2.1.2",
+    "@datastax/astra-db-ts": "^2.2.1",
     "@rollup/plugin-yaml": "^4.1.2",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.2",

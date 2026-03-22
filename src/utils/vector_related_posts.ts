@@ -1,7 +1,8 @@
 import { DataAPIClient } from "@datastax/astra-db-ts";
 import { type CollectionEntry, getEntry } from "astro:content";
+import { env } from "cloudflare:workers";
 
-const { ASTRADB_APP_TOKEN, ASTRADB_ENDPOINT } = import.meta.env;
+const { ASTRADB_APP_TOKEN, ASTRADB_ENDPOINT } = env;
 const COLLECTION_NAME = "blog";
 
 type BlogEmbeddingDoc = {
