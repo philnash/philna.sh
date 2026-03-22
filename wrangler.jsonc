@@ -1,0 +1,10 @@
+{
+  "name": "philna-sh",
+  "compatibility_date": "2026-03-22",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./dist/client/",
+    "not_found_handling": "404-page",
+  },
+  "main": "@astrojs/cloudflare/entrypoints/server",
+}
