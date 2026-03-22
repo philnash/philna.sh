@@ -23,3 +23,6 @@ pnpm-debug.log*
 
 # Draft posts
 _drafts/
+
+
+.wrangler/

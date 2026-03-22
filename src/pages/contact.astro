@@ -1,6 +1,8 @@
 ---
 export const prerender = false;
 
+import { env } from "cloudflare:workers";
+
 import { Resend } from "@philnash/resend";
 import { z } from "zod";
 
@@ -8,21 +10,13 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { validate } from "../utils/turnstile";
 
-function env() {
-  if (Astro.locals.runtime?.env) {
-    return Astro.locals.runtime.env;
-  } else {
-    return import.meta.env;
-  }
-}
-
 const {
   RESEND_API_KEY="",
   RESEND_TO_EMAIL="",
   RESEND_FROM_EMAIL="",
   CLOUDFLARE_SITE_KEY="",
   CLOUDFLARE_SECRET_KEY=""
-} = env();
+} = env;
 
 type ContactErrors = {
   email: string[];
@@ -60,7 +54,7 @@ if (method === "POST") {
 
     const emailResult = emailSchema.safeParse(email);
     if (!emailResult.success) {
-      errors.email.push(...emailResult.error.errors.map((e) => e.message));
+      errors.email.push(...emailResult.error.issues.map((e) => e.message));
     }
     if (subject === "") {
       errors.subject.push("Please enter a subject");

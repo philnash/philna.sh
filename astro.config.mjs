@@ -47,5 +47,6 @@ export default defineConfig({
   output: "static",
   adapter: cloudflare({
     imageService: "passthrough",
+    prerenderEnvironment: "node",
   }),
 });

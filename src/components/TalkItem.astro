@@ -1,7 +1,7 @@
 ---
-import type { Talk } from "../data/appearances.yml";
+import type { CollectionEntry } from "astro:content";
 type Props = {
-  talk: Talk;
+  talk: NonNullable<CollectionEntry<"appearances">["data"]["talks"]>[number];
 };
 const { talk } = Astro.props;
 ---
