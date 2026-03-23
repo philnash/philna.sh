@@ -1,6 +1,6 @@
 import { DataAPIClient } from "@datastax/astra-db-ts";
 import { type CollectionEntry, getEntry } from "astro:content";
-import { env } from "cloudflare:workers";
+import { env } from "node:process";
 
 const { ASTRADB_APP_TOKEN, ASTRADB_ENDPOINT } = env;
 const COLLECTION_NAME = "blog";
@@ -14,7 +14,7 @@ type BlogEmbeddingData = {
   body?: string;
 };
 
-const astraDb = new DataAPIClient(ASTRADB_APP_TOKEN).db(ASTRADB_ENDPOINT);
+const astraDb = new DataAPIClient(ASTRADB_APP_TOKEN).db(ASTRADB_ENDPOINT!);
 const blogCollection = astraDb.collection<BlogEmbeddingDoc>(COLLECTION_NAME);
 
 function isPost(
