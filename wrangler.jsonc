@@ -1,5 +1,5 @@
 {
-  "name": "philna-sh",
+  "name": "philna-sh-workers",
   "compatibility_date": "2026-03-22",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
