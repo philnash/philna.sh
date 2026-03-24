@@ -33,7 +33,7 @@ const blog = defineCollection({
 });
 
 const publishers = defineCollection({
-  loader: file("./src/data/publishers.yml"),
+  loader: file("./src/content/data/publishers.yml"),
   schema: ({ image }) =>
     z.object({
       id: z.string(),
@@ -44,7 +44,7 @@ const publishers = defineCollection({
 });
 
 const externalPosts = defineCollection({
-  loader: file("./src/data/external_posts.yml"),
+  loader: file("./src/content/data/external_posts.yml"),
   schema: z.object({
     title: z.string(),
     link: z.url(),
@@ -61,7 +61,7 @@ const externalPosts = defineCollection({
 });
 
 const appearances = defineCollection({
-  loader: file("./src/data/appearances.yml"),
+  loader: file("./src/content/data/appearances.yml"),
   schema: z.object({
     id: z.string(),
     event: z.object({

@@ -1,32 +1,32 @@
 - id: twilio
   name: Twilio
   link: https://www.twilio.com/
-  logo: ../assets/publishers/twilio.png
+  logo: ../../assets/publishers/twilio.png
 - id: sonarsource
   name: SonarSource
   link: https://www.sonarsource.com/
-  logo: ../assets/publishers/sonar.png
+  logo: ../../assets/publishers/sonar.png
 - id: langflow
   name: Langflow
   link: https://www.langflow.org/
-  logo: ../assets/publishers/langflow.svg
+  logo: ../../assets/publishers/langflow.svg
 - id: rollbar
   link: https://rollbar.com/
   name: Rollbar
-  logo: ../assets/publishers/rollbar.png
+  logo: ../../assets/publishers/rollbar.png
 - id: htmlhell
   link: https://www.htmhell.dev/
   name: HTML Hell
-  logo: ../assets/publishers/htmlhell.svg
+  logo: ../../assets/publishers/htmlhell.svg
 - id: 12devs
   link: https://12devsofxmas.co.uk/
   name: 12 Devs of Xmas
-  logo: ../assets/publishers/12devs.png
+  logo: ../../assets/publishers/12devs.png
 - id: telerik
   link: https://www.telerik.com/
   name: Telerik
-  logo: ../assets/publishers/telerik.svg
+  logo: ../../assets/publishers/telerik.svg
 - id: thenewstack
   link: https://thenewstack.io/
   name: The New Stack
-  logo: ../assets/publishers/thenewstack.png
+  logo: ../../assets/publishers/thenewstack.png
