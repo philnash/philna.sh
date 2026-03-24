@@ -9,6 +9,20 @@ jobs:
   run-updater:
     runs-on: ubuntu-latest
     steps:
-      - name: Hit Cloudflare webhook with curl
-        run: |
-          curl -X POST "${{ secrets.CLOUDFLARE_WEBHOOK }}"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+        env:
+          ASTRADB_APP_TOKEN: ${{ secrets.ASTRADB_APP_TOKEN }}
+          ASTRADB_ENDPOINT: ${{ secrets.ASTRADB_ENDPOINT }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Deploy
+        run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
