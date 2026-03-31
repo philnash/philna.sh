@@ -14,69 +14,83 @@
   event:
     name: NDC Sydney 2026
     link: https://ndcsydney.com/agenda/lets-build-an-ai-agent-0yv8/0qm5x40a77g
-    start_date: '2026-04-22'
-    end_date: '2026-04-24'
+    start_date: "2026-04-22"
+    end_date: "2026-04-24"
     location: Sydney, Australia
     type: conference
   talks:
     - title: Let's build an AI agent
+
+- id: twilio-signal-2026
+  event:
+    name: "Twilio SIGNAL 2026"
+    link: https://signal.twilio.com/2026/session/4037957/knowledgeable-voice-agents-made-easy-with-openrag-and-conversationrelay
+    start_date: "2026-05-06"
+    end_date: "2026-05-07"
+    location: San Francisco, USA
+    type: conference
+  talks:
+    - title: Knowledgeable voice agents made easy with OpenRAG and ConversationRelay
+
 - id: opensearchcon-china-2026
   event:
     name: OpenSearchCon China 2026
     link: https://opensearchcon-china-2026.sessionize.com/session/1115191
-    start_date: '2026-03-17'
-    end_date: '2026-03-18'
+    start_date: "2026-03-17"
+    end_date: "2026-03-18"
     location: Shanghai, China
     type: conference
   talks:
     - title: "Build AI-Ready Search: Integrating Docling with OpenSearch for Advanced RAG and Agentic Applications"
+      slides: https://sessionize.com/download/cbaynej~4akQwUPd4h5S7ZySx2Maqf.pdf~opensearchcon-2026-docling-and-opensearch.pdf
+
 - id: devfest-adelaide-2025
   event:
     name: DevFest Adelaide 2025
     link: https://gdg.community.dev/events/details/google-gdg-adelaide-presents-gdg-adelaide-devfest-2025/
-    start_date: '2025-11-26'
-    end_date: '2025-11-26'
+    start_date: "2025-11-26"
+    end_date: "2025-11-26"
     location: Adelaide, Australia
     type: meetup
   talks:
-    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
 - id: devfest-auckland-2025
   event:
     name: DevFest Auckland 2025
     link: https://devfest.gdgauckland.nz/
-    start_date: '2025-11-09'
-    end_date: '2025-11-09'
+    start_date: "2025-11-09"
+    end_date: "2025-11-09"
     location: Auckland, New Zealand
     type: conference
   talks:
-    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
 - id: gdg-melbourne-10-2025
   event:
     name: GDG Melbourne
     link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-melbourne-oct-meetup/
-    start_date: '2025-10-29'
-    end_date: '2025-10-29'
+    start_date: "2025-10-29"
+    end_date: "2025-10-29"
     location: Melbourne, Australia
     type: meetup
   talks:
-    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
 - id: devfest-brisbane-2025
   event:
     name: DevFest Brisbane 2025
     link: https://devfest-brisbane-2025.sessionize.com/
-    start_date: '2025-10-25'
-    end_date: '2025-10-25'
+    start_date: "2025-10-25"
+    end_date: "2025-10-25"
     location: Brisbane, Australia
     type: conference
   talks:
-    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
       video: https://www.youtube.com/watch?v=iDN35uSma9c
 - id: ai-for-the-rest-of-us-2025
   event:
     name: AI for the rest of us 2025
     link: https://aifortherestofus.live/london-2025/
-    start_date: '2025-10-15'
-    end_date: '2025-10-16'
+    start_date: "2025-10-15"
+    end_date: "2025-10-16"
     location: London, UK
     type: conference
   talks:
@@ -86,19 +100,19 @@
   event:
     name: JSMonthly London
     link: https://guild.host/events/jsmonthly-october-event-wb2qo7
-    start_date: '2025-10-14'
-    end_date: '2025-10-14'
+    start_date: "2025-10-14"
+    end_date: "2025-10-14"
     location: London, UK
     type: meetup
   talks:
-    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
       video: https://youtu.be/S5HGHL2WFiE?t=1262
 - id: cascadiajs-2025
   event:
     name: CascadiaJS 2025
     link: https://cascadiajs.com/2025
-    start_date: '2025-09-18'
-    end_date: '2025-09-19'
+    start_date: "2025-09-18"
+    end_date: "2025-09-19"
     location: Seattle, USA
     type: conference
   talks:
@@ -108,8 +122,8 @@
   event:
     name: AI-Driven Development Day
     link: https://aidd.io/ai-driven-development-day
-    start_date: '2025-09-10'
-    end_date: '2025-09-10'
+    start_date: "2025-09-10"
+    end_date: "2025-09-10"
     location: Online
     type: conference
   talks:
@@ -118,17 +132,17 @@
   event:
     name: MelbJS
     link: https://melbjs.com/
-    start_date: '2025-09-10'
-    end_date: '2025-09-10'
+    start_date: "2025-09-10"
+    end_date: "2025-09-10"
     location: Melbourne, Australia
     type: meetup
   talks:
-    - title: 'Practical Web AI: Built-in, Browser Based, Brilliant'
+    - title: "Practical Web AI: Built-in, Browser Based, Brilliant"
 - id: gdg-melbourne-08-2025
   event:
     name: GDG Melbourne
     link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-melbourne-august-meetup-3/
-    start_date: '2025-08-27'
+    start_date: "2025-08-27"
     location: Melbourne, Australia
     type: meetup
   talks:
@@ -138,16 +152,16 @@
     name: GDG on Campus Monash University
     link: >-
       https://gdg.community.dev/events/details/google-gdg-on-campus-monash-university-melbourne-australia-presents-build-with-ai-build-agents-with-gemini/
-    start_date: '2025-08-21'
+    start_date: "2025-08-21"
     location: Melbourne, Australia
     type: meetup
   talks:
-    - title: 'Build with AI: Build Agents with Gemini'
+    - title: "Build with AI: Build Agents with Gemini"
 - id: agentcon-2025-perth-2025
   event:
     name: AgentCon 2025 Perth
     link: https://globalai.community/chapters/perth/events/agentcon-2025-perth/
-    start_date: '2025-06-20'
+    start_date: "2025-06-20"
     location: Perth, Australia
     type: conference
   talks:
@@ -156,19 +170,19 @@
   event:
     name: JSNation
     link: https://jsnation.com/
-    start_date: '2025-06-12'
-    end_date: '2025-06-16'
+    start_date: "2025-06-12"
+    end_date: "2025-06-16"
     location: Amsterdam, The Netherlands
     type: conference
   talks:
-    - title: 'Practical Web AI: Built-In, Browser Based, Brilliant'
+    - title: "Practical Web AI: Built-In, Browser Based, Brilliant"
       video: https://gitnation.com/contents/the-built-in-browser-based-babelfish
 - id: frontend-nation-2025
   event:
     name: Frontend Nation
     link: https://frontendnation.com/
-    start_date: '2025-06-03'
-    end_date: '2025-06-05'
+    start_date: "2025-06-03"
+    end_date: "2025-06-05"
     location: Online
     type: conference
   talks:
@@ -178,8 +192,8 @@
   event:
     name: ./NEW
     link: https://slashnew.tech/
-    start_date: '2025-05-28'
-    end_date: '2025-05-29'
+    start_date: "2025-05-28"
+    end_date: "2025-05-29"
     location: Newcastle, Australia
     type: conference
   talks:
@@ -188,8 +202,8 @@
   event:
     name: NDC Oslo
     link: https://ndcoslo.com/speakers/phil-nash
-    start_date: '2025-05-19'
-    end_date: '2025-05-23'
+    start_date: "2025-05-19"
+    end_date: "2025-05-23"
     location: Oslo, Norway
     type: conference
   talks:
@@ -198,10 +212,10 @@
       video: https://www.youtube.com/watch?v=fjJyr75dWhs
 - id: twilio-signal-2025
   event:
-    name: Twilio SIGNAL
+    name: "Twilio SIGNAL 2025"
     link: https://signal.twilio.com/2025/session/3022551/building-genai-email-agents-with-twilio-sendgrid-langflow
-    start_date: '2025-05-14'
-    end_date: '2025-05-15'
+    start_date: "2025-05-14"
+    end_date: "2025-05-15"
     location: San Francisco, USA
     type: conference
   talks:
@@ -210,8 +224,8 @@
   event:
     name: NDC Melbourne
     link: https://ndcmelbourne.com/speakers/phil-nash/eb969d10f9a6
-    start_date: '2025-04-29'
-    end_date: '2025-05-01'
+    start_date: "2025-04-29"
+    end_date: "2025-05-01"
     location: Melbourne, Australia
     type: conference
   talks:
@@ -224,7 +238,7 @@
     name: GDG Melbourne (Cloud)
     link: >-
       https://gdg.community.dev/events/details/google-gdg-melbourne-presents-buildwithai-gdg-melbourne-cloud-march-meetup/
-    start_date: '2025-03-26'
+    start_date: "2025-03-26"
     location: Melbourne, Australia
     type: meetup
   talks:
@@ -235,7 +249,7 @@
     name: GDSC Melbourne
     link: >-
       https://gdg.community.dev/events/details/google-gdg-on-campus-university-of-melbourne-melbourne-australia-presents-building-agents-with-gemini-gdsc-melbourne-x-swinburne-collab/
-    start_date: '2025-03-25'
+    start_date: "2025-03-25"
     location: Melbourne, Australia
     type: meetup
   talks:
@@ -244,7 +258,7 @@
   event:
     name: Programmable Sydney
     link: https://www.programmable.tech/
-    start_date: '2025-03-20'
+    start_date: "2025-03-20"
     location: Sydney, Australia
     type: conference
   talks:
@@ -254,7 +268,7 @@
   event:
     name: Programmable Melbourne
     link: https://www.programmable.tech/
-    start_date: '2025-03-18'
+    start_date: "2025-03-18"
     location: Melbourne, Australia
     type: conference
   talks:
@@ -265,8 +279,8 @@
   event:
     name: NDC London
     link: https://ndclondon.com/
-    start_date: '2025-01-29'
-    end_date: '2025-01-31'
+    start_date: "2025-01-29"
+    end_date: "2025-01-31"
     location: London, UK
     type: conference
   talks:
@@ -275,10 +289,10 @@
       video: https://www.youtube.com/watch?v=cwxH9cxW-wQ
 - id: web-directions-dev-summit-2024
   event:
-    name: 'Web Directions: Dev Summit'
+    name: "Web Directions: Dev Summit"
     link: https://webdirections.org/dev-summit/speakers/phil-nash.php
-    start_date: '2024-11-27'
-    end_date: '2024-11-28'
+    start_date: "2024-11-27"
+    end_date: "2024-11-28"
     location: Sydney, Australia
     type: conference
   talks:
@@ -288,7 +302,7 @@
   event:
     name: DDD Perth
     link: https://dddperth.com/agenda/2024/talk/717983
-    start_date: '2024-11-16'
+    start_date: "2024-11-16"
     location: Perth, Australia
     type: conference
   talks:
@@ -298,8 +312,8 @@
   event:
     name: JSNation US
     link: https://jsnation.us/
-    start_date: '2024-11-18'
-    end_date: '2024-11-21'
+    start_date: "2024-11-18"
+    end_date: "2024-11-21"
     location: New York City, USA and online
     type: conference
   talks:
@@ -309,19 +323,19 @@
   event:
     name: XtremeJS 2024
     link: https://xtremejs.dev/2024
-    start_date: '2024-11-12'
+    start_date: "2024-11-12"
     location: online
     type: conference
   talks:
-    - title: 'Total ReDoS: The Dangers of regex in JavaScript'
+    - title: "Total ReDoS: The Dangers of regex in JavaScript"
       video: https://www.youtube.com/watch?v=AMm1u3xgiHw
       slides: https://docs.google.com/presentation/d/1e1bIAUUyRkaCwN98GmHuqoe5zLjm6bxXJyuWCzmscXM/edit?usp=sharing
 - id: ndc-porto-2024
   event:
     name: NDC Porto
     link: https://ndcporto.com/speakers/phil-nash
-    start_date: '2024-10-16'
-    end_date: '2024-10-18'
+    start_date: "2024-10-16"
+    end_date: "2024-10-18"
     location: Porto, Portugal
     type: conference
   talks:
@@ -333,7 +347,7 @@
     name: GDG Cloud Melbourne
     link: >-
       https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-cloud-melbourne-hands-on-workshop-devfest-2024-special/
-    start_date: '2024-09-30'
+    start_date: "2024-09-30"
     location: Melbourne, Australia
     type: meetup
   talks:
@@ -342,18 +356,18 @@
   event:
     name: Replay
     link: https://replay2024.sched.com/speaker/phil_nash.278h9go6
-    start_date: '2024-09-18'
-    end_date: '2024-09-20'
+    start_date: "2024-09-18"
+    end_date: "2024-09-20"
     location: Seattle, USA
     type: conference
   talks:
-    - title: 'Durable RAG: productionising generative AI workflows'
+    - title: "Durable RAG: productionising generative AI workflows"
       video: https://www.youtube.com/watch?v=idopNteBjgg
 - id: melbjs-09-2024
   event:
     name: MelbJS
     link: https://melbjs.com/
-    start_date: '2024-09-11'
+    start_date: "2024-09-11"
     location: Melbourne, Australia
     type: meetup
   talks:
@@ -363,19 +377,19 @@
   event:
     name: Copenhagen Developers Festival
     link: https://cphdevfest.com/
-    start_date: '2024-08-26'
-    end_date: '2024-08-30'
+    start_date: "2024-08-26"
+    end_date: "2024-08-30"
     location: Copenhagen, Denmark
     type: conference
   talks:
-    - title: 'Total ReDoS: the dangers of regex in JavaScript'
+    - title: "Total ReDoS: the dangers of regex in JavaScript"
       video: https://www.youtube.com/watch?v=4_BlI_kNulY
 - id: we-are-developers-world-congress-2024
   event:
     name: We Are Developers World Congress
     link: https://www.wearedevelopers.com/world-congress/
-    start_date: '2024-07-17'
-    end_date: '2024-07-19'
+    start_date: "2024-07-17"
+    end_date: "2024-07-19"
     location: Berlin, Germany
     type: conference
   talks:
@@ -385,7 +399,7 @@
   event:
     name: Google I/O Extended Brisbane 2024
     link: https://google-io-extended-brisbane-2024.sessionize.com/
-    start_date: '2024-07-13'
+    start_date: "2024-07-13"
     location: Brisbane, Australia
     type: conference
   talks:
@@ -396,8 +410,8 @@
   event:
     name: AI Engineer World's Fair
     link: https://www.ai.engineer/worldsfair
-    start_date: '2024-06-25'
-    end_date: '2024-06-27'
+    start_date: "2024-06-25"
+    end_date: "2024-06-27"
     location: San Francisco, USA
     type: conference
   talks:
@@ -405,12 +419,12 @@
       slides: https://docs.google.com/presentation/d/1LAPKtHiPEHDeC6b6_6FmqnMK3RpGwOstUpppyHsNK6w/edit?usp=sharing
 - id: web-directions-code-2024
   event:
-    name: 'Web Directions: Code'
+    name: "Web Directions: Code"
     link: https://webdirections.org/code/speakers/phil-nash.php
-    start_date: '2024-06-20'
-    end_date: '2024-06-21'
+    start_date: "2024-06-20"
+    end_date: "2024-06-21"
     location: Melbourne, Australia
-    type: conference 
+    type: conference
   talks:
     - title: Upgrading JavaScript's collections
       slides: https://philnash.github.io/talks/upgrading-javascripts-collections/
@@ -418,8 +432,8 @@
   event:
     name: React Summit
     link: https://reactsummit.com/
-    start_date: '2024-06-14'
-    end_date: '2024-06-18'
+    start_date: "2024-06-14"
+    end_date: "2024-06-18"
     location: Amsterdam, The Netherlands
     type: conference
   roles:
@@ -428,12 +442,12 @@
   event:
     name: JSNation
     link: https://jsnation.com/
-    start_date: '2024-06-13'
-    end_date: '2024-06-17'
+    start_date: "2024-06-13"
+    end_date: "2024-06-17"
     location: Amsterdam, The Netherlands
     type: conference
   talks:
-    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
+    - title: "Conquering Complexity: Refactoring JavaScript Projects"
       slides: https://philnash.github.io/talks/conquering-complexity/
       video: https://gitnation.com/contents/conquering-complexity-refactoring-javascript-projects
   roles:
@@ -442,46 +456,46 @@
   event:
     name: International JavaScript Conference San Diego
     link: https://javascript-conference.com/speaker/nashphil/
-    start_date: '2024-05-21'
-    end_date: '2024-05-22'
+    start_date: "2024-05-21"
+    end_date: "2024-05-22"
     location: San Diego, California, USA
     type: conference
   talks:
-    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
+    - title: "Conquering Complexity: Refactoring JavaScript Projects"
       slides: https://docs.google.com/presentation/d/1bgsBjkUsTUK50oGGxHH_H0wazfnxc_IcJwSIVwy27NM/edit?usp=sharing
-    - title: 'Total ReDoS: the Dangers of Regex in JavaScript'
+    - title: "Total ReDoS: the Dangers of Regex in JavaScript"
       slides: https://docs.google.com/presentation/d/1e1bIAUUyRkaCwN98GmHuqoe5zLjm6bxXJyuWCzmscXM/edit?usp=sharing
 - id: new-2024
   event:
     name: ../NEW
     link: https://slashnew.tech/
-    start_date: '2024-05-15'
-    end_date: '2024-05-16'
+    start_date: "2024-05-15"
+    end_date: "2024-05-16"
     location: Newcastle, Australia
     type: conference
   talks:
-    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
+    - title: "Conquering Complexity: Refactoring JavaScript Projects"
       slides: https://docs.google.com/presentation/d/1bgsBjkUsTUK50oGGxHH_H0wazfnxc_IcJwSIVwy27NM/edit?usp=sharing
 - id: great-international-developer-summit-2024
   event:
     name: Great International Developer Summit
     link: https://developersummit.com/speaker/phil-nash
-    start_date: '2024-04-23'
-    end_date: '2024-04-26'
+    start_date: "2024-04-23"
+    end_date: "2024-04-26"
     location: Bangalore, India
     type: conference
   talks:
-    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
+    - title: "Conquering Complexity: Refactoring JavaScript Projects"
       slides: https://docs.google.com/presentation/d/1bgsBjkUsTUK50oGGxHH_H0wazfnxc_IcJwSIVwy27NM/edit?usp=sharing
       video: https://www.youtube.com/watch?v=gSe-EJOJ2nw
-    - title: 'Total ReDoS: the Dangers of Regex in JavaScript'
+    - title: "Total ReDoS: the Dangers of Regex in JavaScript"
       video: https://www.youtube.com/watch?v=3nMACGq-xvQ
       slides: https://docs.google.com/presentation/d/1e1bIAUUyRkaCwN98GmHuqoe5zLjm6bxXJyuWCzmscXM/edit?usp=sharing
 - id: xtremejs-2023
   event:
     name: XtremeJS 2023
     link: https://xtremejs.dev/2023/
-    start_date: '2024-04-09'
+    start_date: "2024-04-09"
     location: Online
     type: conference
   talks:
@@ -492,29 +506,29 @@
   event:
     name: Programmable Sydney
     link: https://www.programmable.tech/
-    start_date: '2024-03-21'
+    start_date: "2024-03-21"
     location: Sydney, Australia
     type: conference
   talks:
-    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
+    - title: "Conquering Complexity: Refactoring JavaScript Projects"
       slides: https://philnash.github.io/talks/conquering-complexity/
 - id: programmable-melbourne-2024
   event:
     name: Programmable Melbourne
     link: https://www.programmable.tech/
-    start_date: '2024-03-19'
+    start_date: "2024-03-19"
     location: Melbourne, Australia
     type: conference
   talks:
-    - title: 'Conquering Complexity: Refactoring JavaScript Projects'
+    - title: "Conquering Complexity: Refactoring JavaScript Projects"
       slides: https://philnash.github.io/talks/conquering-complexity/
       video: https://www.youtube.com/watch?v=DpDIMICWdoQ
 - id: devworld-2024
   event:
     name: DevWorld
     link: https://devworldconference.com/jsworld-conference
-    start_date: '2024-02-29'
-    end_date: '2024-03-01'
+    start_date: "2024-02-29"
+    end_date: "2024-03-01"
     location: Amsterdam, The Netherlands
     type: conference
   talks:
@@ -526,8 +540,8 @@
     name: DeveloperWeek
     link: >-
       https://developerweek2024.sched.com/event/1WhHr/pro-talk-the-top-5-javascript-issues-in-all-our-codebases?iframe=no
-    start_date: '2024-02-21'
-    end_date: '2024-02-23'
+    start_date: "2024-02-21"
+    end_date: "2024-02-23"
     location: Oakland, California, USA
     type: conference
   talks:
@@ -537,18 +551,18 @@
   event:
     name: NDC Sydney
     link: https://ndcsydney.com/speakers/phil-nash
-    start_date: '2024-02-14'
-    end_date: '2024-02-16'
+    start_date: "2024-02-14"
+    end_date: "2024-02-16"
     location: Sydney, Australia
     type: conference
   talks:
-    - title: 'Conquering complexity: refactoring JavaScript projects'
+    - title: "Conquering complexity: refactoring JavaScript projects"
       slides: https://philnash.github.io/talks/conquering-complexity/
 - id: singapore-computer-society-2024
   event:
     name: Singapore Computer Society
     link: https://www.scs.org.sg/events/details/what-is-clean-code-and-why-does-it-matter
-    start_date: '2024-02-02'
+    start_date: "2024-02-02"
     location: Online
     type: meetup
   talks:
@@ -557,7 +571,7 @@
   event:
     name: Angular Melbourne
     link: https://www.meetup.com/angular-melbourne/events/297244000/
-    start_date: '2023-12-07'
+    start_date: "2023-12-07"
     location: Melbourne, Australia
     type: meetup
   talks:
@@ -567,7 +581,7 @@
   event:
     name: HalfStack on the Shore(ditch) (London)
     link: https://halfstackconf.com/london#phil-nash
-    start_date: '2023-11-15'
+    start_date: "2023-11-15"
     location: London, UK
     type: conference
   talks:
@@ -578,8 +592,8 @@
   event:
     name: Øredev
     link: https://oredev.org/line-up/phil-nash
-    start_date: '2023-11-08'
-    end_date: '2023-11-10'
+    start_date: "2023-11-08"
+    end_date: "2023-11-10"
     location: Malmö, Sweden
     type: conference
   talks:
@@ -593,8 +607,8 @@
   event:
     name: Web Directions Summit
     link: https://webdirections.org/summit/speakers/phil-nash.php
-    start_date: '2023-10-26'
-    end_date: '2023-10-27'
+    start_date: "2023-10-26"
+    end_date: "2023-10-27"
     location: Sydney, Australia
     type: conference
   talks:
@@ -603,8 +617,8 @@
 - id: ndc-porto-2023
   event:
     name: NDC Porto
-    start_date: '2023-10-18'
-    end_date: '2023-10-20'
+    start_date: "2023-10-18"
+    end_date: "2023-10-20"
     location: Porto, Portugal
     link: https://ndcporto.com/speakers/phil-nash
     type: conference
@@ -616,12 +630,12 @@
   event:
     name: All Things Open
     link: https://2023.allthingsopen.org/speakers/phil-nash/
-    start_date: '2023-10-15'
-    end_date: '2023-10-17'
+    start_date: "2023-10-15"
+    end_date: "2023-10-17"
     location: Raleigh, North Carolina, USA
     type: conference
   talks:
-    - title: 'Total ReDoS: the dangers of regex in JavaScript'
+    - title: "Total ReDoS: the dangers of regex in JavaScript"
     - title: The State of Passwordless Auth on the Web
       video: https://www.youtube.com/watch?v=wyzZWwb3IxU
       slides: https://philnash.github.io/talks/state-of-passwordless/
@@ -629,8 +643,8 @@
   event:
     name: LibertyJS
     link: https://libertyjs.com/
-    start_date: '2023-10-12'
-    end_date: '2023-10-13'
+    start_date: "2023-10-12"
+    end_date: "2023-10-13"
     location: Philadelphia, Pennsylvania, USA
     type: conference
   talks:
@@ -640,7 +654,7 @@
   event:
     name: GDG Melbourne DevFest
     link: https://gdg-melbourne-devfest-2023.sessionize.com/
-    start_date: '2023-10-07'
+    start_date: "2023-10-07"
     location: Melbourne, Australia
     type: conference
   talks:
@@ -651,7 +665,7 @@
   event:
     name: MelbJS
     link: https://melbjs.com/
-    start_date: '2023-08-09'
+    start_date: "2023-08-09"
     location: Melbourne, Australia
     type: meetup
   talks:
@@ -661,8 +675,8 @@
   event:
     name: We Are Developers World Congress
     link: https://www.wearedevelopers.com/world-congress/
-    start_date: '2023-07-27'
-    end_date: '2023-07-28'
+    start_date: "2023-07-27"
+    end_date: "2023-07-28"
     location: Berlin, Germany
     type: conference
   talks:
@@ -672,8 +686,8 @@
   event:
     name: DevBcn
     link: https://www.devbcn.com/speaker/3b179d77-02a0-4d36-8cf2-eb969d10f9a6
-    start_date: '2023-07-03'
-    end_date: '2023-07-05'
+    start_date: "2023-07-03"
+    end_date: "2023-07-05"
     location: Barcelona, Spain
     type: conference
   talks:
@@ -683,8 +697,8 @@
   event:
     name: DevTalks
     link: https://www.devtalks.ro/speakers/182-phil-nash
-    start_date: '2023-06-21'
-    end_date: '2023-06-22'
+    start_date: "2023-06-21"
+    end_date: "2023-06-22"
     location: Bucharest, Romania
     type: conference
   talks:
@@ -692,10 +706,10 @@
       slides: https://philnash.github.io/talks/top-5-javascript-issues-in-all-our-codebases/
 - id: web-directions-code-2023
   event:
-    name: 'Web Directions: Code'
+    name: "Web Directions: Code"
     link: https://webdirections.org/code/speakers/phil-nash.php
-    start_date: '2023-06-08'
-    end_date: '2023-06-09'
+    start_date: "2023-06-08"
+    end_date: "2023-06-09"
     location: Melbourne, Australia
     type: conference
   talks:
@@ -705,8 +719,8 @@
   event:
     name: JSNation
     link: https://jsnation.com/
-    start_date: '2023-06-01'
-    end_date: '2023-06-05'
+    start_date: "2023-06-01"
+    end_date: "2023-06-05"
     location: Amsterdam, The Netherlands and online
     type: conference
   talks:
@@ -717,8 +731,8 @@
   event:
     name: CityJS Athens
     link: https://greece.cityjsconf.org/
-    start_date: '2023-05-29'
-    end_date: '2023-05-31'
+    start_date: "2023-05-29"
+    end_date: "2023-05-31"
     location: Athens, Greece
     type: conference
   talks:
@@ -729,8 +743,8 @@
   event:
     name: NDC Oslo
     link: https://ndcoslo.com/speakers/phil-nash
-    start_date: '2023-05-24'
-    end_date: '2023-05-26'
+    start_date: "2023-05-24"
+    end_date: "2023-05-26"
     location: Oslo, Norway
     type: conference
   talks:
@@ -744,7 +758,7 @@
   event:
     name: JSConf India pre-event virtual meetup
     link: https://lu.ma/jsconf-india-online-preevent-meetup
-    start_date: '2023-05-18'
+    start_date: "2023-05-18"
     location: Online
     type: meetup
   talks:
@@ -755,8 +769,8 @@
   event:
     name: Global TypeScript Summit
     link: https://events.geekle.us/typescript/
-    start_date: '2023-05-09'
-    end_date: '2023-05-10'
+    start_date: "2023-05-09"
+    end_date: "2023-05-10"
     location: Online
     type: conference
   talks:
@@ -766,8 +780,8 @@
   event:
     name: jsDay
     link: https://2023.jsday.it/talks_speakers/#Phil%20Nash
-    start_date: '2023-04-13'
-    end_date: '2023-04-14'
+    start_date: "2023-04-13"
+    end_date: "2023-04-14"
     location: Verona, Italy
     type: conference
   talks:
@@ -777,7 +791,7 @@
   event:
     name: Programmable Sydney
     link: https://www.programmable.tech/
-    start_date: '2023-03-30'
+    start_date: "2023-03-30"
     location: Sydney, Australia
     type: conference
   talks:
@@ -787,7 +801,7 @@
   event:
     name: Programmable Melbourne
     link: https://www.programmable.tech/
-    start_date: '2023-03-28'
+    start_date: "2023-03-28"
     location: Melbourne, Australia
     type: conference
   talks:
@@ -796,10 +810,10 @@
       slides: https://philnash.github.io/talks/state-of-passwordless/
 - id: web-directions-summit-2022
   event:
-    name: 'Web Directions: Summit'
+    name: "Web Directions: Summit"
     link: https://webdirections.org/summit/speakers/phil-nash.php
-    start_date: '2022-12-01'
-    end_date: '2022-12-02'
+    start_date: "2022-12-01"
+    end_date: "2022-12-02"
     location: Sydney, Australia
     type: conference
   talks:
@@ -809,8 +823,8 @@
   event:
     name: NDC Sydney
     link: https://ndcsydney.com/agenda/the-state-of-passwordless-auth-on-the-web-05ns/059jcntqxlz
-    start_date: '2022-10-12'
-    end_date: '2022-10-14'
+    start_date: "2022-10-12"
+    end_date: "2022-10-14"
     location: Sydney, Australia
     type: conference
   talks:
@@ -820,8 +834,8 @@
   event:
     name: DDD Perth
     link: https://dddperth.com/agenda?sessionId=23846d72-9902-4e32-9077-e48e1587e399
-    start_date: '2022-09-10'
-    end_date: '2022-09-10'
+    start_date: "2022-09-10"
+    end_date: "2022-09-10"
     location: Perth, Australia
     type: conference
   talks:
@@ -831,8 +845,8 @@
   event:
     name: Fenders Perth
     link: https://www.meetup.com/front-end-web-developers-perth/events/287602602/
-    start_date: '2022-09-07'
-    end_date: '2022-09-07'
+    start_date: "2022-09-07"
+    end_date: "2022-09-07"
     location: Perth, Australia
     type: meetup
   talks:
@@ -841,7 +855,7 @@
   event:
     name: MelbJS
     link: http://melbjs.com/
-    start_date: '2022-08-10'
+    start_date: "2022-08-10"
     location: Melbourne, Australia
     type: meetup
   talks:
@@ -850,7 +864,7 @@
   event:
     name: CityJS Singapore
     link: https://singapore.cityjsconf.org/
-    start_date: '2022-07-29'
+    start_date: "2022-07-29"
     location: Singapore
     type: conference
   talks:
@@ -860,8 +874,8 @@
   event:
     name: NDC Melbourne
     link: https://ndcmelbourne.com/speakers/phil-nash
-    start_date: '2022-06-20'
-    end_date: '2022-06-24'
+    start_date: "2022-06-20"
+    end_date: "2022-06-24"
     location: Melbourne, Australia
     type: conference
   talks:
@@ -872,8 +886,8 @@
   event:
     name: Apidays Interface
     link: https://www.apidays.global/interface/
-    start_date: '2022-06-08'
-    end_date: '2022-06-10'
+    start_date: "2022-06-08"
+    end_date: "2022-06-10"
     location: Online
     type: conference
   talks:
@@ -883,8 +897,8 @@
   event:
     name: Apidays Singapore
     link: https://www.apidays.global/singapore/
-    start_date: '2022-04-20'
-    end_date: '2022-04-21'
+    start_date: "2022-04-20"
+    end_date: "2022-04-21"
     location: Online
     type: conference
   talks:
@@ -894,7 +908,7 @@
   event:
     name: BrisJS
     link: https://www.meetup.com/brisjs/events/nvkmpsydcgbgb/
-    start_date: '2022-04-11'
+    start_date: "2022-04-11"
     location: Online
     type: meetup
   talks:
@@ -904,7 +918,7 @@
   event:
     name: Quantum Information Technology Convention
     link: https://www.facebook.com/qitcxu/posts/pfbid0Q2qWpuT5oZNav6JzS1qjtLfNQWvqJ7zT61CC9ri9BCKKKEun9agJstfuEtU4SmBml
-    start_date: '2022-04-02'
+    start_date: "2022-04-02"
     location: Online
     type: conference
   talks:
@@ -913,7 +927,7 @@
   event:
     name: js.la
     link: https://js.la/
-    start_date: '2022-02-24'
+    start_date: "2022-02-24"
     location: Online
     type: meetup
   talks:
@@ -923,7 +937,7 @@
   event:
     name: Voxxed Days Sydney
     link: https://australia.voxxeddays.com/speakers
-    start_date: '2022-02-17'
+    start_date: "2022-02-17"
     location: Sydney, Australia
     type: conference
   talks:
@@ -932,26 +946,26 @@
   event:
     name: Voxxed Days Melbourne
     link: https://australia.voxxeddays.com/speakers
-    start_date: '2022-02-15'
+    start_date: "2022-02-15"
     location: Melbourne, Australia
     type: conference
   talks:
     - title: 4 Steps from JavaScript to TypeScript
 - id: web-directions-safe-2021
   event:
-    name: 'Web Directions: Safe'
+    name: "Web Directions: Safe"
     link: https://webdirections.org/safe21/speakers/phil-nash.php
-    start_date: '2021-12-03'
-    end_date: '2021-12-10'
+    start_date: "2021-12-03"
+    end_date: "2021-12-10"
     location: Online
     type: conference
   talks:
-    - title: 'Auth on the web: better experiences'
+    - title: "Auth on the web: better experiences"
 - id: ndc-sydney-2021
   event:
     name: NDC Sydney
     link: https://ndcsydney.com/
-    start_date: '2021-11-05'
+    start_date: "2021-11-05"
     location: Online
     type: conference
   talks:
@@ -961,8 +975,8 @@
   event:
     name: DevCon
     link: https://www.dev-con.ro/speakers/55-Phil+Nash
-    start_date: '2021-11-03'
-    end_date: '2021-11-04'
+    start_date: "2021-11-03"
+    end_date: "2021-11-04"
     location: Online
     type: conference
   talks:
@@ -971,18 +985,18 @@
   event:
     name: API World
     link: https://embed.emamo.com/event/api-world-2021/s/pro-talk-api-better-api-dx-with-a-cli-orYw5W
-    start_date: '2021-10-26'
-    end_date: '2021-10-28'
+    start_date: "2021-10-26"
+    end_date: "2021-10-28"
     location: Online
     type: conference
   talks:
     - title: Better API DX with a CLI
 - id: twilio-signal-2021
   event:
-    name: Twilio SIGNAL
+    name: "Twilio SIGNAL 2021"
     link: https://signal.twilio.com/2021/virtual/sessions/27527/twilio-webrtc-go
-    start_date: '2021-10-20'
-    end_date: '2021-10-21'
+    start_date: "2021-10-20"
+    end_date: "2021-10-21"
     location: Online
     type: conference
   talks:
@@ -992,8 +1006,8 @@
   event:
     name: PyConline AU
     link: https://2021.pycon.org.au/program/3B8SEP/
-    start_date: '2021-09-10'
-    end_date: '2021-09-12'
+    start_date: "2021-09-10"
+    end_date: "2021-09-12"
     location: Online
     type: conference
   talks:
@@ -1005,8 +1019,8 @@
   event:
     name: Full Stack Day New Zealand
     link: https://www.fullstackday.com/
-    start_date: '2021-08-19'
-    end_date: '2021-08-27'
+    start_date: "2021-08-19"
+    end_date: "2021-08-27"
     location: Online
     type: conference
   talks:
@@ -1015,8 +1029,8 @@
   event:
     name: Apidays Live Hong Kong
     link: https://www.apidays.global/hongkong/
-    start_date: '2021-08-25'
-    end_date: '2021-08-26'
+    start_date: "2021-08-25"
+    end_date: "2021-08-26"
     location: Online
     type: conference
   talks:
@@ -1024,10 +1038,10 @@
       video: https://www.youtube.com/watch?v=NnrIMxGFdB8&list=PLmEaqnTJ40OrND8VYk-I631D15K7V-UpQ&index=24
 - id: web-directions-global-scope-2021
   event:
-    name: 'Web Directions: Global Scope'
+    name: "Web Directions: Global Scope"
     link: https://webdirections.org/globalscope/speakers/phil-nash.php
-    start_date: '2021-08-06'
-    end_date: '2021-08-13'
+    start_date: "2021-08-06"
+    end_date: "2021-08-13"
     location: Online
     type: conference
   talks:
@@ -1036,8 +1050,8 @@
   event:
     name: NDC Melbourne
     link: https://ndcmelbourne.com/agenda/4-steps-from-javascript-to-typescript/816d66198fc9
-    start_date: '2021-07-29'
-    end_date: '2021-07-29'
+    start_date: "2021-07-29"
+    end_date: "2021-07-29"
     location: Online
     type: conference
   talks:
@@ -1047,8 +1061,8 @@
   event:
     name: Apidays Interface
     link: https://www.apidays.global/interface/
-    start_date: '2021-06-30'
-    end_date: '2021-07-02'
+    start_date: "2021-06-30"
+    end_date: "2021-07-02"
     location: Online
     type: conference
   talks:
@@ -1058,8 +1072,8 @@
   event:
     name: GIDS Live 2021
     link: https://saltmarch.com/watch/youre-on-mute-webrtc-and-our-lives-on-screen
-    start_date: '2021-04-27'
-    end_date: '2021-04-30'
+    start_date: "2021-04-27"
+    end_date: "2021-04-30"
     location: Online
     type: conference
   talks:
@@ -1071,7 +1085,7 @@
   event:
     name: Apidays Live Jakarta
     link: https://www.apidays.global/jakarta/
-    start_date: '2021-02-24'
+    start_date: "2021-02-24"
     location: Online
     type: conference
   talks:
@@ -1082,8 +1096,8 @@
   event:
     name: DeveloperWeek
     link: https://embed.emamo.com/event/developerweek-2021/r/speaker/phil-nash
-    start_date: '2021-02-15'
-    end_date: '2021-02-19'
+    start_date: "2021-02-15"
+    end_date: "2021-02-19"
     location: Online
     type: conference
   talks:
@@ -1093,7 +1107,7 @@
   event:
     name: SydCSS December - Wheel of Talks
     link: https://www.meetup.com/SydCSS/events/274659980/
-    start_date: '2020-12-10'
+    start_date: "2020-12-10"
     location: Online
     type: meetup
   talks:
@@ -1103,7 +1117,7 @@
   event:
     name: DevFest Romania
     link: https://gdg.community.dev/events/details/google-gdg-bucharest-presents-devfest-romania-2020-with-gdg/#/
-    start_date: '2020-10-17'
+    start_date: "2020-10-17"
     location: Online
     type: conference
   talks:
@@ -1113,8 +1127,8 @@
   event:
     name: NDC Sydney
     link: https://ndcsydney.com/agenda/javascript-for-emails-are-you-sure-0vwj/07v1epjp0tz
-    start_date: '2020-10-12'
-    end_date: '2020-10-16'
+    start_date: "2020-10-12"
+    end_date: "2020-10-16"
     location: Online
     type: conference
   talks:
@@ -1124,8 +1138,8 @@
   event:
     name: Apidays Live Hong Kong
     link: https://www.apidays.co/hongkong/
-    start_date: '2020-10-08'
-    end_date: '2020-10-08'
+    start_date: "2020-10-08"
+    end_date: "2020-10-08"
     location: Online
     type: conference
   talks:
@@ -1133,10 +1147,10 @@
       video: https://www.youtube.com/watch?v=BzuwvN1D3-w&list=PLmEaqnTJ40OopeQY8swTurSDCic0g6cOT&index=31&t=1s
 - id: twilio-signal-2020
   event:
-    name: Twilio SIGNAL
+    name: "Twilio SIGNAL 2020"
     link: https://signal.twilio.com/sessions/XLS8fublEeqag6aE6N7X3w
-    start_date: '2020-09-30'
-    end_date: '2020-10-01'
+    start_date: "2020-09-30"
+    end_date: "2020-10-01"
     location: Online
     type: conference
   talks:
@@ -1145,8 +1159,8 @@
   event:
     name: GIDS.Web Live
     link: https://saltmarch.com/watch/4-steps-from-javascript-to-typescript
-    start_date: '2020-10-01'
-    end_date: '2020-10-02'
+    start_date: "2020-10-01"
+    end_date: "2020-10-02"
     location: Online
     type: conference
   talks:
@@ -1154,9 +1168,9 @@
       video: https://saltmarch.com/watch/4-steps-from-javascript-to-typescript
 - id: web-directions-coderemote-2020
   event:
-    name: 'Web Directions: Code://Remote'
-    start_date: '2020-09-04'
-    end_date: '2020-09-25'
+    name: "Web Directions: Code://Remote"
+    start_date: "2020-09-04"
+    end_date: "2020-09-25"
     link: https://www.webdirections.org/code/speakers/phil-nash.php
     location: Online
     type: conference
@@ -1165,8 +1179,8 @@
 - id: noruko-2020
   event:
     name: NoRuKo
-    start_date: '2020-08-21'
-    end_date: '2020-08-21'
+    start_date: "2020-08-21"
+    end_date: "2020-08-21"
     link: https://noruko.org/
     location: Online
     type: conference
@@ -1177,8 +1191,8 @@
 - id: apidays-live-singapore-2020
   event:
     name: Apidays Live Singapore
-    start_date: '2020-08-19'
-    end_date: '2020-08-20'
+    start_date: "2020-08-19"
+    end_date: "2020-08-20"
     link: https://www.apidays.co/singapore/
     location: Online
     type: conference
@@ -1188,8 +1202,8 @@
       video: https://www.youtube.com/watch?v=44jbv3UmcKc&list=PLmEaqnTJ40OrWk_9mQMfbrIjoOZf3-My-&index=23
 - id: techweek2020-developer-happiness-tooling-2020
   event:
-    name: 'Techweek2020: Developer happiness tooling'
-    start_date: '2020-07-30'
+    name: "Techweek2020: Developer happiness tooling"
+    start_date: "2020-07-30"
     link: https://stripe.events/developertoolingmeetup
     location: Online
     type: meetup
@@ -1198,8 +1212,8 @@
 - id: devtalks-reimagined-2020
   event:
     name: DevTalks Reimagined
-    start_date: '2020-06-10'
-    end_date: '2020-06-12'
+    start_date: "2020-06-10"
+    end_date: "2020-06-12"
     link: https://www.devtalks.ro/
     location: Online
     type: conference
@@ -1209,7 +1223,7 @@
 - id: wfhconf-2020
   event:
     name: WFHConf
-    start_date: '2020-03-26'
+    start_date: "2020-03-26"
     link: https://community.nearform.com/wfh-conf
     location: Online
     type: conference
@@ -1220,7 +1234,7 @@
 - id: melbjs-02-2020
   event:
     name: MelbJS
-    start_date: '2020-02-12'
+    start_date: "2020-02-12"
     link: http://melbjs.com/
     location: Melbourne, Australia
     type: meetup
@@ -1230,7 +1244,7 @@
 - id: melbourne-css-02-2020
   event:
     name: Melbourne CSS
-    start_date: '2020-02-05'
+    start_date: "2020-02-05"
     link: https://www.meetup.com/Melbourne-CSS/events/268280784/
     location: Melbourne, Australia
     type: meetup
@@ -1241,7 +1255,7 @@
 - id: stripe-developer-meetup-2019
   event:
     name: Stripe Developer Meetup
-    start_date: '2019-11-27'
+    start_date: "2019-11-27"
     link: https://stripe.events/devmeetup-melbourne-nov2019
     location: Melbourne, Australia
     type: meetup
@@ -1251,7 +1265,7 @@
 - id: devfest-melbourne-2019
   event:
     name: DevFest Melbourne
-    start_date: '2019-11-09'
+    start_date: "2019-11-09"
     link: https://yowconference.com/melbournedevfest/
     location: Melbourne, Australia
     type: conference
@@ -1262,8 +1276,8 @@
 - id: ndc-sydney-2019
   event:
     name: NDC Sydney
-    start_date: '2019-10-14'
-    end_date: '2019-10-16'
+    start_date: "2019-10-14"
+    end_date: "2019-10-16"
     link: https://ndcsydney.com/
     location: Sydney, Australia
     type: conference
@@ -1274,8 +1288,8 @@
 - id: pycon-singapore-2019
   event:
     name: Pycon Singapore
-    start_date: '2019-10-10'
-    end_date: '2019-10-12'
+    start_date: "2019-10-10"
+    end_date: "2019-10-12"
     location: Singapore
     link: https://pycon.sg/
     type: conference
@@ -1286,7 +1300,7 @@
 - id: sydney-identity--security-meetup-2019
   event:
     name: Sydney Identity & Security meetup
-    start_date: '2019-09-19'
+    start_date: "2019-09-19"
     location: Sydney, Australia
     link: https://www.meetup.com/Sydney-Identity-and-Security-Meetup/events/264180886/
     type: meetup
@@ -1296,7 +1310,7 @@
 - id: sydjs-2019
   event:
     name: SydJS
-    start_date: '2019-09-18'
+    start_date: "2019-09-18"
     link: http://sydjs.com/event/5d8042446ac291001ef06589?hex=BF2600
     location: Sydney, Australia
     type: meetup
@@ -1307,7 +1321,7 @@
 - id: componentsconf-2019
   event:
     name: ComponentsConf
-    start_date: '2019-09-10'
+    start_date: "2019-09-10"
     link: https://www.componentsconf.com.au/sessions-2019
     location: Melbourne, Australia
     type: conference
@@ -1318,8 +1332,8 @@
 - id: rubyconf-thailand-2019
   event:
     name: RubyConf Thailand
-    start_date: '2019-09-06'
-    end_date: '2019-09-07'
+    start_date: "2019-09-06"
+    end_date: "2019-09-07"
     link: https://rubyconfth.com/
     location: Bangkok, Thailand
     type: conference
@@ -1330,8 +1344,8 @@
 - id: campjs-2019
   event:
     name: CampJS
-    start_date: '2019-08-30'
-    end_date: '2019-09-02'
+    start_date: "2019-08-30"
+    end_date: "2019-09-02"
     link: https://x.campjs.org/
     location: Broken Bay, Australia
     type: conference
@@ -1340,9 +1354,9 @@
       slides: https://speakerdeck.com/philnash/web-sharing-is-web-caring
 - id: twilio-signal-2019
   event:
-    name: Twilio SIGNAL
-    start_date: '2019-08-05'
-    end_date: '2019-08-07'
+    name: "Twilio SIGNAL 2019"
+    start_date: "2019-08-05"
+    end_date: "2019-08-07"
     location: San Francisco, USA
     link: https://signal.twilio.com/
     type: conference
@@ -1352,7 +1366,7 @@
 - id: melbjs-07-2019
   event:
     name: MelbJS
-    start_date: '2019-07-09'
+    start_date: "2019-07-09"
     location: Melbourne, Australia
     link: http://melbjs.com/
     type: meetup
@@ -1362,8 +1376,8 @@
 - id: smashingconf-toronto-2019
   event:
     name: SmashingConf Toronto
-    start_date: '2019-06-25'
-    end_date: '2019-06-26'
+    start_date: "2019-06-25"
+    end_date: "2019-06-26"
     location: Toronto, Canada
     link: https://smashingconf.com/toronto-2019/
     type: conference
@@ -1373,7 +1387,7 @@
 - id: serverless-toronto-2019
   event:
     name: Serverless Toronto
-    start_date: '2019-06-24'
+    start_date: "2019-06-24"
     location: Toronto, Canada
     link: https://www.meetup.com/Serverless-Toronto/events/259719014/
     type: meetup
@@ -1382,9 +1396,9 @@
       video: https://www.youtube.com/watch?v=iQDQMQC5NTo
 - id: web-directions-code-2019
   event:
-    name: 'Web Directions: Code'
-    start_date: '2019-06-20'
-    end_date: '2019-06-21'
+    name: "Web Directions: Code"
+    start_date: "2019-06-20"
+    end_date: "2019-06-21"
     location: Melbourne, Australia
     link: https://www.webdirections.org/code/
     type: conference
@@ -1394,7 +1408,7 @@
 - id: node-sydney-2019
   event:
     name: Node Sydney
-    start_date: '2019-06-06'
+    start_date: "2019-06-06"
     location: Sydney, Australia
     link: https://www.meetup.com/node-sydney/events/262084714/
     type: meetup
@@ -1404,7 +1418,7 @@
 - id: melbjs-04-2019
   event:
     name: MelbJS
-    start_date: '2019-04-10'
+    start_date: "2019-04-10"
     location: Melbourne, Australia
     link: http://melbjs.com/
     type: meetup
@@ -1413,7 +1427,7 @@
 - id: melbourne-ruby-03-2019
   event:
     name: Melbourne Ruby
-    start_date: '2019-03-27'
+    start_date: "2019-03-27"
     location: Melbourne, Australia
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/hrznsqyzfbkc/
     type: meetup
@@ -1422,7 +1436,7 @@
 - id: devfest-melbourne-2018
   event:
     name: DevFest Melbourne 2018
-    start_date: '2018-10-27'
+    start_date: "2018-10-27"
     location: Melbourne, Australia
     link: https://www.gdgmelbourne.com/devfest-2018/
     type: conference
@@ -1433,7 +1447,7 @@
 - id: roro-sydney-10-2018
   event:
     name: RORO Sydney
-    start_date: '2018-10-09'
+    start_date: "2018-10-09"
     location: Sydney, Australia
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/events/rxmjspyxnbmb/
     type: meetup
@@ -1443,7 +1457,7 @@
 - id: melbourne-ruby-10-2018
   event:
     name: Melbourne Ruby
-    start_date: '2018-10-03'
+    start_date: "2018-10-03"
     location: Melbourne, Australia
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/243245418/
     type: meetup
@@ -1454,8 +1468,8 @@
 - id: ndc-sydney-2018
   event:
     name: NDC Sydney
-    start_date: '2018-09-19'
-    end_date: '2018-09-21'
+    start_date: "2018-09-19"
+    end_date: "2018-09-21"
     location: Sydney, Australia
     link: https://ndcsydney.com/talk/service-workers-beyond-the-cache/
     type: conference
@@ -1465,9 +1479,9 @@
       video: https://www.youtube.com/watch?v=65ibyDjxuwM
 - id: web-directions-code-2018
   event:
-    name: 'Web Directions: Code'
-    start_date: '2018-08-01'
-    end_date: '2018-08-02'
+    name: "Web Directions: Code"
+    start_date: "2018-08-01"
+    end_date: "2018-08-02"
     location: Melbourne, Australia
     link: https://www.webdirections.org/code/speakers/phil-nash.php
     type: conference
@@ -1477,7 +1491,7 @@
 - id: angular-conf-australia-2018
   event:
     name: Angular Conf Australia
-    start_date: '2018-06-22'
+    start_date: "2018-06-22"
     location: Melbourne, Australia
     link: https://www.angularconf.com.au/
     type: conference
@@ -1488,8 +1502,8 @@
 - id: jsconf-eu-2018
   event:
     name: JSConf EU
-    start_date: '2018-06-02'
-    end_date: '2018-06-03'
+    start_date: "2018-06-02"
+    end_date: "2018-06-03"
     location: Berlin, Germany
     link: https://2018.jsconf.eu/
     type: conference
@@ -1500,7 +1514,7 @@
 - id: roro-sydney-05-2018
   event:
     name: RORO Sydney
-    start_date: '2018-05-08'
+    start_date: "2018-05-08"
     location: Sydney, Australia
     link: https://www.meetup.com/Ruby-On-Rails-Ocecode-europe-2016ania-Sydney/events/nnvkcpyxhblb/
     type: meetup
@@ -1510,8 +1524,8 @@
 - id: voxxed-days-melbourne-2018
   event:
     name: Voxxed Days Melbourne
-    start_date: '2018-05-02'
-    end_date: '2018-05-03'
+    start_date: "2018-05-02"
+    end_date: "2018-05-03"
     location: Melbourne, Australia
     link: https://voxxeddays.com/melbourne/
     type: conference
@@ -1520,7 +1534,7 @@
 - id: melbourne-ruby-02-2018
   event:
     name: Melbourne Ruby
-    start_date: '2018-02-28'
+    start_date: "2018-02-28"
     location: Melbourne, Australia
     link: https://www.meetup.com/Ruby-On-Rails-Oceania-Melbourne/events/mcrjmnyxdblc/
     type: meetup
@@ -1531,7 +1545,7 @@
 - id: the-web-meetup-2018
   event:
     name: The Web Meetup
-    start_date: '2018-02-13'
+    start_date: "2018-02-13"
     location: Melbourne, Australia
     link: https://www.meetup.com/the-web/events/247201690/
     type: meetup
@@ -1542,7 +1556,7 @@
 - id: melbjs-01-2018
   event:
     name: MelbJS
-    start_date: '2018-01-10'
+    start_date: "2018-01-10"
     link: http://melbjs.com/
     location: Melbourne, Australia
     type: meetup
@@ -1552,7 +1566,7 @@
 - id: devfest-sydney-2017
   event:
     name: DevFest Sydney
-    start_date: '2017-11-25'
+    start_date: "2017-11-25"
     link: http://www.devfest.org.au/
     location: Sydney, Australia
     type: conference
@@ -1560,9 +1574,9 @@
     - title: Aggressive Web Apps
 - id: web-directions-summit-2017
   event:
-    name: 'Web Directions: Summit'
-    start_date: '2017-11-09'
-    end_date: '2017-11-10'
+    name: "Web Directions: Summit"
+    start_date: "2017-11-09"
+    end_date: "2017-11-10"
     link: http://webdirections.org/wds17/speakers/phil-nash.html
     location: Sydney, Australia
     type: conference
@@ -1572,7 +1586,7 @@
 - id: front-end-london-2017
   event:
     name: Front End London
-    start_date: '2017-08-31'
+    start_date: "2017-08-31"
     link: http://www.frontendlondon.co.uk/
     location: London, UK
     type: meetup
@@ -1583,8 +1597,8 @@
 - id: campjs-2017
   event:
     name: CampJS
-    start_date: '2017-08-04'
-    end_date: '2017-08-07'
+    start_date: "2017-08-04"
+    end_date: "2017-08-07"
     link: http://viii.campjs.com/
     location: Melbourne, Australia
     type: conference
@@ -1593,8 +1607,8 @@
 - id: fullstack-2017
   event:
     name: FullStack
-    start_date: '2017-07-12'
-    end_date: '2017-07-14'
+    start_date: "2017-07-12"
+    end_date: "2017-07-14"
     location: London, UK
     link: https://skillsmatter.com/conferences/8264-fullstack-2017-the-conference-on-javascript-node-and-internet-of-things
     type: conference
@@ -1611,8 +1625,8 @@
 - id: devoxx-poland-2017
   event:
     name: Devoxx Poland
-    start_date: '2017-06-21'
-    end_date: '2017-06-23'
+    start_date: "2017-06-21"
+    end_date: "2017-06-23"
     location: Kraków, Poland
     link: http://2017.devoxx.pl/
     type: conference
@@ -1626,7 +1640,7 @@
 - id: js-poland-2017
   event:
     name: JS Poland
-    start_date: '2017-06-19'
+    start_date: "2017-06-19"
     location: Warsaw, Poland
     link: http://www.js-poland.pl/
     type: conference
@@ -1638,7 +1652,7 @@
   event:
     name: DevTalks Bucharest
     link: http://www.devtalks.ro/bucharest/
-    start_date: '2017-06-08'
+    start_date: "2017-06-08"
     location: Bucharest, Romania
     type: conference
   talks:
@@ -1649,8 +1663,8 @@
   event:
     name: Codemotion Amsterdam
     link: https://amsterdam2017.codemotionworld.com/
-    start_date: '2017-05-16'
-    end_date: '2017-05-17'
+    start_date: "2017-05-16"
+    end_date: "2017-05-17"
     location: Amsterdam, The Netherlands
     type: conference
   talks:
@@ -1661,8 +1675,8 @@
   event:
     name: jsDay
     link: https://2017.jsday.it/
-    start_date: '2017-05-10'
-    end_date: '2017-05-11'
+    start_date: "2017-05-10"
+    end_date: "2017-05-11"
     location: Verona, Italy
     type: conference
   talks:
@@ -1673,7 +1687,7 @@
   event:
     name: BerlinJS
     link: http://jsconf.berlinjs.org/
-    start_date: '2017-05-04'
+    start_date: "2017-05-04"
     location: Berlin, Germany
     type: meetup
   talks:
@@ -1683,7 +1697,7 @@
   event:
     name: London JavaScript
     link: https://www.meetup.com/London-Javascript/events/238829721/
-    start_date: '2017-04-26'
+    start_date: "2017-04-26"
     location: London, UK
     type: meetup
   talks:
@@ -1693,7 +1707,7 @@
   event:
     name: London Web Standards
     link: http://londonwebstandards.org/2017/03/lws-24-april-2017-lwsjtf/
-    start_date: '2017-04-24'
+    start_date: "2017-04-24"
     location: London, UK
     type: meetup
   talks:
@@ -1703,7 +1717,7 @@
   event:
     name: 4Developers
     link: https://2017.4developers.org.pl/en/
-    start_date: '2017-04-03'
+    start_date: "2017-04-03"
     location: Warsaw, Poland
     type: conference
   talks:
@@ -1716,7 +1730,7 @@
   event:
     name: MobCon Europe
     link: https://mobcon.com/mobcon-europe/
-    start_date: '2017-03-26'
+    start_date: "2017-03-26"
     location: Sodia, Bulgaria
     type: conference
   talks:
@@ -1726,7 +1740,7 @@
   event:
     name: Fusion Meetup
     link: https://www.eventbrite.com/e/fusion-meetup-birmingham-march-2017-tickets-32256611393#
-    start_date: '2017-03-23'
+    start_date: "2017-03-23"
     location: Birmingham, UK
     type: meetup
   talks:
@@ -1736,29 +1750,29 @@
   event:
     name: CloudConf
     link: http://2017.cloudconf.it/
-    start_date: '2017-03-16'
+    start_date: "2017-03-16"
     location: Turin, Italy
     type: conference
   talks:
-    - title: 'WebHooks: The API Strikes Back'
+    - title: "WebHooks: The API Strikes Back"
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-at-cloudconf-2017
       video: http://video.html.it/webhooks-the-api-strikes-back/
 - id: apidays-australia-2017
   event:
     name: Apidays Australia
     link: http://au.apidays.io/
-    start_date: '2017-02-28'
-    end_date: '2017-03-01'
+    start_date: "2017-02-28"
+    end_date: "2017-03-01"
     location: Sydney, Australia
     type: conference
   talks:
-    - title: 'WebHooks: The API Strikes Back'
+    - title: "WebHooks: The API Strikes Back"
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-2
 - id: javascript--nodejs-cambridge-2017
   event:
     name: JavaScript & NodeJS Cambridge
     link: https://www.meetup.com/JavaScript-Cambridge/events/229824220/
-    start_date: '2017-01-10'
+    start_date: "2017-01-10"
     location: Cambridge, UK
     type: meetup
   talks:
@@ -1767,7 +1781,7 @@
   event:
     name: Code Europe
     link: https://2016.codeeurope.pl/en
-    start_date: '2016-12-07'
+    start_date: "2016-12-07"
     location: Warsaw, Poland
     type: conference
   talks:
@@ -1777,7 +1791,7 @@
   event:
     name: Code Europe
     link: https://2016.codeeurope.pl/en
-    start_date: '2016-12-05'
+    start_date: "2016-12-05"
     location: Kraków, Poland
     type: conference
   talks:
@@ -1789,7 +1803,7 @@
     name: Front End London
     link: http://www.frontendlondon.co.uk/
     location: London, UK
-    start_date: '2016-11-24'
+    start_date: "2016-11-24"
     type: meetup
   talks:
     - title: An empty database in everybody's pocket
@@ -1797,7 +1811,7 @@
 - id: gumtree-tech-talks-2016
   event:
     name: Gumtree Tech Talks
-    start_date: '2016-11-23'
+    start_date: "2016-11-23"
     location: London, UK
     link: https://www.eventbrite.co.uk/e/tech-talk-night-at-gumtree-november-session-tickets-28680795030#
     type: meetup
@@ -1807,7 +1821,7 @@
 - id: ng-poland-2016
   event:
     name: NG-Poland
-    start_date: '2016-11-22'
+    start_date: "2016-11-22"
     location: Warsaw, Poland
     link: http://ng-poland.pl/index2016.html
     type: conference
@@ -1819,8 +1833,8 @@
   event:
     name: Topconf Tallinn
     location: Tallinn, Estonia
-    start_date: '2016-11-15'
-    end_date: '2016-11-18'
+    start_date: "2016-11-15"
+    end_date: "2016-11-18"
     link: https://www.topconf.com/conference/tallinn-2016/
     type: conference
   talks:
@@ -1832,8 +1846,8 @@
     name: WebCamp Zagreb
     location: Zagreb, Croatia
     link: https://2016.webcampzg.org/
-    start_date: '2016-10-28'
-    end_date: '2016-10-29'
+    start_date: "2016-10-28"
+    end_date: "2016-10-29"
     type: conference
   talks:
     - title: 2FA, WTF?
@@ -1844,8 +1858,8 @@
     name: Codemotion Berlin
     location: Berlin, Germany
     link: https://berlin2016.codemotionworld.com/
-    start_date: '2016-10-24'
-    end_date: '2016-10-25'
+    start_date: "2016-10-24"
+    end_date: "2016-10-25"
     type: conference
   talks:
     - title: 2FA, WTF?
@@ -1856,7 +1870,7 @@
     name: re:develop
     location: Bournemouth, UK
     link: https://redevelop.io/
-    start_date: '2016-10-14'
+    start_date: "2016-10-14"
     type: conference
   talks:
     - title: An introduction to service workers
@@ -1867,7 +1881,7 @@
     name: Digital Croydon
     location: Croydon, UK
     link: http://digitalcroydon.net/event/
-    start_date: '2016-10-13'
+    start_date: "2016-10-13"
     type: meetup
   talks:
     - title: An introduction to service workers
@@ -1877,7 +1891,7 @@
     name: GDG DevFest London 2016
     location: London, UK
     link: https://devfest-london-2016.firebaseapp.com/
-    start_date: '2016-10-08'
+    start_date: "2016-10-08"
     type: conference
   talks:
     - title: Thinking Offline
@@ -1887,8 +1901,8 @@
     name: Rails Remote
     location: Online
     link: https://devchat.tv/conferences/rails-remote-conf-2016
-    start_date: '2016-10-12'
-    end_date: '2016-10-14'
+    start_date: "2016-10-12"
+    end_date: "2016-10-14"
     type: conference
   talks:
     - title: 2FA, WTF?
@@ -1896,10 +1910,10 @@
       video: https://devchat.tv/conference-talks/2fa-wtf
 - id: twilio-signal-london-2016
   event:
-    name: Twilio SIGNAL London
+    name: "Twilio SIGNAL London 2016"
     location: London, UK
     link: https://signal.twilio.com/2016/london
-    start_date: '2016-09-20'
+    start_date: "2016-09-20"
     type: conference
   roles:
     - Track MC
@@ -1908,8 +1922,8 @@
     name: DevDay
     location: Kraków, Poland
     link: http://devday.pl
-    start_date: '2016-09-14'
-    end_date: '2016-09-16'
+    start_date: "2016-09-14"
+    end_date: "2016-09-16"
     type: conference
   talks:
     - title: An introduction to service workers
@@ -1920,7 +1934,7 @@
     name: Refresh
     location: Tallinn, Estonia
     link: http://2016.refresh.rocks/
-    start_date: '2016-09-09'
+    start_date: "2016-09-09"
     type: conference
   talks:
     - title: An introduction to service workers
@@ -1931,8 +1945,8 @@
     name: Frontend Conference Zurich
     location: Zürich, Switzerland
     link: https://2016.frontendconf.ch/
-    start_date: '2016-08-31'
-    end_date: '2016-09-01'
+    start_date: "2016-08-31"
+    end_date: "2016-09-01"
     type: conference
   talks:
     - title: Thinking offline
@@ -1943,8 +1957,8 @@
     name: Electromagnetic Field
     location: Guildford, UK
     link: https://www.emfcamp.org
-    start_date: '2016-08-05'
-    end_date: '2016-08-07'
+    start_date: "2016-08-05"
+    end_date: "2016-08-07"
     type: conference
   talks:
     - title: 2FA, WTF?
@@ -1954,7 +1968,7 @@
     name: DeskBeers Tech Talks
     location: London, UK
     link: https://www.youtube.com/watch?v=av9gja0dayc
-    start_date: '2016-08-03'
+    start_date: "2016-08-03"
     type: meetup
   talks:
     - title: Beer Near Here
@@ -1963,7 +1977,7 @@
   event:
     name: London Web Standards
     link: https://getinvited.to/webstandards/lws-18-july-2016-practice/
-    start_date: '2016-07-25'
+    start_date: "2016-07-25"
     location: London, UK
     type: meetup
   talks:
@@ -1972,8 +1986,8 @@
   event:
     name: FullStack
     link: https://skillsmatter.com/conferences/7278-fullstack-2016-the-conference-on-javascript-node-and-internet-of-things
-    start_date: '2016-07-13'
-    end_date: '2016-07-15'
+    start_date: "2016-07-13"
+    end_date: "2016-07-15"
     location: London, UK
     type: conference
   talks:
@@ -1983,19 +1997,19 @@
       video: https://skillsmatter.com/skillscasts/8154-thinking-offline
 - id: angularzone-meetup-1-2016
   event:
-    name: 'AngularZone Meetup #1'
+    name: "AngularZone Meetup #1"
     link: https://www.meetup.com/AngularZone/events/232087779/
-    start_date: '2016-07-11'
+    start_date: "2016-07-11"
     location: London, UK
     type: meetup
   talks:
     - title: An introduction to Service Workers
 - id: bots-the-state-of-the-conversation-2016
   event:
-    name: 'Bots: The State of the Conversation'
+    name: "Bots: The State of the Conversation"
     link: http://learn.converse.ai/botevent
-    start_date: '2016-07-04'
-    end_date: '2016-07-05'
+    start_date: "2016-07-04"
+    end_date: "2016-07-05"
     location: London, UK
     type: conference
   talks:
@@ -2004,7 +2018,7 @@
   event:
     name: Bristol JS
     link: https://www.meetup.com/BristolJS/events/229602378/
-    start_date: '2016-06-29'
+    start_date: "2016-06-29"
     location: Bristol, UK
     type: meetup
   talks:
@@ -2014,7 +2028,7 @@
   event:
     name: JS Oxford
     link: https://jsoxford.com/2016-06-15-moar-javascript/
-    start_date: '2016-06-15'
+    start_date: "2016-06-15"
     location: Oxford, UK
     type: meetup
   talks:
@@ -2024,7 +2038,7 @@
   event:
     name: London Ajax
     link: https://www.meetup.com/halfstack/events/230566847/
-    start_date: '2016-06-14'
+    start_date: "2016-06-14"
     location: London, UK
     type: meetup
   talks:
@@ -2032,10 +2046,10 @@
       slides: https://speakerdeck.com/philnash/an-introduction-to-service-workers-1
 - id: twilio-signal-2016
   event:
-    name: Twilio SIGNAL
+    name: "Twilio SIGNAL 2016"
     link: https://signal.twilio.com/2016/sf
-    start_date: '2016-05-24'
-    end_date: '2016-05-25'
+    start_date: "2016-05-24"
+    end_date: "2016-05-25"
     location: San Francisco, USA
     type: conference
   roles:
@@ -2044,8 +2058,8 @@
   event:
     name: Codemotion Amsterdam
     link: https://amsterdam2016.codemotionworld.com/
-    start_date: '2016-05-11'
-    end_date: '2016-05-12'
+    start_date: "2016-05-11"
+    end_date: "2016-05-12"
     location: Amsterdam, The Netherlands
     type: conference
   talks:
@@ -2059,7 +2073,7 @@
   event:
     name: JS Monthly
     link: https://www.meetup.com/js-monthly/events/230071594/
-    start_date: '2016-04-26'
+    start_date: "2016-04-26"
     location: London, UK
     type: meetup
   talks:
@@ -2070,7 +2084,7 @@
   event:
     name: ProgSCon
     link: http://2016.progscon.co.uk/
-    start_date: '2016-04-22'
+    start_date: "2016-04-22"
     location: London, UK
     type: conference
   talks:
@@ -2081,8 +2095,8 @@
   event:
     name: WEBIT.FESTIVAL
     link: http://www.webit.bg/2016/
-    start_date: '2016-04-19'
-    end_date: '2016-04-20'
+    start_date: "2016-04-19"
+    end_date: "2016-04-20"
     location: Sofia, Bulgaria
     type: conference
   talks:
@@ -2092,7 +2106,7 @@
   event:
     name: TECH.insight
     link: http://www.techinsight.io/event/london-april-2016/
-    start_date: '2016-04-14'
+    start_date: "2016-04-14"
     location: London, UK
     type: meetup
   talks:
@@ -2102,8 +2116,8 @@
   event:
     name: Wolves Summit
     link: https://www.wolvessummit.com/en
-    start_date: '2016-04-12'
-    end_date: '2016-04-13'
+    start_date: "2016-04-12"
+    end_date: "2016-04-13"
     location: Warsaw, Poland
     type: conference
   talks:
@@ -2113,7 +2127,7 @@
   event:
     name: 4Developers
     link: http://2016.4developers.org.pl/en/
-    start_date: '2016-04-11'
+    start_date: "2016-04-11"
     location: Warsaw, Poland
     type: conference
   talks:
@@ -2125,8 +2139,8 @@
   event:
     name: UKGovHack
     link: http://2016.ukgovhack.com/
-    start_date: '2016-04-02'
-    end_date: '2016-04-03'
+    start_date: "2016-04-02"
+    end_date: "2016-04-03"
     location: London, UK
     type: hackathon
   talks:
@@ -2135,7 +2149,7 @@
   event:
     name: Bath Ruby
     link: https://2016.bathruby.uk/
-    start_date: '2016-03-11'
+    start_date: "2016-03-11"
     location: Bath, UK
     type: conference
   talks:
@@ -2147,8 +2161,8 @@
   event:
     name: Topconf Linz
     link: https://www.topconf.com/conference/linz-2016/
-    start_date: '2016-02-02'
-    end_date: '2016-02-03'
+    start_date: "2016-02-02"
+    end_date: "2016-02-03"
     location: Linz, Austria
     type: conference
   talks:
@@ -2162,7 +2176,7 @@
   event:
     name: London Node User Group
     location: London, UK
-    start_date: '2016-01-27'
+    start_date: "2016-01-27"
     link: http://lnug.org/
     type: meetup
   talks:
@@ -2173,7 +2187,7 @@
   event:
     name: Rails Israel
     location: Tel Aviv, Israel
-    start_date: '2015-11-24'
+    start_date: "2015-11-24"
     link: https://railsisrael2015.events.co.il/home
     type: conference
   talks:
@@ -2184,8 +2198,8 @@
   event:
     name: Topconf Tallinn
     link: http://topconf.com/tallinn-2016/
-    start_date: '2015-11-16'
-    end_date: '2015-11-17'
+    start_date: "2015-11-16"
+    end_date: "2015-11-17"
     location: Tallinn, Estonia
     type: conference
   talks:
@@ -2197,8 +2211,8 @@
     name: Øredev
     link: http://oredev.org/2015
     location: Malmö, Sweden
-    start_date: '2015-11-03'
-    end_date: '2015-11-06'
+    start_date: "2015-11-03"
+    end_date: "2015-11-06"
     type: conference
   talks:
     - title: The web is getting pushy
@@ -2213,8 +2227,8 @@
     name: FullStack
     link: https://skillsmatter.com/conferences/6612-fullstack
     location: London, UK
-    start_date: '2015-10-26'
-    end_date: '2015-10-28'
+    start_date: "2015-10-26"
+    end_date: "2015-10-28"
     type: conference
   talks:
     - title: 2FA, WTF?
@@ -2227,7 +2241,7 @@
   event:
     name: Digital Croydon
     link: http://digitalcroydon.net/event/
-    start_date: '2015-10-15'
+    start_date: "2015-10-15"
     location: Croydon, UK
     type: meetup
   talks:
@@ -2238,7 +2252,7 @@
   event:
     name: UpFront Mini
     link: http://2015.upfrontconf.com/mini/
-    start_date: '2015-10-06'
+    start_date: "2015-10-06"
     location: Manchester, UK
     type: conference
   talks:
@@ -2249,8 +2263,8 @@
   event:
     name: ArrrrCamp
     link: http://2015.arrrrcamp.be/
-    start_date: '2015-10-01'
-    end_date: '2015-10-02'
+    start_date: "2015-10-01"
+    end_date: "2015-10-02"
     location: Ghent, Belgium
     type: conference
   roles:
@@ -2258,16 +2272,16 @@
 - id: london-js-2015
   event:
     name: London JS
-    start_date: '2015-09-21'
+    start_date: "2015-09-21"
     location: London, UK
     type: meetup
   talks:
-    - title: 'Data: online and off'
+    - title: "Data: online and off"
       slides: https://speakerdeck.com/philnash/data-online-and-off
 - id: state-of-the-browser-2015
   event:
     name: State of the Browser
-    start_date: '2015-09-12'
+    start_date: "2015-09-12"
     location: London, UK
     link: http://sotb2015.wpengine.com/
     type: conference
@@ -2277,17 +2291,17 @@
 - id: leedstechhub-2015
   event:
     name: LeedsTechHub
-    start_date: '2015-07-23'
+    start_date: "2015-07-23"
     location: Leeds, UK
     link: https://www.meetup.com/Leeds-TechHub/events/223602008/
     type: meetup
   talks:
-    - title: 'WebHooks: The API Strikes Back'
+    - title: "WebHooks: The API Strikes Back"
       slides: https://speakerdeck.com/philnash/webhooks-the-api-strikes-back-1
 - id: async-2015
   event:
     name: Async
-    start_date: '2015-07-09'
+    start_date: "2015-07-09"
     location: Brighton, UK
     link: https://asyncjs.com/webrtc-and-push-notifications/
     type: meetup
@@ -2301,8 +2315,8 @@
 - id: polyconf-2015
   event:
     name: PolyConf
-    start_date: '2015-07-02'
-    end_date: '2015-07-04'
+    start_date: "2015-07-02"
+    end_date: "2015-07-04"
     location: Poznań, Poland
     link: https://15.polyconf.com/
     type: conference
@@ -2312,8 +2326,8 @@
 - id: infoshare-2015
   event:
     name: InfoShare
-    start_date: '2015-06-11'
-    end_date: '2015-06-12'
+    start_date: "2015-06-11"
+    end_date: "2015-06-12"
     location: Gdańsk, Poland
     link: https://infoshare.pl/history/agenda.html?year=2015
     type: conference
@@ -2324,8 +2338,8 @@
   event:
     name: You Gotta Love Frontend
     link: http://2015.yougottalovefrontend.com/
-    start_date: '2015-06-08'
-    end_date: '2015-06-09'
+    start_date: "2015-06-08"
+    end_date: "2015-06-09"
     location: Tel Aviv, Israel
     type: conference
   talks:
@@ -2335,7 +2349,7 @@
   event:
     name: Front Endgineers London
     link: https://www.meetup.com/Front-Endgineers-London/events/222643072/
-    start_date: '2015-06-02'
+    start_date: "2015-06-02"
     location: London, UK
     type: meetup
   talks:
@@ -2344,7 +2358,7 @@
   event:
     name: At The Frontend
     link: http://lanyrd.com/2015/atthefrontend/
-    start_date: '2015-05-27'
+    start_date: "2015-05-27"
     location: Copenhagen, Denmark
     type: conference
   talks:
@@ -2353,7 +2367,7 @@
 - id: copenhagen-frontenders-2015
   event:
     name: Copenhagen Frontenders
-    start_date: '2015-05-26'
+    start_date: "2015-05-26"
     location: Copenhagen, Denmark
     link: https://www.meetup.com/cphfront/events/222040789/
     type: meetup
@@ -2363,8 +2377,8 @@
   event:
     name: JSConf Budapest
     link: http://2015.jsconfbp.com/
-    start_date: '2015-05-14'
-    end_date: '2015-05-15'
+    start_date: "2015-05-14"
+    end_date: "2015-05-15"
     location: Budapest, Hungary
     type: conference
   talks:
@@ -2375,8 +2389,8 @@
   event:
     name: Front-Trends
     link: https://2015.front-trends.com/
-    start_date: '2015-05-06'
-    end_date: '2015-05-08'
+    start_date: "2015-05-06"
+    end_date: "2015-05-08"
     location: Warsaw, Poland
     type: conference
   talks:
@@ -2388,7 +2402,7 @@
   event:
     name: Front End London
     link: http://www.frontendlondon.co.uk/
-    start_date: '2015-04-30'
+    start_date: "2015-04-30"
     location: London, UK
     type: meetup
   talks:
@@ -2397,7 +2411,7 @@
   event:
     name: 4Developers
     link: http://2015.4developers.org.pl/en/
-    start_date: '2015-04-20'
+    start_date: "2015-04-20"
     location: Warsaw, Poland
     type: conference
   talks:
@@ -2408,7 +2422,7 @@
   event:
     name: LondonAPI
     link: https://www.meetup.com/London-API-Group/events/220647309/
-    start_date: '2015-03-23'
+    start_date: "2015-03-23"
     location: London, UK
     type: meetup
   talks:
@@ -2418,7 +2432,7 @@
   event:
     name: CloudConf
     link: https://2015.cloudconf.it/
-    start_date: '2015-03-19'
+    start_date: "2015-03-19"
     location: Turin, Italy
     type: conference
   talks:
@@ -2428,7 +2442,7 @@
   event:
     name: Bath Ruby
     link: https://2015.bathruby.uk/
-    start_date: '2015-03-13'
+    start_date: "2015-03-13"
     location: Bath, UK
     type: conference
   roles:
@@ -2437,8 +2451,8 @@
   event:
     name: Mobile Central Europe
     link: https://2015.mceconf.com/
-    start_date: '2015-02-04'
-    end_date: '2015-02-06'
+    start_date: "2015-02-04"
+    end_date: "2015-02-06"
     location: Warsaw, Poland
     type: conference
   talks:
@@ -2449,7 +2463,7 @@
   event:
     name: MK Geek Night
     link: https://mkgeeknight.co.uk/
-    start_date: '2014-12-11'
+    start_date: "2014-12-11"
     location: Milton Keynes
     type: meetup
   talks:
@@ -2459,7 +2473,7 @@
   event:
     name: Front End London
     link: http://www.frontendlondon.co.uk/
-    start_date: '2014-11-27'
+    start_date: "2014-11-27"
     location: London, UK
     type: meetup
   talks:
@@ -2468,8 +2482,8 @@
   event:
     name: Future of Web Apps
     link: http://lanyrd.com/2014/future-of-web-apps-london/
-    start_date: '2014-09-29'
-    end_date: '2014-10-01'
+    start_date: "2014-09-29"
+    end_date: "2014-10-01"
     location: London, UK
     type: conference
   talks:
@@ -2479,7 +2493,7 @@
   event:
     name: Endpoint
     link: http://lanyrd.com/2014/endpointcon/
-    start_date: '2014-09-05'
+    start_date: "2014-09-05"
     location: Amsterdam, The Netherlands
     type: conference
   talks:
@@ -2488,7 +2502,7 @@
   event:
     name: London Web Meetup
     link: https://www.meetup.com/londonweb/events/pkshsyslbcc/
-    start_date: '2014-08-21'
+    start_date: "2014-08-21"
     location: London, UK
     type: meetup
   talks:
@@ -2498,8 +2512,8 @@
   event:
     name: Ruby Lugdunum
     link: http://2014.rulu.eu/
-    start_date: '2014-06-19'
-    end_date: '2014-06-20'
+    start_date: "2014-06-19"
+    end_date: "2014-06-20"
     location: Lyon, France
     type: conference
   talks:
@@ -2508,8 +2522,8 @@
   event:
     name: Bacon
     link: http://devslovebacon.com/
-    start_date: '2014-05-16'
-    end_date: '2014-05-17'
+    start_date: "2014-05-16"
+    end_date: "2014-05-17"
     location: London, UK
     type: conference
   roles:
@@ -2522,8 +2536,8 @@
   event:
     name: ArrrrCamp
     link: http://2013.arrrrcamp.be/
-    start_date: '2013-10-03'
-    end_date: '2013-10-04'
+    start_date: "2013-10-03"
+    end_date: "2013-10-04"
     location: Ghent, Belgium
     type: conference
   talks:
@@ -2534,8 +2548,8 @@
   event:
     name: Campus Party Europe
     link: http://lanyrd.com/2013/cpeurope/
-    start_date: '2013-09-02'
-    end_date: '2013-09-07'
+    start_date: "2013-09-02"
+    end_date: "2013-09-07"
     location: London, UK
     type: conference
   talks:
@@ -2544,7 +2558,7 @@
   event:
     name: Front End London
     link: http://www.frontendlondon.co.uk/
-    start_date: '2013-03-28'
+    start_date: "2013-03-28"
     location: London, UK
     type: meetup
   talks:
@@ -2553,8 +2567,8 @@
   event:
     name: TakeOff
     link: http://takeoffconf.com/2013
-    start_date: '2013-01-17'
-    end_date: '2013-01-18'
+    start_date: "2013-01-17"
+    end_date: "2013-01-18"
     location: Lille, France
     type: conference
   talks:
@@ -2564,8 +2578,8 @@
   event:
     name: ArrrrCamp
     link: http://2012.arrrrcamp.be/
-    start_date: '2012-10-04'
-    end_date: '2012-10-05'
+    start_date: "2012-10-04"
+    end_date: "2012-10-05"
     location: Ghent, Belgium
     type: conference
   talks:
@@ -2575,14 +2589,14 @@
   event:
     name: London JS School Trip
     link: http://lanyrd.com/2012/london-js-school-trip/
-    start_date: '2012-06-30'
+    start_date: "2012-06-30"
     location: London, UK
     type: conference
 - id: webshaped-2012
   event:
     name: Webshaped
     link: http://webshaped.fi/2012/
-    start_date: '2012-05-16'
+    start_date: "2012-05-16"
     location: Helsinki, Finland
     type: conference
   talks:
@@ -2591,7 +2605,7 @@
   event:
     name: Geeky
     link: https://www.eventbrite.co.uk/e/geeky-tickets-3366293675#
-    start_date: '2012-05-14'
+    start_date: "2012-05-14"
     location: London, UK
     type: meetup
   talks:
@@ -2600,8 +2614,8 @@
   event:
     name: Bacon
     link: http://devslovebacon.com/conferences/bacon-2012/talks/html5-takes-over-the-world
-    start_date: '2012-04-20'
-    end_date: '2012-04-21'
+    start_date: "2012-04-20"
+    end_date: "2012-04-21"
     location: London, UK
     type: conference
   talks:
@@ -2611,7 +2625,7 @@
   event:
     name: London JS
     link: https://www.eventbrite.co.uk/e/london-js-tickets-1781704125#
-    start_date: '2012-01-30'
+    start_date: "2012-01-30"
     location: London, UK
     type: meetup
   talks:
@@ -2620,7 +2634,7 @@
   event:
     name: LRUG
     link: http://lrug.org/meetings/2011/june/
-    start_date: '2011-06-13'
+    start_date: "2011-06-13"
     location: London, UK
     type: meetup
   talks:
