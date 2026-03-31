@@ -43,6 +43,7 @@
   talks:
     - title: "Build AI-Ready Search: Integrating Docling with OpenSearch for Advanced RAG and Agentic Applications"
       slides: https://sessionize.com/download/cbaynej~4akQwUPd4h5S7ZySx2Maqf.pdf~opensearchcon-2026-docling-and-opensearch.pdf
+      video: https://www.youtube.com/watch?v=IqUJVGyI5to
 
 - id: devfest-adelaide-2025
   event:
