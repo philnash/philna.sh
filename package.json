@@ -21,7 +21,7 @@
     "@playform/inline": "^0.1.2",
     "@sentry/astro": "^10.45.0",
     "@sentry/cloudflare": "^10.45.0",
-    "astro": "^6.0.8",
+    "astro": "^6.1.8",
     "astro-remote": "^0.3.4",
     "markdown-it": "^14.1.0",
     "mdast-util-from-markdown": "^2.0.3",
