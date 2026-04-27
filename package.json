@@ -18,7 +18,7 @@
     "@fontsource/raleway": "^5.2.8",
     "@philnash/astro-pagination": "^0.6.0",
     "@philnash/resend": "^1.2.1",
-    "@playform/inline": "^0.1.4",
+    "@playform/inline": "^0.1.2",
     "@sentry/astro": "^10.50.0",
     "@sentry/cloudflare": "^10.50.0",
     "astro": "^6.1.9",
