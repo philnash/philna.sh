@@ -1,23 +1,25 @@
 ---
-import { getRelatedPosts } from "../utils/related_posts";
+import { getRelatedContent } from "virtual:astro-related-content";
+import { postPath } from "../utils/blog_posts";
 
 type Props = {
-  tags: string[];
   id: string;
 };
 
-const { tags, id } = Astro.props;
+const { id } = Astro.props;
 
-const relatedPosts = await getRelatedPosts(id, tags);
+const relatedContent = (await getRelatedContent("blog", id)).map(
+  (result) => result.entry,
+);
 ---
 
 <div class="related">
-  <h2>You might also like</h2>
+  <h2>You might also like these {relatedContent.length} posts</h2>
   <ul>
     {
-      relatedPosts.map(({ path, title }) => (
+      relatedContent.map((post) => (
         <li>
-          <a href={path}>{title}</a>
+          <a href={postPath(post)}>{post.data.title}</a>
         </li>
       ))
     }

@@ -4,7 +4,6 @@ import type { CollectionEntry } from "astro:content";
 import BlogPost from "../../../../../layouts/BlogPost.astro";
 import { postParams } from "../../../../../utils/blog_posts";
 import { truncate } from "../../../../../utils/string";
-import { getRelatedPosts } from "../../../../../utils/vector_related_posts";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -14,19 +13,10 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const relatedPosts = await getRelatedPosts({
-  slug: post.id,
-  body: post.body,
-});
 
 const { Content } = await render(post);
 ---
 
-<BlogPost
-  {...post.data}
-  description={truncate(post.body, 160)}
-  relatedPosts={relatedPosts}
-  slug={post.id}
->
+<BlogPost {...post.data} description={truncate(post.body, 160)} slug={post.id}>
   <Content />
 </BlogPost>
