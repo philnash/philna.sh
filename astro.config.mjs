@@ -35,9 +35,6 @@ export default defineConfig({
   ],
   vite: {
     plugins: [yaml()],
-    ssr: {
-      external: ["@datastax/astra-db-ts", "openai"],
-    },
     css: {
       preprocessorOptions: {
         scss: {

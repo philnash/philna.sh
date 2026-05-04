@@ -17,10 +17,6 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-        env:
-          ASTRADB_APP_TOKEN: ${{ secrets.ASTRADB_APP_TOKEN }}
-          ASTRADB_ENDPOINT: ${{ secrets.ASTRADB_ENDPOINT }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       - name: Deploy
         run: npx wrangler deploy
         env:
