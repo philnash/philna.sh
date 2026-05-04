@@ -41,5 +41,8 @@
     "sass": "^1.99.0",
     "sharp": "^0.34.5",
     "typescript": "^5.9.3"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.60.2"
   }
 }
