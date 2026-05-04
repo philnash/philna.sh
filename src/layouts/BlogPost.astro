@@ -4,14 +4,13 @@ import DefaultLayout from "./DefaultLayout.astro";
 import CarbonAds from "../components/CarbonAds.astro";
 import PostMeta from "../components/PostMeta.astro";
 import SubscribeRss from "../components/SubscribeRss.astro";
-import VectorRelatedPosts from "../components/VectorRelatedPosts.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
 import Share from "../components/Share.astro";
 import PostMedia from "../components/PostMedia.astro";
 import { viewTransitionName } from "../utils/blog_posts";
 
 type Props = CollectionEntry<"blog">["data"] & {
   slug: string;
-  relatedPosts: CollectionEntry<"blog">[];
 };
 
 const {
@@ -29,7 +28,6 @@ const {
   videoHeight,
   videoWidth,
   scripts,
-  relatedPosts,
   slug,
 } = Astro.props;
 ---
@@ -91,7 +89,7 @@ const {
       </div>
       <div class="post-promo cell cell-12">
         <Share title={title} />
-        <VectorRelatedPosts relatedPosts={relatedPosts} />
+        <RelatedPosts id={slug} />
         <SubscribeRss />
       </div>
     </article>

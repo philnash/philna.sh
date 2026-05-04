@@ -3,6 +3,7 @@ import yaml from "@rollup/plugin-yaml";
 import { DOMAIN } from "./src/consts";
 import cloudflare from "@astrojs/cloudflare";
 import playformInline from "@playform/inline";
+import astroRelatedContent from "@philnash/astro-related-content";
 
 import sentry from "@sentry/astro";
 
@@ -10,6 +11,17 @@ import sentry from "@sentry/astro";
 export default defineConfig({
   site: `https://${DOMAIN}`,
   integrations: [
+    astroRelatedContent({
+      collections: [{ collection: "blog" }],
+      generation: { limit: 4 },
+      embeddings: {
+        provider: "transformers",
+        model: "onnx-community/Qwen3-Embedding-0.6B-ONNX",
+        device: "gpu",
+        dtype: "q8",
+        pooling: "last_token",
+      },
+    }),
     playformInline({ Critters: { preload: "media" } }),
     process.env.NODE_ENV === "production"
       ? sentry({
