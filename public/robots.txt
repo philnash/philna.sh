@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://philna.sh/sitemap.xml
+
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
