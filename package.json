@@ -20,8 +20,8 @@
     "@philnash/astro-related-content": "^0.1.1",
     "@philnash/resend": "^1.2.1",
     "@playform/inline": "^0.1.2",
-    "@sentry/astro": "^10.50.0",
-    "@sentry/cloudflare": "^10.50.0",
+    "@sentry/astro": "^10.53.1",
+    "@sentry/cloudflare": "^10.53.1",
     "astro": "^6.3.6",
     "astro-remote": "^0.3.4",
     "markdown-it": "^14.1.0",
@@ -29,7 +29,7 @@
     "mdast-util-to-string": "^4.0.0",
     "picomatch": "^4.0.4",
     "sanitize-html": "^2.17.3",
-    "vite": "^7.3.1",
+    "vite": "^7.3.3",
     "web-share-wrapper": "^0.2.2"
   },
   "devDependencies": {
@@ -40,10 +40,10 @@
     "@types/sanitize-html": "^2.16.1",
     "sass": "^1.99.0",
     "sharp": "^0.34.5",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "wrangler": "^4.93.0"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.60.2"
+    "@rollup/rollup-linux-x64-gnu": "^4.60.4"
   }
 }
