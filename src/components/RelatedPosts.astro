@@ -14,7 +14,7 @@ const relatedContent = (await getRelatedContent("blog", id)).map(
 ---
 
 <div class="related">
-  <h2>You might also like these {relatedContent.length} posts</h2>
+  <h2>You might also like</h2>
   <ul>
     {
       relatedContent.map((post) => (
