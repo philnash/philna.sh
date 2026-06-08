@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "astro check --minimumSeverity error"
+    "check": "astro check"
   },
   "dependencies": {
     "@analytics-debugger/ga4mp": "^0.0.8",
@@ -20,30 +20,30 @@
     "@philnash/astro-related-content": "^0.1.1",
     "@philnash/resend": "^1.2.1",
     "@playform/inline": "^0.1.2",
-    "@sentry/astro": "^10.53.1",
-    "@sentry/cloudflare": "^10.53.1",
+    "@sentry/astro": "^10.56.0",
+    "@sentry/cloudflare": "^10.56.0",
     "astro": "^6.4.4",
     "astro-remote": "^0.3.4",
-    "markdown-it": "^14.1.0",
+    "markdown-it": "^14.2.0",
     "mdast-util-from-markdown": "^2.0.3",
     "mdast-util-to-string": "^4.0.0",
     "picomatch": "^4.0.4",
     "sanitize-html": "^2.17.3",
-    "vite": "^7.3.3",
+    "vite": "^7.3.5",
     "web-share-wrapper": "^0.2.2"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "@rollup/plugin-yaml": "^4.1.2",
+    "@rollup/plugin-yaml": "^5.0.0",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.2",
     "@types/sanitize-html": "^2.16.1",
-    "sass": "^1.99.0",
+    "sass": "^1.100.0",
     "sharp": "^0.34.5",
     "typescript": "^6.0.3",
     "wrangler": "^4.93.0"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.60.4"
+    "@rollup/rollup-linux-x64-gnu": "^4.61.1"
   }
 }
