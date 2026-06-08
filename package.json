@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@analytics-debugger/ga4mp": "^0.0.8",
-    "@astrojs/cloudflare": "^13.5.3",
+    "@astrojs/cloudflare": "^13.6.1",
     "@astrojs/rss": "^4.0.18",
     "@fontsource/merriweather": "^5.2.11",
     "@fontsource/raleway": "^5.2.8",
@@ -22,7 +22,7 @@
     "@playform/inline": "^0.1.2",
     "@sentry/astro": "^10.53.1",
     "@sentry/cloudflare": "^10.53.1",
-    "astro": "^6.3.6",
+    "astro": "^6.4.4",
     "astro-remote": "^0.3.4",
     "markdown-it": "^14.1.0",
     "mdast-util-from-markdown": "^2.0.3",
