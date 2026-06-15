@@ -1,3 +1,25 @@
+- id: oredev-2026
+  event:
+    name: Øredev 2026
+    link: https://oredev.org/program/3b179d77-02a0-4d36-8cf2-eb969d10f9a6
+    start_date: 2026-11-04
+    end_date: 2026-11-06
+    location: Malmö, Sweden
+    type: conference
+  talks:
+    - title: A new class of user
+    - title: Evolving AI chat with MCP Apps
+
+- id: agent-con-perth-2026
+  event:
+    name: AgentCon Perth 2026
+    link: https://globalai.community/e/r61rr4h1
+    start_date: 2026-06-26
+    location: Perth, Australia
+    type: conference
+  talks:
+    - title: Evolving AI chat with MCP Apps
+
 - id: ndc-copenhagen-2026
   event:
     name: NDC Copenhagen 2026
