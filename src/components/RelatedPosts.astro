@@ -1,6 +1,7 @@
 ---
 import { getRelatedContent } from "virtual:astro-related-content";
 import { postPath } from "../utils/blog_posts";
+import PostMedia from "./PostMedia.astro";
 
 type Props = {
   id: string;
@@ -19,7 +20,10 @@ const relatedContent = (await getRelatedContent("blog", id)).map(
     {
       relatedContent.map((post) => (
         <li>
-          <a href={postPath(post)}>{post.data.title}</a>
+          <a href={postPath(post)}>
+            <PostMedia {...post.data} aboveTheFold={false} slug={post.id} />
+            <h3>{post.data.title}</h3>
+          </a>
         </li>
       ))
     }

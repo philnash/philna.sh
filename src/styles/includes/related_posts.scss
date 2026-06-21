@@ -1,0 +1,24 @@
+@use "vars";
+@use "sass:math";
+
+.related ul {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto;
+  gap: vars.$spacing-unit;
+}
+
+.related h3 {
+  font-size: vars.$base-font-size * 1.25;
+}
+
+@include vars.media-query-min(700px) {
+  .related ul {
+    grid-template-columns: auto auto;
+  }
+}
+
+.related .post-header-image {
+  margin: 0 0 math.div(vars.$spacing-unit, 2) 0;
+}
