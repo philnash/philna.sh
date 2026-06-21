@@ -15,9 +15,9 @@ export default defineConfig({
       collections: [{ collection: "blog" }],
       generation: { limit: 4 },
       embeddings: {
-        model: "onnx-community/granite-embedding-small-english-r2-ONNX",
+        model: "onnx-community/embeddinggemma-300m-ONNX",
         dtype: "fp32",
-        pooling: "cls",
+        pooling: "mean",
         batchSize: 1,
       },
     }),

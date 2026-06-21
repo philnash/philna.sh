@@ -2,1064 +2,1064 @@
   "blog": {
     "2016-05-18-this-site-isnt-finished": [
       {
-        "id": "2019-01-03-2018-in-review",
-        "score": 0.8274612597837467
-      },
-      {
         "id": "2017-02-13-doing-things-wrong",
-        "score": 0.8156197697923776
+        "score": 0.7555196924894235
       },
       {
-        "id": "2016-08-01-august-is-ios-month",
-        "score": 0.810448097854856
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.7269076112628104
       },
       {
-        "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.8025185622538952
+        "id": "2016-06-13-the-surprise-multipart-form-data",
+        "score": 0.7184953295866198
+      },
+      {
+        "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
+        "score": 0.7140672962065102
       }
     ],
     "2016-06-13-the-surprise-multipart-form-data": [
       {
         "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
-        "score": 0.9277079379990086
+        "score": 0.8966753629955532
       },
       {
         "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
-        "score": 0.8187809414681617
+        "score": 0.8413270810312757
       },
       {
         "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8158209940931317
+        "score": 0.8190124874208111
       },
       {
-        "id": "2018-04-25-web-share-api-with-web-components",
-        "score": 0.8096878407401814
+        "id": "2017-02-13-doing-things-wrong",
+        "score": 0.8068739552827306
       }
     ],
     "2016-06-20-critique-my-swift-on-exercism": [
       {
         "id": "2016-08-01-august-is-ios-month",
-        "score": 0.8414392918530571
-      },
-      {
-        "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.8054935516609982
-      },
-      {
-        "id": "2019-01-03-2018-in-review",
-        "score": 0.8012906315385783
+        "score": 0.8234595517232263
       },
       {
         "id": "2026-03-05-talking-tips",
-        "score": 0.7996504422255472
+        "score": 0.7612120114279632
+      },
+      {
+        "id": "2017-02-13-doing-things-wrong",
+        "score": 0.7563601359471088
+      },
+      {
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.7536023607382957
       }
     ],
     "2016-06-28-asset-pipelines-with-jekyll-assets": [
       {
         "id": "2018-02-25-gzip-file-ruby",
-        "score": 0.8425061432920783
-      },
-      {
-        "id": "2022-11-23-alias-your-mastodon-username-to-your-own-domain-with-jekyll",
-        "score": 0.8115724835602346
-      },
-      {
-        "id": "2023-02-02-yaml-document-from-hell-javascript-edition",
-        "score": 0.8082069396406015
+        "score": 0.814614642066821
       },
       {
         "id": "2017-06-12-speed-up-bundle-install-with-this-one-trick",
-        "score": 0.7993940878881796
+        "score": 0.799384702861459
+      },
+      {
+        "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
+        "score": 0.7929322707687095
+      },
+      {
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.791408286631676
       }
     ],
     "2016-08-01-august-is-ios-month": [
       {
-        "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.8492781886543502
-      },
-      {
         "id": "2016-06-20-critique-my-swift-on-exercism",
-        "score": 0.8414392918530571
+        "score": 0.8234595517232263
       },
       {
-        "id": "2018-10-23-service-workers-beware-safaris-range-request",
-        "score": 0.8146898203644329
+        "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
+        "score": 0.8139447205338193
       },
       {
-        "id": "2019-01-03-2018-in-review",
-        "score": 0.8144607732889383
+        "id": "2016-08-17-install-a-service-worker-declaratively",
+        "score": 0.7689275056011592
+      },
+      {
+        "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
+        "score": 0.768416177800317
       }
     ],
     "2016-08-17-install-a-service-worker-declaratively": [
       {
         "id": "2017-07-04-experimenting-with-the-background-fetch-api",
-        "score": 0.8454658775143739
+        "score": 0.8552182736796439
       },
       {
         "id": "2018-10-23-service-workers-beware-safaris-range-request",
-        "score": 0.8263176295635181
+        "score": 0.8408114218133682
+      },
+      {
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.8005646804870766
       },
       {
         "id": "2018-04-25-web-share-api-with-web-components",
-        "score": 0.8249448323032704
-      },
-      {
-        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.8083558806656989
+        "score": 0.7987228898439357
       }
     ],
     "2016-09-05-a-community-offers-to-help": [
       {
         "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.8506102435096576
+        "score": 0.8381413588709963
       },
       {
         "id": "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now",
-        "score": 0.8474340797354919
+        "score": 0.816772776453646
       },
       {
-        "id": "2017-03-22-always-install-bundler-alongside-ruby-with-rbenv",
-        "score": 0.8246349794707722
+        "id": "2022-11-09-how-to-use-the-bitly-api-in-ruby",
+        "score": 0.7992464568605441
       },
       {
-        "id": "2017-06-12-speed-up-bundle-install-with-this-one-trick",
-        "score": 0.8153191057138637
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.7828845315042289
       }
     ],
     "2017-01-04-git-back-to-the-future": [
       {
         "id": "2018-08-21-git-commands-to-keep-a-fork-up-to-date",
-        "score": 0.857451961067342
-      },
-      {
-        "id": "2018-05-27-spring-clean-your-dev-machine",
-        "score": 0.8134673124628583
+        "score": 0.8295324399194449
       },
       {
         "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.7989828526666064
+        "score": 0.7766434620700143
       },
       {
-        "id": "2017-02-13-doing-things-wrong",
-        "score": 0.7955021062305535
+        "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
+        "score": 0.7520294387633116
+      },
+      {
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.7510123479998826
       }
     ],
     "2017-01-12-dev-tools-tricks-store-objects-and-elements-as-variables-in-the-console": [
       {
         "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
-        "score": 0.796116183955762
+        "score": 0.7919741849562599
       },
       {
-        "id": "2020-03-04-mistakes-treating-paths-as-strings",
-        "score": 0.7867807082053567
+        "id": "2016-08-17-install-a-service-worker-declaratively",
+        "score": 0.7681745247692422
       },
       {
-        "id": "2018-04-25-web-share-api-with-web-components",
-        "score": 0.7819583056753894
+        "id": "2020-04-14-ngrok-for-vscode",
+        "score": 0.7677797796255874
       },
       {
-        "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.7819449815481977
+        "id": "2017-02-09-toast-to-es2015-destructuring",
+        "score": 0.7668668622028848
       }
     ],
     "2017-01-27-on-fixing-a-favicon": [
       {
-        "id": "2017-02-13-doing-things-wrong",
-        "score": 0.8139587071450748
-      },
-      {
         "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.8116295214438385
+        "score": 0.846745515825236
       },
       {
-        "id": "2016-09-05-a-community-offers-to-help",
-        "score": 0.7966570350262329
+        "id": "2017-02-13-doing-things-wrong",
+        "score": 0.809668025013235
       },
       {
-        "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.7903677154567501
+        "id": "2020-04-14-ngrok-for-vscode",
+        "score": 0.7948213877806292
+      },
+      {
+        "id": "2016-06-28-asset-pipelines-with-jekyll-assets",
+        "score": 0.791408286631676
       }
     ],
     "2017-02-09-toast-to-es2015-destructuring": [
       {
         "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
-        "score": 0.8276408279312883
+        "score": 0.8276924918694512
       },
       {
         "id": "2023-09-14-javascript-array-grouping-methods",
-        "score": 0.8111707178485593
+        "score": 0.8030302943705488
       },
       {
-        "id": "2017-07-04-experimenting-with-the-background-fetch-api",
-        "score": 0.810522597567328
+        "id": "2017-02-13-doing-things-wrong",
+        "score": 0.7956141317240334
       },
       {
-        "id": "2024-12-30-shallow-clones-versus-structured-clones",
-        "score": 0.8038020633364139
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.790427184122019
       }
     ],
     "2017-02-13-doing-things-wrong": [
       {
-        "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.8227801747122099
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.809668025013235
       },
       {
-        "id": "2016-05-18-this-site-isnt-finished",
-        "score": 0.8156197697923776
+        "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
+        "score": 0.8080351875622219
       },
       {
-        "id": "2019-01-03-2018-in-review",
-        "score": 0.8152300657374955
+        "id": "2016-06-13-the-surprise-multipart-form-data",
+        "score": 0.8068739552827306
       },
       {
-        "id": "2026-01-11-javascript-date-calculation",
-        "score": 0.8145658321411877
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.8015330249893287
       }
     ],
     "2017-03-14-the-web-share-api": [
       {
         "id": "2018-04-25-web-share-api-with-web-components",
-        "score": 0.9455417972494078
-      },
-      {
-        "id": "2017-07-04-experimenting-with-the-background-fetch-api",
-        "score": 0.8489340667994958
-      },
-      {
-        "id": "2022-12-07-better-two-factor-authentication-experiences-with-web-otp",
-        "score": 0.8208746451089811
+        "score": 0.9100879849177306
       },
       {
         "id": "2018-01-08-permissions-on-the-web-suck",
-        "score": 0.8182724847716365
+        "score": 0.8228503355491654
+      },
+      {
+        "id": "2017-07-04-experimenting-with-the-background-fetch-api",
+        "score": 0.8147849557111796
+      },
+      {
+        "id": "2022-12-07-better-two-factor-authentication-experiences-with-web-otp",
+        "score": 0.8126006523887377
       }
     ],
     "2017-03-22-always-install-bundler-alongside-ruby-with-rbenv": [
       {
         "id": "2017-06-12-speed-up-bundle-install-with-this-one-trick",
-        "score": 0.8823872642159948
+        "score": 0.8410354608562434
       },
       {
         "id": "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now",
-        "score": 0.8403267316971903
+        "score": 0.7989994768493799
+      },
+      {
+        "id": "2018-05-27-spring-clean-your-dev-machine",
+        "score": 0.7864614869447165
       },
       {
         "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.8387680069527265
-      },
-      {
-        "id": "2016-09-05-a-community-offers-to-help",
-        "score": 0.8246349794707722
+        "score": 0.7806616528476725
       }
     ],
     "2017-06-12-speed-up-bundle-install-with-this-one-trick": [
       {
         "id": "2017-03-22-always-install-bundler-alongside-ruby-with-rbenv",
-        "score": 0.8823872642159948
-      },
-      {
-        "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.817395831196823
-      },
-      {
-        "id": "2016-09-05-a-community-offers-to-help",
-        "score": 0.8153191057138637
+        "score": 0.8410354608562434
       },
       {
         "id": "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now",
-        "score": 0.8125616012655736
+        "score": 0.8020483321113804
+      },
+      {
+        "id": "2016-06-28-asset-pipelines-with-jekyll-assets",
+        "score": 0.799384702861459
+      },
+      {
+        "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
+        "score": 0.7942008578919301
       }
     ],
     "2017-07-04-experimenting-with-the-background-fetch-api": [
       {
-        "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8564331329030368
+        "id": "2016-08-17-install-a-service-worker-declaratively",
+        "score": 0.8552182736796439
       },
       {
         "id": "2018-10-23-service-workers-beware-safaris-range-request",
-        "score": 0.8545328046205853
+        "score": 0.8524695204198819
+      },
+      {
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.8184648274634034
       },
       {
         "id": "2017-03-14-the-web-share-api",
-        "score": 0.8489340667994958
-      },
-      {
-        "id": "2016-08-17-install-a-service-worker-declaratively",
-        "score": 0.8454658775143739
+        "score": 0.8147849557111796
       }
     ],
     "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now": [
       {
         "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.8819404341324573
+        "score": 0.8407857619059238
       },
       {
         "id": "2016-09-05-a-community-offers-to-help",
-        "score": 0.8474340797354919
+        "score": 0.816772776453646
+      },
+      {
+        "id": "2017-06-12-speed-up-bundle-install-with-this-one-trick",
+        "score": 0.8020483321113804
       },
       {
         "id": "2017-03-22-always-install-bundler-alongside-ruby-with-rbenv",
-        "score": 0.8403267316971903
-      },
-      {
-        "id": "2020-01-15-test-signed-cookies-in-rails",
-        "score": 0.8350706996045906
+        "score": 0.7989994768493799
       }
     ],
     "2018-01-08-permissions-on-the-web-suck": [
       {
         "id": "2017-03-14-the-web-share-api",
-        "score": 0.8182724847716365
+        "score": 0.8228503355491654
       },
       {
-        "id": "2016-08-17-install-a-service-worker-declaratively",
-        "score": 0.805392252835009
+        "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
+        "score": 0.7861048125888859
       },
       {
-        "id": "2017-07-04-experimenting-with-the-background-fetch-api",
-        "score": 0.8025636877251389
+        "id": "2022-12-07-better-two-factor-authentication-experiences-with-web-otp",
+        "score": 0.7806451007177188
       },
       {
-        "id": "2018-04-25-web-share-api-with-web-components",
-        "score": 0.7954544496815885
+        "id": "2016-06-13-the-surprise-multipart-form-data",
+        "score": 0.7804681885320225
       }
     ],
     "2018-02-25-gzip-file-ruby": [
       {
         "id": "2016-06-28-asset-pipelines-with-jekyll-assets",
-        "score": 0.8425061432920783
-      },
-      {
-        "id": "2020-03-04-mistakes-treating-paths-as-strings",
-        "score": 0.8092653466290859
+        "score": 0.814614642066821
       },
       {
         "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.803113954294093
+        "score": 0.8123362734261883
+      },
+      {
+        "id": "2020-03-04-mistakes-treating-paths-as-strings",
+        "score": 0.7876514009580972
       },
       {
         "id": "2022-11-09-how-to-use-the-bitly-api-in-ruby",
-        "score": 0.8029672511996009
+        "score": 0.7862423461552798
       }
     ],
     "2018-03-18-css-first-of-class": [
       {
+        "id": "2020-03-23-responsive-twitch-embed",
+        "score": 0.7647877202939304
+      },
+      {
+        "id": "2017-01-12-dev-tools-tricks-store-objects-and-elements-as-variables-in-the-console",
+        "score": 0.7644857667626428
+      },
+      {
         "id": "2017-02-13-doing-things-wrong",
-        "score": 0.7724244096253365
+        "score": 0.7603767795393944
       },
       {
-        "id": "2017-01-27-on-fixing-a-favicon",
-        "score": 0.753628319826166
-      },
-      {
-        "id": "2017-02-09-toast-to-es2015-destructuring",
-        "score": 0.7500792954929117
-      },
-      {
-        "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.7473086102190682
+        "id": "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections",
+        "score": 0.7539097017457848
       }
     ],
     "2018-04-25-web-share-api-with-web-components": [
       {
         "id": "2017-03-14-the-web-share-api",
-        "score": 0.9455417972494078
-      },
-      {
-        "id": "2016-08-17-install-a-service-worker-declaratively",
-        "score": 0.8249448323032704
+        "score": 0.9100879849177306
       },
       {
         "id": "2022-12-07-better-two-factor-authentication-experiences-with-web-otp",
-        "score": 0.8214910471673781
+        "score": 0.8140018609171071
       },
       {
-        "id": "2017-07-04-experimenting-with-the-background-fetch-api",
-        "score": 0.8200170533855582
+        "id": "2016-08-17-install-a-service-worker-declaratively",
+        "score": 0.7987228898439357
+      },
+      {
+        "id": "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections",
+        "score": 0.7981184709357967
       }
     ],
     "2018-05-27-spring-clean-your-dev-machine": [
       {
-        "id": "2017-01-04-git-back-to-the-future",
-        "score": 0.8134673124628583
-      },
-      {
         "id": "2017-03-22-always-install-bundler-alongside-ruby-with-rbenv",
-        "score": 0.808651962553126
+        "score": 0.7864614869447165
       },
       {
         "id": "2017-06-12-speed-up-bundle-install-with-this-one-trick",
-        "score": 0.8012486570849741
+        "score": 0.7787250139440915
       },
       {
-        "id": "2016-09-05-a-community-offers-to-help",
-        "score": 0.8002029294390145
+        "id": "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now",
+        "score": 0.7784483434380477
+      },
+      {
+        "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
+        "score": 0.7780870075522848
       }
     ],
     "2018-08-21-git-commands-to-keep-a-fork-up-to-date": [
       {
         "id": "2017-01-04-git-back-to-the-future",
-        "score": 0.857451961067342
+        "score": 0.8295324399194449
+      },
+      {
+        "id": "2026-01-28-trusted-publishing-npm",
+        "score": 0.7868850253007857
       },
       {
         "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.8126867346788198
+        "score": 0.7849218026818839
       },
       {
-        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.8044541075750516
-      },
-      {
-        "id": "2018-05-27-spring-clean-your-dev-machine",
-        "score": 0.7946727903567727
+        "id": "2019-01-10-how-to-start-a-node-js-project",
+        "score": 0.773062960159819
       }
     ],
     "2018-09-04-implementing-one-time-passwords-in-crystal": [
       {
         "id": "2022-12-07-better-two-factor-authentication-experiences-with-web-otp",
-        "score": 0.8426523786618819
+        "score": 0.8472022335895499
       },
       {
-        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.7932194614975767
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.7876755436190342
       },
       {
-        "id": "2020-01-15-test-signed-cookies-in-rails",
-        "score": 0.7855438252794972
+        "id": "2022-11-09-how-to-use-the-bitly-api-in-ruby",
+        "score": 0.7856905457108654
       },
       {
         "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.7830472188820551
+        "score": 0.7772714418548459
       }
     ],
     "2018-09-27-techniques-for-animating-on-the-canvas-in-react": [
       {
-        "id": "2018-04-25-web-share-api-with-web-components",
-        "score": 0.7980220044515184
-      },
-      {
-        "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.790222978330773
+        "id": "2018-10-23-service-workers-beware-safaris-range-request",
+        "score": 0.7767073999376511
       },
       {
         "id": "2020-03-23-responsive-twitch-embed",
-        "score": 0.7840867124258947
+        "score": 0.7758659148552789
       },
       {
-        "id": "2018-10-23-service-workers-beware-safaris-range-request",
-        "score": 0.7826088399162019
+        "id": "2018-04-25-web-share-api-with-web-components",
+        "score": 0.7732831613412734
+      },
+      {
+        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
+        "score": 0.7642646312468198
       }
     ],
     "2018-10-23-service-workers-beware-safaris-range-request": [
       {
         "id": "2017-07-04-experimenting-with-the-background-fetch-api",
-        "score": 0.8545328046205853
+        "score": 0.8524695204198819
       },
       {
         "id": "2016-08-17-install-a-service-worker-declaratively",
-        "score": 0.8263176295635181
+        "score": 0.8408114218133682
       },
       {
-        "id": "2016-08-01-august-is-ios-month",
-        "score": 0.8146898203644329
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.8215998695849497
       },
       {
-        "id": "2020-03-23-responsive-twitch-embed",
-        "score": 0.8051186853450313
+        "id": "2016-06-13-the-surprise-multipart-form-data",
+        "score": 0.7927133207871082
       }
     ],
     "2019-01-03-2018-in-review": [
       {
         "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.8430454269583055
+        "score": 0.8101747629397821
       },
       {
-        "id": "2016-05-18-this-site-isnt-finished",
-        "score": 0.8274612597837467
+        "id": "2020-04-14-ngrok-for-vscode",
+        "score": 0.8063293850454016
+      },
+      {
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.7833281273059141
       },
       {
         "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.8273000327808218
-      },
-      {
-        "id": "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now",
-        "score": 0.8208609554144901
+        "score": 0.7807710442492931
       }
     ],
     "2019-01-10-how-to-start-a-node-js-project": [
       {
         "id": "2021-03-15-restart-app-not-tunnel-ngrok-nodemon",
-        "score": 0.8353352460983272
-      },
-      {
-        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.8331130735599674
+        "score": 0.819837805279502
       },
       {
         "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
-        "score": 0.8226570719127816
+        "score": 0.8116435484596443
       },
       {
-        "id": "2023-09-05-nodejs-supports-dotenv",
-        "score": 0.8226141635003696
+        "id": "2026-01-28-trusted-publishing-npm",
+        "score": 0.8078181536344846
+      },
+      {
+        "id": "2020-04-14-ngrok-for-vscode",
+        "score": 0.7948712936582344
       }
     ],
     "2019-08-26-how-not-to-sort-an-array-in-javascript": [
       {
         "id": "2023-09-14-javascript-array-grouping-methods",
-        "score": 0.8340696586635737
-      },
-      {
-        "id": "2026-01-11-javascript-date-calculation",
-        "score": 0.7905262502259021
-      },
-      {
-        "id": "2017-02-09-toast-to-es2015-destructuring",
-        "score": 0.7859106519047867
+        "score": 0.8000465480956354
       },
       {
         "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
-        "score": 0.7785904643863868
+        "score": 0.7831579138524736
+      },
+      {
+        "id": "2026-01-11-javascript-date-calculation",
+        "score": 0.7797278518425079
+      },
+      {
+        "id": "2017-02-09-toast-to-es2015-destructuring",
+        "score": 0.7727398011241506
       }
     ],
     "2020-01-15-test-signed-cookies-in-rails": [
       {
         "id": "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now",
-        "score": 0.8350706996045906
+        "score": 0.7847377309205517
       },
       {
-        "id": "2016-09-05-a-community-offers-to-help",
-        "score": 0.7944180354998114
+        "id": "2016-06-13-the-surprise-multipart-form-data",
+        "score": 0.7665904590294768
       },
       {
         "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.7859502649971719
+        "score": 0.749419738540869
       },
       {
-        "id": "2018-09-04-implementing-one-time-passwords-in-crystal",
-        "score": 0.7855438252794972
+        "id": "2018-02-25-gzip-file-ruby",
+        "score": 0.7485231490200586
       }
     ],
     "2020-01-29-how-to-find-cfps-for-developer-conferences": [
       {
         "id": "2026-03-05-talking-tips",
-        "score": 0.815776745811238
+        "score": 0.8032542394838537
+      },
+      {
+        "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
+        "score": 0.7654230564598883
       },
       {
         "id": "2019-01-03-2018-in-review",
-        "score": 0.7891887790963568
+        "score": 0.7613767997227433
       },
       {
-        "id": "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now",
-        "score": 0.7885561050836856
-      },
-      {
-        "id": "2016-08-01-august-is-ios-month",
-        "score": 0.7874096365331313
+        "id": "2017-02-13-doing-things-wrong",
+        "score": 0.7599278647037642
       }
     ],
     "2020-03-04-mistakes-treating-paths-as-strings": [
       {
-        "id": "2018-02-25-gzip-file-ruby",
-        "score": 0.8092653466290859
-      },
-      {
         "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
-        "score": 0.8053811989787922
+        "score": 0.8155138863811818
       },
       {
-        "id": "2023-09-05-nodejs-supports-dotenv",
-        "score": 0.8014570375483143
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.7975536376257649
       },
       {
-        "id": "2023-02-02-yaml-document-from-hell-javascript-edition",
-        "score": 0.7987081535222188
+        "id": "2018-02-25-gzip-file-ruby",
+        "score": 0.7876514009580972
+      },
+      {
+        "id": "2016-06-13-the-surprise-multipart-form-data",
+        "score": 0.7853725875853662
       }
     ],
     "2020-03-17-the-story-of-a-midly-popular-ruby-gem": [
       {
-        "id": "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now",
-        "score": 0.8819404341324573
+        "id": "2022-11-09-how-to-use-the-bitly-api-in-ruby",
+        "score": 0.8970126139984564
       },
       {
-        "id": "2022-11-09-how-to-use-the-bitly-api-in-ruby",
-        "score": 0.8805143541262591
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.846745515825236
+      },
+      {
+        "id": "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now",
+        "score": 0.8407857619059238
       },
       {
         "id": "2016-09-05-a-community-offers-to-help",
-        "score": 0.8506102435096576
-      },
-      {
-        "id": "2019-01-03-2018-in-review",
-        "score": 0.8430454269583055
+        "score": 0.8381413588709963
       }
     ],
     "2020-03-23-responsive-twitch-embed": [
       {
+        "id": "2018-04-25-web-share-api-with-web-components",
+        "score": 0.7849313366618628
+      },
+      {
         "id": "2018-10-23-service-workers-beware-safaris-range-request",
-        "score": 0.8051186853450313
-      },
-      {
-        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
-        "score": 0.787356202869936
-      },
-      {
-        "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.7859735432576169
+        "score": 0.7806027800042402
       },
       {
         "id": "2018-09-27-techniques-for-animating-on-the-canvas-in-react",
-        "score": 0.7840867124258947
+        "score": 0.7758659148552789
+      },
+      {
+        "id": "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections",
+        "score": 0.7745742613847864
       }
     ],
     "2020-04-14-ngrok-for-vscode": [
       {
         "id": "2021-03-15-restart-app-not-tunnel-ngrok-nodemon",
-        "score": 0.8722532582756486
+        "score": 0.8414272415964658
       },
       {
-        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.805202562561505
-      },
-      {
-        "id": "2023-02-02-yaml-document-from-hell-javascript-edition",
-        "score": 0.8015605339455726
+        "id": "2019-01-03-2018-in-review",
+        "score": 0.8063293850454016
       },
       {
         "id": "2019-01-10-how-to-start-a-node-js-project",
-        "score": 0.7971490853545707
+        "score": 0.7948712936582344
+      },
+      {
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.7948213877806292
       }
     ],
     "2020-08-06-how-to-stream-file-downloads-in-Node-js-with-got": [
       {
         "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8623189258298055
-      },
-      {
-        "id": "2017-07-04-experimenting-with-the-background-fetch-api",
-        "score": 0.82909729256537
+        "score": 0.8491470755554843
       },
       {
         "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
-        "score": 0.8114530831497875
+        "score": 0.8009905250396883
       },
       {
-        "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.7981649176439134
+        "id": "2017-07-04-experimenting-with-the-background-fetch-api",
+        "score": 0.7931584614246845
+      },
+      {
+        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
+        "score": 0.7931395730034277
       }
     ],
     "2021-02-22-display-dates-in-your-users-time-zone": [
       {
         "id": "2026-01-11-javascript-date-calculation",
-        "score": 0.8348783006325301
+        "score": 0.8576876173640524
       },
       {
         "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.8091051824791625
+        "score": 0.818616436041338
       },
       {
-        "id": "2016-08-01-august-is-ios-month",
-        "score": 0.7616311371411087
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.7798696484354712
       },
       {
-        "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.7597964162851395
+        "id": "2016-06-13-the-surprise-multipart-form-data",
+        "score": 0.7761652307590977
       }
     ],
     "2021-03-15-restart-app-not-tunnel-ngrok-nodemon": [
       {
         "id": "2020-04-14-ngrok-for-vscode",
-        "score": 0.8722532582756486
+        "score": 0.8414272415964658
       },
       {
         "id": "2019-01-10-how-to-start-a-node-js-project",
-        "score": 0.8353352460983272
+        "score": 0.819837805279502
       },
       {
-        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.802516988664597
+        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
+        "score": 0.8112339897956481
       },
       {
         "id": "2023-09-05-nodejs-supports-dotenv",
-        "score": 0.7907421528349016
+        "score": 0.8013510740590745
       }
     ],
     "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters": [
       {
-        "id": "2017-02-09-toast-to-es2015-destructuring",
-        "score": 0.8276408279312883
+        "id": "2016-06-13-the-surprise-multipart-form-data",
+        "score": 0.8413270810312757
       },
       {
-        "id": "2016-06-13-the-surprise-multipart-form-data",
-        "score": 0.8187809414681617
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.8363261851576358
+      },
+      {
+        "id": "2017-02-09-toast-to-es2015-destructuring",
+        "score": 0.8276924918694512
       },
       {
         "id": "2020-03-04-mistakes-treating-paths-as-strings",
-        "score": 0.8053811989787922
-      },
-      {
-        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
-        "score": 0.8041675513358545
+        "score": 0.8155138863811818
       }
     ],
     "2022-11-09-how-to-use-the-bitly-api-in-ruby": [
       {
         "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.8805143541262591
+        "score": 0.8970126139984564
       },
       {
-        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.8170134993822746
-      },
-      {
-        "id": "2017-03-14-the-web-share-api",
-        "score": 0.8123523783014343
+        "id": "2016-09-05-a-community-offers-to-help",
+        "score": 0.7992464568605441
       },
       {
         "id": "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now",
-        "score": 0.8034560437370535
+        "score": 0.7917333212625502
+      },
+      {
+        "id": "2017-03-14-the-web-share-api",
+        "score": 0.7865024437716749
       }
     ],
     "2022-11-23-alias-your-mastodon-username-to-your-own-domain-with-jekyll": [
       {
         "id": "2016-06-28-asset-pipelines-with-jekyll-assets",
-        "score": 0.8115724835602346
+        "score": 0.7817455178040746
+      },
+      {
+        "id": "2018-04-25-web-share-api-with-web-components",
+        "score": 0.7797410193358258
       },
       {
         "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.783480471428583
+        "score": 0.7769707839365373
       },
       {
-        "id": "2022-11-09-how-to-use-the-bitly-api-in-ruby",
-        "score": 0.7777056689345688
-      },
-      {
-        "id": "2017-01-27-on-fixing-a-favicon",
-        "score": 0.7768620060102912
+        "id": "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections",
+        "score": 0.7748750794102996
       }
     ],
     "2022-12-07-better-two-factor-authentication-experiences-with-web-otp": [
       {
         "id": "2018-09-04-implementing-one-time-passwords-in-crystal",
-        "score": 0.8426523786618819
+        "score": 0.8472022335895499
       },
       {
         "id": "2018-04-25-web-share-api-with-web-components",
-        "score": 0.8214910471673781
+        "score": 0.8140018609171071
       },
       {
         "id": "2017-03-14-the-web-share-api",
-        "score": 0.8208746451089811
+        "score": 0.8126006523887377
       },
       {
-        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.8010693419930062
+        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
+        "score": 0.7952089857670065
       }
     ],
     "2023-02-02-yaml-document-from-hell-javascript-edition": [
       {
-        "id": "2016-06-28-asset-pipelines-with-jekyll-assets",
-        "score": 0.8082069396406015
-      },
-      {
-        "id": "2017-02-13-doing-things-wrong",
-        "score": 0.8051213562608216
-      },
-      {
-        "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.8048618414614855
-      },
-      {
         "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
-        "score": 0.8036494287060434
+        "score": 0.8107867706296543
+      },
+      {
+        "id": "2016-06-13-the-surprise-multipart-form-data",
+        "score": 0.8029447123196723
+      },
+      {
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.8004908219140183
+      },
+      {
+        "id": "2026-01-28-trusted-publishing-npm",
+        "score": 0.7959126985124513
       }
     ],
     "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js": [
       {
+        "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
+        "score": 0.8495405392894774
+      },
+      {
         "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.8621465655069368
+        "score": 0.8429650034505134
       },
       {
         "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.8264885390492288
+        "score": 0.8363841917565762
       },
       {
-        "id": "2019-01-10-how-to-start-a-node-js-project",
-        "score": 0.8226570719127816
-      },
-      {
-        "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8183892405191106
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.8357588918774002
       }
     ],
     "2023-05-01-build-bots-on-bluesky-with-typescript": [
       {
         "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
-        "score": 0.8621465655069368
+        "score": 0.8429650034505134
       },
       {
-        "id": "2019-01-10-how-to-start-a-node-js-project",
-        "score": 0.8331130735599674
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.8010105887906802
+      },
+      {
+        "id": "2026-01-28-trusted-publishing-npm",
+        "score": 0.7983243403373295
       },
       {
         "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.8281382902136368
-      },
-      {
-        "id": "2022-11-09-how-to-use-the-bitly-api-in-ruby",
-        "score": 0.8170134993822746
+        "score": 0.7913845875860492
       }
     ],
     "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections": [
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.8187996349881485
+        "score": 0.8022086986553693
       },
       {
         "id": "2018-04-25-web-share-api-with-web-components",
-        "score": 0.8032210549279357
+        "score": 0.7981184709357967
       },
       {
         "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
-        "score": 0.7986554208802426
+        "score": 0.786101088246778
       },
       {
-        "id": "2017-03-14-the-web-share-api",
-        "score": 0.7851604050804717
+        "id": "2017-02-13-doing-things-wrong",
+        "score": 0.7810526921625934
       }
     ],
     "2023-09-05-nodejs-supports-dotenv": [
       {
+        "id": "2021-03-15-restart-app-not-tunnel-ngrok-nodemon",
+        "score": 0.8013510740590745
+      },
+      {
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.7908870009562511
+      },
+      {
         "id": "2019-01-10-how-to-start-a-node-js-project",
-        "score": 0.8226141635003696
+        "score": 0.7893069708458056
       },
       {
-        "id": "2020-03-04-mistakes-treating-paths-as-strings",
-        "score": 0.8014570375483143
-      },
-      {
-        "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.7920740668505305
-      },
-      {
-        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.7910907425156192
+        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
+        "score": 0.7850942209822165
       }
     ],
     "2023-09-14-javascript-array-grouping-methods": [
       {
-        "id": "2019-08-26-how-not-to-sort-an-array-in-javascript",
-        "score": 0.8340696586635737
-      },
-      {
-        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
-        "score": 0.8197297490443242
-      },
-      {
         "id": "2017-02-09-toast-to-es2015-destructuring",
-        "score": 0.8111707178485593
+        "score": 0.8030302943705488
+      },
+      {
+        "id": "2019-08-26-how-not-to-sort-an-array-in-javascript",
+        "score": 0.8000465480956354
+      },
+      {
+        "id": "2026-01-11-javascript-date-calculation",
+        "score": 0.7995388381180751
       },
       {
         "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
-        "score": 0.8006523142516975
+        "score": 0.7866681217855133
       }
     ],
     "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps": [
       {
         "id": "2020-08-06-how-to-stream-file-downloads-in-Node-js-with-got",
-        "score": 0.8623189258298055
+        "score": 0.8491470755554843
       },
       {
-        "id": "2017-07-04-experimenting-with-the-background-fetch-api",
-        "score": 0.8564331329030368
+        "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
+        "score": 0.8264044824328586
       },
       {
-        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
-        "score": 0.8407827874487288
+        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
+        "score": 0.8249561817054649
       },
       {
-        "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.8260129154581637
+        "id": "2016-06-13-the-surprise-multipart-form-data",
+        "score": 0.8190124874208111
       }
     ],
     "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications": [
       {
-        "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.8630992211076174
+        "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
+        "score": 0.8587185523073976
       },
       {
-        "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.8426087519353936
+        "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
+        "score": 0.8523624040231723
+      },
+      {
+        "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
+        "score": 0.8284863783200617
       },
       {
         "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8407827874487288
-      },
-      {
-        "id": "2023-09-14-javascript-array-grouping-methods",
-        "score": 0.8197297490443242
+        "score": 0.8081010341254073
       }
     ],
     "2024-09-25-how-to-create-vector-embeddings-in-node-js": [
       {
         "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
-        "score": 0.9493481596690284
-      },
-      {
-        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
-        "score": 0.8426087519353936
+        "score": 0.9599802738796738
       },
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.8395641436890224
+        "score": 0.875645225749024
       },
       {
-        "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8260129154581637
+        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
+        "score": 0.8587185523073976
+      },
+      {
+        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
+        "score": 0.8495405392894774
       }
     ],
     "2024-12-30-shallow-clones-versus-structured-clones": [
       {
+        "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
+        "score": 0.768211138048034
+      },
+      {
         "id": "2017-02-09-toast-to-es2015-destructuring",
-        "score": 0.8038020633364139
+        "score": 0.7663466173687556
       },
       {
-        "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.789590312273941
-      },
-      {
-        "id": "2017-02-13-doing-things-wrong",
-        "score": 0.7884865851526484
+        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
+        "score": 0.764186522638857
       },
       {
         "id": "2023-09-14-javascript-array-grouping-methods",
-        "score": 0.7872747825019631
+        "score": 0.7588164254671531
       }
     ],
     "2025-01-09-html-content-retrieval-augmented-generation-readability-js": [
       {
-        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
-        "score": 0.8630992211076174
-      },
-      {
         "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.8395641436890224
+        "score": 0.875645225749024
       },
       {
-        "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8238360075277853
+        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
+        "score": 0.8523624040231723
       },
       {
-        "id": "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections",
-        "score": 0.8187996349881485
+        "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
+        "score": 0.8303931741297865
+      },
+      {
+        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
+        "score": 0.8169442877491132
       }
     ],
     "2025-01-14-troubles-with-multipart-form-data-fetch-node-js": [
       {
         "id": "2016-06-13-the-surprise-multipart-form-data",
-        "score": 0.9277079379990086
+        "score": 0.8966753629955532
+      },
+      {
+        "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
+        "score": 0.8363261851576358
+      },
+      {
+        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
+        "score": 0.8357588918774002
       },
       {
         "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8176943256892261
-      },
-      {
-        "id": "2020-08-06-how-to-stream-file-downloads-in-Node-js-with-got",
-        "score": 0.8114530831497875
-      },
-      {
-        "id": "2017-07-04-experimenting-with-the-background-fetch-api",
-        "score": 0.8084316446499574
+        "score": 0.8264044824328586
       }
     ],
     "2025-04-08-how-to-create-vector-embeddings-in-python": [
       {
         "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.9493481596690284
-      },
-      {
-        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
-        "score": 0.8131269419129219
+        "score": 0.9599802738796738
       },
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.8031558951042252
+        "score": 0.8303931741297865
       },
       {
-        "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.7955139508391573
+        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
+        "score": 0.8284863783200617
+      },
+      {
+        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
+        "score": 0.7980867258410069
       }
     ],
     "2026-01-11-javascript-date-calculation": [
       {
         "id": "2021-02-22-display-dates-in-your-users-time-zone",
-        "score": 0.8348783006325301
-      },
-      {
-        "id": "2017-02-13-doing-things-wrong",
-        "score": 0.8145658321411877
+        "score": 0.8576876173640524
       },
       {
         "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.8009362146401926
+        "score": 0.8292894879867887
       },
       {
         "id": "2023-09-14-javascript-array-grouping-methods",
-        "score": 0.7925139739317362
+        "score": 0.7995388381180751
+      },
+      {
+        "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
+        "score": 0.7926740397072688
       }
     ],
     "2026-01-28-trusted-publishing-npm": [
       {
         "id": "2019-01-10-how-to-start-a-node-js-project",
-        "score": 0.8178000662890677
-      },
-      {
-        "id": "2023-02-02-yaml-document-from-hell-javascript-edition",
-        "score": 0.7966661131912921
-      },
-      {
-        "id": "2017-07-12-two-tests-you-should-run-against-your-ruby-project-now",
-        "score": 0.7943344054218331
+        "score": 0.8078181536344846
       },
       {
         "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.7942020337148546
+        "score": 0.7983243403373295
+      },
+      {
+        "id": "2023-02-02-yaml-document-from-hell-javascript-edition",
+        "score": 0.7959126985124513
+      },
+      {
+        "id": "2018-08-21-git-commands-to-keep-a-fork-up-to-date",
+        "score": 0.7868850253007857
       }
     ],
     "2026-03-05-talking-tips": [
       {
         "id": "2020-01-29-how-to-find-cfps-for-developer-conferences",
-        "score": 0.815776745811238
+        "score": 0.8032542394838537
       },
       {
-        "id": "2016-06-20-critique-my-swift-on-exercism",
-        "score": 0.7996504422255472
-      },
-      {
-        "id": "2019-01-03-2018-in-review",
-        "score": 0.7807972265032708
+        "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
+        "score": 0.7840884983518582
       },
       {
         "id": "2017-02-13-doing-things-wrong",
-        "score": 0.7721273386134645
+        "score": 0.7780339925303403
+      },
+      {
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.7722818714317998
       }
     ],
     "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it": [
       {
-        "id": "2016-08-01-august-is-ios-month",
-        "score": 0.8492781886543502
-      },
-      {
-        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.8281382902136368
-      },
-      {
-        "id": "2019-01-03-2018-in-review",
-        "score": 0.8273000327808218
-      },
-      {
         "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
-        "score": 0.8264885390492288
+        "score": 0.8363841917565762
+      },
+      {
+        "id": "2026-01-11-javascript-date-calculation",
+        "score": 0.8292894879867887
+      },
+      {
+        "id": "2021-02-22-display-dates-in-your-users-time-zone",
+        "score": 0.818616436041338
+      },
+      {
+        "id": "2016-08-01-august-is-ios-month",
+        "score": 0.8139447205338193
       }
     ]
   }
