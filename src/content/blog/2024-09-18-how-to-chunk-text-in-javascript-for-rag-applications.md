@@ -16,7 +16,7 @@ updatedDate: "2025-11-16"
 [Retrieval-augmented generation (RAG)](https://www.ibm.com/think/topics/retrieval-augmented-generation) applications begin with data, so getting your data in the right shape to work well with [vector databases](https://www.ibm.com/think/topics/vector-database) and [large language models (LLMs)](https://www.ibm.com/think/topics/large-language-models) is the first challenge you’re likely to face when you get started building. In this post, we'll discuss the different ways to work with text data in JavaScript, exploring how to split it up into chunks and prepare it for use in a RAG app.
 
 <div class="info">
-  <p>This post was originally written for DataStax, but didn't survive a content migration as part of <a href="https://www.ibm.com/new/announcements/ibm-to-acquire-datastax-helping-clients-bring-the-power-of-unstructured-data-to-enterprise-ai-applications">IBM's purchase</a>. I thought the content was useful, so have republished it here.</p>
+  <p>This post was originally written for DataStax, but didn't survive a content migration as part of <a href="https://www.ibm.com/new/announcements/ibm-to-acquire-datastax-helping-clients-bring-the-power-of-unstructured-data-to-enterprise-ai-applications">IBM's acquisition</a>. I thought the content was useful, so have republished it here.</p>
 </div>
 
 ## Why chunking is important

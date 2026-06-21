@@ -22,7 +22,7 @@ When you’re building a [retrieval-augmented generation (RAG)](https://www.ibm.
 There are many ways that you can create vector embeddings in Python. In this post, we’ll take a look at four ways to generate vector embeddings: locally, via API, via a framework, and with [Astra DB's Vectorize](https://docs.datastax.com/en/astra-db-serverless/databases/embedding-generation.html).
 
 <div class="info">
-  <p>This post was originally written for DataStax, but didn't survive a content migration as part of <a href="https://www.ibm.com/new/announcements/ibm-to-acquire-datastax-helping-clients-bring-the-power-of-unstructured-data-to-enterprise-ai-applications">IBM's purchase</a>. I thought the content was useful, so have republished it here.</p>
+  <p>This post was originally written for DataStax, but didn't survive a content migration as part of <a href="https://www.ibm.com/new/announcements/ibm-to-acquire-datastax-helping-clients-bring-the-power-of-unstructured-data-to-enterprise-ai-applications">IBM's acquisition</a>. I thought the content was useful, so have republished it here.</p>
 </div>
 
 ## Local vector embeddings

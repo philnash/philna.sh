@@ -18,7 +18,7 @@ When you’re building a [retrieval-augmented generation (RAG)](https://www.ibm.
 There are many ways that you can create vector embeddings in JavaScript. In this post, we’ll investigate four ways to generate vector embeddings in Node.js: locally, via API, via a framework, and with Astra DB's Vectorize.
 
 <div class="info">
-  <p>This post was originally written for DataStax, but didn't survive a content migration as part of <a href="https://www.ibm.com/new/announcements/ibm-to-acquire-datastax-helping-clients-bring-the-power-of-unstructured-data-to-enterprise-ai-applications">IBM's purchase</a>. I thought the content was useful, so have republished it here.</p>
+  <p>This post was originally written for DataStax, but didn't survive a content migration as part of <a href="https://www.ibm.com/new/announcements/ibm-to-acquire-datastax-helping-clients-bring-the-power-of-unstructured-data-to-enterprise-ai-applications">IBM's acquisition</a>. I thought the content was useful, so have republished it here.</p>
 </div>
 
 ## Local vector embeddings
@@ -44,14 +44,14 @@ import { pipeline } from "@huggingface/transformers";
 
 const extractor = await pipeline(
   "feature-extraction",
-  "Xenova/all-MiniLM-L6-v2"
+  "Xenova/all-MiniLM-L6-v2",
 );
 
 const response = await extractor(
   [
     "A robot may not injure a human being or, through inaction, allow a human being to come to harm.",
   ],
-  { pooling: "mean", normalize: true }
+  { pooling: "mean", normalize: true },
 );
 
 console.log(Array.from(response.data));
@@ -67,7 +67,7 @@ const response = await extractor(
     "A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.",
     "A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.",
   ],
-  { pooling: "mean", normalize: true }
+  { pooling: "mean", normalize: true },
 );
 
 console.log(response.tolist());
@@ -164,7 +164,7 @@ const embeddings = new GoogleGenerativeAIEmbeddings({
 const vectorStore = await AstraDBVectorStore.fromDocuments(
   documents, // a list of document objects to put in the store
   embeddings, // the embeddings model
-  astraConfig // config to connect to Astra DB
+  astraConfig, // config to connect to Astra DB
 );
 ```
 
@@ -172,7 +172,7 @@ When you provide the embeddings model to the database object, you can then use i
 
 ```js
 const results = vectorStore.similaritySearch(
-  "Are robots allowed to protect themselves?"
+  "Are robots allowed to protect themselves?",
 );
 ```
 
@@ -237,7 +237,7 @@ const cursor = collection.find(
   {
     sort: { $vectorize: "Are robots allowed to protect themselve?" },
     limit: 5,
-  }
+  },
 );
 const results = await cursor.toArray();
 ```

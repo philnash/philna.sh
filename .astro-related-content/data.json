@@ -29,7 +29,7 @@
       },
       {
         "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8190124874208111
+        "score": 0.818824424593797
       },
       {
         "id": "2017-02-13-doing-things-wrong",
@@ -82,12 +82,12 @@
         "score": 0.8139447205338193
       },
       {
-        "id": "2016-08-17-install-a-service-worker-declaratively",
-        "score": 0.7689275056011592
+        "id": "2026-05-27-mini-apps",
+        "score": 0.7785546878946177
       },
       {
-        "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.768416177800317
+        "id": "2016-08-17-install-a-service-worker-declaratively",
+        "score": 0.7689275056011592
       }
     ],
     "2016-08-17-install-a-service-worker-declaratively": [
@@ -633,7 +633,7 @@
     "2020-08-06-how-to-stream-file-downloads-in-Node-js-with-got": [
       {
         "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8491470755554843
+        "score": 0.8493472231959661
       },
       {
         "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
@@ -777,7 +777,7 @@
     "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js": [
       {
         "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.8495405392894774
+        "score": 0.8489406794933332
       },
       {
         "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
@@ -812,8 +812,12 @@
     ],
     "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections": [
       {
+        "id": "2026-06-10-recommended-posts-for-astro",
+        "score": 0.8344760602815277
+      },
+      {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.8022086986553693
+        "score": 0.8017423963465179
       },
       {
         "id": "2018-04-25-web-share-api-with-web-components",
@@ -822,10 +826,6 @@
       {
         "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
         "score": 0.786101088246778
-      },
-      {
-        "id": "2017-02-13-doing-things-wrong",
-        "score": 0.7810526921625934
       }
     ],
     "2023-09-05-nodejs-supports-dotenv": [
@@ -867,55 +867,55 @@
     "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps": [
       {
         "id": "2020-08-06-how-to-stream-file-downloads-in-Node-js-with-got",
-        "score": 0.8491470755554843
+        "score": 0.8493472231959661
       },
       {
         "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
-        "score": 0.8264044824328586
+        "score": 0.8260400638344916
       },
       {
         "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
-        "score": 0.8249561817054649
+        "score": 0.8248222936484237
       },
       {
         "id": "2016-06-13-the-surprise-multipart-form-data",
-        "score": 0.8190124874208111
+        "score": 0.818824424593797
       }
     ],
     "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications": [
       {
         "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.8587185523073976
+        "score": 0.8585515567859937
       },
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.8523624040231723
+        "score": 0.8519299244077843
       },
       {
         "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
-        "score": 0.8284863783200617
+        "score": 0.8284106543991591
       },
       {
         "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8081010341254073
+        "score": 0.8077909696147864
       }
     ],
     "2024-09-25-how-to-create-vector-embeddings-in-node-js": [
       {
         "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
-        "score": 0.9599802738796738
+        "score": 0.9599597122870906
       },
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.875645225749024
+        "score": 0.8757351884914418
       },
       {
         "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
-        "score": 0.8587185523073976
+        "score": 0.8585515567859937
       },
       {
         "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
-        "score": 0.8495405392894774
+        "score": 0.8489406794933332
       }
     ],
     "2024-12-30-shallow-clones-versus-structured-clones": [
@@ -939,19 +939,19 @@
     "2025-01-09-html-content-retrieval-augmented-generation-readability-js": [
       {
         "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.875645225749024
+        "score": 0.8757351884914418
       },
       {
         "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
-        "score": 0.8523624040231723
+        "score": 0.8519299244077843
       },
       {
         "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
-        "score": 0.8303931741297865
+        "score": 0.8302762747559197
       },
       {
         "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
-        "score": 0.8169442877491132
+        "score": 0.8166683741963097
       }
     ],
     "2025-01-14-troubles-with-multipart-form-data-fetch-node-js": [
@@ -969,25 +969,25 @@
       },
       {
         "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
-        "score": 0.8264044824328586
+        "score": 0.8260400638344916
       }
     ],
     "2025-04-08-how-to-create-vector-embeddings-in-python": [
       {
         "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.9599802738796738
+        "score": 0.9599597122870906
       },
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.8303931741297865
+        "score": 0.8302762747559197
       },
       {
         "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
-        "score": 0.8284863783200617
+        "score": 0.8284106543991591
       },
       {
-        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
-        "score": 0.7980867258410069
+        "id": "2026-06-10-recommended-posts-for-astro",
+        "score": 0.8159970835021629
       }
     ],
     "2026-01-11-javascript-date-calculation": [
@@ -1050,16 +1050,52 @@
         "score": 0.8363841917565762
       },
       {
+        "id": "2026-05-27-mini-apps",
+        "score": 0.8357374775204538
+      },
+      {
         "id": "2026-01-11-javascript-date-calculation",
         "score": 0.8292894879867887
       },
       {
         "id": "2021-02-22-display-dates-in-your-users-time-zone",
         "score": 0.818616436041338
+      }
+    ],
+    "2026-05-27-mini-apps": [
+      {
+        "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
+        "score": 0.8357374775204538
+      },
+      {
+        "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
+        "score": 0.7816501144129305
+      },
+      {
+        "id": "2017-01-27-on-fixing-a-favicon",
+        "score": 0.7806380522177533
       },
       {
         "id": "2016-08-01-august-is-ios-month",
-        "score": 0.8139447205338193
+        "score": 0.7785546878946177
+      }
+    ],
+    "2026-06-10-recommended-posts-for-astro": [
+      {
+        "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
+        "score": 0.8439295804278502
+      },
+      {
+        "id": "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections",
+        "score": 0.8344760602815277
+      },
+      {
+        "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
+        "score": 0.8159970835021629
+      },
+      {
+        "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
+        "score": 0.814125461748423
       }
     ]
   }

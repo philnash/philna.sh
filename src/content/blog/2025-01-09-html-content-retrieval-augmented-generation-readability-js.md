@@ -17,7 +17,7 @@ Scraping web pages is one way to fetch content for your [retrieval-augmented gen
 Mozilla's open-source library [Readability.js](https://github.com/mozilla/readability) is a useful tool for extracting just the important parts of a web page. Let's look at how to use it as part of a data ingestion pipeline for a RAG application.
 
 <div class="info">
-  <p>This post was originally written for DataStax, but didn't survive a content migration as part of <a href="https://www.ibm.com/new/announcements/ibm-to-acquire-datastax-helping-clients-bring-the-power-of-unstructured-data-to-enterprise-ai-applications">IBM's purchase</a>. I thought the content was useful, so have republished it here.</p>
+  <p>This post was originally written for DataStax, but didn't survive a content migration as part of <a href="https://www.ibm.com/new/announcements/ibm-to-acquire-datastax-helping-clients-bring-the-power-of-unstructured-data-to-enterprise-ai-applications">IBM's acquisition</a>. I thought the content was useful, so have republished it here.</p>
 </div>
 
 ## Retrieving unstructured data from a web page
@@ -40,7 +40,7 @@ Let's take a look at an example of scraping the article content from my previous
 
 ```js
 const html = await fetch(
-  "https://philna.sh/blog/2024/09/25/how-to-create-vector-embeddings-in-node-js/"
+  "https://philna.sh/blog/2024/09/25/how-to-create-vector-embeddings-in-node-js/",
 ).then((res) => res.text());
 console.log(html);
 ```
@@ -57,7 +57,7 @@ npm install cheerio
 import * as cheerio from "cheerio";
 
 const html = await fetch(
-  "https://philna.sh/blog/2024/09/25/how-to-create-vector-embeddings-in-node-js/"
+  "https://philna.sh/blog/2024/09/25/how-to-create-vector-embeddings-in-node-js/",
 ).then((res) => res.text());
 
 const $ = cheerio.load(html);
@@ -141,7 +141,7 @@ We use the `HTMLWebBaseLoader` to load the raw HTML from the URL we provide. The
 
 ```js
 const loader = new HTMLWebBaseLoader(
-  "https://philna.sh/blog/2024/09/25/how-to-create-vector-embeddings-in-node-js/"
+  "https://philna.sh/blog/2024/09/25/how-to-create-vector-embeddings-in-node-js/",
 );
 const transformer = new MozillaReadabilityTransformer();
 const splitter = new RecursiveCharacterTextSplitter({
