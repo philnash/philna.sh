@@ -812,8 +812,8 @@
     ],
     "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections": [
       {
-        "id": "2026-06-10-recommended-posts-for-astro",
-        "score": 0.8344760602815277
+        "id": "2026-06-22-ai-powered-related-content-astro-site",
+        "score": 0.8479113331325117
       },
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
@@ -910,12 +910,12 @@
         "score": 0.8757351884914418
       },
       {
-        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
-        "score": 0.8585515567859937
+        "id": "2026-06-22-ai-powered-related-content-astro-site",
+        "score": 0.8729612951843563
       },
       {
-        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
-        "score": 0.8489406794933332
+        "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
+        "score": 0.8585515567859937
       }
     ],
     "2024-12-30-shallow-clones-versus-structured-clones": [
@@ -946,12 +946,12 @@
         "score": 0.8519299244077843
       },
       {
-        "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
-        "score": 0.8302762747559197
+        "id": "2026-06-22-ai-powered-related-content-astro-site",
+        "score": 0.8323373405238814
       },
       {
-        "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
-        "score": 0.8166683741963097
+        "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
+        "score": 0.8302762747559197
       }
     ],
     "2025-01-14-troubles-with-multipart-form-data-fetch-node-js": [
@@ -978,16 +978,16 @@
         "score": 0.9599597122870906
       },
       {
+        "id": "2026-06-22-ai-powered-related-content-astro-site",
+        "score": 0.8497760821460403
+      },
+      {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
         "score": 0.8302762747559197
       },
       {
         "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
         "score": 0.8284106543991591
-      },
-      {
-        "id": "2026-06-10-recommended-posts-for-astro",
-        "score": 0.8159970835021629
       }
     ],
     "2026-01-11-javascript-date-calculation": [
@@ -1080,22 +1080,22 @@
         "score": 0.7785546878946177
       }
     ],
-    "2026-06-10-recommended-posts-for-astro": [
+    "2026-06-22-ai-powered-related-content-astro-site": [
       {
         "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.8439295804278502
-      },
-      {
-        "id": "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections",
-        "score": 0.8344760602815277
+        "score": 0.8729612951843563
       },
       {
         "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
-        "score": 0.8159970835021629
+        "score": 0.8497760821460403
+      },
+      {
+        "id": "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections",
+        "score": 0.8479113331325117
       },
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.814125461748423
+        "score": 0.8323373405238814
       }
     ]
   }
