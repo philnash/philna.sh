@@ -82,12 +82,12 @@
         "score": 0.8139447205338193
       },
       {
-        "id": "2026-05-27-mini-apps",
-        "score": 0.7785546878946177
-      },
-      {
         "id": "2016-08-17-install-a-service-worker-declaratively",
         "score": 0.7689275056011592
+      },
+      {
+        "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
+        "score": 0.768416177800317
       }
     ],
     "2016-08-17-install-a-service-worker-declaratively": [
@@ -1050,34 +1050,16 @@
         "score": 0.8363841917565762
       },
       {
-        "id": "2026-05-27-mini-apps",
-        "score": 0.8357374775204538
-      },
-      {
         "id": "2026-01-11-javascript-date-calculation",
         "score": 0.8292894879867887
       },
       {
         "id": "2021-02-22-display-dates-in-your-users-time-zone",
         "score": 0.818616436041338
-      }
-    ],
-    "2026-05-27-mini-apps": [
-      {
-        "id": "2026-05-25-i-built-a-new-app-and-i-dont-know-how-i-feel-about-it",
-        "score": 0.8357374775204538
-      },
-      {
-        "id": "2020-03-17-the-story-of-a-midly-popular-ruby-gem",
-        "score": 0.7816501144129305
-      },
-      {
-        "id": "2017-01-27-on-fixing-a-favicon",
-        "score": 0.7806380522177533
       },
       {
         "id": "2016-08-01-august-is-ios-month",
-        "score": 0.7785546878946177
+        "score": 0.8139447205338193
       }
     ],
     "2026-06-22-ai-powered-related-content-astro-site": [
