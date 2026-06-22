@@ -15,10 +15,29 @@
 
 @include vars.media-query-min(700px) {
   .related ul {
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
   }
 }
 
 .related .post-header-image {
   margin: 0 0 math.div(vars.$spacing-unit, 2) 0;
+}
+
+.related .media-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 31.25%;
+  overflow: hidden;
+  background:
+    linear-gradient(to bottom, vars.$brand-color 5px, transparent 5px),
+    linear-gradient(to top, vars.$brand-color 5px, transparent 5px),
+    linear-gradient(to right, vars.$brand-color 5px, transparent 5px),
+    linear-gradient(to left, vars.$brand-color 5px, transparent 5px);
+}
+
+.related .media-wrapper figure {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
