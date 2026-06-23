@@ -1,4 +1,5 @@
 import { defineConfig, sharpImageService } from "astro/config";
+import { satteri } from "@astrojs/markdown-satteri";
 import yaml from "@rollup/plugin-yaml";
 import { DOMAIN } from "./src/consts";
 import cloudflare from "@astrojs/cloudflare";
@@ -49,7 +50,7 @@ export default defineConfig({
     shikiConfig: {
       theme: "slack-dark",
     },
-    smartypants: false,
+    processor: satteri({}),
   },
   compressHTML: true,
   output: "static",

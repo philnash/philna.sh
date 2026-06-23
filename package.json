@@ -13,6 +13,7 @@
   "dependencies": {
     "@analytics-debugger/ga4mp": "^0.0.8",
     "@astrojs/cloudflare": "^13.7.0",
+    "@astrojs/markdown-satteri": "^0.3.1",
     "@astrojs/rss": "^4.0.18",
     "@fontsource/merriweather": "^5.2.11",
     "@fontsource/raleway": "^5.2.8",
@@ -22,7 +23,7 @@
     "@playform/inline": "^0.1.2",
     "@sentry/astro": "^10.59.0",
     "@sentry/cloudflare": "^10.59.0",
-    "astro": "^6.4.4",
+    "astro": "^6.4.8",
     "astro-remote": "^0.3.4",
     "markdown-it": "^14.2.0",
     "mdast-util-from-markdown": "^2.0.3",
