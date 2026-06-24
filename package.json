@@ -13,16 +13,16 @@
   "dependencies": {
     "@analytics-debugger/ga4mp": "^0.0.8",
     "@astrojs/cloudflare": "^13.7.0",
-    "@astrojs/markdown-satteri": "^0.3.1",
+    "@astrojs/markdown-satteri": "^0.3.2",
     "@astrojs/rss": "^4.0.18",
     "@fontsource/merriweather": "^5.2.11",
     "@fontsource/raleway": "^5.2.8",
     "@philnash/astro-pagination": "^0.6.0",
-    "@philnash/astro-related-content": "^0.1.1",
+    "@philnash/astro-related-content": "^0.2.0",
     "@philnash/resend": "^1.2.1",
     "@playform/inline": "^0.1.2",
-    "@sentry/astro": "^10.59.0",
-    "@sentry/cloudflare": "^10.59.0",
+    "@sentry/astro": "^10.60.0",
+    "@sentry/cloudflare": "^10.60.0",
     "astro": "^6.4.8",
     "astro-remote": "^0.3.4",
     "markdown-it": "^14.2.0",
@@ -42,7 +42,7 @@
     "sass": "^1.101.0",
     "sharp": "^0.35.2",
     "typescript": "^6.0.3",
-    "wrangler": "^4.93.0"
+    "wrangler": "^4.104.0"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.62.2"
