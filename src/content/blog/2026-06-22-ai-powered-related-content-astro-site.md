@@ -1,5 +1,5 @@
 ---
-title: "Generate AI-powered related content for your Astro site"
+title: "Generate AI-powered related links for your Astro content"
 tags:
   - astro
   - vector embeddings
@@ -7,6 +7,7 @@ tags:
   - transformers.js
 image: ../../assets/posts/related/astro-related-posts.jpg
 imageAlt: "An abstract image depicting content that is connected or related."
+socialImage: ../../assets/posts/related/astro-related-posts-social.webp
 imageWidth: 1500
 imageHeight: 500
 pubDate: "2026-05-27"
