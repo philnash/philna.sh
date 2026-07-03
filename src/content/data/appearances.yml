@@ -19,6 +19,7 @@
     type: conference
   talks:
     - title: Evolving AI chat with MCP Apps
+      video: https://www.youtube.com/watch?v=kH3cbpS1gOc&list=PLLnrFmPLt-3Y&index=1
 
 - id: ndc-copenhagen-2026
   event:
