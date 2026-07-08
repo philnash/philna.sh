@@ -31,6 +31,7 @@
     type: conference
   talks:
     - title: Let's build an AI agent
+      video: https://www.youtube.com/watch?v=2r47_vCEkyo
     - title: Evolving AI chat with MCP Apps
 
 - id: twilio-signal-2026
