@@ -630,7 +630,7 @@
         "score": 0.7948213877806292
       }
     ],
-    "2020-08-06-how-to-stream-file-downloads-in-node-js-with-got": [
+    "2020-08-06-how-to-stream-file-downloads-in-Node-js-with-got": [
       {
         "id": "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps",
         "score": 0.8493472231959661
@@ -813,7 +813,7 @@
     "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections": [
       {
         "id": "2026-06-22-ai-powered-related-content-astro-site",
-        "score": 0.8479113331325117
+        "score": 0.8498138913331571
       },
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
@@ -866,7 +866,7 @@
     ],
     "2024-08-22-fetch-streams-api-for-faster-ux-generative-ai-apps": [
       {
-        "id": "2020-08-06-how-to-stream-file-downloads-in-node-js-with-got",
+        "id": "2020-08-06-how-to-stream-file-downloads-in-Node-js-with-got",
         "score": 0.8493472231959661
       },
       {
@@ -911,7 +911,7 @@
       },
       {
         "id": "2026-06-22-ai-powered-related-content-astro-site",
-        "score": 0.8729612951843563
+        "score": 0.874255605520527
       },
       {
         "id": "2024-09-18-how-to-chunk-text-in-javascript-for-rag-applications",
@@ -947,7 +947,7 @@
       },
       {
         "id": "2026-06-22-ai-powered-related-content-astro-site",
-        "score": 0.8323373405238814
+        "score": 0.8325396004150302
       },
       {
         "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
@@ -979,7 +979,7 @@
       },
       {
         "id": "2026-06-22-ai-powered-related-content-astro-site",
-        "score": 0.8497760821460403
+        "score": 0.8509995516916912
       },
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
@@ -1065,19 +1065,19 @@
     "2026-06-22-ai-powered-related-content-astro-site": [
       {
         "id": "2024-09-25-how-to-create-vector-embeddings-in-node-js",
-        "score": 0.8729612951843563
+        "score": 0.874255605520527
       },
       {
         "id": "2025-04-08-how-to-create-vector-embeddings-in-python",
-        "score": 0.8497760821460403
+        "score": 0.8509995516916912
       },
       {
         "id": "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections",
-        "score": 0.8479113331325117
+        "score": 0.8498138913331571
       },
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
-        "score": 0.8323373405238814
+        "score": 0.8325396004150302
       }
     ]
   }
