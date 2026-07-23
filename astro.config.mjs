@@ -1,4 +1,4 @@
-import { defineConfig, sharpImageService } from "astro/config";
+import { defineConfig, sharpImageService, envField } from "astro/config";
 import { satteri } from "@astrojs/markdown-satteri";
 import yaml from "@rollup/plugin-yaml";
 import { DOMAIN } from "./src/consts";
@@ -58,4 +58,23 @@ export default defineConfig({
     imageService: "passthrough",
     prerenderEnvironment: "node",
   }),
+  env: {
+    schema: {
+      RESEND_API_KEY: envField.string({ context: "server", access: "secret" }),
+      RESEND_TO_EMAIL: envField.string({ context: "server", access: "secret" }),
+      RESEND_FROM_EMAIL: envField.string({
+        context: "server",
+        access: "secret",
+      }),
+      CLOUDFLARE_SITE_KEY: envField.string({
+        context: "client",
+        access: "public",
+      }),
+      CLOUDFLARE_SECRET_KEY: envField.string({
+        context: "server",
+        access: "secret",
+      }),
+    },
+    validateSecrets: true,
+  },
 });

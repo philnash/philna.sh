@@ -1,8 +1,6 @@
 ---
 export const prerender = false;
 
-import { env } from "cloudflare:workers";
-
 import { Resend } from "@philnash/resend";
 import { z } from "astro/zod";
 
@@ -10,31 +8,37 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { validate } from "../utils/turnstile";
 
-const {
-  RESEND_API_KEY="",
-  RESEND_TO_EMAIL="",
-  RESEND_FROM_EMAIL="",
-  CLOUDFLARE_SITE_KEY="",
-  CLOUDFLARE_SECRET_KEY=""
-} = env;
-
-type ContactErrors = {
-  email: string[];
-  subject: string[];
-  message: string[];
-};
+import { RESEND_API_KEY, RESEND_TO_EMAIL, RESEND_FROM_EMAIL, CLOUDFLARE_SECRET_KEY } from "astro:env/server";
+import { CLOUDFLARE_SITE_KEY } from "astro:env/client";
 
 const title = "Contact";
 const method = Astro.request.method;
 
-const emailSchema = z
-  .email({ message: "Please enter a valid email address" });
+type ContactErrors = {
+  email?: string[] | undefined;
+  subject?: string[] | undefined;
+  message?: string[] | undefined;
+};
+
+const normalizedFormSchema = z.object({
+  email: z.string().trim().catch(""),
+  subject: z.string().trim().catch(""),
+  message: z.string().trim().catch(""),
+});
+
+const contactFormSchema = z.object({
+  email: z.email({ message: "Please enter a valid email address" }).trim(),
+  subject: z.string().trim().min(1, { message: "Please enter a subject" }),
+  message: z.string().trim().min(1, { message: "Please enter a message" }),
+});
+
+
 
 function stringFromFormDataEntryValue(parameter: FormDataEntryValue | null) {
   return parameter === null ? "" : parameter.toString().trim();
 }
 
-const errors: ContactErrors = { email: [], subject: [], message: [] };
+let errors: ContactErrors = { email: [], subject: [], message: [] };
 let email = "",
   subject = "",
   message = "";
@@ -43,24 +47,15 @@ let successMessage = "";
 if (method === "POST") {
   try {
     const data = await Astro.request.formData();
-    email = stringFromFormDataEntryValue(data.get("email"));
-    subject = stringFromFormDataEntryValue(data.get("subject"));
-    message = stringFromFormDataEntryValue(data.get("message"));
+    const normalizedFormData = normalizedFormSchema.parse(Object.fromEntries(data));
+    const contactFormData = contactFormSchema.safeParse(normalizedFormData);
+    ({ email, subject, message } = normalizedFormData);
+
     const turnstileResponse = stringFromFormDataEntryValue(data.get("cf-turnstile-response"));
     const remoteIp = Astro.request.headers.get("CF-Connecting-IP") || "";
     const turnstileValidated = await validate(turnstileResponse, CLOUDFLARE_SECRET_KEY, remoteIp);
 
-    const emailResult = emailSchema.safeParse(email);
-    if (!emailResult.success) {
-      errors.email.push(...emailResult.error.issues.map((e) => e.message));
-    }
-    if (subject === "") {
-      errors.subject.push("Please enter a subject");
-    }
-    if (message === "") {
-      errors.message.push("Please enter a message");
-    }
-    if (Object.values(errors).flat().length === 0) {
+    if (contactFormData.success) {
       if (turnstileValidated) {
         const resend = new Resend(RESEND_API_KEY);
         await resend.emails.send({
@@ -72,6 +67,8 @@ if (method === "POST") {
         });
       }
       successMessage = "Thanks for your email, I'll get back to you soon!";
+    } else {
+      errors = z.flattenError(contactFormData.error).fieldErrors;
     }
   } catch (error) {
     if (error instanceof Error) {
@@ -105,7 +102,7 @@ if (method === "POST") {
             <form method="POST">
               <div>
                 <label for="email">Your email</label>
-                {errors.email.map((error) => (
+                {errors.email && errors.email.map((error) => (
                   <p class="form-error">{error}</p>
                 ))}
                 <input
@@ -114,13 +111,13 @@ if (method === "POST") {
                   name="email"
                   placeholder="you@domain.com"
                   value={email}
-                  class={errors.email.length > 0 ? "error" : ""}
+                  class={errors.email &&errors.email.length > 0 ? "error" : ""}
                   required
                 />
               </div>
               <div>
                 <label for="subject">Subject</label>
-                {errors.subject.map((error) => (
+                {errors.subject && errors.subject.map((error) => (
                   <p class="form-error">{error}</p>
                 ))}
                 <input
@@ -129,13 +126,13 @@ if (method === "POST") {
                   name="subject"
                   placeholder="Hi Phil! 👋"
                   value={subject}
-                  class={errors.subject.length > 0 ? "error" : ""}
+                  class={errors.subject && errors.subject.length > 0 ? "error" : ""}
                   required
                 />
               </div>
               <div>
                 <label for="message">Message</label>
-                {errors.message.map((error) => (
+                {errors.message && errors.message.map((error) => (
                   <p class="form-error">{error}</p>
                 ))}
                 <!-- prettier-ignore -->
@@ -143,7 +140,7 @@ if (method === "POST") {
                   id="message"
                   name="message"
                   placeholder="Your message"
-                  class={errors.message.length > 0 ? "error" : ""}
+                  class={errors.message && errors.message.length > 0 ? "error" : ""}
                   required
                 >{message}</textarea>
               </div>
