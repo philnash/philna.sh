@@ -49,7 +49,6 @@ if (method === "POST") {
     const turnstileResponse = stringFromFormDataEntryValue(data.get("cf-turnstile-response"));
     const remoteIp = Astro.request.headers.get("CF-Connecting-IP") || "";
     const turnstileValidated = await validate(turnstileResponse, CLOUDFLARE_SECRET_KEY, remoteIp);
-    const honeypot = stringFromFormDataEntryValue(data.get("captcha"))
 
     const emailResult = emailSchema.safeParse(email);
     if (!emailResult.success) {
@@ -62,7 +61,7 @@ if (method === "POST") {
       errors.message.push("Please enter a message");
     }
     if (Object.values(errors).flat().length === 0) {
-      if (honeypot === "" && turnstileValidated) {
+      if (turnstileValidated) {
         const resend = new Resend(RESEND_API_KEY);
         await resend.emails.send({
           to: RESEND_TO_EMAIL,
@@ -147,10 +146,6 @@ if (method === "POST") {
                   class={errors.message.length > 0 ? "error" : ""}
                   required
                 >{message}</textarea>
-              </div>
-              <div class="captcha" aria-hidden="true">
-                <label for="captcha">Leave this field blank</label>
-                <input type="text" id="captcha" name="captcha" tabindex="-1" />
               </div>
               <div class="cf-turnstile" data-sitekey={CLOUDFLARE_SITE_KEY}></div>
               <div>
