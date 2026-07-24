@@ -17,6 +17,12 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_TO_EMAIL: ${{ secrets.RESEND_TO_EMAIL }}
+          RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+          CLOUDFLARE_SITE_KEY: ${{ secrets.CLOUDFLARE_SITE_KEY }}
+          CLOUDFLARE_SECRET_KEY: ${{ secrets.CLOUDFLARE_SECRET_KEY }}
       - name: Deploy
         run: npx wrangler deploy
         env:
