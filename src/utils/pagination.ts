@@ -32,7 +32,7 @@ export function getPageNumbers(page: Page, windowSize: number = 5): number[] {
     last = Math.min(page.currentPage + halfWindowSize, last);
   }
   // Using the first and last page numbers, we now generate an array of all the page numbers that we will display
-  const pageNumbers = Array(last - first + 1)
+  const pageNumbers = new Array(last - first + 1)
     .fill(0)
     .map((_, index) => first + index);
   return pageNumbers;

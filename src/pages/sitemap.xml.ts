@@ -1,10 +1,10 @@
 import type { APIContext } from "astro";
 import { PER_PAGE } from "../consts";
-import { sortedBlogPosts, postPath } from "../utils/blog_posts";
+import { postPath, sortedBlogPosts } from "../utils/blog_posts";
 
 export async function GET({ site, url }: APIContext): Promise<Response> {
   const posts = await sortedBlogPosts();
-  const pageItems = Array(Math.floor(posts.length / PER_PAGE))
+  const pageItems = new Array(Math.floor(posts.length / PER_PAGE))
     .fill("")
     .map((_, index) => {
       const loc = new URL(`/blog/page/${index + 2}`, url);
@@ -16,8 +16,8 @@ export async function GET({ site, url }: APIContext): Promise<Response> {
       (post) =>
         `<url><loc>${new URL(
           postPath(post),
-          url
-        )}</loc><lastmod>${post.data.pubDate.toISOString()}</lastmod></url>`
+          url,
+        )}</loc><lastmod>${post.data.pubDate.toISOString()}</lastmod></url>`,
     )
     .join("");
   return new Response(
@@ -47,6 +47,6 @@ export async function GET({ site, url }: APIContext): Promise<Response> {
         ${pageItems}
         ${postItems}
       </urlset>
-    `.trim()
+    `.trim(),
   );
 }
