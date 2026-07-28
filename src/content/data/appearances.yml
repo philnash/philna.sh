@@ -1,3 +1,23 @@
+- id: yow-brisbane-2026
+  event:
+    name: YOW! Brisbane 2026
+    link: https://yowcon.com/brisbane-2026
+    start_date: 2026-12-07
+    end_date: 2026-12-08
+    location: Brisbane, Australia
+    type: conference
+  talks: []
+
+- id: yow-melbourne-2026
+  event:
+    name: YOW! Melbourne 2026
+    link: https://yowcon.com/melbourne-2026
+    start_date: 2026-12-03
+    end_date: 2026-12-04
+    location: Melbourne, Australia
+    type: conference
+  talks: []
+    
 - id: oredev-2026
   event:
     name: Øredev 2026
@@ -9,6 +29,16 @@
   talks:
     - title: A new class of user
     - title: Evolving AI chat with MCP Apps
+
+- id: kcd-melbourne-2026
+  event:
+    name: KCD Melbourne 2026
+    link: https://community2.cncf.io/events/details/cncf-kcd-australia-presents-kcd-melbourne-2026/
+    start_date: 2026-08-05
+    location: Melbourne, Australia
+    type: conference
+  talks:
+    - title: Maturing MCP
 
 - id: agent-con-perth-2026
   event:
