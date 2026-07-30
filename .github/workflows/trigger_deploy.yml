@@ -5,15 +5,21 @@ on:
   schedule:
     - cron: "5 0 * * *"
 
+permissions:
+  contents: write
+
 concurrency:
   group: trigger-deploy
   cancel-in-progress: false
 
 jobs:
   run-updater:
+    if: github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
       - uses: actions/setup-node@v6
         with:
           node-version-file: ".nvmrc"
@@ -28,22 +34,32 @@ jobs:
           RESEND_SEGMENT_ID: ${{ secrets.RESEND_SEGMENT_ID }}
           CLOUDFLARE_SITE_KEY: ${{ secrets.CLOUDFLARE_SITE_KEY }}
           CLOUDFLARE_SECRET_KEY: ${{ secrets.CLOUDFLARE_SECRET_KEY }}
-      - name: Snapshot deployed RSS feed
-        run: >-
-          npm run rss:broadcast -- snapshot
-          https://philna.sh/feed.xml
-          "$RUNNER_TEMP/feed-before.xml"
       - name: Deploy
         uses: cloudflare/wrangler-action@ebbaa1584979971c8614a24965b4405ff95890e0 # v4 commit hash
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Prepare RSS broadcasts
+        run: >-
+          npm run rss:broadcast -- prepare
+          https://philna.sh/feed.xml
+          .github/rss-broadcast-guids.json
+          "$RUNNER_TEMP/rss-broadcast-pending.json"
+      - name: Commit new RSS GUIDs
+        run: |
+          git add .github/rss-broadcast-guids.json
+          if git diff --cached --quiet; then
+            echo "No new RSS posts to record."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore: record broadcast RSS posts [skip ci]"
+            git push
+          fi
       - name: Broadcast new RSS posts
         run: >-
-          npm run rss:broadcast -- broadcast
-          "$RUNNER_TEMP/feed-before.xml"
-          dist/client/feed.xml
-          https://philna.sh/feed.xml
+          npm run rss:broadcast -- send
+          "$RUNNER_TEMP/rss-broadcast-pending.json"
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}

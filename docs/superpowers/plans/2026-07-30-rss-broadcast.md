@@ -355,9 +355,9 @@ git commit -m "feat: prepare and send ledger-backed RSS broadcasts"
 - Consumes: `npm run rss:broadcast -- send <pending-file>`
 - Produces: a default-branch-only workflow with write permission and commit-before-send ordering.
 
-- [ ] **Step 1: Write a failing seeded-ledger regression test**
+- [ ] **Step 1: Write a failing migration-only seed test**
 
-Add a test that reads `.github/rss-broadcast-guids.json` and `dist/client/feed.xml` when present, validates both, and asserts that every currently built feed GUID is seeded. Run `npm run build` first so the generated feed exists.
+Temporarily add a test that reads `.github/rss-broadcast-guids.json` and `dist/client/feed.xml`, validates both, and asserts that every currently built feed GUID is seeded. Run `npm run build` first so the generated feed exists.
 
 Run:
 
@@ -379,6 +379,10 @@ npm test
 ```
 
 Expected: all tests PASS, including complete built-feed coverage by the seeded ledger.
+
+Remove the migration-only test after observing it pass. Keeping it would require
+future unpublished posts to be added to the ledger before deployment, which
+would incorrectly suppress their broadcasts.
 
 - [ ] **Step 3: Update the workflow**
 
