@@ -32,8 +32,6 @@ const contactFormSchema = z.object({
   message: z.string().trim().min(1, { message: "Please enter a message" }),
 });
 
-
-
 function stringFromFormDataEntryValue(parameter: FormDataEntryValue | null) {
   return parameter === null ? "" : parameter.toString().trim();
 }
