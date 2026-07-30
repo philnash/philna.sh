@@ -1,4 +1,8 @@
+import { readFile, writeFile } from "node:fs/promises";
+import { pathToFileURL } from "node:url";
 import { XMLParser } from "fast-xml-parser";
+import { SyntaxValidator } from "fast-xml-validator";
+import { Resend } from "resend";
 
 const xmlParser = new XMLParser({
   ignoreAttributes: false,
@@ -27,6 +31,21 @@ function validatedLink(value, index) {
 }
 
 export function parseFeed(xml) {
+  let validation;
+  try {
+    validation = SyntaxValidator.validate(xml);
+  } catch (error) {
+    throw new Error(
+      `Could not parse RSS XML: ${
+        error instanceof Error ? error.message : String(error)
+      }`,
+      { cause: error },
+    );
+  }
+  if (validation !== true) {
+    throw new Error(`Could not parse RSS XML: ${validation.err.msg}`);
+  }
+
   let document;
   try {
     document = xmlParser.parse(xml);
@@ -94,4 +113,191 @@ export function buildBroadcastHtml(item) {
 <hr>
 <p><a href="${escapeHtmlAttribute(item.link)}">Read this post on philna.sh</a></p>
 <p><a href="{{{RESEND_UNSUBSCRIBE_URL}}}">Unsubscribe</a></p>`;
+}
+
+export async function fetchFeed(feedUrl, {
+  fetchImpl = globalThis.fetch,
+  cacheBust = Date.now(),
+} = {}) {
+  const url = new URL(feedUrl);
+  url.searchParams.set("deployment_check", String(cacheBust));
+
+  const response = await fetchImpl(url.toString(), {
+    headers: {
+      "Cache-Control": "no-cache",
+      Pragma: "no-cache",
+    },
+  });
+  if (!response.ok) {
+    throw new Error(
+      `Could not fetch RSS feed: ${response.status} ${response.statusText}`,
+    );
+  }
+  return response.text();
+}
+
+function sleep(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
+
+export async function pollForDeployedFeed({
+  feedUrl,
+  expectedItems,
+  fetchImpl = globalThis.fetch,
+  delay = sleep,
+  maxAttempts = 12,
+  pollIntervalMs = 5_000,
+}) {
+  let lastError;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    try {
+      const xml = await fetchFeed(feedUrl, {
+        fetchImpl,
+        cacheBust: `${Date.now()}-${attempt}`,
+      });
+      const deployedItems = parseFeed(xml);
+      if (haveSameGuids(expectedItems, deployedItems)) {
+        return deployedItems;
+      }
+      lastError = new Error("The deployed RSS GUID set does not match");
+    } catch (error) {
+      lastError = error;
+    }
+
+    if (attempt < maxAttempts) {
+      await delay(pollIntervalMs);
+    }
+  }
+
+  throw new Error(
+    `Deployed RSS feed did not match the built feed after ${maxAttempts} attempts`,
+    { cause: lastError },
+  );
+}
+
+export async function sendBroadcasts(posts, {
+  resend,
+  segmentId,
+  from,
+  logger = console,
+}) {
+  const broadcastIds = [];
+
+  for (const post of posts) {
+    logger.log(`Sending broadcast for "${post.title}" (${post.guid})`);
+    const { data, error } = await resend.broadcasts.create({
+      segmentId,
+      from,
+      subject: post.title,
+      html: buildBroadcastHtml(post),
+      send: true,
+    });
+    if (error) {
+      throw new Error(
+        `Could not send broadcast for ${post.guid}: ${
+          error.message ?? String(error)
+        }`,
+      );
+    }
+    if (!data?.id) {
+      throw new Error(
+        `Could not send broadcast for ${post.guid}: Resend returned no broadcast ID`,
+      );
+    }
+    logger.log(`Sent broadcast ${data.id} for ${post.guid}`);
+    broadcastIds.push(data.id);
+  }
+
+  return broadcastIds;
+}
+
+function requiredEnvironmentVariable(env, name) {
+  const value = env[name];
+  if (typeof value !== "string" || value.trim() === "") {
+    throw new Error(`Missing required environment variable: ${name}`);
+  }
+  return value;
+}
+
+function usage() {
+  return [
+    "Usage:",
+    "  npm run rss:broadcast -- snapshot <feed-url> <output-file>",
+    "  npm run rss:broadcast -- broadcast <snapshot-file> <built-feed-file> <feed-url>",
+  ].join("\n");
+}
+
+export async function main(argv, {
+  fetchImpl = globalThis.fetch,
+  delay = sleep,
+  env = process.env,
+  resendFactory = (apiKey) => new Resend(apiKey),
+  logger = console,
+  maxAttempts = 12,
+  pollIntervalMs = 5_000,
+} = {}) {
+  const [command, ...args] = argv;
+
+  if (command === "snapshot") {
+    if (args.length !== 2) {
+      throw new Error(usage());
+    }
+    const [feedUrl, outputPath] = args;
+    const xml = await fetchFeed(feedUrl, { fetchImpl });
+    await writeFile(outputPath, xml);
+    logger.log(`Saved deployed RSS snapshot to ${outputPath}`);
+    return;
+  }
+
+  if (command === "broadcast") {
+    if (args.length !== 3) {
+      throw new Error(usage());
+    }
+    const [snapshotPath, builtFeedPath, feedUrl] = args;
+    const [snapshotXml, builtFeedXml] = await Promise.all([
+      readFile(snapshotPath, "utf8"),
+      readFile(builtFeedPath, "utf8"),
+    ]);
+    const beforeItems = parseFeed(snapshotXml);
+    const expectedItems = parseFeed(builtFeedXml);
+    const deployedItems = await pollForDeployedFeed({
+      feedUrl,
+      expectedItems,
+      fetchImpl,
+      delay,
+      maxAttempts,
+      pollIntervalMs,
+    });
+    const newPosts = findNewPosts(beforeItems, deployedItems);
+
+    if (newPosts.length === 0) {
+      logger.log("No new RSS posts to broadcast.");
+      return;
+    }
+
+    const apiKey = requiredEnvironmentVariable(env, "RESEND_API_KEY");
+    const from = requiredEnvironmentVariable(env, "RESEND_FROM_EMAIL");
+    const segmentId = requiredEnvironmentVariable(env, "RESEND_SEGMENT_ID");
+    await sendBroadcasts(newPosts, {
+      resend: resendFactory(apiKey),
+      segmentId,
+      from,
+      logger,
+    });
+    return;
+  }
+
+  throw new Error(usage());
+}
+
+const entrypoint = process.argv[1]
+  ? pathToFileURL(process.argv[1]).href
+  : undefined;
+
+if (entrypoint === import.meta.url) {
+  main(process.argv.slice(2)).catch((error) => {
+    console.error(error instanceof Error ? error.message : String(error));
+    process.exitCode = 1;
+  });
 }

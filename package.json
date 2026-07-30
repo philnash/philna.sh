@@ -27,6 +27,7 @@
     "astro": "^7.0.2",
     "astro-remote": "^0.3.4",
     "fast-xml-parser": "^5.10.1",
+    "fast-xml-validator": "^1.4.0",
     "markdown-it": "^14.2.0",
     "mdast-util-from-markdown": "^2.0.3",
     "mdast-util-to-string": "^4.0.0",
