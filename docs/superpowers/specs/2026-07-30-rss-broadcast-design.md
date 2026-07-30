@@ -2,78 +2,100 @@
 
 ## Goal
 
-Extend the scheduled `trigger_deploy` workflow so that, after a successful
-deployment, each newly deployed blog post is immediately emailed as a separate
-Resend broadcast to the segment identified by `RESEND_SEGMENT_ID`.
+Extend the daily `trigger_deploy` workflow so that each blog post which has
+appeared in the deployed RSS feed since the previous successful check is sent
+once as an immediate Resend broadcast to `RESEND_SEGMENT_ID`.
 
 ## Existing Context
 
-- `.github/workflows/trigger_deploy.yml` builds and deploys the static Astro
-  site each day and can also be run manually.
-- `src/pages/feed.xml.ts` generates `https://philna.sh/feed.xml`.
-- Each deployed RSS item contains a title, link, GUID, publication date,
+- Blog content can be deployed before the daily workflow runs, so comparing the
+  live feed immediately before and after the nightly deployment does not detect
+  newly published posts.
+- RSS `pubDate` values describe post metadata and do not reliably identify when
+  a post reached production.
+- Each deployed RSS item contains a stable GUID, title, link, publication date,
   categories, and an HTML description containing the full post.
-- RSS item GUIDs are permalink URLs and are stable identifiers for deduplication.
+- `.github/workflows/trigger_deploy.yml` builds and deploys the static Astro site
+  each day and can also be run manually.
 - The repository already depends on the Resend Node SDK and configures
   `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `RESEND_SEGMENT_ID`.
 
-## Architecture
+## Durable GUID Ledger
 
-Add one focused Node script with two command modes:
+Add `.github/rss-broadcast-guids.json` containing a JSON array of RSS GUID
+strings. Seed it with every GUID in the current live feed so the first run cannot
+broadcast historical posts.
 
-1. `snapshot` fetches the currently deployed RSS feed and writes it to a local
-   file before deployment.
-2. `broadcast` runs after deployment. It polls the deployed feed until its GUID
-   set matches the GUID set in the locally built `dist/client/feed.xml`,
-   compares that deployed feed with the pre-deployment snapshot, and broadcasts
-   each new item.
+The ledger is the sole record of whether a post has already been discovered for
+broadcast. Preserve GUIDs that later disappear from the feed and append new GUIDs
+oldest-first. Reject malformed JSON, non-string values, empty strings, and
+duplicates rather than silently replacing or repairing state.
 
-The GitHub Actions workflow will invoke both modes around the existing deployment
-step. XML parsing, deployment-readiness checks, deduplication, email construction,
-Resend calls, and diagnostic logging will live in the Node script rather than in
-workflow shell commands.
+The daily workflow may commit ledger changes directly to `main`. Give the
+workflow `contents: write` permission and configure the Git author as
+`github-actions[bot]`. Serialize runs in a stable concurrency group without
+cancelling an in-progress run.
 
-Serialize workflow runs in a stable GitHub Actions concurrency group without
-cancelling an in-progress run. A queued run must not take its pre-deployment
-snapshot until the previous deployment and broadcast sequence has finished.
+Only run the deployment and broadcast job on the repository's default branch.
+This prevents a manually dispatched feature-branch workflow from comparing the
+production feed with an unmerged or stale ledger.
 
-Add `fast-xml-parser` and `fast-xml-validator` as direct production dependencies.
-Use the existing Resend SDK to create and send broadcasts.
+## Node Script
 
-## RSS Parsing and Deduplication
+Keep RSS and broadcast behavior in `scripts/rss-broadcast.mjs`, with two command
+modes:
 
-Parse each RSS item into:
+1. `prepare <feed-url> <ledger-file> <pending-file>`
+   - Fetch and validate the deployed feed.
+   - Read and validate the checked-in GUID ledger.
+   - Find feed items whose GUIDs are absent from the ledger.
+   - Sort unseen items by `pubDate` ascending.
+   - Write the unseen items to the temporary pending JSON file.
+   - If posts are unseen, append all their GUIDs to the ledger.
+2. `send <pending-file>`
+   - Read and validate the temporary pending posts.
+   - Exit successfully without constructing Resend when it is empty.
+   - Send one immediate Resend broadcast per pending item, in file order.
 
-- `guid`
-- `title`
-- `link`
-- `description`
-- `pubDate`
+Use `fast-xml-parser` and `fast-xml-validator` to validate and parse the RSS feed.
+The feed must contain an RSS channel with at least one item. Missing, empty, or
+duplicate RSS GUIDs are invalid.
 
-Treat `guid` as the sole identity and deduplication key. Missing, empty, or
-duplicate GUIDs are invalid feed data and must fail the script rather than risk
-sending the wrong broadcast.
+The pending file is an ephemeral handoff between the prepare and send steps. It
+contains only the unseen items needed to construct broadcasts and lives under
+`RUNNER_TEMP`; it is never committed or uploaded.
 
-The feed must contain an RSS channel with at least one item. Validate a snapshot
-before writing it so a successful HTML error response cannot become an empty
-baseline that classifies every historical post as new.
+## Workflow and Commit Ordering
 
-The parser must handle both a single `<item>` object and an array of items.
-Descriptions must be decoded to HTML by the XML parser so that the RSS content
-can be passed to Resend as email HTML.
+Update `.github/workflows/trigger_deploy.yml` to:
 
-After deployment, compare the expected built feed's complete GUID set with the
-deployed feed's complete GUID set. Poll with cache-busting and no-cache request
-headers until they match or a bounded timeout expires. When the feed did not
-change, the first matching response can proceed immediately.
+1. Check out the default branch and set up Node.
+2. Install dependencies and build the site.
+3. Deploy the built site.
+4. Run `prepare` against `https://philna.sh/feed.xml`, the checked-in ledger, and
+   a pending file under `RUNNER_TEMP`.
+5. Stage the ledger.
+6. If it changed, commit and push it to `main`.
+7. Run `send` with the pending file and the three required Resend secrets.
 
-New posts are deployed items whose GUIDs are absent from the pre-deployment
-snapshot. Sort them by `pubDate` ascending so that multiple posts are sent
-oldest-first.
+The ledger commit must succeed before any broadcast is sent. Resend idempotency
+keys are not supported for broadcasts, so this ordering prioritizes avoiding
+duplicate emails:
+
+- If feed preparation or the ledger push fails, send nothing.
+- If the ledger push succeeds and sending fails, fail the workflow loudly and
+  recover the missed broadcast manually.
+- If multiple posts are pending and one send fails, stop immediately. Consult
+  the workflow logs to identify successful and missed broadcasts for manual
+  recovery.
+
+A ledger-only push may cause a redundant Cloudflare deployment. This is accepted
+in exchange for keeping the durable state visible and versioned in the
+repository.
 
 ## Broadcast Content
 
-Create and immediately send one Resend broadcast for each new RSS item:
+Create and immediately send one Resend broadcast for each pending RSS item:
 
 - `segmentId`: `RESEND_SEGMENT_ID`
 - `from`: `RESEND_FROM_EMAIL`
@@ -86,69 +108,51 @@ Do not add a separate text body; Resend can derive it from the HTML broadcast.
 Do not transform or re-read the source Markdown. The deployed RSS item is the
 source of the email title, link, and body.
 
-## Workflow
-
-Update `.github/workflows/trigger_deploy.yml` to:
-
-1. Install dependencies.
-2. Build the site.
-3. Snapshot the current deployed feed to a temporary workspace file.
-4. Deploy the built site.
-5. Run the broadcast command with the snapshot, `dist/client/feed.xml`, and the
-   live feed URL.
-
-Pass `RESEND_SEGMENT_ID` into the build because Astro validates configured
-secrets. Pass `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `RESEND_SEGMENT_ID` only
-to the post-deployment broadcast step where they are required for sending.
-
-No broadcast is sent when there are no new GUIDs. Manual workflow reruns and
-deployments without new blog posts therefore remain no-ops.
-
 ## Failure Handling
 
 The workflow must fail loudly when:
 
-- the snapshot or deployed feed cannot be fetched;
+- the deployed feed cannot be fetched;
 - a response is not a non-empty RSS feed;
-- XML cannot be parsed or required item fields are invalid;
-- duplicate GUIDs appear;
-- the deployed feed does not converge to the built feed before the timeout;
-- required Resend environment variables are absent;
-- Resend returns an error or omits the expected broadcast ID.
+- RSS XML or required item fields are invalid;
+- the GUID ledger or pending file is invalid;
+- duplicate GUIDs appear in the feed or ledger;
+- updating and pushing the ledger fails;
+- required Resend environment variables are absent for a non-empty pending file;
+- Resend throws, returns an error, or omits the expected broadcast ID.
 
-Send broadcasts sequentially and stop at the first failure. Log the GUID and
-title before each send and the returned broadcast ID after success, but never log
-secrets or the full post body.
-
-There is deliberately no durable delivery state. If a deployment succeeds but a
-broadcast fails, the workflow reports the failure and the missed broadcast is
-recovered manually. A partial multi-post send may therefore require checking the
-workflow logs before manual recovery.
+Log the GUID and title before each send and the returned broadcast ID after
+success, but never log secrets or the full post body.
 
 ## Testing
 
-Use Node's built-in test runner for focused script tests. Cover:
+Use Node's built-in test runner with generated RSS fixtures, temporary files,
+fake `fetch`, and a fake Resend client. Cover:
 
 - parsing one and multiple RSS items;
 - entity-decoded HTML descriptions;
-- rejection of missing and duplicate GUIDs;
-- GUID-based comparison even when links or titles differ;
-- oldest-first ordering of multiple new items;
-- no-op behavior when no GUIDs are new;
-- email HTML construction, including the post and unsubscribe links;
-- polling until the deployed GUID set matches the built feed;
-- polling timeout and fetch failures;
-- one immediate Resend call per new post;
-- sequential stop and surfaced error when Resend fails.
+- rejection of malformed, non-RSS, and empty feeds;
+- rejection of missing and duplicate RSS GUIDs;
+- validation of malformed and duplicate ledger entries;
+- GUID-based discovery independent of title, link, or publication date changes;
+- oldest-first ordering of multiple unseen items;
+- initial seeded-ledger and subsequent no-op behavior;
+- appending unseen GUIDs without removing historical ledger entries;
+- pending-file creation without committing email content;
+- no Resend construction for an empty pending file;
+- one immediate Resend call per pending post;
+- sequential stop and surfaced error when Resend fails;
+- email HTML construction, including the post and unsubscribe links.
 
-Keep network access and the Resend client behind injected interfaces so tests use
-fixtures and fakes. Run these tests, `npm run check`, and `npm run build` as final
-verification.
+Run `npm test`, `npm run check`, `npm run build`, parse the generated
+`dist/client/feed.xml`, validate the workflow YAML, and run `git diff --check` as
+final verification.
 
 ## Out of Scope
 
-- Persistent retry or delivery tracking
+- Automatic retry or delivery tracking after the ledger commit
 - Digest emails combining multiple posts
-- Changes to the RSS format or blog source content
+- Using RSS publication dates as workflow checkpoints
 - Resend Topics or subscription-preference changes
 - Draft broadcasts or scheduled sends
+- Avoiding the redundant deployment caused by a ledger-only push
