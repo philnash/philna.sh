@@ -1,7 +1,7 @@
 @use "vars";
 
-.contact input,
-.contact textarea {
+form input,
+form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -11,11 +11,12 @@
   font-family: vars.$base-font-family;
   color: vars.$text-color;
 }
-.contact textarea {
+
+form textarea {
   height: 200px;
 }
 
-.contact button {
+form button {
   padding: 10px 20px;
   border: 0;
   border-radius: vars.$border-radius;
@@ -26,14 +27,17 @@
   cursor: pointer;
   width: 150px;
 }
-.contact button:hover,
-.contact button[data-loading="true"] {
+
+form button:hover,
+form button[data-loading="true"] {
   background-color: vars.$brand-color-light;
 }
-.contact button[data-loading="true"] .btn-submit-text {
+
+form button[data-loading="true"] .btn-submit-text {
   display: none;
 }
-.contact .captcha {
+
+form .captcha {
   position: absolute;
   top: -100%;
   left: -100%;

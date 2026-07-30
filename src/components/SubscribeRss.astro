@@ -1,8 +1,76 @@
-<div class="rss">
+<div class="rss row">
   <h2>Subscribe</h2>
   <p class="rss-subscribe">
     To keep up with posts on this blog, you can
-    <a href={new URL("feed.xml", Astro.site)}>subscribe via RSS</a> or follow me
-    on <a href="https://dev.to/philnash" rel="me">DEV</a>.
+    <a href={new URL("feed.xml", Astro.site)}>subscribe via RSS</a> or subscribe via
+    email with the form below.
   </p>
+  <form class="cell cell-12 cell-med-6" id="subscribe">
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+    </div>
+    <div>
+      <button type="submit">
+        <span class="btn-submit-text">Subscribe</span>
+        <span
+          class="btn-submit-loading"
+          aria-live="assertive"
+          data-loading-msg="Subscribing..."></span>
+      </button>
+    </div>
+  </form>
 </div>
+
+<script>
+  import { actions } from "astro:actions";
+
+  function disableButtonAfterSubmit(form: HTMLFormElement) {
+    const submitButton = form.querySelector('button[type="submit"]');
+    const loadingText = form.querySelector(
+      'button[type="submit"] .btn-submit-loading',
+    ) as HTMLElement | undefined;
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      form.querySelectorAll(".form-error").forEach((error) => error.remove());
+      const submitting = submitButton?.getAttribute("data-loading") === "true";
+      if (!submitting) {
+        submitButton?.setAttribute("data-loading", "true");
+        if (loadingText) {
+          loadingText.textContent = loadingText.dataset["loadingMsg"] || "";
+        }
+
+        const email = form.email.value;
+        const { error } = await actions.subscribe({ email });
+        if (error) {
+          const error = document.createElement("p");
+          error.className = "form-error";
+          if (error.hasAttribute("message")) {
+            error.textContent =
+              error.getAttribute("message") || "An error occurred.";
+          } else {
+            error.textContent = "An error occurred.";
+          }
+          form.insertBefore(error, form.firstChild);
+        } else {
+          form.innerHTML = "<p>Thanks for subscribing!</p>";
+        }
+      }
+    });
+
+    window.addEventListener("pageshow", (event) => {
+      if (event.persisted) {
+        submitButton?.removeAttribute("data-loading");
+        if (loadingText) {
+          loadingText.textContent = "";
+        }
+      }
+    });
+  }
+
+  const form = document.getElementById("subscribe") as HTMLFormElement | null;
+  if (form) {
+    disableButtonAfterSubmit(form);
+  }
+</script>

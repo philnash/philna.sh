@@ -10,6 +10,7 @@
 }
 
 @include vars.media-query-min(700px) {
+
   .post-title,
   .page-title {
     font-size: vars.$base-font-size * 3;
@@ -55,6 +56,7 @@
   .post-meta .meta {
     float: left;
   }
+
   .post-meta .subscribe {
     float: right;
   }
@@ -82,6 +84,7 @@
   border-bottom: 5px solid vars.$grey-color-light;
   margin-bottom: vars.$spacing-unit;
 }
+
 .blog-meta p {
   padding-top: math.div(vars.$spacing-unit, 2);
   margin-bottom: math.div(vars.$spacing-unit, 2);
@@ -92,21 +95,25 @@
   padding: 0;
   margin: 0;
 }
+
 .post-list h2 {
   font-size: vars.$base-font-size * 1.5;
   line-height: 1.25;
   padding-top: 0;
   padding-bottom: 0;
 }
+
 .post-list .external h2 {
   font-size: vars.$base-font-size * 1.1;
 }
+
 .post-list .external img {
   display: block;
   flex-basis: 64px;
   height: 64px;
   aspect-ratio: 1 / 1;
 }
+
 .post-list .external svg {
   vertical-align: sub;
 }
@@ -120,9 +127,11 @@
   padding-bottom: vars.$spacing-unit;
   border-bottom: 1px solid vars.$border-color;
 }
+
 .post-list .post:last-child {
   border-bottom: none;
 }
+
 .post-list .post p:last-child {
   margin-bottom: 0;
 }
@@ -193,9 +202,11 @@
   border-top: 5px solid vars.$grey-color-light;
   border-radius: vars.$border-radius;
 }
+
 .post-promo h2 {
   font-size: 1.5em;
 }
+
 .post-promo web-share-wrapper button {
   color: vars.$brand-color;
   text-decoration: none;
@@ -207,6 +218,7 @@
   cursor: pointer;
   font-family: vars.$base-font-family;
 }
+
 .post-promo web-share-wrapper button:hover {
   color: vars.$brand-color-light;
   border-bottom: 2px solid vars.$brand-color-light;

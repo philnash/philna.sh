@@ -19,7 +19,6 @@
     "@fontsource/raleway": "^5.2.8",
     "@philnash/astro-pagination": "^0.7.0",
     "@philnash/astro-related-content": "^0.2.0",
-    "@philnash/resend": "^1.2.1",
     "@playform/inline": "^0.1.2",
     "@sentry/astro": "^10.60.0",
     "@sentry/cloudflare": "^10.60.0",
@@ -29,6 +28,7 @@
     "mdast-util-from-markdown": "^2.0.3",
     "mdast-util-to-string": "^4.0.0",
     "picomatch": "^4.0.4",
+    "resend": "^6.18.1",
     "sanitize-html": "^2.17.5",
     "vite": "^8.1.0",
     "web-share-wrapper": "^0.2.2"

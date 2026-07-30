@@ -1,7 +1,7 @@
 ---
 export const prerender = false;
 
-import { Resend } from "@philnash/resend";
+import { Resend } from "resend";
 import { z } from "astro/zod";
 
 import DefaultLayout from "../layouts/DefaultLayout.astro";
@@ -61,7 +61,7 @@ if (method === "POST") {
         await resend.emails.send({
           to: RESEND_TO_EMAIL,
           from: RESEND_FROM_EMAIL,
-          reply_to: email,
+          replyTo: email,
           subject: subject,
           text: message,
         });

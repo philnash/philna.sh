@@ -32,7 +32,7 @@ export async function GET({ site, generator }: APIContext) {
     `,
     items: posts.map((post) => ({
       title: post.data.title,
-      description: sanitize(parser.render(post.body)),
+      description: sanitize(parser.render(post.body), { allowedTags: sanitize.defaults.allowedTags.concat(['img']) }),
       pubDate: post.data.pubDate,
       link: `${postPath(post)}/`,
       customData: post.data.tags

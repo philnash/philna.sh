@@ -25,12 +25,12 @@ export default defineConfig({
     playformInline({ Critters: { preload: "media" } }),
     process.env.NODE_ENV === "production"
       ? sentry({
-          project: "javascript-astro",
-          org: "phil-nash",
-          authToken: process.env.SENTRY_AUTH_TOKEN,
-          clientInitPath: "./src/utils/sentry.client.config.js",
-          serverInitPath: "./src/utils/sentry.server.config.js",
-        })
+        project: "javascript-astro",
+        org: "phil-nash",
+        authToken: process.env.SENTRY_AUTH_TOKEN,
+        clientInitPath: "./src/utils/sentry.client.config.js",
+        serverInitPath: "./src/utils/sentry.server.config.js",
+      })
       : null,
   ],
   vite: {
@@ -66,6 +66,7 @@ export default defineConfig({
         context: "server",
         access: "secret",
       }),
+      RESEND_SEGMENT_ID: envField.string({ context: "server", access: "secret" }),
       CLOUDFLARE_SITE_KEY: envField.string({
         context: "client",
         access: "public",
