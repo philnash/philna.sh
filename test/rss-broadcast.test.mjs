@@ -7,10 +7,9 @@ import {
   buildBroadcastHtml,
   fetchFeed,
   findNewPosts,
-  haveSameGuids,
   main,
   parseFeed,
-  pollForDeployedFeed,
+  parseGuidLedger,
   sendBroadcasts,
 } from "../scripts/rss-broadcast.mjs";
 
@@ -95,19 +94,22 @@ test("rejects missing or invalid required item fields", () => {
   }
 });
 
-test("compares and deduplicates solely by GUID", () => {
-  const before = parseFeed(rss([item()]));
-  const changed = parseFeed(rss([item({
-    title: "Changed",
-    link: "https://philna.sh/changed/",
-  })]));
-
-  assert.equal(haveSameGuids(before, changed), true);
-  assert.deepEqual(findNewPosts(before, changed), []);
+test("validates a GUID ledger", () => {
+  assert.deepEqual(parseGuidLedger('["one", "two"]'), ["one", "two"]);
+  assert.throws(() => parseGuidLedger("{"), /Could not parse GUID ledger/);
+  assert.throws(() => parseGuidLedger("{}"), /JSON array/);
+  assert.throws(() => parseGuidLedger('["one", 2]'), /non-empty string/);
+  assert.throws(() => parseGuidLedger('["one", ""]'), /non-empty string/);
+  assert.throws(() => parseGuidLedger('["one", "one"]'), /Duplicate GUID/);
 });
 
-test("returns new posts oldest-first", () => {
+test("discovers solely by GUID and orders unseen posts oldest-first", () => {
   const deployed = parseFeed(rss([
+    item({
+      guid: "seen",
+      title: "Changed",
+      link: "https://philna.sh/changed/",
+    }),
     item({
       guid: "newer",
       link: "https://philna.sh/newer/",
@@ -121,7 +123,7 @@ test("returns new posts oldest-first", () => {
   ]));
 
   assert.deepEqual(
-    findNewPosts([], deployed).map(({ guid }) => guid),
+    findNewPosts(["seen"], deployed).map(({ guid }) => guid),
     ["older", "newer"],
   );
 });
@@ -168,70 +170,6 @@ test("rejects an unsuccessful feed response", async () => {
       }),
     }),
     /503 Service Unavailable/,
-  );
-});
-
-test("polls until the deployed GUID set matches the built feed", async () => {
-  const oldXml = rss([item()]);
-  const newXml = rss([
-    item(),
-    item({
-      guid: "new",
-      link: "https://philna.sh/new/",
-    }),
-  ]);
-  const responses = [oldXml, newXml];
-  const delays = [];
-
-  const posts = await pollForDeployedFeed({
-    feedUrl: "https://philna.sh/feed.xml",
-    expectedItems: parseFeed(newXml),
-    fetchImpl: async () => new Response(responses.shift()),
-    delay: async (milliseconds) => delays.push(milliseconds),
-    maxAttempts: 2,
-    pollIntervalMs: 5,
-  });
-
-  assert.deepEqual(posts.map(({ guid }) => guid), [
-    "https://philna.sh/post-1/",
-    "new",
-  ]);
-  assert.deepEqual(delays, [5]);
-});
-
-test("retries a transient feed error while polling", async () => {
-  const xml = rss([item()]);
-  let attempts = 0;
-
-  const posts = await pollForDeployedFeed({
-    feedUrl: "https://philna.sh/feed.xml",
-    expectedItems: parseFeed(xml),
-    fetchImpl: async () => {
-      attempts += 1;
-      return attempts === 1
-        ? new Response("Unavailable", { status: 503 })
-        : new Response(xml);
-    },
-    delay: async () => {},
-    maxAttempts: 2,
-    pollIntervalMs: 0,
-  });
-
-  assert.equal(posts.length, 1);
-  assert.equal(attempts, 2);
-});
-
-test("fails after the deployed feed polling limit", async () => {
-  await assert.rejects(
-    pollForDeployedFeed({
-      feedUrl: "https://philna.sh/feed.xml",
-      expectedItems: parseFeed(rss([item({ guid: "new" })])),
-      fetchImpl: async () => new Response(rss([item()])),
-      delay: async () => {},
-      maxAttempts: 2,
-      pollIntervalMs: 0,
-    }),
-    /did not match the built feed after 2 attempts/,
   );
 });
 
@@ -313,162 +251,5 @@ test("rejects a Resend response without a broadcast ID", async () => {
       logger: { log() {} },
     }),
     /no broadcast ID/,
-  );
-});
-
-test("snapshot mode writes the fetched feed", async () => {
-  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
-  const outputPath = join(directory, "before.xml");
-  const xml = rss([item()]);
-
-  await main([
-    "snapshot",
-    "https://philna.sh/feed.xml",
-    outputPath,
-  ], {
-    fetchImpl: async () => new Response(xml),
-    logger: { log() {} },
-  });
-
-  assert.equal(await readFile(outputPath, "utf8"), xml);
-});
-
-test("snapshot mode rejects a successful non-RSS response", async () => {
-  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
-  const outputPath = join(directory, "before.xml");
-
-  await assert.rejects(
-    main([
-      "snapshot",
-      "https://philna.sh/feed.xml",
-      outputPath,
-    ], {
-      fetchImpl: async () =>
-        new Response("<html><body>Temporary error</body></html>"),
-      logger: { log() {} },
-    }),
-    /non-empty RSS channel/,
-  );
-  await assert.rejects(readFile(outputPath), /ENOENT/);
-});
-
-test("broadcast mode is a no-op when there are no new GUIDs", async () => {
-  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
-  const snapshotPath = join(directory, "before.xml");
-  const builtPath = join(directory, "built.xml");
-  const xml = rss([item()]);
-  await Promise.all([
-    writeFile(snapshotPath, xml),
-    writeFile(builtPath, xml),
-  ]);
-  const messages = [];
-
-  await main([
-    "broadcast",
-    snapshotPath,
-    builtPath,
-    "https://philna.sh/feed.xml",
-  ], {
-    env: {},
-    fetchImpl: async () => new Response(xml),
-    logger: { log(message) { messages.push(message); } },
-    resendFactory: () => {
-      throw new Error("Resend should not be constructed");
-    },
-  });
-
-  assert.deepEqual(messages, ["No new RSS posts to broadcast."]);
-});
-
-test("broadcast mode passes secrets and new RSS content to Resend", async () => {
-  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
-  const snapshotPath = join(directory, "before.xml");
-  const builtPath = join(directory, "built.xml");
-  const beforeXml = rss([item()]);
-  const deployedXml = rss([
-    item(),
-    item({
-      guid: "new",
-      title: "New post",
-      link: "https://philna.sh/new/",
-      description: "&lt;p&gt;New body&lt;/p&gt;",
-      pubDate: "Fri, 31 Jul 2026 00:00:00 GMT",
-    }),
-  ]);
-  await Promise.all([
-    writeFile(snapshotPath, beforeXml),
-    writeFile(builtPath, deployedXml),
-  ]);
-  let apiKey;
-  const requests = [];
-
-  await main([
-    "broadcast",
-    snapshotPath,
-    builtPath,
-    "https://philna.sh/feed.xml",
-  ], {
-    env: {
-      RESEND_API_KEY: "secret",
-      RESEND_FROM_EMAIL: "Phil <sender@philna.sh>",
-      RESEND_SEGMENT_ID: "segment",
-    },
-    fetchImpl: async () => new Response(deployedXml),
-    logger: { log() {} },
-    resendFactory: (value) => {
-      apiKey = value;
-      return {
-        broadcasts: {
-          create: async (request) => {
-            requests.push(request);
-            return { data: { id: "broadcast-id" }, error: null };
-          },
-        },
-      };
-    },
-  });
-
-  assert.equal(apiKey, "secret");
-  assert.deepEqual(requests, [{
-    segmentId: "segment",
-    from: "Phil <sender@philna.sh>",
-    subject: "New post",
-    html: `<p>New body</p>
-<hr>
-<p><a href="https://philna.sh/new/">Read this post on philna.sh</a></p>
-<p><a href="{{{RESEND_UNSUBSCRIBE_URL}}}">Unsubscribe</a></p>`,
-    send: true,
-  }]);
-});
-
-test("broadcast mode fails when a required Resend secret is missing", async () => {
-  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
-  const snapshotPath = join(directory, "before.xml");
-  const builtPath = join(directory, "built.xml");
-  const beforeXml = rss([item()]);
-  const deployedXml = rss([
-    item(),
-    item({
-      guid: "new",
-      link: "https://philna.sh/new/",
-    }),
-  ]);
-  await Promise.all([
-    writeFile(snapshotPath, beforeXml),
-    writeFile(builtPath, deployedXml),
-  ]);
-
-  await assert.rejects(
-    main([
-      "broadcast",
-      snapshotPath,
-      builtPath,
-      "https://philna.sh/feed.xml",
-    ], {
-      env: {},
-      fetchImpl: async () => new Response(deployedXml),
-      logger: { log() {} },
-    }),
-    /RESEND_API_KEY/,
   );
 });

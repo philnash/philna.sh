@@ -101,10 +101,35 @@ export function haveSameGuids(leftItems, rightItems) {
   return leftItems.every(({ guid }) => rightGuids.has(guid));
 }
 
-export function findNewPosts(beforeItems, deployedItems) {
-  const beforeGuids = new Set(beforeItems.map(({ guid }) => guid));
+export function parseGuidLedger(json) {
+  let value;
+  try {
+    value = JSON.parse(json);
+  } catch (error) {
+    throw new Error("Could not parse GUID ledger as JSON", { cause: error });
+  }
+  if (!Array.isArray(value)) {
+    throw new Error("GUID ledger must be a JSON array");
+  }
+
+  const seen = new Set();
+  for (const guid of value) {
+    if (typeof guid !== "string" || guid.trim() === "") {
+      throw new Error("Every GUID ledger entry must be a non-empty string");
+    }
+    if (seen.has(guid)) {
+      throw new Error(`Duplicate GUID in ledger: ${guid}`);
+    }
+    seen.add(guid);
+  }
+
+  return value;
+}
+
+export function findNewPosts(seenGuids, deployedItems) {
+  const seen = new Set(seenGuids);
   return deployedItems
-    .filter(({ guid }) => !beforeGuids.has(guid))
+    .filter(({ guid }) => !seen.has(guid))
     .sort((left, right) => left.publishedAt - right.publishedAt);
 }
 
