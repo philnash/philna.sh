@@ -69,6 +69,17 @@ test("rejects malformed RSS XML", () => {
   );
 });
 
+test("rejects well-formed XML without a non-empty RSS channel", () => {
+  assert.throws(
+    () => parseFeed("<html><body>Temporary error</body></html>"),
+    /non-empty RSS channel/,
+  );
+  assert.throws(
+    () => parseFeed(rss([])),
+    /non-empty RSS channel/,
+  );
+});
+
 test("rejects missing or invalid required item fields", () => {
   const invalidItems = [
     [item({ title: "" }), /title/],
@@ -320,6 +331,25 @@ test("snapshot mode writes the fetched feed", async () => {
   });
 
   assert.equal(await readFile(outputPath, "utf8"), xml);
+});
+
+test("snapshot mode rejects a successful non-RSS response", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
+  const outputPath = join(directory, "before.xml");
+
+  await assert.rejects(
+    main([
+      "snapshot",
+      "https://philna.sh/feed.xml",
+      outputPath,
+    ], {
+      fetchImpl: async () =>
+        new Response("<html><body>Temporary error</body></html>"),
+      logger: { log() {} },
+    }),
+    /non-empty RSS channel/,
+  );
+  await assert.rejects(readFile(outputPath), /ENOENT/);
 });
 
 test("broadcast mode is a no-op when there are no new GUIDs", async () => {

@@ -6,7 +6,7 @@
 
 **Architecture:** A dependency-injected Node script snapshots the live RSS feed before deployment, polls it after deployment until its GUID set matches the built feed, diffs items by GUID, and sends new posts oldest-first. The GitHub Actions workflow only sequences the build, two script modes, and deployment; XML parsing, validation, email construction, polling, logging, and Resend calls remain in the script.
 
-**Tech Stack:** Node.js 24 ESM, `node:test`, `fast-xml-parser`, Resend Node SDK, GitHub Actions, Astro
+**Tech Stack:** Node.js 24 ESM, `node:test`, `fast-xml-parser`, `fast-xml-validator`, Resend Node SDK, GitHub Actions, Astro
 
 ## Global Constraints
 
@@ -18,6 +18,8 @@
 - Send multiple posts oldest-first and stop at the first Resend failure.
 - Fail loudly without adding durable retry or delivery state.
 - Do not log secrets or full post bodies.
+- Reject non-RSS and empty feed responses before using them as snapshots.
+- Serialize workflow runs without cancelling an in-progress deployment.
 
 ---
 
@@ -28,7 +30,8 @@
   sending, and `snapshot`/`broadcast` CLI modes.
 - `test/rss-broadcast.test.mjs`: focused tests using generated RSS fixtures,
   fake `fetch`, fake delays, and a fake Resend client.
-- `package.json`: direct XML-parser dependency and script/test commands.
+- `package.json`: direct XML parser/validator dependencies and script/test
+  commands.
 - `package-lock.json`: locked direct dependency metadata.
 - `.github/workflows/trigger_deploy.yml`: invoke the two CLI modes around deploy
   and expose the required secrets only to the relevant steps.
@@ -53,7 +56,7 @@
 Run:
 
 ```bash
-npm install fast-xml-parser@^5.5.7
+npm install fast-xml-parser@^5.10.1 fast-xml-validator@^1.4.0
 ```
 
 Add these scripts to `package.json`:
@@ -491,6 +494,15 @@ git commit -m "feat: send broadcasts for deployed RSS posts"
 
 - [ ] **Step 1: Update the deployment workflow**
 
+Add a top-level concurrency group so scheduled and manually dispatched runs wait
+for the active deployment and broadcast sequence:
+
+```yaml
+concurrency:
+  group: trigger-deploy
+  cancel-in-progress: false
+```
+
 Add `RESEND_SEGMENT_ID: ${{ secrets.RESEND_SEGMENT_ID }}` to the build
 environment. After Build and before Deploy, add:
 
@@ -509,7 +521,7 @@ After Deploy, add:
         run: >-
           npm run rss:broadcast -- broadcast
           "$RUNNER_TEMP/feed-before.xml"
-          dist/feed.xml
+          dist/client/feed.xml
           https://philna.sh/feed.xml
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}

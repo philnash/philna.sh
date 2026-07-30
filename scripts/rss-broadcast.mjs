@@ -53,12 +53,20 @@ export function parseFeed(xml) {
     throw new Error("Could not parse RSS XML", { cause: error });
   }
 
-  const rawItems = document?.rss?.channel?.item;
+  const channel = document?.rss?.channel;
+  if (typeof channel !== "object" || channel === null) {
+    throw new Error("Feed does not contain a non-empty RSS channel");
+  }
+
+  const rawItems = channel.item;
   const items = rawItems === undefined
     ? []
     : Array.isArray(rawItems)
     ? rawItems
     : [rawItems];
+  if (items.length === 0) {
+    throw new Error("Feed does not contain a non-empty RSS channel");
+  }
   const seenGuids = new Set();
 
   return items.map((rawItem, index) => {
@@ -245,6 +253,7 @@ export async function main(argv, {
     }
     const [feedUrl, outputPath] = args;
     const xml = await fetchFeed(feedUrl, { fetchImpl });
+    parseFeed(xml);
     await writeFile(outputPath, xml);
     logger.log(`Saved deployed RSS snapshot to ${outputPath}`);
     return;

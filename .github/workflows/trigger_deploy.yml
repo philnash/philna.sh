@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: "5 0 * * *"
 
+concurrency:
+  group: trigger-deploy
+  cancel-in-progress: false
+
 jobs:
   run-updater:
     runs-on: ubuntu-latest
@@ -21,10 +25,26 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_TO_EMAIL: ${{ secrets.RESEND_TO_EMAIL }}
           RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+          RESEND_SEGMENT_ID: ${{ secrets.RESEND_SEGMENT_ID }}
           CLOUDFLARE_SITE_KEY: ${{ secrets.CLOUDFLARE_SITE_KEY }}
           CLOUDFLARE_SECRET_KEY: ${{ secrets.CLOUDFLARE_SECRET_KEY }}
+      - name: Snapshot deployed RSS feed
+        run: >-
+          npm run rss:broadcast -- snapshot
+          https://philna.sh/feed.xml
+          "$RUNNER_TEMP/feed-before.xml"
       - name: Deploy
         uses: cloudflare/wrangler-action@ebbaa1584979971c8614a24965b4405ff95890e0 # v4 commit hash
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Broadcast new RSS posts
+        run: >-
+          npm run rss:broadcast -- broadcast
+          "$RUNNER_TEMP/feed-before.xml"
+          dist/client/feed.xml
+          https://philna.sh/feed.xml
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM_EMAIL: ${{ secrets.RESEND_FROM_EMAIL }}
+          RESEND_SEGMENT_ID: ${{ secrets.RESEND_SEGMENT_ID }}

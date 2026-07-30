@@ -24,16 +24,21 @@ Add one focused Node script with two command modes:
 1. `snapshot` fetches the currently deployed RSS feed and writes it to a local
    file before deployment.
 2. `broadcast` runs after deployment. It polls the deployed feed until its GUID
-   set matches the GUID set in the locally built `dist/feed.xml`, compares that
-   deployed feed with the pre-deployment snapshot, and broadcasts each new item.
+   set matches the GUID set in the locally built `dist/client/feed.xml`,
+   compares that deployed feed with the pre-deployment snapshot, and broadcasts
+   each new item.
 
 The GitHub Actions workflow will invoke both modes around the existing deployment
 step. XML parsing, deployment-readiness checks, deduplication, email construction,
 Resend calls, and diagnostic logging will live in the Node script rather than in
 workflow shell commands.
 
-Add `fast-xml-parser` as a direct production dependency. Use the existing Resend
-SDK to create and send broadcasts.
+Serialize workflow runs in a stable GitHub Actions concurrency group without
+cancelling an in-progress run. A queued run must not take its pre-deployment
+snapshot until the previous deployment and broadcast sequence has finished.
+
+Add `fast-xml-parser` and `fast-xml-validator` as direct production dependencies.
+Use the existing Resend SDK to create and send broadcasts.
 
 ## RSS Parsing and Deduplication
 
@@ -48,6 +53,10 @@ Parse each RSS item into:
 Treat `guid` as the sole identity and deduplication key. Missing, empty, or
 duplicate GUIDs are invalid feed data and must fail the script rather than risk
 sending the wrong broadcast.
+
+The feed must contain an RSS channel with at least one item. Validate a snapshot
+before writing it so a successful HTML error response cannot become an empty
+baseline that classifies every historical post as new.
 
 The parser must handle both a single `<item>` object and an array of items.
 Descriptions must be decoded to HTML by the XML parser so that the RSS content
@@ -85,8 +94,8 @@ Update `.github/workflows/trigger_deploy.yml` to:
 2. Build the site.
 3. Snapshot the current deployed feed to a temporary workspace file.
 4. Deploy the built site.
-5. Run the broadcast command with the snapshot, `dist/feed.xml`, and the live
-   feed URL.
+5. Run the broadcast command with the snapshot, `dist/client/feed.xml`, and the
+   live feed URL.
 
 Pass `RESEND_SEGMENT_ID` into the build because Astro validates configured
 secrets. Pass `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `RESEND_SEGMENT_ID` only
@@ -100,6 +109,7 @@ deployments without new blog posts therefore remain no-ops.
 The workflow must fail loudly when:
 
 - the snapshot or deployed feed cannot be fetched;
+- a response is not a non-empty RSS feed;
 - XML cannot be parsed or required item fields are invalid;
 - duplicate GUIDs appear;
 - the deployed feed does not converge to the built feed before the timeout;
