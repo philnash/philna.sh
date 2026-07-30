@@ -93,14 +93,6 @@ export function parseFeed(xml) {
   });
 }
 
-export function haveSameGuids(leftItems, rightItems) {
-  if (leftItems.length !== rightItems.length) {
-    return false;
-  }
-  const rightGuids = new Set(rightItems.map(({ guid }) => guid));
-  return leftItems.every(({ guid }) => rightGuids.has(guid));
-}
-
 export function parseGuidLedger(json) {
   let value;
   try {
@@ -131,6 +123,65 @@ export function findNewPosts(seenGuids, deployedItems) {
   return deployedItems
     .filter(({ guid }) => !seen.has(guid))
     .sort((left, right) => left.publishedAt - right.publishedAt);
+}
+
+function requiredPendingText(value, field, index) {
+  if (typeof value !== "string" || value.trim() === "") {
+    throw new Error(`Pending post ${index + 1} has no ${field}`);
+  }
+  return value;
+}
+
+export function parsePendingPosts(json) {
+  let value;
+  try {
+    value = JSON.parse(json);
+  } catch (error) {
+    throw new Error("Could not parse pending broadcasts as JSON", {
+      cause: error,
+    });
+  }
+  if (!Array.isArray(value)) {
+    throw new Error("Pending broadcasts must be a JSON array");
+  }
+
+  const seenGuids = new Set();
+  return value.map((post, index) => {
+    if (typeof post !== "object" || post === null || Array.isArray(post)) {
+      throw new Error(`Pending post ${index + 1} must be an object`);
+    }
+    const guid = requiredPendingText(post.guid, "guid", index);
+    if (seenGuids.has(guid)) {
+      throw new Error(`Duplicate pending post GUID: ${guid}`);
+    }
+    seenGuids.add(guid);
+
+    const link = requiredPendingText(post.link, "link", index);
+    const url = new URL(link);
+    if (!["http:", "https:"].includes(url.protocol)) {
+      throw new Error(`Pending post ${index + 1} has an invalid link`);
+    }
+
+    const pubDate = requiredPendingText(post.pubDate, "pubDate", index);
+    if (Number.isNaN(new Date(pubDate).valueOf())) {
+      throw new Error(`Pending post ${index + 1} has an invalid pubDate`);
+    }
+    const publishedAt = new Date(
+      requiredPendingText(post.publishedAt, "publishedAt", index),
+    );
+    if (Number.isNaN(publishedAt.valueOf())) {
+      throw new Error(`Pending post ${index + 1} has an invalid publishedAt`);
+    }
+
+    return {
+      guid,
+      title: requiredPendingText(post.title, "title", index),
+      link,
+      description: requiredPendingText(post.description, "description", index),
+      pubDate,
+      publishedAt,
+    };
+  });
 }
 
 function escapeHtmlAttribute(value) {
@@ -169,44 +220,35 @@ export async function fetchFeed(feedUrl, {
   return response.text();
 }
 
-function sleep(milliseconds) {
-  return new Promise((resolve) => setTimeout(resolve, milliseconds));
-}
-
-export async function pollForDeployedFeed({
+export async function prepareBroadcasts({
   feedUrl,
-  expectedItems,
+  ledgerPath,
+  pendingPath,
   fetchImpl = globalThis.fetch,
-  delay = sleep,
-  maxAttempts = 12,
-  pollIntervalMs = 5_000,
+  logger = console,
 }) {
-  let lastError;
+  const [xml, ledgerJson] = await Promise.all([
+    fetchFeed(feedUrl, { fetchImpl }),
+    readFile(ledgerPath, "utf8"),
+  ]);
+  const deployedItems = parseFeed(xml);
+  const seenGuids = parseGuidLedger(ledgerJson);
+  const pending = findNewPosts(seenGuids, deployedItems);
 
-  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
-    try {
-      const xml = await fetchFeed(feedUrl, {
-        fetchImpl,
-        cacheBust: `${Date.now()}-${attempt}`,
-      });
-      const deployedItems = parseFeed(xml);
-      if (haveSameGuids(expectedItems, deployedItems)) {
-        return deployedItems;
-      }
-      lastError = new Error("The deployed RSS GUID set does not match");
-    } catch (error) {
-      lastError = error;
-    }
-
-    if (attempt < maxAttempts) {
-      await delay(pollIntervalMs);
-    }
+  await writeFile(pendingPath, `${JSON.stringify(pending, null, 2)}\n`);
+  if (pending.length > 0) {
+    const updatedGuids = [
+      ...seenGuids,
+      ...pending.map(({ guid }) => guid),
+    ];
+    await writeFile(
+      ledgerPath,
+      `${JSON.stringify(updatedGuids, null, 2)}\n`,
+    );
   }
 
-  throw new Error(
-    `Deployed RSS feed did not match the built feed after ${maxAttempts} attempts`,
-    { cause: lastError },
-  );
+  logger.log(`Prepared ${pending.length} RSS post(s) for broadcast.`);
+  return pending;
 }
 
 export async function sendBroadcasts(posts, {
@@ -253,70 +295,68 @@ function requiredEnvironmentVariable(env, name) {
   return value;
 }
 
+export async function sendPendingBroadcasts({
+  pendingPath,
+  env = process.env,
+  resendFactory = (apiKey) => new Resend(apiKey),
+  logger = console,
+}) {
+  const pending = parsePendingPosts(await readFile(pendingPath, "utf8"));
+  if (pending.length === 0) {
+    logger.log("No new RSS posts to broadcast.");
+    return [];
+  }
+
+  const apiKey = requiredEnvironmentVariable(env, "RESEND_API_KEY");
+  const from = requiredEnvironmentVariable(env, "RESEND_FROM_EMAIL");
+  const segmentId = requiredEnvironmentVariable(env, "RESEND_SEGMENT_ID");
+  return sendBroadcasts(pending, {
+    resend: resendFactory(apiKey),
+    segmentId,
+    from,
+    logger,
+  });
+}
+
 function usage() {
   return [
     "Usage:",
-    "  npm run rss:broadcast -- snapshot <feed-url> <output-file>",
-    "  npm run rss:broadcast -- broadcast <snapshot-file> <built-feed-file> <feed-url>",
+    "  npm run rss:broadcast -- prepare <feed-url> <ledger-file> <pending-file>",
+    "  npm run rss:broadcast -- send <pending-file>",
   ].join("\n");
 }
 
 export async function main(argv, {
   fetchImpl = globalThis.fetch,
-  delay = sleep,
   env = process.env,
   resendFactory = (apiKey) => new Resend(apiKey),
   logger = console,
-  maxAttempts = 12,
-  pollIntervalMs = 5_000,
 } = {}) {
   const [command, ...args] = argv;
 
-  if (command === "snapshot") {
-    if (args.length !== 2) {
-      throw new Error(usage());
-    }
-    const [feedUrl, outputPath] = args;
-    const xml = await fetchFeed(feedUrl, { fetchImpl });
-    parseFeed(xml);
-    await writeFile(outputPath, xml);
-    logger.log(`Saved deployed RSS snapshot to ${outputPath}`);
-    return;
-  }
-
-  if (command === "broadcast") {
+  if (command === "prepare") {
     if (args.length !== 3) {
       throw new Error(usage());
     }
-    const [snapshotPath, builtFeedPath, feedUrl] = args;
-    const [snapshotXml, builtFeedXml] = await Promise.all([
-      readFile(snapshotPath, "utf8"),
-      readFile(builtFeedPath, "utf8"),
-    ]);
-    const beforeItems = parseFeed(snapshotXml);
-    const expectedItems = parseFeed(builtFeedXml);
-    const deployedItems = await pollForDeployedFeed({
+    const [feedUrl, ledgerPath, pendingPath] = args;
+    await prepareBroadcasts({
       feedUrl,
-      expectedItems,
+      ledgerPath,
+      pendingPath,
       fetchImpl,
-      delay,
-      maxAttempts,
-      pollIntervalMs,
+      logger,
     });
-    const newPosts = findNewPosts(beforeItems, deployedItems);
+    return;
+  }
 
-    if (newPosts.length === 0) {
-      logger.log("No new RSS posts to broadcast.");
-      return;
+  if (command === "send") {
+    if (args.length !== 1) {
+      throw new Error(usage());
     }
-
-    const apiKey = requiredEnvironmentVariable(env, "RESEND_API_KEY");
-    const from = requiredEnvironmentVariable(env, "RESEND_FROM_EMAIL");
-    const segmentId = requiredEnvironmentVariable(env, "RESEND_SEGMENT_ID");
-    await sendBroadcasts(newPosts, {
-      resend: resendFactory(apiKey),
-      segmentId,
-      from,
+    await sendPendingBroadcasts({
+      pendingPath: args[0],
+      env,
+      resendFactory,
       logger,
     });
     return;

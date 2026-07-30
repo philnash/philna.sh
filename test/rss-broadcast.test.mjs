@@ -10,7 +10,10 @@ import {
   main,
   parseFeed,
   parseGuidLedger,
+  parsePendingPosts,
+  prepareBroadcasts,
   sendBroadcasts,
+  sendPendingBroadcasts,
 } from "../scripts/rss-broadcast.mjs";
 
 function rss(items) {
@@ -173,6 +176,92 @@ test("rejects an unsuccessful feed response", async () => {
   );
 });
 
+test("validates pending posts and restores publication dates", () => {
+  const [post] = parseFeed(rss([item()]));
+  const [pending] = parsePendingPosts(JSON.stringify([post]));
+
+  assert.deepEqual(pending, post);
+  assert.throws(() => parsePendingPosts("{"), /Could not parse pending/);
+  assert.throws(() => parsePendingPosts("{}"), /JSON array/);
+  assert.throws(
+    () => parsePendingPosts(JSON.stringify([{ ...post, guid: "" }])),
+    /guid/,
+  );
+  assert.throws(
+    () => parsePendingPosts(JSON.stringify([{ ...post, link: "file:///tmp/post" }])),
+    /invalid link/,
+  );
+  assert.throws(
+    () => parsePendingPosts(JSON.stringify([{ ...post, publishedAt: "nope" }])),
+    /invalid publishedAt/,
+  );
+  assert.throws(
+    () => parsePendingPosts(JSON.stringify([post, post])),
+    /Duplicate pending post GUID/,
+  );
+});
+
+test("prepare appends unseen GUIDs while preserving historical entries", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
+  const ledgerPath = join(directory, "guids.json");
+  const pendingPath = join(directory, "pending.json");
+  await writeFile(ledgerPath, JSON.stringify(["historical", "seen"]));
+  const xml = rss([
+    item({
+      guid: "newer",
+      link: "https://philna.sh/newer/",
+      pubDate: "Thu, 30 Jul 2026 00:00:00 GMT",
+    }),
+    item({ guid: "seen" }),
+    item({
+      guid: "older",
+      link: "https://philna.sh/older/",
+      pubDate: "Wed, 29 Jul 2026 00:00:00 GMT",
+    }),
+  ]);
+
+  const pending = await prepareBroadcasts({
+    feedUrl: "https://philna.sh/feed.xml",
+    ledgerPath,
+    pendingPath,
+    fetchImpl: async () => new Response(xml),
+    logger: { log() {} },
+  });
+
+  assert.deepEqual(pending.map(({ guid }) => guid), ["older", "newer"]);
+  assert.deepEqual(
+    JSON.parse(await readFile(ledgerPath, "utf8")),
+    ["historical", "seen", "older", "newer"],
+  );
+  assert.deepEqual(
+    parsePendingPosts(await readFile(pendingPath, "utf8"))
+      .map(({ guid }) => guid),
+    ["older", "newer"],
+  );
+});
+
+test("prepare writes empty pending state and leaves the ledger unchanged", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
+  const ledgerPath = join(directory, "guids.json");
+  const pendingPath = join(directory, "pending.json");
+  await writeFile(ledgerPath, '["seen"]');
+  const before = await readFile(ledgerPath, "utf8");
+
+  await prepareBroadcasts({
+    feedUrl: "https://philna.sh/feed.xml",
+    ledgerPath,
+    pendingPath,
+    fetchImpl: async () => new Response(rss([item({ guid: "seen" })])),
+    logger: { log() {} },
+  });
+
+  assert.equal(await readFile(ledgerPath, "utf8"), before);
+  assert.deepEqual(
+    parsePendingPosts(await readFile(pendingPath, "utf8")),
+    [],
+  );
+});
+
 test("sends one immediate broadcast per post in sequence", async () => {
   const calls = [];
   const resend = {
@@ -252,4 +341,123 @@ test("rejects a Resend response without a broadcast ID", async () => {
     }),
     /no broadcast ID/,
   );
+});
+
+test("send pending does not construct Resend for an empty file", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
+  const pendingPath = join(directory, "pending.json");
+  await writeFile(pendingPath, "[]\n");
+  const messages = [];
+
+  assert.deepEqual(await sendPendingBroadcasts({
+    pendingPath,
+    env: {},
+    logger: { log(message) { messages.push(message); } },
+    resendFactory: () => {
+      throw new Error("Resend should not be constructed");
+    },
+  }), []);
+  assert.deepEqual(messages, ["No new RSS posts to broadcast."]);
+});
+
+test("send pending passes RSS content and secrets to Resend", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
+  const pendingPath = join(directory, "pending.json");
+  const [post] = parseFeed(rss([item()]));
+  await writeFile(pendingPath, JSON.stringify([post]));
+  const requests = [];
+  let apiKey;
+
+  assert.deepEqual(await sendPendingBroadcasts({
+    pendingPath,
+    env: {
+      RESEND_API_KEY: "secret",
+      RESEND_FROM_EMAIL: "Phil <sender@philna.sh>",
+      RESEND_SEGMENT_ID: "segment",
+    },
+    logger: { log() {} },
+    resendFactory: (value) => {
+      apiKey = value;
+      return {
+        broadcasts: {
+          create: async (request) => {
+            requests.push(request);
+            return { data: { id: "broadcast-id" }, error: null };
+          },
+        },
+      };
+    },
+  }), ["broadcast-id"]);
+
+  assert.equal(apiKey, "secret");
+  assert.deepEqual(requests, [{
+    segmentId: "segment",
+    from: "Phil <sender@philna.sh>",
+    subject: "Post & one",
+    html: buildBroadcastHtml(post),
+    send: true,
+  }]);
+});
+
+test("send pending requires Resend secrets when posts exist", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
+  const pendingPath = join(directory, "pending.json");
+  const [post] = parseFeed(rss([item()]));
+  await writeFile(pendingPath, JSON.stringify([post]));
+
+  await assert.rejects(
+    sendPendingBroadcasts({
+      pendingPath,
+      env: {},
+      logger: { log() {} },
+    }),
+    /RESEND_API_KEY/,
+  );
+});
+
+test("prepare and send CLI modes delegate to file-backed behavior", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "rss-broadcast-"));
+  const ledgerPath = join(directory, "guids.json");
+  const pendingPath = join(directory, "pending.json");
+  await writeFile(ledgerPath, "[]\n");
+  const xml = rss([item()]);
+  const requests = [];
+
+  await main([
+    "prepare",
+    "https://philna.sh/feed.xml",
+    ledgerPath,
+    pendingPath,
+  ], {
+    fetchImpl: async () => new Response(xml),
+    logger: { log() {} },
+  });
+  await main(["send", pendingPath], {
+    env: {
+      RESEND_API_KEY: "secret",
+      RESEND_FROM_EMAIL: "sender@philna.sh",
+      RESEND_SEGMENT_ID: "segment",
+    },
+    logger: { log() {} },
+    resendFactory: () => ({
+      broadcasts: {
+        create: async (request) => {
+          requests.push(request);
+          return { data: { id: "broadcast-id" }, error: null };
+        },
+      },
+    }),
+  });
+
+  assert.deepEqual(
+    parseGuidLedger(await readFile(ledgerPath, "utf8")),
+    ["https://philna.sh/post-1/"],
+  );
+  assert.equal(requests.length, 1);
+});
+
+test("CLI modes reject incorrect argument counts", async () => {
+  await assert.rejects(main(["prepare"]), /prepare <feed-url>/);
+  await assert.rejects(main(["send"]), /send <pending-file>/);
+  await assert.rejects(main(["snapshot"]), /prepare <feed-url>/);
 });
