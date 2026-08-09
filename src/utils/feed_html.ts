@@ -7,16 +7,36 @@ function absoluteUrl(value: string, baseUrl: URL): string {
 }
 
 function absoluteSrcset(value: string, baseUrl: URL): string {
-  return value
-    .split(",")
-    .map((candidate) => {
-      const match = candidate.trim().match(/^(\S+)(.*)$/);
-      if (!match) return candidate.trim();
+  const candidates: string[] = [];
+  let position = 0;
 
-      const [, url, descriptor] = match;
-      return `${absoluteUrl(url, baseUrl)}${descriptor}`;
-    })
-    .join(", ");
+  while (position < value.length) {
+    while (/[\s,]/.test(value[position] ?? "")) position += 1;
+    if (position >= value.length) break;
+
+    const urlStart = position;
+    while (position < value.length && !/\s/.test(value[position] ?? "")) {
+      position += 1;
+    }
+    let url = value.slice(urlStart, position);
+
+    if (url.endsWith(",")) {
+      url = url.replace(/,+$/, "");
+      if (url) candidates.push(absoluteUrl(url, baseUrl));
+      continue;
+    }
+
+    while (/\s/.test(value[position] ?? "")) position += 1;
+    const descriptorStart = position;
+    while (position < value.length && value[position] !== ",") position += 1;
+    const descriptor = value.slice(descriptorStart, position).trim();
+
+    candidates.push(
+      `${absoluteUrl(url, baseUrl)}${descriptor ? ` ${descriptor}` : ""}`,
+    );
+  }
+
+  return candidates.join(", ");
 }
 
 export function sanitizeFeedHtml(html: string, baseUrl: URL): string {
@@ -25,6 +45,7 @@ export function sanitizeFeedHtml(html: string, baseUrl: URL): string {
     allowedSchemesByTag: {
       ...sanitize.defaults.allowedSchemesByTag,
       img: [...sanitize.defaults.allowedSchemes, "data"],
+      srcset: [...sanitize.defaults.allowedSchemes, "data"],
     },
     transformTags: {
       a(tagName, attribs) {

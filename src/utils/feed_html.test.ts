@@ -17,6 +17,7 @@ test("keeps images and makes src and srcset URLs absolute", () => {
       alt="An example"
     >
     <img src="images/local.gif" alt="A local example">
+    <img src="/single.gif" srcset="/single.gif" alt="A single candidate">
   `;
 
   const result = sanitizeFeedHtml(html, postUrl);
@@ -33,6 +34,7 @@ test("keeps images and makes src and srcset URLs absolute", () => {
     result,
     /src="https:\/\/philna\.sh\/blog\/2026\/03\/05\/talking-tips\/images\/local\.gif"/,
   );
+  assert.match(result, /srcset="https:\/\/philna\.sh\/single\.gif"/);
   assert.match(result, /alt="An example"/);
 });
 
@@ -75,6 +77,23 @@ test("retains URLs that already have a scheme", () => {
   assert.match(result, /href="mailto:phil@example\.com"/);
   assert.match(result, /src="https:\/\/cdn\.example\.com\/image\.png"/);
   assert.match(result, /src="data:image\/gif;base64,R0lGODlh/);
+});
+
+test("retains comma-containing data URLs in srcset", () => {
+  const html = `
+    <img
+      src="/fallback.gif"
+      srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw== 1x, /large.gif 2x"
+      alt="Responsive pixel"
+    >
+  `;
+
+  const result = sanitizeFeedHtml(html, postUrl);
+
+  assert.match(
+    result,
+    /srcset="data:image\/gif;base64,R0lGODlhAQABAIAAAAAAAP\/\/\/ywAAAAAAQABAAACAUwAOw== 1x, https:\/\/philna\.sh\/large\.gif 2x"/,
+  );
 });
 
 test("wraps item HTML in CDATA without changing the channel description", async () => {
