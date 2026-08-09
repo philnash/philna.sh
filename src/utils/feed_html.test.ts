@@ -1,6 +1,9 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { sanitizeFeedHtml } from "./feed_html.ts";
+import {
+  rssWithCdataDescriptions,
+  sanitizeFeedHtml,
+} from "./feed_html.ts";
 
 const postUrl = new URL(
   "https://philna.sh/blog/2026/03/05/talking-tips/",
@@ -72,4 +75,50 @@ test("retains URLs that already have a scheme", () => {
   assert.match(result, /href="mailto:phil@example\.com"/);
   assert.match(result, /src="https:\/\/cdn\.example\.com\/image\.png"/);
   assert.match(result, /src="data:image\/gif;base64,R0lGODlh/);
+});
+
+test("wraps item HTML in CDATA without changing the channel description", async () => {
+  const response = await rssWithCdataDescriptions({
+    title: "Test feed",
+    description: "Channel <summary>",
+    site: "https://philna.sh",
+    items: [
+      {
+        title: "Test post",
+        link: "/blog/test-post/",
+        description: '<p>Post</p><img src="https://philna.sh/image.png">',
+      },
+    ],
+  });
+  const xml = await response.text();
+
+  assert.match(
+    xml,
+    /<channel><title>Test feed<\/title><description>Channel &lt;summary&gt;<\/description>/,
+  );
+  assert.match(
+    xml,
+    /<description><!\[CDATA\[<p>Post<\/p><img src="https:\/\/philna\.sh\/image\.png">\]\]><\/description>/,
+  );
+  assert.doesNotMatch(xml, /&lt;img src=/);
+});
+
+test("splits a CDATA terminator across adjacent CDATA sections", async () => {
+  const response = await rssWithCdataDescriptions({
+    title: "Test feed",
+    description: "Channel summary",
+    site: "https://philna.sh",
+    items: [
+      {
+        title: "Test post",
+        description: "<p>Before ]]> after</p>",
+      },
+    ],
+  });
+  const xml = await response.text();
+
+  assert.match(
+    xml,
+    /<!\[CDATA\[<p>Before \]\]\]\]><!\[CDATA\[> after<\/p>\]\]>/,
+  );
 });
