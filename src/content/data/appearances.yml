@@ -40,6 +40,17 @@
   talks:
     - title: Maturing MCP
 
+- id: melbcss-aug-2026
+  event:
+    name: MelbCSS August 2026
+    link: https://melbcss.com/
+    start_date: 2026-08-04
+    location: Melbourne, Australia
+    type: meetup
+  talks:
+    - title: "Guess the AI Designer"
+      video: https://www.youtube.com/watch?v=QkKJJKw8xkU
+
 - id: agent-con-perth-2026
   event:
     name: AgentCon Perth 2026
