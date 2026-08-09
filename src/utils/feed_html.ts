@@ -6,6 +6,14 @@ function absoluteUrl(value: string, baseUrl: URL): string {
   return new URL(value, baseUrl).toString();
 }
 
+function stripCommas(value: string): string {
+  let end = value.length;
+  while (end > 0 && value[end - 1] === ",") {
+    end -= 1;
+  }
+  return value.slice(0, end);
+}
+
 function absoluteSrcset(value: string, baseUrl: URL): string {
   const candidates: string[] = [];
   let position = 0;
@@ -21,7 +29,7 @@ function absoluteSrcset(value: string, baseUrl: URL): string {
     let url = value.slice(urlStart, position);
 
     if (url.endsWith(",")) {
-      url = url.replace(/,+$/, "");
+      url = stripCommas(url);
       if (url) candidates.push(absoluteUrl(url, baseUrl));
       continue;
     }
@@ -30,9 +38,9 @@ function absoluteSrcset(value: string, baseUrl: URL): string {
     const descriptorStart = position;
     while (position < value.length && value[position] !== ",") position += 1;
     const descriptor = value.slice(descriptorStart, position).trim();
-
+    const descriptorOutput = descriptor ? ` ${descriptor}` : "";
     candidates.push(
-      `${absoluteUrl(url, baseUrl)}${descriptor ? ` ${descriptor}` : ""}`,
+      `${absoluteUrl(url, baseUrl)}${descriptorOutput}`,
     );
   }
 
@@ -64,9 +72,7 @@ export function sanitizeFeedHtml(html: string, baseUrl: URL): string {
           tagName,
           attribs: {
             ...attribs,
-            ...(attribs.src
-              ? { src: absoluteUrl(attribs.src, baseUrl) }
-              : {}),
+            ...(attribs.src ? { src: absoluteUrl(attribs.src, baseUrl) } : {}),
             ...(attribs.srcset
               ? { srcset: absoluteSrcset(attribs.srcset, baseUrl) }
               : {}),
@@ -101,8 +107,7 @@ export async function rssWithCdataDescriptions(
   let xml = await response.text();
 
   for (const [placeholder, description] of descriptions) {
-    const serializedPlaceholder =
-      `<description>${placeholder}</description>`;
+    const serializedPlaceholder = `<description>${placeholder}</description>`;
     const firstMatch = xml.indexOf(serializedPlaceholder);
     const secondMatch = xml.indexOf(
       serializedPlaceholder,
