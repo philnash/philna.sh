@@ -1,28 +1,46 @@
 import type { APIContext } from "astro";
-import rss from "@astrojs/rss";
+import { experimental_AstroContainer as AstroContainer } from "astro/container";
+import { render } from "astro:content";
 import { postPath, sortedBlogPosts } from "../utils/blog_posts";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
-import sanitize from "sanitize-html";
-import MarkdownIt from "markdown-it";
-import type { CollectionEntry } from "astro:content";
-const parser = new MarkdownIt();
-
-type BlogPostWithBody =
-  & Required<Pick<CollectionEntry<"blog">, "body">>
-  & CollectionEntry<"blog">;
-
-function filterPostsWithoutBody(
-  post: CollectionEntry<"blog">,
-): post is BlogPostWithBody {
-  return post.body !== undefined;
-}
+import {
+  rssWithCdataDescriptions,
+  sanitizeFeedHtml,
+} from "../utils/feed_html";
 
 export async function GET({ site, generator }: APIContext) {
-  const posts = (await sortedBlogPosts()).filter(filterPostsWithoutBody);
-  return rss({
+  if (!site) {
+    throw new Error(
+      "The RSS feed requires Astro's site configuration to generate absolute URLs.",
+    );
+  }
+
+  const posts = await sortedBlogPosts();
+  const container = await AstroContainer.create();
+  const items = await Promise.all(
+    posts.map(async (post) => {
+      const postUrl = new URL(postPath(post), site);
+      const { Content } = await render(post);
+      const renderedHtml = await container.renderToString(Content, {
+        request: new Request(postUrl),
+      });
+
+      return {
+        title: post.data.title,
+        description: sanitizeFeedHtml(renderedHtml, postUrl),
+        pubDate: post.data.pubDate,
+        link: postPath(post),
+        customData: post.data.tags
+          .map((tag) => `<category>${tag}</category>`)
+          .join(""),
+      };
+    }),
+  );
+
+  return rssWithCdataDescriptions({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    site: site?.toString() ?? "",
+    site,
     xmlns: { atom: "http://www.w3.org/2005/Atom" },
     customData: `
       <atom:link href="${site}feed.xml" rel="self" type="application/rss+xml" />
@@ -30,14 +48,6 @@ export async function GET({ site, generator }: APIContext) {
       <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
       <generator>${generator}</generator>
     `,
-    items: posts.map((post) => ({
-      title: post.data.title,
-      description: sanitize(parser.render(post.body)),
-      pubDate: post.data.pubDate,
-      link: `${postPath(post)}/`,
-      customData: post.data.tags
-        .map((tag) => `<category>${tag}</category>`)
-        .join(""),
-    })),
+    items,
   });
 }
