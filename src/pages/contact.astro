@@ -99,7 +99,7 @@ if (method === "POST") {
             <p>
               You can email Phil here or catch him on any of <a href="/links">these social networks</a>.
             </p>
-            <form method="POST">
+            <form method="POST" toolname="emailPhilNash" tooldescription="Submits an email which is sent to Phil Nash">
               <div>
                 <label for="email">Your email</label>
                 {errors.email && errors.email.map((error) => (
@@ -128,6 +128,7 @@ if (method === "POST") {
                   value={subject}
                   class={errors.subject && errors.subject.length > 0 ? "error" : ""}
                   required
+                  toolparamdescription="The subject of the email"
                 />
               </div>
               <div>
