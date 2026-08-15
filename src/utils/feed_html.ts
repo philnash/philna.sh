@@ -6,54 +6,18 @@ function absoluteUrl(value: string, baseUrl: URL): string {
   return new URL(value, baseUrl).toString();
 }
 
-function stripCommas(value: string): string {
-  let end = value.length;
-  while (end > 0 && value[end - 1] === ",") {
-    end -= 1;
-  }
-  return value.slice(0, end);
-}
-
-function absoluteSrcset(value: string, baseUrl: URL): string {
-  const candidates: string[] = [];
-  let position = 0;
-
-  while (position < value.length) {
-    while (/[\s,]/.test(value[position] ?? "")) position += 1;
-    if (position >= value.length) break;
-
-    const urlStart = position;
-    while (position < value.length && !/\s/.test(value[position] ?? "")) {
-      position += 1;
-    }
-    let url = value.slice(urlStart, position);
-
-    if (url.endsWith(",")) {
-      url = stripCommas(url);
-      if (url) candidates.push(absoluteUrl(url, baseUrl));
-      continue;
-    }
-
-    while (/\s/.test(value[position] ?? "")) position += 1;
-    const descriptorStart = position;
-    while (position < value.length && value[position] !== ",") position += 1;
-    const descriptor = value.slice(descriptorStart, position).trim();
-    const descriptorOutput = descriptor ? ` ${descriptor}` : "";
-    candidates.push(
-      `${absoluteUrl(url, baseUrl)}${descriptorOutput}`,
-    );
-  }
-
-  return candidates.join(", ");
-}
-
 export function sanitizeFeedHtml(html: string, baseUrl: URL): string {
   return sanitize(html, {
     allowedTags: [...sanitize.defaults.allowedTags, "img"],
+    allowedAttributes: {
+      ...sanitize.defaults.allowedAttributes,
+      img: (sanitize.defaults.allowedAttributes.img ?? []).filter(
+        (attribute) => attribute !== "srcset",
+      ),
+    },
     allowedSchemesByTag: {
       ...sanitize.defaults.allowedSchemesByTag,
       img: [...sanitize.defaults.allowedSchemes, "data"],
-      srcset: [...sanitize.defaults.allowedSchemes, "data"],
     },
     transformTags: {
       a(tagName, attribs) {
@@ -73,9 +37,6 @@ export function sanitizeFeedHtml(html: string, baseUrl: URL): string {
           attribs: {
             ...attribs,
             ...(attribs.src ? { src: absoluteUrl(attribs.src, baseUrl) } : {}),
-            ...(attribs.srcset
-              ? { srcset: absoluteSrcset(attribs.srcset, baseUrl) }
-              : {}),
           },
         };
       },
