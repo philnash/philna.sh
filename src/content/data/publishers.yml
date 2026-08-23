@@ -30,3 +30,7 @@
   link: https://thenewstack.io/
   name: The New Stack
   logo: ../../assets/publishers/thenewstack.png
+- id: resend
+  link: https://resend.com/
+  name: Resend
+  logo: ../../assets/publishers/resend.svg
