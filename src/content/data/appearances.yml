@@ -30,6 +30,16 @@
     - title: A new class of user
     - title: Evolving AI chat with MCP Apps
 
+- id: agentic-ai-melbourne-sep-2026
+  event:
+    name: "Agentic AI Melbourne - September 2026"
+    link: https://luma.com/et8icca1
+    start_date: 2026-09-02
+    location: Melbourne, Australia
+    type: meetup
+  talks:
+    - title: "​What you might not know about Stateless MCP"
+
 - id: kcd-melbourne-2026
   event:
     name: KCD Melbourne 2026
