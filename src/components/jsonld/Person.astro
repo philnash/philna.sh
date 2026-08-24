@@ -1,0 +1,49 @@
+---
+import portrait from "../../assets/philnash.jpg";
+const site = Astro.site;
+---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    name: "Phil Nash",
+    givenName: "Phil",
+    familyName: "Nash",
+    description:
+      "Phil Nash is a developer experience engineer for Resend, a Google Developer Expert, and an AAIF Ambassador living in Melbourne, Australia. He's been working in developer relations for more than a decade, speaking at conferences since 2012, and writing JavaScript since before jQuery. Away from the keyboard, Phil enjoys travel, live music, and hanging out with his mini sausage dog, Ruby.",
+    image: portrait.src,
+    url: site,
+    gender: "http://schema.org/Male",
+    hasOccupation: {
+      "@type": "Occupation",
+      name: "Developer experience engineer",
+    },
+    worksFor: {
+      "@type": "Organization",
+      url: "https://resend.com",
+      name: "Resend",
+      description: "Email for developers",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://resend.com/static/logo-black-square.png",
+        width: 600,
+        height: 600,
+      },
+    },
+    sameAs: [
+      "https://github.com/philnash",
+      "https://x.com/philnash",
+      "https://linkedin.com/in/philnash",
+      "https://mastodon.social/@philnash",
+      "https://bsky.app/profile/philna.sh",
+      "https://www.instagram.com/philnash/",
+      "https://stackoverflow.com/users/28376/philnash",
+      "https://dev.to/philnash",
+      "https://resend.com/humans/phil-nash",
+      "https://www.crunchbase.com/person/phil-nash",
+      "https://www.reddit.com/user/philnash/",
+    ],
+  })}
+/>

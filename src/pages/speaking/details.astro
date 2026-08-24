@@ -1,6 +1,7 @@
 ---
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
 import SpeakingHeader from "../../components/SpeakingHeader.astro";
+import PersonJSONLD from "../../components/jsonld/Person.astro";
 import { Image } from "astro:assets";
 
 import { SITE_TITLE } from "../../consts";
@@ -72,4 +73,5 @@ const description = "Phil Nash's speaker details. Invite him to speak!";
       </blockquote>
     </div>
   </div>
+  <PersonJSONLD />
 </DefaultLayout>

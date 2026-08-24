@@ -3,6 +3,7 @@ import LinksLayout from "../layouts/LinksLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { footerIcons } from "../utils/footer";
 import FooterIcon from "../components/FooterIcon.astro";
+import PersonJSONLD from "../components/jsonld/Person.astro";
 
 const title = "Links";
 ---
@@ -31,4 +32,5 @@ const title = "Links";
       </ul>
     </div>
   </div>
+  <PersonJSONLD />
 </LinksLayout>

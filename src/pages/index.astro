@@ -11,6 +11,7 @@ import {
   getToday,
 } from "../utils/appearances";
 import { Image } from "astro:assets";
+import PersonJSONLD from "../components/jsonld/Person.astro";
 
 import philnash70 from "../assets/philnash70x70.jpg";
 import philnash70x2 from "../assets/philnash70x70@2x.jpg";
@@ -130,4 +131,5 @@ if (upcoming.length > 0) {
       </div>
     </main>
   </div>
+  <PersonJSONLD />
 </HomeLayout>
