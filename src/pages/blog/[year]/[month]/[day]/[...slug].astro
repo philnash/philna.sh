@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import BlogPost from "../../../../../layouts/BlogPost.astro";
+import BlogPostingJSONLD from "../../../../../components/jsonld/BlogPosting.astro";
 import { postParams } from "../../../../../utils/blog_posts";
 import { truncate } from "../../../../../utils/string";
 
@@ -19,4 +20,5 @@ const { Content } = await render(post);
 
 <BlogPost {...post.data} description={truncate(post.body, 160)} slug={post.id}>
   <Content />
+  <BlogPostingJSONLD post={post} />
 </BlogPost>

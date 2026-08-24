@@ -5,6 +5,7 @@ import Subscribe from "../components/Subscribe.astro";
 import SubscribeRss from "../components/SubscribeRss.astro";
 import Post from "../components/Post.astro";
 import Pagination from "@philnash/astro-pagination";
+import BlogJSONLD from "../components/jsonld/Blog.astro";
 import type { CollectionEntry } from "astro:content";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import ExternalPost from "../components/ExternalPost.astro";
@@ -12,7 +13,7 @@ import ExternalPost from "../components/ExternalPost.astro";
 type Props = {
   title: string;
   posts: CollectionEntry<"blog" | "externalPosts">[];
-  page?: Page<CollectionEntry<"blog" | "externalPosts">>;
+  page: Page<CollectionEntry<"blog" | "externalPosts">>;
 };
 
 const { title, posts, page } = Astro.props;
@@ -38,7 +39,7 @@ const { title, posts, page } = Astro.props;
             <Post post={post} aboveTheFold={index < 1} />
           ) : (
             <ExternalPost post={post} />
-          )
+          ),
         )
       }
     </ul>
@@ -59,4 +60,5 @@ const { title, posts, page } = Astro.props;
       <SubscribeRss />
     </div>
   </div>
+  <BlogJSONLD page={page} posts={posts} />
 </DefaultLayout>

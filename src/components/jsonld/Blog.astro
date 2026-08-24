@@ -1,0 +1,77 @@
+---
+import type { CollectionEntry } from "astro:content";
+import type { Page } from "astro";
+import { postPath } from "../../utils/blog_posts";
+
+const site = Astro.site;
+
+type Props = {
+  posts: CollectionEntry<"blog" | "externalPosts">[];
+  page: Page<CollectionEntry<"blog" | "externalPosts">>;
+};
+
+const { posts, page } = Astro.props;
+
+const pageUrl =
+  `${site}blog/` +
+  (page.currentPage === 1 ? "" : String(page.currentPage) + "/");
+
+const itemListElements = posts.map((post, index) => {
+  const url = post.collection === "blog" ? postPath(post) : post.data.link;
+  return {
+    "@type": "ListItem",
+    position: page.start + index,
+    item: {
+      "@type": "BlogPosting",
+      "@id": `${url}#article`,
+      url: url,
+      headline: post.data.title,
+      datePublished: post.data.pubDate,
+      isPartOf: {
+        "@type": "Blog",
+        "@id": `${site}blog/#blog`,
+      },
+      author: {
+        "@type": "Person",
+        "@id": `${site}#person`,
+      },
+    },
+  };
+});
+---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": `${site}blog/#blog`,
+        url: `${site}blog/`,
+        name: "Phil Nash's blog",
+        author: {
+          "@type": "Person",
+          "@id": `${site}#person`,
+        },
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": `${pageUrl}#webpage`,
+        url: `${pageUrl}`,
+        name: `Phil's blog - page ${page.currentPage}`,
+        mainEntity: {
+          "@type": "ItemList",
+          "@id": `${pageUrl}#posts`,
+        },
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${pageUrl}#posts`,
+        itemListOrder: "https://schema.org/ItemListOrderDescending",
+        numberOfItems: page.total,
+        itemListElement: itemListElements,
+      },
+    ],
+  })}
+/>

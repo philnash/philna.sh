@@ -8,6 +8,7 @@ const site = Astro.site;
   set:html={JSON.stringify({
     "@context": "https://schema.org/",
     "@type": "Person",
+    "@id": `${site}#person`,
     name: "Phil Nash",
     givenName: "Phil",
     familyName: "Nash",

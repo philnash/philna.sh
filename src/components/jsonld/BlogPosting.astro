@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { postPath } from "../../utils/blog_posts";
+
+const site = Astro.site;
+
+type Props = {
+  post: CollectionEntry<"blog">;
+};
+
+const { post } = Astro.props;
+---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@type": "BlogPosting",
+    "@id": `${postPath(post)}#article`,
+    url: postPath(post),
+    headline: post.data.title,
+    datePublished: post.data.pubDate,
+    dateModified: post.data.updatedDate,
+    image: post.data.image?.src,
+    keywords: post.data.tags,
+    isPartOf: {
+      "@type": "Blog",
+      "@id": `${site}blog/#blog`,
+    },
+    author: {
+      "@type": "Person",
+      "@id": `${site}#person`,
+    },
+  })}
+/>
