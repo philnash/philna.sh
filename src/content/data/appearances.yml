@@ -6,7 +6,8 @@
     end_date: 2026-12-08
     location: Brisbane, Australia
     type: conference
-  talks: []
+  talks:
+    - title: "The evolution of MCP"
 
 - id: yow-melbourne-2026
   event:
@@ -16,8 +17,9 @@
     end_date: 2026-12-04
     location: Melbourne, Australia
     type: conference
-  talks: []
-    
+  talks:
+    - title: "The evolution of MCP"
+
 - id: oredev-2026
   event:
     name: Øredev 2026
