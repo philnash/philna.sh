@@ -1,3 +1,9 @@
+- id: email-verification-api
+  title: "The Email Verification API"
+  link: https://resend.com/blog/email-verification-api
+  pubDate: 2026-08-25
+  publisher: "resend"
+
 - id: what-is-aprf
   title: "How APRF Helps You Understand Your Email Reputation"
   link: https://resend.com/blog/what-is-aprf
