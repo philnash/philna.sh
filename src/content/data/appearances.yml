@@ -1,7 +1,7 @@
 - id: yow-brisbane-2026
   event:
     name: YOW! Brisbane 2026
-    link: https://yowcon.com/brisbane-2026
+    link: https://yowcon.com/brisbane-2026/sessions/4189/the-evolution-of-mcp
     start_date: 2026-12-07
     end_date: 2026-12-08
     location: Brisbane, Australia
@@ -12,7 +12,7 @@
 - id: yow-melbourne-2026
   event:
     name: YOW! Melbourne 2026
-    link: https://yowcon.com/melbourne-2026
+    link: https://yowcon.com/melbourne-2026/sessions/4188/the-evolution-of-mcp
     start_date: 2026-12-03
     end_date: 2026-12-04
     location: Melbourne, Australia
