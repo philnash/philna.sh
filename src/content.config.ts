@@ -79,14 +79,24 @@ const appearances = defineCollection({
       location: z.string(),
       type: z.enum(["conference", "meetup", "hackathon"]),
     }),
-    talks: z.array(
-      z.object({
-        title: z.string(),
-        slides: z.url().optional(),
-        video: z.url().optional(),
-        audio: z.url().optional(),
-      }),
-    ).optional(),
+    talks: z
+      .array(
+        z.object({
+          title: z.string(),
+          slides: z.url().optional(),
+          video: z.url().optional(),
+          audio: z.url().optional(),
+          cospeakers: z
+            .array(
+              z.object({
+                name: z.string(),
+                link: z.url(),
+              }),
+            )
+            .optional(),
+        }),
+      )
+      .optional(),
     roles: z.array(z.string()).optional(),
   }),
 });

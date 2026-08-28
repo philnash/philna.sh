@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from "astro:content";
+type Talk = NonNullable<
+  CollectionEntry<"appearances">["data"]["talks"]
+>[number];
+
+type Props = {
+  cospeakers: NonNullable<Talk["cospeakers"]>;
+};
+
+const { cospeakers } = Astro.props;
+---
+
+<p class="cospeakers">
+  With
+  {
+    cospeakers.map(({ name, link }, index) => (
+      <>
+        {index === cospeakers.length - 1 && cospeakers.length > 1 && " and "}
+        <!-- prettier-ignore -->
+        <a href={link}>{name}</a>{index < cospeakers.length - 1 && ", "}
+      </>
+    ))
+  }
+</p>

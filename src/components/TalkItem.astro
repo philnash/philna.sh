@@ -1,12 +1,22 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import Cospeakers from "./Cospeakers.astro";
 type Props = {
   talk: NonNullable<CollectionEntry<"appearances">["data"]["talks"]>[number];
 };
 const { talk } = Astro.props;
+if (
+  talk.title ===
+  "Build AI-Ready Search: Integrating Docling with OpenSearch for Advanced RAG and Agentic Applications"
+) {
+  console.log(talk);
+}
 ---
 
-<p class="talk-title"><em>"{talk.title}"</em></p>
+<p class="talk-title">
+  <em>"{talk.title}"</em>
+</p>
+{talk.cospeakers && <Cospeakers cospeakers={talk.cospeakers} />}
 {
   (talk.slides || talk.video || talk.audio) && (
     <ul class="talk-materials">

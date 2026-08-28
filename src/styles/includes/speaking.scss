@@ -50,12 +50,20 @@
 .speaking-list .talk-title {
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: math.div(vars.$spacing-unit, 2);
+}
+.speaking-list .cospeakers {
+  margin-left: math.div(vars.$spacing-unit, 2);
+  margin-bottom: 0;
+  font-size: vars.$small-font-size;
 }
 
 .speaking-list .talk-materials {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  margin-left: math.div(vars.$spacing-unit, 2);
+  font-size: vars.$small-font-size;
 }
 .speaking-list .talk-materials li {
   display: inline;

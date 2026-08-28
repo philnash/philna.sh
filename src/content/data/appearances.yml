@@ -32,6 +32,19 @@
     - title: A new class of user
     - title: Evolving AI chat with MCP Apps
 
+- id: resend-forward-2026
+  event:
+    name: Resend Forward
+    link: https://resend.com/forward
+    start_date: 2026-10-21
+    location: San Francisco, USA
+    type: conference
+  talks:
+    - title: Resend from start to finish
+      cospeakers:
+        - name: Isabella Aquino
+          link: https://www.linkedin.com/in/isabella-aquino/
+
 - id: agentic-ai-melbourne-sep-2026
   event:
     name: "Agentic AI Melbourne - September 2026"
@@ -133,6 +146,9 @@
     - title: "Build AI-Ready Search: Integrating Docling with OpenSearch for Advanced RAG and Agentic Applications"
       slides: https://sessionize.com/download/cbaynej~4akQwUPd4h5S7ZySx2Maqf.pdf~opensearchcon-2026-docling-and-opensearch.pdf
       video: https://www.youtube.com/watch?v=IqUJVGyI5to
+      cospeakers:
+        - name: Carol Chen
+          link: https://www.linkedin.com/in/cybette/
 
 - id: devfest-adelaide-2025
   event:
@@ -218,7 +234,7 @@
     location: Online
     type: conference
   talks:
-    - title: Build the tools your agents need\
+    - title: Build the tools your agents need
       video: https://www.youtube.com/watch?v=whnuK1g3ND8
 - id: melbjs-09-2025
   event:
