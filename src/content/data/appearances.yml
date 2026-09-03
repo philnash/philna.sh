@@ -32,6 +32,16 @@
     - title: A new class of user
     - title: Evolving AI chat with MCP Apps
 
+- id: devfest-melbourne-2026
+  event:
+    name: DevFest Melbourne 2026
+    link: https://gdg-melbourne-devfest-2026.sessionize.com/
+    start_date: 2026-10-03
+    location: Melbourne, Australia
+    type: conference
+  talks:
+    - title: "A new class of user"
+
 - id: gdg-melb-sep-26
   event:
     name: GDG Melbourne - September 2026
