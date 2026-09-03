@@ -32,6 +32,16 @@
     - title: A new class of user
     - title: Evolving AI chat with MCP Apps
 
+- id: gdg-melb-sep-26
+  event:
+    name: GDG Melbourne - September 2026
+    link: https://gdg.community.dev/events/details/google-gdg-melbourne-presents-gdg-melbourne-september26-meetup/
+    start_date: 2026-09-23
+    location: Melbourne, Australia
+    type: meetup
+  talks:
+    - title: "Email verification without the verification email"
+
 - id: resend-forward-2026
   event:
     name: Resend Forward
