@@ -32,6 +32,16 @@
     - title: A new class of user
     - title: Evolving AI chat with MCP Apps
 
+- id: devfest-sydney-2026
+  event:
+    name: DevFest Sydney 2026
+    link: https://devfest.gdgsydney.com/speakers/phil-nash
+    start_date: 2026-10-10
+    location: Sydney, Australia
+    type: conference
+  talks:
+    - title: "A new class of user"
+
 - id: devfest-melbourne-2026
   event:
     name: DevFest Melbourne 2026
