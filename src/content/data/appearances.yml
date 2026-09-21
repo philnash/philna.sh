@@ -32,6 +32,19 @@
     - title: A new class of user
     - title: Evolving AI chat with MCP Apps
 
+- id: resend-forward-2026
+  event:
+    name: Resend Forward
+    link: https://resend.com/forward
+    start_date: 2026-10-21
+    location: San Francisco, USA
+    type: conference
+  talks:
+    - title: Resend from start to finish
+      cospeakers:
+        - name: Isabella Aquino
+          link: https://www.linkedin.com/in/isabella-aquino/
+
 - id: devfest-sydney-2026
   event:
     name: DevFest Sydney 2026
@@ -52,6 +65,16 @@
   talks:
     - title: "A new class of user"
 
+- id: agentic-ai-sydney-sep-2026
+  event:
+    name: "Agentic AI Sydney - September 2026"
+    link: https://luma.com/axep37gt
+    start_date: 2026-09-29
+    location: Sydney, Australia
+    type: meetup
+  talks:
+    - title: "Maturing MCP"
+
 - id: gdg-melb-sep-26
   event:
     name: GDG Melbourne - September 2026
@@ -62,19 +85,6 @@
   talks:
     - title: "Email verification without the verification email"
 
-- id: resend-forward-2026
-  event:
-    name: Resend Forward
-    link: https://resend.com/forward
-    start_date: 2026-10-21
-    location: San Francisco, USA
-    type: conference
-  talks:
-    - title: Resend from start to finish
-      cospeakers:
-        - name: Isabella Aquino
-          link: https://www.linkedin.com/in/isabella-aquino/
-
 - id: agentic-ai-melbourne-sep-2026
   event:
     name: "Agentic AI Melbourne - September 2026"
@@ -83,7 +93,7 @@
     location: Melbourne, Australia
     type: meetup
   talks:
-    - title: "​What you might not know about Stateless MCP"
+    - title: "What you might not know about Stateless MCP"
 
 - id: kcd-melbourne-2026
   event:
