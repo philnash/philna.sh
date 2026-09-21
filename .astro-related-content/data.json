@@ -32,8 +32,8 @@
         "score": 0.818824424593797
       },
       {
-        "id": "2017-02-13-doing-things-wrong",
-        "score": 0.8068739552827306
+        "id": "2026-07-23-build-contact-form-astro-resend",
+        "score": 0.8070532767549351
       }
     ],
     "2016-06-20-critique-my-swift-on-exercism": [
@@ -730,12 +730,12 @@
         "score": 0.7797410193358258
       },
       {
-        "id": "2026-07-23-build-contact-form-astro-resend-cloudflare-turnstile",
-        "score": 0.7790460711688568
-      },
-      {
         "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
         "score": 0.7769707839365373
+      },
+      {
+        "id": "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections",
+        "score": 0.7748750794102996
       }
     ],
     "2022-12-07-better-two-factor-authentication-experiences-with-web-otp": [
@@ -798,8 +798,8 @@
         "score": 0.8429650034505134
       },
       {
-        "id": "2026-07-23-build-contact-form-astro-resend-cloudflare-turnstile",
-        "score": 0.812356653241351
+        "id": "2026-07-23-build-contact-form-astro-resend",
+        "score": 0.8081390363545154
       },
       {
         "id": "2025-01-14-troubles-with-multipart-form-data-fetch-node-js",
@@ -816,8 +816,8 @@
         "score": 0.8498138913331571
       },
       {
-        "id": "2026-07-23-build-contact-form-astro-resend-cloudflare-turnstile",
-        "score": 0.8296525653374709
+        "id": "2026-07-23-build-contact-form-astro-resend",
+        "score": 0.8407368910251378
       },
       {
         "id": "2025-01-09-html-content-retrieval-augmented-generation-readability-js",
@@ -1080,22 +1080,22 @@
         "score": 0.8325396004150302
       }
     ],
-    "2026-07-23-build-contact-form-astro-resend-cloudflare-turnstile": [
+    "2026-07-23-build-contact-form-astro-resend": [
       {
         "id": "2023-07-13-easy-and-accessible-pagination-links-for-your-astro-collections",
-        "score": 0.8296525653374709
+        "score": 0.8407368910251378
       },
       {
         "id": "2026-06-22-ai-powered-related-content-astro-site",
-        "score": 0.8164703877664311
-      },
-      {
-        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
-        "score": 0.812356653241351
+        "score": 0.8180671392757891
       },
       {
         "id": "2023-03-13-create-a-cli-chatbot-with-chatgpt-api-and-node-js",
-        "score": 0.8008493800786716
+        "score": 0.8081726279306507
+      },
+      {
+        "id": "2023-05-01-build-bots-on-bluesky-with-typescript",
+        "score": 0.8081390363545154
       }
     ]
   }
