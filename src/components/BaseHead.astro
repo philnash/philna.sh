@@ -36,7 +36,7 @@ const {
 } = Astro.props;
 
 const socialImage = image
-  ? new URL((await getImage({ src: image })).src, Astro.url)
+  ? new URL((await getImage({ src: image, width: 1500 })).src, Astro.url)
   : undefined;
 ---
 
