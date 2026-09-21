@@ -32,8 +32,6 @@ const contactFormSchema = z.object({
   message: z.string().trim().min(1, { message: "Please enter a message" }),
 });
 
-
-
 function stringFromFormDataEntryValue(parameter: FormDataEntryValue | null) {
   return parameter === null ? "" : parameter.toString().trim();
 }
@@ -61,9 +59,9 @@ if (method === "POST") {
         await resend.emails.send({
           to: RESEND_TO_EMAIL,
           from: RESEND_FROM_EMAIL,
-          reply_to: email,
-          subject: subject,
-          text: message,
+          reply_to: contactFormData.data.email,
+          subject: contactFormData.data.subject,
+          text: contactFormData.data.message,
         });
       }
       successMessage = "Thanks for your email, I'll get back to you soon!";
