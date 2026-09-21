@@ -11,6 +11,7 @@ import appleTouchIcon from "../assets/apple-touch-icon.png";
 import Analytics from "./Analytics.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, TWITTER_HANDLE } from "../consts";
 import type { CollectionEntry } from "astro:content";
+import { getImage } from "astro:assets";
 
 type Props = {
   title?: string;
@@ -33,6 +34,10 @@ const {
   imageAlt,
   type = "page",
 } = Astro.props;
+
+const socialImage = image
+  ? new URL((await getImage({ src: image })).src, Astro.url)
+  : undefined;
 ---
 
 <!-- Global Metadata -->
@@ -88,7 +93,7 @@ const {
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-{image && <meta property="og:image" content={new URL(image.src, Astro.url)} />}
+{socialImage && <meta property="og:image" content={socialImage} />}
 {imageAlt && <meta property="og:image:alt" content={imageAlt} />}
 <meta property="og:site_name" content={SITE_TITLE} />
 <meta property="og:locale" content="en_GB" />
@@ -101,11 +106,7 @@ const {
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-{
-  image && (
-    <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
-  )
-}
+{socialImage && <meta property="twitter:image" content={socialImage} />}
 {imageAlt && <meta property="twitter:image:alt" content={imageAlt} />}
 <meta property="twitter:site" content={TWITTER_HANDLE} />
 <meta property="twitter:creator" content={TWITTER_HANDLE} />
@@ -113,7 +114,7 @@ const {
 <!-- Google -->
 <meta itemprop="name" content={title} />
 <meta itemprop="description" content={description} />
-{image && <meta itemprop="image" content={new URL(image.src, Astro.url)} />}
+{socialImage && <meta itemprop="image" content={socialImage} />}
 
 <!-- WebMCP Origin Trial -->
 <!-- Expires 17 Nov 2026 -->
