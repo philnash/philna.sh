@@ -22,7 +22,7 @@ export default defineConfig({
         batchSize: 1,
       },
     }),
-    playformInline({ Critters: { preload: "media" } }),
+    playformInline({ Beasties: { preload: "media", pruneSource: false } }),
     process.env.NODE_ENV === "production"
       ? sentry({
           project: "javascript-astro",
