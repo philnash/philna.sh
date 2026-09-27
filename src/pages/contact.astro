@@ -143,7 +143,13 @@ if (method === "POST") {
                   required
                 >{message}</textarea>
               </div>
-              <div class="cf-turnstile" data-sitekey={CLOUDFLARE_SITE_KEY}></div>
+              <div
+                class="cf-turnstile"
+                data-sitekey={CLOUDFLARE_SITE_KEY}
+                data-callback="handleTurnstileSuccess"
+                data-error-callback="handleTurnstileError"
+              ></div>
+              <p id="turnstile-error" class="form-error" role="alert" hidden></p>
               <div>
                 <button type="submit">
                   <span class="btn-submit-text">Send</span>
@@ -157,6 +163,64 @@ if (method === "POST") {
     </div>
   </div>
   <Fragment slot="body-end">
+    <script is:inline data-turnstile-handlers>
+      const errorMessage = "Something went wrong, please refresh the page and try again.";
+      const errorMessageDiv = document.querySelector("#turnstile-error");
+      const submitButton = document.querySelector('.contact form button[type="submit"]');
+      const recoverableTurnstileErrors = new Set([
+        "110600",
+        "110620",
+        "200100",
+        "200500",
+      ]);
+      const turnstileConfigurationErrors = new Set([
+        "110100",
+        "110110",
+        "110200",
+        "400020",
+        "400021",
+        "400070",
+      ]);
+
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
+
+      window.handleTurnstileSuccess = () => {
+        if (errorMessageDiv) {
+          errorMessageDiv.textContent = "";
+          errorMessageDiv.hidden = true;
+        }
+        if (submitButton) {
+          submitButton.disabled = false;
+        }
+      };
+
+      window.handleTurnstileError = (errorCode) => {
+        const code = String(errorCode);
+
+        if (code.startsWith("300") || code.startsWith("600")) {
+          return true;
+        }
+
+        if (recoverableTurnstileErrors.has(code)) {
+          if (errorMessageDiv) {
+            errorMessageDiv.textContent = errorMessage;
+            errorMessageDiv.hidden = false;
+          }
+          if (submitButton) {
+            submitButton.disabled = true;
+          }
+          return true;
+        }
+
+        if (turnstileConfigurationErrors.has(code)) {
+          throw new Error(`Turnstile configuration error: ${code}`);
+        }
+
+        throw new Error(`Unexpected Turnstile error: ${code}`);
+      };
+    </script>
     <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script>
       function disableButtonAfterSubmit(form: HTMLFormElement) {
