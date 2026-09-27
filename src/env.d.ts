@@ -15,3 +15,13 @@ declare namespace App {
     };
   }
 }
+
+declare namespace astroHTML.JSX {
+  export interface FormHTMLAttributes {
+    toolname?: string;
+    tooldescription?: string;
+  }
+  export interface InputHTMLAttributes {
+    toolparamdescription?: string;
+  }
+}
