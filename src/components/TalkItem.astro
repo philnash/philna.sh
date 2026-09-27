@@ -5,12 +5,6 @@ type Props = {
   talk: NonNullable<CollectionEntry<"appearances">["data"]["talks"]>[number];
 };
 const { talk } = Astro.props;
-if (
-  talk.title ===
-  "Build AI-Ready Search: Integrating Docling with OpenSearch for Advanced RAG and Agentic Applications"
-) {
-  console.log(talk);
-}
 ---
 
 <p class="talk-title">
