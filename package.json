@@ -11,7 +11,6 @@
     "check": "astro check"
   },
   "dependencies": {
-    "@analytics-debugger/ga4mp": "^0.0.8",
     "@astrojs/cloudflare": "^14.3.3",
     "@astrojs/markdown-satteri": "^0.4.2",
     "@astrojs/rss": "^4.0.19",
@@ -20,6 +19,7 @@
     "@philnash/astro-pagination": "^0.7.0",
     "@philnash/astro-related-content": "^0.2.0",
     "@philnash/resend": "^1.2.1",
+    "@rodrisanchez12/ga4mp": "^0.0.10",
     "@sentry/astro": "^11.0.0",
     "@sentry/cloudflare": "^11.0.0",
     "astro": "^7.3.5",

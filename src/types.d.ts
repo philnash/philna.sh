@@ -1,2 +1,2 @@
 declare module "web-share-wrapper";
-declare module "@analytics-debugger/ga4mp";
+declare module "@rodrisanchez12/ga4mp";
