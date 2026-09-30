@@ -21,6 +21,8 @@ const { imageWidth, imageHeight, imageAlt, image, aboveTheFold, slug } =
         loading={aboveTheFold ? "eager" : "lazy"}
         fetchpriority={aboveTheFold ? "high" : "low"}
         style={{ viewTransitionName: viewTransitionName(slug, "image") }}
+        layout="full-width"
+        priority={aboveTheFold}
       />
     </figure>
   )
