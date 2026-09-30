@@ -17,6 +17,7 @@ type Props = {
   title?: string;
   description?: string;
   type?: "post" | "page";
+  ads?: Boolean;
 } & Pick<CollectionEntry<"blog">["data"], "image" | "imageAlt">;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -33,6 +34,7 @@ const {
   image,
   imageAlt,
   type = "page",
+  ads = false,
 } = Astro.props;
 
 const socialImage = image
@@ -48,7 +50,12 @@ const socialImage = image
 <title>{title}</title>
 
 <!-- preconnect to ads -->
-{preconnectUrls.map((url) => <link rel="preconnect" href={url} crossorigin />)}
+{
+  ads &&
+    preconnectUrls.map((url) => (
+      <link rel="preconnect" href={url} crossorigin />
+    ))
+}
 
 <!-- preload fonts -->
 {

@@ -9,12 +9,13 @@ type Props = {
   title: string;
   description?: string;
   type?: "page" | "post";
+  ads?: Boolean;
 } & Pick<CollectionEntry<"blog">["data"], "image" | "imageAlt">;
 
-const { title, description, type = "page", image, imageAlt } = Astro.props;
+const { title, description, type = "page", image, imageAlt, ads } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <BaseHead
@@ -23,6 +24,7 @@ const { title, description, type = "page", image, imageAlt } = Astro.props;
       type={type}
       image={image}
       imageAlt={imageAlt}
+      ads={ads}
     />
     <slot name="head" />
   </head>
