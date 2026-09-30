@@ -14,7 +14,7 @@ const { posts, page } = Astro.props;
 
 const pageUrl =
   `${site}blog/` +
-  (page.currentPage === 1 ? "" : String(page.currentPage) + "/");
+  (page.currentPage === 1 ? "" : `page/${String(page.currentPage)}/`);
 
 const itemListElements = posts.map((post, index) => {
   const url = post.collection === "blog" ? postPath(post) : post.data.link;

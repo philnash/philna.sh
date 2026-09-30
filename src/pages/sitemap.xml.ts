@@ -1,16 +1,21 @@
 import type { APIContext } from "astro";
 import { PER_PAGE } from "../consts";
-import { postPath, sortedBlogPosts } from "../utils/blog_posts";
+import {
+  localAndExternalBlogPosts,
+  postPath,
+  sortedBlogPosts,
+} from "../utils/blog_posts";
 
 export async function GET({ site, url }: APIContext): Promise<Response> {
-  const posts = await sortedBlogPosts();
-  const pageItems = new Array(Math.floor(posts.length / PER_PAGE))
+  const allPosts = await localAndExternalBlogPosts();
+  const pageItems = new Array(Math.floor(allPosts.length / PER_PAGE))
     .fill("")
     .map((_, index) => {
       const loc = new URL(`/blog/page/${index + 2}`, url);
       return `<url><loc>${loc}/</loc></url>`;
     })
     .join("");
+  const posts = await sortedBlogPosts();
   const postItems = posts
     .map(
       (post) =>
