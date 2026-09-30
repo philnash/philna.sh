@@ -147,19 +147,19 @@
     "2017-01-12-dev-tools-tricks-store-objects-and-elements-as-variables-in-the-console": [
       {
         "id": "2021-04-11-dont-ever-write-your-own-function-to-parse-url-parameters",
-        "score": 0.7919741849562599
-      },
-      {
-        "id": "2016-08-17-install-a-service-worker-declaratively",
-        "score": 0.7681745247692422
+        "score": 0.7905035961597364
       },
       {
         "id": "2020-04-14-ngrok-for-vscode",
-        "score": 0.7677797796255874
+        "score": 0.7643170288601613
       },
       {
         "id": "2017-02-09-toast-to-es2015-destructuring",
-        "score": 0.7668668622028848
+        "score": 0.7628644912194951
+      },
+      {
+        "id": "2017-02-13-doing-things-wrong",
+        "score": 0.7626125687278699
       }
     ],
     "2017-01-27-on-fixing-a-favicon": [
@@ -349,7 +349,7 @@
       },
       {
         "id": "2017-01-12-dev-tools-tricks-store-objects-and-elements-as-variables-in-the-console",
-        "score": 0.7644857667626428
+        "score": 0.7622276049387562
       },
       {
         "id": "2017-02-13-doing-things-wrong",

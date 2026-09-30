@@ -20,7 +20,6 @@ When you're clicking around the Inspector in Firefox or the Elements tab in Chro
 
 <figure class="post-image">
   <img src="/posts/dev-tools-tricks/firefox-dollar-zero.png" alt="Typing $0 in the Firefox dev tools console will grab a reference to the currently selected element." loading="lazy" />
-  </picture>
 </figure>
 
 Chrome even hints at this by showing `== $0` next to the HTML.
@@ -44,14 +43,13 @@ If you're dealing with other objects in the console, perhaps something you've lo
 `$_`, for example, is a reference to the last object that was returned in the console.
 
 <figure class="post-image">
-  <img src="/posts/dev-tools-tricks/firefox-dollar-underscore" alt="Typing $_ in the dev tools console will grab a reference to the last returned object in the console." loading="lazy" />
+  <img src="/posts/dev-tools-tricks/firefox-dollar-underscore.png" alt="Typing $_ in the dev tools console will grab a reference to the last returned object in the console." loading="lazy" />
 </figure>
 
 More generally, any object that has been returned or logged to the console can be turned into a global variable by right clicking on it and selecting "Store as global variable". You will get a variable called `temp0` which references that object. Even better, do it for more objects and you'll get new variables called `temp1`, then `temp2` and so on.
 
 <figure class="post-image">
   <img src="/posts/dev-tools-tricks/store-as-global.png" alt="Right click on any object in the console and choose 'Store as global object' to save it as a variable." loading="lazy" />
-  </picture>
 </figure>
 
 ## Dev tools go deep
@@ -59,4 +57,3 @@ More generally, any object that has been returned or logged to the console can b
 There is so much to learn about dev tools, these are just a few little tricks that might help when debugging your code. If you're looking for more tips like this, I recommend signing up to [Umar Hansa's Dev Tips](https://umaar.com/dev-tips/) or watch his [ffconf 2016 talk](https://www.youtube.com/watch?v=N33lYfsAsoU&list=PLXmT1r4krsTpDoGcdh1baZPIV6DtX9_rX).
 
 Don't forget to share your own tips or things you've found in dev tool. If you've got any good ones, please send them to me on Twitter at [@philnash](https://twitter.com/philnash).
-

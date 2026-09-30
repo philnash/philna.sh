@@ -32,7 +32,7 @@ All the commands are available from the VSCode command palette.
 It's simple so far, but I wanted to keep the scope small and get it released.
 
 <figure>
-  <img src="/posts/ngrok-for-vscode/start.png" alt="An animation showing using the extension from the VSCode command palette." loading="lazy">
+  <img src="/posts/ngrok-for-vscode/start.gif" alt="An animation showing using the extension from the VSCode command palette." loading="lazy">
 </figure>
 
 The code is all open source and [you can find it on GitHub](https://github.com/philnash/ngrok-for-vscode).
