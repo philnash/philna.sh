@@ -1,3 +1,9 @@
+- id: warmup-services-harm-deliverability
+  title: "Warmup Services Harm Your Deliverability"
+  link: https://resend.com/blog/avoid-warmup-services
+  pubDate: 2026-09-30
+  publisher: "resend"
+
 - id: email-verification-api
   title: "The Email Verification API"
   link: https://resend.com/blog/email-verification-api
