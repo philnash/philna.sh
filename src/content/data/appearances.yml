@@ -64,6 +64,8 @@
     type: conference
   talks:
     - title: "A new class of user"
+      slides: https://philnash.github.io/talks/a-new-class-of-user/
+      video: https://www.youtube.com/watch?v=BuWxoLatcMY
 
 - id: agentic-ai-sydney-sep-2026
   event:
