@@ -20,6 +20,18 @@
   talks:
     - title: "The evolution of MCP"
 
+- id: devfest-bangkok-2026
+  event:
+    name: DevFest Bangkok 2026
+    link: https://gdg.community.dev/events/details/google-gdg-cloud-bangkok-presents-devfest-bangkok-2026/cohost-gdg-cloud-bangkok/
+    start_date: 2026-11-14
+    end_date: 2026-11-15
+    location: Bangkok, Thailand
+    type: conference
+  talks:
+    - title: "A new class of user"
+      slides: https://philnash.github.io/talks/a-new-class-of-user/
+
 - id: oredev-2026
   event:
     name: Øredev 2026
@@ -30,6 +42,7 @@
     type: conference
   talks:
     - title: A new class of user
+      slides: https://philnash.github.io/talks/a-new-class-of-user/
     - title: Evolving AI chat with MCP Apps
 
 - id: resend-forward-2026
