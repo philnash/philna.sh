@@ -1,3 +1,15 @@
+- id: ndc-london-2027
+  event:
+    name: NDC London 2027
+    link: https://ndclondon.com/speakers/phil-nash
+    start_date: 2027-01-27
+    end_date: 2027-01-29
+    location: London, UK
+    type: conference
+  talks:
+    - title: "Evolving AI chat with MCP Apps"
+    - title: "Email verification without the verification email"
+
 - id: yow-brisbane-2026
   event:
     name: YOW! Brisbane 2026
